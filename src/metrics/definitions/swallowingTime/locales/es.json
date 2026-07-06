@@ -1,0 +1,11 @@
+{
+  "name": "Tiempo de deglución",
+  "shortName": "Deglución",
+  "descriptionTitle": "Sobre el tiempo de deglución",
+  "description": "El tiempo de deglución mide cuánto se tarda en tragar una cantidad definida (p. ej. 150 ml de agua). En la ELA, la disfagia puede dificultar la ingesta y aumentar el riesgo de aspiración. Un tiempo de deglución prolongado puede indicar progresión de síntomas bulbares. Los valores normales para 150 ml de agua son inferiores a 20 segundos.",
+  "fields": {
+    "value": {
+      "label": "Tiempo de deglución"
+    }
+  }
+}

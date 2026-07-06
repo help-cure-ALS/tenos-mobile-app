@@ -1,0 +1,11 @@
+{
+    "name": "Çıkılan kat",
+    "shortName": "Kat",
+    "descriptionTitle": "Çıkılan katlar hakkında",
+    "description": "Günde çıkılan kat sayısı, günlük aktivitede alt ekstremitelerin gücünü ve dayanıklılığını yansıtır. ALS'de azalan bir eğilim, ilerleyen bacak güçsüzlüğünü gösterebilir. Bu değer Apple Sağlık veya Health Connect'ten otomatik olarak alınır; elle giriş gerekmez.",
+    "fields": {
+        "value": {
+            "label": "Çıkılan kat"
+        }
+    }
+}

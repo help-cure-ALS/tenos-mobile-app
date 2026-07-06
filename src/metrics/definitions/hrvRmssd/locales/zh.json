@@ -1,0 +1,11 @@
+{
+    "name": "心率变异性",
+    "shortName": "心率变异",
+    "descriptionTitle": "关于心率变异性",
+    "description": "心率变异性（HRV）是心跳之间时间间隔的变化，以毫秒表示，反映自主神经系统的活动。在Android上以RMSSD测量，并自动从Health Connect导入。",
+    "fields": {
+        "value": {
+            "label": "心率变异性"
+        }
+    }
+}

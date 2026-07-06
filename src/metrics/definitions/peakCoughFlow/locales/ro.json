@@ -1,0 +1,11 @@
+{
+    "name": "Peak Cough Flow",
+    "shortName": "PCF",
+    "descriptionTitle": "Despre Peak Cough Flow",
+    "description": "Peak Cough Flow (PCF) măsoară viteza maximă a aerului în timpul tusei. Arată cât de eficient poți elimina secrețiile din căile respiratorii. Valorile sub 270 L/min cresc riscul de infecții respiratorii. Sub 160 L/min, tusea nu mai este adesea eficientă.",
+    "fields": {
+        "value": {
+            "label": "Peak Cough Flow"
+        }
+    }
+}

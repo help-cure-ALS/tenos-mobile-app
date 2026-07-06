@@ -1,0 +1,9 @@
+{
+    "name": "Treppab-Geschwindigkeit",
+    "shortName": "Treppab",
+    "descriptionTitle": "Über die Treppab-Geschwindigkeit",
+    "description": "Die Treppab-Geschwindigkeit ist das Tempo beim Hinuntergehen von Treppen in Metern pro Sekunde. Das Hinuntergehen fordert Gleichgewicht und Beinkontrolle besonders, daher kann ein abnehmender Trend ein frühes Zeichen nachlassender Beinfunktion bei ALS sein. Der Wert wird automatisch aus Apple Health auf dem iPhone importiert.",
+    "fields": {
+        "value": { "label": "Treppab-Geschwindigkeit" }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Loopafstand",
+  "shortName": "6MWT",
+  "descriptionTitle": "Over de 6-minuten wandeltest",
+  "description": "De 6-minuten wandeltest (6MWT) meet de afstand die in 6 minuten op vlakke grond kan worden afgelegd. Het is een gestandaardiseerde test om functionele inspanningscapaciteit te beoordelen. Bij ALS kan hij helpen de progressie van loopvaardigheid te documenteren. Normale waarden voor volwassenen liggen tussen 400 en 700 meter.",
+  "fields": {
+    "value": {
+      "label": "Loopafstand"
+    }
+  }
+}

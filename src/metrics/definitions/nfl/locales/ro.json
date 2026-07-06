@@ -1,0 +1,11 @@
+{
+    "name": "NFL în ser",
+    "shortName": "NFL",
+    "descriptionTitle": "Despre lanțul ușor de neurofilament",
+    "description": "Lanțul ușor de neurofilament (NFL) este un biomarker eliberat în sânge atunci când celulele nervoase sunt deteriorate. Nivelurile crescute de NFL pot indica neurodegenerare activă. În ALS, NFL este folosit pentru monitorizarea progresiei bolii și ca marker prognostic.",
+    "fields": {
+        "value": {
+            "label": "NFL"
+        }
+    }
+}

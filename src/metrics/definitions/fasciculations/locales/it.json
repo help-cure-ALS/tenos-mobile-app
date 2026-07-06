@@ -1,0 +1,17 @@
+{
+  "name": "Fascicolazioni",
+  "shortName": "Fascic.",
+  "descriptionTitle": "Informazioni sulle fascicolazioni",
+  "description": "Le fascicolazioni sono brevi contrazioni involontarie di singole fibre muscolari che possono essere visibili sotto la pelle. Sono un sintomo tipico della SLA e differiscono dai crampi muscolari, che sono dolorosi e persistenti. Il monitoraggio aiuta a identificare schemi ricorrenti e a documentare la progressione della malattia. (0 = Nessuna, 1 = Rare, 2 = Frequenti, 3 = Molto frequenti)",
+  "fields": {
+    "value": {
+      "label": "Fascicolazioni",
+      "valueLabels": {
+        "0": "Nessuna",
+        "1": "Rare",
+        "2": "Frequenti",
+        "3": "Molto frequenti"
+      }
+    }
+  }
+}

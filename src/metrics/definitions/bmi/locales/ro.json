@@ -1,0 +1,11 @@
+{
+    "name": "Indice de masă corporală",
+    "shortName": "IMC",
+    "descriptionTitle": "Despre indicele de masă corporală",
+    "description": "Indicele de masă corporală (IMC) este o măsură a relației dintre greutate și înălțime. Se calculează ca greutatea (kg) împărțită la pătratul înălțimii (m). În ALS, un IMC în zona superioară a normalului este adesea asociat cu un prognostic mai bun.",
+    "fields": {
+        "value": {
+            "label": "IMC"
+        }
+    }
+}

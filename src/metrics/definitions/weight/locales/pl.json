@@ -1,0 +1,11 @@
+{
+  "name": "Masa ciała",
+  "shortName": "Masa",
+  "descriptionTitle": "O masie ciała",
+  "description": "Masa ciała jest ważnym wskaźnikiem ogólnego zdrowia. W ALS niezamierzona utrata masy ciała może być oznaką trudności w połykaniu lub zwiększonego wydatku energetycznego. Regularne monitorowanie masy ciała pomaga wcześnie podjąć działania zaradcze.",
+  "fields": {
+    "value": {
+      "label": "Masa ciała"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+SLA,ALS,motoneurone,Lou Gehrig,ALSFRS,symptômes,médicaments,recherche

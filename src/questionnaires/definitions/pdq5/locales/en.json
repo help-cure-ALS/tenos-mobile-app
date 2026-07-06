@@ -1,0 +1,82 @@
+{
+    "name": "PDQ-5",
+    "displayName": "Cognitive Impairment",
+    "shortName": "PDQ-5",
+    "exportTitle": "Cognitive Deficits – PDQ-5",
+    "description": "The PDQ-5 (Perceived Deficits Questionnaire) assesses subjectively perceived cognitive impairments such as concentration difficulties, forgetfulness, and planning problems.",
+    "introText": "How often has the following happened to you in the last 4 weeks?",
+    "intro": {
+        "title": "Cognitive Self-Assessment",
+        "description": "This brief questionnaire assesses how you perceive your mental performance in daily life. Answer the 5 questions based on the last 4 weeks.",
+        "buttonText": "Start questionnaire",
+        "researchNote": "Thank you for taking the time. Your responses help us better understand disease progression and advance ALS research."
+    },
+    "domains": {
+        "cognitive": "Cognitive Functions"
+    },
+    "questions": {
+        "attention": {
+            "text": "Did you have trouble staying focused on something?",
+            "exportLabel": "Attention",
+            "options": {
+                "0": { "label": "Never", "description": "This never happens to me" },
+                "1": { "label": "Rarely", "description": "Happens occasionally" },
+                "2": { "label": "Sometimes", "description": "Happens now and then" },
+                "3": { "label": "Often", "description": "Happens frequently" },
+                "4": { "label": "Almost always", "description": "Happens constantly" }
+            }
+        },
+        "memory_conversation": {
+            "text": "Did you forget what someone just told you?",
+            "exportLabel": "Conversation recall",
+            "options": {
+                "0": { "label": "Never", "description": "This never happens to me" },
+                "1": { "label": "Rarely", "description": "Happens occasionally" },
+                "2": { "label": "Sometimes", "description": "Happens now and then" },
+                "3": { "label": "Often", "description": "Happens frequently" },
+                "4": { "label": "Almost always", "description": "Happens constantly" }
+            }
+        },
+        "prospective_memory": {
+            "text": "Did you forget what you were about to do?",
+            "exportLabel": "Prospective memory",
+            "options": {
+                "0": { "label": "Never", "description": "This never happens to me" },
+                "1": { "label": "Rarely", "description": "Happens occasionally" },
+                "2": { "label": "Sometimes", "description": "Happens now and then" },
+                "3": { "label": "Often", "description": "Happens frequently" },
+                "4": { "label": "Almost always", "description": "Happens constantly" }
+            }
+        },
+        "organization": {
+            "text": "Did you have trouble organizing your thoughts?",
+            "exportLabel": "Organization",
+            "options": {
+                "0": { "label": "Never", "description": "This never happens to me" },
+                "1": { "label": "Rarely", "description": "Happens occasionally" },
+                "2": { "label": "Sometimes", "description": "Happens now and then" },
+                "3": { "label": "Often", "description": "Happens frequently" },
+                "4": { "label": "Almost always", "description": "Happens constantly" }
+            }
+        },
+        "concentration": {
+            "text": "Did you have problems concentrating?",
+            "exportLabel": "Concentration",
+            "options": {
+                "0": { "label": "Never", "description": "This never happens to me" },
+                "1": { "label": "Rarely", "description": "Happens occasionally" },
+                "2": { "label": "Sometimes", "description": "Happens now and then" },
+                "3": { "label": "Often", "description": "Happens frequently" },
+                "4": { "label": "Almost always", "description": "Happens constantly" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Few noticeable changes", "description": "You barely notice any cognitive changes." },
+            { "label": "Slight changes", "description": "You occasionally notice slight cognitive changes." },
+            { "label": "Noticeable changes", "description": "You regularly notice cognitive changes." },
+            { "label": "Pronounced changes", "description": "You frequently notice cognitive changes." }
+        ]
+    }
+}

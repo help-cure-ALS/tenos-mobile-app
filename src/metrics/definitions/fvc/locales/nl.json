@@ -1,0 +1,11 @@
+{
+  "name": "Geforceerde vitale capaciteit",
+  "shortName": "FVC",
+  "descriptionTitle": "Over FVC",
+  "description": "Geforceerde vitale capaciteit (FVC) meet het maximale luchtvolume dat na een diepe ademhaling kan worden uitgeademd. Bij ALS is FVC een van de belangrijkste indicatoren voor ademhalingsfunctie en ziekteprogressie. Een daling onder 50% van de voorspelde waarde kan wijzen op behoefte aan ademhalingsondersteuning.",
+  "fields": {
+    "value": {
+      "label": "FVC"
+    }
+  }
+}

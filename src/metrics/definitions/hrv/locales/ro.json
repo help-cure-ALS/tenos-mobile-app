@@ -1,0 +1,11 @@
+{
+    "name": "Variabilitatea ritmului cardiac",
+    "shortName": "VRC",
+    "descriptionTitle": "Despre variabilitatea ritmului cardiac",
+    "description": "Variabilitatea ritmului cardiac (VRC) este variația timpului dintre bătăile inimii, în milisecunde, și reflectă activitatea sistemului nervos autonom. Pe iPhone este măsurată ca SDNN și importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Variabilitatea ritmului cardiac"
+        }
+    }
+}

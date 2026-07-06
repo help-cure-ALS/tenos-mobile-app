@@ -1,0 +1,310 @@
+{
+    "name": "Scala MOS a efectelor durerii",
+    "displayName": "Durere",
+    "shortName": "PES",
+    "exportTitle": "Durere – PES",
+    "description": "Scala MOS a efectelor durerii măsoară cât de mult interferează durerea cu diferite domenii ale vieții tale zilnice. Răspunde la 6 întrebări scurte despre somn, mobilitate, dispoziție și activități.",
+    "introText": "Cât de mult te afectează durerea?",
+    "intro": {
+        "title": "Efectele durerii",
+        "description": "Acest chestionar măsoară cum îți afectează durerea viața zilnică. Evaluează pe o scală de la 0 la 10 cât de mult a interferat durerea cu diferite domenii ale vieții în ultimele 7 zile.",
+        "buttonText": "Începe",
+        "researchNote": "Îți mulțumim pentru contribuție. Ne ajută să înțelegem mai bine impactul durerii și să avansăm cercetarea."
+    },
+    "domains": {
+        "daily_activities": "Activități zilnice",
+        "other_areas": "Alte domenii"
+    },
+    "questions": {
+        "sleep": {
+            "text": "Cât de mult a interferat durerea cu somnul tău?",
+            "exportLabel": "Somn",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        },
+        "mobility": {
+            "text": "Cât de mult a interferat durerea cu mobilitatea ta?",
+            "exportLabel": "Mobilitate",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        },
+        "mood": {
+            "text": "Cât de mult a interferat durerea cu dispoziția ta?",
+            "exportLabel": "Dispoziție",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        },
+        "work": {
+            "text": "Cât de mult a interferat durerea cu munca ta (inclusiv treburile casnice)?",
+            "exportLabel": "Muncă",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        },
+        "recreation": {
+            "text": "Cât de mult a interferat durerea cu activitățile tale recreative?",
+            "exportLabel": "Recreere",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        },
+        "enjoyment": {
+            "text": "Cât de mult a interferat durerea cu bucuria ta de a trăi?",
+            "exportLabel": "Bucuria vieții",
+            "options": {
+                "0": {
+                    "label": "Fără interferență",
+                    "description": "Deloc"
+                },
+                "1": {
+                    "label": "Minim"
+                },
+                "2": {
+                    "label": "Minim",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor"
+                },
+                "4": {
+                    "label": "Moderat",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat"
+                },
+                "6": {
+                    "label": "Moderat",
+                    "description": "Limitat vizibil"
+                },
+                "7": {
+                    "label": "Sever"
+                },
+                "8": {
+                    "label": "Sever",
+                    "description": "Foarte limitat"
+                },
+                "9": {
+                    "label": "Foarte sever"
+                },
+                "10": {
+                    "label": "Extrem",
+                    "description": "A interferat complet"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Impact redus",
+                "description": "Durerea are un efect redus asupra vieții tale zilnice."
+            },
+            {
+                "label": "Impact ușor",
+                "description": "Durerea are un efect ușor asupra vieții tale zilnice."
+            },
+            {
+                "label": "Impact sesizabil",
+                "description": "Durerea afectează vizibil mai multe domenii ale vieții."
+            },
+            {
+                "label": "Impact considerabil",
+                "description": "Durerea are un efect considerabil asupra vieții tale zilnice."
+            }
+        ]
+    }
+}

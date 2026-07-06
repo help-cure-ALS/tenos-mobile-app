@@ -1,0 +1,11 @@
+{
+  "name": "Tempo de deglutição",
+  "shortName": "Deglutição",
+  "descriptionTitle": "Sobre o tempo de deglutição",
+  "description": "O tempo de deglutição mede quanto tempo é necessário para engolir uma quantidade definida (por exemplo, 150 ml de água). Na ELA, a disfagia (dificuldade de deglutição) pode dificultar a alimentação e aumentar o risco de aspiração. Tempo prolongado pode indicar sintomas bulbares progressivos. Valores normais são inferiores a 20 segundos para 150 ml de água.",
+  "fields": {
+    "value": {
+      "label": "Tempo de deglutição"
+    }
+  }
+}

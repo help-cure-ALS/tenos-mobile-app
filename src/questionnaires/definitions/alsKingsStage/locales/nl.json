@@ -1,0 +1,105 @@
+{
+  "name": "King's stadium",
+  "displayName": "King's stadium",
+  "shortName": "King's",
+  "description": "Door de arts bevestigd ALS-stadium volgens King's College, gebaseerd op aangedane regio's en voedings- of ademhalingsbetrokkenheid.",
+  "domains": {
+    "structured": "King's stadium"
+  },
+  "questions": {
+    "payload": {
+      "text": "King's stadium",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "Stadium",
+      "info": "King's stadium wordt afgeleid uit aangedane regio's en relevante voedings- of ademhalingscriteria.",
+      "options": {
+        "1": {
+          "label": "Stadium 1",
+          "description": "Eén aangedane regio"
+        },
+        "2": {
+          "label": "Stadium 2",
+          "description": "Twee aangedane regio’s"
+        },
+        "3": {
+          "label": "Stadium 3",
+          "description": "Drie aangedane regio’s"
+        },
+        "4": {
+          "label": "Stadium 4",
+          "description": "Stadium 4, niet nader gespecificeerd"
+        },
+        "4A": {
+          "label": "Stadium 4A",
+          "description": "Voedingsbetrokkenheid"
+        },
+        "4B": {
+          "label": "Stadium 4B",
+          "description": "Ademhalingsbetrokkenheid"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "Aangedane regio's",
+      "info": "Klinisch aangedane regio's die voor stadiëring worden gebruikt.",
+      "options": {
+        "bulbar": {
+          "label": "bulbair"
+        },
+        "upper_limb": {
+          "label": "bovenste ledemaat"
+        },
+        "lower_limb": {
+          "label": "onderste ledemaat"
+        },
+        "thoracic": {
+          "label": "thoracaal/respiratoir"
+        }
+      }
+    },
+    "source": {
+      "label": "Bron",
+      "info": "Basis van de beoordeling. Voorgestelde waarden moeten nog door een arts worden bevestigd.",
+      "options": {
+        "manual": {
+          "label": "door arts bevestigd"
+        },
+        "suggested_from_exam": {
+          "label": "voorgesteld op basis van onderzoek"
+        },
+        "suggested_from_alsfrs": {
+          "label": "voorgesteld op basis van ALSFRS-R"
+        },
+        "suggested_from_care": {
+          "label": "voorgesteld op basis van zorggegevens"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "Reden stadium 4",
+      "info": "Documenteert of stadium 4 wordt bepaald door voedings- of ademhalingsbetrokkenheid.",
+      "options": {
+        "nutrition": {
+          "label": "voeding"
+        },
+        "respiratory": {
+          "label": "ademhaling"
+        },
+        "both": {
+          "label": "voeding en ademhaling"
+        },
+        "unspecified": {
+          "label": "niet gespecificeerd"
+        }
+      }
+    },
+    "note": {
+      "label": "Opmerking",
+      "placeholder": "Optionele klinische opmerking"
+    }
+  }
+}

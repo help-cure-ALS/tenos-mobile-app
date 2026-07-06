@@ -1,0 +1,130 @@
+{
+  "name": "MOS Pain Effects Scale",
+  "displayName": "Douleur",
+  "shortName": "PES",
+  "exportTitle": "Douleur – PES",
+  "description": "La MOS Pain Effects Scale mesure dans quelle mesure la douleur interfère avec différents domaines de votre vie quotidienne. Répondez à 6 courtes questions sur le sommeil, la mobilité, l'humeur et les activités.",
+  "introText": "Dans quelle mesure votre douleur vous affecte-t-elle ?",
+  "intro": {
+    "title": "Effets de la douleur",
+    "description": "Ce questionnaire mesure l'impact de la douleur sur votre vie quotidienne. Évaluez sur une échelle de 0 à 10 dans quelle mesure votre douleur a perturbé différents domaines de votre vie au cours des 7 derniers jours.",
+    "buttonText": "Commencer",
+    "researchNote": "Merci pour vos réponses. Elles nous aident à mieux comprendre l'impact de la douleur et à faire progresser la recherche."
+  },
+  "domains": {
+    "daily_activities": "Activités quotidiennes",
+    "other_areas": "Autres domaines"
+  },
+  "questions": {
+    "sleep": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé votre sommeil ?",
+      "exportLabel": "Sommeil",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    },
+    "mobility": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé votre mobilité ?",
+      "exportLabel": "Mobilité",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    },
+    "mood": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé votre humeur ?",
+      "exportLabel": "Humeur",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    },
+    "work": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé votre travail (y compris les tâches ménagères) ?",
+      "exportLabel": "Travail",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    },
+    "recreation": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé vos activités de loisirs ?",
+      "exportLabel": "Loisirs",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    },
+    "enjoyment": {
+      "text": "Dans quelle mesure la douleur a-t-elle perturbé votre plaisir de vivre ?",
+      "exportLabel": "Joie de vivre",
+      "options": {
+        "0": { "label": "Aucune gêne", "description": "Pas du tout" },
+        "1": { "label": "Minime" },
+        "2": { "label": "Minime", "description": "À peine perceptible" },
+        "3": { "label": "Légère" },
+        "4": { "label": "Modérée", "description": "Légèrement limité" },
+        "5": { "label": "Modérée" },
+        "6": { "label": "Modérée", "description": "Limitation perceptible" },
+        "7": { "label": "Sévère" },
+        "8": { "label": "Sévère", "description": "Très limitée" },
+        "9": { "label": "Très sévère" },
+        "10": { "label": "Extrême", "description": "A complètement gêné" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Faible impact", "description": "La douleur a peu d'effet sur votre vie quotidienne." },
+      { "label": "Impact léger", "description": "La douleur a un effet léger sur votre vie quotidienne." },
+      { "label": "Impact notable", "description": "La douleur affecte sensiblement plusieurs domaines de votre vie." },
+      { "label": "Impact important", "description": "La douleur a un effet considérable sur votre vie quotidienne." }
+    ]
+  }
+}

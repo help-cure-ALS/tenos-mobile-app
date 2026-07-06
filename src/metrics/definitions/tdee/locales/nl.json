@@ -1,0 +1,7 @@
+{
+  "name": "Energiebehoefte",
+  "shortName": "TDEE",
+  "descriptionTitle": "Over energiebehoefte",
+  "description": "Het totale dagelijkse energieverbruik (TDEE) wordt berekend met de Kasarskis-formule, specifiek ontwikkeld voor ALS-patiënten. De berekening houdt rekening met basaalmetabolisme, activiteitsniveau (gebaseerd op ALSFRS-6) en ALS-specifieke aanpassingen.",
+  "fields": {}
+}

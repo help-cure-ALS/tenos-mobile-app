@@ -1,0 +1,148 @@
+{
+    "name": "Verdauungs-Check",
+    "displayName": "Verdauung",
+    "shortName": "KESS (mod.)",
+    "exportTitle": "Verdauung – KESS (mod.)",
+    "description": "Ein adaptierter Fragebogen zur Einschätzung von Verstopfungsbeschwerden in den letzten 4 Wochen. Angelehnt an den KESS (Knowles-Eccersley-Scott Symptom Score), angepasst für ALS-Patienten.",
+    "introText": "Die folgenden Fragen beziehen sich auf Ihren Stuhlgang in den letzten 4 Wochen.",
+    "intro": {
+        "title": "Verdauungs-Check",
+        "description": "Dieser Fragebogen erfasst Beschwerden rund um den Stuhlgang in den letzten 4 Wochen anhand von 11 kurzen Fragen.",
+        "researchNote": "Regelmäßige Angaben helfen, Veränderungen Ihrer Verdauung frühzeitig zu erkennen.",
+        "buttonText": "Fragebogen starten"
+    },
+    "domains": {
+        "general": "Beschwerden",
+        "defecation": "Stuhlgang",
+        "abdominal": "Bauchbeschwerden",
+        "aids_and_stool": "Hilfsmittel und Konsistenz"
+    },
+    "questions": {
+        "constipation_severity": {
+            "text": "Wie stark waren Ihre Verstopfungsbeschwerden in den letzten 4 Wochen?",
+            "exportLabel": "Schweregrad",
+            "options": {
+                "0": { "label": "Keine Beschwerden" },
+                "1": { "label": "Leichte Beschwerden" },
+                "2": { "label": "Mäßige Beschwerden" },
+                "3": { "label": "Deutliche Beschwerden" },
+                "4": { "label": "Starke Beschwerden" }
+            }
+        },
+        "laxatives": {
+            "text": "Wie häufig haben Sie in den letzten 4 Wochen Abführmittel verwendet?",
+            "exportLabel": "Abführmittel",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Regelmäßig" }
+            }
+        },
+        "frequency": {
+            "text": "Wie häufig hatten Sie in den letzten 4 Wochen Stuhlgang?",
+            "exportLabel": "Stuhlgang-Häufigkeit",
+            "options": {
+                "0": { "label": "Täglich oder fast täglich" },
+                "1": { "label": "Etwa 2-mal pro Woche" },
+                "2": { "label": "Etwa 1-mal pro Woche" },
+                "3": { "label": "Seltener als 1-mal pro Woche" }
+            }
+        },
+        "unsuccessful_attempts": {
+            "text": "Wie häufig hatten Sie erfolglose Versuche, Stuhlgang zu haben?",
+            "exportLabel": "Fehlversuche",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" }
+            }
+        },
+        "incomplete_evacuation": {
+            "text": "Wie häufig hatten Sie nach dem Stuhlgang das Gefühl, nicht vollständig entleert zu sein?",
+            "exportLabel": "Unvollständig",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Immer" }
+            }
+        },
+        "painful_evacuation": {
+            "text": "Wie häufig war die Stuhlentleerung schmerzhaft oder nur mit starkem Pressen möglich?",
+            "exportLabel": "Schmerzhaft",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Immer" }
+            }
+        },
+        "abdominal_pain": {
+            "text": "Wie häufig hatten Sie in den letzten 4 Wochen Bauchschmerzen?",
+            "exportLabel": "Bauchschmerzen",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Täglich" }
+            }
+        },
+        "bloating": {
+            "text": "Wie häufig hatten Sie Blähungen oder ein aufgeblähtes Gefühl?",
+            "exportLabel": "Blähungen",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Täglich" }
+            }
+        },
+        "enemas_digitation": {
+            "text": "Wie häufig haben Sie Einläufe oder manuelle Hilfen zur Entleerung verwendet?",
+            "exportLabel": "Hilfsmittel",
+            "options": {
+                "0": { "label": "Nie" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Gelegentlich" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Täglich" }
+            }
+        },
+        "evacuation_time": {
+            "text": "Wie lange dauerte ein Toilettengang typischerweise?",
+            "exportLabel": "Dauer",
+            "options": {
+                "0": { "label": "Unter 5 Minuten" },
+                "1": { "label": "5 bis 10 Minuten" },
+                "2": { "label": "10 bis 20 Minuten" },
+                "3": { "label": "Über 20 Minuten" }
+            }
+        },
+        "stool_consistency": {
+            "text": "Welcher Stuhltyp beschreibt Ihren üblichen Stuhlgang am besten?",
+            "exportLabel": "Konsistenz",
+            "options": {
+                "1": { "label": "Typ 1 - Einzelne harte Klümpchen" },
+                "2": { "label": "Typ 2 - Wurstförmig, klumpig" },
+                "3": { "label": "Typ 3 - Wurstförmig mit Rissen" },
+                "4": { "label": "Typ 4 - Glatt und weich (ideal)" },
+                "5": { "label": "Typ 5 - Weiche Klümpchen" },
+                "6": { "label": "Typ 6 - Breiig, ungeformt" },
+                "7": { "label": "Typ 7 - Wässrig, flüssig" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Kaum Beschwerden", "description": "Deine Antworten deuten auf keine oder nur geringe Verdauungsbeschwerden hin." },
+            { "label": "Leichte Beschwerden", "description": "Deine Antworten deuten auf leichte Verdauungsbeschwerden hin." },
+            { "label": "Deutliche Beschwerden", "description": "Deine Antworten deuten auf deutliche Verdauungsbeschwerden hin." }
+        ]
+    }
+}

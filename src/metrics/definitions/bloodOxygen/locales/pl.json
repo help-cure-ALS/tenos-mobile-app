@@ -1,0 +1,11 @@
+{
+  "name": "Tlen we krwi",
+  "shortName": "SpO2",
+  "descriptionTitle": "O saturacji tlenu",
+  "description": "Saturacja tlenu (SpO2) pokazuje, jaki odsetek hemoglobiny we krwi jest wysycony tlenem. W ALS osłabienie mięśni oddechowych może prowadzić do niższych poziomów tlenu, zwłaszcza w nocy. Prawidłowe wartości wynoszą 95-100%. Regularne monitorowanie pomaga wcześnie wykrywać problemy z oddychaniem.",
+  "fields": {
+    "value": {
+      "label": "Saturacja tlenu"
+    }
+  }
+}

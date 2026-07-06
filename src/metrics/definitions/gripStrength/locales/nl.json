@@ -1,0 +1,14 @@
+{
+  "name": "Knijpkracht",
+  "shortName": "Knijpkracht",
+  "descriptionTitle": "Over knijpkracht",
+  "description": "Knijpkracht meet de maximale kracht die met de hand kan worden uitgeoefend. Dit wordt gemeten met een handdynamometer en is een objectieve indicator van spierkracht. Bij ALS kan knijpkracht helpen de progressie van spierzwakte te documenteren. Normale waarden variëren naar leeftijd en geslacht (mannen: 30-55 kg, vrouwen: 20-35 kg).",
+  "fields": {
+    "left": {
+      "label": "Links"
+    },
+    "right": {
+      "label": "Rechts"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Stabilitatea mersului",
+    "shortName": "Stabilitate",
+    "descriptionTitle": "Despre stabilitatea mersului",
+    "description": "Stabilitatea mersului de la Apple estimează, în procente, cât de stabil și echilibrat este mersul tău. O tendință descendentă indică un risc mai mare de cădere. În SLA, poate ajuta la urmărirea modificărilor mersului și echilibrului. Această valoare este importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Stabilitatea mersului"
+        }
+    }
+}

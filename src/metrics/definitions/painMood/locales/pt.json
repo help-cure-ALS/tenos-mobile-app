@@ -1,0 +1,24 @@
+{
+  "name": "Dor -> Humor",
+  "shortName": "Humor",
+  "descriptionTitle": "Impacto da dor no humor",
+  "description": "Regista quanto a dor afeta o humor. Numa escala de 0 (sem impacto) a 10 (impacto extremo). A dor crónica pode ter efeitos significativos na saúde mental.",
+  "fields": {
+    "value": {
+      "label": "Limitação",
+      "valueLabels": {
+        "0": "Nenhuma",
+        "1": "Mínima",
+        "2": "Mínima",
+        "3": "Ligeira",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Muito grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

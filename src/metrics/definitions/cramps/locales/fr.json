@@ -1,0 +1,11 @@
+{
+  "name": "Crampes musculaires",
+  "shortName": "Crampes",
+  "descriptionTitle": "À propos des crampes musculaires",
+  "description": "Les crampes musculaires sont des contractions musculaires douloureuses, prolongées et involontaires. Elles diffèrent des fasciculations (petites secousses brèves), qui sont enregistrées séparément. Les crampes sont fréquentes dans la SLA, surtout la nuit, et peuvent perturber le sommeil. Enregistrez le nombre de crampes par jour pour identifier des schémas.",
+  "fields": {
+    "value": {
+      "label": "Nombre de crampes"
+    }
+  }
+}

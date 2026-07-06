@@ -1,0 +1,11 @@
+{
+  "name": "Zuurstof in het bloed",
+  "shortName": "SpO2",
+  "descriptionTitle": "Over zuurstof in het bloed",
+  "description": "Zuurstofsaturatie (SpO2) laat zien welk percentage hemoglobine in het bloed met zuurstof is beladen. Bij ALS kan verzwakking van de ademhalingsspieren leiden tot lagere zuurstofwaarden, vooral ’s nachts. Normale waarden liggen tussen 95% en 100%. Regelmatige controle helpt ademhalingsproblemen vroeg te herkennen.",
+  "fields": {
+    "value": {
+      "label": "Zuurstofsaturatie"
+    }
+  }
+}

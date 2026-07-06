@@ -1,0 +1,11 @@
+{
+    "name": "Ademhalingsfrequentie",
+    "shortName": "Ademhaling",
+    "descriptionTitle": "Over de ademhalingsfrequentie",
+    "description": "De ademhalingsfrequentie is het aantal ademhalingen per minuut. Bij ALS is de ademhalingsfunctie een belangrijke maat; een stijgende ademhalingsfrequentie in rust kan een vroeg teken zijn van zwakte van de ademhalingsspieren. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid of Health Connect (vaak gemeten tijdens de slaap) en als daggemiddelde getoond.",
+    "fields": {
+        "value": {
+            "label": "Ademhalingsfrequentie"
+        }
+    }
+}

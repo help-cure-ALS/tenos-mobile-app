@@ -1,0 +1,148 @@
+{
+    "name": "Digestion Check",
+    "displayName": "Digestion",
+    "shortName": "KESS (mod.)",
+    "exportTitle": "Digestion – KESS (mod.)",
+    "description": "An adapted questionnaire for assessing constipation symptoms over the past 4 weeks. Based on the KESS (Knowles-Eccersley-Scott Symptom Score), adapted for ALS patients.",
+    "introText": "The following questions refer to your bowel movements over the past 4 weeks.",
+    "intro": {
+        "title": "Digestion Check",
+        "description": "This questionnaire assesses symptoms related to bowel movements over the past 4 weeks using 11 short questions.",
+        "researchNote": "Regular responses help detect changes in your digestive function early.",
+        "buttonText": "Start questionnaire"
+    },
+    "domains": {
+        "general": "Symptoms",
+        "defecation": "Bowel movements",
+        "abdominal": "Abdominal symptoms",
+        "aids_and_stool": "Aids and stool consistency"
+    },
+    "questions": {
+        "constipation_severity": {
+            "text": "How severe were your constipation symptoms over the past 4 weeks?",
+            "exportLabel": "Severity",
+            "options": {
+                "0": { "label": "No symptoms" },
+                "1": { "label": "Mild symptoms" },
+                "2": { "label": "Moderate symptoms" },
+                "3": { "label": "Marked symptoms" },
+                "4": { "label": "Severe symptoms" }
+            }
+        },
+        "laxatives": {
+            "text": "How often did you use laxatives over the past 4 weeks?",
+            "exportLabel": "Laxatives",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Regularly" }
+            }
+        },
+        "frequency": {
+            "text": "How often did you have a bowel movement over the past 4 weeks?",
+            "exportLabel": "Bowel frequency",
+            "options": {
+                "0": { "label": "Daily or almost daily" },
+                "1": { "label": "About twice a week" },
+                "2": { "label": "About once a week" },
+                "3": { "label": "Less than once a week" }
+            }
+        },
+        "unsuccessful_attempts": {
+            "text": "How often did you try to have a bowel movement but were unsuccessful?",
+            "exportLabel": "Failed attempts",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" }
+            }
+        },
+        "incomplete_evacuation": {
+            "text": "How often did you feel that your bowel movement was incomplete?",
+            "exportLabel": "Incomplete",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" },
+                "4": { "label": "Always" }
+            }
+        },
+        "painful_evacuation": {
+            "text": "How often was passing stool painful or required strong straining?",
+            "exportLabel": "Painful",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" },
+                "4": { "label": "Always" }
+            }
+        },
+        "abdominal_pain": {
+            "text": "How often did you have abdominal pain over the past 4 weeks?",
+            "exportLabel": "Abdominal pain",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" },
+                "4": { "label": "Daily" }
+            }
+        },
+        "bloating": {
+            "text": "How often did you have bloating or a swollen feeling in your abdomen?",
+            "exportLabel": "Bloating",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" },
+                "4": { "label": "Daily" }
+            }
+        },
+        "enemas_digitation": {
+            "text": "How often did you use enemas or manual assistance to empty your bowels?",
+            "exportLabel": "Aids",
+            "options": {
+                "0": { "label": "Never" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Occasionally" },
+                "3": { "label": "Often" },
+                "4": { "label": "Daily" }
+            }
+        },
+        "evacuation_time": {
+            "text": "How long did a typical toilet visit take?",
+            "exportLabel": "Duration",
+            "options": {
+                "0": { "label": "Under 5 minutes" },
+                "1": { "label": "5 to 10 minutes" },
+                "2": { "label": "10 to 20 minutes" },
+                "3": { "label": "Over 20 minutes" }
+            }
+        },
+        "stool_consistency": {
+            "text": "Which stool type best describes your usual bowel movement?",
+            "exportLabel": "Consistency",
+            "options": {
+                "1": { "label": "Type 1 - Separate hard lumps" },
+                "2": { "label": "Type 2 - Sausage-shaped, lumpy" },
+                "3": { "label": "Type 3 - Sausage with cracks" },
+                "4": { "label": "Type 4 - Smooth and soft (ideal)" },
+                "5": { "label": "Type 5 - Soft blobs" },
+                "6": { "label": "Type 6 - Mushy, fluffy pieces" },
+                "7": { "label": "Type 7 - Watery, liquid" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Few symptoms", "description": "Your answers suggest little or no digestive discomfort." },
+            { "label": "Mild symptoms", "description": "Your answers suggest mild digestive discomfort." },
+            { "label": "Notable symptoms", "description": "Your answers suggest notable digestive discomfort." }
+        ]
+    }
+}

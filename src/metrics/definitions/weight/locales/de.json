@@ -1,0 +1,9 @@
+{
+    "name": "Gewicht",
+    "shortName": "Gewicht",
+    "descriptionTitle": "Über Körpergewicht",
+    "description": "Das Körpergewicht ist ein wichtiger Indikator für den allgemeinen Gesundheitszustand. Bei ALS kann ein unbeabsichtigter Gewichtsverlust ein Zeichen für Schluckbeschwerden oder erhöhten Energieverbrauch sein. Regelmäßige Gewichtskontrolle hilft, frühzeitig gegensteuern zu können.",
+    "fields": {
+        "value": { "label": "Gewicht" }
+    }
+}

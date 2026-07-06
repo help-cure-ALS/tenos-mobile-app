@@ -1,0 +1,20 @@
+{
+    "name": "Stuhlkonsistenz",
+    "shortName": "Stuhl",
+    "descriptionTitle": "Über die Bristol-Stuhlformen-Skala",
+    "description": "Die Bristol-Stuhlformen-Skala ist ein klinisches Hilfsmittel zur Beurteilung der Stuhlkonsistenz. Bei ALS ist Verstopfung häufig durch reduzierte Mobilität, geschwächte Bauchmuskulatur oder Medikamente. Typ 3-4 gilt als ideal. Typ 1-2 deutet auf Verstopfung hin, Typ 6-7 auf Durchfall. (1 = Hart/klumpig, 4 = Ideal, 7 = Wässrig)",
+    "fields": {
+        "value": {
+            "label": "Stuhltyp",
+            "valueLabels": {
+                "1": "Typ 1 - Einzelne harte Klümpchen",
+                "2": "Typ 2 - Wurstförmig, klumpig",
+                "3": "Typ 3 - Wurstförmig mit Rissen",
+                "4": "Typ 4 - Glatt und weich (ideal)",
+                "5": "Typ 5 - Weiche Klümpchen",
+                "6": "Typ 6 - Breiig, ungeformt",
+                "7": "Typ 7 - Wässrig, flüssig"
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "name": "Daily Symptom Check",
+    "shortName": "",
+    "exportTitle": "Daily Symptom Check",
+    "description": "A brief daily check-in to track your main symptoms. Data is automatically synced with your metrics.",
+    "introText": "How are you feeling today?",
+    "intro": {
+        "title": "Daily Symptom Check",
+        "description": "A quick overview of your current state. Answer 4 short questions about pain, fatigue, sleep and mood.",
+        "buttonText": "Start",
+        "researchNote": "Your daily check helps detect changes early and gives your care team valuable insights."
+    },
+    "domains": {
+        "symptoms": "Symptoms",
+        "sleep": "Sleep",
+        "mood": "Mood"
+    },
+    "questions": {
+        "pain": {
+            "text": "How severe is your pain today?",
+            "exportLabel": "Pain",
+            "options": {
+                "0": { "label": "No pain", "description": "No discomfort" },
+                "1": { "label": "Mild pain", "description": "Barely noticeable, not bothersome" },
+                "2": { "label": "Moderate pain", "description": "Noticeable but bearable" },
+                "3": { "label": "Severe pain", "description": "Significantly impairing" },
+                "4": { "label": "Very severe pain", "description": "Barely tolerable" }
+            }
+        },
+        "fatigue": {
+            "text": "How tired or exhausted do you feel?",
+            "exportLabel": "Fatigue",
+            "options": {
+                "0": { "label": "No fatigue", "description": "Full of energy" },
+                "1": { "label": "Slightly tired" },
+                "2": { "label": "Slightly tired", "description": "Barely noticeable" },
+                "3": { "label": "Slightly tired" },
+                "4": { "label": "Moderately tired", "description": "Somewhat limited" },
+                "5": { "label": "Moderately tired" },
+                "6": { "label": "Quite tired", "description": "Activities are strenuous" },
+                "7": { "label": "Quite tired" },
+                "8": { "label": "Very tired", "description": "Need lots of rest" },
+                "9": { "label": "Very tired" },
+                "10": { "label": "Extremely exhausted", "description": "Can barely do anything" }
+            }
+        },
+        "sleep_quality": {
+            "text": "How did you sleep last night?",
+            "exportLabel": "Sleep",
+            "options": {
+                "0": { "label": "Very well", "description": "Restful, uninterrupted sleep" },
+                "2": { "label": "Well", "description": "Mostly restful sleep" },
+                "4": { "label": "Fair", "description": "Somewhat restless but adequate" },
+                "6": { "label": "Poorly", "description": "Woke up multiple times, little recovery" },
+                "8": { "label": "Very poorly", "description": "Barely slept" },
+                "10": { "label": "Not at all", "description": "Didn't sleep" }
+            }
+        },
+        "mood": {
+            "text": "How is your mood today?",
+            "exportLabel": "Mood",
+            "options": {
+                "0": { "label": "Very good", "description": "Balanced and positive" },
+                "2": { "label": "Good", "description": "Mostly positive" },
+                "4": { "label": "Okay", "description": "Neutral" },
+                "6": { "label": "Low", "description": "Somewhat down" },
+                "8": { "label": "Bad", "description": "Sad or anxious" },
+                "10": { "label": "Very bad", "description": "Hopeless or desperate" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Good day", "description": "You're feeling relatively well today." },
+            { "label": "Okay", "description": "An average day with minor discomfort." },
+            { "label": "Challenging day", "description": "Today is a challenging day." },
+            { "label": "Particularly challenging day", "description": "You're experiencing more symptoms today." }
+        ]
+    }
+}

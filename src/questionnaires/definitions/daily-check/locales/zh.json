@@ -1,0 +1,171 @@
+{
+  "name": "每日症状检查",
+  "shortName": "",
+  "exportTitle": "每日症状检查",
+  "description": "用于跟踪主要症状的简短每日记录。数据会自动与指标同步。",
+  "introText": "今天感觉怎么样？",
+  "intro": {
+    "title": "每日症状检查",
+    "description": "快速了解当前状态。回答4个关于疼痛、疲劳、睡眠和情绪的简短问题。",
+    "buttonText": "开始",
+    "researchNote": "每日检查有助于及早发现变化，并为护理团队提供有价值的信息。"
+  },
+  "domains": {
+    "symptoms": "症状",
+    "sleep": "睡眠",
+    "mood": "情绪"
+  },
+  "questions": {
+    "pain": {
+      "text": "今天的疼痛有多严重？",
+      "exportLabel": "疼痛",
+      "options": {
+        "0": {
+          "label": "无疼痛",
+          "description": "无不适"
+        },
+        "1": {
+          "label": "轻度疼痛",
+          "description": "几乎不明显，不困扰"
+        },
+        "2": {
+          "label": "中度疼痛",
+          "description": "明显但可以忍受"
+        },
+        "3": {
+          "label": "重度疼痛",
+          "description": "明显影响活动"
+        },
+        "4": {
+          "label": "非常重度疼痛",
+          "description": "几乎难以忍受"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "你感到多累或多疲惫？",
+      "exportLabel": "疲劳",
+      "options": {
+        "0": {
+          "label": "无疲劳",
+          "description": "精力充沛"
+        },
+        "1": {
+          "label": "稍微疲劳"
+        },
+        "2": {
+          "label": "稍微疲劳",
+          "description": "几乎不明显"
+        },
+        "3": {
+          "label": "稍微疲劳"
+        },
+        "4": {
+          "label": "中度疲劳",
+          "description": "有些受限"
+        },
+        "5": {
+          "label": "中度疲劳"
+        },
+        "6": {
+          "label": "相当疲劳",
+          "description": "活动很费力"
+        },
+        "7": {
+          "label": "相当疲劳"
+        },
+        "8": {
+          "label": "非常疲劳",
+          "description": "需要大量休息"
+        },
+        "9": {
+          "label": "非常疲劳"
+        },
+        "10": {
+          "label": "极度疲惫",
+          "description": "几乎什么都做不了"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "昨晚睡得怎么样？",
+      "exportLabel": "睡眠",
+      "options": {
+        "0": {
+          "label": "非常好",
+          "description": "恢复性好且未中断的睡眠"
+        },
+        "2": {
+          "label": "好",
+          "description": "大多有恢复性的睡眠"
+        },
+        "4": {
+          "label": "一般",
+          "description": "有些不安稳但足够"
+        },
+        "6": {
+          "label": "差",
+          "description": "醒来多次，恢复较少"
+        },
+        "8": {
+          "label": "非常差",
+          "description": "几乎没睡"
+        },
+        "10": {
+          "label": "完全没有",
+          "description": "没有睡觉"
+        }
+      }
+    },
+    "mood": {
+      "text": "今天情绪如何？",
+      "exportLabel": "情绪",
+      "options": {
+        "0": {
+          "label": "非常好",
+          "description": "平衡且积极"
+        },
+        "2": {
+          "label": "好",
+          "description": "大多积极"
+        },
+        "4": {
+          "label": "还可以",
+          "description": "中性"
+        },
+        "6": {
+          "label": "低落",
+          "description": "有些情绪低落"
+        },
+        "8": {
+          "label": "差",
+          "description": "悲伤或焦虑"
+        },
+        "10": {
+          "label": "非常差",
+          "description": "无望或绝望"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "状态良好",
+        "description": "今天感觉相对不错。"
+      },
+      {
+        "label": "还可以",
+        "description": "有轻微不适的普通一天。"
+      },
+      {
+        "label": "有挑战的一天",
+        "description": "今天比较有挑战。"
+      },
+      {
+        "label": "特别有挑战的一天",
+        "description": "今天症状更多。"
+      }
+    ]
+  }
+}

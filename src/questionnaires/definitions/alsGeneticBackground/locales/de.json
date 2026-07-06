@@ -1,0 +1,101 @@
+{
+    "name": "ALS-Form & Genetik",
+    "displayName": "ALS-Form & Genetik",
+    "shortName": "ALS-Form",
+    "description": "Dokumentation von sporadischer oder familiärer ALS, Familienanamnese und bekannten genetischen Befunden.",
+    "domains": {
+        "structured": "ALS-Form & Genetik"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS-Form & Genetik",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "diseaseForm": {
+            "label": "ALS-Form",
+            "info": "Klinische Einordnung, ob die ALS sporadisch, familiär oder unklar ist.",
+            "options": {
+                "sporadic": { "label": "sporadisch" },
+                "familial": { "label": "familiär" },
+                "suspected_familial": { "label": "familiär vermutet" },
+                "unclear": { "label": "unklar" }
+            }
+        },
+        "familyHistory": {
+            "label": "Familienanamnese",
+            "info": "Dokumentiert bekannte ALS-, FTD- oder andere Motoneuronerkrankungen in der Familie.",
+            "options": {
+                "none_known": { "label": "keine bekannt" },
+                "als": { "label": "ALS in der Familie" },
+                "ftd": { "label": "FTD in der Familie" },
+                "als_ftd": { "label": "ALS/FTD in der Familie" },
+                "other_mnd": { "label": "andere Motoneuronerkrankung" },
+                "other_neurodegenerative": { "label": "anderer neurodegenerativer Hinweis" }
+            }
+        },
+        "testingStatus": {
+            "label": "Genetische Testung",
+            "info": "Status der genetischen Testung. Die App interpretiert keine genetischen Rohdaten.",
+            "options": {
+                "not_tested": { "label": "nicht getestet" },
+                "planned": { "label": "geplant" },
+                "pending": { "label": "ausstehend" },
+                "negative": { "label": "keine bekannte Mutation" },
+                "vus": { "label": "Variante unklarer Signifikanz" },
+                "pathogenic": { "label": "pathogene/wahrscheinlich pathogene Variante" }
+            }
+        },
+        "gene": {
+            "label": "Gen",
+            "info": "Bekanntes Gen aus ärztlicher Dokumentation oder Laborbericht.",
+            "placeholder": "Gen eingeben",
+            "options": {
+                "C9orf72": { "label": "C9orf72" },
+                "SOD1": { "label": "SOD1" },
+                "FUS": { "label": "FUS" },
+                "TARDBP": { "label": "TARDBP" },
+                "TBK1": { "label": "TBK1" },
+                "OPTN": { "label": "OPTN" },
+                "VCP": { "label": "VCP" },
+                "other": { "label": "anderes" }
+            }
+        },
+        "source": {
+            "label": "Quelle",
+            "info": "Woher stammt diese Angabe? Genetische Informationen sollten nachvollziehbar dokumentiert werden.",
+            "options": {
+                "patient_reported": { "label": "Patientenangabe" },
+                "clinician_documented": { "label": "ärztlich dokumentiert" },
+                "lab_report": { "label": "Labor" }
+            }
+        },
+        "counselingStatus": {
+            "label": "Humangenetische Beratung",
+            "info": "Ob eine humangenetische Beratung zur genetischen Testung oder Ergebnisbesprechung dokumentiert ist.",
+            "options": {
+                "completed": { "label": "erfolgt" },
+                "recommended": { "label": "empfohlen" },
+                "not_done": { "label": "nicht erfolgt" }
+            }
+        },
+        "otherGene": {
+            "label": "Anderes Gen",
+            "placeholder": "Genname"
+        },
+        "variantText": {
+            "label": "Variante",
+            "placeholder": "Optionaler kurzer Befundtext"
+        },
+        "testDate": {
+            "label": "Testdatum",
+            "info": "Monat und Jahr der genetischen Testung.",
+            "placeholder": "Auswählen"
+        },
+        "note": {
+            "label": "Kommentar",
+            "placeholder": "Optionaler Kommentar"
+        }
+    }
+}

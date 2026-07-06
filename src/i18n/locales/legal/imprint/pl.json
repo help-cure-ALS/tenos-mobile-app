@@ -1,0 +1,72 @@
+{
+    "title": "Informacje prawne",
+    "translationNotice": "To jest tłumaczenie niemieckiego impressum. W przypadku rozbieżności obowiązuje wersja niemiecka.",
+    "sections": {
+        "provider": {
+            "title": "Informacje zgodnie z § 5 TMG",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Norymberga\nNiemcy"
+        },
+        "representation": {
+            "title": "Reprezentowana przez",
+            "content": "Marie Assimidis, członkini zarządu"
+        },
+        "registration": {
+            "title": "Wpis do rejestru",
+            "content": "Wpisana do rejestru stowarzyszeń",
+            "court": "Sąd rejestrowy: Amtsgericht Nürnberg",
+            "number": "Numer rejestrowy: VR 203250"
+        },
+        "contact": {
+            "title": "Kontakt",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Odpowiedzialny za treść zgodnie z § 18 ust. 2 MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Norymberga"
+        },
+        "liability": {
+            "title": "Wyłączenie odpowiedzialności",
+            "content": {
+                "title": "Odpowiedzialność za treści",
+                "text": "Treści tej aplikacji zostały przygotowane z najwyższą starannością. Nie możemy jednak zagwarantować ich poprawności, kompletności ani aktualności.",
+                "tmg": "Jako stowarzyszenie non-profit odpowiadamy za własne treści w tej aplikacji zgodnie z § 7 ust. 1 TMG oraz przepisami ogólnymi. Zgodnie z §§ 8-10 TMG nie jesteśmy jednak zobowiązani do monitorowania przekazywanych lub przechowywanych informacji osób trzecich ani do badania okoliczności wskazujących na działalność niezgodną z prawem."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Medyczne wyłączenie odpowiedzialności",
+            "intro": "Ważna informacja: ta aplikacja służy wyłącznie do osobistej dokumentacji zdrowotnej i samoobserwacji. Udostępniane treści, kwestionariusze i funkcje w żadnym razie nie zastępują:",
+            "items": [
+                "Profesjonalnej porady medycznej",
+                "Diagnozy lekarskiej",
+                "Leczenia medycznego",
+                "Zaleceń wykwalifikowanego personelu medycznego"
+            ],
+            "advice": "W przypadku dolegliwości zdrowotnych lub pytań dotyczących zdrowia zawsze skonsultuj się z lekarzem lub innym wykwalifikowanym specjalistą medycznym. Nigdy nie ignoruj profesjonalnej porady medycznej na podstawie informacji z tej aplikacji.",
+            "emergency": "W nagłych przypadkach natychmiast zadzwoń pod numer alarmowy 112."
+        },
+        "availability": {
+            "title": "Brak gwarancji dostępności",
+            "content": "Dokładamy starań, aby aplikacja i opcjonalna synchronizacja w chmurze były stale dostępne. Mogą jednak wystąpić czasowe przerwy, np. z powodu konserwacji lub problemów technicznych. Nie możemy zagwarantować nieprzerwanej dostępności."
+        },
+        "links": {
+            "title": "Odpowiedzialność za linki",
+            "content": "Ta aplikacja może zawierać linki do zewnętrznych stron internetowych. Nie mamy wpływu na treści tych stron. Za treść stron, do których prowadzą linki, odpowiada zawsze ich właściwy dostawca lub operator."
+        },
+        "copyright": {
+            "title": "Prawo autorskie",
+            "content": "Treści i utwory stworzone przez help cure ALS e.V. w tej aplikacji podlegają niemieckiemu prawu autorskiemu. Powielanie, edytowanie, rozpowszechnianie i jakiekolwiek wykorzystanie poza granicami prawa autorskiego wymaga pisemnej zgody stowarzyszenia."
+        },
+        "openSource": {
+            "title": "Komponenty open source",
+            "content": "Ta aplikacja korzysta z oprogramowania open source. Pełną listę użytych bibliotek i ich licencji znajdziesz w ustawieniach aplikacji w sekcji „Licencje”."
+        },
+        "about": {
+            "title": "O stowarzyszeniu",
+            "content": "help cure ALS e.V. jest stowarzyszeniem non-profit zaangażowanym w badania i walkę ze stwardnieniem zanikowym bocznym (ALS). Wspieramy projekty badawcze, promujemy wymianę między osobami dotkniętymi chorobą a nauką oraz rozwijamy narzędzia cyfrowe poprawiające jakość życia pacjentów z ALS.",
+            "moreInfo": "Więcej informacji o naszej pracy znajdziesz na naszej stronie internetowej:"
+        }
+    },
+    "lastUpdated": "Luty 2026"
+}

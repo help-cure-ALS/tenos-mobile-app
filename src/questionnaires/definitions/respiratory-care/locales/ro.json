@@ -1,0 +1,92 @@
+{
+    "name": "Asistență respiratorie",
+    "displayName": "Asistență respiratorie",
+    "shortName": "Asistență respiratorie",
+    "exportTitle": "Asistență respiratorie",
+    "description": "Înregistrează simptomele care pot indica modificări ale suportului respirator. Răspunsurile regulate ajută la detectarea timpurie a schimbărilor.",
+    "introText": "Următoarele întrebări se referă la cum v-ați simțit în ultimele zile.",
+    "intro": {
+        "title": "Asistență respiratorie",
+        "description": "Acest chestionar înregistrează simptomele legate de suportul respirator prin 6 întrebări scurte.",
+        "researchNote": "Răspunsurile regulate ajută la detectarea timpurie a schimbărilor și la discutarea lor cu echipa de îngrijire.",
+        "buttonText": "Începe chestionarul"
+    },
+    "domains": {
+        "symptoms": "Simptome"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Mă trezesc cu dureri de cap.",
+            "exportLabel": "Cefalee",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        },
+        "dizziness": {
+            "text": "Am amețeli, mai ales după trezire.",
+            "exportLabel": "Amețeală",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Mă simt neobișnuit de obosit(ă) sau somnolent(ă) în timpul zilei.",
+            "exportLabel": "Somnolență",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        },
+        "concentration": {
+            "text": "Îmi este greu să mă concentrez.",
+            "exportLabel": "Concentrare",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Mă trezesc noaptea sau dorm agitat.",
+            "exportLabel": "Somn",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Îmi lipsește aerul în timpul zilei, de ex. când vorbesc sau în repaus.",
+            "exportLabel": "Dispnee",
+            "options": {
+                "0": { "label": "Deloc" },
+                "1": { "label": "Rar" },
+                "2": { "label": "Uneori" },
+                "3": { "label": "Des" },
+                "4": { "label": "Aproape mereu" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Puține simptome", "description": "Răspunsurile dumneavoastră indică puțin sau niciun disconfort." },
+            { "label": "Simptome notabile", "description": "Răspunsurile dumneavoastră indică un disconfort notabil." },
+            { "label": "Simptome semnificative", "description": "Răspunsurile dumneavoastră indică un disconfort semnificativ." }
+        ]
+    }
+}

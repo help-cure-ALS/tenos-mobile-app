@@ -1,0 +1,9 @@
+{
+  "name": "Débit de pointe de toux",
+  "shortName": "DPT",
+  "descriptionTitle": "À propos du débit de pointe de toux",
+  "description": "Le débit de pointe de toux (DPT) mesure la vitesse maximale de l'air lors d'une toux. Il montre l'efficacité avec laquelle vous pouvez dégager les sécrétions de vos voies respiratoires. Des valeurs inférieures à 270 L/min augmentent le risque d'infections respiratoires. En dessous de 160 L/min, la toux n'est souvent plus efficace.",
+  "fields": {
+    "value": { "label": "Débit de pointe de toux" }
+  }
+}

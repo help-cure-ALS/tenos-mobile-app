@@ -1,0 +1,11 @@
+{
+  "name": "峰值咳嗽流量",
+  "shortName": "PCF",
+  "descriptionTitle": "关于峰值咳嗽流量",
+  "description": "峰值咳嗽流量（PCF）测量咳嗽时的最大气流速度。它显示清除气道分泌物的有效程度。低于270 L/min会增加呼吸道感染风险。低于160 L/min时，咳嗽通常不再有效。",
+  "fields": {
+    "value": {
+      "label": "峰值咳嗽流量"
+    }
+  }
+}

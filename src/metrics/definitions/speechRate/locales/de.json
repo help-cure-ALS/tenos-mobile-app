@@ -1,0 +1,11 @@
+{
+    "name": "Sprechgeschwindigkeit",
+    "shortName": "Sprache",
+    "descriptionTitle": "Über Sprechgeschwindigkeit",
+    "description": "Die Sprechgeschwindigkeit misst, wie viele Wörter pro Minute gesprochen werden können. Bei ALS kann eine bulbäre Beteiligung zu verlangsamter und undeutlicher Sprache führen (Dysarthrie). Normale Sprechgeschwindigkeit liegt bei etwa 120-150 Wörtern pro Minute. Die regelmäßige Messung hilft, Veränderungen frühzeitig zu erkennen.",
+    "fields": {
+        "value": {
+            "label": "Wörter pro Minute"
+        }
+    }
+}

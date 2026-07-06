@@ -1,0 +1,11 @@
+{
+  "name": "Percentagem de gordura corporal",
+  "shortName": "Gordura corporal",
+  "descriptionTitle": "Sobre a percentagem de gordura corporal",
+  "description": "A percentagem de gordura corporal indica que parte do peso corporal é composta por tecido adiposo. Na ELA, a monitorização é importante porque a perda de massa muscular com peso constante pode indicar aumento da percentagem de gordura. Medições regulares ajudam a acompanhar a composição corporal.",
+  "fields": {
+    "value": {
+      "label": "Percentagem de gordura corporal"
+    }
+  }
+}

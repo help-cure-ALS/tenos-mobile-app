@@ -1,0 +1,18 @@
+{
+  "name": "Nivel de dolor",
+  "shortName": "Dolor",
+  "descriptionTitle": "Sobre el nivel de dolor",
+  "description": "El nivel de dolor se evalúa mediante una escala verbal descriptiva (VRS). En la ELA, el dolor puede deberse a tensión muscular, calambres, inmovilidad o úlceras por presión. Un registro regular ayuda a identificar patrones de dolor y a ajustar el tratamiento.",
+  "fields": {
+    "value": {
+      "label": "Nivel de dolor",
+      "valueLabels": {
+        "0": "Sin dolor",
+        "1": "Dolor leve",
+        "2": "Dolor moderado",
+        "3": "Dolor intenso",
+        "4": "Dolor muy intenso"
+      }
+    }
+  }
+}

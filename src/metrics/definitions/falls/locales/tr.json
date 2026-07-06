@@ -1,0 +1,11 @@
+{
+    "name": "Düşmeler",
+    "shortName": "Düşmeler",
+    "descriptionTitle": "Düşme takibi hakkında",
+    "description": "Düşmeleri takip etmek düşme riskini değerlendirmeye ve önleyici önlemler almaya yardımcı olur. ALS’de artan kas zayıflığı düşme riskini belirgin şekilde artırır. Uygun yardımcı araçları veya çevresel düzenlemeleri bakım ekibinle görüşmek için her düşmeyi belgeleyin.",
+    "fields": {
+        "value": {
+            "label": "Düşme sayısı"
+        }
+    }
+}

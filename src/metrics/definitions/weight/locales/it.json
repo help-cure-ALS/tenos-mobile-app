@@ -1,0 +1,11 @@
+{
+  "name": "Peso",
+  "shortName": "Peso",
+  "descriptionTitle": "Informazioni sul peso corporeo",
+  "description": "Il peso corporeo è un indicatore importante della salute generale. Nella SLA, una perdita di peso involontaria può essere segno di difficoltà di deglutizione o aumento del dispendio energetico. Il monitoraggio regolare del peso aiuta ad adottare contromisure precoci.",
+  "fields": {
+    "value": {
+      "label": "Peso"
+    }
+  }
+}

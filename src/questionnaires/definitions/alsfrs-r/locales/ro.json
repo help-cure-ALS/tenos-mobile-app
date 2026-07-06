@@ -1,0 +1,341 @@
+{
+    "name": "ALSFRS-R",
+    "displayName": "Stare funcțională",
+    "shortName": "ALSFRS-R",
+    "description": "ALS Functional Rating Scale - Revised (ALSFRS-R) este un instrument validat pentru evaluarea stării funcționale la pacienții cu ALS. Chestionarul acoperă 12 domenii ale vieții zilnice în patru domenii.",
+    "introText": "Te rugăm să evaluezi capacitatea ta funcțională actuală în următoarele domenii. Alege descrierea care se potrivește cel mai bine situației tale.",
+    "intro": {
+        "title": "Evaluare funcțională",
+        "description": "Acest chestionar evaluează capacitatea ta funcțională actuală în 12 domenii ale vieții zilnice. Completarea durează aproximativ 5 minute.",
+        "buttonText": "Începe chestionarul",
+        "researchNote": "Îți mulțumim pentru participare. Evaluările regulate ne ajută să înțelegem mai bine progresia bolii și să avansăm cercetarea ALS."
+    },
+    "domains": {
+        "bulbar": "Funcție bulbară",
+        "fine_motor": "Motricitate fină",
+        "gross_motor": "Motricitate grosieră",
+        "respiratory": "Respirator"
+    },
+    "questions": {
+        "speech": {
+            "text": "Vorbire",
+            "options": {
+                "0": {
+                    "label": "Fără vorbire",
+                    "description": "Pierderea vorbirii utile"
+                },
+                "1": {
+                    "label": "Afectare severă",
+                    "description": "Vorbire combinată cu comunicare nonverbală"
+                },
+                "2": {
+                    "label": "Afectare moderată",
+                    "description": "Trebuie să repete ocazional"
+                },
+                "3": {
+                    "label": "Afectare ușoară",
+                    "description": "Tulburare de vorbire detectabilă"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Procese normale ale vorbirii"
+                }
+            }
+        },
+        "salivation": {
+            "text": "Salivație",
+            "options": {
+                "0": {
+                    "label": "Exces sever",
+                    "description": "Salivare abundentă; necesită permanent șervețel sau batistă"
+                },
+                "1": {
+                    "label": "Exces marcat",
+                    "description": "Exces marcat de salivă cu salivare"
+                },
+                "2": {
+                    "label": "Exces moderat",
+                    "description": "Salivă moderat excesivă; poate exista salivare minimă"
+                },
+                "3": {
+                    "label": "Exces ușor",
+                    "description": "Exces ușor, dar clar, de salivă; poate exista salivare nocturnă"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Salivație normală"
+                }
+            }
+        },
+        "swallowing": {
+            "text": "Înghițire",
+            "options": {
+                "0": {
+                    "label": "Doar alimentație prin sondă",
+                    "description": "Nimic pe cale orală; exclusiv alimentație prin sondă"
+                },
+                "1": {
+                    "label": "Alimentație suplimentară prin sondă",
+                    "description": "Necesită alimentație suplimentară prin sondă"
+                },
+                "2": {
+                    "label": "Schimbare de dietă",
+                    "description": "Schimbări ale consistenței alimentelor"
+                },
+                "3": {
+                    "label": "Probleme ușoare",
+                    "description": "Probleme alimentare timpurii - înecare ocazională"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Obiceiuri alimentare normale"
+                }
+            }
+        },
+        "handwriting": {
+            "text": "Scris de mână",
+            "options": {
+                "0": {
+                    "label": "Incapabil",
+                    "description": "Incapabil să țină stiloul"
+                },
+                "1": {
+                    "label": "Poate ține stiloul",
+                    "description": "Poate ține stiloul, dar nu poate scrie"
+                },
+                "2": {
+                    "label": "Parțial lizibil",
+                    "description": "Nu toate cuvintele sunt lizibile"
+                },
+                "3": {
+                    "label": "Lent/neîngrijit",
+                    "description": "Lent sau neîngrijit; toate cuvintele sunt lizibile"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Scris normal"
+                }
+            }
+        },
+        "cutting_food": {
+            "text": "Tăierea alimentelor și folosirea tacâmurilor",
+            "options": {
+                "0": {
+                    "label": "Complet dependent",
+                    "description": "Trebuie hrănit"
+                },
+                "1": {
+                    "label": "Trebuie hrănit",
+                    "description": "Alimentele trebuie tăiate de altcineva, dar se poate hrăni încă lent"
+                },
+                "2": {
+                    "label": "Ajutor parțial necesar",
+                    "description": "Poate tăia majoritatea alimentelor, deși stângaci și lent; are nevoie de puțin ajutor"
+                },
+                "3": {
+                    "label": "Lent/stângaci",
+                    "description": "Oarecum lent și stângaci, dar fără ajutor necesar"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Normal; fără ajutor"
+                }
+            }
+        },
+        "dressing": {
+            "text": "Îmbrăcare și igienă",
+            "options": {
+                "0": {
+                    "label": "Complet dependent",
+                    "description": "Dependență totală"
+                },
+                "1": {
+                    "label": "Ajutor necesar",
+                    "description": "Necesită asistent pentru îngrijire personală"
+                },
+                "2": {
+                    "label": "Ajutor ocazional",
+                    "description": "Asistență intermitentă sau metode alternative"
+                },
+                "3": {
+                    "label": "Independent, dar lent",
+                    "description": "Îngrijire personală independentă și completă, cu efort sau eficiență redusă"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Funcție normală"
+                }
+            }
+        },
+        "turning_in_bed": {
+            "text": "Întoarcerea în pat și aranjarea așternuturilor",
+            "options": {
+                "0": {
+                    "label": "Neajutorat",
+                    "description": "Neajutorat"
+                },
+                "1": {
+                    "label": "Necesită ajutor",
+                    "description": "Poate iniția, dar nu se poate întoarce sau aranja așternuturile singur"
+                },
+                "2": {
+                    "label": "Dificil singur",
+                    "description": "Se poate întoarce singur sau poate aranja așternuturile, dar cu mare dificultate"
+                },
+                "3": {
+                    "label": "Lent/stângaci",
+                    "description": "Oarecum lent și stângaci, dar fără ajutor necesar"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Funcție normală"
+                }
+            }
+        },
+        "walking": {
+            "text": "Mers",
+            "options": {
+                "0": {
+                    "label": "Fără mișcare a picioarelor",
+                    "description": "Fără mișcare voluntară a picioarelor"
+                },
+                "1": {
+                    "label": "Doar transfer",
+                    "description": "Doar mișcare funcțională fără mers"
+                },
+                "2": {
+                    "label": "Cu asistență",
+                    "description": "Merge cu ajutor (orteze, baston, cadru)"
+                },
+                "3": {
+                    "label": "Afectare ușoară a mersului",
+                    "description": "Dificultăți timpurii de deplasare"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Mers normal"
+                }
+            }
+        },
+        "climbing_stairs": {
+            "text": "Urcatul scărilor",
+            "options": {
+                "0": {
+                    "label": "Incapabil",
+                    "description": "Nu poate urca scări"
+                },
+                "1": {
+                    "label": "Cu ajutor",
+                    "description": "Necesită ajutor (balustradă, persoană)"
+                },
+                "2": {
+                    "label": "Ușor instabil",
+                    "description": "Instabilitate sau oboseală ușoară"
+                },
+                "3": {
+                    "label": "Lent",
+                    "description": "Lent"
+                },
+                "4": {
+                    "label": "Normală",
+                    "description": "Normală"
+                }
+            }
+        },
+        "dyspnea": {
+            "text": "Dispnee",
+            "options": {
+                "0": {
+                    "label": "Semnificativ",
+                    "description": "Dificultate semnificativă, se ia în considerare suport respirator mecanic"
+                },
+                "1": {
+                    "label": "În repaus",
+                    "description": "Dificultăți de respirație în repaus, dificultăți de respirație în șezut sau culcat"
+                },
+                "2": {
+                    "label": "La activitate ușoară",
+                    "description": "Dificultăți de respirație la una sau mai multe activități: mâncat, baie, îmbrăcare"
+                },
+                "3": {
+                    "label": "La efort",
+                    "description": "Dificultăți de respirație la mers"
+                },
+                "4": {
+                    "label": "Niciuna",
+                    "description": "Fără dificultăți de respirație"
+                }
+            }
+        },
+        "orthopnea": {
+            "text": "Ortopnee (dificultăți de respirație în poziție culcată)",
+            "options": {
+                "0": {
+                    "label": "Incapabil să doarmă",
+                    "description": "Incapabil să doarmă fără asistență mecanică"
+                },
+                "1": {
+                    "label": "Doar în șezut",
+                    "description": "Poate dormi doar în șezut"
+                },
+                "2": {
+                    "label": "Sunt necesare perne suplimentare",
+                    "description": "Necesită perne suplimentare pentru somn (mai mult de 2)"
+                },
+                "3": {
+                    "label": "Probleme ușoare",
+                    "description": "Unele dificultăți de somn din cauza respirației grele; nu folosește în mod obișnuit mai mult de 2 perne"
+                },
+                "4": {
+                    "label": "Niciuna",
+                    "description": "Fără probleme"
+                }
+            }
+        },
+        "respiratory_insufficiency": {
+            "text": "Insuficiență respiratorie",
+            "options": {
+                "0": {
+                    "label": "Ventilație invazivă",
+                    "description": "Ventilație mecanică invazivă prin intubație sau traheostomie"
+                },
+                "1": {
+                    "label": "BiPAP continuu",
+                    "description": "Utilizare BiPAP continuă zi și noapte"
+                },
+                "2": {
+                    "label": "BiPAP nocturn",
+                    "description": "Utilizare BiPAP nocturnă continuă"
+                },
+                "3": {
+                    "label": "BiPAP intermitent",
+                    "description": "Utilizare intermitentă a BiPAP"
+                },
+                "4": {
+                    "label": "Niciuna",
+                    "description": "Nu este nevoie de sprijin"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Schimbare mică",
+                "description": "Capacitatea funcțională este în mare parte păstrată."
+            },
+            {
+                "label": "Schimbări ușoare",
+                "description": "Sunt observate unele schimbări funcționale."
+            },
+            {
+                "label": "Schimbări notabile",
+                "description": "Sunt observate schimbări funcționale notabile."
+            },
+            {
+                "label": "Schimbări extinse",
+                "description": "Capacitatea funcțională prezintă schimbări extinse."
+            }
+        ]
+    }
+}

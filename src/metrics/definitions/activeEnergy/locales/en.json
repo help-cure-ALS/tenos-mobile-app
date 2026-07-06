@@ -1,0 +1,9 @@
+{
+    "name": "Active Energy",
+    "shortName": "Active Energy",
+    "descriptionTitle": "About Active Energy",
+    "description": "Active energy is the number of calories burned through movement and activity per day (excluding resting metabolism). In ALS, a downward trend can reflect reduced physical activity as mobility changes. This value is imported automatically from Apple Health or Health Connect.",
+    "fields": {
+        "value": { "label": "Active Energy" }
+    }
+}

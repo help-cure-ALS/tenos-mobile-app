@@ -1,0 +1,9 @@
+{
+    "name": "Step Length",
+    "shortName": "Step Length",
+    "descriptionTitle": "About Step Length",
+    "description": "Step length is the average distance between consecutive steps, in metres. In ALS, a shortening step length can reflect changes in gait. This value is imported automatically from Apple Health on iPhone.",
+    "fields": {
+        "value": { "label": "Step Length" }
+    }
+}

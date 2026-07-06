@@ -1,0 +1,130 @@
+{
+  "name": "MOS Pain Effects Scale",
+  "displayName": "Dolor",
+  "shortName": "PES",
+  "exportTitle": "Dolor – PES",
+  "description": "La MOS Pain Effects Scale mide cuánto interfiere el dolor en diferentes áreas de tu vida diaria. Responde a 6 preguntas breves sobre sueño, movilidad, estado de ánimo y actividades.",
+  "introText": "¿Cuánto te afecta el dolor?",
+  "intro": {
+    "title": "Efectos del dolor",
+    "description": "Este cuestionario mide cómo afecta el dolor a tu vida diaria. Valora en una escala de 0 a 10 cuánto ha interferido tu dolor en distintas áreas de tu vida durante los últimos 7 días.",
+    "buttonText": "Empezar",
+    "researchNote": "Gracias por tu aportación. Nos ayuda a comprender mejor el impacto del dolor y a impulsar la investigación."
+  },
+  "domains": {
+    "daily_activities": "Actividades diarias",
+    "other_areas": "Otras áreas"
+  },
+  "questions": {
+    "sleep": {
+      "text": "¿Cuánto ha interferido el dolor en tu sueño?",
+      "exportLabel": "Sueño",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    },
+    "mobility": {
+      "text": "¿Cuánto ha interferido el dolor en tu movilidad?",
+      "exportLabel": "Movilidad",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    },
+    "mood": {
+      "text": "¿Cuánto ha interferido el dolor en tu estado de ánimo?",
+      "exportLabel": "Estado de ánimo",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    },
+    "work": {
+      "text": "¿Cuánto ha interferido el dolor en tu trabajo (incluidas las tareas del hogar)?",
+      "exportLabel": "Trabajo",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    },
+    "recreation": {
+      "text": "¿Cuánto ha interferido el dolor en tus actividades de ocio?",
+      "exportLabel": "Ocio",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    },
+    "enjoyment": {
+      "text": "¿Cuánto ha interferido el dolor en tu disfrute de la vida?",
+      "exportLabel": "Disfrute",
+      "options": {
+        "0": { "label": "Sin interferencia", "description": "En absoluto" },
+        "1": { "label": "Mínima" },
+        "2": { "label": "Mínima", "description": "Apenas perceptible" },
+        "3": { "label": "Leve" },
+        "4": { "label": "Moderada", "description": "Algo limitado" },
+        "5": { "label": "Moderada" },
+        "6": { "label": "Moderada", "description": "Limitación apreciable" },
+        "7": { "label": "Grave" },
+        "8": { "label": "Grave", "description": "Muy limitado" },
+        "9": { "label": "Muy grave" },
+        "10": { "label": "Extrema", "description": "Interfirió por completo" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Poco impacto", "description": "El dolor tiene poco efecto sobre tu vida diaria." },
+      { "label": "Impacto leve", "description": "El dolor tiene un efecto leve en tu vida diaria." },
+      { "label": "Impacto notable", "description": "El dolor afecta de forma apreciable a varias áreas de tu vida." },
+      { "label": "Impacto considerable", "description": "El dolor tiene un efecto considerable en tu vida diaria." }
+    ]
+  }
+}

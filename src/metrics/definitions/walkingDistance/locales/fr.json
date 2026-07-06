@@ -1,0 +1,9 @@
+{
+  "name": "Distance de marche",
+  "shortName": "TM6",
+  "descriptionTitle": "À propos du test de marche de 6 minutes",
+  "description": "Le test de marche de 6 minutes (TM6) mesure la distance pouvant être parcourue en 6 minutes sur terrain plat. C'est un test standardisé d'évaluation de la capacité fonctionnelle à l'effort. Dans la SLA, il peut aider à documenter l'évolution de la marche. Les valeurs normales chez l'adulte se situent entre 400 et 700 mètres.",
+  "fields": {
+    "value": { "label": "Distance de marche" }
+  }
+}

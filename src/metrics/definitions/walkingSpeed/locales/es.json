@@ -1,0 +1,11 @@
+{
+    "name": "Velocidad al caminar",
+    "shortName": "Velocidad",
+    "descriptionTitle": "Acerca de la velocidad al caminar",
+    "description": "La velocidad al caminar es el ritmo medio al que caminas, en metros por segundo. En la ELA, una tendencia descendente puede reflejar una debilidad de las piernas que progresa. Este valor se importa automáticamente desde Apple Salud o Health Connect y se muestra como promedio diario.",
+    "fields": {
+        "value": {
+            "label": "Velocidad al caminar"
+        }
+    }
+}

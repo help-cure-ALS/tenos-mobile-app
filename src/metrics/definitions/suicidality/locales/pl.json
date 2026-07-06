@@ -1,0 +1,17 @@
+{
+  "name": "Myśli samobójcze (PHQ-9 pozycja 9)",
+  "shortName": "Myśli samobójcze",
+  "descriptionTitle": "O myślach samobójczych",
+  "description": "Ta metryka rejestruje odpowiedź na pytanie 9 kwestionariusza PHQ-9: „Myśli, że lepiej byłoby umrzeć albo zrobić sobie krzywdę”. Wartości > 0 wymagają szczególnej uwagi klinicznej. Metryka służy wczesnemu wykrywaniu i zawsze powinna być oceniana w kontekście klinicznym.",
+  "fields": {
+    "value": {
+      "label": "Myśli samobójcze",
+      "valueLabels": {
+        "0": "Wcale",
+        "1": "Przez kilka dni",
+        "2": "Przez ponad połowę dni",
+        "3": "Prawie codziennie"
+      }
+    }
+  }
+}

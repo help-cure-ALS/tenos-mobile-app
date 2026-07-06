@@ -1,0 +1,11 @@
+{
+    "name": "Stabilność chodu",
+    "shortName": "Stabilność",
+    "descriptionTitle": "O stabilności chodu",
+    "description": "Stabilność chodu Apple szacuje w procentach, jak stabilny i zrównoważony jest Twój chód. Tendencja spadkowa wskazuje na wyższe ryzyko upadku. W ALS może to pomóc śledzić zmiany chodu i równowagi. Wartość ta jest importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Stabilność chodu"
+        }
+    }
+}

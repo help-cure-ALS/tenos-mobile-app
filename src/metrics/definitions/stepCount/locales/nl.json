@@ -1,0 +1,11 @@
+{
+    "name": "Stappen",
+    "shortName": "Stappen",
+    "descriptionTitle": "Over het aantal stappen",
+    "description": "Het dagelijkse aantal stappen is een eenvoudige maat voor de algehele dagelijkse activiteit. Bij ALS kan een dalende trend wijzen op afnemende mobiliteit. Stappen worden automatisch geïmporteerd uit Apple Gezondheid of Health Connect; handmatige invoer is niet nodig.",
+    "fields": {
+        "value": {
+            "label": "Stappen"
+        }
+    }
+}

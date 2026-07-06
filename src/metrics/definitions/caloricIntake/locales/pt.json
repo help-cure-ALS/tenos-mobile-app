@@ -1,0 +1,11 @@
+{
+  "name": "Ingestão calórica",
+  "shortName": "Calorias",
+  "descriptionTitle": "Sobre a ingestão calórica",
+  "description": "A ingestão calórica diária é especialmente importante na ELA, pois o corpo muitas vezes tem necessidades energéticas aumentadas devido à doença. Ao mesmo tempo, dificuldades de deglutição podem tornar a alimentação mais difícil. Uma ingestão calórica adequada pode influenciar positivamente a progressão da doença. Discuta os valores-alvo com um médico ou nutricionista.",
+  "fields": {
+    "value": {
+      "label": "Calorias"
+    }
+  }
+}

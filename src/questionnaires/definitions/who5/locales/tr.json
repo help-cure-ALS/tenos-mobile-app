@@ -1,0 +1,185 @@
+{
+    "name": "WHO-5",
+    "displayName": "İyi oluş",
+    "shortName": "WHO-5",
+    "exportTitle": "İyi oluş – WHO-5",
+    "description": "WHO-5, genel iyi oluşu değerlendirmek için kısa bir ankettir. Dünya Sağlık Örgütü tarafından geliştirilmiştir ve öznel iyi oluşu ölçmek için dünya çapında en yaygın kullanılan araçlardan biridir.",
+    "introText": "Son iki hafta içinde...",
+    "intro": {
+        "title": "İyi oluşunu değerlendir",
+        "description": "Bu kısa anket son iki haftadaki genel iyi oluşunu ölçer. WHO tarafından geliştirilmiştir ve yalnızca 5 basit sorudan oluşur.",
+        "researchNote": "Düzenli katılımın iyi oluştaki değişiklikleri erken fark etmeye ve araştırmayı ilerletmeye yardımcı olur.",
+        "buttonText": "Anketi başlat"
+    },
+    "domains": {
+        "wellbeing": "İyi oluş"
+    },
+    "questions": {
+        "cheerful": {
+            "text": "Kendimi neşeli ve morali yüksek hissettim.",
+            "exportLabel": "Neşe",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Son iki haftada hiç"
+                },
+                "1": {
+                    "label": "Zamanın bir kısmında",
+                    "description": "Nadiren"
+                },
+                "2": {
+                    "label": "Zamanın yarısından azında",
+                    "description": "Ara sıra"
+                },
+                "3": {
+                    "label": "Zamanın yarısından fazlasında",
+                    "description": "Çoğunlukla"
+                },
+                "4": {
+                    "label": "Çoğu zaman",
+                    "description": "Zamanın büyük kısmında"
+                },
+                "5": {
+                    "label": "Her zaman",
+                    "description": "Son iki hafta boyunca sürekli"
+                }
+            }
+        },
+        "calm": {
+            "text": "Kendimi sakin ve rahat hissettim.",
+            "exportLabel": "Huzur",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Son iki haftada hiç"
+                },
+                "1": {
+                    "label": "Zamanın bir kısmında",
+                    "description": "Nadiren"
+                },
+                "2": {
+                    "label": "Zamanın yarısından azında",
+                    "description": "Ara sıra"
+                },
+                "3": {
+                    "label": "Zamanın yarısından fazlasında",
+                    "description": "Çoğunlukla"
+                },
+                "4": {
+                    "label": "Çoğu zaman",
+                    "description": "Zamanın büyük kısmında"
+                },
+                "5": {
+                    "label": "Her zaman",
+                    "description": "Son iki hafta boyunca sürekli"
+                }
+            }
+        },
+        "active": {
+            "text": "Kendimi aktif ve dinç hissettim.",
+            "exportLabel": "Enerji",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Son iki haftada hiç"
+                },
+                "1": {
+                    "label": "Zamanın bir kısmında",
+                    "description": "Nadiren"
+                },
+                "2": {
+                    "label": "Zamanın yarısından azında",
+                    "description": "Ara sıra"
+                },
+                "3": {
+                    "label": "Zamanın yarısından fazlasında",
+                    "description": "Çoğunlukla"
+                },
+                "4": {
+                    "label": "Çoğu zaman",
+                    "description": "Zamanın büyük kısmında"
+                },
+                "5": {
+                    "label": "Her zaman",
+                    "description": "Son iki hafta boyunca sürekli"
+                }
+            }
+        },
+        "rested": {
+            "text": "Tazelenmiş ve dinlenmiş hissederek uyandım.",
+            "exportLabel": "Dinlenme",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Son iki haftada hiç"
+                },
+                "1": {
+                    "label": "Zamanın bir kısmında",
+                    "description": "Nadiren"
+                },
+                "2": {
+                    "label": "Zamanın yarısından azında",
+                    "description": "Ara sıra"
+                },
+                "3": {
+                    "label": "Zamanın yarısından fazlasında",
+                    "description": "Çoğunlukla"
+                },
+                "4": {
+                    "label": "Çoğu zaman",
+                    "description": "Zamanın büyük kısmında"
+                },
+                "5": {
+                    "label": "Her zaman",
+                    "description": "Son iki hafta boyunca sürekli"
+                }
+            }
+        },
+        "interesting": {
+            "text": "Günlük yaşamım ilgimi çeken şeylerle doluydu.",
+            "exportLabel": "İlgi",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Son iki haftada hiç"
+                },
+                "1": {
+                    "label": "Zamanın bir kısmında",
+                    "description": "Nadiren"
+                },
+                "2": {
+                    "label": "Zamanın yarısından azında",
+                    "description": "Ara sıra"
+                },
+                "3": {
+                    "label": "Zamanın yarısından fazlasında",
+                    "description": "Çoğunlukla"
+                },
+                "4": {
+                    "label": "Çoğu zaman",
+                    "description": "Zamanın büyük kısmında"
+                },
+                "5": {
+                    "label": "Her zaman",
+                    "description": "Son iki hafta boyunca sürekli"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "İyi iyi oluş",
+                "description": "Yanıtların iyi bir iyi oluş düzeyine işaret ediyor."
+            },
+            {
+                "label": "Azalmış iyi oluş",
+                "description": "Yanıtların azalmış iyi oluşa işaret ediyor."
+            },
+            {
+                "label": "Düşük iyi oluş",
+                "description": "Yanıtların belirgin şekilde azalmış iyi oluşa işaret ediyor."
+            }
+        ]
+    }
+}

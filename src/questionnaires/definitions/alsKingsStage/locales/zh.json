@@ -1,0 +1,105 @@
+{
+  "name": "King's分期",
+  "displayName": "King's分期",
+  "shortName": "King's",
+  "description": "由临床医生根据King's College标准确认的ALS阶段，基于受累区域以及营养或呼吸受累情况。",
+  "domains": {
+    "structured": "King's分期"
+  },
+  "questions": {
+    "payload": {
+      "text": "King's分期",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "分期",
+      "info": "King's分期由受累区域和相关营养或呼吸标准推导。",
+      "options": {
+        "1": {
+          "label": "第1期",
+          "description": "一个区域受累"
+        },
+        "2": {
+          "label": "第2期",
+          "description": "两个区域受累"
+        },
+        "3": {
+          "label": "第3期",
+          "description": "三个区域受累"
+        },
+        "4": {
+          "label": "第4期",
+          "description": "第4期，未进一步说明"
+        },
+        "4A": {
+          "label": "第4A期",
+          "description": "营养受累"
+        },
+        "4B": {
+          "label": "第4B期",
+          "description": "呼吸受累"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "受累区域",
+      "info": "用于分期的临床受累区域。",
+      "options": {
+        "bulbar": {
+          "label": "延髓"
+        },
+        "upper_limb": {
+          "label": "上肢"
+        },
+        "lower_limb": {
+          "label": "下肢"
+        },
+        "thoracic": {
+          "label": "胸部/呼吸"
+        }
+      }
+    },
+    "source": {
+      "label": "来源",
+      "info": "评估依据。建议值仍需临床医生确认。",
+      "options": {
+        "manual": {
+          "label": "临床医生确认"
+        },
+        "suggested_from_exam": {
+          "label": "由检查建议"
+        },
+        "suggested_from_alsfrs": {
+          "label": "由ALSFRS-R建议"
+        },
+        "suggested_from_care": {
+          "label": "由护理数据建议"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "第4期原因",
+      "info": "记录第4期是否由营养或呼吸受累驱动。",
+      "options": {
+        "nutrition": {
+          "label": "营养"
+        },
+        "respiratory": {
+          "label": "呼吸"
+        },
+        "both": {
+          "label": "营养和呼吸"
+        },
+        "unspecified": {
+          "label": "未说明"
+        }
+      }
+    },
+    "note": {
+      "label": "备注",
+      "placeholder": "可选临床备注"
+    }
+  }
+}

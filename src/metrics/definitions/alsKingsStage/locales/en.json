@@ -1,0 +1,8 @@
+{
+    "name": "King's Stage",
+    "shortName": "King's",
+    "descriptionTitle": "About King's Stage",
+    "description": "King's Stage describes the clinician-confirmed ALS stage based on affected regions and nutritional or respiratory involvement.",
+    "fields": {},
+    "valueLabels": {}
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Soğuk hassasiyeti",
+    "shortName": "Soğuk",
+    "descriptionTitle": "Soğuk hassasiyeti hakkında",
+    "description": "Soğuk hassasiyeti ALS’de sık görülen bir belirtidir. Azalmış kas kütlesi, otonom disfonksiyon veya azalmış fiziksel aktiviteden kaynaklanabilir. Takip, kalıpları belirlemeye ve daha sıcak giysi veya oda sıcaklığı gibi önlemleri ayarlamaya yardımcı olur. (0 = Yok, 1 = Hafif, 2 = Orta, 3 = Şiddetli)",
+    "fields": {
+        "value": {
+            "label": "Soğuk hassasiyeti",
+            "valueLabels": {
+                "0": "Yok",
+                "1": "Hafif",
+                "2": "Orta",
+                "3": "Şiddetli"
+            }
+        }
+    }
+}

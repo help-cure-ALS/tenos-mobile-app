@@ -1,0 +1,9 @@
+{
+    "name": "Weight",
+    "shortName": "Weight",
+    "descriptionTitle": "About Body Weight",
+    "description": "Body weight is an important indicator of general health. In ALS, unintentional weight loss can be a sign of swallowing difficulties or increased energy expenditure. Regular weight monitoring helps to take early countermeasures.",
+    "fields": {
+        "value": { "label": "Weight" }
+    }
+}

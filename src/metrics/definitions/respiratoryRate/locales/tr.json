@@ -1,0 +1,11 @@
+{
+    "name": "Solunum hızı",
+    "shortName": "Solunum",
+    "descriptionTitle": "Solunum hızı hakkında",
+    "description": "Solunum hızı, dakikadaki nefes sayısıdır. ALS'de solunum işlevi önemli bir ölçüttür; dinlenme hâlinde artan solunum hızı, solunum kaslarındaki güçsüzlüğün erken bir işareti olabilir. Bu değer Apple Sağlık veya Health Connect'ten otomatik olarak alınır (genellikle uyku sırasında ölçülür) ve günlük ortalama olarak gösterilir.",
+    "fields": {
+        "value": {
+            "label": "Solunum hızı"
+        }
+    }
+}

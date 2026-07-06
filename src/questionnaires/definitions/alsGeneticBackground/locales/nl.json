@@ -1,0 +1,161 @@
+{
+  "name": "ALS-vorm en genetica",
+  "displayName": "ALS-vorm en genetica",
+  "shortName": "ALS-vorm",
+  "description": "Documentatie van sporadische of familiaire ALS, familiegeschiedenis en bekende genetische bevindingen.",
+  "domains": {
+    "structured": "ALS-vorm en genetica"
+  },
+  "questions": {
+    "payload": {
+      "text": "ALS-vorm en genetica",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "diseaseForm": {
+      "label": "ALS-vorm",
+      "info": "Klinische classificatie of ALS sporadisch, familiair of onduidelijk is.",
+      "options": {
+        "sporadic": {
+          "label": "sporadisch"
+        },
+        "familial": {
+          "label": "familiair"
+        },
+        "suspected_familial": {
+          "label": "vermoedelijk familiair"
+        },
+        "unclear": {
+          "label": "onduidelijk"
+        }
+      }
+    },
+    "familyHistory": {
+      "label": "Familiegeschiedenis",
+      "info": "Documenteert bekende ALS, FTD of andere motorneuronziekte in de familie.",
+      "options": {
+        "none_known": {
+          "label": "geen bekend"
+        },
+        "als": {
+          "label": "ALS in de familie"
+        },
+        "ftd": {
+          "label": "FTD in de familie"
+        },
+        "als_ftd": {
+          "label": "ALS/FTD in de familie"
+        },
+        "other_mnd": {
+          "label": "andere motorneuronziekte"
+        },
+        "other_neurodegenerative": {
+          "label": "andere neurodegeneratieve voorgeschiedenis"
+        }
+      }
+    },
+    "testingStatus": {
+      "label": "Genetische test",
+      "info": "Status van genetische test. De app interpreteert geen ruwe genetische data.",
+      "options": {
+        "not_tested": {
+          "label": "niet getest"
+        },
+        "planned": {
+          "label": "gepland"
+        },
+        "pending": {
+          "label": "in behandeling"
+        },
+        "negative": {
+          "label": "geen bekende mutatie"
+        },
+        "vus": {
+          "label": "variant van onbekende betekenis"
+        },
+        "pathogenic": {
+          "label": "pathogene/waarschijnlijk pathogene variant"
+        }
+      }
+    },
+    "gene": {
+      "label": "Gen",
+      "info": "Bekend gen uit klinische documentatie of laboratoriumrapport.",
+      "placeholder": "Gen invoeren",
+      "options": {
+        "C9orf72": {
+          "label": "C9orf72"
+        },
+        "SOD1": {
+          "label": "SOD1"
+        },
+        "FUS": {
+          "label": "FUS"
+        },
+        "TARDBP": {
+          "label": "TARDBP"
+        },
+        "TBK1": {
+          "label": "TBK1"
+        },
+        "OPTN": {
+          "label": "OPTN"
+        },
+        "VCP": {
+          "label": "VCP"
+        },
+        "other": {
+          "label": "anders"
+        }
+      }
+    },
+    "source": {
+      "label": "Bron",
+      "info": "Waar komt deze invoer vandaan? Genetische informatie moet herleidbaar worden gedocumenteerd.",
+      "options": {
+        "patient_reported": {
+          "label": "patiëntmelding"
+        },
+        "clinician_documented": {
+          "label": "door arts gedocumenteerd"
+        },
+        "lab_report": {
+          "label": "laboratorium"
+        }
+      }
+    },
+    "counselingStatus": {
+      "label": "Genetische counseling",
+      "info": "Of genetische counseling voor test of bespreking van resultaten is gedocumenteerd.",
+      "options": {
+        "completed": {
+          "label": "afgerond"
+        },
+        "recommended": {
+          "label": "aanbevolen"
+        },
+        "not_done": {
+          "label": "niet gedaan"
+        }
+      }
+    },
+    "otherGene": {
+      "label": "Ander gen",
+      "placeholder": "Gennaam"
+    },
+    "variantText": {
+      "label": "Variant",
+      "placeholder": "Optionele korte bevinding"
+    },
+    "testDate": {
+      "label": "Testdatum",
+      "info": "Maand en jaar van genetische test.",
+      "placeholder": "Selecteren"
+    },
+    "note": {
+      "label": "Opmerking",
+      "placeholder": "Optionele opmerking"
+    }
+  }
+}

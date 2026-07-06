@@ -1,0 +1,127 @@
+{
+    "name": "ALS alt tipi",
+    "displayName": "ALS alt tipi",
+    "shortName": "Alt tip",
+    "description": "Belirti başlangıç yeri, yayılım ve motor nöron paternine göre klinik ALS fenotip sınıflandırması.",
+    "domains": {
+        "structured": "ALS alt tipi"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS alt tipi",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Belirti başlangıç yeri",
+            "info": "O ekseni, ilk motor belirtilerin başladığı vücut bölgesini tanımlar. Bulber, solunum veya aksiyal motor belirtiler dahil güçsüzlük ya da yavaş/koordinasyonu bozulmuş istemli hareket sayılır. Yalnızca fasikülasyonlar, kas atrofisi ve refleks bulguları belirti başlangıcı sayılmaz.",
+            "options": {
+                "O1": {
+                    "label": "Baş/bulber"
+                },
+                "O2d": {
+                    "label": "Distal kol"
+                },
+                "O2p": {
+                    "label": "Proksimal kol"
+                },
+                "O2x": {
+                    "label": "Kol belirsiz"
+                },
+                "O3r": {
+                    "label": "Solunum"
+                },
+                "O3a": {
+                    "label": "Aksiyal/gövde"
+                },
+                "O4d": {
+                    "label": "Distal bacak"
+                },
+                "O4p": {
+                    "label": "Proksimal bacak"
+                },
+                "O4x": {
+                    "label": "Bacak belirsiz"
+                }
+            }
+        },
+        "propagationStatus": {
+            "label": "Yayılım",
+            "info": "P ekseni, motor belirtilerin başlangıç bölgesinden başka bir vücut bölgesine dikey yayılımını tanımlar: baş, kol, gövde veya bacak. Bir koldan diğer kola ya da bir bacaktan diğer bacağa yatay yayılım sayılmaz. Yalnızca fasikülasyonlar, atrofi veya refleks bulguları yayılım sayılmaz.",
+            "options": {
+                "P0": {
+                    "label": "dikey yayılım yok"
+                },
+                "P1": {
+                    "label": "yayılım oldu"
+                }
+            }
+        },
+        "propagationPattern": {
+            "label": "Yayılım",
+            "info": "P ekseni, motor belirtilerin başlangıç bölgesinden başka bir vücut bölgesine dikey yayılımını tanımlar: baş, kol, gövde veya bacak. Bir koldan diğer kola ya da bir bacaktan diğer bacağa yatay yayılım sayılmaz. Yalnızca fasikülasyonlar, atrofi veya refleks bulguları yayılım sayılmaz.",
+            "options": {
+                "P0n": {
+                    "label": "P0(n)",
+                    "description": "Dikey yayılım yok; n = değerlendirmeye kadar geçen ay"
+                },
+                "P1n": {
+                    "label": "P1(n)",
+                    "description": "Dikey yayılım oldu; n = yayılıma kadar geçen ay"
+                },
+                "P1x": {
+                    "label": "P1(x)",
+                    "description": "Dikey yayılım oldu, zamanlama belirsiz"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Motor nöron fenotipi",
+            "info": "M ekseni, üst motor nöron (UMN) ve alt motor nöron (LMN) bulguları arasındaki dengeyi tanımlar. UMN bulguları yavaş veya koordinasyonu bozuk istemli hareket, canlı refleksler, spastisite veya psödobulber affekti içerir. LMN bulguları etkilenen kaslarda atrofiyle birlikte güçsüzlük, refleks kaybı veya fasikülasyonları içerir. M0 dengeli, M1 UMN ağırlıklı, M2 LMN ağırlıklı, M3 ayrışmıştır.",
+            "options": {
+                "M0": {
+                    "label": "Dengeli UMN/LMN"
+                },
+                "M1d": {
+                    "label": "UMN baskın"
+                },
+                "M1p": {
+                    "label": "saf UMN"
+                },
+                "M2d": {
+                    "label": "LMN baskın"
+                },
+                "M2p": {
+                    "label": "saf LMN"
+                },
+                "M3": {
+                    "label": "ayrışmış"
+                }
+            }
+        },
+        "certainty": {
+            "label": "Durum",
+            "info": "Durum, klinik sınıflandırmaya duyulan güveni tanımlar: ilk veya henüz tam güvence altına alınmamış değerlendirme için ön, bulgular yeterince net olduğunda doğrulanmış, kriterler güvenilir şekilde ayrılamadığında belirsiz.",
+            "options": {
+                "preliminary": {
+                    "label": "ön değerlendirme"
+                },
+                "confirmed": {
+                    "label": "doğrulandı"
+                },
+                "uncertain": {
+                    "label": "belirsiz"
+                }
+            }
+        },
+        "propagationMonths": {
+            "label": "Ay",
+            "info": "P0(n) için: belirti başlangıcından dikey yayılımın bulunmadığı değerlendirmeye kadar geçen ay. P1(n) için: belirti başlangıcından ilk dikey yayılıma kadar geçen ay."
+        },
+        "note": {
+            "label": "Yorum",
+            "placeholder": "İsteğe bağlı klinik yorum"
+        }
+    }
+}

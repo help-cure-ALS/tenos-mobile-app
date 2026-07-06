@@ -1,0 +1,9 @@
+{
+    "name": "Stair Descent Speed",
+    "shortName": "Stair Down",
+    "descriptionTitle": "About Stair Descent Speed",
+    "description": "Stair descent speed is how fast you walk down stairs, in metres per second. Descending stairs is demanding for balance and leg control, so a downward trend can be an early sign of declining lower-limb function in ALS. This value is imported automatically from Apple Health on iPhone.",
+    "fields": {
+        "value": { "label": "Stair Descent Speed" }
+    }
+}

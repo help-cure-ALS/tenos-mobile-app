@@ -1,0 +1,11 @@
+{
+    "name": "Timpul de sprijin dublu",
+    "shortName": "Sprijin dublu",
+    "descriptionTitle": "Despre timpul de sprijin dublu",
+    "description": "Timpul de sprijin dublu este procentul din ciclul de mers în care ambele picioare ating solul. O valoare mai mare indică adesea un mers mai prudent, mai puțin stabil și un risc mai mare de cădere. În SLA, poate ajuta la urmărirea modificărilor de echilibru. Această valoare este importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Timpul de sprijin dublu"
+        }
+    }
+}

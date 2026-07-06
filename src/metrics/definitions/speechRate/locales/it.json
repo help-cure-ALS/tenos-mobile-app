@@ -1,0 +1,11 @@
+{
+  "name": "Velocità del linguaggio",
+  "shortName": "Linguaggio",
+  "descriptionTitle": "Informazioni sulla velocità del linguaggio",
+  "description": "La velocità del linguaggio misura quante parole possono essere pronunciate al minuto. Nella SLA, il coinvolgimento bulbare può portare a un linguaggio rallentato e impastato (disartria). La velocità normale è circa 120-150 parole al minuto. Misurazioni regolari aiutano a rilevare precocemente cambiamenti.",
+  "fields": {
+    "value": {
+      "label": "Parole al minuto"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "步数",
+    "shortName": "步数",
+    "descriptionTitle": "关于步数",
+    "description": "每日步数是衡量日常活动量的简单指标。在ALS中，下降趋势可能反映行动能力的减退。步数会自动从Apple健康或Health Connect导入，无需手动输入。",
+    "fields": {
+        "value": {
+            "label": "步数"
+        }
+    }
+}

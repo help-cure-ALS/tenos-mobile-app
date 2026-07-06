@@ -1,0 +1,11 @@
+{
+    "name": "Energie activă",
+    "shortName": "Energie activă",
+    "descriptionTitle": "Despre energia activă",
+    "description": "Energia activă reprezintă caloriile consumate prin mișcare și activitate în fiecare zi (fără metabolismul de repaus). În SLA, o tendință descendentă poate reflecta o activitate fizică redusă pe măsură ce mobilitatea se modifică. Această valoare este importată automat din Apple Sănătate sau Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Energie activă"
+        }
+    }
+}

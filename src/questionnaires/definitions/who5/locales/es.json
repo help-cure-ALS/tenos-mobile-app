@@ -1,0 +1,86 @@
+{
+  "name": "WHO-5",
+  "displayName": "Bienestar",
+  "shortName": "WHO-5",
+  "exportTitle": "Bienestar – WHO-5",
+  "description": "El WHO-5 es un breve cuestionario para evaluar el bienestar general. Fue desarrollado por la Organización Mundial de la Salud y es uno de los instrumentos más utilizados en todo el mundo para medir el bienestar subjetivo.",
+  "introText": "Durante las últimas dos semanas...",
+  "intro": {
+    "title": "Evalúa tu bienestar",
+    "description": "Este breve cuestionario mide tu bienestar general durante las últimas dos semanas. Fue desarrollado por la OMS y consta de solo 5 preguntas sencillas.",
+    "researchNote": "Tu participación regular ayuda a detectar cambios en el bienestar de forma temprana y a impulsar la investigación.",
+    "buttonText": "Empezar cuestionario"
+  },
+  "domains": {
+    "wellbeing": "Bienestar"
+  },
+  "questions": {
+    "cheerful": {
+      "text": "Me he sentido alegre y de buen ánimo.",
+      "exportLabel": "Buen humor",
+      "options": {
+        "5": { "label": "Todo el tiempo", "description": "Constantemente durante las últimas dos semanas" },
+        "4": { "label": "La mayor parte del tiempo", "description": "La mayor parte del tiempo" },
+        "3": { "label": "Más de la mitad del tiempo", "description": "Predominantemente" },
+        "2": { "label": "Menos de la mitad del tiempo", "description": "Ocasionalmente" },
+        "1": { "label": "Parte del tiempo", "description": "Rara vez" },
+        "0": { "label": "En ningún momento", "description": "Nunca en las últimas dos semanas" }
+      }
+    },
+    "calm": {
+      "text": "Me he sentido tranquilo/a y relajado/a.",
+      "exportLabel": "Calma",
+      "options": {
+        "5": { "label": "Todo el tiempo", "description": "Constantemente durante las últimas dos semanas" },
+        "4": { "label": "La mayor parte del tiempo", "description": "La mayor parte del tiempo" },
+        "3": { "label": "Más de la mitad del tiempo", "description": "Predominantemente" },
+        "2": { "label": "Menos de la mitad del tiempo", "description": "Ocasionalmente" },
+        "1": { "label": "Parte del tiempo", "description": "Rara vez" },
+        "0": { "label": "En ningún momento", "description": "Nunca en las últimas dos semanas" }
+      }
+    },
+    "active": {
+      "text": "Me he sentido activo/a y con energía.",
+      "exportLabel": "Energía",
+      "options": {
+        "5": { "label": "Todo el tiempo", "description": "Constantemente durante las últimas dos semanas" },
+        "4": { "label": "La mayor parte del tiempo", "description": "La mayor parte del tiempo" },
+        "3": { "label": "Más de la mitad del tiempo", "description": "Predominantemente" },
+        "2": { "label": "Menos de la mitad del tiempo", "description": "Ocasionalmente" },
+        "1": { "label": "Parte del tiempo", "description": "Rara vez" },
+        "0": { "label": "En ningún momento", "description": "Nunca en las últimas dos semanas" }
+      }
+    },
+    "rested": {
+      "text": "Me he despertado sintiéndome descansado/a y renovado/a.",
+      "exportLabel": "Descanso",
+      "options": {
+        "5": { "label": "Todo el tiempo", "description": "Constantemente durante las últimas dos semanas" },
+        "4": { "label": "La mayor parte del tiempo", "description": "La mayor parte del tiempo" },
+        "3": { "label": "Más de la mitad del tiempo", "description": "Predominantemente" },
+        "2": { "label": "Menos de la mitad del tiempo", "description": "Ocasionalmente" },
+        "1": { "label": "Parte del tiempo", "description": "Rara vez" },
+        "0": { "label": "En ningún momento", "description": "Nunca en las últimas dos semanas" }
+      }
+    },
+    "interesting": {
+      "text": "Mi vida diaria ha estado llena de cosas que me interesan.",
+      "exportLabel": "Interés",
+      "options": {
+        "5": { "label": "Todo el tiempo", "description": "Constantemente durante las últimas dos semanas" },
+        "4": { "label": "La mayor parte del tiempo", "description": "La mayor parte del tiempo" },
+        "3": { "label": "Más de la mitad del tiempo", "description": "Predominantemente" },
+        "2": { "label": "Menos de la mitad del tiempo", "description": "Ocasionalmente" },
+        "1": { "label": "Parte del tiempo", "description": "Rara vez" },
+        "0": { "label": "En ningún momento", "description": "Nunca en las últimas dos semanas" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Buen bienestar", "description": "Tus respuestas sugieren un buen nivel de bienestar." },
+      { "label": "Bienestar reducido", "description": "Tus respuestas sugieren una reducción del bienestar." },
+      { "label": "Bienestar bajo", "description": "Tus respuestas sugieren un bienestar claramente reducido." }
+    ]
+  }
+}

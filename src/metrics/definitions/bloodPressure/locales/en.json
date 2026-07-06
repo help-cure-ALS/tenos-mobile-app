@@ -1,0 +1,10 @@
+{
+    "name": "Blood Pressure",
+    "shortName": "BP",
+    "descriptionTitle": "About Blood Pressure",
+    "description": "Blood pressure measures the pressure of blood in the arteries. It is given as two values: systolic (upper value) and diastolic (lower value). Regular monitoring helps to detect cardiovascular diseases early.",
+    "fields": {
+        "systolic": { "label": "Systolic" },
+        "diastolic": { "label": "Diastolic" }
+    }
+}

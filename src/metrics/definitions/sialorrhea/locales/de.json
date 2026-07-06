@@ -1,0 +1,11 @@
+{
+    "name": "Speichelfluss",
+    "shortName": "Speichel",
+    "descriptionTitle": "Über Speichelfluss",
+    "description": "Übermäßiger Speichelfluss (Sialorrhoe) ist ein häufiges Symptom bei ALS, verursacht durch Schluckschwierigkeiten, nicht durch erhöhte Speichelproduktion. Erfasse die Schwere auf einer Skala von 0 (normal) bis 10 (sehr stark). Die Dokumentation hilft, die Wirksamkeit von Behandlungen zu beurteilen.",
+    "fields": {
+        "value": {
+            "label": "Schweregrad"
+        }
+    }
+}

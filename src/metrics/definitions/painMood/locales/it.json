@@ -1,0 +1,24 @@
+{
+  "name": "Dolore -> Umore",
+  "shortName": "Umore",
+  "descriptionTitle": "Impatto del dolore sull’umore",
+  "description": "Registra quanto il dolore influisce sull’umore. Su una scala da 0 (nessun impatto) a 10 (impatto estremo). Il dolore cronico può avere effetti significativi sulla salute mentale.",
+  "fields": {
+    "value": {
+      "label": "Compromissione",
+      "valueLabels": {
+        "0": "Nessuna",
+        "1": "Minima",
+        "2": "Minima",
+        "3": "Lieve",
+        "4": "Moderata",
+        "5": "Moderata",
+        "6": "Moderata",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Molto grave",
+        "10": "Estrema"
+      }
+    }
+  }
+}

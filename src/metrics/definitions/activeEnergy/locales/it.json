@@ -1,0 +1,11 @@
+{
+    "name": "Energia attiva",
+    "shortName": "Energia attiva",
+    "descriptionTitle": "Informazioni sull'energia attiva",
+    "description": "L'energia attiva è il numero di calorie bruciate con il movimento e l'attività ogni giorno (escluso il metabolismo a riposo). Nella SLA, una tendenza al ribasso può riflettere una ridotta attività fisica al variare della mobilità. Questo valore viene importato automaticamente da Apple Salute o Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Energia attiva"
+        }
+    }
+}

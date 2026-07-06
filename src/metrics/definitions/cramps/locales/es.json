@@ -1,0 +1,11 @@
+{
+  "name": "Calambres musculares",
+  "shortName": "Calambres",
+  "descriptionTitle": "Sobre los calambres musculares",
+  "description": "Los calambres musculares son contracciones dolorosas, mantenidas e involuntarias. Se diferencian de las fasciculaciones (sacudidas breves), que se registran por separado. Los calambres son frecuentes en la ELA, especialmente por la noche, y pueden alterar el sueño. Registra el número de calambres al día para identificar patrones.",
+  "fields": {
+    "value": {
+      "label": "Número de calambres"
+    }
+  }
+}

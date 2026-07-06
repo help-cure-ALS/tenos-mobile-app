@@ -1,0 +1,11 @@
+{
+    "name": "Estabilidad al caminar",
+    "shortName": "Estabilidad",
+    "descriptionTitle": "Acerca de la estabilidad al caminar",
+    "description": "La estabilidad al caminar de Apple estima, en porcentaje, cuán estable y equilibrada es tu forma de caminar. Una tendencia descendente indica un mayor riesgo de caídas. En la ELA, puede ayudar a seguir los cambios en la marcha y el equilibrio. Este valor se importa automáticamente desde Apple Salud.",
+    "fields": {
+        "value": {
+            "label": "Estabilidad al caminar"
+        }
+    }
+}

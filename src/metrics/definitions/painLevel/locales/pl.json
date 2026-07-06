@@ -1,0 +1,18 @@
+{
+  "name": "Poziom bólu",
+  "shortName": "Ból",
+  "descriptionTitle": "O poziomie bólu",
+  "description": "Poziom bólu ocenia się za pomocą werbalnej skali opisowej (VRS). W ALS ból może wynikać z napięcia mięśni, kurczów, unieruchomienia lub odleżyn. Regularna dokumentacja pomaga rozpoznawać wzorce bólu i dostosować leczenie.",
+  "fields": {
+    "value": {
+      "label": "Poziom bólu",
+      "valueLabels": {
+        "0": "Brak bólu",
+        "1": "Łagodny ból",
+        "2": "Umiarkowany ból",
+        "3": "Silny ból",
+        "4": "Bardzo silny ból"
+      }
+    }
+  }
+}

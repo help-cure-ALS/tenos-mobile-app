@@ -1,0 +1,9 @@
+{
+    "name": "Gehgeschwindigkeit",
+    "shortName": "Gehtempo",
+    "descriptionTitle": "Über die Gehgeschwindigkeit",
+    "description": "Die Gehgeschwindigkeit ist das durchschnittliche Tempo beim Gehen in Metern pro Sekunde. Bei ALS kann ein abnehmender Trend eine fortschreitende Beinschwäche und nachlassende Mobilität widerspiegeln. Der Wert wird automatisch aus Apple Health oder Health Connect importiert und als Tagesmittelwert angezeigt.",
+    "fields": {
+        "value": { "label": "Gehgeschwindigkeit" }
+    }
+}

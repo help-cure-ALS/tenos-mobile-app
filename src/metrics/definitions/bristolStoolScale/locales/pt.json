@@ -1,0 +1,20 @@
+{
+  "name": "Consistência das fezes",
+  "shortName": "Fezes",
+  "descriptionTitle": "Sobre a Escala de Bristol",
+  "description": "A Escala de Bristol é uma ferramenta clínica para avaliar a consistência das fezes. Na ELA, a obstipação é comum devido à mobilidade reduzida, fraqueza dos músculos abdominais ou medicamentos. O tipo 3-4 é considerado ideal. O tipo 1-2 indica obstipação, o tipo 6-7 indica diarreia. (1 = duro/grumoso, 4 = ideal, 7 = aquoso)",
+  "fields": {
+    "value": {
+      "label": "Tipo de fezes",
+      "valueLabels": {
+        "1": "Tipo 1 - Grumos duros separados",
+        "2": "Tipo 2 - Em forma de salsicha, irregular",
+        "3": "Tipo 3 - Salsicha com fissuras",
+        "4": "Tipo 4 - Lisa e macia (ideal)",
+        "5": "Tipo 5 - Pedaços macios",
+        "6": "Tipo 6 - Pedaços pastosos e fofos",
+        "7": "Tipo 7 - Aquosa, líquida"
+      }
+    }
+  }
+}

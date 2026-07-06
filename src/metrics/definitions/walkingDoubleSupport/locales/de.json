@@ -1,0 +1,9 @@
+{
+    "name": "Doppelstandzeit",
+    "shortName": "Doppelstand",
+    "descriptionTitle": "Über die Doppelstandzeit",
+    "description": "Die Doppelstandzeit ist der prozentuale Anteil des Gehzyklus, in dem beide Füße den Boden berühren. Ein höherer Wert deutet oft auf einen vorsichtigeren, weniger stabilen Gang und ein höheres Sturzrisiko hin. Bei ALS kann dies helfen, Veränderungen des Gleichgewichts zu verfolgen. Der Wert wird automatisch aus Apple Health auf dem iPhone importiert.",
+    "fields": {
+        "value": { "label": "Doppelstandzeit" }
+    }
+}

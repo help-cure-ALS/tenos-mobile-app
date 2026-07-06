@@ -1,0 +1,11 @@
+{
+    "name": "Timp de înghițire",
+    "shortName": "Înghițire",
+    "descriptionTitle": "Despre timpul de înghițire",
+    "description": "Timpul de înghițire măsoară cât durează înghițirea unei cantități definite (de ex. 150 ml de apă). În ALS, disfagia (dificultatea de înghițire) poate îngreuna alimentația și crește riscul de aspirație. Un timp de înghițire prelungit poate indica simptome bulbare progresive. Valorile normale sunt sub 20 de secunde pentru 150 ml de apă.",
+    "fields": {
+        "value": {
+            "label": "Timp de înghițire"
+        }
+    }
+}

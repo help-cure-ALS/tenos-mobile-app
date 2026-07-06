@@ -1,0 +1,341 @@
+{
+    "name": "ALSFRS-R",
+    "displayName": "Fonksiyonel durum",
+    "shortName": "ALSFRS-R",
+    "description": "ALS Functional Rating Scale - Revised (ALSFRS-R), ALS hastalarında fonksiyonel durumu değerlendirmek için doğrulanmış bir araçtır. Anket, dört alan altında günlük yaşamın 12 bölümünü kapsar.",
+    "introText": "Lütfen aşağıdaki alanlarda güncel fonksiyonel yetini değerlendir. Durumuna en iyi uyan açıklamayı seç.",
+    "intro": {
+        "title": "Fonksiyonel değerlendirme",
+        "description": "Bu anket günlük yaşamın 12 alanında güncel fonksiyonel yetini değerlendirir. Tamamlaması yaklaşık 5 dakika sürer.",
+        "buttonText": "Anketi başlat",
+        "researchNote": "Katılımın için teşekkürler. Düzenli değerlendirmeler hastalık ilerlemesini daha iyi anlamamıza ve ALS araştırmasını ilerletmemize yardımcı olur."
+    },
+    "domains": {
+        "bulbar": "Bulber fonksiyon",
+        "fine_motor": "İnce motor",
+        "gross_motor": "Kaba motor",
+        "respiratory": "Solunum"
+    },
+    "questions": {
+        "speech": {
+            "text": "Konuşma",
+            "options": {
+                "0": {
+                    "label": "Konuşma yok",
+                    "description": "Kullanılabilir konuşmanın kaybı"
+                },
+                "1": {
+                    "label": "Şiddetli bozulma",
+                    "description": "Sözel olmayan iletişimle birlikte konuşma"
+                },
+                "2": {
+                    "label": "Orta düzey bozulma",
+                    "description": "Ara sıra tekrar etmek gerekir"
+                },
+                "3": {
+                    "label": "Hafif bozulma",
+                    "description": "Fark edilebilir konuşma bozukluğu"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal konuşma süreçleri"
+                }
+            }
+        },
+        "salivation": {
+            "text": "Tükürük salgısı",
+            "options": {
+                "0": {
+                    "label": "Şiddetli fazlalık",
+                    "description": "Belirgin salya akması; sürekli peçete veya mendil gerektirir"
+                },
+                "1": {
+                    "label": "Belirgin fazlalık",
+                    "description": "Bir miktar salya akmasıyla belirgin tükürük fazlalığı"
+                },
+                "2": {
+                    "label": "Orta düzey fazlalık",
+                    "description": "Orta düzeyde fazla tükürük; az miktarda salya akması olabilir"
+                },
+                "3": {
+                    "label": "Hafif fazlalık",
+                    "description": "Hafif ancak belirgin tükürük fazlalığı; gece salya akması olabilir"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal tükürük salgısı"
+                }
+            }
+        },
+        "swallowing": {
+            "text": "Yutma",
+            "options": {
+                "0": {
+                    "label": "Yalnızca tüple beslenme",
+                    "description": "Ağızdan hiçbir şey almıyor; yalnızca tüple besleniyor"
+                },
+                "1": {
+                    "label": "Ek tüple beslenme",
+                    "description": "Ek tüple beslenme gerekir"
+                },
+                "2": {
+                    "label": "Diyet değişikliği",
+                    "description": "Besin kıvamı değişiklikleri"
+                },
+                "3": {
+                    "label": "Hafif sorunlar",
+                    "description": "Erken yeme sorunları - ara sıra boğulma/öksürme"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal yeme alışkanlıkları"
+                }
+            }
+        },
+        "handwriting": {
+            "text": "El yazısı",
+            "options": {
+                "0": {
+                    "label": "Yapamıyor",
+                    "description": "Kalemi kavrayamıyor"
+                },
+                "1": {
+                    "label": "Kalemi tutabiliyor",
+                    "description": "Kalemi kavrayabiliyor ancak yazamıyor"
+                },
+                "2": {
+                    "label": "Kısmen okunaklı",
+                    "description": "Tüm kelimeler okunaklı değil"
+                },
+                "3": {
+                    "label": "Yavaş/özensiz",
+                    "description": "Yavaş veya özensiz; tüm kelimeler okunaklı"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal yazı"
+                }
+            }
+        },
+        "cutting_food": {
+            "text": "Yiyecek kesme ve çatal bıçak kullanma",
+            "options": {
+                "0": {
+                    "label": "Tam bağımlı",
+                    "description": "Beslenmesi gerekir"
+                },
+                "1": {
+                    "label": "Beslenmesi gerekir",
+                    "description": "Yiyecek başkası tarafından kesilmeli, ancak yavaş da olsa kendisi yiyebilir"
+                },
+                "2": {
+                    "label": "Kısmi yardım gerekir",
+                    "description": "Sakar ve yavaş olsa da çoğu yiyeceği kesebilir; biraz yardım gerekir"
+                },
+                "3": {
+                    "label": "Yavaş/sakar",
+                    "description": "Biraz yavaş ve sakar, ancak yardım gerekmez"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal; yardımsız"
+                }
+            }
+        },
+        "dressing": {
+            "text": "Giyinme ve hijyen",
+            "options": {
+                "0": {
+                    "label": "Tam bağımlı",
+                    "description": "Tam bağımlılık"
+                },
+                "1": {
+                    "label": "Yardım gerekir",
+                    "description": "Kişisel bakım için yardımcı gerekir"
+                },
+                "2": {
+                    "label": "Ara sıra yardım",
+                    "description": "Aralıklı yardım veya alternatif yöntemler"
+                },
+                "3": {
+                    "label": "Bağımsız ama yavaş",
+                    "description": "Çaba veya azalmış verimlilikle bağımsız ve tam kişisel bakım"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal fonksiyon"
+                }
+            }
+        },
+        "turning_in_bed": {
+            "text": "Yatakta dönme ve yatak örtülerini düzeltme",
+            "options": {
+                "0": {
+                    "label": "Yardımsız yapamaz",
+                    "description": "Yardımsız yapamaz"
+                },
+                "1": {
+                    "label": "Yardım gerekli",
+                    "description": "Başlatabilir, ancak tek başına dönemez veya çarşafları düzeltemez"
+                },
+                "2": {
+                    "label": "Tek başına zor",
+                    "description": "Tek başına dönebilir veya çarşafları düzeltebilir, ancak çok zorlanır"
+                },
+                "3": {
+                    "label": "Yavaş/sakar",
+                    "description": "Biraz yavaş ve sakar, ancak yardım gerekmez"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal fonksiyon"
+                }
+            }
+        },
+        "walking": {
+            "text": "Yürüme",
+            "options": {
+                "0": {
+                    "label": "Bacak hareketi yok",
+                    "description": "Amaçlı bacak hareketi yok"
+                },
+                "1": {
+                    "label": "Yalnızca transfer",
+                    "description": "Yürüme olmadan yalnızca fonksiyonel hareket"
+                },
+                "2": {
+                    "label": "Yardımla",
+                    "description": "Yardımla yürür (ortez, baston, yürüteç)"
+                },
+                "3": {
+                    "label": "Hafif yürüme bozukluğu",
+                    "description": "Erken yürüme güçlükleri"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal yürüme"
+                }
+            }
+        },
+        "climbing_stairs": {
+            "text": "Merdiven çıkma",
+            "options": {
+                "0": {
+                    "label": "Yapamıyor",
+                    "description": "Merdiven çıkamaz"
+                },
+                "1": {
+                    "label": "Yardımla",
+                    "description": "Yardım gerekir (korkuluk, kişi)"
+                },
+                "2": {
+                    "label": "Hafif dengesiz",
+                    "description": "Hafif dengesizlik veya yorgunluk"
+                },
+                "3": {
+                    "label": "Yavaş",
+                    "description": "Yavaş"
+                },
+                "4": {
+                    "label": "Normal",
+                    "description": "Normal"
+                }
+            }
+        },
+        "dyspnea": {
+            "text": "Dispne",
+            "options": {
+                "0": {
+                    "label": "Belirgin",
+                    "description": "Belirgin güçlük, mekanik solunum desteği düşünülür"
+                },
+                "1": {
+                    "label": "İstirahatte",
+                    "description": "İstirahatte nefes darlığı, otururken veya yatarken nefes alma güçlüğü"
+                },
+                "2": {
+                    "label": "Hafif aktiviteyle",
+                    "description": "Şunlardan biri veya daha fazlasıyla nefes darlığı: yemek yeme, banyo, giyinme"
+                },
+                "3": {
+                    "label": "Eforla",
+                    "description": "Yürürken nefes darlığı"
+                },
+                "4": {
+                    "label": "Yok",
+                    "description": "Nefes darlığı yok"
+                }
+            }
+        },
+        "orthopnea": {
+            "text": "Ortopne (yatarken nefes alma güçlüğü)",
+            "options": {
+                "0": {
+                    "label": "Uyuyamıyor",
+                    "description": "Mekanik yardım olmadan uyuyamıyor"
+                },
+                "1": {
+                    "label": "Yalnızca oturarak",
+                    "description": "Yalnızca oturarak uyuyabilir"
+                },
+                "2": {
+                    "label": "Ek yastık gerekir",
+                    "description": "Uyumak için ek yastık gerekir (2’den fazla)"
+                },
+                "3": {
+                    "label": "Hafif sorunlar",
+                    "description": "Nefes darlığı nedeniyle uyumada biraz güçlük; düzenli olarak 2’den fazla yastık kullanmaz"
+                },
+                "4": {
+                    "label": "Yok",
+                    "description": "Sorun yok"
+                }
+            }
+        },
+        "respiratory_insufficiency": {
+            "text": "Solunum yetmezliği",
+            "options": {
+                "0": {
+                    "label": "İnvaziv ventilasyon",
+                    "description": "Entübasyon veya trakeostomi ile invaziv mekanik ventilasyon"
+                },
+                "1": {
+                    "label": "Sürekli BiPAP",
+                    "description": "Gündüz ve gece sürekli BiPAP kullanımı"
+                },
+                "2": {
+                    "label": "Gece BiPAP",
+                    "description": "Sürekli gece BiPAP kullanımı"
+                },
+                "3": {
+                    "label": "Aralıklı BiPAP",
+                    "description": "Aralıklı BiPAP kullanımı"
+                },
+                "4": {
+                    "label": "Yok",
+                    "description": "Destek gerekmez"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Az değişiklik",
+                "description": "Fonksiyonel yeti büyük ölçüde korunmuş."
+            },
+            {
+                "label": "Hafif değişiklikler",
+                "description": "Bazı fonksiyonel değişiklikler görülüyor."
+            },
+            {
+                "label": "Belirgin değişiklikler",
+                "description": "Belirgin fonksiyonel değişiklikler gözleniyor."
+            },
+            {
+                "label": "Yaygın değişiklikler",
+                "description": "Fonksiyonel yetide yaygın değişiklikler var."
+            }
+        ]
+    }
+}

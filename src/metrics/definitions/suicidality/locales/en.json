@@ -1,0 +1,17 @@
+{
+    "name": "Suicidality (PHQ-9 Item 9)",
+    "shortName": "Suicidality",
+    "descriptionTitle": "About Suicidality",
+    "description": "This metric captures the response to question 9 of the PHQ-9 questionnaire: \"Thoughts that you would be better off dead or of hurting yourself\". Values > 0 require special clinical attention. This metric is for early detection and should always be evaluated in clinical context.",
+    "fields": {
+        "value": {
+            "label": "Suicidality",
+            "valueLabels": {
+                "0": "Not at all",
+                "1": "Several days",
+                "2": "More than half the days",
+                "3": "Nearly every day"
+            }
+        }
+    }
+}

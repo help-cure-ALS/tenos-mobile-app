@@ -1,0 +1,78 @@
+{
+    "name": "Subtipo de ELA",
+    "displayName": "Subtipo de ELA",
+    "shortName": "Subtipo",
+    "description": "Clasificación clínica del fenotipo de ELA por sitio de inicio, propagación y patrón de motoneuronas.",
+    "domains": {
+        "structured": "Subtipo de ELA"
+    },
+    "questions": {
+        "payload": {
+            "text": "Subtipo de ELA",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Sitio de inicio de síntomas",
+            "info": "El eje O describe la región corporal donde comenzaron los primeros síntomas motores. Se cuentan debilidad o movimientos voluntarios lentos/mal coordinados, incluidos síntomas bulbares, respiratorios o axiales. Las fasciculaciones, la atrofia muscular y los signos reflejos por sí solos no cuentan como inicio de síntomas.",
+            "options": {
+                "O1": { "label": "Cabeza/bulbar" },
+                "O2d": { "label": "Brazo distal" },
+                "O2p": { "label": "Brazo proximal" },
+                "O2x": { "label": "Brazo incierto" },
+                "O3r": { "label": "Respiración" },
+                "O3a": { "label": "Axial/tronco" },
+                "O4d": { "label": "Pierna distal" },
+                "O4p": { "label": "Pierna proximal" },
+                "O4x": { "label": "Pierna incierta" }
+            }
+        },
+        "propagationStatus": {
+            "label": "Propagación",
+            "info": "El eje P describe la propagación vertical de síntomas motores desde la región de inicio hacia otra región corporal: cabeza, brazo, tronco o pierna. La propagación horizontal de un brazo al otro o de una pierna a la otra no cuenta. Las fasciculaciones, la atrofia o los signos reflejos por sí solos no cuentan como propagación.",
+            "options": {
+                "P0": { "label": "sin propagación vertical" },
+                "P1": { "label": "propagación ocurrida" }
+            }
+        },
+        "propagationPattern": {
+            "label": "Propagación",
+            "info": "El eje P describe la propagación vertical de síntomas motores desde la región de inicio hacia otra región corporal: cabeza, brazo, tronco o pierna. La propagación horizontal de un brazo al otro o de una pierna a la otra no cuenta. Las fasciculaciones, la atrofia o los signos reflejos por sí solos no cuentan como propagación.",
+            "options": {
+                "P0n": { "label": "P0(n)", "description": "Sin propagación vertical; n = meses hasta la evaluación" },
+                "P1n": { "label": "P1(n)", "description": "Propagación vertical ocurrida; n = meses hasta la propagación" },
+                "P1x": { "label": "P1(x)", "description": "Propagación vertical ocurrida, momento incierto" }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Fenotipo de motoneurona",
+            "info": "El eje M describe el equilibrio entre signos de motoneurona superior (UMN) e inferior (LMN). Los signos UMN incluyen movimiento voluntario lento o mal coordinado, reflejos vivos, espasticidad o afecto seudobulbar. Los signos LMN incluyen debilidad con atrofia, reflejos ausentes o fasciculaciones en músculos afectados. M0 es equilibrado, M1 predominio UMN, M2 predominio LMN, M3 disociado.",
+            "options": {
+                "M0": { "label": "UMN/LMN equilibrado" },
+                "M1d": { "label": "UMN dominante" },
+                "M1p": { "label": "UMN puro" },
+                "M2d": { "label": "LMN dominante" },
+                "M2p": { "label": "LMN puro" },
+                "M3": { "label": "disociado" }
+            }
+        },
+        "certainty": {
+            "label": "Estado",
+            "info": "El estado describe la confianza en la clasificación clínica: preliminar para una evaluación inicial o aún no completamente confirmada, confirmado cuando los hallazgos son suficientemente claros, incierto cuando los criterios no pueden separarse de forma fiable.",
+            "options": {
+                "preliminary": { "label": "preliminar" },
+                "confirmed": { "label": "confirmado" },
+                "uncertain": { "label": "incierto" }
+            }
+        },
+        "propagationMonths": {
+            "label": "Meses",
+            "info": "Para P0(n): meses desde el inicio de síntomas hasta la evaluación en la que no se encontró propagación vertical. Para P1(n): meses desde el inicio de síntomas hasta la primera propagación vertical."
+        },
+        "note": {
+            "label": "Comentario",
+            "placeholder": "Comentario clínico opcional"
+        }
+    }
+}

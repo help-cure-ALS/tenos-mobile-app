@@ -1,0 +1,14 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "TENOS",
+    "CFBundleName": "TENOS",
+    "NSCameraUsageDescription": "TENOS a besoin d'accéder à la caméra pour scanner les codes QR lors de l'association d'appareils et de la vérification clinique.",
+    "NSFaceIDUsageDescription": "Autorisez TENOS à utiliser Face ID pour déverrouiller vos données protégées.",
+    "NSHealthShareUsageDescription": "TENOS peut lire certaines données de santé, y compris des mesures et des médicaments autorisés, depuis Apple Health et les importer dans votre dossier patient chiffré.",
+    "NSHealthUpdateUsageDescription": "TENOS n'écrit aucune donnée de santé dans Apple Health. Cette description d'autorisation est incluse parce que TENOS utilise HealthKit pour importer des données de santé autorisées.",
+    "NSMicrophoneUsageDescription": "TENOS a besoin d'accéder au microphone lorsque vous utilisez des fonctions qui enregistrent de l'audio."
+  },
+  "android": {
+    "app_name": "TENOS"
+  }
+}

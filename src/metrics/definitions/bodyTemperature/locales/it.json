@@ -1,0 +1,11 @@
+{
+  "name": "Temperatura corporea",
+  "shortName": "Temp.",
+  "descriptionTitle": "Informazioni sulla temperatura corporea",
+  "description": "La temperatura corporea è un importante parametro vitale. I valori normali sono tra 36,0 e 37,5 °C. Nella SLA, la termoregolazione può essere compromessa da disfunzione autonomica o ridotta massa muscolare. La misurazione regolare aiuta a rilevare infezioni precocemente e a documentare cambiamenti nella regolazione della temperatura.",
+  "fields": {
+    "value": {
+      "label": "Temperatura"
+    }
+  }
+}

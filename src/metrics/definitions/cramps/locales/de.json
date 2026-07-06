@@ -1,0 +1,11 @@
+{
+    "name": "Muskelkrämpfe",
+    "shortName": "Krämpfe",
+    "descriptionTitle": "Über Muskelkrämpfe",
+    "description": "Muskelkrämpfe sind schmerzhafte, anhaltende und unwillkürliche Muskelkontraktionen. Sie unterscheiden sich von Faszikulationen (kurze Zuckungen), die separat erfasst werden. Krämpfe treten bei ALS häufig auf, besonders nachts, und können den Schlaf stören. Erfasse die Anzahl der Krämpfe pro Tag, um Muster zu erkennen.",
+    "fields": {
+        "value": {
+            "label": "Anzahl Krämpfe"
+        }
+    }
+}

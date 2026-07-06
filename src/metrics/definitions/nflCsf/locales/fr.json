@@ -1,0 +1,9 @@
+{
+  "name": "NFL dans le LCR",
+  "shortName": "NFL (LCR)",
+  "descriptionTitle": "À propos de la NFL dans le liquide céphalorachidien",
+  "description": "La chaîne légère des neurofilaments (NFL) dans le liquide céphalorachidien (LCR) est un biomarqueur sensible des lésions des cellules nerveuses. La mesure dans le LCR fournit souvent des valeurs plus précoces et plus précises que la mesure sanguine. Dans la SLA, des valeurs élevées de NFL dans le LCR sont associées à une progression plus rapide de la maladie. L'échantillon est obtenu par ponction lombaire.",
+  "fields": {
+    "value": { "label": "NFL" }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Fatigue",
+  "shortName": "Fatigue",
+  "descriptionTitle": "Over vermoeidheid",
+  "description": "Vermoeidheid wordt beoordeeld op een schaal van 0 (geen vermoeidheid) tot 10 (extreme uitputting). Bij ALS is vermoeidheid een veelvoorkomend symptoom dat kan worden veroorzaakt door meer energieverbruik voor dagelijkse activiteiten, ademhalingsproblemen of slaapstoornissen. Documentatie helpt patronen te herkennen en de dagplanning aan te passen.",
+  "fields": {
+    "value": {
+      "label": "Vermoeidheid",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Mild",
+        "2": "Mild",
+        "3": "Mild",
+        "4": "Matig",
+        "5": "Matig",
+        "6": "Matig",
+        "7": "Ernstig",
+        "8": "Ernstig",
+        "9": "Ernstig",
+        "10": "Extreem"
+      }
+    }
+  }
+}

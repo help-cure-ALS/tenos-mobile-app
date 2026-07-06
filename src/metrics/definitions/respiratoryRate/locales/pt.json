@@ -1,0 +1,11 @@
+{
+    "name": "Frequência respiratória",
+    "shortName": "Freq. resp.",
+    "descriptionTitle": "Sobre a frequência respiratória",
+    "description": "A frequência respiratória é o número de respirações por minuto. Na ELA, a função respiratória é um parâmetro fundamental; uma frequência respiratória em repouso crescente pode ser um sinal precoce de fraqueza dos músculos respiratórios. Este valor é importado automaticamente do Apple Saúde ou do Health Connect (muitas vezes medido durante o sono) e exibido como média diária.",
+    "fields": {
+        "value": {
+            "label": "Frequência respiratória"
+        }
+    }
+}

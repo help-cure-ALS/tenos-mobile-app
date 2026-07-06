@@ -1,0 +1,24 @@
+{
+    "name": "Schmerz -> Mobilität",
+    "shortName": "Mobilität",
+    "descriptionTitle": "Schmerzauswirkung auf Mobilität",
+    "description": "Erfasst, wie stark Schmerzen deine Mobilität und körperliche Aktivität beeinträchtigen. Auf einer Skala von 0 (keine Beeinträchtigung) bis 10 (extreme Beeinträchtigung). Eingeschränkte Mobilität durch Schmerzen kann zu weiteren gesundheitlichen Problemen führen.",
+    "fields": {
+        "value": {
+            "label": "Beeinträchtigung",
+            "valueLabels": {
+                "0": "Keine",
+                "1": "Minimal",
+                "2": "Minimal",
+                "3": "Gering",
+                "4": "Mäßig",
+                "5": "Mäßig",
+                "6": "Mäßig",
+                "7": "Stark",
+                "8": "Stark",
+                "9": "Sehr stark",
+                "10": "Extrem"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Beklenenin % FVC’si",
+    "shortName": "FVC %",
+    "descriptionTitle": "Beklenenin % FVC’si hakkında",
+    "description": "Beklenenin yüzdesi olarak FVC, ölçülen zorlu vital kapasiteni yaş, cinsiyet ve boyuna göre beklenen değerle karşılaştırır. %80’in üzerindeki değerler normal kabul edilir. ALS’de %50 altına düşüş kritik kabul edilir ve non-invaziv ventilasyonun başlatılmasını gerektirebilir.",
+    "fields": {
+        "value": {
+            "label": "FVC % Predicted"
+        }
+    }
+}

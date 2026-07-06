@@ -1,0 +1,171 @@
+{
+  "name": "Verificação diária de sintomas",
+  "shortName": "",
+  "exportTitle": "Verificação diária de sintomas",
+  "description": "Um breve check-in diário para acompanhar os principais sintomas. Os dados são sincronizados automaticamente com as métricas.",
+  "introText": "Como se sente hoje?",
+  "intro": {
+    "title": "Verificação diária de sintomas",
+    "description": "Uma visão rápida do seu estado atual. Responda a 4 perguntas curtas sobre dor, fadiga, sono e humor.",
+    "buttonText": "Começar",
+    "researchNote": "A verificação diária ajuda a detetar alterações precocemente e dá à sua equipa de cuidados informações valiosas."
+  },
+  "domains": {
+    "symptoms": "Sintomas",
+    "sleep": "Sono",
+    "mood": "Humor"
+  },
+  "questions": {
+    "pain": {
+      "text": "Quão intensa é a sua dor hoje?",
+      "exportLabel": "Dor",
+      "options": {
+        "0": {
+          "label": "Sem dor",
+          "description": "Sem desconforto"
+        },
+        "1": {
+          "label": "Dor leve",
+          "description": "Quase impercetível, não incomoda"
+        },
+        "2": {
+          "label": "Dor moderada",
+          "description": "Perceptível mas suportável"
+        },
+        "3": {
+          "label": "Dor grave",
+          "description": "Limita significativamente"
+        },
+        "4": {
+          "label": "Dor muito grave",
+          "description": "Quase intolerável"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "Quão cansado ou exausto se sente?",
+      "exportLabel": "Fadiga",
+      "options": {
+        "0": {
+          "label": "Sem fadiga",
+          "description": "Cheio de energia"
+        },
+        "1": {
+          "label": "Ligeiramente cansado"
+        },
+        "2": {
+          "label": "Ligeiramente cansado",
+          "description": "Quase impercetível"
+        },
+        "3": {
+          "label": "Ligeiramente cansado"
+        },
+        "4": {
+          "label": "Moderadamente cansado",
+          "description": "Alguma limitação"
+        },
+        "5": {
+          "label": "Moderadamente cansado"
+        },
+        "6": {
+          "label": "Bastante cansado",
+          "description": "As atividades são cansativas"
+        },
+        "7": {
+          "label": "Bastante cansado"
+        },
+        "8": {
+          "label": "Muito cansado",
+          "description": "Precisa de muito descanso"
+        },
+        "9": {
+          "label": "Muito cansado"
+        },
+        "10": {
+          "label": "Extremamente exausto",
+          "description": "Quase não consegue fazer nada"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "Como dormiu na noite passada?",
+      "exportLabel": "Sono",
+      "options": {
+        "0": {
+          "label": "Muito bem",
+          "description": "Sono reparador e sem interrupções"
+        },
+        "2": {
+          "label": "Bem",
+          "description": "Sono maioritariamente reparador"
+        },
+        "4": {
+          "label": "Razoável",
+          "description": "Algo agitado mas suficiente"
+        },
+        "6": {
+          "label": "Mal",
+          "description": "Acordou várias vezes, pouca recuperação"
+        },
+        "8": {
+          "label": "Muito mal",
+          "description": "Quase não dormiu"
+        },
+        "10": {
+          "label": "Nada",
+          "description": "Não dormiu"
+        }
+      }
+    },
+    "mood": {
+      "text": "Como está o seu humor hoje?",
+      "exportLabel": "Humor",
+      "options": {
+        "0": {
+          "label": "Muito bom",
+          "description": "Equilibrado e positivo"
+        },
+        "2": {
+          "label": "Bom",
+          "description": "Maioritariamente positivo"
+        },
+        "4": {
+          "label": "Ok",
+          "description": "Neutro"
+        },
+        "6": {
+          "label": "Baixo",
+          "description": "Um pouco em baixo"
+        },
+        "8": {
+          "label": "Mau",
+          "description": "Triste ou ansioso"
+        },
+        "10": {
+          "label": "Muito mau",
+          "description": "Sem esperança ou desesperado"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "Bom dia",
+        "description": "Hoje sente-se relativamente bem."
+      },
+      {
+        "label": "Ok",
+        "description": "Um dia médio com pequeno desconforto."
+      },
+      {
+        "label": "Dia desafiante",
+        "description": "Hoje é um dia desafiante."
+      },
+      {
+        "label": "Dia particularmente desafiante",
+        "description": "Hoje tem mais sintomas."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Fasciculaties",
+  "shortName": "Fascic.",
+  "descriptionTitle": "Over fasciculaties",
+  "description": "Fasciculaties zijn korte, onwillekeurige trekkingen van afzonderlijke spiervezels die onder de huid zichtbaar kunnen zijn. Ze zijn een typisch symptoom van ALS en verschillen van spierkrampen, die pijnlijk en aanhoudend zijn. Registratie helpt patronen te herkennen en ziekteprogressie te documenteren. (0 = Geen, 1 = Zelden, 2 = Frequent, 3 = Zeer frequent)",
+  "fields": {
+    "value": {
+      "label": "Fasciculaties",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Zelden",
+        "2": "Frequent",
+        "3": "Zeer frequent"
+      }
+    }
+  }
+}

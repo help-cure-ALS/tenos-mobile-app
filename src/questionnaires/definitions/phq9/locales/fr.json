@@ -1,0 +1,118 @@
+{
+  "name": "PHQ-9",
+  "displayName": "Dépistage de la dépression",
+  "shortName": "PHQ-9",
+  "exportTitle": "Dépistage de la dépression – PHQ-9",
+  "description": "Le PHQ-9 (Patient Health Questionnaire) est un outil de dépistage validé permettant de détecter et de mesurer la sévérité de la dépression. Il est utilisé dans le monde entier en pratique clinique et en recherche.",
+  "introText": "Au cours des 2 dernières semaines, à quelle fréquence avez-vous été gêné(e) par les problèmes suivants ?",
+  "intro": {
+    "title": "Dépistage de la dépression",
+    "description": "Ce questionnaire porte sur la manière dont vous vous êtes senti(e) au cours des deux dernières semaines. Répondez honnêtement aux 9 questions : il n'y a pas de bonne ou de mauvaise réponse. Vos réponses aident à identifier d'éventuels symptômes dépressifs.",
+    "buttonText": "Commencer le questionnaire",
+    "researchNote": "Merci d'y consacrer du temps. Vos réponses nous aident à mieux comprendre l'évolution de la maladie et à faire progresser la recherche sur la SLA."
+  },
+  "domains": {
+    "depression": "Symptômes dépressifs"
+  },
+  "questions": {
+    "interest": {
+      "text": "Peu d'intérêt ou de plaisir à faire les choses",
+      "exportLabel": "Intérêt",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "mood": {
+      "text": "Vous sentir triste, déprimé(e) ou sans espoir",
+      "exportLabel": "Déprime",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "sleep": {
+      "text": "Difficulté à vous endormir ou à rester endormi(e), ou sommeil excessif",
+      "exportLabel": "Sommeil",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "energy": {
+      "text": "Vous sentir fatigué(e) ou manquer d'énergie",
+      "exportLabel": "Énergie",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "appetite": {
+      "text": "Manque d'appétit ou excès alimentaire",
+      "exportLabel": "Appétit",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "self_esteem": {
+      "text": "Vous sentir mal dans votre peau, vous considérer comme un échec ou avoir le sentiment d'avoir déçu vous-même ou votre famille",
+      "exportLabel": "Estime de soi",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "concentration": {
+      "text": "Difficulté à vous concentrer, par exemple pour lire le journal ou regarder la télévision",
+      "exportLabel": "Concentration",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "psychomotor": {
+      "text": "Bouger ou parler si lentement que d'autres personnes auraient pu le remarquer ? Ou, à l'inverse, être tellement agité(e) ou remuant(e) que vous avez bougé bien plus que d'habitude ?",
+      "exportLabel": "Psychomotricité",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    },
+    "suicidality": {
+      "text": "Pensées selon lesquelles vous seriez mieux mort(e) ou de vous faire du mal d'une manière ou d'une autre",
+      "exportLabel": "Suicidalité",
+      "options": {
+        "0": { "label": "Pas du tout", "description": "Jamais au cours des 2 dernières semaines" },
+        "1": { "label": "Plusieurs jours", "description": "Moins de la moitié des jours" },
+        "2": { "label": "Plus de la moitié des jours", "description": "Fréquemment" },
+        "3": { "label": "Presque tous les jours", "description": "Presque quotidiennement" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Symptômes minimes", "description": "Vos réponses se situent dans une zone non préoccupante." },
+      { "label": "Symptômes légers", "description": "Vos réponses indiquent une légère souffrance." },
+      { "label": "Symptômes modérés", "description": "Vos réponses indiquent une souffrance notable." },
+      { "label": "Symptômes marqués", "description": "Vos réponses suggèrent un niveau élevé de souffrance." },
+      { "label": "Symptômes très marqués", "description": "Vos réponses suggèrent un niveau élevé de souffrance." }
+    ]
+  }
+}

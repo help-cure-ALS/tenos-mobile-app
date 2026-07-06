@@ -1,0 +1,11 @@
+{
+    "name": "Aport de lichide",
+    "shortName": "Lichide",
+    "descriptionTitle": "Despre aportul de lichide",
+    "description": "Aportul zilnic de lichide este important pentru sănătatea generală. În ALS, dificultățile de înghițire pot duce la consum redus de lichide, ceea ce poate provoca deshidratare. Se recomandă aproximativ 1,5-2 litri pe zi. Documentarea ajută la asigurarea unei hidratări adecvate.",
+    "fields": {
+        "value": {
+            "label": "Cantitate de lichid"
+        }
+    }
+}

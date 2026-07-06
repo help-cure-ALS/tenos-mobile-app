@@ -1,0 +1,24 @@
+{
+  "name": "Douleur -> Sommeil",
+  "shortName": "Sommeil",
+  "descriptionTitle": "Impact de la douleur sur le sommeil",
+  "description": "Enregistre dans quelle mesure la douleur affecte votre sommeil. Échelle de 0 (aucun impact) à 10 (impact extrême). Les troubles du sommeil liés à la douleur peuvent altérer fortement la qualité de vie.",
+  "fields": {
+    "value": {
+      "label": "Altération",
+      "valueLabels": {
+        "0": "Aucune",
+        "1": "Minime",
+        "2": "Minime",
+        "3": "Légère",
+        "4": "Modérée",
+        "5": "Modérée",
+        "6": "Modérée",
+        "7": "Sévère",
+        "8": "Sévère",
+        "9": "Très sévère",
+        "10": "Extrême"
+      }
+    }
+  }
+}

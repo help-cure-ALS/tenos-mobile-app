@@ -1,0 +1,105 @@
+{
+    "name": "Stadiul King",
+    "displayName": "Stadiul King",
+    "shortName": "King",
+    "description": "Stadiu ALS confirmat de clinician după King’s College, bazat pe regiunile afectate și implicarea nutrițională sau respiratorie.",
+    "domains": {
+        "structured": "Stadiul King"
+    },
+    "questions": {
+        "payload": {
+            "text": "Stadiul King",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Stadiu",
+            "info": "Stadiul King este derivat din regiunile afectate și criteriile nutriționale sau respiratorii relevante.",
+            "options": {
+                "1": {
+                    "label": "Stadiul 1",
+                    "description": "O regiune afectată"
+                },
+                "2": {
+                    "label": "Stadiul 2",
+                    "description": "Două regiuni afectate"
+                },
+                "3": {
+                    "label": "Stadiul 3",
+                    "description": "Trei regiuni afectate"
+                },
+                "4": {
+                    "label": "Stadiul 4",
+                    "description": "Stadiu 4, nespecificat suplimentar"
+                },
+                "4A": {
+                    "label": "Stadiul 4A",
+                    "description": "Implicare nutrițională"
+                },
+                "4B": {
+                    "label": "Stadiul 4B",
+                    "description": "Implicare respiratorie"
+                }
+            }
+        },
+        "affectedRegions": {
+            "label": "Regiuni afectate",
+            "info": "Regiuni afectate clinic folosite pentru stadializare.",
+            "options": {
+                "bulbar": {
+                    "label": "bulbară"
+                },
+                "upper_limb": {
+                    "label": "membru superior"
+                },
+                "lower_limb": {
+                    "label": "membru inferior"
+                },
+                "thoracic": {
+                    "label": "toracic/respirator"
+                }
+            }
+        },
+        "source": {
+            "label": "Sursă",
+            "info": "Baza evaluării. Valorile sugerate trebuie încă confirmate de clinician.",
+            "options": {
+                "manual": {
+                    "label": "confirmat de clinician"
+                },
+                "suggested_from_exam": {
+                    "label": "sugerat din examen"
+                },
+                "suggested_from_alsfrs": {
+                    "label": "sugerat din ALSFRS-R"
+                },
+                "suggested_from_care": {
+                    "label": "sugerat din date de îngrijire"
+                }
+            }
+        },
+        "stage4Reason": {
+            "label": "Motiv stadiu 4",
+            "info": "Documentează dacă stadiul 4 este determinat de implicarea nutrițională sau respiratorie.",
+            "options": {
+                "nutrition": {
+                    "label": "nutriție"
+                },
+                "respiratory": {
+                    "label": "respirație"
+                },
+                "both": {
+                    "label": "nutriție și respirație"
+                },
+                "unspecified": {
+                    "label": "nespecificat"
+                }
+            }
+        },
+        "note": {
+            "label": "Comentariu",
+            "placeholder": "Comentariu clinic opțional"
+        }
+    }
+}

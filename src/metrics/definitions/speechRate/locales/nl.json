@@ -1,0 +1,11 @@
+{
+  "name": "Spreeksnelheid",
+  "shortName": "Spraak",
+  "descriptionTitle": "Over spreeksnelheid",
+  "description": "Spreeksnelheid meet hoeveel woorden per minuut kunnen worden uitgesproken. Bij ALS kan bulbaire betrokkenheid leiden tot vertraagde en onduidelijke spraak (dysartrie). Normale spreeksnelheid is ongeveer 120-150 woorden per minuut. Regelmatige meting helpt veranderingen vroeg te herkennen.",
+  "fields": {
+    "value": {
+      "label": "Woorden per minuut"
+    }
+  }
+}

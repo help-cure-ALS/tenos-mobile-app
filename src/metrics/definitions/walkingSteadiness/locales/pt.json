@@ -1,0 +1,11 @@
+{
+    "name": "Estabilidade da marcha",
+    "shortName": "Estabilidade",
+    "descriptionTitle": "Sobre a estabilidade da marcha",
+    "description": "A estabilidade da marcha da Apple estima, em percentagem, quão estável e equilibrada é a sua forma de caminhar. Uma tendência de queda indica um maior risco de quedas. Na ELA, pode ajudar a acompanhar mudanças na marcha e no equilíbrio. Este valor é importado automaticamente do Apple Saúde.",
+    "fields": {
+        "value": {
+            "label": "Estabilidade da marcha"
+        }
+    }
+}

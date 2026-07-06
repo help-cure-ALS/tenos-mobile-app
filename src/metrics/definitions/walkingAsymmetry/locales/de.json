@@ -1,0 +1,9 @@
+{
+    "name": "Gang-Asymmetrie",
+    "shortName": "Asymmetrie",
+    "descriptionTitle": "Über die Gang-Asymmetrie",
+    "description": "Die Gang-Asymmetrie ist der prozentuale Anteil der Zeit, in der sich ein Fuß in einem anderen Tempo bewegt als der andere. Ein höherer Wert bedeutet ein ungleichmäßigeres Gangbild. Bei ALS kann dies helfen, eine asymmetrische Beinschwäche zu verfolgen. Der Wert wird automatisch aus Apple Health auf dem iPhone importiert.",
+    "fields": {
+        "value": { "label": "Gang-Asymmetrie" }
+    }
+}

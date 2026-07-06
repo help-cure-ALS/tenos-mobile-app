@@ -1,0 +1,7 @@
+{
+  "name": "能量需求",
+  "shortName": "TDEE",
+  "descriptionTitle": "关于能量需求",
+  "description": "每日总能量消耗（TDEE）使用专为ALS患者开发的Kasarskis公式计算。该计算考虑基础代谢率、活动水平（基于ALSFRS-6）以及ALS特异性调整。",
+  "fields": {}
+}

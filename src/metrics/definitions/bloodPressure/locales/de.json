@@ -1,0 +1,10 @@
+{
+    "name": "Blutdruck",
+    "shortName": "RR",
+    "descriptionTitle": "Über Blutdruck",
+    "description": "Der Blutdruck misst den Druck des Blutes in den Arterien. Er wird in zwei Werten angegeben: systolisch (oberer Wert) und diastolisch (unterer Wert). Regelmäßige Kontrolle hilft, Herz-Kreislauf-Erkrankungen frühzeitig zu erkennen.",
+    "fields": {
+        "systolic": { "label": "Systolisch" },
+        "diastolic": { "label": "Diastolisch" }
+    }
+}

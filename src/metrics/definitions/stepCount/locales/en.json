@@ -1,0 +1,9 @@
+{
+    "name": "Steps",
+    "shortName": "Steps",
+    "descriptionTitle": "About Step Count",
+    "description": "The daily step count is a simple measure of overall daily activity. In ALS, a downward trend can reflect declining mobility. Steps are imported automatically from Apple Health or Health Connect; no manual entry is needed.",
+    "fields": {
+        "value": { "label": "Steps" }
+    }
+}

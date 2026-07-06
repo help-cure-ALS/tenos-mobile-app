@@ -1,0 +1,11 @@
+{
+    "name": "Merdiven inme hızı",
+    "shortName": "İnme",
+    "descriptionTitle": "Merdiven inme hızı hakkında",
+    "description": "Merdiven inme hızı, merdivenleri ne kadar hızlı indiğinizi saniyede metre cinsinden gösterir. Merdiven inmek denge ve bacak kontrolü açısından zorlayıcıdır; bu nedenle azalan bir eğilim, ALS'de alt ekstremite işlevinin gerilemesinin erken bir işareti olabilir. Bu değer Apple Sağlık'tan otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Merdiven inme hızı"
+        }
+    }
+}

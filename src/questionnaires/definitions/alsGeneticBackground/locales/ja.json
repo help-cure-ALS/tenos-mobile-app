@@ -1,0 +1,161 @@
+{
+  "name": "ALSの型と遺伝",
+  "displayName": "ALSの型と遺伝",
+  "shortName": "ALSの型",
+  "description": "孤発性または家族性ALS、家族歴、既知の遺伝学的所見を記録します。",
+  "domains": {
+    "structured": "ALSの型と遺伝"
+  },
+  "questions": {
+    "payload": {
+      "text": "ALSの型と遺伝",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "diseaseForm": {
+      "label": "ALSの型",
+      "info": "ALSが孤発性、家族性、または不明に分類されるかの臨床分類です。",
+      "options": {
+        "sporadic": {
+          "label": "孤発性"
+        },
+        "familial": {
+          "label": "家族性"
+        },
+        "suspected_familial": {
+          "label": "家族性疑い"
+        },
+        "unclear": {
+          "label": "不明"
+        }
+      }
+    },
+    "familyHistory": {
+      "label": "家族歴",
+      "info": "家族内のALS、FTD、またはその他の運動ニューロン疾患を記録します。",
+      "options": {
+        "none_known": {
+          "label": "既知なし"
+        },
+        "als": {
+          "label": "家族内ALS"
+        },
+        "ftd": {
+          "label": "家族内FTD"
+        },
+        "als_ftd": {
+          "label": "家族内ALS/FTD"
+        },
+        "other_mnd": {
+          "label": "その他の運動ニューロン疾患"
+        },
+        "other_neurodegenerative": {
+          "label": "その他の神経変性疾患歴"
+        }
+      }
+    },
+    "testingStatus": {
+      "label": "遺伝子検査",
+      "info": "遺伝子検査の状態です。アプリは生の遺伝データを解釈しません。",
+      "options": {
+        "not_tested": {
+          "label": "未検査"
+        },
+        "planned": {
+          "label": "予定あり"
+        },
+        "pending": {
+          "label": "結果待ち"
+        },
+        "negative": {
+          "label": "既知の変異なし"
+        },
+        "vus": {
+          "label": "意義不明のバリアント"
+        },
+        "pathogenic": {
+          "label": "病的/病的可能性の高いバリアント"
+        }
+      }
+    },
+    "gene": {
+      "label": "遺伝子",
+      "info": "臨床文書または検査報告書に記載された既知の遺伝子です。",
+      "placeholder": "遺伝子を入力",
+      "options": {
+        "C9orf72": {
+          "label": "C9orf72"
+        },
+        "SOD1": {
+          "label": "SOD1"
+        },
+        "FUS": {
+          "label": "FUS"
+        },
+        "TARDBP": {
+          "label": "TARDBP"
+        },
+        "TBK1": {
+          "label": "TBK1"
+        },
+        "OPTN": {
+          "label": "OPTN"
+        },
+        "VCP": {
+          "label": "VCP"
+        },
+        "other": {
+          "label": "その他"
+        }
+      }
+    },
+    "source": {
+      "label": "情報源",
+      "info": "この入力はどこから来たものですか？遺伝情報は追跡可能に記録する必要があります。",
+      "options": {
+        "patient_reported": {
+          "label": "患者申告"
+        },
+        "clinician_documented": {
+          "label": "医師による記録"
+        },
+        "lab_report": {
+          "label": "検査機関"
+        }
+      }
+    },
+    "counselingStatus": {
+      "label": "遺伝カウンセリング",
+      "info": "検査または結果説明のための遺伝カウンセリングが記録されているかどうか。",
+      "options": {
+        "completed": {
+          "label": "完了"
+        },
+        "recommended": {
+          "label": "推奨"
+        },
+        "not_done": {
+          "label": "未実施"
+        }
+      }
+    },
+    "otherGene": {
+      "label": "その他の遺伝子",
+      "placeholder": "遺伝子名"
+    },
+    "variantText": {
+      "label": "バリアント",
+      "placeholder": "任意の短い所見テキスト"
+    },
+    "testDate": {
+      "label": "検査日",
+      "info": "遺伝子検査の月と年。",
+      "placeholder": "選択"
+    },
+    "note": {
+      "label": "コメント",
+      "placeholder": "任意のコメント"
+    }
+  }
+}

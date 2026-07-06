@@ -1,0 +1,11 @@
+{
+  "name": "Szczytowy przepływ kaszlowy",
+  "shortName": "PCF",
+  "descriptionTitle": "O szczytowym przepływie kaszlowym",
+  "description": "Peak Cough Flow (PCF) mierzy maksymalną prędkość powietrza podczas kaszlu. Pokazuje, jak skutecznie można usuwać wydzielinę z dróg oddechowych. Wartości poniżej 270 L/min zwiększają ryzyko infekcji oddechowych. Poniżej 160 L/min kaszel często nie jest już skuteczny.",
+  "fields": {
+    "value": {
+      "label": "Szczytowy przepływ kaszlowy"
+    }
+  }
+}

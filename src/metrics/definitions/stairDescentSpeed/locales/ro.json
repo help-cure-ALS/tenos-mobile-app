@@ -1,0 +1,11 @@
+{
+    "name": "Viteza la coborârea scărilor",
+    "shortName": "Coborâre",
+    "descriptionTitle": "Despre viteza la coborârea scărilor",
+    "description": "Viteza la coborârea scărilor indică cât de repede cobori scările, în metri pe secundă. Coborârea scărilor solicită mult echilibrul și controlul picioarelor, așa că o tendință descendentă poate fi un semn timpuriu de declin al funcției membrelor inferioare în SLA. Această valoare este importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Viteza la coborârea scărilor"
+        }
+    }
+}

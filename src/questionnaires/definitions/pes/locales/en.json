@@ -1,0 +1,130 @@
+{
+    "name": "MOS Pain Effects Scale",
+    "displayName": "Pain",
+    "shortName": "PES",
+    "exportTitle": "Pain Effects – PES",
+    "description": "The MOS Pain Effects Scale measures how much pain interferes with different areas of your daily life. Answer 6 short questions about sleep, mobility, mood, and activities.",
+    "introText": "How much does your pain affect you?",
+    "intro": {
+        "title": "Pain Effects",
+        "description": "This questionnaire measures how pain affects your daily life. Rate on a scale of 0-10 how much your pain has interfered with different areas of life in the last 7 days.",
+        "buttonText": "Start",
+        "researchNote": "Thank you for your input. It helps us better understand the impact of pain and advance research."
+    },
+    "domains": {
+        "daily_activities": "Daily Activities",
+        "other_areas": "Other Areas"
+    },
+    "questions": {
+        "sleep": {
+            "text": "How much has pain interfered with your sleep?",
+            "exportLabel": "Sleep",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        },
+        "mobility": {
+            "text": "How much has pain interfered with your mobility?",
+            "exportLabel": "Mobility",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        },
+        "mood": {
+            "text": "How much has pain interfered with your mood?",
+            "exportLabel": "Mood",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        },
+        "work": {
+            "text": "How much has pain interfered with your work (including housework)?",
+            "exportLabel": "Work",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        },
+        "recreation": {
+            "text": "How much has pain interfered with your recreational activities?",
+            "exportLabel": "Recreation",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        },
+        "enjoyment": {
+            "text": "How much has pain interfered with your enjoyment of life?",
+            "exportLabel": "Enjoyment",
+            "options": {
+                "0": { "label": "No interference", "description": "Not at all" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Barely noticeable" },
+                "3": { "label": "Slight" },
+                "4": { "label": "Moderate", "description": "Somewhat limited" },
+                "5": { "label": "Moderate" },
+                "6": { "label": "Moderate", "description": "Noticeably limited" },
+                "7": { "label": "Severe" },
+                "8": { "label": "Severe", "description": "Very limited" },
+                "9": { "label": "Very severe" },
+                "10": { "label": "Extreme", "description": "Completely interfered" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Little impact", "description": "Pain has little effect on your daily life." },
+            { "label": "Mild impact", "description": "Pain has a mild effect on your daily life." },
+            { "label": "Noticeable impact", "description": "Pain noticeably affects several areas of life." },
+            { "label": "Considerable impact", "description": "Pain has a considerable effect on your daily life." }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Siyalore",
+    "shortName": "Tükürük",
+    "descriptionTitle": "Siyalore hakkında",
+    "description": "Aşırı tükürük akışı (siyalore), ALS’de tükürük üretimindeki artıştan çok yutma güçlüğünden kaynaklanan yaygın bir belirtidir. Şiddeti 0 (normal) ile 10 (çok şiddetli) arasında kaydet. Dokümantasyon tedavilerin etkinliğini değerlendirmeye yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Şiddet"
+        }
+    }
+}

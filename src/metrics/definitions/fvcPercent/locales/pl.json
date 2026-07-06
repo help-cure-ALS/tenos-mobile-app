@@ -1,0 +1,11 @@
+{
+  "name": "FVC % wartości należnej",
+  "shortName": "FVC %",
+  "descriptionTitle": "O FVC % wartości należnej",
+  "description": "FVC jako procent wartości należnej porównuje zmierzoną natężoną pojemność życiową z oczekiwaną wartością dla wieku, płci i wzrostu. Wartości powyżej 80% uznaje się za prawidłowe. W ALS spadek poniżej 50% uważa się za krytyczny i może wymagać rozpoczęcia wentylacji nieinwazyjnej.",
+  "fields": {
+    "value": {
+      "label": "FVC % należnej"
+    }
+  }
+}

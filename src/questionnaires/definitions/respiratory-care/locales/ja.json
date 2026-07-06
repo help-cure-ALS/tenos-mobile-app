@@ -1,0 +1,92 @@
+{
+    "name": "呼吸ケア",
+    "displayName": "呼吸ケア",
+    "shortName": "呼吸ケア",
+    "exportTitle": "呼吸ケア",
+    "description": "呼吸サポートの変化を示す可能性のある症状を記録します。定期的な回答が変化の早期発見に役立ちます。",
+    "introText": "以下の質問は、ここ数日間の体調についてお尋ねします。",
+    "intro": {
+        "title": "呼吸ケア",
+        "description": "このアンケートは、呼吸サポートに関する症状を6つの短い質問で記録します。",
+        "researchNote": "定期的な回答が変化の早期発見とケアチームとの相談に役立ちます。",
+        "buttonText": "アンケートを開始"
+    },
+    "domains": {
+        "symptoms": "症状"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "頭痛で目が覚めます。",
+            "exportLabel": "頭痛",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        },
+        "dizziness": {
+            "text": "特に起床後にめまいを感じます。",
+            "exportLabel": "めまい",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "日中に異常な疲労感や眠気を感じます。",
+            "exportLabel": "眠気",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        },
+        "concentration": {
+            "text": "集中するのが難しいです。",
+            "exportLabel": "集中力",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        },
+        "sleep_quality": {
+            "text": "夜中に目が覚めたり、寝つきが悪いです。",
+            "exportLabel": "睡眠",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "日中に息苦しさを感じます（例：話すときや安静時）。",
+            "exportLabel": "息切れ",
+            "options": {
+                "0": { "label": "まったくない" },
+                "1": { "label": "まれに" },
+                "2": { "label": "ときどき" },
+                "3": { "label": "よくある" },
+                "4": { "label": "ほぼいつも" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "症状はほとんどなし", "description": "回答から、ほとんどまたはまったく不快感がないことが示されています。" },
+            { "label": "注目すべき症状", "description": "回答から、注目すべき不快感があることが示されています。" },
+            { "label": "顕著な症状", "description": "回答から、顕著な不快感があることが示されています。" }
+        ]
+    }
+}

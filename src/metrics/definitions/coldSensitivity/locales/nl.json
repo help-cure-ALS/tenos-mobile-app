@@ -1,0 +1,17 @@
+{
+  "name": "Koudegevoeligheid",
+  "shortName": "Koude",
+  "descriptionTitle": "Over koudegevoeligheid",
+  "description": "Koudegevoeligheid is een veelvoorkomend symptoom bij ALS. Het kan worden veroorzaakt door verminderde spiermassa, autonome dysfunctie of minder lichamelijke activiteit. Registratie helpt patronen te herkennen en maatregelen zoals warmere kleding of kamertemperatuur aan te passen. (0 = Geen, 1 = Mild, 2 = Matig, 3 = Ernstig)",
+  "fields": {
+    "value": {
+      "label": "Koudegevoeligheid",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Mild",
+        "2": "Matig",
+        "3": "Ernstig"
+      }
+    }
+  }
+}

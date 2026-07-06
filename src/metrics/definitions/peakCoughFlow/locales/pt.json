@@ -1,0 +1,11 @@
+{
+  "name": "Pico de fluxo da tosse",
+  "shortName": "PCF",
+  "descriptionTitle": "Sobre o pico de fluxo da tosse",
+  "description": "O Peak Cough Flow (PCF) mede a velocidade máxima do ar durante a tosse. Mostra quão eficazmente consegue eliminar secreções das vias respiratórias. Valores abaixo de 270 L/min aumentam o risco de infeções respiratórias. Abaixo de 160 L/min, a tosse muitas vezes deixa de ser eficaz.",
+  "fields": {
+    "value": {
+      "label": "Pico de fluxo da tosse"
+    }
+  }
+}

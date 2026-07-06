@@ -1,0 +1,92 @@
+{
+    "name": "Respiratory Care",
+    "displayName": "Respiratory Care",
+    "shortName": "Respiratory Care",
+    "exportTitle": "Respiratory Care",
+    "description": "Tracks symptoms that may indicate changes in your respiratory support. Regular responses help detect changes early.",
+    "introText": "The following questions refer to how you have been feeling over the past few days.",
+    "intro": {
+        "title": "Respiratory Care",
+        "description": "This questionnaire tracks symptoms related to your respiratory support using 6 short questions.",
+        "researchNote": "Regular responses help detect changes early and discuss them with your care team.",
+        "buttonText": "Start questionnaire"
+    },
+    "domains": {
+        "symptoms": "Symptoms"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "I wake up with headaches.",
+            "exportLabel": "Headaches",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        },
+        "dizziness": {
+            "text": "I feel dizzy, especially after waking up.",
+            "exportLabel": "Dizziness",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "I feel unusually tired or sleepy during the day.",
+            "exportLabel": "Sleepiness",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        },
+        "concentration": {
+            "text": "I find it hard to concentrate.",
+            "exportLabel": "Concentration",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        },
+        "sleep_quality": {
+            "text": "I wake up during the night or sleep restlessly.",
+            "exportLabel": "Sleep quality",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "I feel short of breath during the day, e.g. when speaking or at rest.",
+            "exportLabel": "Breathlessness",
+            "options": {
+                "0": { "label": "Not at all" },
+                "1": { "label": "Rarely" },
+                "2": { "label": "Sometimes" },
+                "3": { "label": "Often" },
+                "4": { "label": "Almost always" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Few symptoms", "description": "Your answers suggest little or no discomfort." },
+            { "label": "Notable symptoms", "description": "Your answers suggest notable discomfort." },
+            { "label": "Significant symptoms", "description": "Your answers suggest significant discomfort." }
+        ]
+    }
+}

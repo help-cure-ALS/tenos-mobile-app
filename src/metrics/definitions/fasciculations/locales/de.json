@@ -1,0 +1,17 @@
+{
+    "name": "Faszikulationen",
+    "shortName": "Faszik.",
+    "descriptionTitle": "Über Faszikulationen",
+    "description": "Faszikulationen sind kurze, unwillkürliche Zuckungen einzelner Muskelfasern, die unter der Haut sichtbar sein können. Sie sind ein typisches Symptom bei ALS und unterscheiden sich von Muskelkrämpfen, die schmerzhaft und anhaltend sind. Die Erfassung hilft, Muster zu erkennen und den Krankheitsverlauf zu dokumentieren. (0 = Keine, 1 = Selten, 2 = Häufig, 3 = Sehr häufig)",
+    "fields": {
+        "value": {
+            "label": "Faszikulationen",
+            "valueLabels": {
+                "0": "Keine",
+                "1": "Selten",
+                "2": "Häufig",
+                "3": "Sehr häufig"
+            }
+        }
+    }
+}

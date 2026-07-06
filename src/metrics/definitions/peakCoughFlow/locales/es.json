@@ -1,0 +1,9 @@
+{
+  "name": "Flujo máximo de tos",
+  "shortName": "FMT",
+  "descriptionTitle": "Sobre el flujo máximo de tos",
+  "description": "El flujo máximo de tos (FMT) mide la velocidad máxima del aire durante la tos. Muestra con qué eficacia puedes expulsar secreciones de las vías respiratorias. Valores por debajo de 270 L/min aumentan el riesgo de infecciones respiratorias. Por debajo de 160 L/min, la tos suele dejar de ser eficaz.",
+  "fields": {
+    "value": { "label": "Flujo máximo de tos" }
+  }
+}

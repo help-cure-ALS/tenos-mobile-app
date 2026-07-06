@@ -1,0 +1,20 @@
+{
+    "name": "Dışkı kıvamı",
+    "shortName": "Dışkı",
+    "descriptionTitle": "Bristol Dışkı Skalası hakkında",
+    "description": "Bristol Dışkı Skalası dışkı kıvamını değerlendirmek için kullanılan klinik bir araçtır. ALS’de azalmış hareketlilik, zayıflamış karın kasları veya ilaçlar nedeniyle kabızlık yaygındır. Tip 3-4 ideal kabul edilir. Tip 1-2 kabızlığı, Tip 6-7 ishali gösterir. (1 = Sert/topaklı, 4 = İdeal, 7 = Sulu)",
+    "fields": {
+        "value": {
+            "label": "Dışkı tipi",
+            "valueLabels": {
+                "1": "Tip 1 - Ayrı sert topaklar",
+                "2": "Tip 2 - Sosis şeklinde, topaklı",
+                "3": "Tip 3 - Çatlaklı sosis şeklinde",
+                "4": "Tip 4 - Pürüzsüz ve yumuşak (ideal)",
+                "5": "Tip 5 - Yumuşak parçalar",
+                "6": "Tip 6 - Lapa gibi, kabarık parçalar",
+                "7": "Tip 7 - Sulu, sıvı"
+            }
+        }
+    }
+}

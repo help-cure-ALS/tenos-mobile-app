@@ -1,0 +1,7 @@
+{
+  "name": "Necessidades energéticas",
+  "shortName": "TDEE",
+  "descriptionTitle": "Sobre necessidades energéticas",
+  "description": "O gasto energético diário total (TDEE) é calculado usando a fórmula de Kasarskis, desenvolvida especificamente para pessoas com ELA. O cálculo considera a taxa metabólica basal, o nível de atividade (com base na ALSFRS-6) e ajustes específicos da ELA.",
+  "fields": {}
+}

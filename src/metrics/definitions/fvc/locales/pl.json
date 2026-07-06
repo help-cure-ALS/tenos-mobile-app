@@ -1,0 +1,11 @@
+{
+  "name": "Natężona pojemność życiowa",
+  "shortName": "FVC",
+  "descriptionTitle": "O FVC",
+  "description": "Natężona pojemność życiowa (FVC) mierzy maksymalną objętość powietrza, którą można wydmuchnąć po głębokim wdechu. W ALS FVC jest jednym z najważniejszych wskaźników funkcji oddechowej i postępu choroby. Spadek poniżej 50% wartości należnej może wskazywać na potrzebę wsparcia oddechowego.",
+  "fields": {
+    "value": {
+      "label": "FVC"
+    }
+  }
+}

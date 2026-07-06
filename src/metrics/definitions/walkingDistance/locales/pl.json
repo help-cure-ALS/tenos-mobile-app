@@ -1,0 +1,11 @@
+{
+  "name": "Dystans marszu",
+  "shortName": "6MWT",
+  "descriptionTitle": "O teście 6-minutowego marszu",
+  "description": "Test 6-minutowego marszu (6MWT) mierzy dystans, jaki można pokonać w 6 minut po płaskim terenie. Jest to standaryzowany test oceny wydolności funkcjonalnej. W ALS może pomagać dokumentować postęp zaburzeń chodzenia. Prawidłowe wartości u dorosłych wynoszą 400-700 metrów.",
+  "fields": {
+    "value": {
+      "label": "Dystans marszu"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Viteza de mers",
+    "shortName": "Viteză",
+    "descriptionTitle": "Despre viteza de mers",
+    "description": "Viteza de mers este ritmul mediu cu care mergi, în metri pe secundă. În SLA, o tendință descendentă poate reflecta o slăbiciune a picioarelor în progresie. Această valoare este importată automat din Apple Sănătate sau Health Connect și afișată ca medie zilnică.",
+    "fields": {
+        "value": {
+            "label": "Viteza de mers"
+        }
+    }
+}

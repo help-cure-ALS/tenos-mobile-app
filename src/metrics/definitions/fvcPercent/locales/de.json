@@ -1,0 +1,9 @@
+{
+    "name": "FVC % vom Sollwert",
+    "shortName": "FVC %",
+    "descriptionTitle": "Über FVC % vom Sollwert",
+    "description": "Die FVC in Prozent vom Sollwert vergleicht deine gemessene forcierte Vitalkapazität mit dem erwarteten Wert für dein Alter, Geschlecht und Körpergröße. Werte über 80% gelten als normal. Bei ALS wird ein Abfall unter 50% als kritisch betrachtet und kann die Einleitung einer nicht-invasiven Beatmung erfordern.",
+    "fields": {
+        "value": { "label": "FVC % Sollwert" }
+    }
+}

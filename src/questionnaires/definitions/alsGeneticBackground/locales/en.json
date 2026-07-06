@@ -1,0 +1,101 @@
+{
+    "name": "ALS form & genetics",
+    "displayName": "ALS form & genetics",
+    "shortName": "ALS form",
+    "description": "Documentation of sporadic or familial ALS, family history, and known genetic findings.",
+    "domains": {
+        "structured": "ALS form & genetics"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS form & genetics",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "diseaseForm": {
+            "label": "ALS form",
+            "info": "Clinical classification of whether ALS is sporadic, familial, or unclear.",
+            "options": {
+                "sporadic": { "label": "sporadic" },
+                "familial": { "label": "familial" },
+                "suspected_familial": { "label": "suspected familial" },
+                "unclear": { "label": "unclear" }
+            }
+        },
+        "familyHistory": {
+            "label": "Family history",
+            "info": "Documents known ALS, FTD, or other motor neuron disease in the family.",
+            "options": {
+                "none_known": { "label": "none known" },
+                "als": { "label": "ALS in family" },
+                "ftd": { "label": "FTD in family" },
+                "als_ftd": { "label": "ALS/FTD in family" },
+                "other_mnd": { "label": "other motor neuron disease" },
+                "other_neurodegenerative": { "label": "other neurodegenerative history" }
+            }
+        },
+        "testingStatus": {
+            "label": "Genetic testing",
+            "info": "Status of genetic testing. The app does not interpret raw genetic data.",
+            "options": {
+                "not_tested": { "label": "not tested" },
+                "planned": { "label": "planned" },
+                "pending": { "label": "pending" },
+                "negative": { "label": "no known mutation" },
+                "vus": { "label": "variant of uncertain significance" },
+                "pathogenic": { "label": "pathogenic/likely pathogenic variant" }
+            }
+        },
+        "gene": {
+            "label": "Gene",
+            "info": "Known gene from clinical documentation or lab report.",
+            "placeholder": "Enter gene",
+            "options": {
+                "C9orf72": { "label": "C9orf72" },
+                "SOD1": { "label": "SOD1" },
+                "FUS": { "label": "FUS" },
+                "TARDBP": { "label": "TARDBP" },
+                "TBK1": { "label": "TBK1" },
+                "OPTN": { "label": "OPTN" },
+                "VCP": { "label": "VCP" },
+                "other": { "label": "other" }
+            }
+        },
+        "source": {
+            "label": "Source",
+            "info": "Where does this entry come from? Genetic information should be documented traceably.",
+            "options": {
+                "patient_reported": { "label": "patient report" },
+                "clinician_documented": { "label": "clinician documented" },
+                "lab_report": { "label": "laboratory" }
+            }
+        },
+        "counselingStatus": {
+            "label": "Genetic counseling",
+            "info": "Whether genetic counseling for testing or result discussion has been documented.",
+            "options": {
+                "completed": { "label": "completed" },
+                "recommended": { "label": "recommended" },
+                "not_done": { "label": "not done" }
+            }
+        },
+        "otherGene": {
+            "label": "Other gene",
+            "placeholder": "Gene name"
+        },
+        "variantText": {
+            "label": "Variant",
+            "placeholder": "Optional short finding text"
+        },
+        "testDate": {
+            "label": "Test date",
+            "info": "Month and year of genetic testing.",
+            "placeholder": "Select"
+        },
+        "note": {
+            "label": "Comment",
+            "placeholder": "Optional comment"
+        }
+    }
+}

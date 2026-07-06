@@ -1,0 +1,9 @@
+{
+    "name": "Schritte",
+    "shortName": "Schritte",
+    "descriptionTitle": "Über die Schrittzahl",
+    "description": "Die tägliche Schrittzahl ist ein einfaches Maß für die allgemeine Alltagsaktivität. Bei ALS kann ein abnehmender Trend die nachlassende Mobilität widerspiegeln. Die Schritte werden automatisch aus Apple Health oder Health Connect importiert; eine manuelle Eingabe ist nicht nötig.",
+    "fields": {
+        "value": { "label": "Schritte" }
+    }
+}

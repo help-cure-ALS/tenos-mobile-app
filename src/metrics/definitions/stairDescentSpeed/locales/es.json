@@ -1,0 +1,11 @@
+{
+    "name": "Velocidad al bajar escaleras",
+    "shortName": "Bajada",
+    "descriptionTitle": "Acerca de la velocidad al bajar escaleras",
+    "description": "La velocidad al bajar escaleras indica con qué rapidez bajas las escaleras, en metros por segundo. Bajar escaleras exige mucho equilibrio y control de las piernas, por lo que una tendencia descendente puede ser un signo temprano de deterioro de la función de las extremidades inferiores en la ELA. Este valor se importa automáticamente desde Apple Salud.",
+    "fields": {
+        "value": {
+            "label": "Velocidad al bajar escaleras"
+        }
+    }
+}

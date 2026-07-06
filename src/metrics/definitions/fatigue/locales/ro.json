@@ -1,0 +1,24 @@
+{
+    "name": "Oboseală",
+    "shortName": "Oboseală",
+    "descriptionTitle": "Despre oboseală",
+    "description": "Oboseala este evaluată pe o scală de la 0 (fără oboseală) la 10 (epuizare extremă). În ALS, oboseala este un simptom frecvent, care poate fi cauzat de consumul crescut de energie pentru activitățile zilnice, probleme respiratorii sau tulburări de somn. Documentarea ajută la identificarea tiparelor și la ajustarea planificării zilnice.",
+    "fields": {
+        "value": {
+            "label": "Oboseală",
+            "valueLabels": {
+                "0": "Niciuna",
+                "1": "Ușoară",
+                "2": "Ușoară",
+                "3": "Ușoară",
+                "4": "Moderată",
+                "5": "Moderată",
+                "6": "Moderată",
+                "7": "Severă",
+                "8": "Severă",
+                "9": "Severă",
+                "10": "Extremă"
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+{
+  "name": "Sottotipo di SLA",
+  "displayName": "Sottotipo di SLA",
+  "shortName": "Sottotipo",
+  "description": "Classificazione clinica del fenotipo SLA per sede di esordio dei sintomi, propagazione e schema dei motoneuroni.",
+  "domains": {
+    "structured": "Sottotipo di SLA"
+  },
+  "questions": {
+    "payload": {
+      "text": "Sottotipo di SLA",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "onsetCode": {
+      "label": "Sede di esordio dei sintomi",
+      "info": "L’asse O descrive la regione corporea in cui sono iniziati i primi sintomi motori. Conta debolezza o movimento volontario rallentato/poco coordinato, inclusi sintomi bulbari, respiratori o assiali. Fascicolazioni, atrofia muscolare e segni riflessi da soli non contano come esordio dei sintomi.",
+      "options": {
+        "O1": {
+          "label": "Testa/bulbare"
+        },
+        "O2d": {
+          "label": "Braccio distale"
+        },
+        "O2p": {
+          "label": "Braccio prossimale"
+        },
+        "O2x": {
+          "label": "Braccio non chiaro"
+        },
+        "O3r": {
+          "label": "Respirazione"
+        },
+        "O3a": {
+          "label": "Assiale/tronco"
+        },
+        "O4d": {
+          "label": "Gamba distale"
+        },
+        "O4p": {
+          "label": "Gamba prossimale"
+        },
+        "O4x": {
+          "label": "Gamba non chiara"
+        }
+      }
+    },
+    "propagationStatus": {
+      "label": "Propagazione",
+      "info": "L’asse P descrive la diffusione verticale dei sintomi motori dalla regione di esordio a un’altra regione corporea: testa, braccio, tronco o gamba. La diffusione orizzontale da un braccio all’altro o da una gamba all’altra non conta. Fascicolazioni, atrofia o segni riflessi da soli non contano come propagazione.",
+      "options": {
+        "P0": {
+          "label": "nessuna propagazione verticale"
+        },
+        "P1": {
+          "label": "propagazione avvenuta"
+        }
+      }
+    },
+    "propagationPattern": {
+      "label": "Propagazione",
+      "info": "L’asse P descrive la diffusione verticale dei sintomi motori dalla regione di esordio a un’altra regione corporea: testa, braccio, tronco o gamba. La diffusione orizzontale da un braccio all’altro o da una gamba all’altra non conta. Fascicolazioni, atrofia o segni riflessi da soli non contano come propagazione.",
+      "options": {
+        "P0n": {
+          "label": "P0(n)",
+          "description": "Nessuna propagazione verticale; n = mesi fino alla valutazione"
+        },
+        "P1n": {
+          "label": "P1(n)",
+          "description": "Propagazione verticale avvenuta; n = mesi fino alla propagazione"
+        },
+        "P1x": {
+          "label": "P1(x)",
+          "description": "Propagazione verticale avvenuta, tempistica non chiara"
+        }
+      }
+    },
+    "motorNeuronCode": {
+      "label": "Fenotipo dei motoneuroni",
+      "info": "L’asse M descrive il bilanciamento dei segni del motoneurone superiore (UMN) e inferiore (LMN). I segni UMN includono movimento volontario rallentato o poco coordinato, riflessi vivaci, spasticità o affetto pseudobulbare. I segni LMN includono debolezza con atrofia, riflessi assenti o fascicolazioni nei muscoli colpiti. M0 è bilanciato, M1 è a predominanza UMN, M2 è a predominanza LMN, M3 è dissociato.",
+      "options": {
+        "M0": {
+          "label": "UMN/LMN bilanciati"
+        },
+        "M1d": {
+          "label": "UMN dominante"
+        },
+        "M1p": {
+          "label": "UMN puro"
+        },
+        "M2d": {
+          "label": "LMN dominante"
+        },
+        "M2p": {
+          "label": "LMN puro"
+        },
+        "M3": {
+          "label": "dissociato"
+        }
+      }
+    },
+    "certainty": {
+      "label": "Stato",
+      "info": "Lo stato descrive la sicurezza della classificazione clinica: preliminare per una valutazione iniziale o non ancora pienamente confermata, confermata quando i reperti sono sufficientemente chiari, incerta quando i criteri non possono essere separati in modo affidabile.",
+      "options": {
+        "preliminary": {
+          "label": "preliminare"
+        },
+        "confirmed": {
+          "label": "confermato"
+        },
+        "uncertain": {
+          "label": "incerto"
+        }
+      }
+    },
+    "propagationMonths": {
+      "label": "Mesi",
+      "info": "Per P0(n): mesi dall’esordio dei sintomi alla valutazione in cui non è stata trovata propagazione verticale. Per P1(n): mesi dall’esordio dei sintomi alla prima propagazione verticale."
+    },
+    "note": {
+      "label": "Commento",
+      "placeholder": "Commento clinico opzionale"
+    }
+  }
+}

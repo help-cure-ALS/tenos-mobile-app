@@ -1,0 +1,11 @@
+{
+  "name": "Sialorreia",
+  "shortName": "Saliva",
+  "descriptionTitle": "Sobre sialorreia",
+  "description": "O fluxo excessivo de saliva (sialorreia) é um sintoma comum na ELA, causado por dificuldades de deglutição e não por aumento da produção de saliva. Registe a gravidade numa escala de 0 (normal) a 10 (muito grave). A documentação ajuda a avaliar a eficácia dos tratamentos.",
+  "fields": {
+    "value": {
+      "label": "Gravidade"
+    }
+  }
+}

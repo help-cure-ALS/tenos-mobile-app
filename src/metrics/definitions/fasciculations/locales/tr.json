@@ -1,0 +1,17 @@
+{
+    "name": "Fasikülasyonlar",
+    "shortName": "Fasik.",
+    "descriptionTitle": "Fasikülasyonlar hakkında",
+    "description": "Fasikülasyonlar, tek tek kas liflerinde cilt altında görülebilen kısa, istemsiz seğirmelerdir. ALS’nin tipik belirtilerindendir ve ağrılı, kalıcı kas kramplarından farklıdır. Takip, kalıpları belirlemeye ve hastalık ilerlemesini belgelemeye yardımcı olur. (0 = Yok, 1 = Nadir, 2 = Sık, 3 = Çok sık)",
+    "fields": {
+        "value": {
+            "label": "Fasikülasyonlar",
+            "valueLabels": {
+                "0": "Yok",
+                "1": "Nadir",
+                "2": "Sık",
+                "3": "Çok sık"
+            }
+        }
+    }
+}

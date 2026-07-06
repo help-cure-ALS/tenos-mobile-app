@@ -1,0 +1,359 @@
+{
+    "name": "Examen neurologic",
+    "displayName": "Examen neurologic",
+    "shortName": "Examen",
+    "description": "Documentarea clinică a constatărilor motorii UMN și LMN pe parcursul ALS.",
+    "domains": {
+        "structured": "Examen neurologic"
+    },
+    "questions": {
+        "payload": {
+            "text": "Examen neurologic",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Regiune corporală",
+            "info": "Regiunea corporală în care sunt documentate cele mai relevante semne neurologice ale acestui examen.",
+            "options": {
+                "head": {
+                    "label": "Cap/bulbar"
+                },
+                "right_arm": {
+                    "label": "Braț drept"
+                },
+                "left_arm": {
+                    "label": "Braț stâng"
+                },
+                "trunk": {
+                    "label": "Trunchi/axial"
+                },
+                "right_leg": {
+                    "label": "Picior drept"
+                },
+                "left_leg": {
+                    "label": "Picior stâng"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Severitate",
+            "options": {
+                "absent": {
+                    "label": "absentă"
+                },
+                "mild": {
+                    "label": "ușoară"
+                },
+                "moderate": {
+                    "label": "moderată"
+                },
+                "severe": {
+                    "label": "severă"
+                },
+                "not_tested": {
+                    "label": "netestat"
+                }
+            }
+        },
+        "burden": {
+            "label": "Povară generală",
+            "options": {
+                "none": {
+                    "label": "niciuna"
+                },
+                "mild": {
+                    "label": "ușoară"
+                },
+                "moderate": {
+                    "label": "moderată"
+                },
+                "severe": {
+                    "label": "severă"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Fenotip M sugerat",
+            "info": "Clasificarea clinică a tiparului neuronilor motori pentru axa M a subtipului ALS.",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN echilibrat"
+                },
+                "M1d": {
+                    "label": "dominant UMN"
+                },
+                "M1p": {
+                    "label": "UMN pur"
+                },
+                "M2d": {
+                    "label": "dominant LMN"
+                },
+                "M2p": {
+                    "label": "LMN pur"
+                },
+                "M3": {
+                    "label": "disociat"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: slăbiciune",
+            "info": "Documentează slăbiciunea musculară clinică drept semn al implicării neuronului motor inferior."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: atrofie",
+            "info": "Documentează atrofia musculară vizibilă sau palpabilă în regiunea examinată."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fasciculații",
+            "info": "Documentează tresăriri musculare spontane ca semn al iritației sau afectării neuronului motor inferior."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hiperreflexie",
+            "info": "Documentează reflexele osteotendinoase crescute ca semn al implicării neuronului motor superior."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: reflexe patologice",
+            "info": "Documentează semne reflexe patologice precum Babinski sau Hoffmann."
+        },
+        "umnSpasticity": {
+            "label": "UMN: spasticitate",
+            "info": "Documentează tonusul muscular crescut sau spasticitatea ca semn al implicării neuronului motor superior."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: mișcare încetinită",
+            "info": "Documentează mișcarea încetinită sau slab coordonată care nu este explicată doar de slăbiciune."
+        },
+        "overallUmnBurden": {
+            "label": "Povară UMN generală",
+            "info": "Estimarea clinică generală a poverii semnelor de neuron motor superior."
+        },
+        "overallLmnBurden": {
+            "label": "Povară LMN generală",
+            "info": "Estimarea clinică generală a poverii semnelor de neuron motor inferior."
+        },
+        "note": {
+            "label": "Notă internă",
+            "info": "Notă suplimentară opțională pentru examen. Această notă nu este inclusă în donațiile pentru cercetare.",
+            "placeholder": "Opțional"
+        },
+        "clinicalRegion": {
+            "label": "Regiune ALS",
+            "info": "Regiuni clinice ALS standard pentru evaluarea afectării regionale.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulbară"
+                },
+                "cervical": {
+                    "label": "Cervicală/brațe"
+                },
+                "thoracic": {
+                    "label": "Toracică/axială"
+                },
+                "lumbosacral": {
+                    "label": "Lombosacrată/picioare"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Stânga"
+                },
+                "right": {
+                    "label": "Dreapta"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "absent"
+                },
+                "present": {
+                    "label": "prezent"
+                },
+                "not_tested": {
+                    "label": "netestat"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "netestat"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Abducția umărului"
+                },
+                "elbow_flexion": {
+                    "label": "Flexia cotului"
+                },
+                "elbow_extension": {
+                    "label": "Extensia cotului"
+                },
+                "wrist_extension": {
+                    "label": "Extensia pumnului"
+                },
+                "finger_abduction": {
+                    "label": "Abducția degetelor"
+                },
+                "hip_flexion": {
+                    "label": "Flexia șoldului"
+                },
+                "knee_extension": {
+                    "label": "Extensia genunchiului"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Dorsiflexia piciorului"
+                },
+                "toe_extension": {
+                    "label": "Extensia degetelor piciorului"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Reflex bicipital"
+                },
+                "triceps": {
+                    "label": "Reflex tricipital"
+                },
+                "brachioradialis": {
+                    "label": "Reflex brahioradial"
+                },
+                "patellar": {
+                    "label": "Reflex rotulian"
+                },
+                "achilles": {
+                    "label": "Reflex achilean"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "netestat"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Semne piramidale",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Reflex palmomentonier"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "Semne LMN",
+            "options": {
+                "atrophy": {
+                    "label": "Atrofie"
+                },
+                "fasciculations": {
+                    "label": "Fasciculații"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Semne bulbare",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Atrofia limbii"
+                },
+                "tongue_fasciculations": {
+                    "label": "Fasciculații ale limbii"
+                },
+                "dysarthria": {
+                    "label": "Disartrie"
+                },
+                "dysphagia": {
+                    "label": "Disfagie"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Afectare regională",
+            "info": "Înregistrează afectarea UMN și LMN în cele patru regiuni clinice ALS."
+        },
+        "mrcStrength": {
+            "label": "Examinarea forței MRC",
+            "info": "Documentează forța pe scala MRC de la 0 la 5. Stânga este înregistrată întotdeauna înaintea dreptei."
+        },
+        "reflexes": {
+            "label": "Reflexe",
+            "info": "Documentează reflexele osteotendinoase pe fiecare parte, stânga înaintea dreptei."
+        },
+        "pathologicalSigns": {
+            "label": "Semne piramidale",
+            "info": "Documentează reflexe patologice sugestive pentru afectare UMN."
+        },
+        "lmnSideSigns": {
+            "label": "Semne LMN",
+            "info": "Documentează atrofia și fasciculațiile pe fiecare parte."
+        },
+        "bulbarSigns": {
+            "label": "Semne bulbare",
+            "info": "Documentează semne bulbare tipice precum atrofia limbii, fasciculații ale limbii, disartrie și disfagie."
+        }
+    }
+}

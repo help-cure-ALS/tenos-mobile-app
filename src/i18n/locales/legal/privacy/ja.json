@@ -1,0 +1,290 @@
+{
+    "title": "プライバシーポリシー",
+    "lastUpdated": "12 June 2026",
+    "translationNotice": "これは便宜上の翻訳です。ドイツ語版が正式なものです。",
+    "summary": {
+        "label": "Summary",
+        "text": "TENOS processes highly sensitive health data. The actual contents of your health data, medications, questionnaires and notes are stored encrypted locally and sealed on your device before synchronization. The Vault Server is a core part of account, device, role and sharing logic; it cannot read encrypted content in plain text. Technically necessary metadata remains visible, such as pseudonymous identifiers, roles, devices, timestamps, sharing status and some resource types."
+    },
+    "sections": {
+        "responsible": {
+            "title": "1. Controller",
+            "content": "Controller within the meaning of the GDPR is:",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nuremberg\nGermany\nRegister court: Amtsgericht Nürnberg\nRegistration number: VR 203250",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app",
+            "description": "help cure ALS e.V. is a non-profit association providing digital tools for people with ALS, caregivers, physicians and ALS research."
+        },
+        "principles": {
+            "title": "2. Principles of processing",
+            "encryption": {
+                "title": "2.1 Encryption and roles",
+                "content": "Health data is stored on your device in an encrypted local database. Data synchronized through the Vault Server is cryptographically sealed on the device before transfer. Authorized roles and devices receive only the keys or access required for their role."
+            },
+            "minimization": {
+                "title": "2.2 Data minimization",
+                "content": "We process only data required for TENOS, synchronization, sharing logic, security and features you actively use. We do not create advertising profiles, sell usage data or use hidden trackers."
+            },
+            "sovereignty": {
+                "title": "2.3 Control over your data",
+                "content": "You stay in control of the content and sharing settings managed in TENOS. In particular, you decide:",
+                "items": [
+                    "Which health data, questionnaires, medications and notes you record",
+                    "Which values you import from Apple Health or Health Connect",
+                    "Which people, devices, clinics, care partners or research features receive access",
+                    "Which sharing settings you revoke and which data you delete or export"
+                ]
+            }
+        },
+        "dataProcessed": {
+            "title": "3. What data is processed?",
+            "healthProfile": {
+                "title": "3.1 Profile and master data",
+                "intro": "Depending on your role and use, you may enter or manage:",
+                "items": [
+                    "Name or display name, date of birth, biological sex, height and weight",
+                    "Country/region, language, units, display settings and accessibility-related information such as wheelchair use",
+                    "First symptoms, diagnosis date, ALS form, genetics, known mutation, ALS subtype, King’s Stage and neurological examination data",
+                    "Patient and device links, roles, active patient selection and sharing status"
+                ],
+                "legalBasis": "Legal basis: Art. 6(1)(a) GDPR and Art. 9(2)(a) GDPR where you actively enter or share health data; for technically required account, security and synchronization features also Art. 6(1)(b) or (f) GDPR."
+            },
+            "metrics": {
+                "title": "3.2 Health metrics and progression",
+                "intro": "TENOS can process manual entries and, after your permission, imported values from Apple Health or Health Connect, including:",
+                "items": [
+                    "Vital signs such as heart rate, blood pressure, oxygen saturation and temperature",
+                    "Body data such as weight, BMI and body fat percentage",
+                    "ALS-specific values such as ALSFRS-R, ALS subtype, King’s Stage, ALS form and genetics, and neurological examination data",
+                    "Symptoms, wellbeing, nutrition, mobility, breathing and other progression observations",
+                    "For health imports: source, platform, source app, device, external identifier, import time and observation time"
+                ],
+                "storage": "Storage: Health data is stored as FHIR-like resources in the encrypted local database and transferred as encrypted events for synchronization. The metric or resource type may be processed as technical metadata where required for synchronization, sharing, search, import or display.",
+                "legalBasis": "Legal basis: Art. 6(1)(a), Art. 9(2)(a) GDPR; for integrity, security and operation of synchronization Art. 6(1)(b) or (f) GDPR."
+            },
+            "questionnaires": {
+                "title": "3.3 Questionnaires and self-assessments",
+                "intro": "TENOS contains questionnaires and assessments for progression documentation, for example:",
+                "items": [
+                    "ALSFRS-R and other function or symptom questionnaires",
+                    "Mental burden, wellbeing, pain, nutrition and daily checks",
+                    "Time, definition version, answers, score calculations and progression classification"
+                ],
+                "disclaimer": "These contents are for documentation and communication. They do not replace medical diagnosis, advice or treatment."
+            },
+            "medications": {
+                "title": "3.4 Medications and reminders",
+                "intro": "You can document medications and intake. After your permission, TENOS can also import new medications from Apple Health.",
+                "items": [
+                    "Medication name, form, strength, dosage, intake times and schedule",
+                    "Intake log such as taken, skipped or recorded later",
+                    "Local medication reminders and their scheduled time",
+                    "On import: Apple Health source identifier, archive status, dosage/event information and matching against existing medications"
+                ]
+            },
+            "deviceData": {
+                "title": "3.5 Device, account and synchronization data",
+                "intro": "For accounts, recovery, roles, pairing, revocation and synchronization we process technical data:",
+                "items": [
+                    "Random device ID, device name, platform, app version and active role",
+                    "Pseudonymous subject/patient identifiers, public cryptographic keys, signatures, tokens and key envelopes",
+                    "Linked devices, sharing settings, revocations, account or patient deletion events, cursors and event versions",
+                    "Timestamps for registration, synchronization, import, sharing, revocation and deletion",
+                    "IP address and technical server logs where required for security, abuse prevention, troubleshooting and operation"
+                ],
+                "purpose": "Purpose: These data are required so TENOS can robustly implement multiple devices, roles, sharing, revocation, recovery and deletion."
+            },
+            "biometrics": {
+                "title": "3.6 Biometric authentication",
+                "content": "You can use Face ID, Touch ID or Android biometrics to unlock the app. Raw biometric data is not transmitted to us; verification is performed locally by the operating system."
+            }
+        },
+        "storage": {
+            "title": "4. Storage, Vault Sync and server access",
+            "local": {
+                "title": "4.1 Local storage",
+                "content": "TENOS stores health data locally in an encrypted SQLite database. The local database key is stored in the secure key storage of the operating system, such as iOS Keychain or Android Keystore.",
+                "keyStorage": "Recovery words and cryptographic keys are used to recover an account, link devices and grant authorized roles access. If you share recovery words, the recipient can recover the account."
+            },
+            "cloud": {
+                "title": "4.2 Vault synchronization as a core function",
+                "intro": "The Vault Server is not merely optional storage; it is part of the TENOS security and sharing architecture. It is used in particular for:",
+                "items": [
+                    "Synchronization between your own devices",
+                    "Linking, role changes and revocation of devices, physicians and caregivers",
+                    "Account and patient deletion with forwarding of deletion/revocation information to linked devices",
+                    "Transport of encrypted events and access information",
+                    "Integrity checks, cursors, conflict avoidance and technical diagnostics"
+                ],
+                "legalBasis": "Legal basis: Art. 6(1)(b) GDPR for providing core functions, Art. 6(1)(f) GDPR for security and abuse prevention, and Art. 9(2)(a) GDPR for health data you process."
+            },
+            "serverAccess": {
+                "title": "4.3 What the Vault Server can see",
+                "intro": "The Vault Server cannot read all content, but processes technically necessary metadata. Visible data may include:",
+                "visible": [
+                    "Pseudonymous account, subject, patient, device and role identifiers",
+                    "Public cryptographic keys, signatures, tokens, device status and sharing status",
+                    "Encrypted events, event IDs, versions, cursors and synchronization timestamps",
+                    "FHIR resource types, metric or questionnaire identifiers where required unencrypted for synchronization, search, import, sharing or conflict handling",
+                    "IP address, technical request data and error/security logs"
+                ],
+                "notVisible": "The Vault Server is not intended to see in plain text: actual health values, medication details, questionnaire answers, free text, notes or imported health content. These contents are encrypted or sealed on the device before synchronization."
+            }
+        },
+        "sharing": {
+            "title": "5. Sharing, roles, clinics and research",
+            "withOthers": {
+                "title": "5.1 Sharing with physicians and caregivers",
+                "content": "You can authorize devices and roles. Authorized people can view data and create entries depending on their role. Sharing is based on cryptographic keys and access states.",
+                "rolesIntro": "Roles in TENOS:",
+                "roles": [
+                    "Patient or owner: manages the account, data, devices and sharing",
+                    "Caregiver: access and entries for shared patients",
+                    "Physician: access and entries for shared patients"
+                ],
+                "revoke": "Sharing can be revoked. The revocation is processed through the Vault Server; already locally decrypted data on a linked device is removed or made inaccessible during the next successful synchronization or account/role update."
+            },
+            "careAndSuppliers": {
+                "title": "5.2 Verification, clinics and care partners",
+                "content": "If you use verification, clinic or care partner features, additional status and exchange data may be processed:",
+                "items": [
+                    "Selected clinic/ALS center, verification code, verification status, token ID and revocation status",
+                    "Sharing and access settings for clinics, physicians, caregivers, care partners or partner apps",
+                    "Encrypted or pseudonymized exchange packages where you use the respective feature"
+                ]
+            },
+            "studies": {
+                "title": "5.3 Research and data donation",
+                "intro": "Research sharing is separate from normal app use. Only the data categories you select are processed and, before transfer to the research service, anonymized or pseudonymized as far as technically and scientifically possible.",
+                "conditions": [
+                    "Only after active sharing and, where required, after verification by a clinic/ALS center",
+                    "Only for the specified research purpose and selected data categories",
+                    "With a separate option to revoke research sharing"
+                ],
+                "legalBasis": "Legal basis: Art. 6(1)(a), Art. 9(2)(a) GDPR; depending on the research project, additional information or consent may be required."
+            },
+            "noThirdParties": {
+                "title": "5.4 No advertising and no data trade",
+                "content": "We do not sell, rent or transfer your data to advertising networks, data brokers or tracking providers. Transfer occurs only:",
+                "exceptions": [
+                    "To roles, devices, clinics or care partners authorized by you",
+                    "To research services or research partners only after separate sharing",
+                    "To technical service providers where required for hosting, operation, security or support",
+                    "Where we are legally required to do so"
+                ]
+            }
+        },
+        "notifications": {
+            "title": "6. Reminders and notifications",
+            "content": "Medication and questionnaire reminders are scheduled as local notifications on your device. TENOS does not use them for advertising or tracking pushes. Content may be visible on the lock screen if notification previews are allowed by your operating system.",
+            "disable": "You can disable or restrict notifications at any time in TENOS or in your device settings."
+        },
+        "permissions": {
+            "title": "7. Device permissions",
+            "intro": "TENOS requests permissions only for specific functions:",
+            "items": [
+                "Camera: scanning QR codes when linking devices or roles",
+                "Notifications: local reminders for medications and tasks",
+                "Biometrics: local unlocking via Face ID, Touch ID or Android biometrics",
+                "Apple Health / Health Connect: optional import of authorized measurements and, on iOS, medication information",
+                "Network: Vault Sync, verification, study/partner features, server communication and security checks"
+            ],
+            "optional": "Camera, notifications, biometrics and health import can be denied or changed later. Without network and Vault communication, normal account, sync, role, sharing and recovery functions are not fully usable."
+        },
+        "noTracking": {
+            "title": "8. No analytics or advertising trackers",
+            "intro": "TENOS does not use:",
+            "items": [
+                "Advertising SDKs, advertising IDs or tracking pixels",
+                "Sale or rental of usage or health data",
+                "Profiling for advertising",
+                "Hidden cross-app tracking"
+            ]
+        },
+        "recipients": {
+            "title": "9. Recipients and third-country context",
+            "content": "Depending on the feature used, the following recipients or categories may receive access to personal data or technical metadata:",
+            "items": [
+                "Hosting and infrastructure providers for Vault, Care/Research services, monitoring, backups and security",
+                "Physicians, caregivers, clinics, ALS centers, care partners or linked devices authorized by you",
+                "Research services or research partners only after separate sharing",
+                "Apple or Google in the context of operating system, App Store/Play Store, HealthKit/Health Connect and local system permissions under their own terms",
+                "Authorities, courts or other bodies where legally required"
+            ],
+            "thirdCountries": "Our own health and Vault services are intended to be operated within Germany or the EU. Operating system, store or device providers may also process data outside the EU; their privacy terms and applicable transfer mechanisms apply."
+        },
+        "automatedDecision": {
+            "title": "10. No automated decisions",
+            "content": "TENOS does not make automated decisions with legal or similarly significant effects within the meaning of Art. 22 GDPR. Scores, stages, trends or hints are used for documentation, orientation and communication with care teams; they do not replace medical assessment."
+        },
+        "retention": {
+            "title": "11. Retention and deletion",
+            "duration": {
+                "title": "11.1 Retention period",
+                "content": "Health data remains stored as long as you keep it in TENOS or until you delete it. Technical logs and security data are stored only as long as required for operation, security, troubleshooting, abuse prevention or legal obligations."
+            },
+            "deletion": {
+                "title": "11.2 Deletion",
+                "intro": "You can delete data in TENOS or revoke sharing:",
+                "options": [
+                    "Individual entries in the respective detail views",
+                    "Patients/accounts and linked devices through account and management functions",
+                    "Sharing for physicians, caregivers, clinics, research or partner features",
+                    "Local data by removing the app or by available reset/sign-out functions, where offered"
+                ]
+            },
+            "deviceDeactivation": {
+                "title": "11.3 Revocation and device removal",
+                "content": "When removing a device or revoking a role, the authorization is revoked server-side and communicated to linked devices. Effectiveness requires affected devices to synchronize again."
+            }
+        },
+        "security": {
+            "title": "12. Data security",
+            "intro": "TENOS uses technical and organizational measures, in particular:",
+            "measures": [
+                "Encrypted local database and secure operating-system key storage",
+                "Cryptographic signatures, device and role binding instead of classic plain-text password logic",
+                "Encrypted transfer via TLS and encrypted or sealed Vault events",
+                "Revocable device and role sharing",
+                "Data-minimizing server architecture with pseudonymous IDs and minimal necessary metadata"
+            ]
+        },
+        "rights": {
+            "title": "13. Your rights",
+            "intro": "Under the GDPR you have, in particular, the following rights:",
+            "items": [
+                "Access under Art. 15 GDPR",
+                "Rectification under Art. 16 GDPR",
+                "Erasure under Art. 17 GDPR",
+                "Restriction of processing under Art. 18 GDPR",
+                "Data portability under Art. 20 GDPR",
+                "Objection under Art. 21 GDPR where processing is based on legitimate interests",
+                "Withdrawal of consent under Art. 7 GDPR with effect for the future"
+            ],
+            "exercise": "Many rights can be exercised directly in the app, such as export, deletion or revocation of sharing. Because contents are end-to-end encrypted, we cannot read or correct concrete health contents for you if we do not have plain-text access.",
+            "complaint": "You have the right to lodge a complaint with a supervisory authority. The authority responsible for us is Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, Germany."
+        },
+        "healthData": {
+            "title": "14. Special notes on health data",
+            "special": "Health data belongs to the special categories of personal data under Art. 9 GDPR. TENOS processes such data only for the features you use and with special protection through encryption, role binding, access control and data minimization.",
+            "disclaimer": "TENOS is a tool for personal documentation, progression tracking, preparation of medical conversations, medication organization and self-determined data sharing. The app does not replace medical advice, diagnosis, treatment decisions or emergency care."
+        },
+        "minors": {
+            "title": "15. Minors",
+            "content": "TENOS is primarily intended for adults. Minors should use TENOS only with consent and support from a person with parental responsibility."
+        },
+        "changes": {
+            "title": "16. Changes to this Privacy Policy",
+            "content": "We update this Privacy Policy if functions, technical architecture, legal requirements or processing activities change materially. Material changes will be communicated in the app or in another suitable way."
+        },
+        "contact": {
+            "title": "17. Contact",
+            "intro": "For privacy questions you can contact us:",
+            "organization": "help cure ALS e.V.",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        }
+    },
+    "footer": "This app was developed according to Privacy by Design. Concrete health contents remain encrypted and under your control; for operation, security, synchronization and sharing, TENOS processes the technical metadata required for those purposes."
+}

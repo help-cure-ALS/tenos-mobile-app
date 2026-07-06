@@ -1,0 +1,11 @@
+{
+    "name": "Kalp hızı",
+    "shortName": "Nabız",
+    "descriptionTitle": "Kalp hızı hakkında",
+    "description": "Kalp hızı, kalbin dakikada kaç kez attığını gösterir. Yetişkinlerde normal dinlenme nabzı dakikada 60 ile 100 arasındadır. ALS’de kalp hızı stres, solunum sorunları veya ilaçlardan etkilenebilir. Düzenli ölçümler değişiklikleri erken fark etmeye yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Kalp hızı"
+        }
+    }
+}

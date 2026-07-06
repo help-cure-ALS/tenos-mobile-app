@@ -1,0 +1,11 @@
+{
+    "name": "Velocità di cammino",
+    "shortName": "Velocità",
+    "descriptionTitle": "Informazioni sulla velocità di cammino",
+    "description": "La velocità di cammino è l'andatura media con cui cammini, in metri al secondo. Nella SLA, una tendenza al ribasso può riflettere una debolezza delle gambe in progressione. Questo valore viene importato automaticamente da Apple Salute o Health Connect e mostrato come media giornaliera.",
+    "fields": {
+        "value": {
+            "label": "Velocità di cammino"
+        }
+    }
+}

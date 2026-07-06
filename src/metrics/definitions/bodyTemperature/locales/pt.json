@@ -1,0 +1,11 @@
+{
+  "name": "Temperatura corporal",
+  "shortName": "Temp.",
+  "descriptionTitle": "Sobre a temperatura corporal",
+  "description": "A temperatura corporal é um parâmetro vital importante. Os valores normais situam-se entre 36,0 e 37,5 °C. Na ELA, a termorregulação pode estar comprometida por disfunção autonómica ou redução de massa muscular. A medição regular ajuda a detetar infeções precocemente e a documentar alterações na regulação térmica.",
+  "fields": {
+    "value": {
+      "label": "Temperatura"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Andares subidos",
+    "shortName": "Andares",
+    "descriptionTitle": "Sobre os andares subidos",
+    "description": "O número de andares subidos por dia reflete a força e a resistência dos membros inferiores na atividade diária. Na ELA, uma tendência de queda pode indicar uma fraqueza nas pernas em progressão. Este valor é importado automaticamente do Apple Saúde ou do Health Connect; não é necessária inserção manual.",
+    "fields": {
+        "value": {
+            "label": "Andares subidos"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ontlastingsconsistentie",
+  "shortName": "Ontlasting",
+  "descriptionTitle": "Over de Bristol Stool Scale",
+  "description": "De Bristol Stool Scale is een klinisch hulpmiddel om de consistentie van ontlasting te beoordelen. Bij ALS komt obstipatie vaak voor door verminderde mobiliteit, verzwakte buikspieren of medicatie. Type 3-4 wordt als ideaal beschouwd. Type 1-2 wijst op obstipatie, type 6-7 op diarree. (1 = hard/klonterig, 4 = ideaal, 7 = waterig)",
+  "fields": {
+    "value": {
+      "label": "Ontlastingstype",
+      "valueLabels": {
+        "1": "Type 1 - Afzonderlijke harde keutels",
+        "2": "Type 2 - Worstvormig, klonterig",
+        "3": "Type 3 - Worstvormig met barstjes",
+        "4": "Type 4 - Glad en zacht (ideaal)",
+        "5": "Type 5 - Zachte brokjes",
+        "6": "Type 6 - Papperige, luchtige stukjes",
+        "7": "Type 7 - Waterig, vloeibaar"
+      }
+    }
+  }
+}

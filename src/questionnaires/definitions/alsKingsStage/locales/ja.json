@@ -1,0 +1,105 @@
+{
+  "name": "King'sステージ",
+  "displayName": "King'sステージ",
+  "shortName": "King's",
+  "description": "King's Collegeに基づき、影響を受けた部位と栄養または呼吸の関与から医師が確認したALSステージ。",
+  "domains": {
+    "structured": "King'sステージ"
+  },
+  "questions": {
+    "payload": {
+      "text": "King'sステージ",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "ステージ",
+      "info": "King'sステージは、影響を受けた部位と関連する栄養または呼吸基準から導かれます。",
+      "options": {
+        "1": {
+          "label": "ステージ1",
+          "description": "1つの部位が影響"
+        },
+        "2": {
+          "label": "ステージ2",
+          "description": "2つの部位が影響"
+        },
+        "3": {
+          "label": "ステージ3",
+          "description": "3つの部位が影響"
+        },
+        "4": {
+          "label": "ステージ4",
+          "description": "ステージ4、詳細未指定"
+        },
+        "4A": {
+          "label": "ステージ4A",
+          "description": "栄養の関与"
+        },
+        "4B": {
+          "label": "ステージ4B",
+          "description": "呼吸の関与"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "影響を受けた部位",
+      "info": "ステージ判定に使用する臨床的に影響を受けた部位。",
+      "options": {
+        "bulbar": {
+          "label": "球麻痺"
+        },
+        "upper_limb": {
+          "label": "上肢"
+        },
+        "lower_limb": {
+          "label": "下肢"
+        },
+        "thoracic": {
+          "label": "胸部/呼吸"
+        }
+      }
+    },
+    "source": {
+      "label": "情報源",
+      "info": "評価の根拠。提案値は医師による確認が必要です。",
+      "options": {
+        "manual": {
+          "label": "医師が確認"
+        },
+        "suggested_from_exam": {
+          "label": "診察から提案"
+        },
+        "suggested_from_alsfrs": {
+          "label": "ALSFRS-Rから提案"
+        },
+        "suggested_from_care": {
+          "label": "ケアデータから提案"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "ステージ4の理由",
+      "info": "ステージ4が栄養または呼吸の関与によるものかを記録します。",
+      "options": {
+        "nutrition": {
+          "label": "栄養"
+        },
+        "respiratory": {
+          "label": "呼吸"
+        },
+        "both": {
+          "label": "栄養と呼吸"
+        },
+        "unspecified": {
+          "label": "未指定"
+        }
+      }
+    },
+    "note": {
+      "label": "コメント",
+      "placeholder": "任意の臨床コメント"
+    }
+  }
+}

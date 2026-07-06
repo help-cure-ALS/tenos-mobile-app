@@ -1,0 +1,9 @@
+{
+    "name": "Walking Speed",
+    "shortName": "Walk Speed",
+    "descriptionTitle": "About Walking Speed",
+    "description": "Walking speed is the average pace at which you walk, in metres per second. In ALS, a downward trend can reflect progressing leg weakness and reduced mobility. This value is imported automatically from Apple Health or Health Connect and shown as a daily average.",
+    "fields": {
+        "value": { "label": "Walking Speed" }
+    }
+}

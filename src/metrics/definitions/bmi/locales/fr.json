@@ -1,0 +1,9 @@
+{
+  "name": "Indice de masse corporelle",
+  "shortName": "IMC",
+  "descriptionTitle": "À propos de l'indice de masse corporelle",
+  "description": "L'indice de masse corporelle (IMC) mesure le rapport entre le poids corporel et la taille. Il se calcule en divisant le poids (kg) par la taille (m) au carré. Dans la SLA, un IMC dans la partie haute de la normale est souvent associé à une meilleure évolution.",
+  "fields": {
+    "value": { "label": "IMC" }
+  }
+}

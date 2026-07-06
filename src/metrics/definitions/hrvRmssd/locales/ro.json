@@ -1,0 +1,11 @@
+{
+    "name": "Variabilitatea ritmului cardiac",
+    "shortName": "VRC",
+    "descriptionTitle": "Despre variabilitatea ritmului cardiac",
+    "description": "Variabilitatea ritmului cardiac (VRC) este variația timpului dintre bătăile inimii, în milisecunde, și reflectă activitatea sistemului nervos autonom. Pe Android este măsurată ca RMSSD și importată automat din Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Variabilitatea ritmului cardiac"
+        }
+    }
+}

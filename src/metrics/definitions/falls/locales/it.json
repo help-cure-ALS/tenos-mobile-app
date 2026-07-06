@@ -1,0 +1,11 @@
+{
+  "name": "Cadute",
+  "shortName": "Cadute",
+  "descriptionTitle": "Informazioni sul monitoraggio delle cadute",
+  "description": "Registrare le cadute aiuta a valutare il rischio di caduta e ad adottare misure preventive. Nella SLA, l’aumento della debolezza muscolare accresce significativamente il rischio di cadute. Documenta ogni caduta per discutere ausili o modifiche dell’ambiente con il tuo team di cura.",
+  "fields": {
+    "value": {
+      "label": "Numero di cadute"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Flights Climbed",
+    "shortName": "Flights",
+    "descriptionTitle": "About Flights Climbed",
+    "description": "The number of floors climbed per day reflects lower-limb strength and endurance during everyday activity. In ALS, a downward trend can indicate progressing leg weakness. This value is imported automatically from Apple Health or Health Connect; no manual entry is needed.",
+    "fields": {
+        "value": { "label": "Flights Climbed" }
+    }
+}

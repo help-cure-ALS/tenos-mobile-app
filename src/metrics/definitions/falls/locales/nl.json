@@ -1,0 +1,11 @@
+{
+  "name": "Vallen",
+  "shortName": "Vallen",
+  "descriptionTitle": "Over valregistratie",
+  "description": "Het registreren van vallen helpt het valrisico te beoordelen en preventieve maatregelen te nemen. Bij ALS verhoogt toenemende spierzwakte het risico op vallen aanzienlijk. Documenteer elke val om passende hulpmiddelen of aanpassingen in de omgeving met je zorgteam te bespreken.",
+  "fields": {
+    "value": {
+      "label": "Aantal vallen"
+    }
+  }
+}

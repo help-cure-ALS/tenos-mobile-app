@@ -1,0 +1,11 @@
+{
+    "name": "Greutate",
+    "shortName": "Greutate",
+    "descriptionTitle": "Despre greutatea corporală",
+    "description": "Greutatea corporală este un indicator important al sănătății generale. În ALS, pierderea neintenționată în greutate poate fi un semn al dificultăților de înghițire sau al consumului energetic crescut. Monitorizarea regulată a greutății ajută la luarea timpurie a măsurilor de contracarare.",
+    "fields": {
+        "value": {
+            "label": "Greutate"
+        }
+    }
+}

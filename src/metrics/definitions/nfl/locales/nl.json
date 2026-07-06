@@ -1,0 +1,11 @@
+{
+  "name": "NFL in serum",
+  "shortName": "NFL",
+  "descriptionTitle": "Over neurofilament light chain",
+  "description": "Neurofilament Light Chain (NFL) is een biomarker die in het bloed vrijkomt wanneer zenuwcellen beschadigd raken. Verhoogde NFL-waarden kunnen wijzen op actieve neurodegeneratie. Bij ALS wordt NFL gebruikt om ziekteprogressie te volgen en als prognostische marker.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

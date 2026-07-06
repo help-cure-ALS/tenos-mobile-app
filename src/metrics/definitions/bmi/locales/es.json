@@ -1,0 +1,9 @@
+{
+  "name": "Índice de masa corporal",
+  "shortName": "IMC",
+  "descriptionTitle": "Sobre el índice de masa corporal",
+  "description": "El índice de masa corporal (IMC) es una medida de la relación entre el peso corporal y la altura. Se calcula como peso (kg) dividido por la altura (m) al cuadrado. En la ELA, un IMC en la parte alta del rango normal suele asociarse a una mejor evolución.",
+  "fields": {
+    "value": { "label": "IMC" }
+  }
+}

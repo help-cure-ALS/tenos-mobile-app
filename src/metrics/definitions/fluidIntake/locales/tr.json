@@ -1,0 +1,11 @@
+{
+    "name": "Sıvı alımı",
+    "shortName": "Sıvılar",
+    "descriptionTitle": "Sıvı alımı hakkında",
+    "description": "Günlük sıvı alımı genel sağlık için önemlidir. ALS’de yutma güçlükleri daha az içmeye ve susuz kalmaya yol açabilir. Günde yaklaşık 1,5-2 litre önerilir. Dokümantasyon yeterli sıvı alımını sağlamaya yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Sıvı miktarı"
+        }
+    }
+}

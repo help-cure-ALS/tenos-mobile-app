@@ -1,0 +1,11 @@
+{
+    "name": "Piani saliti",
+    "shortName": "Piani",
+    "descriptionTitle": "Informazioni sui piani saliti",
+    "description": "Il numero di piani saliti al giorno riflette la forza e la resistenza degli arti inferiori nelle attività quotidiane. Nella SLA, una tendenza al ribasso può indicare una debolezza delle gambe in progressione. Questo valore viene importato automaticamente da Apple Salute o Health Connect; non è necessario inserirlo manualmente.",
+    "fields": {
+        "value": {
+            "label": "Piani saliti"
+        }
+    }
+}

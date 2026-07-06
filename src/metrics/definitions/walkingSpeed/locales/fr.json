@@ -1,0 +1,11 @@
+{
+    "name": "Vitesse de marche",
+    "shortName": "Vitesse",
+    "descriptionTitle": "À propos de la vitesse de marche",
+    "description": "La vitesse de marche est l'allure moyenne à laquelle vous marchez, en mètres par seconde. Dans la SLA, une tendance à la baisse peut refléter une faiblesse des jambes qui progresse. Cette valeur est importée automatiquement depuis Apple Santé ou Health Connect et affichée en moyenne journalière.",
+    "fields": {
+        "value": {
+            "label": "Vitesse de marche"
+        }
+    }
+}

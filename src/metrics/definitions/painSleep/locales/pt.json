@@ -1,0 +1,24 @@
+{
+  "name": "Dor -> Sono",
+  "shortName": "Sono",
+  "descriptionTitle": "Impacto da dor no sono",
+  "description": "Regista quanto a dor afeta o sono. Numa escala de 0 (sem impacto) a 10 (impacto extremo). Perturbações do sono devido à dor podem afetar significativamente a qualidade de vida.",
+  "fields": {
+    "value": {
+      "label": "Limitação",
+      "valueLabels": {
+        "0": "Nenhuma",
+        "1": "Mínima",
+        "2": "Mínima",
+        "3": "Ligeira",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Muito grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

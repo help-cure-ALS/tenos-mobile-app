@@ -1,0 +1,11 @@
+{
+    "name": "Actieve energie",
+    "shortName": "Actieve energie",
+    "descriptionTitle": "Over actieve energie",
+    "description": "Actieve energie is het aantal calorieën dat per dag door beweging en activiteit wordt verbrand (exclusief het ruststofwisselingsverbruik). Bij ALS kan een dalende trend wijzen op minder lichaamsbeweging naarmate de mobiliteit verandert. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid of Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Actieve energie"
+        }
+    }
+}

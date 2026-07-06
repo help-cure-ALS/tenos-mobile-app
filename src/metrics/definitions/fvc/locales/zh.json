@@ -1,0 +1,11 @@
+{
+  "name": "用力肺活量",
+  "shortName": "FVC",
+  "descriptionTitle": "关于FVC",
+  "description": "用力肺活量（FVC）测量深吸气后能够呼出的最大气量。在ALS中，FVC是呼吸功能和疾病进展最重要的指标之一。降至预测值50%以下可能提示需要呼吸支持。",
+  "fields": {
+    "value": {
+      "label": "FVC"
+    }
+  }
+}

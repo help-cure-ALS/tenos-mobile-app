@@ -1,0 +1,7 @@
+{
+  "name": "Forme de SLA & génétique",
+  "shortName": "Forme SLA",
+  "descriptionTitle": "À propos de la forme de SLA & génétique",
+  "description": "Cette métrique indique si la SLA est classée comme sporadique, familiale ou incertaine, et si un résultat génétique ou une mutation connue est documenté. Les informations génétiques sont particulièrement sensibles et sont partagées séparément.",
+  "fields": {}
+}

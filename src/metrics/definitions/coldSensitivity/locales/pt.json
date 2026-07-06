@@ -1,0 +1,17 @@
+{
+  "name": "Sensibilidade ao frio",
+  "shortName": "Frio",
+  "descriptionTitle": "Sobre a sensibilidade ao frio",
+  "description": "A sensibilidade ao frio é um sintoma comum na ELA. Pode ser causada por redução de massa muscular, disfunção autonómica ou menor atividade física. O acompanhamento ajuda a identificar padrões e ajustar medidas como roupa mais quente ou temperatura ambiente. (0 = Nenhuma, 1 = Leve, 2 = Moderada, 3 = Grave)",
+  "fields": {
+    "value": {
+      "label": "Sensibilidade ao frio",
+      "valueLabels": {
+        "0": "Nenhuma",
+        "1": "Leve",
+        "2": "Moderada",
+        "3": "Grave"
+      }
+    }
+  }
+}

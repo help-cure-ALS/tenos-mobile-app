@@ -1,0 +1,11 @@
+{
+  "name": "Distância caminhada",
+  "shortName": "6MWT",
+  "descriptionTitle": "Sobre o teste de caminhada de 6 minutos",
+  "description": "O teste de caminhada de 6 minutos (6MWT) mede a distância que pode ser percorrida em 6 minutos em terreno plano. É um teste padronizado para avaliar a capacidade funcional de exercício. Na ELA, pode ajudar a documentar a progressão da capacidade de marcha. Valores normais em adultos situam-se entre 400 e 700 metros.",
+  "fields": {
+    "value": {
+      "label": "Distância caminhada"
+    }
+  }
+}

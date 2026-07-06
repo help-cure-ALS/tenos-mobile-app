@@ -1,0 +1,11 @@
+{
+  "name": "Quedas",
+  "shortName": "Quedas",
+  "descriptionTitle": "Sobre o registo de quedas",
+  "description": "Registar quedas ajuda a avaliar o risco de queda e a tomar medidas preventivas. Na ELA, o aumento da fraqueza muscular eleva significativamente o risco de quedas. Documente cada queda para discutir ajudas técnicas ou adaptações do ambiente com a sua equipa de cuidados.",
+  "fields": {
+    "value": {
+      "label": "Número de quedas"
+    }
+  }
+}

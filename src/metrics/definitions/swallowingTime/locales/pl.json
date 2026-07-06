@@ -1,0 +1,11 @@
+{
+  "name": "Czas połykania",
+  "shortName": "Połykanie",
+  "descriptionTitle": "O czasie połykania",
+  "description": "Czas połykania mierzy, ile trwa połknięcie określonej ilości (np. 150 ml wody). W ALS dysfagia (trudności w połykaniu) może utrudniać przyjmowanie pokarmu i zwiększać ryzyko aspiracji. Wydłużony czas połykania może wskazywać na postępujące objawy opuszkowe. Prawidłowe wartości to poniżej 20 sekund dla 150 ml wody.",
+  "fields": {
+    "value": {
+      "label": "Czas połykania"
+    }
+  }
+}

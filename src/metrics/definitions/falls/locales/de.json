@@ -1,0 +1,9 @@
+{
+    "name": "Stürze",
+    "shortName": "Stürze",
+    "descriptionTitle": "Über Sturzerfassung",
+    "description": "Die Erfassung von Stürzen hilft, das Sturzrisiko einzuschätzen und präventive Maßnahmen zu ergreifen. Bei ALS erhöht die zunehmende Muskelschwäche das Sturzrisiko erheblich. Dokumentiere jeden Sturz, um mit deinem Behandlungsteam geeignete Hilfsmittel oder Anpassungen der Umgebung zu besprechen.",
+    "fields": {
+        "value": { "label": "Anzahl Stürze" }
+    }
+}

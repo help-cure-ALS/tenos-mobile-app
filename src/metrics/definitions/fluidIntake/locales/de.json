@@ -1,0 +1,9 @@
+{
+    "name": "Flüssigkeitsaufnahme",
+    "shortName": "Trinken",
+    "descriptionTitle": "Über Flüssigkeitsaufnahme",
+    "description": "Die tägliche Flüssigkeitsaufnahme ist wichtig für die allgemeine Gesundheit. Bei ALS können Schluckbeschwerden dazu führen, dass weniger getrunken wird, was zu Dehydrierung führen kann. Empfohlen werden etwa 1,5-2 Liter pro Tag. Die Dokumentation hilft, eine ausreichende Hydratation sicherzustellen.",
+    "fields": {
+        "value": { "label": "Flüssigkeitsmenge" }
+    }
+}

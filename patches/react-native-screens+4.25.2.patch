@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-screens/ios/tabs/RNSTabBarAppearanceCoordinator.mm b/node_modules/react-native-screens/ios/tabs/RNSTabBarAppearanceCoordinator.mm
+index 1234567..abcdefg 100644
+--- a/node_modules/react-native-screens/ios/tabs/RNSTabBarAppearanceCoordinator.mm
++++ b/node_modules/react-native-screens/ios/tabs/RNSTabBarAppearanceCoordinator.mm
+@@ -145,6 +145,7 @@
+   if ([parent isKindOfClass:[UITabBarController class]]) {
+     UITabBarController *tabBarVC = (UITabBarController *)parent;
+     [tabBarVC.tabBar setNeedsLayout];
++    [tabBarVC.tabBar layoutIfNeeded];
+   }
+ }
+

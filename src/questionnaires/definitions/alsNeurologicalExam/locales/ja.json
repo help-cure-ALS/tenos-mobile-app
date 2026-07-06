@@ -1,0 +1,359 @@
+{
+    "name": "神経学的診察",
+    "displayName": "神経学的診察",
+    "shortName": "診察",
+    "description": "ALS経過中の運動性UMNおよびLMN所見の臨床記録。",
+    "domains": {
+        "structured": "神経学的診察"
+    },
+    "questions": {
+        "payload": {
+            "text": "神経学的診察",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "身体部位",
+            "info": "この診察で最も重要な神経学的徴候を記録する身体部位。",
+            "options": {
+                "head": {
+                    "label": "頭部/球麻痺"
+                },
+                "right_arm": {
+                    "label": "右腕"
+                },
+                "left_arm": {
+                    "label": "左腕"
+                },
+                "trunk": {
+                    "label": "体幹/軸性"
+                },
+                "right_leg": {
+                    "label": "右脚"
+                },
+                "left_leg": {
+                    "label": "左脚"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "重症度",
+            "options": {
+                "absent": {
+                    "label": "なし"
+                },
+                "mild": {
+                    "label": "軽度"
+                },
+                "moderate": {
+                    "label": "中等度"
+                },
+                "severe": {
+                    "label": "重度"
+                },
+                "not_tested": {
+                    "label": "未検査"
+                }
+            }
+        },
+        "burden": {
+            "label": "全体的負荷",
+            "options": {
+                "none": {
+                    "label": "なし"
+                },
+                "mild": {
+                    "label": "軽度"
+                },
+                "moderate": {
+                    "label": "中等度"
+                },
+                "severe": {
+                    "label": "重度"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "推定M表現型",
+            "info": "ALSサブタイプのM軸における運動ニューロンパターンの臨床分類。",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN均衡"
+                },
+                "M1d": {
+                    "label": "UMN優位"
+                },
+                "M1p": {
+                    "label": "純粋UMN"
+                },
+                "M2d": {
+                    "label": "LMN優位"
+                },
+                "M2p": {
+                    "label": "純粋LMN"
+                },
+                "M3": {
+                    "label": "解離型"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: 筋力低下",
+            "info": "下位運動ニューロン関与の徴候として臨床的筋力低下を記録します。"
+        },
+        "lmnAtrophy": {
+            "label": "LMN: 筋萎縮",
+            "info": "診察部位の目に見える、または触知できる筋萎縮を記録します。"
+        },
+        "lmnFasciculations": {
+            "label": "LMN: 線維束性収縮",
+            "info": "下位運動ニューロンの刺激または損傷の徴候として自発的な筋のぴくつきを記録します。"
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: 腱反射亢進",
+            "info": "上位運動ニューロン関与の徴候として深部腱反射亢進を記録します。"
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: 病的反射",
+            "info": "Babinski徴候やHoffmann徴候などの病的反射を記録します。"
+        },
+        "umnSpasticity": {
+            "label": "UMN: 痙縮",
+            "info": "上位運動ニューロン関与の徴候として筋緊張亢進または痙縮を記録します。"
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: 動作緩慢",
+            "info": "筋力低下だけでは説明できない動作の遅さや協調不良を記録します。"
+        },
+        "overallUmnBurden": {
+            "label": "UMN全体負荷",
+            "info": "上位運動ニューロン徴候の負荷に関する全体的な臨床推定。"
+        },
+        "overallLmnBurden": {
+            "label": "LMN全体負荷",
+            "info": "下位運動ニューロン徴候の負荷に関する全体的な臨床推定。"
+        },
+        "note": {
+            "label": "内部メモ",
+            "info": "診察に関する任意の追加メモ。このメモは研究提供には含まれません。",
+            "placeholder": "任意"
+        },
+        "clinicalRegion": {
+            "label": "ALS領域",
+            "info": "領域別の障害を評価するための標準的なALS臨床領域です。",
+            "options": {
+                "bulbar": {
+                    "label": "球麻痺領域"
+                },
+                "cervical": {
+                    "label": "頸部/上肢"
+                },
+                "thoracic": {
+                    "label": "胸部/体幹"
+                },
+                "lumbosacral": {
+                    "label": "腰仙部/下肢"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "左"
+                },
+                "right": {
+                    "label": "右"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "なし"
+                },
+                "present": {
+                    "label": "あり"
+                },
+                "not_tested": {
+                    "label": "未検査"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "未検査"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "肩外転"
+                },
+                "elbow_flexion": {
+                    "label": "肘屈曲"
+                },
+                "elbow_extension": {
+                    "label": "肘伸展"
+                },
+                "wrist_extension": {
+                    "label": "手関節伸展"
+                },
+                "finger_abduction": {
+                    "label": "指外転"
+                },
+                "hip_flexion": {
+                    "label": "股関節屈曲"
+                },
+                "knee_extension": {
+                    "label": "膝伸展"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "足関節背屈"
+                },
+                "toe_extension": {
+                    "label": "足趾伸展"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "上腕二頭筋反射"
+                },
+                "triceps": {
+                    "label": "上腕三頭筋反射"
+                },
+                "brachioradialis": {
+                    "label": "腕橈骨筋反射"
+                },
+                "patellar": {
+                    "label": "膝蓋腱反射"
+                },
+                "achilles": {
+                    "label": "アキレス腱反射"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "未検査"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "錐体路徴候",
+            "options": {
+                "babinski": {
+                    "label": "バビンスキー"
+                },
+                "hoffmann": {
+                    "label": "ホフマン"
+                },
+                "palmomental": {
+                    "label": "手掌オトガイ反射"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN徴候",
+            "options": {
+                "atrophy": {
+                    "label": "筋萎縮"
+                },
+                "fasciculations": {
+                    "label": "線維束性収縮"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "球麻痺徴候",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "舌萎縮"
+                },
+                "tongue_fasciculations": {
+                    "label": "舌線維束性収縮"
+                },
+                "dysarthria": {
+                    "label": "構音障害"
+                },
+                "dysphagia": {
+                    "label": "嚥下障害"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "領域別障害",
+            "info": "4つのALS臨床領域でUMNおよびLMNの関与を記録します。"
+        },
+        "mrcStrength": {
+            "label": "MRC筋力検査",
+            "info": "MRC 0から5の尺度で筋力を記録します。常に左を右より先に記録します。"
+        },
+        "reflexes": {
+            "label": "反射",
+            "info": "腱反射を左右別に、左から右の順で記録します。"
+        },
+        "pathologicalSigns": {
+            "label": "錐体路徴候",
+            "info": "UMN関与を示唆する病的反射徴候を記録します。"
+        },
+        "lmnSideSigns": {
+            "label": "LMN徴候",
+            "info": "筋萎縮と線維束性収縮を左右別に記録します。"
+        },
+        "bulbarSigns": {
+            "label": "球麻痺徴候",
+            "info": "舌萎縮、舌線維束性収縮、構音障害、嚥下障害などの典型的な球麻痺徴候を記録します。"
+        }
+    }
+}

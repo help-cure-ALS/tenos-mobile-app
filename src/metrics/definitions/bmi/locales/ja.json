@@ -1,0 +1,11 @@
+{
+  "name": "体格指数",
+  "shortName": "BMI",
+  "descriptionTitle": "体格指数について",
+  "description": "体格指数（BMI）は、体重と身長の関係を示す指標です。体重（kg）を身長（m）の2乗で割って計算します。ALSでは、正常範囲の高めのBMIがより良い転帰と関連することがあります。",
+  "fields": {
+    "value": {
+      "label": "BMI"
+    }
+  }
+}

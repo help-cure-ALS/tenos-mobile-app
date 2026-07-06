@@ -1,0 +1,11 @@
+{
+    "name": "BOS’ta NFL",
+    "shortName": "NFL (CSF)",
+    "descriptionTitle": "Beyin omurilik sıvısında NFL hakkında",
+    "description": "Beyin omurilik sıvısındaki (BOS) nörofilament hafif zinciri (NFL), sinir hücresi hasarı için hassas bir biyobelirteçtir. BOS ölçümü çoğu zaman kan ölçümünden daha erken ve daha doğru değerler sağlar. ALS’de BOS’ta yüksek NFL düzeyleri daha hızlı hastalık ilerlemesiyle ilişkilidir. Örnek lomber ponksiyonla alınır.",
+    "fields": {
+        "value": {
+            "label": "NFL"
+        }
+    }
+}

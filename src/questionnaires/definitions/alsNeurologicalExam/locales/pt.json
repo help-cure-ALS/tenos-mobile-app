@@ -1,0 +1,359 @@
+{
+    "name": "Exame neurológico",
+    "displayName": "Exame neurológico",
+    "shortName": "Exame",
+    "description": "Documentação clínica de achados motores UMN e LMN ao longo da ELA.",
+    "domains": {
+        "structured": "Exame neurológico"
+    },
+    "questions": {
+        "payload": {
+            "text": "Exame neurológico",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Região corporal",
+            "info": "Região corporal onde são documentados os sinais neurológicos mais relevantes deste exame.",
+            "options": {
+                "head": {
+                    "label": "Cabeça/bulbar"
+                },
+                "right_arm": {
+                    "label": "Braço direito"
+                },
+                "left_arm": {
+                    "label": "Braço esquerdo"
+                },
+                "trunk": {
+                    "label": "Tronco/axial"
+                },
+                "right_leg": {
+                    "label": "Perna direita"
+                },
+                "left_leg": {
+                    "label": "Perna esquerda"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Gravidade",
+            "options": {
+                "absent": {
+                    "label": "ausente"
+                },
+                "mild": {
+                    "label": "leve"
+                },
+                "moderate": {
+                    "label": "moderado"
+                },
+                "severe": {
+                    "label": "grave"
+                },
+                "not_tested": {
+                    "label": "não testado"
+                }
+            }
+        },
+        "burden": {
+            "label": "Carga global",
+            "options": {
+                "none": {
+                    "label": "nenhum"
+                },
+                "mild": {
+                    "label": "leve"
+                },
+                "moderate": {
+                    "label": "moderado"
+                },
+                "severe": {
+                    "label": "grave"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Fenótipo M sugerido",
+            "info": "Classificação clínica do padrão dos neurónios motores para o eixo M do subtipo de ELA.",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN equilibrados"
+                },
+                "M1d": {
+                    "label": "UMN dominante"
+                },
+                "M1p": {
+                    "label": "UMN puro"
+                },
+                "M2d": {
+                    "label": "LMN dominante"
+                },
+                "M2p": {
+                    "label": "LMN puro"
+                },
+                "M3": {
+                    "label": "dissociado"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: fraqueza",
+            "info": "Documenta fraqueza muscular clínica como sinal de envolvimento do neurónio motor inferior."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: atrofia",
+            "info": "Documenta perda muscular visível ou palpável na região examinada."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fasciculações",
+            "info": "Documenta contrações musculares espontâneas como sinal de irritação ou dano do neurónio motor inferior."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hiperreflexia",
+            "info": "Documenta reflexos tendinosos profundos aumentados como sinal de envolvimento do neurónio motor superior."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: reflexos patológicos",
+            "info": "Documenta sinais reflexos patológicos como Babinski ou Hoffmann."
+        },
+        "umnSpasticity": {
+            "label": "UMN: espasticidade",
+            "info": "Documenta aumento do tónus muscular ou espasticidade como sinal de envolvimento do neurónio motor superior."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: movimento lento",
+            "info": "Documenta movimento lento ou mal coordenado não explicado apenas por fraqueza."
+        },
+        "overallUmnBurden": {
+            "label": "Carga UMN global",
+            "info": "Estimativa clínica global da carga de sinais do neurónio motor superior."
+        },
+        "overallLmnBurden": {
+            "label": "Carga LMN global",
+            "info": "Estimativa clínica global da carga de sinais do neurónio motor inferior."
+        },
+        "note": {
+            "label": "Nota interna",
+            "info": "Nota adicional opcional para o exame. Esta nota não é incluída em doações para investigação.",
+            "placeholder": "Opcional"
+        },
+        "clinicalRegion": {
+            "label": "Região de ELA",
+            "info": "Regiões clínicas padrão da ELA para avaliar o envolvimento regional.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulbar"
+                },
+                "cervical": {
+                    "label": "Cervical/braços"
+                },
+                "thoracic": {
+                    "label": "Torácica/axial"
+                },
+                "lumbosacral": {
+                    "label": "Lombossacra/pernas"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Esquerda"
+                },
+                "right": {
+                    "label": "Direita"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "ausente"
+                },
+                "present": {
+                    "label": "presente"
+                },
+                "not_tested": {
+                    "label": "não testado"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "não testado"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Abdução do ombro"
+                },
+                "elbow_flexion": {
+                    "label": "Flexão do cotovelo"
+                },
+                "elbow_extension": {
+                    "label": "Extensão do cotovelo"
+                },
+                "wrist_extension": {
+                    "label": "Extensão do punho"
+                },
+                "finger_abduction": {
+                    "label": "Abdução dos dedos"
+                },
+                "hip_flexion": {
+                    "label": "Flexão do quadril"
+                },
+                "knee_extension": {
+                    "label": "Extensão do joelho"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Dorsiflexão do pé"
+                },
+                "toe_extension": {
+                    "label": "Extensão dos dedos do pé"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Reflexo bicipital"
+                },
+                "triceps": {
+                    "label": "Reflexo tricipital"
+                },
+                "brachioradialis": {
+                    "label": "Reflexo braquiorradial"
+                },
+                "patellar": {
+                    "label": "Reflexo patelar"
+                },
+                "achilles": {
+                    "label": "Reflexo aquileu"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "não testado"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Sinais piramidais",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Reflexo palmomentoniano"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "Sinais LMN",
+            "options": {
+                "atrophy": {
+                    "label": "Atrofia"
+                },
+                "fasciculations": {
+                    "label": "Fasciculações"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Sinais bulbares",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Atrofia da língua"
+                },
+                "tongue_fasciculations": {
+                    "label": "Fasciculações da língua"
+                },
+                "dysarthria": {
+                    "label": "Disartria"
+                },
+                "dysphagia": {
+                    "label": "Disfagia"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Envolvimento regional",
+            "info": "Registra o envolvimento UMN e LMN nas quatro regiões clínicas da ELA."
+        },
+        "mrcStrength": {
+            "label": "Exame de força MRC",
+            "info": "Documenta a força na escala MRC de 0 a 5. A esquerda é sempre registrada antes da direita."
+        },
+        "reflexes": {
+            "label": "Reflexos",
+            "info": "Documenta reflexos tendinosos profundos por lado, esquerda antes de direita."
+        },
+        "pathologicalSigns": {
+            "label": "Sinais piramidais",
+            "info": "Documenta sinais reflexos patológicos sugestivos de envolvimento UMN."
+        },
+        "lmnSideSigns": {
+            "label": "Sinais LMN",
+            "info": "Documenta atrofia e fasciculações por lado."
+        },
+        "bulbarSigns": {
+            "label": "Sinais bulbares",
+            "info": "Documenta sinais bulbares típicos como atrofia da língua, fasciculações da língua, disartria e disfagia."
+        }
+    }
+}

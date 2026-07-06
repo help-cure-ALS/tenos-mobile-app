@@ -1,0 +1,11 @@
+{
+    "name": "Asimmetria del cammino",
+    "shortName": "Asimmetria",
+    "descriptionTitle": "Informazioni sull'asimmetria del cammino",
+    "description": "L'asimmetria del cammino è la percentuale di tempo in cui un piede si muove a un'andatura diversa dall'altro. Un valore più alto indica un'andatura più irregolare. Nella SLA, può aiutare a monitorare una debolezza asimmetrica delle gambe. Questo valore viene importato automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Asimmetria del cammino"
+        }
+    }
+}

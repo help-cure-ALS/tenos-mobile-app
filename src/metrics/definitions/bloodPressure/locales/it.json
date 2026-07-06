@@ -1,0 +1,14 @@
+{
+  "name": "Pressione arteriosa",
+  "shortName": "PA",
+  "descriptionTitle": "Informazioni sulla pressione arteriosa",
+  "description": "La pressione arteriosa misura la pressione del sangue nelle arterie. È indicata con due valori: sistolica (valore superiore) e diastolica (valore inferiore). Il monitoraggio regolare aiuta a rilevare precocemente malattie cardiovascolari.",
+  "fields": {
+    "systolic": {
+      "label": "Sistolica"
+    },
+    "diastolic": {
+      "label": "Diastolica"
+    }
+  }
+}

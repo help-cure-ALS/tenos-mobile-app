@@ -1,0 +1,11 @@
+{
+    "name": "Loopasymmetrie",
+    "shortName": "Asymmetrie",
+    "descriptionTitle": "Over de loopasymmetrie",
+    "description": "Loopasymmetrie is het percentage van de tijd dat de ene voet in een ander tempo beweegt dan de andere. Een hogere waarde betekent een ongelijkmatiger gang. Bij ALS kan dit helpen om asymmetrische beenzwakte te volgen. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid.",
+    "fields": {
+        "value": {
+            "label": "Loopasymmetrie"
+        }
+    }
+}

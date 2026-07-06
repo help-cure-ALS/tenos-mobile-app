@@ -1,0 +1,11 @@
+{
+    "name": "Assimetria da marcha",
+    "shortName": "Assimetria",
+    "descriptionTitle": "Sobre a assimetria da marcha",
+    "description": "A assimetria da marcha é a percentagem de tempo em que um pé se move a um ritmo diferente do outro. Um valor mais alto indica uma marcha mais irregular. Na ELA, pode ajudar a acompanhar uma fraqueza assimétrica das pernas. Este valor é importado automaticamente do Apple Saúde.",
+    "fields": {
+        "value": {
+            "label": "Assimetria da marcha"
+        }
+    }
+}

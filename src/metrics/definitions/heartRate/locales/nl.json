@@ -1,0 +1,11 @@
+{
+  "name": "Hartslag",
+  "shortName": "Pols",
+  "descriptionTitle": "Over hartslag",
+  "description": "Hartslag geeft aan hoe vaak het hart per minuut klopt. Een normale rustpols voor volwassenen ligt tussen 60 en 100 slagen per minuut. Bij ALS kan de hartslag worden beïnvloed door stress, ademhalingsproblemen of medicatie. Regelmatige metingen helpen veranderingen vroeg te herkennen.",
+  "fields": {
+    "value": {
+      "label": "Hartslag"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Konsystencja stolca",
+  "shortName": "Stolec",
+  "descriptionTitle": "O skali stolca Bristol",
+  "description": "Skala stolca Bristol to narzędzie kliniczne do oceny konsystencji stolca. W ALS zaparcia są częste z powodu ograniczonej mobilności, osłabienia mięśni brzucha lub leków. Typ 3-4 uznaje się za idealny. Typ 1-2 wskazuje na zaparcie, typ 6-7 na biegunkę. (1 = twardy/grudkowaty, 4 = idealny, 7 = wodnisty)",
+  "fields": {
+    "value": {
+      "label": "Typ stolca",
+      "valueLabels": {
+        "1": "Typ 1 - Oddzielne twarde grudki",
+        "2": "Typ 2 - Kiełbaskowaty, grudkowaty",
+        "3": "Typ 3 - Kiełbaskowaty z pęknięciami",
+        "4": "Typ 4 - Gładki i miękki (idealny)",
+        "5": "Typ 5 - Miękkie kawałki",
+        "6": "Typ 6 - Papkowate, puszyste kawałki",
+        "7": "Typ 7 - Wodnisty, płynny"
+      }
+    }
+  }
+}

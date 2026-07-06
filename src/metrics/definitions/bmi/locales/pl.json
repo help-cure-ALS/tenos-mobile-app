@@ -1,0 +1,11 @@
+{
+  "name": "Wskaźnik masy ciała",
+  "shortName": "BMI",
+  "descriptionTitle": "O wskaźniku masy ciała",
+  "description": "Wskaźnik masy ciała (BMI) opisuje zależność między masą ciała a wzrostem. Oblicza się go jako masę ciała (kg) podzieloną przez wzrost (m) do kwadratu. W ALS BMI w górnym zakresie normy często wiąże się z lepszym rokowaniem.",
+  "fields": {
+    "value": {
+      "label": "BMI"
+    }
+  }
+}

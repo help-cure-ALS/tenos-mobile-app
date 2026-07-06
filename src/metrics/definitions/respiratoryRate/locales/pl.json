@@ -1,0 +1,11 @@
+{
+    "name": "Częstość oddechów",
+    "shortName": "Oddechy",
+    "descriptionTitle": "O częstości oddechów",
+    "description": "Częstość oddechów to liczba oddechów na minutę. W ALS funkcja oddechowa jest kluczowym parametrem; rosnąca spoczynkowa częstość oddechów może być wczesnym objawem osłabienia mięśni oddechowych. Wartość ta jest importowana automatycznie z Apple Zdrowie lub Health Connect (często mierzona podczas snu) i pokazywana jako średnia dzienna.",
+    "fields": {
+        "value": {
+            "label": "Częstość oddechów"
+        }
+    }
+}

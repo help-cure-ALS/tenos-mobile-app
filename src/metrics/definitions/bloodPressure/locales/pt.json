@@ -1,0 +1,14 @@
+{
+  "name": "Pressão arterial",
+  "shortName": "PA",
+  "descriptionTitle": "Sobre a pressão arterial",
+  "description": "A pressão arterial mede a pressão do sangue nas artérias. É indicada por dois valores: sistólica (valor superior) e diastólica (valor inferior). A monitorização regular ajuda a detetar precocemente doenças cardiovasculares.",
+  "fields": {
+    "systolic": {
+      "label": "Sistólica"
+    },
+    "diastolic": {
+      "label": "Diastólica"
+    }
+  }
+}

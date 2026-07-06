@@ -1,0 +1,11 @@
+{
+  "name": "Frequência cardíaca",
+  "shortName": "Pulso",
+  "descriptionTitle": "Sobre a frequência cardíaca",
+  "description": "A frequência cardíaca indica quantas vezes o coração bate por minuto. O pulso normal em repouso nos adultos situa-se entre 60 e 100 batimentos por minuto. Na ELA, pode ser afetada por stress, problemas respiratórios ou medicamentos. Medições regulares ajudam a detetar alterações precocemente.",
+  "fields": {
+    "value": {
+      "label": "Frequência cardíaca"
+    }
+  }
+}

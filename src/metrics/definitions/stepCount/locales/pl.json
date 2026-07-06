@@ -1,0 +1,11 @@
+{
+    "name": "Kroki",
+    "shortName": "Kroki",
+    "descriptionTitle": "O liczbie kroków",
+    "description": "Dzienna liczba kroków to prosta miara codziennej aktywności. W ALS tendencja spadkowa może odzwierciedlać pogarszającą się mobilność. Kroki są importowane automatycznie z Apple Zdrowie lub Health Connect; ręczne wprowadzanie nie jest potrzebne.",
+    "fields": {
+        "value": {
+            "label": "Kroki"
+        }
+    }
+}

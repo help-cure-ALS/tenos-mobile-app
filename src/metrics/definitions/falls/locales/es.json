@@ -1,0 +1,9 @@
+{
+  "name": "Caídas",
+  "shortName": "Caídas",
+  "descriptionTitle": "Sobre el seguimiento de caídas",
+  "description": "El seguimiento de las caídas ayuda a evaluar el riesgo de caída y a tomar medidas preventivas. En la ELA, el aumento de la debilidad muscular incrementa de forma importante el riesgo de caídas. Documenta cada caída para poder comentar con tu equipo asistencial ayudas o adaptaciones del entorno.",
+  "fields": {
+    "value": { "label": "Número de caídas" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Gehstrecke",
+    "shortName": "6MWT",
+    "descriptionTitle": "Über den 6-Minuten-Gehtest",
+    "description": "Der 6-Minuten-Gehtest (6MWT) misst die Distanz, die in 6 Minuten auf ebenem Boden zurückgelegt werden kann. Er ist ein standardisierter Test zur Beurteilung der funktionellen Belastbarkeit. Bei ALS kann er helfen, den Verlauf der Gehfähigkeit zu dokumentieren. Normale Werte liegen bei Erwachsenen zwischen 400 und 700 Metern.",
+    "fields": {
+        "value": { "label": "Gehstrecke" }
+    }
+}

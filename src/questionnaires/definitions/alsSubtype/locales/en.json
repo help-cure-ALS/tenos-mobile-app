@@ -1,0 +1,78 @@
+{
+    "name": "ALS subtype",
+    "displayName": "ALS subtype",
+    "shortName": "Subtype",
+    "description": "Clinical ALS phenotype classification by site of symptom onset, propagation, and motor neuron pattern.",
+    "domains": {
+        "structured": "ALS subtype"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS subtype",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Site of symptom onset",
+            "info": "The O axis describes the body region where the first motor symptoms started. Count weakness or slowed/poorly coordinated voluntary movement, including bulbar, respiratory or axial motor symptoms. Fasciculations, muscle atrophy and reflex signs alone do not count as symptom onset.",
+            "options": {
+                "O1": { "label": "Head/bulbar" },
+                "O2d": { "label": "Distal arm" },
+                "O2p": { "label": "Proximal arm" },
+                "O2x": { "label": "Arm unclear" },
+                "O3r": { "label": "Respiration" },
+                "O3a": { "label": "Axial/trunk" },
+                "O4d": { "label": "Distal leg" },
+                "O4p": { "label": "Proximal leg" },
+                "O4x": { "label": "Leg unclear" }
+            }
+        },
+        "propagationStatus": {
+            "label": "Propagation",
+            "info": "The P axis describes vertical spread of motor symptoms from the onset region to another body region: head, arm, trunk or leg. Horizontal spread from one arm to the other or from one leg to the other does not count. Fasciculations, atrophy or reflex signs alone do not count as propagation.",
+            "options": {
+                "P0": { "label": "no vertical propagation" },
+                "P1": { "label": "propagation occurred" }
+            }
+        },
+        "propagationPattern": {
+            "label": "Propagation",
+            "info": "The P axis describes vertical spread of motor symptoms from the onset region to another body region: head, arm, trunk or leg. Horizontal spread from one arm to the other or from one leg to the other does not count. Fasciculations, atrophy or reflex signs alone do not count as propagation.",
+            "options": {
+                "P0n": { "label": "P0(n)", "description": "No vertical propagation; n = months until assessment" },
+                "P1n": { "label": "P1(n)", "description": "Vertical propagation occurred; n = months until propagation" },
+                "P1x": { "label": "P1(x)", "description": "Vertical propagation occurred, timing unclear" }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Motor neuron phenotype",
+            "info": "The M axis describes the balance of upper motor neuron (UMN) and lower motor neuron (LMN) signs. UMN signs include slowed or poorly coordinated voluntary movement, brisk reflexes, spasticity or pseudobulbar affect. LMN signs include weakness with atrophy, absent reflexes or fasciculations in affected muscles. M0 is balanced, M1 is UMN-predominant, M2 is LMN-predominant, M3 is dissociated.",
+            "options": {
+                "M0": { "label": "Balanced UMN/LMN" },
+                "M1d": { "label": "UMN dominant" },
+                "M1p": { "label": "pure UMN" },
+                "M2d": { "label": "LMN dominant" },
+                "M2p": { "label": "pure LMN" },
+                "M3": { "label": "dissociated" }
+            }
+        },
+        "certainty": {
+            "label": "Status",
+            "info": "Status describes confidence in the clinical classification: preliminary for an initial or not yet fully secured assessment, confirmed when findings are sufficiently clear, uncertain when criteria cannot be separated reliably.",
+            "options": {
+                "preliminary": { "label": "preliminary" },
+                "confirmed": { "label": "confirmed" },
+                "uncertain": { "label": "uncertain" }
+            }
+        },
+        "propagationMonths": {
+            "label": "Months",
+            "info": "For P0(n): months from symptom onset to the assessment where no vertical propagation was found. For P1(n): months from symptom onset to first vertical propagation."
+        },
+        "note": {
+            "label": "Comment",
+            "placeholder": "Optional clinical comment"
+        }
+    }
+}

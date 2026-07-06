@@ -1,0 +1,11 @@
+{
+    "name": "Pasos",
+    "shortName": "Pasos",
+    "descriptionTitle": "Acerca del recuento de pasos",
+    "description": "El recuento diario de pasos es una medida sencilla de la actividad cotidiana. En la ELA, una tendencia descendente puede reflejar una movilidad en declive. Los pasos se importan automáticamente desde Apple Salud o Health Connect; no es necesario introducirlos manualmente.",
+    "fields": {
+        "value": {
+            "label": "Pasos"
+        }
+    }
+}

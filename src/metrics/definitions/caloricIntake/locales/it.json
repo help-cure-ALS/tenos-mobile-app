@@ -1,0 +1,11 @@
+{
+  "name": "Apporto calorico",
+  "shortName": "Calorie",
+  "descriptionTitle": "Informazioni sull’apporto calorico",
+  "description": "L’apporto calorico giornaliero è particolarmente importante nella SLA, poiché il corpo spesso ha un fabbisogno energetico aumentato a causa della malattia. Allo stesso tempo, le difficoltà di deglutizione possono rendere più difficile mangiare. Un adeguato apporto calorico può influenzare positivamente la progressione della malattia. Discuti i valori obiettivo con un medico o un nutrizionista.",
+  "fields": {
+    "value": {
+      "label": "Calorie"
+    }
+  }
+}

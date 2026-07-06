@@ -1,0 +1,82 @@
+{
+  "name": "PDQ-5",
+  "displayName": "Atteinte cognitive",
+  "shortName": "PDQ-5",
+  "exportTitle": "Atteinte cognitive – PDQ-5",
+  "description": "Le PDQ-5 (Perceived Deficits Questionnaire) évalue les troubles cognitifs subjectivement perçus, tels que les difficultés de concentration, les oublis et les problèmes de planification.",
+  "introText": "À quelle fréquence ce qui suit vous est-il arrivé au cours des 4 dernières semaines ?",
+  "intro": {
+    "title": "Auto-évaluation cognitive",
+    "description": "Ce bref questionnaire évalue la manière dont vous percevez vos performances mentales au quotidien. Répondez aux 5 questions en vous basant sur les 4 dernières semaines.",
+    "buttonText": "Commencer le questionnaire",
+    "researchNote": "Merci d'y consacrer du temps. Vos réponses nous aident à mieux comprendre l'évolution de la maladie et à faire progresser la recherche sur la SLA."
+  },
+  "domains": {
+    "cognitive": "Fonctions cognitives"
+  },
+  "questions": {
+    "attention": {
+      "text": "Avez-vous eu du mal à rester concentré(e) sur quelque chose ?",
+      "exportLabel": "Attention",
+      "options": {
+        "0": { "label": "Jamais", "description": "Cela ne m'arrive jamais" },
+        "1": { "label": "Rarement", "description": "Cela arrive de temps en temps" },
+        "2": { "label": "Parfois", "description": "Cela arrive à l'occasion" },
+        "3": { "label": "Souvent", "description": "Cela arrive fréquemment" },
+        "4": { "label": "Presque toujours", "description": "Cela arrive en permanence" }
+      }
+    },
+    "memory_conversation": {
+      "text": "Avez-vous oublié ce que quelqu'un venait de vous dire ?",
+      "exportLabel": "Mémoire conversation",
+      "options": {
+        "0": { "label": "Jamais", "description": "Cela ne m'arrive jamais" },
+        "1": { "label": "Rarement", "description": "Cela arrive de temps en temps" },
+        "2": { "label": "Parfois", "description": "Cela arrive à l'occasion" },
+        "3": { "label": "Souvent", "description": "Cela arrive fréquemment" },
+        "4": { "label": "Presque toujours", "description": "Cela arrive en permanence" }
+      }
+    },
+    "prospective_memory": {
+      "text": "Avez-vous oublié ce que vous alliez faire ?",
+      "exportLabel": "Mémoire prospective",
+      "options": {
+        "0": { "label": "Jamais", "description": "Cela ne m'arrive jamais" },
+        "1": { "label": "Rarement", "description": "Cela arrive de temps en temps" },
+        "2": { "label": "Parfois", "description": "Cela arrive à l'occasion" },
+        "3": { "label": "Souvent", "description": "Cela arrive fréquemment" },
+        "4": { "label": "Presque toujours", "description": "Cela arrive en permanence" }
+      }
+    },
+    "organization": {
+      "text": "Avez-vous eu du mal à organiser vos pensées ?",
+      "exportLabel": "Organisation",
+      "options": {
+        "0": { "label": "Jamais", "description": "Cela ne m'arrive jamais" },
+        "1": { "label": "Rarement", "description": "Cela arrive de temps en temps" },
+        "2": { "label": "Parfois", "description": "Cela arrive à l'occasion" },
+        "3": { "label": "Souvent", "description": "Cela arrive fréquemment" },
+        "4": { "label": "Presque toujours", "description": "Cela arrive en permanence" }
+      }
+    },
+    "concentration": {
+      "text": "Avez-vous eu des difficultés à vous concentrer ?",
+      "exportLabel": "Concentration",
+      "options": {
+        "0": { "label": "Jamais", "description": "Cela ne m'arrive jamais" },
+        "1": { "label": "Rarement", "description": "Cela arrive de temps en temps" },
+        "2": { "label": "Parfois", "description": "Cela arrive à l'occasion" },
+        "3": { "label": "Souvent", "description": "Cela arrive fréquemment" },
+        "4": { "label": "Presque toujours", "description": "Cela arrive en permanence" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Peu de changements perceptibles", "description": "Vous remarquez à peine des changements cognitifs." },
+      { "label": "Légers changements", "description": "Vous remarquez occasionnellement de légers changements cognitifs." },
+      { "label": "Changements notables", "description": "Vous remarquez régulièrement des changements cognitifs." },
+      { "label": "Changements marqués", "description": "Vous remarquez souvent des changements cognitifs." }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "title": "Juridische kennisgeving",
+    "translationNotice": "Dit is een vertaling van het Duitse impressum. Bij afwijkingen is de Duitse versie doorslaggevend.",
+    "sections": {
+        "provider": {
+            "title": "Informatie volgens § 5 TMG",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Neurenberg\nDuitsland"
+        },
+        "representation": {
+            "title": "Vertegenwoordigd door",
+            "content": "Marie Assimidis, bestuurslid"
+        },
+        "registration": {
+            "title": "Registerinschrijving",
+            "content": "Ingeschreven in het verenigingsregister",
+            "court": "Registerrechtbank: Amtsgericht Nürnberg",
+            "number": "Registratienummer: VR 203250"
+        },
+        "contact": {
+            "title": "Contact",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Verantwoordelijk voor de inhoud volgens § 18 lid 2 MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Neurenberg"
+        },
+        "liability": {
+            "title": "Disclaimer",
+            "content": {
+                "title": "Aansprakelijkheid voor inhoud",
+                "text": "De inhoud van deze app is met de grootst mogelijke zorg samengesteld. Wij kunnen echter geen garantie geven voor de juistheid, volledigheid of actualiteit van de inhoud.",
+                "tmg": "Als non-profitvereniging zijn wij volgens § 7 lid 1 TMG verantwoordelijk voor onze eigen inhoud in deze app onder de algemene wetgeving. Volgens §§ 8-10 TMG zijn wij echter niet verplicht om doorgegeven of opgeslagen informatie van derden te controleren of omstandigheden te onderzoeken die op onrechtmatige activiteit wijzen."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Medische disclaimer",
+            "intro": "Belangrijke opmerking: deze app is uitsluitend bedoeld voor persoonlijke gezondheidsdocumentatie en zelfobservatie. De aangeboden inhoud, vragenlijsten en functies vervangen op geen enkele wijze:",
+            "items": [
+                "Professioneel medisch advies",
+                "Een medische diagnose",
+                "Medische behandeling",
+                "Aanbevelingen van gekwalificeerd medisch personeel"
+            ],
+            "advice": "Neem bij gezondheidsklachten of vragen over je gezondheid altijd contact op met een arts of ander gekwalificeerd medisch professional. Negeer nooit professioneel medisch advies op basis van informatie uit deze app.",
+            "emergency": "Bel in noodgevallen onmiddellijk het alarmnummer 112."
+        },
+        "availability": {
+            "title": "Geen garantie op beschikbaarheid",
+            "content": "Wij streven ernaar de app en de optionele cloudsynchronisatie continu beschikbaar te houden. Tijdelijke storingen kunnen echter optreden, bijvoorbeeld door onderhoud of technische problemen. Wij kunnen geen ononderbroken beschikbaarheid garanderen."
+        },
+        "links": {
+            "title": "Aansprakelijkheid voor links",
+            "content": "Deze app kan links naar externe websites bevatten. Wij hebben geen invloed op de inhoud van deze externe pagina's. De betreffende aanbieder of exploitant is altijd verantwoordelijk voor de inhoud van de gelinkte pagina's."
+        },
+        "copyright": {
+            "title": "Auteursrecht",
+            "content": "De door help cure ALS e.V. in deze app gemaakte inhoud en werken zijn onderworpen aan het Duitse auteursrecht. Reproductie, bewerking, verspreiding en elk gebruik buiten de grenzen van het auteursrecht vereisen schriftelijke toestemming van de vereniging."
+        },
+        "openSource": {
+            "title": "Open-sourcecomponenten",
+            "content": "Deze app gebruikt open-sourcesoftware. Een volledige lijst van de gebruikte bibliotheken en hun licenties vind je in de app-instellingen onder \"Licenties\"."
+        },
+        "about": {
+            "title": "Over de vereniging",
+            "content": "help cure ALS e.V. is een non-profitvereniging die zich inzet voor onderzoek naar en bestrijding van amyotrofische laterale sclerose (ALS). Wij ondersteunen onderzoeksprojecten, bevorderen uitwisseling tussen betrokkenen en wetenschap en ontwikkelen digitale hulpmiddelen om de levenskwaliteit van ALS-patiënten te verbeteren.",
+            "moreInfo": "Meer informatie over ons werk vind je op onze website:"
+        }
+    },
+    "lastUpdated": "Februari 2026"
+}

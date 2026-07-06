@@ -1,0 +1,310 @@
+{
+    "name": "MOS Ağrı Etkileri Ölçeği",
+    "displayName": "Ağrı",
+    "shortName": "PES",
+    "exportTitle": "Ağrı – PES",
+    "description": "MOS Ağrı Etkileri Ölçeği, ağrının günlük yaşamının farklı alanlarını ne kadar etkilediğini ölçer. Uyku, hareketlilik, ruh hali ve aktiviteler hakkında 6 kısa soruyu yanıtla.",
+    "introText": "Ağrın seni ne kadar etkiliyor?",
+    "intro": {
+        "title": "Ağrı etkileri",
+        "description": "Bu anket ağrının günlük yaşamını nasıl etkilediğini ölçer. Son 7 günde ağrının yaşamın farklı alanlarını ne kadar etkilediğini 0-10 arasında değerlendir.",
+        "buttonText": "Başla",
+        "researchNote": "Katkın için teşekkürler. Bu, ağrının etkisini daha iyi anlamamıza ve araştırmayı ilerletmemize yardımcı olur."
+    },
+    "domains": {
+        "daily_activities": "Günlük aktiviteler",
+        "other_areas": "Diğer alanlar"
+    },
+    "questions": {
+        "sleep": {
+            "text": "Ağrı uykunu ne kadar etkiledi?",
+            "exportLabel": "Uyku",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        },
+        "mobility": {
+            "text": "Ağrı hareketliliğini ne kadar etkiledi?",
+            "exportLabel": "Hareketlilik",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        },
+        "mood": {
+            "text": "Ağrı ruh halini ne kadar etkiledi?",
+            "exportLabel": "Ruh hali",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        },
+        "work": {
+            "text": "Ağrı işini (ev işi dahil) ne kadar etkiledi?",
+            "exportLabel": "İş",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        },
+        "recreation": {
+            "text": "Ağrı boş zaman aktivitelerini ne kadar etkiledi?",
+            "exportLabel": "Eğlence",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        },
+        "enjoyment": {
+            "text": "Ağrı yaşamdan aldığın keyfi ne kadar etkiledi?",
+            "exportLabel": "Yaşam keyfi",
+            "options": {
+                "0": {
+                    "label": "Etkileme yok",
+                    "description": "Hiç"
+                },
+                "1": {
+                    "label": "Minimal"
+                },
+                "2": {
+                    "label": "Minimal",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Hafif"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta"
+                },
+                "6": {
+                    "label": "Orta",
+                    "description": "Belirgin şekilde kısıtlı"
+                },
+                "7": {
+                    "label": "Şiddetli"
+                },
+                "8": {
+                    "label": "Şiddetli",
+                    "description": "Çok kısıtlı"
+                },
+                "9": {
+                    "label": "Çok şiddetli"
+                },
+                "10": {
+                    "label": "Aşırı",
+                    "description": "Tamamen etkiledi"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Az etki",
+                "description": "Ağrı günlük yaşamını az etkiliyor."
+            },
+            {
+                "label": "Hafif etki",
+                "description": "Ağrı günlük yaşamını hafif etkiliyor."
+            },
+            {
+                "label": "Fark edilir etki",
+                "description": "Ağrı yaşamın birkaç alanını belirgin şekilde etkiliyor."
+            },
+            {
+                "label": "Kayda değer etki",
+                "description": "Ağrı günlük yaşamını kayda değer şekilde etkiliyor."
+            }
+        ]
+    }
+}

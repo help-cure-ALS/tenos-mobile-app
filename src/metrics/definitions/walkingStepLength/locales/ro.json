@@ -1,0 +1,11 @@
+{
+    "name": "Lungimea pasului",
+    "shortName": "Lung. pas",
+    "descriptionTitle": "Despre lungimea pasului",
+    "description": "Lungimea pasului este distanța medie dintre pași consecutivi, în metri. În SLA, scurtarea lungimii pasului poate reflecta modificări ale mersului. Această valoare este importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Lungimea pasului"
+        }
+    }
+}

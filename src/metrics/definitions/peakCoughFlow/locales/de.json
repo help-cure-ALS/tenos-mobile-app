@@ -1,0 +1,9 @@
+{
+    "name": "Hustenspitzenfluss",
+    "shortName": "PCF",
+    "descriptionTitle": "Über Hustenspitzenfluss",
+    "description": "Der Hustenspitzenfluss (Peak Cough Flow, PCF) misst die maximale Luftgeschwindigkeit beim Husten. Er zeigt, wie effektiv du Sekret aus den Atemwegen entfernen kannst. Werte unter 270 L/min erhöhen das Risiko für Atemwegsinfektionen. Unter 160 L/min ist der Husten oft nicht mehr effektiv.",
+    "fields": {
+        "value": { "label": "Hustenspitzenfluss" }
+    }
+}

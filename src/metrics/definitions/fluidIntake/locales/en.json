@@ -1,0 +1,9 @@
+{
+    "name": "Fluid Intake",
+    "shortName": "Fluids",
+    "descriptionTitle": "About Fluid Intake",
+    "description": "Daily fluid intake is important for overall health. In ALS, swallowing difficulties can lead to reduced drinking, which can cause dehydration. About 1.5-2 liters per day is recommended. Documentation helps ensure adequate hydration.",
+    "fields": {
+        "value": { "label": "Fluid amount" }
+    }
+}

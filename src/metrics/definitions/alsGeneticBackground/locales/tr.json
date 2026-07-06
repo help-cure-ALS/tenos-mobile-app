@@ -1,0 +1,7 @@
+{
+    "name": "ALS formu ve genetik",
+    "shortName": "ALS formu",
+    "descriptionTitle": "ALS formu ve genetik hakkında",
+    "description": "Bu metrik ALS’nin sporadik, ailesel veya belirsiz olarak sınıflandırılıp sınıflandırılmadığını ve genetik bir bulgu ya da bilinen mutasyonun belgelenip belgelenmediğini kaydeder. Genetik bilgiler özellikle hassastır ve ayrı olarak paylaşılır.",
+    "fields": {}
+}

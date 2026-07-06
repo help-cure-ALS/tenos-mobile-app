@@ -1,0 +1,18 @@
+{
+    "name": "Nivelul durerii",
+    "shortName": "Durere",
+    "descriptionTitle": "Despre nivelul durerii",
+    "description": "Nivelul durerii este evaluat folosind o scală verbală descriptivă (VRS). În ALS, durerea poate rezulta din tensiune musculară, crampe, imobilitate sau leziuni de presiune. Documentarea regulată ajută la identificarea tiparelor durerii și la ajustarea tratamentului.",
+    "fields": {
+        "value": {
+            "label": "Nivelul durerii",
+            "valueLabels": {
+                "0": "Fără durere",
+                "1": "Durere ușoară",
+                "2": "Durere moderată",
+                "3": "Durere severă",
+                "4": "Durere foarte severă"
+            }
+        }
+    }
+}

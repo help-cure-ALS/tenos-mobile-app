@@ -1,0 +1,9 @@
+{
+    "name": "Erklommene Etagen",
+    "shortName": "Etagen",
+    "descriptionTitle": "Über erklommene Etagen",
+    "description": "Die Anzahl der pro Tag erstiegenen Stockwerke spiegelt Kraft und Ausdauer der Beine im Alltag wider. Bei ALS kann ein abnehmender Trend auf eine fortschreitende Beinschwäche hindeuten. Der Wert wird automatisch aus Apple Health oder Health Connect importiert; eine manuelle Eingabe ist nicht nötig.",
+    "fields": {
+        "value": { "label": "Erklommene Etagen" }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "name": "BDI-FS",
+    "displayName": "Depression",
+    "shortName": "BDI-FS",
+    "exportTitle": "Depression – BDI-FS",
+    "description": "The BDI-FS (Beck Depression Inventory - Fast Screen) is a brief questionnaire for assessing cognitive symptoms of depression. It focuses on thoughts and feelings, not physical symptoms.",
+    "introText": "Please read each statement and select the answer that best describes how you have felt in the last two weeks.",
+    "intro": {
+        "title": "Cognitive Depression Symptoms",
+        "description": "This questionnaire assesses how you think about yourself and your life. Answer the 7 questions honestly – there are no right or wrong answers.",
+        "researchNote": "Thank you for your openness. Your responses help advance research into the effects associated with ALS.",
+        "buttonText": "Start questionnaire"
+    },
+    "domains": {
+        "cognitive": "Cognitive Symptoms"
+    },
+    "questions": {
+        "sadness": {
+            "text": "Sadness",
+            "exportLabel": "Sadness",
+            "options": {
+                "0": { "label": "Not sad", "description": "I am not sad" },
+                "1": { "label": "Often sad", "description": "I am often sad" },
+                "2": { "label": "Constantly sad", "description": "I am constantly sad" },
+                "3": { "label": "Unbearably sad", "description": "I am so sad I can't stand it" }
+            }
+        },
+        "pessimism": {
+            "text": "Pessimism",
+            "exportLabel": "Pessimism",
+            "options": {
+                "0": { "label": "Not discouraged", "description": "I am not discouraged about my future" },
+                "1": { "label": "Somewhat discouraged", "description": "I am more discouraged than I used to be" },
+                "2": { "label": "Expect no improvement", "description": "I don't expect things to get better" },
+                "3": { "label": "Hopeless", "description": "I believe my future is hopeless" }
+            }
+        },
+        "past_failure": {
+            "text": "Past failure",
+            "exportLabel": "Past failure",
+            "options": {
+                "0": { "label": "Not a failure", "description": "I don't feel like a failure" },
+                "1": { "label": "Failed more than I should", "description": "I have failed more than I should have" },
+                "2": { "label": "Many failures", "description": "Looking back, I see many failures" },
+                "3": { "label": "Total failure", "description": "I feel like a total failure" }
+            }
+        },
+        "loss_of_pleasure": {
+            "text": "Loss of pleasure",
+            "exportLabel": "Loss of pleasure",
+            "options": {
+                "0": { "label": "Normal pleasure", "description": "I enjoy things as much as ever" },
+                "1": { "label": "Less pleasure", "description": "I don't enjoy things as much as I used to" },
+                "2": { "label": "Little pleasure", "description": "I get very little pleasure from things" },
+                "3": { "label": "No pleasure", "description": "I can't enjoy anything anymore" }
+            }
+        },
+        "self_dislike": {
+            "text": "Self-dislike",
+            "exportLabel": "Self-dislike",
+            "options": {
+                "0": { "label": "Satisfied with myself", "description": "I am satisfied with myself" },
+                "1": { "label": "Disappointed in myself", "description": "I am disappointed in myself" },
+                "2": { "label": "Don't like myself", "description": "I don't like myself" },
+                "3": { "label": "Hate myself", "description": "I hate myself" }
+            }
+        },
+        "self_criticalness": {
+            "text": "Self-criticalness",
+            "exportLabel": "Self-criticalness",
+            "options": {
+                "0": { "label": "Not self-critical", "description": "I am no more critical of myself than usual" },
+                "1": { "label": "More critical than before", "description": "I am more critical of myself than before" },
+                "2": { "label": "Critical of all mistakes", "description": "I criticize myself for all my mistakes" },
+                "3": { "label": "Blame myself", "description": "I blame myself for everything bad" }
+            }
+        },
+        "suicidal_thoughts": {
+            "text": "Suicidal thoughts",
+            "exportLabel": "Suicidal thoughts",
+            "options": {
+                "0": { "label": "No thoughts", "description": "I have no thoughts of hurting myself" },
+                "1": { "label": "Thoughts present", "description": "I have thoughts of hurting myself, but wouldn't do it" },
+                "2": { "label": "Would like to", "description": "I would like to hurt myself" },
+                "3": { "label": "Would do it", "description": "I would hurt myself if I had the chance" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Minimal symptoms", "description": "Your responses suggest no or only minimal symptoms." },
+            { "label": "Mild symptoms", "description": "Your responses suggest mild symptoms." },
+            { "label": "Moderate symptoms", "description": "Your responses suggest moderate symptoms." },
+            { "label": "Severe symptoms", "description": "Your responses suggest severe symptoms." }
+        ]
+    }
+}

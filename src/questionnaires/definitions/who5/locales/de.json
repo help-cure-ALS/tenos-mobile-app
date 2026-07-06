@@ -1,0 +1,86 @@
+{
+    "name": "WHO-5",
+    "displayName": "Wohlbefinden",
+    "shortName": "WHO-5",
+    "exportTitle": "Wohlbefinden – WHO-5",
+    "description": "Der WHO-5 ist ein kurzer Fragebogen zur Erfassung des allgemeinen Wohlbefindens. Er wurde von der Weltgesundheitsorganisation entwickelt und ist weltweit eines der am häufigsten eingesetzten Instrumente zur Messung des subjektiven Wohlbefindens.",
+    "introText": "In den letzten zwei Wochen...",
+    "intro": {
+        "title": "Wohlbefinden erfassen",
+        "description": "Dieser kurze Fragebogen erfasst dein allgemeines Wohlbefinden der letzten zwei Wochen. Er wurde von der WHO entwickelt und besteht aus nur 5 einfachen Fragen.",
+        "researchNote": "Deine regelmäßige Teilnahme hilft, Veränderungen im Wohlbefinden frühzeitig zu erkennen und die Forschung voranzubringen.",
+        "buttonText": "Fragebogen starten"
+    },
+    "domains": {
+        "wellbeing": "Wohlbefinden"
+    },
+    "questions": {
+        "cheerful": {
+            "text": "Ich war froh und guter Laune.",
+            "exportLabel": "Frohe Laune",
+            "options": {
+                "5": { "label": "Die ganze Zeit", "description": "Durchgehend in den letzten zwei Wochen" },
+                "4": { "label": "Meistens", "description": "Den größten Teil der Zeit" },
+                "3": { "label": "Mehr als die Hälfte der Zeit", "description": "Überwiegend" },
+                "2": { "label": "Weniger als die Hälfte der Zeit", "description": "Gelegentlich" },
+                "1": { "label": "Ab und zu", "description": "Selten" },
+                "0": { "label": "Zu keinem Zeitpunkt", "description": "Nie in den letzten zwei Wochen" }
+            }
+        },
+        "calm": {
+            "text": "Ich habe mich ruhig und entspannt gefühlt.",
+            "exportLabel": "Entspannung",
+            "options": {
+                "5": { "label": "Die ganze Zeit", "description": "Durchgehend in den letzten zwei Wochen" },
+                "4": { "label": "Meistens", "description": "Den größten Teil der Zeit" },
+                "3": { "label": "Mehr als die Hälfte der Zeit", "description": "Überwiegend" },
+                "2": { "label": "Weniger als die Hälfte der Zeit", "description": "Gelegentlich" },
+                "1": { "label": "Ab und zu", "description": "Selten" },
+                "0": { "label": "Zu keinem Zeitpunkt", "description": "Nie in den letzten zwei Wochen" }
+            }
+        },
+        "active": {
+            "text": "Ich habe mich energisch und aktiv gefühlt.",
+            "exportLabel": "Energie",
+            "options": {
+                "5": { "label": "Die ganze Zeit", "description": "Durchgehend in den letzten zwei Wochen" },
+                "4": { "label": "Meistens", "description": "Den größten Teil der Zeit" },
+                "3": { "label": "Mehr als die Hälfte der Zeit", "description": "Überwiegend" },
+                "2": { "label": "Weniger als die Hälfte der Zeit", "description": "Gelegentlich" },
+                "1": { "label": "Ab und zu", "description": "Selten" },
+                "0": { "label": "Zu keinem Zeitpunkt", "description": "Nie in den letzten zwei Wochen" }
+            }
+        },
+        "rested": {
+            "text": "Ich habe mich beim Aufwachen frisch und ausgeruht gefühlt.",
+            "exportLabel": "Ausgeruhtheit",
+            "options": {
+                "5": { "label": "Die ganze Zeit", "description": "Durchgehend in den letzten zwei Wochen" },
+                "4": { "label": "Meistens", "description": "Den größten Teil der Zeit" },
+                "3": { "label": "Mehr als die Hälfte der Zeit", "description": "Überwiegend" },
+                "2": { "label": "Weniger als die Hälfte der Zeit", "description": "Gelegentlich" },
+                "1": { "label": "Ab und zu", "description": "Selten" },
+                "0": { "label": "Zu keinem Zeitpunkt", "description": "Nie in den letzten zwei Wochen" }
+            }
+        },
+        "interesting": {
+            "text": "Mein Alltag war voller Dinge, die mich interessieren.",
+            "exportLabel": "Interesse",
+            "options": {
+                "5": { "label": "Die ganze Zeit", "description": "Durchgehend in den letzten zwei Wochen" },
+                "4": { "label": "Meistens", "description": "Den größten Teil der Zeit" },
+                "3": { "label": "Mehr als die Hälfte der Zeit", "description": "Überwiegend" },
+                "2": { "label": "Weniger als die Hälfte der Zeit", "description": "Gelegentlich" },
+                "1": { "label": "Ab und zu", "description": "Selten" },
+                "0": { "label": "Zu keinem Zeitpunkt", "description": "Nie in den letzten zwei Wochen" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Gutes Wohlbefinden", "description": "Deine Antworten deuten auf ein gutes Wohlbefinden hin." },
+            { "label": "Eingeschränktes Wohlbefinden", "description": "Deine Antworten deuten auf ein eingeschränktes Wohlbefinden hin." },
+            { "label": "Niedriges Wohlbefinden", "description": "Deine Antworten deuten auf ein deutlich reduziertes Wohlbefinden hin." }
+        ]
+    }
+}

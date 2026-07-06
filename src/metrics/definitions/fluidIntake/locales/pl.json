@@ -1,0 +1,11 @@
+{
+  "name": "Spożycie płynów",
+  "shortName": "Płyny",
+  "descriptionTitle": "O spożyciu płynów",
+  "description": "Dzienne spożycie płynów jest ważne dla ogólnego zdrowia. W ALS trudności w połykaniu mogą prowadzić do ograniczonego picia i odwodnienia. Zaleca się około 1,5-2 litrów dziennie. Dokumentowanie pomaga zapewnić odpowiednie nawodnienie.",
+  "fields": {
+    "value": {
+      "label": "Ilość płynów"
+    }
+  }
+}

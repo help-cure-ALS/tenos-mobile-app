@@ -1,0 +1,9 @@
+{
+  "name": "Porcentaje de grasa corporal",
+  "shortName": "Grasa",
+  "descriptionTitle": "Sobre el porcentaje de grasa corporal",
+  "description": "El porcentaje de grasa corporal indica qué parte de tu peso corresponde al tejido graso. En la ELA, el seguimiento de este porcentaje es importante porque una pérdida de masa muscular con peso estable puede indicar un aumento relativo de la grasa corporal. Las mediciones regulares ayudan a seguir la composición corporal.",
+  "fields": {
+    "value": { "label": "Porcentaje de grasa corporal" }
+  }
+}

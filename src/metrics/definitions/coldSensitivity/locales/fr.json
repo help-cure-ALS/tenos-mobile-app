@@ -1,0 +1,17 @@
+{
+  "name": "Sensibilité au froid",
+  "shortName": "Froid",
+  "descriptionTitle": "À propos de la sensibilité au froid",
+  "description": "La sensibilité au froid est un symptôme fréquent dans la SLA. Elle peut être causée par une réduction de la masse musculaire, un dysfonctionnement autonome ou une diminution de l'activité physique. Le suivi aide à identifier les schémas et à adapter des mesures comme des vêtements plus chauds ou la température de la pièce. (0 = Aucune, 1 = Légère, 2 = Modérée, 3 = Sévère)",
+  "fields": {
+    "value": {
+      "label": "Sensibilité au froid",
+      "valueLabels": {
+        "0": "Aucune",
+        "1": "Légère",
+        "2": "Modérée",
+        "3": "Sévère"
+      }
+    }
+  }
+}

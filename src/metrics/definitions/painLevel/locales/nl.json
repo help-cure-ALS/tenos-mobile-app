@@ -1,0 +1,18 @@
+{
+  "name": "Pijnniveau",
+  "shortName": "Pijn",
+  "descriptionTitle": "Over pijnniveau",
+  "description": "Pijnniveau wordt beoordeeld met een verbale descriptorschaal (VRS). Bij ALS kan pijn ontstaan door spierspanning, krampen, immobiliteit of drukplekken. Regelmatige documentatie helpt pijnpatronen te herkennen en behandeling aan te passen.",
+  "fields": {
+    "value": {
+      "label": "Pijnniveau",
+      "valueLabels": {
+        "0": "Geen pijn",
+        "1": "Milde pijn",
+        "2": "Matige pijn",
+        "3": "Ernstige pijn",
+        "4": "Zeer ernstige pijn"
+      }
+    }
+  }
+}

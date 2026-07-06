@@ -1,0 +1,11 @@
+{
+    "name": "Passi",
+    "shortName": "Passi",
+    "descriptionTitle": "Informazioni sul conteggio dei passi",
+    "description": "Il conteggio giornaliero dei passi è una misura semplice dell'attività quotidiana. Nella SLA, una tendenza al ribasso può riflettere una mobilità in calo. I passi vengono importati automaticamente da Apple Salute o Health Connect; non è necessario inserirli manualmente.",
+    "fields": {
+        "value": {
+            "label": "Passi"
+        }
+    }
+}

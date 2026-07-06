@@ -1,0 +1,14 @@
+{
+    "name": "Tensiune arterială",
+    "shortName": "TA",
+    "descriptionTitle": "Despre tensiunea arterială",
+    "description": "Tensiunea arterială măsoară presiunea sângelui în artere. Este exprimată prin două valori: sistolică (valoarea superioară) și diastolică (valoarea inferioară). Monitorizarea regulată ajută la detectarea timpurie a bolilor cardiovasculare.",
+    "fields": {
+        "systolic": {
+            "label": "Sistolică"
+        },
+        "diastolic": {
+            "label": "Diastolică"
+        }
+    }
+}

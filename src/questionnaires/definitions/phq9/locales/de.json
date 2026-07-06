@@ -1,0 +1,118 @@
+{
+    "name": "PHQ-9",
+    "displayName": "Depressionsscreening",
+    "shortName": "PHQ-9",
+    "exportTitle": "Depressionsscreening – PHQ-9",
+    "description": "Der PHQ-9 (Patient Health Questionnaire) ist ein validiertes Screening-Instrument zur Erkennung und Schweregradbestimmung von Depressionen. Er wird weltweit in der klinischen Praxis und Forschung eingesetzt.",
+    "introText": "Wie oft wurdest du in den letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
+    "intro": {
+        "title": "Depressions-Screening",
+        "description": "In diesem Fragebogen geht es um dein Befinden in den letzten zwei Wochen. Beantworte die 9 Fragen ehrlich – es gibt keine richtigen oder falschen Antworten. Deine Antworten helfen, mögliche depressive Symptome zu erkennen.",
+        "buttonText": "Fragebogen starten",
+        "researchNote": "Vielen Dank, dass du dir die Zeit nimmst. Deine Antworten helfen, den Krankheitsverlauf besser zu verstehen und die ALS-Forschung voranzubringen."
+    },
+    "domains": {
+        "depression": "Depressive Symptome"
+    },
+    "questions": {
+        "interest": {
+            "text": "Wenig Interesse oder Freude an deinen Tätigkeiten",
+            "exportLabel": "Interesse",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "mood": {
+            "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
+            "exportLabel": "Niedergeschlagenheit",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "sleep": {
+            "text": "Schwierigkeiten, ein- oder durchzuschlafen, oder vermehrter Schlaf",
+            "exportLabel": "Schlaf",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "energy": {
+            "text": "Müdigkeit oder Gefühl, keine Energie zu haben",
+            "exportLabel": "Energie",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "appetite": {
+            "text": "Verminderter Appetit oder übermäßiges Bedürfnis zu essen",
+            "exportLabel": "Appetit",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "self_esteem": {
+            "text": "Schlechte Meinung von sich selbst; Gefühl, ein Versager zu sein oder die Familie enttäuscht zu haben",
+            "exportLabel": "Selbstwert",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "concentration": {
+            "text": "Schwierigkeiten, sich auf etwas zu konzentrieren, z.B. beim Zeitunglesen oder Fernsehen",
+            "exportLabel": "Konzentration",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "psychomotor": {
+            "text": "Waren deine Bewegungen oder deine Sprache so verlangsamt, dass es auch anderen auffallen würde? Oder warst du im Gegenteil zappelig oder ruhelos und hattest einen stärkeren Bewegungsdrang als sonst?",
+            "exportLabel": "Psychomotorik",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        },
+        "suicidality": {
+            "text": "Gedanken, dass du lieber tot wärst oder dir Leid zufügen möchtest",
+            "exportLabel": "Suizidalität",
+            "options": {
+                "0": { "label": "Überhaupt nicht", "description": "Nie in den letzten 2 Wochen" },
+                "1": { "label": "An einzelnen Tagen", "description": "An weniger als der Hälfte der Tage" },
+                "2": { "label": "An mehr als der Hälfte der Tage", "description": "Häufig" },
+                "3": { "label": "Beinahe jeden Tag", "description": "Fast täglich" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Minimale Symptome", "description": "Deine Antworten liegen im unauffälligen Bereich." },
+            { "label": "Leichte Symptome", "description": "Deine Antworten zeigen eine leichte Belastung." },
+            { "label": "Mittelschwere Symptome", "description": "Deine Antworten zeigen eine spürbare Belastung." },
+            { "label": "Ausgeprägte Symptome", "description": "Deine Antworten deuten auf eine erhöhte Belastung hin." },
+            { "label": "Stark ausgeprägte Symptome", "description": "Deine Antworten deuten auf eine hohe Belastung hin." }
+        ]
+    }
+}

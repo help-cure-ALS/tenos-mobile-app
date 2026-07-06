@@ -1,0 +1,161 @@
+{
+    "name": "ALS formu ve genetik",
+    "displayName": "ALS formu ve genetik",
+    "shortName": "ALS formu",
+    "description": "Sporadik veya ailesel ALS, aile öyküsü ve bilinen genetik bulguların belgelenmesi.",
+    "domains": {
+        "structured": "ALS formu ve genetik"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS formu ve genetik",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "diseaseForm": {
+            "label": "ALS formu",
+            "info": "ALS’nin sporadik, ailesel veya belirsiz olup olmadığının klinik sınıflandırması.",
+            "options": {
+                "sporadic": {
+                    "label": "sporadik"
+                },
+                "familial": {
+                    "label": "ailesel"
+                },
+                "suspected_familial": {
+                    "label": "ailesel şüphesi"
+                },
+                "unclear": {
+                    "label": "belirsiz"
+                }
+            }
+        },
+        "familyHistory": {
+            "label": "Aile öyküsü",
+            "info": "Ailede bilinen ALS, FTD veya başka motor nöron hastalığını belgeler.",
+            "options": {
+                "none_known": {
+                    "label": "bilinen yok"
+                },
+                "als": {
+                    "label": "ailede ALS"
+                },
+                "ftd": {
+                    "label": "ailede FTD"
+                },
+                "als_ftd": {
+                    "label": "ailede ALS/FTD"
+                },
+                "other_mnd": {
+                    "label": "başka motor nöron hastalığı"
+                },
+                "other_neurodegenerative": {
+                    "label": "başka nörodejeneratif öykü"
+                }
+            }
+        },
+        "testingStatus": {
+            "label": "Genetik test",
+            "info": "Genetik testin durumu. Uygulama ham genetik verileri yorumlamaz.",
+            "options": {
+                "not_tested": {
+                    "label": "test yapılmadı"
+                },
+                "planned": {
+                    "label": "planlandı"
+                },
+                "pending": {
+                    "label": "beklemede"
+                },
+                "negative": {
+                    "label": "bilinen mutasyon yok"
+                },
+                "vus": {
+                    "label": "belirsiz öneme sahip varyant"
+                },
+                "pathogenic": {
+                    "label": "patojenik/olası patojenik varyant"
+                }
+            }
+        },
+        "gene": {
+            "label": "Gen",
+            "info": "Klinik dokümantasyon veya laboratuvar raporundan bilinen gen.",
+            "placeholder": "Gen gir",
+            "options": {
+                "C9orf72": {
+                    "label": "C9orf72"
+                },
+                "SOD1": {
+                    "label": "SOD1"
+                },
+                "FUS": {
+                    "label": "FUS"
+                },
+                "TARDBP": {
+                    "label": "TARDBP"
+                },
+                "TBK1": {
+                    "label": "TBK1"
+                },
+                "OPTN": {
+                    "label": "OPTN"
+                },
+                "VCP": {
+                    "label": "VCP"
+                },
+                "other": {
+                    "label": "diğer"
+                }
+            }
+        },
+        "source": {
+            "label": "Kaynak",
+            "info": "Bu kayıt nereden geliyor? Genetik bilgiler izlenebilir şekilde belgelenmelidir.",
+            "options": {
+                "patient_reported": {
+                    "label": "hasta bildirimi"
+                },
+                "clinician_documented": {
+                    "label": "klinisyen tarafından belgelendi"
+                },
+                "lab_report": {
+                    "label": "laboratuvar"
+                }
+            }
+        },
+        "counselingStatus": {
+            "label": "Genetik danışmanlık",
+            "info": "Test veya sonuç görüşmesi için genetik danışmanlığın belgelenip belgelenmediği.",
+            "options": {
+                "completed": {
+                    "label": "tamamlandı"
+                },
+                "recommended": {
+                    "label": "önerildi"
+                },
+                "not_done": {
+                    "label": "yapılmadı"
+                }
+            }
+        },
+        "otherGene": {
+            "label": "Diğer gen",
+            "placeholder": "Gen adı"
+        },
+        "variantText": {
+            "label": "Varyant",
+            "placeholder": "İsteğe bağlı kısa bulgu metni"
+        },
+        "testDate": {
+            "label": "Test tarihi",
+            "info": "Genetik testin ayı ve yılı.",
+            "placeholder": "Seç"
+        },
+        "note": {
+            "label": "Yorum",
+            "placeholder": "İsteğe bağlı yorum"
+        }
+    }
+}

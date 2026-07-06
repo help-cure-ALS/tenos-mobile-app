@@ -1,0 +1,11 @@
+{
+  "name": "Ingestão de líquidos",
+  "shortName": "Líquidos",
+  "descriptionTitle": "Sobre a ingestão de líquidos",
+  "description": "A ingestão diária de líquidos é importante para a saúde geral. Na ELA, dificuldades de deglutição podem levar à redução da ingestão e causar desidratação. Recomenda-se cerca de 1,5-2 litros por dia. A documentação ajuda a garantir hidratação adequada.",
+  "fields": {
+    "value": {
+      "label": "Quantidade de líquido"
+    }
+  }
+}

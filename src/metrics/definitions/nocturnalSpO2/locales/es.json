@@ -1,0 +1,9 @@
+{
+  "name": "Saturación nocturna de oxígeno",
+  "shortName": "SpO2 noche",
+  "descriptionTitle": "Sobre la saturación nocturna de oxígeno",
+  "description": "La saturación nocturna de oxígeno muestra cómo se suministra oxígeno al cuerpo durante el sueño. En la ELA, la hipoventilación nocturna (respiración superficial) puede aparecer antes de que se noten síntomas diurnos. Valores por debajo del 90 % durante el sueño pueden indicar debilidad respiratoria temprana. Lo ideal es realizar la medición con un pulsioxímetro durante toda la noche.",
+  "fields": {
+    "value": { "label": "SpO2 mín. (noche)" }
+  }
+}

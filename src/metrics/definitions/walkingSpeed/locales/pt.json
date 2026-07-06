@@ -1,0 +1,11 @@
+{
+    "name": "Velocidade de marcha",
+    "shortName": "Velocidade",
+    "descriptionTitle": "Sobre a velocidade de marcha",
+    "description": "A velocidade de marcha é o ritmo médio a que você caminha, em metros por segundo. Na ELA, uma tendência de queda pode refletir uma fraqueza nas pernas em progressão. Este valor é importado automaticamente do Apple Saúde ou do Health Connect e exibido como média diária.",
+    "fields": {
+        "value": {
+            "label": "Velocidade de marcha"
+        }
+    }
+}

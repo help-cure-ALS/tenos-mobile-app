@@ -1,0 +1,7 @@
+{
+  "name": "ALS类型与遗传",
+  "shortName": "ALS类型",
+  "descriptionTitle": "关于ALS类型与遗传",
+  "description": "该指标记录ALS被归类为散发性、家族性还是不明确，以及是否记录了遗传发现或已知突变。遗传信息尤其敏感，会单独共享。",
+  "fields": {}
+}

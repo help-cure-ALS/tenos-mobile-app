@@ -1,0 +1,11 @@
+{
+  "name": "Vochtinname",
+  "shortName": "Vocht",
+  "descriptionTitle": "Over vochtinname",
+  "description": "Dagelijkse vochtinname is belangrijk voor de algemene gezondheid. Bij ALS kunnen slikproblemen leiden tot minder drinken, wat uitdroging kan veroorzaken. Ongeveer 1,5-2 liter per dag wordt aanbevolen. Documentatie helpt voldoende hydratatie te waarborgen.",
+  "fields": {
+    "value": {
+      "label": "Hoeveelheid vocht"
+    }
+  }
+}

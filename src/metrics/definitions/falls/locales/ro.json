@@ -1,0 +1,11 @@
+{
+    "name": "Căderi",
+    "shortName": "Căderi",
+    "descriptionTitle": "Despre urmărirea căderilor",
+    "description": "Urmărirea căderilor ajută la evaluarea riscului de cădere și la luarea măsurilor preventive. În ALS, slăbiciunea musculară în creștere mărește semnificativ riscul de căderi. Documentează fiecare cădere pentru a discuta cu echipa ta medicală despre dispozitive ajutătoare sau modificări ale mediului.",
+    "fields": {
+        "value": {
+            "label": "Număr de căderi"
+        }
+    }
+}

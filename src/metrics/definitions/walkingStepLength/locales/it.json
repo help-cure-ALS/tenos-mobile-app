@@ -1,0 +1,11 @@
+{
+    "name": "Lunghezza del passo",
+    "shortName": "Lungh. passo",
+    "descriptionTitle": "Informazioni sulla lunghezza del passo",
+    "description": "La lunghezza del passo è la distanza media tra passi consecutivi, in metri. Nella SLA, un accorciamento della lunghezza del passo può riflettere cambiamenti dell'andatura. Questo valore viene importato automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Lunghezza del passo"
+        }
+    }
+}

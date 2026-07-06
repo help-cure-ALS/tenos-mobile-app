@@ -1,0 +1,11 @@
+{
+  "name": "Capacità vitale forzata",
+  "shortName": "FVC",
+  "descriptionTitle": "Informazioni sulla FVC",
+  "description": "La capacità vitale forzata (FVC) misura il volume massimo di aria che può essere espirato dopo un respiro profondo. Nella SLA, la FVC è uno degli indicatori più importanti della funzione respiratoria e della progressione della malattia. Un calo sotto il 50% del valore previsto può indicare la necessità di supporto respiratorio.",
+  "fields": {
+    "value": {
+      "label": "FVC"
+    }
+  }
+}

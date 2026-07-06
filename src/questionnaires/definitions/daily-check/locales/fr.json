@@ -1,0 +1,80 @@
+{
+  "name": "Contrôle quotidien des symptômes",
+  "shortName": "",
+  "exportTitle": "Contrôle quotidien des symptômes",
+  "description": "Un bref point quotidien pour suivre vos principaux symptômes. Les données sont automatiquement synchronisées avec vos métriques.",
+  "introText": "Comment vous sentez-vous aujourd'hui ?",
+  "intro": {
+    "title": "Contrôle quotidien des symptômes",
+    "description": "Un aperçu rapide de votre état actuel. Répondez à 4 courtes questions sur la douleur, la fatigue, le sommeil et l'humeur.",
+    "buttonText": "Commencer",
+    "researchNote": "Votre contrôle quotidien aide à détecter les changements tôt et apporte des informations précieuses à votre équipe soignante."
+  },
+  "domains": {
+    "symptoms": "Symptômes",
+    "sleep": "Sommeil",
+    "mood": "Humeur"
+  },
+  "questions": {
+    "pain": {
+      "text": "Quelle est l'intensité de votre douleur aujourd'hui ?",
+      "exportLabel": "Douleur",
+      "options": {
+        "0": { "label": "Aucune douleur", "description": "Aucune gêne" },
+        "1": { "label": "Douleur légère", "description": "À peine perceptible, peu gênante" },
+        "2": { "label": "Douleur modérée", "description": "Perceptible mais supportable" },
+        "3": { "label": "Douleur sévère", "description": "Entrave nettement le quotidien" },
+        "4": { "label": "Douleur très sévère", "description": "À peine supportable" }
+      }
+    },
+    "fatigue": {
+      "text": "À quel point vous sentez-vous fatigué(e) ou épuisé(e) ?",
+      "exportLabel": "Fatigue",
+      "options": {
+        "0": { "label": "Aucune fatigue", "description": "Plein(e) d'énergie" },
+        "1": { "label": "Légèrement fatigué(e)" },
+        "2": { "label": "Légèrement fatigué(e)", "description": "À peine perceptible" },
+        "3": { "label": "Légèrement fatigué(e)" },
+        "4": { "label": "Modérément fatigué(e)", "description": "Légèrement limité(e)" },
+        "5": { "label": "Modérément fatigué(e)" },
+        "6": { "label": "Plutôt fatigué(e)", "description": "Les activités demandent un effort" },
+        "7": { "label": "Plutôt fatigué(e)" },
+        "8": { "label": "Très fatigué(e)", "description": "Besoin important de repos" },
+        "9": { "label": "Très fatigué(e)" },
+        "10": { "label": "Extrêmement épuisé(e)", "description": "Peut à peine faire quoi que ce soit" }
+      }
+    },
+    "sleep_quality": {
+      "text": "Comment avez-vous dormi la nuit dernière ?",
+      "exportLabel": "Sommeil",
+      "options": {
+        "0": { "label": "Très bien", "description": "Sommeil réparateur et ininterrompu" },
+        "2": { "label": "Bien", "description": "Sommeil globalement réparateur" },
+        "4": { "label": "Passablement", "description": "Un peu agité mais suffisant" },
+        "6": { "label": "Mal", "description": "Réveils multiples, peu de récupération" },
+        "8": { "label": "Très mal", "description": "Presque pas dormi" },
+        "10": { "label": "Pas du tout", "description": "N'a pas dormi" }
+      }
+    },
+    "mood": {
+      "text": "Comment est votre humeur aujourd'hui ?",
+      "exportLabel": "Humeur",
+      "options": {
+        "0": { "label": "Très bonne", "description": "Équilibrée et positive" },
+        "2": { "label": "Bonne", "description": "Plutôt positive" },
+        "4": { "label": "Correcte", "description": "Neutre" },
+        "6": { "label": "Basse", "description": "Un peu abattu(e)" },
+        "8": { "label": "Mauvaise", "description": "Triste ou anxieux(se)" },
+        "10": { "label": "Très mauvaise", "description": "Sans espoir ou désespéré(e)" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Bonne journée", "description": "Vous vous sentez relativement bien aujourd'hui." },
+      { "label": "Correct", "description": "Une journée moyenne avec quelques gênes mineures." },
+      { "label": "Journée difficile", "description": "Aujourd'hui est une journée difficile." },
+      { "label": "Journée particulièrement difficile", "description": "Vous ressentez davantage de symptômes aujourd'hui." }
+    ]
+  }
+}

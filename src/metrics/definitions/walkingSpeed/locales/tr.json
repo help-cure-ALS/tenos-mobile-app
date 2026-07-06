@@ -1,0 +1,11 @@
+{
+    "name": "Yürüme hızı",
+    "shortName": "Hız",
+    "descriptionTitle": "Yürüme hızı hakkında",
+    "description": "Yürüme hızı, saniyede metre cinsinden ortalama yürüme temponuzdur. ALS'de azalan bir eğilim, ilerleyen bacak güçsüzlüğünü yansıtabilir. Bu değer Apple Sağlık veya Health Connect'ten otomatik olarak alınır ve günlük ortalama olarak gösterilir.",
+    "fields": {
+        "value": {
+            "label": "Yürüme hızı"
+        }
+    }
+}

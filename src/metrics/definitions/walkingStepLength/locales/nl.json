@@ -1,0 +1,11 @@
+{
+    "name": "Staplengte",
+    "shortName": "Staplengte",
+    "descriptionTitle": "Over de staplengte",
+    "description": "De staplengte is de gemiddelde afstand tussen opeenvolgende stappen, in meter. Bij ALS kan een kortere staplengte wijzen op veranderingen in de gang. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid.",
+    "fields": {
+        "value": {
+            "label": "Staplengte"
+        }
+    }
+}

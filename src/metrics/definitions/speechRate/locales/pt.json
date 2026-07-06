@@ -1,0 +1,11 @@
+{
+  "name": "Velocidade da fala",
+  "shortName": "Fala",
+  "descriptionTitle": "Sobre a velocidade da fala",
+  "description": "A velocidade da fala mede quantas palavras podem ser ditas por minuto. Na ELA, o envolvimento bulbar pode levar a fala lenta e arrastada (disartria). A velocidade normal é cerca de 120-150 palavras por minuto. A medição regular ajuda a detetar alterações precocemente.",
+  "fields": {
+    "value": {
+      "label": "Palavras por minuto"
+    }
+  }
+}

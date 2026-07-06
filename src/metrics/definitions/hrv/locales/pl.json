@@ -1,0 +1,11 @@
+{
+    "name": "Zmienność rytmu serca",
+    "shortName": "HRV",
+    "descriptionTitle": "O zmienności rytmu serca",
+    "description": "Zmienność rytmu serca (HRV) to zmienność czasu między uderzeniami serca, w milisekundach, i odzwierciedla aktywność autonomicznego układu nerwowego. Na iPhonie jest mierzona jako SDNN i importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Zmienność rytmu serca"
+        }
+    }
+}

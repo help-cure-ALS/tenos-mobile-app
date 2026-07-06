@@ -1,0 +1,11 @@
+{
+    "name": "呼吸频率",
+    "shortName": "呼吸",
+    "descriptionTitle": "关于呼吸频率",
+    "description": "呼吸频率是每分钟的呼吸次数。在ALS中，呼吸功能是关键指标；静息呼吸频率升高可能是呼吸肌无力的早期迹象。该数值会自动从Apple健康或Health Connect导入（通常在睡眠期间测量），并以每日平均值显示。",
+    "fields": {
+        "value": {
+            "label": "呼吸频率"
+        }
+    }
+}

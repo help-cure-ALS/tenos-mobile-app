@@ -1,0 +1,11 @@
+{
+    "name": "Serumda NFL",
+    "shortName": "NFL",
+    "descriptionTitle": "Nörofilament hafif zinciri hakkında",
+    "description": "Nörofilament hafif zinciri (NFL), sinir hücreleri hasar gördüğünde kana salınan bir biyobelirteçtir. Yüksek NFL düzeyleri aktif nörodejenerasyona işaret edebilir. ALS’de NFL hastalık ilerlemesini izlemek ve prognostik belirteç olarak kullanılır.",
+    "fields": {
+        "value": {
+            "label": "NFL"
+        }
+    }
+}

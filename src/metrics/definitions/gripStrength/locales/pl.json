@@ -1,0 +1,14 @@
+{
+  "name": "Siła chwytu",
+  "shortName": "Chwyt",
+  "descriptionTitle": "O sile chwytu",
+  "description": "Siła chwytu mierzy maksymalną siłę, jaką można wywrzeć dłonią. Mierzy się ją dynamometrem ręcznym i jest obiektywnym wskaźnikiem siły mięśni. W ALS może pomagać dokumentować postęp osłabienia mięśni. Wartości prawidłowe zależą od wieku i płci (mężczyźni: 30-55 kg, kobiety: 20-35 kg).",
+  "fields": {
+    "left": {
+      "label": "Lewa"
+    },
+    "right": {
+      "label": "Prawa"
+    }
+  }
+}

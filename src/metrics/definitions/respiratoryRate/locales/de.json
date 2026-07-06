@@ -1,0 +1,9 @@
+{
+    "name": "Atemfrequenz",
+    "shortName": "Atemfreq.",
+    "descriptionTitle": "Über die Atemfrequenz",
+    "description": "Die Atemfrequenz ist die Anzahl der Atemzüge pro Minute. Bei ALS ist die Atemfunktion ein zentraler Verlaufsparameter; eine steigende Ruhe-Atemfrequenz kann ein frühes Zeichen einer Atemmuskelschwäche sein. Der Wert wird automatisch aus Apple Health oder Health Connect importiert (häufig im Schlaf gemessen) und als Tagesmittelwert angezeigt.",
+    "fields": {
+        "value": { "label": "Atemfrequenz" }
+    }
+}

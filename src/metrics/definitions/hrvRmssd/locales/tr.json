@@ -1,0 +1,11 @@
+{
+    "name": "Kalp hızı değişkenliği",
+    "shortName": "KHD",
+    "descriptionTitle": "Kalp hızı değişkenliği hakkında",
+    "description": "Kalp hızı değişkenliği (KHD), kalp atışları arasındaki sürenin değişimidir (milisaniye) ve otonom sinir sistemi etkinliğini yansıtır. Android'de RMSSD olarak ölçülür ve Health Connect'ten otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Kalp hızı değişkenliği"
+        }
+    }
+}

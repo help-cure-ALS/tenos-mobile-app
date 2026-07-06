@@ -1,0 +1,169 @@
+{
+    "name": "PDQ-5",
+    "displayName": "Afectare cognitivă",
+    "shortName": "PDQ-5",
+    "exportTitle": "Afectare cognitivă – PDQ-5",
+    "description": "PDQ-5 (Perceived Deficits Questionnaire) evaluează afectările cognitive percepute subiectiv, cum ar fi dificultățile de concentrare, uitarea și problemele de planificare.",
+    "introText": "Cât de des ți s-au întâmplat următoarele în ultimele 4 săptămâni?",
+    "intro": {
+        "title": "Autoevaluare cognitivă",
+        "description": "Acest chestionar scurt evaluează cum îți percepi performanța mentală în viața de zi cu zi. Răspunde la cele 5 întrebări pe baza ultimelor 4 săptămâni.",
+        "buttonText": "Începe chestionarul",
+        "researchNote": "Îți mulțumim pentru timpul acordat. Răspunsurile tale ne ajută să înțelegem mai bine progresia bolii și să avansăm cercetarea ALS."
+    },
+    "domains": {
+        "cognitive": "Funcții cognitive"
+    },
+    "questions": {
+        "attention": {
+            "text": "Ai avut dificultăți să rămâi concentrat pe ceva?",
+            "exportLabel": "Atenție",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Acest lucru nu mi se întâmplă niciodată"
+                },
+                "1": {
+                    "label": "Rareori",
+                    "description": "Se întâmplă ocazional"
+                },
+                "2": {
+                    "label": "Uneori",
+                    "description": "Se întâmplă din când în când"
+                },
+                "3": {
+                    "label": "Adesea",
+                    "description": "Se întâmplă frecvent"
+                },
+                "4": {
+                    "label": "Aproape întotdeauna",
+                    "description": "Se întâmplă constant"
+                }
+            }
+        },
+        "memory_conversation": {
+            "text": "Ai uitat ce tocmai ți-a spus cineva?",
+            "exportLabel": "Amintire conversații",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Acest lucru nu mi se întâmplă niciodată"
+                },
+                "1": {
+                    "label": "Rareori",
+                    "description": "Se întâmplă ocazional"
+                },
+                "2": {
+                    "label": "Uneori",
+                    "description": "Se întâmplă din când în când"
+                },
+                "3": {
+                    "label": "Adesea",
+                    "description": "Se întâmplă frecvent"
+                },
+                "4": {
+                    "label": "Aproape întotdeauna",
+                    "description": "Se întâmplă constant"
+                }
+            }
+        },
+        "prospective_memory": {
+            "text": "Ai uitat ce urma să faci?",
+            "exportLabel": "Memorie prospectivă",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Acest lucru nu mi se întâmplă niciodată"
+                },
+                "1": {
+                    "label": "Rareori",
+                    "description": "Se întâmplă ocazional"
+                },
+                "2": {
+                    "label": "Uneori",
+                    "description": "Se întâmplă din când în când"
+                },
+                "3": {
+                    "label": "Adesea",
+                    "description": "Se întâmplă frecvent"
+                },
+                "4": {
+                    "label": "Aproape întotdeauna",
+                    "description": "Se întâmplă constant"
+                }
+            }
+        },
+        "organization": {
+            "text": "Ai avut dificultăți în organizarea gândurilor?",
+            "exportLabel": "Organizare",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Acest lucru nu mi se întâmplă niciodată"
+                },
+                "1": {
+                    "label": "Rareori",
+                    "description": "Se întâmplă ocazional"
+                },
+                "2": {
+                    "label": "Uneori",
+                    "description": "Se întâmplă din când în când"
+                },
+                "3": {
+                    "label": "Adesea",
+                    "description": "Se întâmplă frecvent"
+                },
+                "4": {
+                    "label": "Aproape întotdeauna",
+                    "description": "Se întâmplă constant"
+                }
+            }
+        },
+        "concentration": {
+            "text": "Ai avut probleme de concentrare?",
+            "exportLabel": "Concentrare",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Acest lucru nu mi se întâmplă niciodată"
+                },
+                "1": {
+                    "label": "Rareori",
+                    "description": "Se întâmplă ocazional"
+                },
+                "2": {
+                    "label": "Uneori",
+                    "description": "Se întâmplă din când în când"
+                },
+                "3": {
+                    "label": "Adesea",
+                    "description": "Se întâmplă frecvent"
+                },
+                "4": {
+                    "label": "Aproape întotdeauna",
+                    "description": "Se întâmplă constant"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Puține schimbări observabile",
+                "description": "Abia observi schimbări cognitive."
+            },
+            {
+                "label": "Schimbări ușoare",
+                "description": "Observi ocazional schimbări cognitive ușoare."
+            },
+            {
+                "label": "Schimbări sesizabile",
+                "description": "Observi regulat schimbări cognitive."
+            },
+            {
+                "label": "Schimbări pronunțate",
+                "description": "Observi frecvent schimbări cognitive."
+            }
+        ]
+    }
+}

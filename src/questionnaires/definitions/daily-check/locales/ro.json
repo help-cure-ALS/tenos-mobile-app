@@ -1,0 +1,171 @@
+{
+    "name": "Verificare zilnică a simptomelor",
+    "shortName": "",
+    "exportTitle": "Verificare zilnică a simptomelor",
+    "description": "O scurtă verificare zilnică pentru urmărirea principalelor simptome. Datele sunt sincronizate automat cu metricile tale.",
+    "introText": "Cum te simți astăzi?",
+    "intro": {
+        "title": "Verificare zilnică a simptomelor",
+        "description": "O scurtă prezentare a stării tale actuale. Răspunde la 4 întrebări scurte despre durere, oboseală, somn și dispoziție.",
+        "buttonText": "Începe",
+        "researchNote": "Verificarea ta zilnică ajută la detectarea timpurie a schimbărilor și oferă echipei medicale informații valoroase."
+    },
+    "domains": {
+        "symptoms": "Simptome",
+        "sleep": "Somn",
+        "mood": "Dispoziție"
+    },
+    "questions": {
+        "pain": {
+            "text": "Cât de severă este durerea ta astăzi?",
+            "exportLabel": "Durere",
+            "options": {
+                "0": {
+                    "label": "Fără durere",
+                    "description": "Fără disconfort"
+                },
+                "1": {
+                    "label": "Durere ușoară",
+                    "description": "Abia sesizabil, nederanjant"
+                },
+                "2": {
+                    "label": "Durere moderată",
+                    "description": "Sesizabil, dar suportabil"
+                },
+                "3": {
+                    "label": "Durere severă",
+                    "description": "Afectare semnificativă"
+                },
+                "4": {
+                    "label": "Durere foarte severă",
+                    "description": "Abia tolerabil"
+                }
+            }
+        },
+        "fatigue": {
+            "text": "Cât de obosit sau epuizat te simți?",
+            "exportLabel": "Oboseală",
+            "options": {
+                "0": {
+                    "label": "Fără oboseală",
+                    "description": "Plin de energie"
+                },
+                "1": {
+                    "label": "Ușor obosit"
+                },
+                "2": {
+                    "label": "Ușor obosit",
+                    "description": "Abia sesizabil"
+                },
+                "3": {
+                    "label": "Ușor obosit"
+                },
+                "4": {
+                    "label": "Moderat obosit",
+                    "description": "Oarecum limitat"
+                },
+                "5": {
+                    "label": "Moderat obosit"
+                },
+                "6": {
+                    "label": "Destul de obosit",
+                    "description": "Activitățile sunt solicitante"
+                },
+                "7": {
+                    "label": "Destul de obosit"
+                },
+                "8": {
+                    "label": "Foarte obosit",
+                    "description": "Am nevoie de multă odihnă"
+                },
+                "9": {
+                    "label": "Foarte obosit"
+                },
+                "10": {
+                    "label": "Extrem de epuizat",
+                    "description": "Abia pot face ceva"
+                }
+            }
+        },
+        "sleep_quality": {
+            "text": "Cum ai dormit noaptea trecută?",
+            "exportLabel": "Somn",
+            "options": {
+                "0": {
+                    "label": "Foarte bine",
+                    "description": "Somn odihnitor, neîntrerupt"
+                },
+                "2": {
+                    "label": "Bine",
+                    "description": "Somn în mare parte odihnitor"
+                },
+                "4": {
+                    "label": "Acceptabil",
+                    "description": "Oarecum agitat, dar adecvat"
+                },
+                "6": {
+                    "label": "Prost",
+                    "description": "Treziri multiple, puțină recuperare"
+                },
+                "8": {
+                    "label": "Foarte prost",
+                    "description": "Am dormit foarte puțin"
+                },
+                "10": {
+                    "label": "Deloc",
+                    "description": "Nu am dormit"
+                }
+            }
+        },
+        "mood": {
+            "text": "Cum este dispoziția ta astăzi?",
+            "exportLabel": "Dispoziție",
+            "options": {
+                "0": {
+                    "label": "Foarte bine",
+                    "description": "Echilibrat și pozitiv"
+                },
+                "2": {
+                    "label": "Bună",
+                    "description": "În mare parte pozitivă"
+                },
+                "4": {
+                    "label": "În regulă",
+                    "description": "Neutru"
+                },
+                "6": {
+                    "label": "Scăzut",
+                    "description": "Oarecum trist"
+                },
+                "8": {
+                    "label": "Rău",
+                    "description": "Trist sau anxios"
+                },
+                "10": {
+                    "label": "Foarte rău",
+                    "description": "Fără speranță sau disperat"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Zi bună",
+                "description": "Astăzi te simți relativ bine."
+            },
+            {
+                "label": "În regulă",
+                "description": "O zi obișnuită cu disconfort minor."
+            },
+            {
+                "label": "Zi dificilă",
+                "description": "Astăzi este o zi dificilă."
+            },
+            {
+                "label": "Zi deosebit de dificilă",
+                "description": "Astăzi ai mai multe simptome."
+            }
+        ]
+    }
+}

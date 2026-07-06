@@ -1,0 +1,63 @@
+{
+    "name": "King's Stage",
+    "displayName": "King's Stage",
+    "shortName": "King's",
+    "description": "Clinician-confirmed ALS stage by King's College based on affected regions and nutritional or respiratory involvement.",
+    "domains": {
+        "structured": "King's Stage"
+    },
+    "questions": {
+        "payload": {
+            "text": "King's Stage",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Stage",
+            "info": "King's Stage is derived from affected regions and relevant nutritional or respiratory criteria.",
+            "options": {
+                "1": { "label": "Stage 1", "description": "One affected region" },
+                "2": { "label": "Stage 2", "description": "Two affected regions" },
+                "3": { "label": "Stage 3", "description": "Three affected regions" },
+                "4A": { "label": "Stage 4A", "description": "Nutritional involvement" },
+                "4B": { "label": "Stage 4B", "description": "Respiratory involvement" },
+                "4": { "label": "Stage 4", "description": "Stage 4, not further specified" }
+            }
+        },
+        "affectedRegions": {
+            "label": "Affected regions",
+            "info": "Clinically affected regions used for staging.",
+            "options": {
+                "bulbar": { "label": "bulbar" },
+                "upper_limb": { "label": "upper limb" },
+                "lower_limb": { "label": "lower limb" },
+                "thoracic": { "label": "thoracic/respiratory" }
+            }
+        },
+        "source": {
+            "label": "Source",
+            "info": "Basis of the assessment. Suggested values still need clinician confirmation.",
+            "options": {
+                "manual": { "label": "clinician confirmed" },
+                "suggested_from_exam": { "label": "suggested from exam" },
+                "suggested_from_alsfrs": { "label": "suggested from ALSFRS-R" },
+                "suggested_from_care": { "label": "suggested from care data" }
+            }
+        },
+        "stage4Reason": {
+            "label": "Stage 4 reason",
+            "info": "Documents whether stage 4 is driven by nutritional or respiratory involvement.",
+            "options": {
+                "nutrition": { "label": "nutrition" },
+                "respiratory": { "label": "respiration" },
+                "both": { "label": "nutrition and respiration" },
+                "unspecified": { "label": "not specified" }
+            }
+        },
+        "note": {
+            "label": "Comment",
+            "placeholder": "Optional clinical comment"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Pijn -> Mobiliteit",
+  "shortName": "Mobiliteit",
+  "descriptionTitle": "Invloed van pijn op mobiliteit",
+  "description": "Registreert hoeveel pijn je mobiliteit en lichamelijke activiteit beïnvloedt. Op een schaal van 0 (geen invloed) tot 10 (extreme invloed). Beperkte mobiliteit door pijn kan tot verdere gezondheidsproblemen leiden.",
+  "fields": {
+    "value": {
+      "label": "Beperking",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Minimaal",
+        "2": "Minimaal",
+        "3": "Licht",
+        "4": "Matig",
+        "5": "Matig",
+        "6": "Matig",
+        "7": "Ernstig",
+        "8": "Ernstig",
+        "9": "Zeer ernstig",
+        "10": "Extreem"
+      }
+    }
+  }
+}

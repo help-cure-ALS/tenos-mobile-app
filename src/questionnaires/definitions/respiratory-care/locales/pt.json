@@ -1,0 +1,92 @@
+{
+    "name": "Cuidados respiratórios",
+    "displayName": "Cuidados respiratórios",
+    "shortName": "Cuidados respiratórios",
+    "exportTitle": "Cuidados respiratórios",
+    "description": "Regista sintomas que podem indicar alterações no suporte respiratório. Respostas regulares ajudam a detetar mudanças precocemente.",
+    "introText": "As perguntas seguintes referem-se a como se sentiu nos últimos dias.",
+    "intro": {
+        "title": "Cuidados respiratórios",
+        "description": "Este questionário regista sintomas relacionados com o suporte respiratório através de 6 perguntas breves.",
+        "researchNote": "Respostas regulares ajudam a detetar mudanças precocemente e a discuti-las com a sua equipa de cuidados.",
+        "buttonText": "Iniciar questionário"
+    },
+    "domains": {
+        "symptoms": "Sintomas"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Acordo com dores de cabeça.",
+            "exportLabel": "Cefaleia",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        },
+        "dizziness": {
+            "text": "Sinto tonturas, especialmente ao acordar.",
+            "exportLabel": "Tontura",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Sinto-me invulgarmente cansado/a ou sonolento/a durante o dia.",
+            "exportLabel": "Sonolência",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        },
+        "concentration": {
+            "text": "Tenho dificuldade em concentrar-me.",
+            "exportLabel": "Concentração",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Acordo durante a noite ou durmo de forma agitada.",
+            "exportLabel": "Sono",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Sinto falta de ar durante o dia, p. ex. ao falar ou em repouso.",
+            "exportLabel": "Dispneia",
+            "options": {
+                "0": { "label": "Nunca" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "Às vezes" },
+                "3": { "label": "Frequentemente" },
+                "4": { "label": "Quase sempre" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Poucos sintomas", "description": "As suas respostas indicam pouco ou nenhum desconforto." },
+            { "label": "Sintomas notáveis", "description": "As suas respostas indicam desconforto notável." },
+            { "label": "Sintomas significativos", "description": "As suas respostas indicam desconforto significativo." }
+        ]
+    }
+}

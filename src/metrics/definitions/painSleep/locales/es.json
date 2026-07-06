@@ -1,0 +1,24 @@
+{
+  "name": "Dolor -> Sueño",
+  "shortName": "Sueño",
+  "descriptionTitle": "Impacto del dolor en el sueño",
+  "description": "Registra cuánto afecta el dolor a tu sueño. Escala de 0 (sin impacto) a 10 (impacto extremo). Las alteraciones del sueño debidas al dolor pueden afectar de forma importante a la calidad de vida.",
+  "fields": {
+    "value": {
+      "label": "Afectación",
+      "valueLabels": {
+        "0": "Ninguna",
+        "1": "Mínima",
+        "2": "Mínima",
+        "3": "Leve",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Muy grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

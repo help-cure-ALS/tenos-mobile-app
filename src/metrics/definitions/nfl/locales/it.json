@@ -1,0 +1,11 @@
+{
+  "name": "NFL nel siero",
+  "shortName": "NFL",
+  "descriptionTitle": "Informazioni sulla catena leggera dei neurofilamenti",
+  "description": "La catena leggera dei neurofilamenti (NFL) è un biomarcatore rilasciato nel sangue quando le cellule nervose sono danneggiate. Livelli elevati di NFL possono indicare neurodegenerazione attiva. Nella SLA, la NFL è usata per monitorare la progressione della malattia e come marcatore prognostico.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

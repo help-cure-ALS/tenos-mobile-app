@@ -1,0 +1,11 @@
+{
+    "name": "Vücut kitle indeksi",
+    "shortName": "BMI",
+    "descriptionTitle": "Vücut kitle indeksi hakkında",
+    "description": "Vücut kitle indeksi (BMI), vücut ağırlığı ile boy arasındaki ilişkiyi gösteren bir ölçüdür. Kilo (kg), boyun (m) karesine bölünerek hesaplanır. ALS’de üst normal aralıktaki BMI çoğu zaman daha iyi sonuçlarla ilişkilidir.",
+    "fields": {
+        "value": {
+            "label": "BMI"
+        }
+    }
+}

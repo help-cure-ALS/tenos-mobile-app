@@ -1,0 +1,11 @@
+{
+    "name": "Schluckzeit",
+    "shortName": "Schlucken",
+    "descriptionTitle": "Über Schluckzeit",
+    "description": "Die Schluckzeit misst, wie lange es dauert, eine definierte Menge (z.B. 150ml Wasser) zu schlucken. Bei ALS kann Dysphagie (Schluckstörung) die Nahrungsaufnahme erschweren und das Aspirationsrisiko erhöhen. Eine verlängerte Schluckzeit kann auf fortschreitende bulbäre Symptome hinweisen. Normale Werte liegen bei unter 20 Sekunden für 150ml Wasser.",
+    "fields": {
+        "value": {
+            "label": "Schluckzeit"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Sensibilidad al frío",
+  "shortName": "Frío",
+  "descriptionTitle": "Sobre la sensibilidad al frío",
+  "description": "La sensibilidad al frío es un síntoma frecuente en la ELA. Puede deberse a una reducción de la masa muscular, disfunción autonómica o menor actividad física. El seguimiento ayuda a identificar patrones y a ajustar medidas como ropa más abrigada o la temperatura ambiente. (0 = Ninguna, 1 = Leve, 2 = Moderada, 3 = Grave)",
+  "fields": {
+    "value": {
+      "label": "Sensibilidad al frío",
+      "valueLabels": {
+        "0": "Ninguna",
+        "1": "Leve",
+        "2": "Moderada",
+        "3": "Grave"
+      }
+    }
+  }
+}

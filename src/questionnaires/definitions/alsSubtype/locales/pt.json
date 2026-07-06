@@ -1,0 +1,127 @@
+{
+  "name": "Subtipo de ELA",
+  "displayName": "Subtipo de ELA",
+  "shortName": "Subtipo",
+  "description": "Classificação clínica do fenótipo de ELA por local de início dos sintomas, propagação e padrão dos neurónios motores.",
+  "domains": {
+    "structured": "Subtipo de ELA"
+  },
+  "questions": {
+    "payload": {
+      "text": "Subtipo de ELA",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "onsetCode": {
+      "label": "Local de início dos sintomas",
+      "info": "O eixo O descreve a região corporal onde começaram os primeiros sintomas motores. Conte fraqueza ou movimento voluntário lento/mal coordenado, incluindo sintomas bulbares, respiratórios ou axiais. Fasciculações, atrofia muscular e sinais reflexos isolados não contam como início dos sintomas.",
+      "options": {
+        "O1": {
+          "label": "Cabeça/bulbar"
+        },
+        "O2d": {
+          "label": "Braço distal"
+        },
+        "O2p": {
+          "label": "Braço proximal"
+        },
+        "O2x": {
+          "label": "Braço incerto"
+        },
+        "O3r": {
+          "label": "Respiração"
+        },
+        "O3a": {
+          "label": "Axial/tronco"
+        },
+        "O4d": {
+          "label": "Perna distal"
+        },
+        "O4p": {
+          "label": "Perna proximal"
+        },
+        "O4x": {
+          "label": "Perna incerta"
+        }
+      }
+    },
+    "propagationStatus": {
+      "label": "Propagação",
+      "info": "O eixo P descreve a disseminação vertical dos sintomas motores da região de início para outra região corporal: cabeça, braço, tronco ou perna. A disseminação horizontal de um braço para o outro ou de uma perna para a outra não conta. Fasciculações, atrofia ou sinais reflexos isolados não contam como propagação.",
+      "options": {
+        "P0": {
+          "label": "sem propagação vertical"
+        },
+        "P1": {
+          "label": "propagação ocorreu"
+        }
+      }
+    },
+    "propagationPattern": {
+      "label": "Propagação",
+      "info": "O eixo P descreve a disseminação vertical dos sintomas motores da região de início para outra região corporal: cabeça, braço, tronco ou perna. A disseminação horizontal de um braço para o outro ou de uma perna para a outra não conta. Fasciculações, atrofia ou sinais reflexos isolados não contam como propagação.",
+      "options": {
+        "P0n": {
+          "label": "P0(n)",
+          "description": "Sem propagação vertical; n = meses até à avaliação"
+        },
+        "P1n": {
+          "label": "P1(n)",
+          "description": "Propagação vertical ocorreu; n = meses até à propagação"
+        },
+        "P1x": {
+          "label": "P1(x)",
+          "description": "Propagação vertical ocorreu, momento incerto"
+        }
+      }
+    },
+    "motorNeuronCode": {
+      "label": "Fenótipo dos neurónios motores",
+      "info": "O eixo M descreve o equilíbrio entre sinais do neurónio motor superior (UMN) e inferior (LMN). Sinais UMN incluem movimento voluntário lento ou mal coordenado, reflexos vivos, espasticidade ou afeto pseudobulbar. Sinais LMN incluem fraqueza com atrofia, reflexos ausentes ou fasciculações nos músculos afetados. M0 é equilibrado, M1 é predominante UMN, M2 é predominante LMN, M3 é dissociado.",
+      "options": {
+        "M0": {
+          "label": "UMN/LMN equilibrados"
+        },
+        "M1d": {
+          "label": "UMN dominante"
+        },
+        "M1p": {
+          "label": "UMN puro"
+        },
+        "M2d": {
+          "label": "LMN dominante"
+        },
+        "M2p": {
+          "label": "LMN puro"
+        },
+        "M3": {
+          "label": "dissociado"
+        }
+      }
+    },
+    "certainty": {
+      "label": "Estado",
+      "info": "O estado descreve a confiança na classificação clínica: preliminar para avaliação inicial ou ainda não totalmente segura, confirmado quando os achados são suficientemente claros, incerto quando os critérios não podem ser separados com fiabilidade.",
+      "options": {
+        "preliminary": {
+          "label": "preliminar"
+        },
+        "confirmed": {
+          "label": "confirmado"
+        },
+        "uncertain": {
+          "label": "incerto"
+        }
+      }
+    },
+    "propagationMonths": {
+      "label": "Meses",
+      "info": "Para P0(n): meses desde o início dos sintomas até à avaliação em que não foi encontrada propagação vertical. Para P1(n): meses desde o início dos sintomas até à primeira propagação vertical."
+    },
+    "note": {
+      "label": "Comentário",
+      "placeholder": "Comentário clínico opcional"
+    }
+  }
+}

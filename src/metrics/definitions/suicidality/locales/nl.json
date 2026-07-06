@@ -1,0 +1,17 @@
+{
+  "name": "Suïcidaliteit (PHQ-9 item 9)",
+  "shortName": "Suïcidaliteit",
+  "descriptionTitle": "Over suïcidaliteit",
+  "description": "Deze meting legt het antwoord vast op vraag 9 van de PHQ-9-vragenlijst: \"Gedachten dat u beter dood zou zijn of uzelf op een of andere manier pijn zou willen doen\". Waarden > 0 vereisen speciale klinische aandacht. Deze meting is bedoeld voor vroege detectie en moet altijd in klinische context worden beoordeeld.",
+  "fields": {
+    "value": {
+      "label": "Suïcidaliteit",
+      "valueLabels": {
+        "0": "Helemaal niet",
+        "1": "Meerdere dagen",
+        "2": "Meer dan de helft van de dagen",
+        "3": "Bijna elke dag"
+      }
+    }
+  }
+}

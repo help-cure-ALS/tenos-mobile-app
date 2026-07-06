@@ -1,0 +1,101 @@
+{
+    "name": "Forme de SLA & génétique",
+    "displayName": "Forme de SLA & génétique",
+    "shortName": "Forme de SLA",
+    "description": "Documentation de la SLA sporadique ou familiale, des antécédents familiaux et des résultats génétiques connus.",
+    "domains": {
+        "structured": "Forme de SLA & génétique"
+    },
+    "questions": {
+        "payload": {
+            "text": "Forme de SLA & génétique",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "diseaseForm": {
+            "label": "Forme de SLA",
+            "info": "Classification clinique indiquant si la SLA est sporadique, familiale ou incertaine.",
+            "options": {
+                "sporadic": { "label": "sporadique" },
+                "familial": { "label": "familiale" },
+                "suspected_familial": { "label": "familiale suspectée" },
+                "unclear": { "label": "incertaine" }
+            }
+        },
+        "familyHistory": {
+            "label": "Antécédents familiaux",
+            "info": "Documente les antécédents familiaux connus de SLA, DFT ou autre maladie du motoneurone.",
+            "options": {
+                "none_known": { "label": "aucun connu" },
+                "als": { "label": "SLA dans la famille" },
+                "ftd": { "label": "DFT dans la famille" },
+                "als_ftd": { "label": "SLA/DFT dans la famille" },
+                "other_mnd": { "label": "autre maladie du motoneurone" },
+                "other_neurodegenerative": { "label": "autre antécédent neurodégénératif" }
+            }
+        },
+        "testingStatus": {
+            "label": "Test génétique",
+            "info": "Statut du test génétique. L'application n'interprète pas les données génétiques brutes.",
+            "options": {
+                "not_tested": { "label": "non testé" },
+                "planned": { "label": "planifié" },
+                "pending": { "label": "en attente" },
+                "negative": { "label": "aucune mutation connue" },
+                "vus": { "label": "variant de signification incertaine" },
+                "pathogenic": { "label": "variant pathogène/probablement pathogène" }
+            }
+        },
+        "gene": {
+            "label": "Gène",
+            "info": "Gène connu issu de la documentation clinique ou d'un compte rendu de laboratoire.",
+            "placeholder": "Saisir le gène",
+            "options": {
+                "C9orf72": { "label": "C9orf72" },
+                "SOD1": { "label": "SOD1" },
+                "FUS": { "label": "FUS" },
+                "TARDBP": { "label": "TARDBP" },
+                "TBK1": { "label": "TBK1" },
+                "OPTN": { "label": "OPTN" },
+                "VCP": { "label": "VCP" },
+                "other": { "label": "autre" }
+            }
+        },
+        "source": {
+            "label": "Source",
+            "info": "Origine de cette information. Les informations génétiques doivent être documentées de façon traçable.",
+            "options": {
+                "patient_reported": { "label": "déclaration du patient" },
+                "clinician_documented": { "label": "documenté par le clinicien" },
+                "lab_report": { "label": "laboratoire" }
+            }
+        },
+        "counselingStatus": {
+            "label": "Conseil génétique",
+            "info": "Indique si un conseil génétique lié au test ou à la discussion du résultat est documenté.",
+            "options": {
+                "completed": { "label": "réalisé" },
+                "recommended": { "label": "recommandé" },
+                "not_done": { "label": "non réalisé" }
+            }
+        },
+        "otherGene": {
+            "label": "Autre gène",
+            "placeholder": "Nom du gène"
+        },
+        "variantText": {
+            "label": "Variant",
+            "placeholder": "Court texte de résultat optionnel"
+        },
+        "testDate": {
+            "label": "Date du test",
+            "info": "Mois et année du test génétique.",
+            "placeholder": "Sélectionner"
+        },
+        "note": {
+            "label": "Commentaire",
+            "placeholder": "Commentaire optionnel"
+        }
+    }
+}

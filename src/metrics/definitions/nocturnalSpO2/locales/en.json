@@ -1,0 +1,9 @@
+{
+    "name": "Nocturnal Oxygen Saturation",
+    "shortName": "Night SpO2",
+    "descriptionTitle": "About Nocturnal Oxygen Saturation",
+    "description": "Nocturnal oxygen saturation shows how well the body is supplied with oxygen during sleep. In ALS, nocturnal hypoventilation (shallow breathing) can occur before daytime symptoms become noticeable. Values below 90% during sleep may indicate early respiratory weakness. The measurement is ideally done with a pulse oximeter overnight.",
+    "fields": {
+        "value": { "label": "Min. SpO2 (Night)" }
+    }
+}

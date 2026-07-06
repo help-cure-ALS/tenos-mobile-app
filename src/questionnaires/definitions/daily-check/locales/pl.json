@@ -1,0 +1,171 @@
+{
+  "name": "Codzienna kontrola objawów",
+  "shortName": "",
+  "exportTitle": "Codzienna kontrola objawów",
+  "description": "Krótki codzienny check-in do śledzenia głównych objawów. Dane są automatycznie synchronizowane z metrykami.",
+  "introText": "Jak się dziś czujesz?",
+  "intro": {
+    "title": "Codzienna kontrola objawów",
+    "description": "Szybki przegląd aktualnego stanu. Odpowiedz na 4 krótkie pytania o ból, zmęczenie, sen i nastrój.",
+    "buttonText": "Start",
+    "researchNote": "Codzienna kontrola pomaga wcześnie wykrywać zmiany i daje zespołowi opieki cenne informacje."
+  },
+  "domains": {
+    "symptoms": "Objawy",
+    "sleep": "Sen",
+    "mood": "Nastrój"
+  },
+  "questions": {
+    "pain": {
+      "text": "Jak silny jest dziś Twój ból?",
+      "exportLabel": "Ból",
+      "options": {
+        "0": {
+          "label": "Brak bólu",
+          "description": "Brak dyskomfortu"
+        },
+        "1": {
+          "label": "Łagodny ból",
+          "description": "Ledwo zauważalny, nieuciążliwy"
+        },
+        "2": {
+          "label": "Umiarkowany ból",
+          "description": "Zauważalny, ale do zniesienia"
+        },
+        "3": {
+          "label": "Silny ból",
+          "description": "Znacznie ograniczający"
+        },
+        "4": {
+          "label": "Bardzo silny ból",
+          "description": "Ledwo tolerowany"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "Jak bardzo czujesz się zmęczony lub wyczerpany?",
+      "exportLabel": "Zmęczenie",
+      "options": {
+        "0": {
+          "label": "Brak zmęczenia",
+          "description": "Pełnia energii"
+        },
+        "1": {
+          "label": "Lekko zmęczony/a"
+        },
+        "2": {
+          "label": "Lekko zmęczony/a",
+          "description": "Ledwo zauważalne"
+        },
+        "3": {
+          "label": "Lekko zmęczony/a"
+        },
+        "4": {
+          "label": "Umiarkowanie zmęczony/a",
+          "description": "Nieco ograniczone funkcjonowanie"
+        },
+        "5": {
+          "label": "Umiarkowanie zmęczony/a"
+        },
+        "6": {
+          "label": "Dość zmęczony/a",
+          "description": "Aktywności są męczące"
+        },
+        "7": {
+          "label": "Dość zmęczony/a"
+        },
+        "8": {
+          "label": "Bardzo zmęczony/a",
+          "description": "Potrzeba dużo odpoczynku"
+        },
+        "9": {
+          "label": "Bardzo zmęczony/a"
+        },
+        "10": {
+          "label": "Skrajnie wyczerpany/a",
+          "description": "Prawie nic nie mogę zrobić"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "Jak spałeś/spałaś ostatniej nocy?",
+      "exportLabel": "Sen",
+      "options": {
+        "0": {
+          "label": "Bardzo dobrze",
+          "description": "Regenerujący, nieprzerwany sen"
+        },
+        "2": {
+          "label": "Dobrze",
+          "description": "W większości regenerujący sen"
+        },
+        "4": {
+          "label": "Przeciętnie",
+          "description": "Nieco niespokojny, ale wystarczający"
+        },
+        "6": {
+          "label": "Źle",
+          "description": "Wiele przebudzeń, mała regeneracja"
+        },
+        "8": {
+          "label": "Bardzo źle",
+          "description": "Prawie bez snu"
+        },
+        "10": {
+          "label": "Wcale",
+          "description": "Brak snu"
+        }
+      }
+    },
+    "mood": {
+      "text": "Jaki masz dziś nastrój?",
+      "exportLabel": "Nastrój",
+      "options": {
+        "0": {
+          "label": "Bardzo dobry",
+          "description": "Zrównoważony i pozytywny"
+        },
+        "2": {
+          "label": "Dobry",
+          "description": "Przeważnie pozytywny"
+        },
+        "4": {
+          "label": "W porządku",
+          "description": "Neutralny"
+        },
+        "6": {
+          "label": "Obniżony",
+          "description": "Trochę przygnębiony/a"
+        },
+        "8": {
+          "label": "Zły",
+          "description": "Smutek lub lęk"
+        },
+        "10": {
+          "label": "Bardzo zły",
+          "description": "Beznadzieja lub rozpacz"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "Dobry dzień",
+        "description": "Dziś czujesz się stosunkowo dobrze."
+      },
+      {
+        "label": "W porządku",
+        "description": "Przeciętny dzień z niewielkim dyskomfortem."
+      },
+      {
+        "label": "Trudny dzień",
+        "description": "Dziś jest trudny dzień."
+      },
+      {
+        "label": "Szczególnie trudny dzień",
+        "description": "Dziś odczuwasz więcej objawów."
+      }
+    ]
+  }
+}

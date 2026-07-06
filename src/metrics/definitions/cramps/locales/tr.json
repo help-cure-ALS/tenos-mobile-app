@@ -1,0 +1,11 @@
+{
+    "name": "Kas krampları",
+    "shortName": "Kramplar",
+    "descriptionTitle": "Kas krampları hakkında",
+    "description": "Kas krampları ağrılı, uzun süren ve istemsiz kas kasılmalarıdır. Ayrı olarak kaydedilen fasikülasyonlardan (kısa seğirmeler) farklıdır. Kramplar ALS’de özellikle geceleri yaygındır ve uykuyu bozabilir. Kalıpları belirlemek için günlük kramp sayısını kaydet.",
+    "fields": {
+        "value": {
+            "label": "Kramp sayısı"
+        }
+    }
+}

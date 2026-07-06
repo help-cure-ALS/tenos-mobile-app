@@ -1,0 +1,118 @@
+{
+  "name": "PHQ-9",
+  "displayName": "Cribado de depresión",
+  "shortName": "PHQ-9",
+  "exportTitle": "Cribado de depresión – PHQ-9",
+  "description": "El PHQ-9 (Patient Health Questionnaire) es una herramienta de cribado validada para detectar y medir la gravedad de la depresión. Se utiliza en todo el mundo en la práctica clínica y en investigación.",
+  "introText": "Durante las últimas 2 semanas, ¿con qué frecuencia te han molestado los siguientes problemas?",
+  "intro": {
+    "title": "Cribado de depresión",
+    "description": "Este cuestionario trata sobre cómo te has sentido durante las últimas dos semanas. Responde honestamente a las 9 preguntas: no hay respuestas correctas o incorrectas. Tus respuestas ayudan a identificar posibles síntomas depresivos.",
+    "buttonText": "Empezar cuestionario",
+    "researchNote": "Gracias por dedicarle tiempo. Tus respuestas nos ayudan a comprender mejor la progresión de la enfermedad y a avanzar en la investigación sobre la ELA."
+  },
+  "domains": {
+    "depression": "Síntomas depresivos"
+  },
+  "questions": {
+    "interest": {
+      "text": "Poco interés o placer en hacer cosas",
+      "exportLabel": "Interés",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "mood": {
+      "text": "Sentirte decaído/a, deprimido/a o sin esperanza",
+      "exportLabel": "Ánimo bajo",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "sleep": {
+      "text": "Dificultad para conciliar o mantener el sueño, o dormir demasiado",
+      "exportLabel": "Sueño",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "energy": {
+      "text": "Sentirte cansado/a o con poca energía",
+      "exportLabel": "Energía",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "appetite": {
+      "text": "Poco apetito o comer en exceso",
+      "exportLabel": "Apetito",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "self_esteem": {
+      "text": "Sentirte mal contigo mismo/a, o pensar que eres un fracaso o que te has fallado a ti mismo/a o a tu familia",
+      "exportLabel": "Autoestima",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "concentration": {
+      "text": "Dificultad para concentrarte en cosas, como leer el periódico o ver la televisión",
+      "exportLabel": "Concentración",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "psychomotor": {
+      "text": "¿Te has movido o hablado tan despacio que otras personas podrían haberlo notado? ¿O, por el contrario, has estado tan inquieto/a o agitado/a que te has movido mucho más de lo habitual?",
+      "exportLabel": "Psicomotricidad",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    },
+    "suicidality": {
+      "text": "Pensamientos de que estarías mejor muerto/a o de hacerte daño de alguna manera",
+      "exportLabel": "Suicidalidad",
+      "options": {
+        "0": { "label": "En absoluto", "description": "Nunca en las últimas 2 semanas" },
+        "1": { "label": "Varios días", "description": "Menos de la mitad de los días" },
+        "2": { "label": "Más de la mitad de los días", "description": "Con frecuencia" },
+        "3": { "label": "Casi todos los días", "description": "Casi a diario" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Síntomas mínimos", "description": "Tus respuestas están dentro del rango no llamativo." },
+      { "label": "Síntomas leves", "description": "Tus respuestas indican un malestar leve." },
+      { "label": "Síntomas moderados", "description": "Tus respuestas indican un malestar notable." },
+      { "label": "Síntomas marcados", "description": "Tus respuestas sugieren un nivel elevado de malestar." },
+      { "label": "Síntomas muy marcados", "description": "Tus respuestas sugieren un alto nivel de malestar." }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Kan basıncı",
+    "shortName": "BP",
+    "descriptionTitle": "Kan basıncı hakkında",
+    "description": "Kan basıncı, atardamarlardaki kanın basıncını ölçer. Sistolik (üst değer) ve diyastolik (alt değer) olarak iki değerle belirtilir. Düzenli takip kardiyovasküler hastalıkların erken fark edilmesine yardımcı olur.",
+    "fields": {
+        "systolic": {
+            "label": "Sistolik"
+        },
+        "diastolic": {
+            "label": "Diyastolik"
+        }
+    }
+}

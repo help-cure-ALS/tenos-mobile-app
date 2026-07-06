@@ -1,0 +1,171 @@
+{
+  "name": "Controllo giornaliero dei sintomi",
+  "shortName": "",
+  "exportTitle": "Controllo giornaliero dei sintomi",
+  "description": "Breve check-in quotidiano per seguire i sintomi principali. I dati vengono sincronizzati automaticamente con le metriche.",
+  "introText": "Come ti senti oggi?",
+  "intro": {
+    "title": "Controllo giornaliero dei sintomi",
+    "description": "Una rapida panoramica del tuo stato attuale. Rispondi a 4 brevi domande su dolore, fatigue, sonno e umore.",
+    "buttonText": "Inizia",
+    "researchNote": "Il controllo quotidiano aiuta a rilevare precocemente cambiamenti e offre al tuo team di cura informazioni preziose."
+  },
+  "domains": {
+    "symptoms": "Sintomi",
+    "sleep": "Sonno",
+    "mood": "Umore"
+  },
+  "questions": {
+    "pain": {
+      "text": "Quanto è forte il tuo dolore oggi?",
+      "exportLabel": "Dolore",
+      "options": {
+        "0": {
+          "label": "Nessun dolore",
+          "description": "Nessun fastidio"
+        },
+        "1": {
+          "label": "Dolore lieve",
+          "description": "Appena percepibile, non fastidioso"
+        },
+        "2": {
+          "label": "Dolore moderato",
+          "description": "Percepibile ma sopportabile"
+        },
+        "3": {
+          "label": "Dolore grave",
+          "description": "Limitante in modo significativo"
+        },
+        "4": {
+          "label": "Dolore molto grave",
+          "description": "Appena tollerabile"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "Quanto ti senti stanco o esausto?",
+      "exportLabel": "Stanchezza",
+      "options": {
+        "0": {
+          "label": "Nessuna fatigue",
+          "description": "Pieno di energia"
+        },
+        "1": {
+          "label": "Leggermente stanco"
+        },
+        "2": {
+          "label": "Leggermente stanco",
+          "description": "Appena percepibile"
+        },
+        "3": {
+          "label": "Leggermente stanco"
+        },
+        "4": {
+          "label": "Moderatamente stanco",
+          "description": "Un po’ limitato"
+        },
+        "5": {
+          "label": "Moderatamente stanco"
+        },
+        "6": {
+          "label": "Abbastanza stanco",
+          "description": "Le attività sono faticose"
+        },
+        "7": {
+          "label": "Abbastanza stanco"
+        },
+        "8": {
+          "label": "Molto stanco",
+          "description": "Serve molto riposo"
+        },
+        "9": {
+          "label": "Molto stanco"
+        },
+        "10": {
+          "label": "Estremamente esausto",
+          "description": "Riesco a fare quasi nulla"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "Com’è stato il tuo sonno la scorsa notte?",
+      "exportLabel": "Sonno",
+      "options": {
+        "0": {
+          "label": "Molto bene",
+          "description": "Sonno ristoratore e continuo"
+        },
+        "2": {
+          "label": "Bene",
+          "description": "Sonno per lo più ristoratore"
+        },
+        "4": {
+          "label": "Discreto",
+          "description": "Un po’ agitato ma sufficiente"
+        },
+        "6": {
+          "label": "Male",
+          "description": "Risvegli multipli, poco recupero"
+        },
+        "8": {
+          "label": "Molto male",
+          "description": "Ho dormito appena"
+        },
+        "10": {
+          "label": "Per niente",
+          "description": "Non ho dormito"
+        }
+      }
+    },
+    "mood": {
+      "text": "Com’è il tuo umore oggi?",
+      "exportLabel": "Umore",
+      "options": {
+        "0": {
+          "label": "Molto buono",
+          "description": "Equilibrato e positivo"
+        },
+        "2": {
+          "label": "Buono",
+          "description": "Per lo più positivo"
+        },
+        "4": {
+          "label": "OK",
+          "description": "Neutro"
+        },
+        "6": {
+          "label": "Basso",
+          "description": "Un po’ giù"
+        },
+        "8": {
+          "label": "Cattivo",
+          "description": "Triste o ansioso"
+        },
+        "10": {
+          "label": "Molto cattivo",
+          "description": "Senza speranza o disperato"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "Buona giornata",
+        "description": "Oggi ti senti relativamente bene."
+      },
+      {
+        "label": "OK",
+        "description": "Una giornata media con piccoli fastidi."
+      },
+      {
+        "label": "Giornata impegnativa",
+        "description": "Oggi è una giornata impegnativa."
+      },
+      {
+        "label": "Giornata particolarmente impegnativa",
+        "description": "Oggi avverti più sintomi."
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Postać ALS i genetyka",
+  "shortName": "Postać ALS",
+  "descriptionTitle": "O postaci ALS i genetyce",
+  "description": "Ta metryka zapisuje, czy ALS jest klasyfikowane jako sporadyczne, rodzinne lub niejasne oraz czy udokumentowano wynik badania genetycznego albo znaną mutację. Informacje genetyczne są szczególnie wrażliwe i udostępniane oddzielnie.",
+  "fields": {}
+}

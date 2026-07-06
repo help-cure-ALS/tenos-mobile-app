@@ -1,0 +1,105 @@
+{
+  "name": "Stadio di King's",
+  "displayName": "Stadio di King's",
+  "shortName": "King's",
+  "description": "Stadio di SLA confermato dal medico secondo King's College, basato sulle regioni colpite e sul coinvolgimento nutrizionale o respiratorio.",
+  "domains": {
+    "structured": "Stadio di King's"
+  },
+  "questions": {
+    "payload": {
+      "text": "Stadio di King's",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "Stadio",
+      "info": "Lo stadio di King's deriva dalle regioni colpite e dai criteri nutrizionali o respiratori rilevanti.",
+      "options": {
+        "1": {
+          "label": "Stadio 1",
+          "description": "Una regione colpita"
+        },
+        "2": {
+          "label": "Stadio 2",
+          "description": "Due regioni colpite"
+        },
+        "3": {
+          "label": "Stadio 3",
+          "description": "Tre regioni colpite"
+        },
+        "4": {
+          "label": "Stadio 4",
+          "description": "Stadio 4, non ulteriormente specificato"
+        },
+        "4A": {
+          "label": "Stadio 4A",
+          "description": "Coinvolgimento nutrizionale"
+        },
+        "4B": {
+          "label": "Stadio 4B",
+          "description": "Coinvolgimento respiratorio"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "Regioni colpite",
+      "info": "Regioni clinicamente colpite usate per la stadiazione.",
+      "options": {
+        "bulbar": {
+          "label": "bulbare"
+        },
+        "upper_limb": {
+          "label": "arto superiore"
+        },
+        "lower_limb": {
+          "label": "arto inferiore"
+        },
+        "thoracic": {
+          "label": "toracico/respiratorio"
+        }
+      }
+    },
+    "source": {
+      "label": "Fonte",
+      "info": "Base della valutazione. I valori suggeriti richiedono comunque conferma clinica.",
+      "options": {
+        "manual": {
+          "label": "confermato dal medico"
+        },
+        "suggested_from_exam": {
+          "label": "suggerito dall’esame"
+        },
+        "suggested_from_alsfrs": {
+          "label": "suggerito da ALSFRS-R"
+        },
+        "suggested_from_care": {
+          "label": "suggerito dai dati di cura"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "Motivo stadio 4",
+      "info": "Documenta se lo stadio 4 è determinato da coinvolgimento nutrizionale o respiratorio.",
+      "options": {
+        "nutrition": {
+          "label": "nutrizione"
+        },
+        "respiratory": {
+          "label": "respirazione"
+        },
+        "both": {
+          "label": "nutrizione e respirazione"
+        },
+        "unspecified": {
+          "label": "non specificato"
+        }
+      }
+    },
+    "note": {
+      "label": "Commento",
+      "placeholder": "Commento clinico opzionale"
+    }
+  }
+}

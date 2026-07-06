@@ -1,0 +1,9 @@
+{
+  "name": "Apport hydrique",
+  "shortName": "Liquides",
+  "descriptionTitle": "À propos de l'apport hydrique",
+  "description": "L'apport hydrique quotidien est important pour la santé globale. Dans la SLA, des difficultés de déglutition peuvent réduire la prise de boisson et entraîner une déshydratation. Environ 1,5 à 2 litres par jour sont recommandés. La documentation aide à assurer une hydratation suffisante.",
+  "fields": {
+    "value": { "label": "Quantité de liquide" }
+  }
+}

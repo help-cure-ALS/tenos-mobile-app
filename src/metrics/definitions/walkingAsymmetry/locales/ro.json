@@ -1,0 +1,11 @@
+{
+    "name": "Asimetria mersului",
+    "shortName": "Asimetrie",
+    "descriptionTitle": "Despre asimetria mersului",
+    "description": "Asimetria mersului este procentul de timp în care un picior se mișcă într-un ritm diferit față de celălalt. O valoare mai mare înseamnă un mers mai neuniform. În SLA, poate ajuta la urmărirea unei slăbiciuni asimetrice a picioarelor. Această valoare este importată automat din Apple Sănătate.",
+    "fields": {
+        "value": {
+            "label": "Asimetria mersului"
+        }
+    }
+}

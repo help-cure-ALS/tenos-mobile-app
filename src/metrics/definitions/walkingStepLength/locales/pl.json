@@ -1,0 +1,11 @@
+{
+    "name": "Długość kroku",
+    "shortName": "Dł. kroku",
+    "descriptionTitle": "O długości kroku",
+    "description": "Długość kroku to średnia odległość między kolejnymi krokami, w metrach. W ALS skracanie się długości kroku może odzwierciedlać zmiany chodu. Wartość ta jest importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Długość kroku"
+        }
+    }
+}

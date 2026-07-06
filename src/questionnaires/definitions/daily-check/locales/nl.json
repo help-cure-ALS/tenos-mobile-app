@@ -1,0 +1,171 @@
+{
+  "name": "Dagelijkse symptoomcheck",
+  "shortName": "",
+  "exportTitle": "Dagelijkse symptoomcheck",
+  "description": "Een korte dagelijkse check-in om je belangrijkste symptomen te volgen. Gegevens worden automatisch met je metingen gesynchroniseerd.",
+  "introText": "Hoe voel je je vandaag?",
+  "intro": {
+    "title": "Dagelijkse symptoomcheck",
+    "description": "Een snel overzicht van je huidige toestand. Beantwoord 4 korte vragen over pijn, vermoeidheid, slaap en stemming.",
+    "buttonText": "Start",
+    "researchNote": "Je dagelijkse check helpt veranderingen vroeg te herkennen en geeft je zorgteam waardevolle inzichten."
+  },
+  "domains": {
+    "symptoms": "Symptomen",
+    "sleep": "Slaap",
+    "mood": "Stemming"
+  },
+  "questions": {
+    "pain": {
+      "text": "Hoe ernstig is je pijn vandaag?",
+      "exportLabel": "Pijn",
+      "options": {
+        "0": {
+          "label": "Geen pijn",
+          "description": "Geen ongemak"
+        },
+        "1": {
+          "label": "Milde pijn",
+          "description": "Nauwelijks merkbaar, niet hinderlijk"
+        },
+        "2": {
+          "label": "Matige pijn",
+          "description": "Merkbaar maar draaglijk"
+        },
+        "3": {
+          "label": "Ernstige pijn",
+          "description": "Duidelijk beperkend"
+        },
+        "4": {
+          "label": "Zeer ernstige pijn",
+          "description": "Nauwelijks te verdragen"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "Hoe moe of uitgeput voel je je?",
+      "exportLabel": "Vermoeidheid",
+      "options": {
+        "0": {
+          "label": "Geen vermoeidheid",
+          "description": "Vol energie"
+        },
+        "1": {
+          "label": "Licht moe"
+        },
+        "2": {
+          "label": "Licht moe",
+          "description": "Nauwelijks merkbaar"
+        },
+        "3": {
+          "label": "Licht moe"
+        },
+        "4": {
+          "label": "Matig moe",
+          "description": "Enigszins beperkt"
+        },
+        "5": {
+          "label": "Matig moe"
+        },
+        "6": {
+          "label": "Behoorlijk moe",
+          "description": "Activiteiten kosten moeite"
+        },
+        "7": {
+          "label": "Behoorlijk moe"
+        },
+        "8": {
+          "label": "Zeer moe",
+          "description": "Veel rust nodig"
+        },
+        "9": {
+          "label": "Zeer moe"
+        },
+        "10": {
+          "label": "Extreem uitgeput",
+          "description": "Kan bijna niets doen"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "Hoe heb je vannacht geslapen?",
+      "exportLabel": "Slaap",
+      "options": {
+        "0": {
+          "label": "Zeer goed",
+          "description": "Herstellende, ononderbroken slaap"
+        },
+        "2": {
+          "label": "Goed",
+          "description": "Meestal herstellende slaap"
+        },
+        "4": {
+          "label": "Redelijk",
+          "description": "Wat onrustig maar voldoende"
+        },
+        "6": {
+          "label": "Slecht",
+          "description": "Meerdere keren wakker, weinig herstel"
+        },
+        "8": {
+          "label": "Zeer slecht",
+          "description": "Nauwelijks geslapen"
+        },
+        "10": {
+          "label": "Helemaal niet",
+          "description": "Niet geslapen"
+        }
+      }
+    },
+    "mood": {
+      "text": "Hoe is je stemming vandaag?",
+      "exportLabel": "Stemming",
+      "options": {
+        "0": {
+          "label": "Zeer goed",
+          "description": "In balans en positief"
+        },
+        "2": {
+          "label": "Goed",
+          "description": "Meestal positief"
+        },
+        "4": {
+          "label": "Oké",
+          "description": "Neutraal"
+        },
+        "6": {
+          "label": "Laag",
+          "description": "Wat somber"
+        },
+        "8": {
+          "label": "Slecht",
+          "description": "Verdrietig of angstig"
+        },
+        "10": {
+          "label": "Zeer slecht",
+          "description": "Hopeloos of wanhopig"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "Goede dag",
+        "description": "Je voelt je vandaag relatief goed."
+      },
+      {
+        "label": "Oké",
+        "description": "Een gemiddelde dag met lichte klachten."
+      },
+      {
+        "label": "Uitdagende dag",
+        "description": "Vandaag is een uitdagende dag."
+      },
+      {
+        "label": "Bijzonder uitdagende dag",
+        "description": "Je ervaart vandaag meer symptomen."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Suicidalità (item 9 PHQ-9)",
+  "shortName": "Suicidalità",
+  "descriptionTitle": "Informazioni sulla suicidalità",
+  "description": "Questa metrica registra la risposta alla domanda 9 del questionario PHQ-9: \"Pensieri che sarebbe meglio essere morti o farsi del male in qualche modo\". Valori > 0 richiedono particolare attenzione clinica. Questa metrica serve al riconoscimento precoce e deve sempre essere valutata nel contesto clinico.",
+  "fields": {
+    "value": {
+      "label": "Suicidalità",
+      "valueLabels": {
+        "0": "Per niente",
+        "1": "Per diversi giorni",
+        "2": "Per più della metà dei giorni",
+        "3": "Quasi ogni giorno"
+      }
+    }
+  }
+}

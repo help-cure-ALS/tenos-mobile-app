@@ -1,0 +1,92 @@
+{
+    "name": "Suivi respiratoire",
+    "displayName": "Suivi respiratoire",
+    "shortName": "Suivi respiratoire",
+    "exportTitle": "Suivi respiratoire",
+    "description": "Enregistre les symptômes pouvant indiquer des changements dans votre assistance respiratoire. Des réponses régulières aident à détecter les changements précocement.",
+    "introText": "Les questions suivantes portent sur votre état au cours des derniers jours.",
+    "intro": {
+        "title": "Suivi respiratoire",
+        "description": "Ce questionnaire enregistre les symptômes liés à votre assistance respiratoire à travers 6 courtes questions.",
+        "researchNote": "Des réponses régulières aident à détecter les changements précocement et à en discuter avec votre équipe soignante.",
+        "buttonText": "Commencer le questionnaire"
+    },
+    "domains": {
+        "symptoms": "Symptômes"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Je me réveille avec des maux de tête.",
+            "exportLabel": "Céphalées",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        },
+        "dizziness": {
+            "text": "J'ai des vertiges, surtout au réveil.",
+            "exportLabel": "Vertiges",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Je me sens anormalement fatigué(e) ou somnolent(e) pendant la journée.",
+            "exportLabel": "Somnolence",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        },
+        "concentration": {
+            "text": "J'ai du mal à me concentrer.",
+            "exportLabel": "Concentration",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Je me réveille la nuit ou je dors de manière agitée.",
+            "exportLabel": "Sommeil",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Je manque d'air pendant la journée, par ex. en parlant ou au repos.",
+            "exportLabel": "Dyspnée",
+            "options": {
+                "0": { "label": "Pas du tout" },
+                "1": { "label": "Rarement" },
+                "2": { "label": "Parfois" },
+                "3": { "label": "Souvent" },
+                "4": { "label": "Presque toujours" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Peu de symptômes", "description": "Vos réponses indiquent peu ou pas de gêne." },
+            { "label": "Symptômes notables", "description": "Vos réponses indiquent une gêne notable." },
+            { "label": "Symptômes importants", "description": "Vos réponses indiquent une gêne importante." }
+        ]
+    }
+}

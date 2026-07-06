@@ -1,0 +1,11 @@
+{
+    "name": "Pas",
+    "shortName": "Pas",
+    "descriptionTitle": "À propos du nombre de pas",
+    "description": "Le nombre de pas quotidien est une mesure simple de l'activité au quotidien. Dans la SLA, une tendance à la baisse peut refléter une mobilité qui diminue. Les pas sont importés automatiquement depuis Apple Santé ou Health Connect ; aucune saisie manuelle n'est nécessaire.",
+    "fields": {
+        "value": {
+            "label": "Pas"
+        }
+    }
+}

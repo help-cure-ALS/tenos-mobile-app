@@ -1,0 +1,9 @@
+{
+    "name": "Kalorienaufnahme",
+    "shortName": "Kalorien",
+    "descriptionTitle": "Über Kalorienaufnahme",
+    "description": "Die tägliche Kalorienaufnahme ist bei ALS besonders wichtig, da der Körper durch die Erkrankung oft einen erhöhten Energiebedarf hat. Gleichzeitig können Schluckbeschwerden die Nahrungsaufnahme erschweren. Eine ausreichende Kalorienzufuhr kann den Krankheitsverlauf positiv beeinflussen. Besprich deine Zielwerte mit einem Arzt oder Ernährungsberater.",
+    "fields": {
+        "value": { "label": "Kalorien" }
+    }
+}

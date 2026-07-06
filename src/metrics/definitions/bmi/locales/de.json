@@ -1,0 +1,9 @@
+{
+    "name": "Body-Mass-Index",
+    "shortName": "BMI",
+    "descriptionTitle": "Über Body-Mass-Index",
+    "description": "Der Body-Mass-Index (BMI) ist ein Maß für das Verhältnis von Körpergewicht zu Körpergröße. Er wird berechnet als Gewicht (kg) geteilt durch Körpergröße (m) zum Quadrat. Bei ALS ist ein BMI im oberen Normalbereich oft mit einem besseren Verlauf assoziiert.",
+    "fields": {
+        "value": { "label": "BMI" }
+    }
+}

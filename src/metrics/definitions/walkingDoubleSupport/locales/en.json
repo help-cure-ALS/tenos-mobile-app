@@ -1,0 +1,9 @@
+{
+    "name": "Double Support Time",
+    "shortName": "Double Support",
+    "descriptionTitle": "About Double Support Time",
+    "description": "Double support time is the percentage of the walking cycle during which both feet are on the ground. A higher value often indicates a more cautious, less stable gait and a higher fall risk. In ALS, this can help track balance changes. This value is imported automatically from Apple Health on iPhone.",
+    "fields": {
+        "value": { "label": "Double Support Time" }
+    }
+}

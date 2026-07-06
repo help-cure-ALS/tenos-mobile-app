@@ -1,0 +1,11 @@
+{
+  "name": "Tempo di deglutizione",
+  "shortName": "Deglutizione",
+  "descriptionTitle": "Informazioni sul tempo di deglutizione",
+  "description": "Il tempo di deglutizione misura quanto tempo serve per deglutire una quantità definita (ad es. 150 ml di acqua). Nella SLA, la disfagia (difficoltà di deglutizione) può rendere difficile l’assunzione di cibo e aumentare il rischio di aspirazione. Un tempo prolungato può indicare sintomi bulbari progressivi. I valori normali sono sotto 20 secondi per 150 ml di acqua.",
+  "fields": {
+    "value": {
+      "label": "Tempo di deglutizione"
+    }
+  }
+}

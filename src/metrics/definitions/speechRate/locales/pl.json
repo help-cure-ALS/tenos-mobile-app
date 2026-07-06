@@ -1,0 +1,11 @@
+{
+  "name": "Tempo mowy",
+  "shortName": "Mowa",
+  "descriptionTitle": "O tempie mowy",
+  "description": "Tempo mowy mierzy, ile słów można wypowiedzieć na minutę. W ALS zajęcie opuszkowe może prowadzić do spowolnionej i niewyraźnej mowy (dyzartrii). Prawidłowe tempo mowy wynosi około 120-150 słów na minutę. Regularny pomiar pomaga wcześnie wykrywać zmiany.",
+  "fields": {
+    "value": {
+      "label": "Słowa na minutę"
+    }
+  }
+}

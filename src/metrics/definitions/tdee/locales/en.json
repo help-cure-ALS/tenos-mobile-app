@@ -1,0 +1,7 @@
+{
+    "name": "Energy Needs",
+    "shortName": "TDEE",
+    "descriptionTitle": "About Energy Needs",
+    "description": "The Total Daily Energy Expenditure (TDEE) is calculated using the Kasarskis formula, specifically developed for ALS patients. The calculation considers your basal metabolic rate, activity level (based on ALSFRS-6), and ALS-specific adjustments.",
+    "fields": {}
+}

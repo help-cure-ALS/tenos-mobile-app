@@ -1,0 +1,105 @@
+{
+    "name": "King's Evresi",
+    "displayName": "King's Evresi",
+    "shortName": "King's",
+    "description": "Etkilenen bölgeler ile beslenme veya solunum tutulumuna dayalı, King's College’a göre klinisyen tarafından doğrulanan ALS evresi.",
+    "domains": {
+        "structured": "King's Evresi"
+    },
+    "questions": {
+        "payload": {
+            "text": "King's Evresi",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Evre",
+            "info": "King's Evresi, etkilenen bölgeler ve ilgili beslenme veya solunum kriterlerinden türetilir.",
+            "options": {
+                "1": {
+                    "label": "Evre 1",
+                    "description": "Bir etkilenen bölge"
+                },
+                "2": {
+                    "label": "Evre 2",
+                    "description": "İki etkilenen bölge"
+                },
+                "3": {
+                    "label": "Evre 3",
+                    "description": "Üç etkilenen bölge"
+                },
+                "4": {
+                    "label": "Evre 4",
+                    "description": "Evre 4, daha fazla belirtilmemiş"
+                },
+                "4A": {
+                    "label": "Evre 4A",
+                    "description": "Beslenme tutulumu"
+                },
+                "4B": {
+                    "label": "Evre 4B",
+                    "description": "Solunum tutulumu"
+                }
+            }
+        },
+        "affectedRegions": {
+            "label": "Etkilenen bölgeler",
+            "info": "Evreleme için kullanılan klinik olarak etkilenen bölgeler.",
+            "options": {
+                "bulbar": {
+                    "label": "bulber"
+                },
+                "upper_limb": {
+                    "label": "üst ekstremite"
+                },
+                "lower_limb": {
+                    "label": "alt ekstremite"
+                },
+                "thoracic": {
+                    "label": "torasik/solunum"
+                }
+            }
+        },
+        "source": {
+            "label": "Kaynak",
+            "info": "Değerlendirmenin temeli. Önerilen değerler yine de klinisyen onayı gerektirir.",
+            "options": {
+                "manual": {
+                    "label": "klinisyen tarafından doğrulandı"
+                },
+                "suggested_from_exam": {
+                    "label": "muayeneden önerildi"
+                },
+                "suggested_from_alsfrs": {
+                    "label": "ALSFRS-R’den önerildi"
+                },
+                "suggested_from_care": {
+                    "label": "bakım verilerinden önerildi"
+                }
+            }
+        },
+        "stage4Reason": {
+            "label": "Evre 4 nedeni",
+            "info": "Evre 4’ün beslenme veya solunum tutulumundan kaynaklanıp kaynaklanmadığını belgeler.",
+            "options": {
+                "nutrition": {
+                    "label": "beslenme"
+                },
+                "respiratory": {
+                    "label": "solunum"
+                },
+                "both": {
+                    "label": "beslenme ve solunum"
+                },
+                "unspecified": {
+                    "label": "belirtilmedi"
+                }
+            }
+        },
+        "note": {
+            "label": "Yorum",
+            "placeholder": "İsteğe bağlı klinik yorum"
+        }
+    }
+}

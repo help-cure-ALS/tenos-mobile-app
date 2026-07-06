@@ -1,0 +1,11 @@
+{
+  "name": "NFL no LCR",
+  "shortName": "NFL (LCR)",
+  "descriptionTitle": "Sobre NFL no líquido cefalorraquidiano",
+  "description": "A cadeia leve de neurofilamentos (NFL) no líquido cefalorraquidiano (LCR) é um biomarcador sensível de lesão de células nervosas. A medição no LCR muitas vezes fornece valores mais precoces e precisos do que no sangue. Na ELA, níveis elevados de NFL no LCR estão associados a progressão mais rápida. A amostra é obtida por punção lombar.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+    "name": "Badanie neurologiczne",
+    "displayName": "Badanie neurologiczne",
+    "shortName": "Badanie",
+    "description": "Kliniczna dokumentacja ruchowych objawów UMN i LMN w przebiegu ALS.",
+    "domains": {
+        "structured": "Badanie neurologiczne"
+    },
+    "questions": {
+        "payload": {
+            "text": "Badanie neurologiczne",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Region ciała",
+            "info": "Region ciała, w którym dokumentowane są najważniejsze objawy neurologiczne w tym badaniu.",
+            "options": {
+                "head": {
+                    "label": "Głowa/opuszkowy"
+                },
+                "right_arm": {
+                    "label": "Prawe ramię"
+                },
+                "left_arm": {
+                    "label": "Lewe ramię"
+                },
+                "trunk": {
+                    "label": "Tułów/osiowy"
+                },
+                "right_leg": {
+                    "label": "Prawa noga"
+                },
+                "left_leg": {
+                    "label": "Lewa noga"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Nasilenie",
+            "options": {
+                "absent": {
+                    "label": "brak"
+                },
+                "mild": {
+                    "label": "łagodne"
+                },
+                "moderate": {
+                    "label": "umiarkowane"
+                },
+                "severe": {
+                    "label": "ciężkie"
+                },
+                "not_tested": {
+                    "label": "nie badano"
+                }
+            }
+        },
+        "burden": {
+            "label": "Ogólne obciążenie",
+            "options": {
+                "none": {
+                    "label": "brak"
+                },
+                "mild": {
+                    "label": "łagodne"
+                },
+                "moderate": {
+                    "label": "umiarkowane"
+                },
+                "severe": {
+                    "label": "ciężkie"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Sugerowany fenotyp M",
+            "info": "Klasyfikacja kliniczna wzorca neuronów ruchowych dla osi M podtypu ALS.",
+            "options": {
+                "M0": {
+                    "label": "Zrównoważone UMN/LMN"
+                },
+                "M1d": {
+                    "label": "dominacja UMN"
+                },
+                "M1p": {
+                    "label": "czyste UMN"
+                },
+                "M2d": {
+                    "label": "dominacja LMN"
+                },
+                "M2p": {
+                    "label": "czyste LMN"
+                },
+                "M3": {
+                    "label": "zdysocjowane"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: osłabienie",
+            "info": "Dokumentuje kliniczne osłabienie mięśni jako objaw zajęcia dolnego neuronu ruchowego."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: zanik",
+            "info": "Dokumentuje widoczny lub wyczuwalny zanik mięśni w badanym regionie."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fascykulacje",
+            "info": "Dokumentuje spontaniczne drżenia mięśni jako objaw podrażnienia lub uszkodzenia dolnego neuronu ruchowego."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hiperrefleksja",
+            "info": "Dokumentuje wzmożone odruchy ścięgniste jako objaw zajęcia górnego neuronu ruchowego."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: odruchy patologiczne",
+            "info": "Dokumentuje patologiczne odruchy, takie jak objaw Babińskiego lub Hoffmanna."
+        },
+        "umnSpasticity": {
+            "label": "UMN: spastyczność",
+            "info": "Dokumentuje zwiększone napięcie mięśniowe lub spastyczność jako objaw zajęcia górnego neuronu ruchowego."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: spowolniony ruch",
+            "info": "Dokumentuje spowolniony lub słabo skoordynowany ruch niewyjaśniony samym osłabieniem."
+        },
+        "overallUmnBurden": {
+            "label": "Ogólne obciążenie UMN",
+            "info": "Ogólna kliniczna ocena obciążenia objawami górnego neuronu ruchowego."
+        },
+        "overallLmnBurden": {
+            "label": "Ogólne obciążenie LMN",
+            "info": "Ogólna kliniczna ocena obciążenia objawami dolnego neuronu ruchowego."
+        },
+        "note": {
+            "label": "Notatka wewnętrzna",
+            "info": "Opcjonalna dodatkowa notatka do badania. Ta notatka nie jest uwzględniana w donacjach badawczych.",
+            "placeholder": "Opcjonalnie"
+        },
+        "clinicalRegion": {
+            "label": "Region ALS",
+            "info": "Standardowe regiony kliniczne ALS do oceny zajęcia regionalnego.",
+            "options": {
+                "bulbar": {
+                    "label": "Opuszkowy"
+                },
+                "cervical": {
+                    "label": "Szyjny/kończyny górne"
+                },
+                "thoracic": {
+                    "label": "Piersiowy/osiowy"
+                },
+                "lumbosacral": {
+                    "label": "Lędźwiowo-krzyżowy/kończyny dolne"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Lewa"
+                },
+                "right": {
+                    "label": "Prawa"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "brak"
+                },
+                "present": {
+                    "label": "obecne"
+                },
+                "not_tested": {
+                    "label": "nie badano"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "nie badano"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Odwodzenie barku"
+                },
+                "elbow_flexion": {
+                    "label": "Zgięcie łokcia"
+                },
+                "elbow_extension": {
+                    "label": "Wyprost łokcia"
+                },
+                "wrist_extension": {
+                    "label": "Wyprost nadgarstka"
+                },
+                "finger_abduction": {
+                    "label": "Odwodzenie palców"
+                },
+                "hip_flexion": {
+                    "label": "Zgięcie biodra"
+                },
+                "knee_extension": {
+                    "label": "Wyprost kolana"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Zgięcie grzbietowe stopy"
+                },
+                "toe_extension": {
+                    "label": "Wyprost palców stopy"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Odruch z bicepsa"
+                },
+                "triceps": {
+                    "label": "Odruch z tricepsa"
+                },
+                "brachioradialis": {
+                    "label": "Odruch ramienno-promieniowy"
+                },
+                "patellar": {
+                    "label": "Odruch kolanowy"
+                },
+                "achilles": {
+                    "label": "Odruch skokowy"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "nie badano"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Objawy piramidowe",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Odruch dłoniowo-bródkowy"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "Objawy LMN",
+            "options": {
+                "atrophy": {
+                    "label": "Zanik mięśni"
+                },
+                "fasciculations": {
+                    "label": "Fascykulacje"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Objawy opuszkowe",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Zanik języka"
+                },
+                "tongue_fasciculations": {
+                    "label": "Fascykulacje języka"
+                },
+                "dysarthria": {
+                    "label": "Dyzartria"
+                },
+                "dysphagia": {
+                    "label": "Dysfagia"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Zajęcie regionalne",
+            "info": "Rejestruje zajęcie UMN i LMN w czterech regionach klinicznych ALS."
+        },
+        "mrcStrength": {
+            "label": "Badanie siły MRC",
+            "info": "Dokumentuje siłę w skali MRC od 0 do 5. Lewa strona jest zawsze przed prawą."
+        },
+        "reflexes": {
+            "label": "Odruchy",
+            "info": "Dokumentuje odruchy ścięgniste osobno dla stron, lewa przed prawą."
+        },
+        "pathologicalSigns": {
+            "label": "Objawy piramidowe",
+            "info": "Dokumentuje patologiczne odruchy sugerujące zajęcie UMN."
+        },
+        "lmnSideSigns": {
+            "label": "Objawy LMN",
+            "info": "Dokumentuje zanik i fascykulacje osobno dla stron."
+        },
+        "bulbarSigns": {
+            "label": "Objawy opuszkowe",
+            "info": "Dokumentuje typowe objawy opuszkowe, takie jak zanik języka, fascykulacje języka, dyzartria i dysfagia."
+        }
+    }
+}

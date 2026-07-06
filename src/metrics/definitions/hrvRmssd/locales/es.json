@@ -1,0 +1,11 @@
+{
+    "name": "Variabilidad de la frecuencia cardíaca",
+    "shortName": "VFC",
+    "descriptionTitle": "Acerca de la variabilidad de la frecuencia cardíaca",
+    "description": "La variabilidad de la frecuencia cardíaca (VFC) es la variación del tiempo entre latidos, en milisegundos, y refleja la actividad del sistema nervioso autónomo. En Android se mide como RMSSD y se importa automáticamente desde Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Variabilidad de la frecuencia cardíaca"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Capacitate vitală forțată",
+    "shortName": "FVC",
+    "descriptionTitle": "Despre FVC",
+    "description": "Capacitatea vitală forțată (FVC) măsoară volumul maxim de aer care poate fi expirat după o inspirație profundă. În ALS, FVC este unul dintre cei mai importanți indicatori ai funcției respiratorii și progresiei bolii. O scădere sub 50% din valoarea prezisă poate indica necesitatea suportului respirator.",
+    "fields": {
+        "value": {
+            "label": "FVC"
+        }
+    }
+}

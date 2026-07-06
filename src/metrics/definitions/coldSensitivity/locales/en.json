@@ -1,0 +1,17 @@
+{
+    "name": "Cold Sensitivity",
+    "shortName": "Cold",
+    "descriptionTitle": "About Cold Sensitivity",
+    "description": "Cold sensitivity is a common symptom in ALS. It can be caused by reduced muscle mass, autonomic dysfunction, or decreased physical activity. Tracking helps to identify patterns and adjust measures such as warmer clothing or room temperature. (0 = None, 1 = Mild, 2 = Moderate, 3 = Severe)",
+    "fields": {
+        "value": {
+            "label": "Cold Sensitivity",
+            "valueLabels": {
+                "0": "None",
+                "1": "Mild",
+                "2": "Moderate",
+                "3": "Severe"
+            }
+        }
+    }
+}

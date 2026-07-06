@@ -1,0 +1,359 @@
+{
+    "name": "神经系统检查",
+    "displayName": "神经系统检查",
+    "shortName": "检查",
+    "description": "ALS病程中运动性UMN和LMN表现的临床记录。",
+    "domains": {
+        "structured": "神经系统检查"
+    },
+    "questions": {
+        "payload": {
+            "text": "神经系统检查",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "身体区域",
+            "info": "记录本次检查中最相关神经体征的身体区域。",
+            "options": {
+                "head": {
+                    "label": "头部/延髓"
+                },
+                "right_arm": {
+                    "label": "右臂"
+                },
+                "left_arm": {
+                    "label": "左臂"
+                },
+                "trunk": {
+                    "label": "躯干/轴性"
+                },
+                "right_leg": {
+                    "label": "右腿"
+                },
+                "left_leg": {
+                    "label": "左腿"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "严重程度",
+            "options": {
+                "absent": {
+                    "label": "无"
+                },
+                "mild": {
+                    "label": "轻度"
+                },
+                "moderate": {
+                    "label": "中度"
+                },
+                "severe": {
+                    "label": "重度"
+                },
+                "not_tested": {
+                    "label": "未检查"
+                }
+            }
+        },
+        "burden": {
+            "label": "总体负担",
+            "options": {
+                "none": {
+                    "label": "无"
+                },
+                "mild": {
+                    "label": "轻度"
+                },
+                "moderate": {
+                    "label": "中度"
+                },
+                "severe": {
+                    "label": "重度"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "建议的M表型",
+            "info": "ALS亚型M轴中运动神经元模式的临床分类。",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN平衡"
+                },
+                "M1d": {
+                    "label": "UMN占优"
+                },
+                "M1p": {
+                    "label": "纯UMN"
+                },
+                "M2d": {
+                    "label": "LMN占优"
+                },
+                "M2p": {
+                    "label": "纯LMN"
+                },
+                "M3": {
+                    "label": "分离型"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN：无力",
+            "info": "记录作为下运动神经元受累体征的临床肌无力。"
+        },
+        "lmnAtrophy": {
+            "label": "LMN：萎缩",
+            "info": "记录检查区域可见或可触及的肌肉萎缩。"
+        },
+        "lmnFasciculations": {
+            "label": "LMN：肌束颤动",
+            "info": "记录作为下运动神经元刺激或损伤体征的自发性肌肉抽动。"
+        },
+        "umnHyperreflexia": {
+            "label": "UMN：反射亢进",
+            "info": "记录作为上运动神经元受累体征的深腱反射增强。"
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN：病理反射",
+            "info": "记录Babinski或Hoffmann等病理反射体征。"
+        },
+        "umnSpasticity": {
+            "label": "UMN：痉挛状态",
+            "info": "记录作为上运动神经元受累体征的肌张力增高或痉挛状态。"
+        },
+        "umnSlowedMovement": {
+            "label": "UMN：运动迟缓",
+            "info": "记录不能仅由无力解释的运动迟缓或协调不良。"
+        },
+        "overallUmnBurden": {
+            "label": "UMN总体负担",
+            "info": "上运动神经元体征负担的总体临床估计。"
+        },
+        "overallLmnBurden": {
+            "label": "LMN总体负担",
+            "info": "下运动神经元体征负担的总体临床估计。"
+        },
+        "note": {
+            "label": "内部备注",
+            "info": "检查的可选附加备注。此备注不会包含在研究捐赠中。",
+            "placeholder": "可选"
+        },
+        "clinicalRegion": {
+            "label": "ALS区域",
+            "info": "用于评估区域受累的标准ALS临床区域。",
+            "options": {
+                "bulbar": {
+                    "label": "延髓"
+                },
+                "cervical": {
+                    "label": "颈段/上肢"
+                },
+                "thoracic": {
+                    "label": "胸段/轴性"
+                },
+                "lumbosacral": {
+                    "label": "腰骶段/下肢"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "左"
+                },
+                "right": {
+                    "label": "右"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "无"
+                },
+                "present": {
+                    "label": "有"
+                },
+                "not_tested": {
+                    "label": "未检查"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "未检查"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "肩外展"
+                },
+                "elbow_flexion": {
+                    "label": "肘屈曲"
+                },
+                "elbow_extension": {
+                    "label": "肘伸展"
+                },
+                "wrist_extension": {
+                    "label": "腕伸展"
+                },
+                "finger_abduction": {
+                    "label": "手指外展"
+                },
+                "hip_flexion": {
+                    "label": "髋屈曲"
+                },
+                "knee_extension": {
+                    "label": "膝伸展"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "踝背屈"
+                },
+                "toe_extension": {
+                    "label": "脚趾伸展"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "肱二头肌反射"
+                },
+                "triceps": {
+                    "label": "肱三头肌反射"
+                },
+                "brachioradialis": {
+                    "label": "桡骨膜反射"
+                },
+                "patellar": {
+                    "label": "膝反射"
+                },
+                "achilles": {
+                    "label": "跟腱反射"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "未检查"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "锥体束征",
+            "options": {
+                "babinski": {
+                    "label": "Babinski征"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann征"
+                },
+                "palmomental": {
+                    "label": "掌颏反射"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN体征",
+            "options": {
+                "atrophy": {
+                    "label": "肌萎缩"
+                },
+                "fasciculations": {
+                    "label": "肌束颤动"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "延髓体征",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "舌萎缩"
+                },
+                "tongue_fasciculations": {
+                    "label": "舌肌束颤动"
+                },
+                "dysarthria": {
+                    "label": "构音障碍"
+                },
+                "dysphagia": {
+                    "label": "吞咽困难"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "区域受累",
+            "info": "记录四个ALS临床区域的UMN和LMN受累。"
+        },
+        "mrcStrength": {
+            "label": "MRC肌力检查",
+            "info": "按MRC 0到5级记录肌力。始终先记录左侧，再记录右侧。"
+        },
+        "reflexes": {
+            "label": "反射",
+            "info": "按左右分别记录腱反射，左侧在前。"
+        },
+        "pathologicalSigns": {
+            "label": "锥体束征",
+            "info": "记录提示UMN受累的病理反射征。"
+        },
+        "lmnSideSigns": {
+            "label": "LMN体征",
+            "info": "按左右分别记录肌萎缩和肌束颤动。"
+        },
+        "bulbarSigns": {
+            "label": "延髓体征",
+            "info": "记录舌萎缩、舌肌束颤动、构音障碍和吞咽困难等典型延髓体征。"
+        }
+    }
+}

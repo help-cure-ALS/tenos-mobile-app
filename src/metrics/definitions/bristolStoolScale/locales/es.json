@@ -1,0 +1,20 @@
+{
+  "name": "Consistencia de las heces",
+  "shortName": "Heces",
+  "descriptionTitle": "Sobre la escala de heces de Bristol",
+  "description": "La escala de Bristol es una herramienta clínica para evaluar la consistencia de las heces. En la ELA, el estreñimiento es frecuente debido a la reducción de la movilidad, la debilidad de la musculatura abdominal o la medicación. Los tipos 3-4 se consideran ideales. Los tipos 1-2 indican estreñimiento y los tipos 6-7 diarrea. (1 = Duras/en bolitas, 4 = Ideal, 7 = Líquidas)",
+  "fields": {
+    "value": {
+      "label": "Tipo de heces",
+      "valueLabels": {
+        "1": "Tipo 1 - Bolas duras separadas",
+        "2": "Tipo 2 - Forma de salchicha y grumosa",
+        "3": "Tipo 3 - Salchicha con grietas",
+        "4": "Tipo 4 - Lisa y blanda (ideal)",
+        "5": "Tipo 5 - Trozos blandos",
+        "6": "Tipo 6 - Trozos blandos y pastosos",
+        "7": "Tipo 7 - Acuosa, líquida"
+      }
+    }
+  }
+}

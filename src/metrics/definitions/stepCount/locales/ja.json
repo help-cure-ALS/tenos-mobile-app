@@ -1,0 +1,11 @@
+{
+    "name": "歩数",
+    "shortName": "歩数",
+    "descriptionTitle": "歩数について",
+    "description": "1日の歩数は日常的な活動量を示す簡単な指標です。ALSでは、減少傾向は移動能力の低下を反映することがあります。歩数はAppleヘルスケアまたはHealth Connectから自動的に取り込まれ、手動入力は不要です。",
+    "fields": {
+        "value": {
+            "label": "歩数"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Vücut yağ oranı",
+    "shortName": "Vücut yağı",
+    "descriptionTitle": "Vücut yağ oranı hakkında",
+    "description": "Vücut yağ oranı, vücut ağırlığının ne kadarının yağ dokusundan oluştuğunu gösterir. ALS’de vücut yağ oranını izlemek önemlidir; çünkü kilo sabit kalırken kas kütlesi kaybı yağ oranında artışa işaret edebilir. Düzenli ölçümler vücut kompozisyonunu takip etmeye yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Vücut yağ oranı"
+        }
+    }
+}

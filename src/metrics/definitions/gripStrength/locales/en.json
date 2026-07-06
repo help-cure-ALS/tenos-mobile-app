@@ -1,0 +1,10 @@
+{
+    "name": "Grip Strength",
+    "shortName": "Grip",
+    "descriptionTitle": "About Grip Strength",
+    "description": "Grip strength measures the maximum force that can be exerted with the hand. It is measured with a hand dynamometer and is an objective indicator of muscle strength. In ALS, grip strength can help document the progression of muscle weakness. Normal values vary by age and sex (men: 30-55 kg, women: 20-35 kg).",
+    "fields": {
+        "left": { "label": "Left" },
+        "right": { "label": "Right" }
+    }
+}

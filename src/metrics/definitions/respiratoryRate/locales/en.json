@@ -1,0 +1,9 @@
+{
+    "name": "Respiratory Rate",
+    "shortName": "Resp. Rate",
+    "descriptionTitle": "About Respiratory Rate",
+    "description": "The respiratory rate is the number of breaths per minute. In ALS, respiratory function is a key measure; a rising resting respiratory rate can be an early sign of respiratory muscle weakness. This value is imported automatically from Apple Health or Health Connect (often measured during sleep) and shown as a daily average.",
+    "fields": {
+        "value": { "label": "Respiratory Rate" }
+    }
+}

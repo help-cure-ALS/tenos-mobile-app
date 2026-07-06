@@ -1,0 +1,11 @@
+{
+    "name": "Procent de grăsime corporală",
+    "shortName": "Grăsime corporală",
+    "descriptionTitle": "Despre procentul de grăsime corporală",
+    "description": "Procentul de grăsime corporală indică ce parte din greutatea corpului este formată din țesut adipos. În ALS, monitorizarea procentului de grăsime corporală este importantă deoarece pierderea masei musculare la o greutate constantă poate indica o creștere a procentului de grăsime. Măsurătorile regulate ajută la urmărirea compoziției corporale.",
+    "fields": {
+        "value": {
+            "label": "Procent de grăsime corporală"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Oxigénio no sangue",
+  "shortName": "SpO2",
+  "descriptionTitle": "Sobre o oxigénio no sangue",
+  "description": "A saturação de oxigénio (SpO2) mostra que percentagem da hemoglobina no sangue está carregada com oxigénio. Na ELA, o enfraquecimento dos músculos respiratórios pode levar a níveis de oxigénio mais baixos, especialmente à noite. Os valores normais situam-se entre 95% e 100%. A monitorização regular ajuda a detetar precocemente problemas respiratórios.",
+  "fields": {
+    "value": {
+      "label": "Saturação de oxigénio"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+    "name": "Forma ALS și genetică",
+    "displayName": "Forma ALS și genetică",
+    "shortName": "Forma ALS",
+    "description": "Documentarea ALS sporadice sau familiale, a istoricului familial și a constatărilor genetice cunoscute.",
+    "domains": {
+        "structured": "Forma ALS și genetică"
+    },
+    "questions": {
+        "payload": {
+            "text": "Forma ALS și genetică",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "diseaseForm": {
+            "label": "Forma ALS",
+            "info": "Clasificarea clinică dacă ALS este sporadică, familială sau neclară.",
+            "options": {
+                "sporadic": {
+                    "label": "sporadică"
+                },
+                "familial": {
+                    "label": "familială"
+                },
+                "suspected_familial": {
+                    "label": "familială suspectată"
+                },
+                "unclear": {
+                    "label": "neclar"
+                }
+            }
+        },
+        "familyHistory": {
+            "label": "Istoric familial",
+            "info": "Documentează ALS, FTD sau altă boală a neuronului motor cunoscută în familie.",
+            "options": {
+                "none_known": {
+                    "label": "niciuna cunoscută"
+                },
+                "als": {
+                    "label": "ALS în familie"
+                },
+                "ftd": {
+                    "label": "FTD în familie"
+                },
+                "als_ftd": {
+                    "label": "ALS/FTD în familie"
+                },
+                "other_mnd": {
+                    "label": "altă boală a neuronului motor"
+                },
+                "other_neurodegenerative": {
+                    "label": "alt istoric neurodegenerativ"
+                }
+            }
+        },
+        "testingStatus": {
+            "label": "Testare genetică",
+            "info": "Starea testării genetice. Aplicația nu interpretează date genetice brute.",
+            "options": {
+                "not_tested": {
+                    "label": "netestat"
+                },
+                "planned": {
+                    "label": "planificată"
+                },
+                "pending": {
+                    "label": "în așteptare"
+                },
+                "negative": {
+                    "label": "fără mutație cunoscută"
+                },
+                "vus": {
+                    "label": "variantă cu semnificație incertă"
+                },
+                "pathogenic": {
+                    "label": "variantă patogenă/probabil patogenă"
+                }
+            }
+        },
+        "gene": {
+            "label": "Genă",
+            "info": "Genă cunoscută din documentația clinică sau raportul de laborator.",
+            "placeholder": "Introdu gena",
+            "options": {
+                "C9orf72": {
+                    "label": "C9orf72"
+                },
+                "SOD1": {
+                    "label": "SOD1"
+                },
+                "FUS": {
+                    "label": "FUS"
+                },
+                "TARDBP": {
+                    "label": "TARDBP"
+                },
+                "TBK1": {
+                    "label": "TBK1"
+                },
+                "OPTN": {
+                    "label": "OPTN"
+                },
+                "VCP": {
+                    "label": "VCP"
+                },
+                "other": {
+                    "label": "altă"
+                }
+            }
+        },
+        "source": {
+            "label": "Sursă",
+            "info": "De unde provine această înregistrare? Informațiile genetice trebuie documentate trasabil.",
+            "options": {
+                "patient_reported": {
+                    "label": "raport pacient"
+                },
+                "clinician_documented": {
+                    "label": "documentat de clinician"
+                },
+                "lab_report": {
+                    "label": "laborator"
+                }
+            }
+        },
+        "counselingStatus": {
+            "label": "Consiliere genetică",
+            "info": "Dacă a fost documentată consilierea genetică pentru testare sau discutarea rezultatului.",
+            "options": {
+                "completed": {
+                    "label": "finalizată"
+                },
+                "recommended": {
+                    "label": "recomandată"
+                },
+                "not_done": {
+                    "label": "neefectuată"
+                }
+            }
+        },
+        "otherGene": {
+            "label": "Altă genă",
+            "placeholder": "Numele genei"
+        },
+        "variantText": {
+            "label": "Variantă",
+            "placeholder": "Text scurt opțional despre constatare"
+        },
+        "testDate": {
+            "label": "Data testului",
+            "info": "Luna și anul testării genetice.",
+            "placeholder": "Selectează"
+        },
+        "note": {
+            "label": "Comentariu",
+            "placeholder": "Comentariu opțional"
+        }
+    }
+}

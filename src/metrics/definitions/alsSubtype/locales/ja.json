@@ -1,0 +1,7 @@
+{
+  "name": "ALSサブタイプ",
+  "shortName": "ALSサブタイプ",
+  "descriptionTitle": "ALSサブタイプについて",
+  "description": "ALSサブタイプは、ALS-OPM分類を用いて運動表現型を示します。発症部位、進展、運動ニューロンのパターンを含みます。",
+  "fields": {}
+}

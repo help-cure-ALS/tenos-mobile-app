@@ -1,0 +1,11 @@
+{
+    "name": "NFL în LCR",
+    "shortName": "NFL (LCR)",
+    "descriptionTitle": "Despre NFL în lichidul cefalorahidian",
+    "description": "Lanțul ușor de neurofilament (NFL) în lichidul cefalorahidian (LCR) este un biomarker sensibil pentru deteriorarea celulelor nervoase. Măsurarea în LCR oferă adesea valori mai timpurii și mai precise decât măsurarea în sânge. În ALS, nivelurile crescute de NFL în LCR sunt asociate cu o progresie mai rapidă a bolii. Proba este obținută prin puncție lombară.",
+    "fields": {
+        "value": {
+            "label": "NFL"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Dolore -> Mobilità",
+  "shortName": "Mobilità",
+  "descriptionTitle": "Impatto del dolore sulla mobilità",
+  "description": "Registra quanto il dolore influisce sulla mobilità e sull’attività fisica. Su una scala da 0 (nessun impatto) a 10 (impatto estremo). Una mobilità limitata dal dolore può portare ad altri problemi di salute.",
+  "fields": {
+    "value": {
+      "label": "Compromissione",
+      "valueLabels": {
+        "0": "Nessuna",
+        "1": "Minima",
+        "2": "Minima",
+        "3": "Lieve",
+        "4": "Moderata",
+        "5": "Moderata",
+        "6": "Moderata",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Molto grave",
+        "10": "Estrema"
+      }
+    }
+  }
+}

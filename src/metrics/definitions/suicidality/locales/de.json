@@ -1,0 +1,17 @@
+{
+    "name": "Suizidalität (PHQ-9 Frage 9)",
+    "shortName": "Suizidalität",
+    "descriptionTitle": "Über Suizidalität",
+    "description": "Diese Metrik erfasst die Antwort auf Frage 9 des PHQ-9 Fragebogens: \"Gedanken, dass du lieber tot wärst oder dir Leid zufügen möchtest\". Werte > 0 erfordern besondere klinische Aufmerksamkeit. Diese Metrik dient der Früherkennung und sollte immer im klinischen Kontext bewertet werden.",
+    "fields": {
+        "value": {
+            "label": "Suizidalität",
+            "valueLabels": {
+                "0": "Überhaupt nicht",
+                "1": "An einzelnen Tagen",
+                "2": "An mehr als der Hälfte der Tage",
+                "3": "Beinahe jeden Tag"
+            }
+        }
+    }
+}

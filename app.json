@@ -1,0 +1,96 @@
+{
+  "expo": {
+    "name": "TENOS",
+    "slug": "ALS",
+    "version": "1.0.6",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "enabled": false,
+      "fallbackToCacheTimeout": 0
+    },
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "als",
+    "userInterfaceStyle": "automatic",
+    "locales": {
+      "de": "./languages/de.json",
+      "en": "./languages/en.json",
+      "es": "./languages/es.json",
+      "fr": "./languages/fr.json",
+      "it": "./languages/it.json",
+      "nl": "./languages/nl.json",
+      "pl": "./languages/pl.json",
+      "pt": "./languages/pt.json",
+      "ro": "./languages/ro.json",
+      "tr": "./languages/tr.json",
+      "zh": "./languages/zh.json",
+      "ja": "./languages/ja.json"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.tenos.als",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "app.tenos.als",
+        "image": "./assets/images/splash-android.png",
+        "imageWidth": 240,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash.png",
+          "resizeMode": "contain",
+          "imageWidth": 220,
+          "backgroundColor": "#5A246B",
+          "dark": {
+            "image": "./assets/images/splash-dark.png",
+            "backgroundColor": "#5A246B"
+          },
+          "android": {
+            "imageWidth": 150
+          }
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Camera access is required to scan QR codes for device pairing and clinic verification."
+        }
+      ],
+      "expo-secure-store",
+      "@react-native-community/datetimepicker",
+      "expo-localization",
+      "expo-updates",
+      "expo-web-browser",
+      "expo-sharing",
+      "expo-font",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {}
+    }
+  }
+}

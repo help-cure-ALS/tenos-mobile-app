@@ -1,0 +1,7 @@
+{
+  "name": "Forma di SLA e genetica",
+  "shortName": "Forma di SLA",
+  "descriptionTitle": "Informazioni su forma di SLA e genetica",
+  "description": "Questa metrica registra se la SLA è classificata come sporadica, familiare o non chiara e se è documentato un reperto genetico o una mutazione nota. Le informazioni genetiche sono particolarmente sensibili e vengono condivise separatamente.",
+  "fields": {}
+}

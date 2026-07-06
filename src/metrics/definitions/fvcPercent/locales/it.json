@@ -1,0 +1,11 @@
+{
+  "name": "FVC % del previsto",
+  "shortName": "FVC %",
+  "descriptionTitle": "Informazioni su FVC % del previsto",
+  "description": "La FVC in percentuale del previsto confronta la capacità vitale forzata misurata con il valore atteso per età, sesso e altezza. Valori superiori all’80% sono considerati normali. Nella SLA, un calo sotto il 50% è considerato critico e può richiedere l’avvio di ventilazione non invasiva.",
+  "fields": {
+    "value": {
+      "label": "FVC % previsto"
+    }
+  }
+}

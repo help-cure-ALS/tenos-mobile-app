@@ -1,0 +1,17 @@
+{
+    "name": "Fasciculations",
+    "shortName": "Fascic.",
+    "descriptionTitle": "About Fasciculations",
+    "description": "Fasciculations are brief, involuntary twitches of individual muscle fibers that may be visible under the skin. They are a typical symptom of ALS and differ from muscle cramps, which are painful and persistent. Tracking helps to identify patterns and document disease progression. (0 = None, 1 = Rare, 2 = Frequent, 3 = Very frequent)",
+    "fields": {
+        "value": {
+            "label": "Fasciculations",
+            "valueLabels": {
+                "0": "None",
+                "1": "Rare",
+                "2": "Frequent",
+                "3": "Very frequent"
+            }
+        }
+    }
+}

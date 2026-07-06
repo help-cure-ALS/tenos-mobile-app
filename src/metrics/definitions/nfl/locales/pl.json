@@ -1,0 +1,11 @@
+{
+  "name": "NFL w surowicy",
+  "shortName": "NFL",
+  "descriptionTitle": "O lekkim łańcuchu neurofilamentów",
+  "description": "Lekki łańcuch neurofilamentów (NFL) to biomarker uwalniany do krwi, gdy komórki nerwowe są uszkodzone. Podwyższone poziomy NFL mogą wskazywać na aktywną neurodegenerację. W ALS NFL służy do monitorowania postępu choroby i jako marker prognostyczny.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

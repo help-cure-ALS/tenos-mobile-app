@@ -1,0 +1,9 @@
+{
+  "name": "Frecuencia cardiaca",
+  "shortName": "Pulso",
+  "descriptionTitle": "Sobre la frecuencia cardiaca",
+  "description": "La frecuencia cardiaca indica cuántas veces late el corazón por minuto. Una frecuencia en reposo normal en adultos se sitúa entre 60 y 100 latidos por minuto. En la ELA, la frecuencia cardiaca puede verse afectada por el estrés, los problemas respiratorios o la medicación. Las mediciones regulares ayudan a detectar cambios a tiempo.",
+  "fields": {
+    "value": { "label": "Frecuencia cardiaca" }
+  }
+}

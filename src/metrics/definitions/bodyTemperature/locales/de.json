@@ -1,0 +1,9 @@
+{
+    "name": "Körpertemperatur",
+    "shortName": "Temp.",
+    "descriptionTitle": "Über Körpertemperatur",
+    "description": "Die Körpertemperatur ist ein wichtiger Vitalparameter. Normale Werte liegen zwischen 36,0 und 37,5 °C. Bei ALS kann die Thermoregulation durch autonome Dysfunktion oder reduzierte Muskelmasse beeinträchtigt sein. Eine regelmäßige Messung hilft, Infektionen frühzeitig zu erkennen und Veränderungen in der Temperaturregulation zu dokumentieren.",
+    "fields": {
+        "value": { "label": "Temperatur" }
+    }
+}

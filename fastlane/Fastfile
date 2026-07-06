@@ -1,0 +1,302 @@
+default_platform(:ios)
+
+APP_IDENTIFIER = ENV.fetch("APP_IDENTIFIER", "app.tenos.als")
+ANDROID_PACKAGE = ENV.fetch("ANDROID_PACKAGE", "app.tenos.als")
+
+# Map App Store locale dirs → Google Play locale codes
+PLAY_LOCALE_MAP = {
+  "de-DE"   => "de-DE",
+  "en-US"   => "en-US",
+  "es-ES"   => "es-ES",
+  "fr-FR"   => "fr-FR",
+  "it"      => "it-IT",
+  "ja"      => "ja-JP",
+  "nl-NL"   => "nl-NL",
+  "pl"      => "pl-PL",
+  "pt-PT"   => "pt-PT",
+  "ro"      => "ro",
+  "tr"      => "tr-TR",
+  "zh-Hans" => "zh-CN",
+}
+
+# Map iOS metadata filenames → Google Play metadata filenames.
+PLAY_FILE_MAP = {
+  "name.txt"          => "title.txt",
+  "description.txt"   => "full_description.txt",
+  "subtitle.txt"      => "short_description.txt",
+}
+
+# Build a temporary Google Play metadata tree from the shared iOS metadata.
+def build_play_metadata(src_path, languages: nil)
+  require "fileutils"
+
+  src_path = File.expand_path(src_path)
+  dest = File.join(Dir.tmpdir, "fastlane_play_metadata")
+  FileUtils.rm_rf(dest)
+  FileUtils.mkdir_p(dest)
+
+  locales = languages ? languages.split(",").map(&:strip) : PLAY_LOCALE_MAP.keys
+  copied = 0
+
+  locales.each do |ios_locale|
+    play_locale = PLAY_LOCALE_MAP[ios_locale]
+    next unless play_locale
+
+    src_dir = File.join(src_path, ios_locale)
+    next unless File.directory?(src_dir)
+
+    PLAY_FILE_MAP.each do |ios_file, play_file|
+      src_file = File.join(src_dir, ios_file)
+      next unless File.exist?(src_file)
+
+      dest_file = File.join(dest, play_locale, play_file)
+      FileUtils.mkdir_p(File.dirname(dest_file))
+      FileUtils.cp(src_file, dest_file)
+      copied += 1
+    end
+  end
+
+  UI.message("Mapped #{copied} metadata files to #{dest}")
+  UI.user_error!("No metadata files found in #{src_path}") if copied == 0
+
+  dest
+end
+
+platform :ios do
+  desc "Upload metadata and screenshots to App Store Connect"
+  lane :metadata do
+    require "json"
+
+    asc_app_id = ENV["ASC_APP_ID"].to_s.strip
+    app_version = ENV["APP_VERSION"].to_s.strip
+
+    if app_version.empty?
+      app_config = JSON.parse(File.read(File.expand_path("../app.json", __dir__)))
+      app_version = app_config.dig("expo", "version").to_s.strip
+    end
+
+    api_key = app_store_connect_api_key(
+      key_id: ENV["ASC_KEY_ID"],
+      issuer_id: ENV["ASC_ISSUER_ID"],
+      key_filepath: ENV["ASC_KEY_PATH"] || "./fastlane/AuthKey.p8",
+    )
+
+    meta_path = "./fastlane/metadata"
+
+    if ENV["LANGUAGES"]
+      require "fileutils"
+      meta_path = File.join(Dir.tmpdir, "fastlane_metadata_filtered")
+      FileUtils.rm_rf(meta_path)
+      FileUtils.mkdir_p(meta_path)
+      ENV["LANGUAGES"].split(",").each do |lang|
+        src = File.join("./fastlane/metadata", lang)
+        FileUtils.cp_r(src, meta_path) if File.directory?(src)
+      end
+    end
+
+    deliver_options = {
+      api_key: api_key,
+      skip_binary_upload: true,
+      skip_screenshots: false,
+      force: true,
+      app_version: app_version,
+      metadata_path: meta_path,
+      screenshots_path: "./fastlane/screenshots",
+      copyright: "#{Time.now.year} Help Cure ALS e.V.",
+      precheck_include_in_app_purchases: false,
+      app_review_information: {
+        notes: ENV.fetch(
+          "APP_REVIEW_NOTES",
+          "TENOS does not require a demo login. Account setup is performed in-app. The app is for personal health documentation and does not provide diagnoses or treatment recommendations."
+        ),
+      },
+    }
+
+    if asc_app_id.empty?
+      deliver_options[:app_identifier] = APP_IDENTIFIER
+    else
+      deliver_options[:app] = asc_app_id.to_i
+      deliver_options[:app_identifier] = ""
+    end
+
+    deliver(deliver_options)
+  end
+
+  desc "Download current metadata from App Store Connect"
+  lane :fetch_metadata do
+    require "json"
+    key_path = File.expand_path(ENV["ASC_KEY_PATH"] || "AuthKey.p8", __dir__)
+    api_key_json = File.join(Dir.tmpdir, "fastlane_api_key.json")
+
+    File.write(api_key_json, JSON.generate({
+      key_id: ENV["ASC_KEY_ID"],
+      issuer_id: ENV["ASC_ISSUER_ID"],
+      key: File.read(key_path),
+      in_house: false,
+    }))
+
+    sh(
+      "fastlane", "deliver", "download_metadata",
+      "--api_key_path", api_key_json,
+      "-a", APP_IDENTIFIER,
+      "--metadata_path", "../fastlane/metadata",
+    )
+  ensure
+    File.delete(api_key_json) if api_key_json && File.exist?(api_key_json)
+  end
+end
+
+platform :android do
+  desc "Upload store listing metadata to Google Play (reuses shared iOS metadata with locale mapping)"
+  lane :metadata do
+    require "google/apis/androidpublisher_v3"
+    require "googleauth"
+
+    json_key_path = File.expand_path(
+      ENV.fetch("PLAY_JSON_KEY_PATH"),
+      __dir__,
+    )
+
+    meta_path = build_play_metadata(
+      File.expand_path("metadata", __dir__),
+      languages: ENV["LANGUAGES"],
+    )
+
+    # Authenticate via Service Account
+    auth = Google::Auth::ServiceAccountCredentials.make_creds(
+      json_key_io: File.open(json_key_path),
+      scope: "https://www.googleapis.com/auth/androidpublisher",
+    )
+
+    publisher = Google::Apis::AndroidpublisherV3::AndroidPublisherService.new
+    publisher.authorization = auth
+
+    # Open an edit
+    edit = publisher.insert_edit(ANDROID_PACKAGE)
+    edit_id = edit.id
+
+    # Update listing for each locale
+    updated = 0
+    Dir.glob(File.join(meta_path, "*")).select { |d| File.directory?(d) }.each do |lang_dir|
+      locale = File.basename(lang_dir)
+      listing = Google::Apis::AndroidpublisherV3::Listing.new
+
+      title_file = File.join(lang_dir, "title.txt")
+      listing.title = File.read(title_file).strip if File.exist?(title_file)
+
+      full_file = File.join(lang_dir, "full_description.txt")
+      listing.full_description = File.read(full_file).strip if File.exist?(full_file)
+
+      short_file = File.join(lang_dir, "short_description.txt")
+      listing.short_description = File.read(short_file).strip if File.exist?(short_file)
+
+      publisher.update_edit_listing(ANDROID_PACKAGE, edit_id, locale, listing)
+      updated += 1
+      UI.message("  ✓ #{locale}")
+    end
+
+    # Commit the edit
+    publisher.commit_edit(ANDROID_PACKAGE, edit_id)
+    UI.success("Updated store listings for #{updated} locales.")
+  end
+
+  desc "Upload release notes to Google Play for a specific track"
+  lane :release_notes do
+    require "google/apis/androidpublisher_v3"
+    require "googleauth"
+
+    track_name = ENV.fetch("TRACK", "production")
+    version_code = ENV["VERSION_CODE"]&.to_i
+
+    json_key_path = File.expand_path(
+      ENV.fetch("PLAY_JSON_KEY_PATH"),
+      __dir__,
+    )
+
+    android_meta = File.expand_path("metadata/android", __dir__)
+
+    # Collect release notes from Android changelog files,
+    # falling back to shared iOS release_notes.txt per locale
+    notes = []
+
+    PLAY_LOCALE_MAP.each do |ios_locale, play_locale|
+      changelog_dir = File.join(android_meta, play_locale, "changelogs")
+
+      note_file = if version_code && File.exist?(File.join(changelog_dir, "#{version_code}.txt"))
+                    File.join(changelog_dir, "#{version_code}.txt")
+                  elsif File.exist?(File.join(changelog_dir, "default.txt"))
+                    File.join(changelog_dir, "default.txt")
+                  end
+
+      # Fall back to shared iOS release_notes.txt
+      unless note_file
+        shared = File.join(File.expand_path("metadata", __dir__), ios_locale, "release_notes.txt")
+        note_file = shared if File.exist?(shared)
+      end
+
+      next unless note_file
+
+      text = File.read(note_file).strip
+      next if text.empty?
+
+      notes << Google::Apis::AndroidpublisherV3::LocalizedText.new(
+        language: play_locale,
+        text: text,
+      )
+      UI.message("  ✓ #{play_locale}: #{text.lines.first.strip}")
+    end
+
+    UI.user_error!("No release notes found") if notes.empty?
+
+    # Authenticate
+    auth = Google::Auth::ServiceAccountCredentials.make_creds(
+      json_key_io: File.open(json_key_path),
+      scope: "https://www.googleapis.com/auth/androidpublisher",
+    )
+
+    publisher = Google::Apis::AndroidpublisherV3::AndroidPublisherService.new
+    publisher.authorization = auth
+
+    # Open an edit
+    edit = publisher.insert_edit(ANDROID_PACKAGE)
+    edit_id = edit.id
+
+    # Get the track and find the target release
+    track = publisher.get_edit_track(ANDROID_PACKAGE, edit_id, track_name)
+    UI.user_error!("No releases on track '#{track_name}'") if track.releases.nil? || track.releases.empty?
+
+    target = if version_code
+               track.releases.find { |r| r.version_codes&.map(&:to_i)&.include?(version_code) }
+             else
+               track.releases.last
+             end
+
+    UI.user_error!("Release not found on track '#{track_name}'") unless target
+
+    # Set release notes and commit
+    target.release_notes = notes
+
+    publisher.update_edit_track(ANDROID_PACKAGE, edit_id, track_name, track)
+    publisher.commit_edit(ANDROID_PACKAGE, edit_id)
+
+    vc = version_code || target.version_codes&.last
+    UI.success("Updated release notes for #{notes.size} locales on '#{track_name}' (versionCode: #{vc}).")
+  end
+
+  desc "Download current metadata from Google Play"
+  lane :fetch_metadata do
+    json_key = ENV.fetch("PLAY_JSON_KEY_PATH")
+
+    supply(
+      json_key: json_key,
+      package_name: ANDROID_PACKAGE,
+      metadata_path: "./fastlane/metadata/android",
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+    )
+  end
+end

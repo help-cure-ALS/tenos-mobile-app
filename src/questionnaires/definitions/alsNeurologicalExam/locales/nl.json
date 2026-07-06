@@ -1,0 +1,359 @@
+{
+    "name": "Neurologisch onderzoek",
+    "displayName": "Neurologisch onderzoek",
+    "shortName": "Onderzoek",
+    "description": "Klinische documentatie van motorische UMN- en LMN-bevindingen tijdens het ALS-beloop.",
+    "domains": {
+        "structured": "Neurologisch onderzoek"
+    },
+    "questions": {
+        "payload": {
+            "text": "Neurologisch onderzoek",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Lichaamsregio",
+            "info": "Lichaamsregio waar de meest relevante neurologische tekenen in dit onderzoek worden gedocumenteerd.",
+            "options": {
+                "head": {
+                    "label": "Hoofd/bulbair"
+                },
+                "right_arm": {
+                    "label": "Rechterarm"
+                },
+                "left_arm": {
+                    "label": "Linkerarm"
+                },
+                "trunk": {
+                    "label": "Romp/axiaal"
+                },
+                "right_leg": {
+                    "label": "Rechterbeen"
+                },
+                "left_leg": {
+                    "label": "Linkerbeen"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Ernst",
+            "options": {
+                "absent": {
+                    "label": "afwezig"
+                },
+                "mild": {
+                    "label": "mild"
+                },
+                "moderate": {
+                    "label": "matig"
+                },
+                "severe": {
+                    "label": "ernstig"
+                },
+                "not_tested": {
+                    "label": "niet getest"
+                }
+            }
+        },
+        "burden": {
+            "label": "Totale belasting",
+            "options": {
+                "none": {
+                    "label": "geen"
+                },
+                "mild": {
+                    "label": "mild"
+                },
+                "moderate": {
+                    "label": "matig"
+                },
+                "severe": {
+                    "label": "ernstig"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Voorgesteld M-fenotype",
+            "info": "Klinische classificatie van het motorneuronpatroon voor de M-as van het ALS-subtype.",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN in balans"
+                },
+                "M1d": {
+                    "label": "UMN-dominant"
+                },
+                "M1p": {
+                    "label": "zuiver UMN"
+                },
+                "M2d": {
+                    "label": "LMN-dominant"
+                },
+                "M2p": {
+                    "label": "zuiver LMN"
+                },
+                "M3": {
+                    "label": "gedissocieerd"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: zwakte",
+            "info": "Documenteert klinische spierzwakte als teken van betrokkenheid van het onderste motorneuron."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: atrofie",
+            "info": "Documenteert zichtbare of voelbare spierafname in de onderzochte regio."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fasciculaties",
+            "info": "Documenteert spontane spiertrekkingen als teken van irritatie of schade van het onderste motorneuron."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hyperreflexie",
+            "info": "Documenteert verhoogde peesreflexen als teken van betrokkenheid van het bovenste motorneuron."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: pathologische reflexen",
+            "info": "Documenteert pathologische reflextekens zoals Babinski of Hoffmann."
+        },
+        "umnSpasticity": {
+            "label": "UMN: spasticiteit",
+            "info": "Documenteert verhoogde spiertonus of spasticiteit als teken van betrokkenheid van het bovenste motorneuron."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: vertraagde beweging",
+            "info": "Documenteert vertraagde of slecht gecoördineerde beweging die niet alleen door zwakte wordt verklaard."
+        },
+        "overallUmnBurden": {
+            "label": "Totale UMN-belasting",
+            "info": "Algemene klinische schatting van de belasting door tekenen van het bovenste motorneuron."
+        },
+        "overallLmnBurden": {
+            "label": "Totale LMN-belasting",
+            "info": "Algemene klinische schatting van de belasting door tekenen van het onderste motorneuron."
+        },
+        "note": {
+            "label": "Interne notitie",
+            "info": "Optionele extra notitie voor het onderzoek. Deze notitie wordt niet opgenomen in onderzoeksdonaties.",
+            "placeholder": "Optioneel"
+        },
+        "clinicalRegion": {
+            "label": "ALS-regio",
+            "info": "Standaard klinische ALS-regio’s voor beoordeling van regionale betrokkenheid.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulbair"
+                },
+                "cervical": {
+                    "label": "Cervicaal/armen"
+                },
+                "thoracic": {
+                    "label": "Thoracaal/axiaal"
+                },
+                "lumbosacral": {
+                    "label": "Lumbosacraal/benen"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Links"
+                },
+                "right": {
+                    "label": "Rechts"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "afwezig"
+                },
+                "present": {
+                    "label": "aanwezig"
+                },
+                "not_tested": {
+                    "label": "niet getest"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "niet getest"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Schouderabductie"
+                },
+                "elbow_flexion": {
+                    "label": "Elleboogflexie"
+                },
+                "elbow_extension": {
+                    "label": "Elleboogextensie"
+                },
+                "wrist_extension": {
+                    "label": "Polsextensie"
+                },
+                "finger_abduction": {
+                    "label": "Vingerabductie"
+                },
+                "hip_flexion": {
+                    "label": "Heupflexie"
+                },
+                "knee_extension": {
+                    "label": "Knie-extensie"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Voetheffing"
+                },
+                "toe_extension": {
+                    "label": "Teenextensie"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Bicepsreflex"
+                },
+                "triceps": {
+                    "label": "Tricepsreflex"
+                },
+                "brachioradialis": {
+                    "label": "Brachioradialisreflex"
+                },
+                "patellar": {
+                    "label": "Patellareflex"
+                },
+                "achilles": {
+                    "label": "Achillespeesreflex"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "niet getest"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Piramidale tekenen",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Palmomentaalreflex"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN-tekenen",
+            "options": {
+                "atrophy": {
+                    "label": "Atrofie"
+                },
+                "fasciculations": {
+                    "label": "Fasciculaties"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Bulbaire tekenen",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Tongatrofie"
+                },
+                "tongue_fasciculations": {
+                    "label": "Tongfasciculaties"
+                },
+                "dysarthria": {
+                    "label": "Dysartrie"
+                },
+                "dysphagia": {
+                    "label": "Dysfagie"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Regionale betrokkenheid",
+            "info": "Legt UMN- en LMN-betrokkenheid vast in de vier klinische ALS-regio’s."
+        },
+        "mrcStrength": {
+            "label": "MRC-krachtonderzoek",
+            "info": "Documenteert kracht op de MRC-schaal van 0 tot 5. Links wordt altijd vóór rechts vastgelegd."
+        },
+        "reflexes": {
+            "label": "Reflexen",
+            "info": "Documenteert peesreflexen per zijde, links vóór rechts."
+        },
+        "pathologicalSigns": {
+            "label": "Piramidale tekenen",
+            "info": "Documenteert pathologische reflextekens passend bij UMN-betrokkenheid."
+        },
+        "lmnSideSigns": {
+            "label": "LMN-tekenen",
+            "info": "Documenteert atrofie en fasciculaties per zijde."
+        },
+        "bulbarSigns": {
+            "label": "Bulbaire tekenen",
+            "info": "Documenteert typische bulbaire tekenen zoals tongatrofie, tongfasciculaties, dysartrie en dysfagie."
+        }
+    }
+}

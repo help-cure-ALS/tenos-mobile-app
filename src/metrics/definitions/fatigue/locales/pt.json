@@ -1,0 +1,24 @@
+{
+  "name": "Fatigue",
+  "shortName": "Fatigue",
+  "descriptionTitle": "Sobre fadiga",
+  "description": "A fadiga é avaliada numa escala de 0 (sem fadiga) a 10 (exaustão extrema). Na ELA, a fadiga é um sintoma comum que pode ser causada pelo aumento do gasto energético nas atividades diárias, problemas respiratórios ou perturbações do sono. A documentação ajuda a identificar padrões e ajustar o planeamento diário.",
+  "fields": {
+    "value": {
+      "label": "Fadiga",
+      "valueLabels": {
+        "0": "Nenhuma",
+        "1": "Leve",
+        "2": "Leve",
+        "3": "Leve",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

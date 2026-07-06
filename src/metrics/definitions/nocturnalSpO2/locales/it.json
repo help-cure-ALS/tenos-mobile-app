@@ -1,0 +1,11 @@
+{
+  "name": "Saturazione notturna di ossigeno",
+  "shortName": "SpO2 notte",
+  "descriptionTitle": "Informazioni sulla saturazione notturna di ossigeno",
+  "description": "La saturazione notturna di ossigeno mostra quanto bene il corpo è rifornito di ossigeno durante il sonno. Nella SLA, l’ipoventilazione notturna (respiro superficiale) può comparire prima dei sintomi diurni. Valori sotto il 90% durante il sonno possono indicare debolezza respiratoria precoce. La misurazione idealmente viene eseguita con un pulsossimetro durante la notte.",
+  "fields": {
+    "value": {
+      "label": "SpO2 min. (notte)"
+    }
+  }
+}

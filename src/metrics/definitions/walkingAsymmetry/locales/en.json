@@ -1,0 +1,9 @@
+{
+    "name": "Walking Asymmetry",
+    "shortName": "Asymmetry",
+    "descriptionTitle": "About Walking Asymmetry",
+    "description": "Walking asymmetry is the percentage of time that one foot moves at a different pace than the other. A higher value means a more uneven gait. In ALS, this can help track asymmetric leg weakness. This value is imported automatically from Apple Health on iPhone.",
+    "fields": {
+        "value": { "label": "Walking Asymmetry" }
+    }
+}

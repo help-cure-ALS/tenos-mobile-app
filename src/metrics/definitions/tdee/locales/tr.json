@@ -1,0 +1,7 @@
+{
+    "name": "Enerji gereksinimi",
+    "shortName": "TDEE",
+    "descriptionTitle": "Enerji gereksinimi hakkında",
+    "description": "Toplam günlük enerji harcaması (TDEE), ALS hastaları için özel olarak geliştirilmiş Kasarskis formülüyle hesaplanır. Hesaplama bazal metabolizma hızını, aktivite düzeyini (ALSFRS-6’ya dayalı) ve ALS’ye özgü uyarlamaları dikkate alır.",
+    "fields": {}
+}

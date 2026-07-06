@@ -1,0 +1,9 @@
+{
+    "name": "Forcierte Vitalkapazität",
+    "shortName": "FVC",
+    "descriptionTitle": "Über FVC",
+    "description": "Die forcierte Vitalkapazität (FVC) misst das maximale Luftvolumen, das nach tiefer Einatmung ausgeatmet werden kann. Bei ALS ist die FVC einer der wichtigsten Indikatoren für die Atemfunktion und den Krankheitsverlauf. Ein Abfall unter 50% des Sollwerts kann auf die Notwendigkeit einer Atemunterstützung hinweisen.",
+    "fields": {
+        "value": { "label": "FVC" }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Pourcentage de masse grasse",
+  "shortName": "Graisse",
+  "descriptionTitle": "À propos du pourcentage de masse grasse",
+  "description": "Le pourcentage de masse grasse indique quelle part de votre poids corporel correspond au tissu adipeux. Dans la SLA, le suivi de ce pourcentage est important, car une perte de masse musculaire avec un poids stable peut indiquer une augmentation relative de la masse grasse. Des mesures régulières aident à suivre la composition corporelle.",
+  "fields": {
+    "value": { "label": "Pourcentage de masse grasse" }
+  }
+}

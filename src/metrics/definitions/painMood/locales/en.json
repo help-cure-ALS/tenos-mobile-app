@@ -1,0 +1,24 @@
+{
+    "name": "Pain -> Mood",
+    "shortName": "Mood",
+    "descriptionTitle": "Pain Impact on Mood",
+    "description": "Records how much pain affects your mood. On a scale from 0 (no impact) to 10 (extreme impact). Chronic pain can have significant effects on mental health.",
+    "fields": {
+        "value": {
+            "label": "Impairment",
+            "valueLabels": {
+                "0": "None",
+                "1": "Minimal",
+                "2": "Minimal",
+                "3": "Slight",
+                "4": "Moderate",
+                "5": "Moderate",
+                "6": "Moderate",
+                "7": "Severe",
+                "8": "Severe",
+                "9": "Very severe",
+                "10": "Extreme"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Débit de parole",
+  "shortName": "Parole",
+  "descriptionTitle": "À propos du débit de parole",
+  "description": "Le débit de parole mesure le nombre de mots prononcés par minute. Dans la SLA, une atteinte bulbaire peut ralentir et troubler la parole (dysarthrie). Le débit normal est d'environ 120 à 150 mots par minute. Une mesure régulière aide à détecter tôt les changements.",
+  "fields": {
+    "value": {
+      "label": "Mots par minute"
+    }
+  }
+}

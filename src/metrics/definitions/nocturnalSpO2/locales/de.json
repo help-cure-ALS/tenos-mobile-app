@@ -1,0 +1,9 @@
+{
+    "name": "Nächtliche Sauerstoffsättigung",
+    "shortName": "Nacht-SpO2",
+    "descriptionTitle": "Über nächtliche Sauerstoffsättigung",
+    "description": "Die nächtliche Sauerstoffsättigung zeigt, wie gut der Körper während des Schlafs mit Sauerstoff versorgt wird. Bei ALS kann eine nächtliche Hypoventilation (zu flache Atmung) auftreten, bevor tagsüber Symptome bemerkbar sind. Werte unter 90% während des Schlafs können auf eine beginnende Atemschwäche hinweisen. Die Messung erfolgt idealerweise mit einem Pulsoximeter über Nacht.",
+    "fields": {
+        "value": { "label": "Min. SpO2 (Nacht)" }
+    }
+}

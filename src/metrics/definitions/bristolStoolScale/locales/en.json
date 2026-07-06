@@ -1,0 +1,20 @@
+{
+    "name": "Stool Consistency",
+    "shortName": "Stool",
+    "descriptionTitle": "About the Bristol Stool Scale",
+    "description": "The Bristol Stool Scale is a clinical tool for assessing stool consistency. In ALS, constipation is common due to reduced mobility, weakened abdominal muscles, or medications. Type 3-4 is considered ideal. Type 1-2 indicates constipation, Type 6-7 indicates diarrhea. (1 = Hard/lumpy, 4 = Ideal, 7 = Watery)",
+    "fields": {
+        "value": {
+            "label": "Stool type",
+            "valueLabels": {
+                "1": "Type 1 - Separate hard lumps",
+                "2": "Type 2 - Sausage-shaped, lumpy",
+                "3": "Type 3 - Sausage with cracks",
+                "4": "Type 4 - Smooth and soft (ideal)",
+                "5": "Type 5 - Soft blobs",
+                "6": "Type 6 - Mushy, fluffy pieces",
+                "7": "Type 7 - Watery, liquid"
+            }
+        }
+    }
+}

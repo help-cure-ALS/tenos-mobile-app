@@ -1,0 +1,11 @@
+{
+    "name": "活动能量",
+    "shortName": "活动能量",
+    "descriptionTitle": "关于活动能量",
+    "description": "活动能量是每天通过运动和活动消耗的卡路里（不含静息代谢）。在ALS中，下降趋势可能反映随着行动能力变化而减少的身体活动。该数值会自动从Apple健康或Health Connect导入。",
+    "fields": {
+        "value": {
+            "label": "活动能量"
+        }
+    }
+}

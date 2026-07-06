@@ -1,0 +1,11 @@
+{
+  "name": "Sialorroe",
+  "shortName": "Speeksel",
+  "descriptionTitle": "Over sialorroe",
+  "description": "Overmatige speekselvloed (sialorroe) is een veelvoorkomend symptoom bij ALS en wordt veroorzaakt door slikproblemen, niet door verhoogde speekselproductie. Registreer de ernst op een schaal van 0 (normaal) tot 10 (zeer ernstig). Documentatie helpt de effectiviteit van behandelingen te beoordelen.",
+  "fields": {
+    "value": {
+      "label": "Ernst"
+    }
+  }
+}

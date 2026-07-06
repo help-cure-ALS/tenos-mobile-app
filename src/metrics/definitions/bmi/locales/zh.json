@@ -1,0 +1,11 @@
+{
+  "name": "身体质量指数",
+  "shortName": "BMI",
+  "descriptionTitle": "关于身体质量指数",
+  "description": "身体质量指数（BMI）衡量体重与身高之间的关系。计算方法为体重（kg）除以身高（m）的平方。在ALS中，处于正常范围较高端的BMI通常与更好的结局相关。",
+  "fields": {
+    "value": {
+      "label": "BMI"
+    }
+  }
+}

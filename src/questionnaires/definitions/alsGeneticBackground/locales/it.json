@@ -1,0 +1,161 @@
+{
+  "name": "Forma di SLA e genetica",
+  "displayName": "Forma di SLA e genetica",
+  "shortName": "Forma di SLA",
+  "description": "Documentazione di SLA sporadica o familiare, anamnesi familiare e reperti genetici noti.",
+  "domains": {
+    "structured": "Forma di SLA e genetica"
+  },
+  "questions": {
+    "payload": {
+      "text": "Forma di SLA e genetica",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "diseaseForm": {
+      "label": "Forma di SLA",
+      "info": "Classificazione clinica che indica se la SLA è sporadica, familiare o non chiara.",
+      "options": {
+        "sporadic": {
+          "label": "sporadica"
+        },
+        "familial": {
+          "label": "familiare"
+        },
+        "suspected_familial": {
+          "label": "sospetta familiare"
+        },
+        "unclear": {
+          "label": "non chiara"
+        }
+      }
+    },
+    "familyHistory": {
+      "label": "Anamnesi familiare",
+      "info": "Documenta SLA, FTD o altre malattie del motoneurone note in famiglia.",
+      "options": {
+        "none_known": {
+          "label": "nessuna nota"
+        },
+        "als": {
+          "label": "SLA in famiglia"
+        },
+        "ftd": {
+          "label": "FTD in famiglia"
+        },
+        "als_ftd": {
+          "label": "SLA/FTD in famiglia"
+        },
+        "other_mnd": {
+          "label": "altra malattia del motoneurone"
+        },
+        "other_neurodegenerative": {
+          "label": "altra anamnesi neurodegenerativa"
+        }
+      }
+    },
+    "testingStatus": {
+      "label": "Test genetico",
+      "info": "Stato del test genetico. L’app non interpreta dati genetici grezzi.",
+      "options": {
+        "not_tested": {
+          "label": "non testato"
+        },
+        "planned": {
+          "label": "programmato"
+        },
+        "pending": {
+          "label": "in sospeso"
+        },
+        "negative": {
+          "label": "nessuna mutazione nota"
+        },
+        "vus": {
+          "label": "variante di significato incerto"
+        },
+        "pathogenic": {
+          "label": "variante patogena/probabilmente patogena"
+        }
+      }
+    },
+    "gene": {
+      "label": "Gene",
+      "info": "Gene noto da documentazione clinica o referto di laboratorio.",
+      "placeholder": "Inserisci gene",
+      "options": {
+        "C9orf72": {
+          "label": "C9orf72"
+        },
+        "SOD1": {
+          "label": "SOD1"
+        },
+        "FUS": {
+          "label": "FUS"
+        },
+        "TARDBP": {
+          "label": "TARDBP"
+        },
+        "TBK1": {
+          "label": "TBK1"
+        },
+        "OPTN": {
+          "label": "OPTN"
+        },
+        "VCP": {
+          "label": "VCP"
+        },
+        "other": {
+          "label": "altro"
+        }
+      }
+    },
+    "source": {
+      "label": "Fonte",
+      "info": "Da dove proviene questa voce? Le informazioni genetiche devono essere documentate in modo tracciabile.",
+      "options": {
+        "patient_reported": {
+          "label": "riferito dal paziente"
+        },
+        "clinician_documented": {
+          "label": "documentato dal medico"
+        },
+        "lab_report": {
+          "label": "laboratorio"
+        }
+      }
+    },
+    "counselingStatus": {
+      "label": "Consulenza genetica",
+      "info": "Se è stata documentata una consulenza genetica per test o discussione del risultato.",
+      "options": {
+        "completed": {
+          "label": "completata"
+        },
+        "recommended": {
+          "label": "raccomandata"
+        },
+        "not_done": {
+          "label": "non eseguita"
+        }
+      }
+    },
+    "otherGene": {
+      "label": "Altro gene",
+      "placeholder": "Nome del gene"
+    },
+    "variantText": {
+      "label": "Variante",
+      "placeholder": "Breve testo opzionale del reperto"
+    },
+    "testDate": {
+      "label": "Data del test",
+      "info": "Mese e anno del test genetico.",
+      "placeholder": "Seleziona"
+    },
+    "note": {
+      "label": "Commento",
+      "placeholder": "Commento opzionale"
+    }
+  }
+}

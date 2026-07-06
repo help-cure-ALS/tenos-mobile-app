@@ -1,0 +1,105 @@
+{
+  "name": "Estádio de King's",
+  "displayName": "Estádio de King's",
+  "shortName": "King's",
+  "description": "Estádio da ELA confirmado pelo clínico segundo King's College, baseado nas regiões afetadas e no envolvimento nutricional ou respiratório.",
+  "domains": {
+    "structured": "Estádio de King's"
+  },
+  "questions": {
+    "payload": {
+      "text": "Estádio de King's",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "Estádio",
+      "info": "O estádio de King's deriva das regiões afetadas e dos critérios nutricionais ou respiratórios relevantes.",
+      "options": {
+        "1": {
+          "label": "Estádio 1",
+          "description": "Uma região afetada"
+        },
+        "2": {
+          "label": "Estádio 2",
+          "description": "Duas regiões afetadas"
+        },
+        "3": {
+          "label": "Estádio 3",
+          "description": "Três regiões afetadas"
+        },
+        "4": {
+          "label": "Estádio 4",
+          "description": "Estádio 4, sem especificação adicional"
+        },
+        "4A": {
+          "label": "Estádio 4A",
+          "description": "Envolvimento nutricional"
+        },
+        "4B": {
+          "label": "Estádio 4B",
+          "description": "Envolvimento respiratório"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "Regiões afetadas",
+      "info": "Regiões clinicamente afetadas usadas para o estadiamento.",
+      "options": {
+        "bulbar": {
+          "label": "bulbar"
+        },
+        "upper_limb": {
+          "label": "membro superior"
+        },
+        "lower_limb": {
+          "label": "membro inferior"
+        },
+        "thoracic": {
+          "label": "torácica/respiratória"
+        }
+      }
+    },
+    "source": {
+      "label": "Fonte",
+      "info": "Base da avaliação. Valores sugeridos ainda precisam de confirmação clínica.",
+      "options": {
+        "manual": {
+          "label": "confirmado pelo clínico"
+        },
+        "suggested_from_exam": {
+          "label": "sugerido pelo exame"
+        },
+        "suggested_from_alsfrs": {
+          "label": "sugerido pela ALSFRS-R"
+        },
+        "suggested_from_care": {
+          "label": "sugerido por dados de cuidados"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "Motivo do estádio 4",
+      "info": "Documenta se o estádio 4 é determinado por envolvimento nutricional ou respiratório.",
+      "options": {
+        "nutrition": {
+          "label": "nutrição"
+        },
+        "respiratory": {
+          "label": "respiração"
+        },
+        "both": {
+          "label": "nutrição e respiração"
+        },
+        "unspecified": {
+          "label": "não especificado"
+        }
+      }
+    },
+    "note": {
+      "label": "Comentário",
+      "placeholder": "Comentário clínico opcional"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Ból -> Nastrój",
+  "shortName": "Nastrój",
+  "descriptionTitle": "Wpływ bólu na nastrój",
+  "description": "Rejestruje, jak bardzo ból wpływa na nastrój. W skali od 0 (brak wpływu) do 10 (skrajny wpływ). Przewlekły ból może znacząco wpływać na zdrowie psychiczne.",
+  "fields": {
+    "value": {
+      "label": "Upośledzenie",
+      "valueLabels": {
+        "0": "Brak",
+        "1": "Minimalne",
+        "2": "Minimalne",
+        "3": "Niewielkie",
+        "4": "Umiarkowane",
+        "5": "Umiarkowane",
+        "6": "Umiarkowane",
+        "7": "Ciężkie",
+        "8": "Ciężkie",
+        "9": "Bardzo ciężkie",
+        "10": "Skrajne"
+      }
+    }
+  }
+}

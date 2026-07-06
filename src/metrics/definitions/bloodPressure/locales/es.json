@@ -1,0 +1,10 @@
+{
+  "name": "Presión arterial",
+  "shortName": "PA",
+  "descriptionTitle": "Sobre la presión arterial",
+  "description": "La presión arterial mide la presión de la sangre en las arterias. Se expresa en dos valores: sistólica (valor superior) y diastólica (valor inferior). Un seguimiento regular ayuda a detectar precozmente enfermedades cardiovasculares.",
+  "fields": {
+    "systolic": { "label": "Sistólica" },
+    "diastolic": { "label": "Diastólica" }
+  }
+}

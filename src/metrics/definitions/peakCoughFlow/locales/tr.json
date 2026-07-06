@@ -1,0 +1,11 @@
+{
+    "name": "Tepe öksürük akımı",
+    "shortName": "PCF",
+    "descriptionTitle": "Tepe öksürük akımı hakkında",
+    "description": "Tepe öksürük akımı (PCF), öksürük sırasında maksimum hava hızını ölçer. Solunum yollarındaki sekresyonları ne kadar etkili temizleyebildiğini gösterir. 270 L/dk altındaki değerler solunum yolu enfeksiyonu riskini artırır. 160 L/dk altında öksürük çoğu zaman artık etkili değildir.",
+    "fields": {
+        "value": {
+            "label": "Tepe öksürük akımı"
+        }
+    }
+}

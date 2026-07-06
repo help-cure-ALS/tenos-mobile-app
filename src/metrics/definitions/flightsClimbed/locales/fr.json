@@ -1,0 +1,11 @@
+{
+    "name": "Étages montés",
+    "shortName": "Étages",
+    "descriptionTitle": "À propos des étages montés",
+    "description": "Le nombre d'étages gravis par jour reflète la force et l'endurance des membres inférieurs lors des activités quotidiennes. Dans la SLA, une tendance à la baisse peut indiquer une faiblesse des jambes qui progresse. Cette valeur est importée automatiquement depuis Apple Santé ou Health Connect ; aucune saisie manuelle n'est nécessaire.",
+    "fields": {
+        "value": {
+            "label": "Étages montés"
+        }
+    }
+}

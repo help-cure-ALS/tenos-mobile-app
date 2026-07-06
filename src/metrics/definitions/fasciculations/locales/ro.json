@@ -1,0 +1,17 @@
+{
+    "name": "Fasciculații",
+    "shortName": "Fascic.",
+    "descriptionTitle": "Despre fasciculații",
+    "description": "Fasciculațiile sunt tresăriri scurte, involuntare, ale fibrelor musculare individuale, care pot fi vizibile sub piele. Sunt un simptom tipic al ALS și diferă de crampele musculare, care sunt dureroase și persistente. Urmărirea ajută la identificarea tiparelor și la documentarea progresiei bolii. (0 = Niciuna, 1 = Rare, 2 = Frecvente, 3 = Foarte frecvente)",
+    "fields": {
+        "value": {
+            "label": "Fasciculații",
+            "valueLabels": {
+                "0": "Niciuna",
+                "1": "Rare",
+                "2": "Frecvente",
+                "3": "Foarte frecvente"
+            }
+        }
+    }
+}

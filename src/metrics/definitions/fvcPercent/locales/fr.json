@@ -1,0 +1,9 @@
+{
+  "name": "CVF % de la valeur prédite",
+  "shortName": "CVF %",
+  "descriptionTitle": "À propos du pourcentage de CVF prédite",
+  "description": "La CVF en pourcentage de la valeur prédite compare votre capacité vitale forcée mesurée à la valeur attendue selon votre âge, votre sexe et votre taille. Des valeurs supérieures à 80 % sont considérées comme normales. Dans la SLA, une baisse en dessous de 50 % est jugée critique et peut nécessiter le début d'une ventilation non invasive.",
+  "fields": {
+    "value": { "label": "CVF % prédite" }
+  }
+}

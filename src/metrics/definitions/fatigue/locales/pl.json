@@ -1,0 +1,24 @@
+{
+  "name": "Fatigue",
+  "shortName": "Fatigue",
+  "descriptionTitle": "O zmęczeniu",
+  "description": "Zmęczenie ocenia się w skali od 0 (brak zmęczenia) do 10 (skrajne wyczerpanie). W ALS zmęczenie jest częstym objawem, który może wynikać ze zwiększonego wydatku energetycznego podczas codziennych czynności, problemów z oddychaniem lub zaburzeń snu. Dokumentowanie pomaga rozpoznawać wzorce i dostosować plan dnia.",
+  "fields": {
+    "value": {
+      "label": "Zmęczenie",
+      "valueLabels": {
+        "0": "Brak",
+        "1": "Łagodne",
+        "2": "Łagodne",
+        "3": "Łagodne",
+        "4": "Umiarkowane",
+        "5": "Umiarkowane",
+        "6": "Umiarkowane",
+        "7": "Ciężkie",
+        "8": "Ciężkie",
+        "9": "Ciężkie",
+        "10": "Skrajne"
+      }
+    }
+  }
+}

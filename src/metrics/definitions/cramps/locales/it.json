@@ -1,0 +1,11 @@
+{
+  "name": "Crampi muscolari",
+  "shortName": "Crampi",
+  "descriptionTitle": "Informazioni sui crampi muscolari",
+  "description": "I crampi muscolari sono contrazioni muscolari dolorose, prolungate e involontarie. Si distinguono dalle fascicolazioni (brevi guizzi), registrate separatamente. I crampi sono comuni nella SLA, soprattutto di notte, e possono disturbare il sonno. Registra il numero di crampi al giorno per identificare schemi ricorrenti.",
+  "fields": {
+    "value": {
+      "label": "Numero di crampi"
+    }
+  }
+}

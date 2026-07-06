@@ -1,0 +1,78 @@
+{
+    "name": "Sous-type de SLA",
+    "displayName": "Sous-type de SLA",
+    "shortName": "Sous-type",
+    "description": "Classification clinique du phénotype de SLA selon le site de début, la propagation et le profil des motoneurones.",
+    "domains": {
+        "structured": "Sous-type de SLA"
+    },
+    "questions": {
+        "payload": {
+            "text": "Sous-type de SLA",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Site de début des symptômes",
+            "info": "L’axe O décrit la région corporelle où les premiers symptômes moteurs ont commencé. Il faut retenir une faiblesse ou un mouvement volontaire ralenti/mal coordonné, y compris les symptômes bulbaires, respiratoires ou axiaux. Les fasciculations, l’atrophie musculaire et les signes réflexes seuls ne comptent pas comme début des symptômes.",
+            "options": {
+                "O1": { "label": "Tête/bulbaire" },
+                "O2d": { "label": "Bras distal" },
+                "O2p": { "label": "Bras proximal" },
+                "O2x": { "label": "Bras incertain" },
+                "O3r": { "label": "Respiration" },
+                "O3a": { "label": "Axial/tronc" },
+                "O4d": { "label": "Jambe distale" },
+                "O4p": { "label": "Jambe proximale" },
+                "O4x": { "label": "Jambe incertaine" }
+            }
+        },
+        "propagationStatus": {
+            "label": "Propagation",
+            "info": "L’axe P décrit la propagation verticale des symptômes moteurs depuis la région de début vers une autre région corporelle : tête, bras, tronc ou jambe. La propagation horizontale d’un bras à l’autre ou d’une jambe à l’autre ne compte pas. Les fasciculations, l’atrophie ou les signes réflexes seuls ne comptent pas comme propagation.",
+            "options": {
+                "P0": { "label": "pas de propagation verticale" },
+                "P1": { "label": "propagation survenue" }
+            }
+        },
+        "propagationPattern": {
+            "label": "Propagation",
+            "info": "L’axe P décrit la propagation verticale des symptômes moteurs depuis la région de début vers une autre région corporelle : tête, bras, tronc ou jambe. La propagation horizontale d’un bras à l’autre ou d’une jambe à l’autre ne compte pas. Les fasciculations, l’atrophie ou les signes réflexes seuls ne comptent pas comme propagation.",
+            "options": {
+                "P0n": { "label": "P0(n)", "description": "Pas de propagation verticale ; n = mois jusqu’à l’évaluation" },
+                "P1n": { "label": "P1(n)", "description": "Propagation verticale survenue ; n = mois jusqu’à la propagation" },
+                "P1x": { "label": "P1(x)", "description": "Propagation verticale survenue, moment incertain" }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Phénotype motoneuronal",
+            "info": "L’axe M décrit l’équilibre entre les signes du motoneurone supérieur (UMN) et inférieur (LMN). Les signes UMN incluent un mouvement volontaire ralenti ou mal coordonné, des réflexes vifs, une spasticité ou un affect pseudobulbaire. Les signes LMN incluent une faiblesse avec atrophie, des réflexes absents ou des fasciculations dans les muscles atteints. M0 est équilibré, M1 prédominant UMN, M2 prédominant LMN, M3 dissocié.",
+            "options": {
+                "M0": { "label": "UMN/LMN équilibré" },
+                "M1d": { "label": "UMN dominant" },
+                "M1p": { "label": "UMN pur" },
+                "M2d": { "label": "LMN dominant" },
+                "M2p": { "label": "LMN pur" },
+                "M3": { "label": "dissocié" }
+            }
+        },
+        "certainty": {
+            "label": "Statut",
+            "info": "Le statut décrit le degré de confiance dans la classification clinique : préliminaire pour une première évaluation ou une évaluation pas encore totalement confirmée, confirmé lorsque les constatations sont suffisamment claires, incertain lorsque les critères ne peuvent pas être séparés de façon fiable.",
+            "options": {
+                "preliminary": { "label": "préliminaire" },
+                "confirmed": { "label": "confirmé" },
+                "uncertain": { "label": "incertain" }
+            }
+        },
+        "propagationMonths": {
+            "label": "Mois",
+            "info": "Pour P0(n) : mois entre le début des symptômes et l’évaluation où aucune propagation verticale n’a été trouvée. Pour P1(n) : mois entre le début des symptômes et la première propagation verticale."
+        },
+        "note": {
+            "label": "Commentaire",
+            "placeholder": "Commentaire clinique optionnel"
+        }
+    }
+}

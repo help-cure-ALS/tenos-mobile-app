@@ -1,0 +1,11 @@
+{
+    "name": "Energia aktywna",
+    "shortName": "Energia aktywna",
+    "descriptionTitle": "O energii aktywnej",
+    "description": "Energia aktywna to liczba kalorii spalonych dziennie podczas ruchu i aktywności (bez metabolizmu spoczynkowego). W ALS tendencja spadkowa może odzwierciedlać mniejszą aktywność fizyczną wraz ze zmianami mobilności. Wartość ta jest importowana automatycznie z Apple Zdrowie lub Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Energia aktywna"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Yorgunluk",
+    "shortName": "Yorgunluk",
+    "descriptionTitle": "Yorgunluk hakkında",
+    "description": "Yorgunluk 0 (yorgunluk yok) ile 10 (aşırı bitkinlik) arasında değerlendirilir. ALS’de yorgunluk, günlük aktiviteler için artmış enerji harcaması, solunum sorunları veya uyku bozukluklarından kaynaklanabilen yaygın bir belirtidir. Dokümantasyon kalıpları belirlemeye ve günlük planlamayı ayarlamaya yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Yorgunluk",
+            "valueLabels": {
+                "0": "Yok",
+                "1": "Hafif",
+                "2": "Hafif",
+                "3": "Hafif",
+                "4": "Orta",
+                "5": "Orta",
+                "6": "Orta",
+                "7": "Şiddetli",
+                "8": "Şiddetli",
+                "9": "Şiddetli",
+                "10": "Aşırı"
+            }
+        }
+    }
+}

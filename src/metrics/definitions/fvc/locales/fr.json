@@ -1,0 +1,9 @@
+{
+  "name": "Capacité vitale forcée",
+  "shortName": "CVF",
+  "descriptionTitle": "À propos de la CVF",
+  "description": "La capacité vitale forcée (CVF) mesure le volume d'air maximal pouvant être expiré après une inspiration profonde. Dans la SLA, la CVF est l'un des indicateurs les plus importants de la fonction respiratoire et de la progression de la maladie. Une baisse en dessous de 50 % de la valeur prédite peut indiquer la nécessité d'un soutien respiratoire.",
+  "fields": {
+    "value": { "label": "CVF" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Body Temperature",
+    "shortName": "Temp.",
+    "descriptionTitle": "About Body Temperature",
+    "description": "Body temperature is an important vital parameter. Normal values are between 36.0 and 37.5 °C. In ALS, thermoregulation can be impaired due to autonomic dysfunction or reduced muscle mass. Regular measurement helps to detect infections early and document changes in temperature regulation.",
+    "fields": {
+        "value": { "label": "Temperature" }
+    }
+}

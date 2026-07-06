@@ -1,0 +1,11 @@
+{
+  "name": "Temperatura ciała",
+  "shortName": "Temp.",
+  "descriptionTitle": "O temperaturze ciała",
+  "description": "Temperatura ciała jest ważnym parametrem życiowym. Prawidłowe wartości wynoszą 36,0-37,5 °C. W ALS termoregulacja może być zaburzona z powodu dysfunkcji autonomicznej lub zmniejszonej masy mięśniowej. Regularny pomiar pomaga wcześnie wykrywać infekcje i dokumentować zmiany regulacji temperatury.",
+  "fields": {
+    "value": {
+      "label": "Temperatura"
+    }
+  }
+}

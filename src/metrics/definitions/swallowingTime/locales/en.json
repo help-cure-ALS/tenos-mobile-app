@@ -1,0 +1,11 @@
+{
+    "name": "Swallowing Time",
+    "shortName": "Swallowing",
+    "descriptionTitle": "About Swallowing Time",
+    "description": "Swallowing time measures how long it takes to swallow a defined amount (e.g., 150ml of water). In ALS, dysphagia (swallowing difficulty) can make food intake difficult and increase aspiration risk. Prolonged swallowing time may indicate progressive bulbar symptoms. Normal values are under 20 seconds for 150ml of water.",
+    "fields": {
+        "value": {
+            "label": "Swallowing Time"
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Control diario de síntomas",
+  "shortName": "",
+  "exportTitle": "Control diario de síntomas",
+  "description": "Un breve control diario para seguir tus principales síntomas. Los datos se sincronizan automáticamente con tus métricas.",
+  "introText": "¿Cómo te sientes hoy?",
+  "intro": {
+    "title": "Control diario de síntomas",
+    "description": "Una visión rápida de tu estado actual. Responde a 4 preguntas breves sobre dolor, fatiga, sueño y estado de ánimo.",
+    "buttonText": "Empezar",
+    "researchNote": "Tu control diario ayuda a detectar cambios a tiempo y aporta información valiosa a tu equipo asistencial."
+  },
+  "domains": {
+    "symptoms": "Síntomas",
+    "sleep": "Sueño",
+    "mood": "Estado de ánimo"
+  },
+  "questions": {
+    "pain": {
+      "text": "¿Qué intensidad tiene tu dolor hoy?",
+      "exportLabel": "Dolor",
+      "options": {
+        "0": { "label": "Sin dolor", "description": "Ninguna molestia" },
+        "1": { "label": "Dolor leve", "description": "Apenas perceptible, no molesta" },
+        "2": { "label": "Dolor moderado", "description": "Perceptible pero soportable" },
+        "3": { "label": "Dolor intenso", "description": "Limita claramente" },
+        "4": { "label": "Dolor muy intenso", "description": "Apenas tolerable" }
+      }
+    },
+    "fatigue": {
+      "text": "¿Qué tan cansado/a o agotado/a te sientes?",
+      "exportLabel": "Fatiga",
+      "options": {
+        "0": { "label": "Sin fatiga", "description": "Lleno/a de energía" },
+        "1": { "label": "Ligeramente cansado/a" },
+        "2": { "label": "Ligeramente cansado/a", "description": "Apenas perceptible" },
+        "3": { "label": "Ligeramente cansado/a" },
+        "4": { "label": "Moderadamente cansado/a", "description": "Algo limitado/a" },
+        "5": { "label": "Moderadamente cansado/a" },
+        "6": { "label": "Bastante cansado/a", "description": "Las actividades resultan exigentes" },
+        "7": { "label": "Bastante cansado/a" },
+        "8": { "label": "Muy cansado/a", "description": "Necesitas mucho descanso" },
+        "9": { "label": "Muy cansado/a" },
+        "10": { "label": "Extremadamente agotado/a", "description": "Apenas puedes hacer nada" }
+      }
+    },
+    "sleep_quality": {
+      "text": "¿Cómo dormiste anoche?",
+      "exportLabel": "Sueño",
+      "options": {
+        "0": { "label": "Muy bien", "description": "Sueño reparador e ininterrumpido" },
+        "2": { "label": "Bien", "description": "Sueño mayoritariamente reparador" },
+        "4": { "label": "Regular", "description": "Algo inquieto pero suficiente" },
+        "6": { "label": "Mal", "description": "Te despertaste varias veces, poca recuperación" },
+        "8": { "label": "Muy mal", "description": "Apenas dormiste" },
+        "10": { "label": "Nada", "description": "No dormiste" }
+      }
+    },
+    "mood": {
+      "text": "¿Cómo está tu estado de ánimo hoy?",
+      "exportLabel": "Estado de ánimo",
+      "options": {
+        "0": { "label": "Muy bueno", "description": "Equilibrado y positivo" },
+        "2": { "label": "Bueno", "description": "Mayormente positivo" },
+        "4": { "label": "Aceptable", "description": "Neutro" },
+        "6": { "label": "Bajo", "description": "Algo decaído/a" },
+        "8": { "label": "Malo", "description": "Triste o con ansiedad" },
+        "10": { "label": "Muy malo", "description": "Desesperanzado/a o desesperado/a" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Buen día", "description": "Hoy te sientes relativamente bien." },
+      { "label": "Aceptable", "description": "Un día normal con algunas molestias leves." },
+      { "label": "Día difícil", "description": "Hoy está siendo un día difícil." },
+      { "label": "Día especialmente difícil", "description": "Hoy tienes más síntomas." }
+    ]
+  }
+}

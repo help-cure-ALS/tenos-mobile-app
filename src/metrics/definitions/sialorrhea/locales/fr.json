@@ -1,0 +1,11 @@
+{
+  "name": "Sialorrhée",
+  "shortName": "Salive",
+  "descriptionTitle": "À propos de la sialorrhée",
+  "description": "L'excès de salive (sialorrhée) est un symptôme fréquent dans la SLA. Il est causé par des troubles de la déglutition plutôt que par une production accrue de salive. Enregistrez la sévérité sur une échelle de 0 (normal) à 10 (très sévère). La documentation aide à évaluer l'efficacité des traitements.",
+  "fields": {
+    "value": {
+      "label": "Sévérité"
+    }
+  }
+}

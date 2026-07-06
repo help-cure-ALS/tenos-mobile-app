@@ -1,0 +1,11 @@
+{
+    "name": "Asymetria chodu",
+    "shortName": "Asymetria",
+    "descriptionTitle": "O asymetrii chodu",
+    "description": "Asymetria chodu to odsetek czasu, w którym jedna stopa porusza się w innym tempie niż druga. Wyższa wartość oznacza bardziej nierównomierny chód. W ALS może to pomóc śledzić asymetryczne osłabienie nóg. Wartość ta jest importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Asymetria chodu"
+        }
+    }
+}

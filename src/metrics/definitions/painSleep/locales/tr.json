@@ -1,0 +1,24 @@
+{
+    "name": "Ağrı -> Uyku",
+    "shortName": "Uyku",
+    "descriptionTitle": "Ağrının uykuya etkisi",
+    "description": "Ağrının uykunu ne kadar etkilediğini kaydeder. 0 (etki yok) ile 10 (aşırı etki) arasında bir ölçekte. Ağrıya bağlı uyku bozuklukları yaşam kalitesini önemli ölçüde etkileyebilir.",
+    "fields": {
+        "value": {
+            "label": "Etkilenme",
+            "valueLabels": {
+                "0": "Yok",
+                "1": "Minimal",
+                "2": "Minimal",
+                "3": "Hafif",
+                "4": "Orta",
+                "5": "Orta",
+                "6": "Orta",
+                "7": "Şiddetli",
+                "8": "Şiddetli",
+                "9": "Çok şiddetli",
+                "10": "Aşırı"
+            }
+        }
+    }
+}

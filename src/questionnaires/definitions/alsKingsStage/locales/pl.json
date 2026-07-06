@@ -1,0 +1,105 @@
+{
+  "name": "Stadium King's",
+  "displayName": "Stadium King's",
+  "shortName": "King's",
+  "description": "Potwierdzone przez lekarza stadium ALS według King's College, oparte na zajętych regionach oraz zajęciu żywieniowym lub oddechowym.",
+  "domains": {
+    "structured": "Stadium King's"
+  },
+  "questions": {
+    "payload": {
+      "text": "Stadium King's",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "stage": {
+      "label": "Stadium",
+      "info": "Stadium King's jest wyprowadzane z zajętych regionów i odpowiednich kryteriów żywieniowych lub oddechowych.",
+      "options": {
+        "1": {
+          "label": "Stadium 1",
+          "description": "Jeden zajęty region"
+        },
+        "2": {
+          "label": "Stadium 2",
+          "description": "Dwa zajęte regiony"
+        },
+        "3": {
+          "label": "Stadium 3",
+          "description": "Trzy zajęte regiony"
+        },
+        "4": {
+          "label": "Stadium 4",
+          "description": "Stadium 4, bez dalszego określenia"
+        },
+        "4A": {
+          "label": "Stadium 4A",
+          "description": "Zajęcie żywieniowe"
+        },
+        "4B": {
+          "label": "Stadium 4B",
+          "description": "Zajęcie oddechowe"
+        }
+      }
+    },
+    "affectedRegions": {
+      "label": "Zajęte regiony",
+      "info": "Klinicznie zajęte regiony używane do określenia stadium.",
+      "options": {
+        "bulbar": {
+          "label": "opuszkowy"
+        },
+        "upper_limb": {
+          "label": "kończyna górna"
+        },
+        "lower_limb": {
+          "label": "kończyna dolna"
+        },
+        "thoracic": {
+          "label": "piersiowy/oddechowy"
+        }
+      }
+    },
+    "source": {
+      "label": "Źródło",
+      "info": "Podstawa oceny. Wartości sugerowane nadal wymagają potwierdzenia klinicznego.",
+      "options": {
+        "manual": {
+          "label": "potwierdzone przez lekarza"
+        },
+        "suggested_from_exam": {
+          "label": "sugerowane z badania"
+        },
+        "suggested_from_alsfrs": {
+          "label": "sugerowane z ALSFRS-R"
+        },
+        "suggested_from_care": {
+          "label": "sugerowane z danych opieki"
+        }
+      }
+    },
+    "stage4Reason": {
+      "label": "Powód stadium 4",
+      "info": "Dokumentuje, czy stadium 4 wynika z zajęcia żywieniowego czy oddechowego.",
+      "options": {
+        "nutrition": {
+          "label": "żywienie"
+        },
+        "respiratory": {
+          "label": "oddychanie"
+        },
+        "both": {
+          "label": "żywienie i oddychanie"
+        },
+        "unspecified": {
+          "label": "nie określono"
+        }
+      }
+    },
+    "note": {
+      "label": "Komentarz",
+      "placeholder": "Opcjonalny komentarz kliniczny"
+    }
+  }
+}

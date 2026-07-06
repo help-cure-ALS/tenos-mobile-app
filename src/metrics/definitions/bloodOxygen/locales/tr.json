@@ -1,0 +1,11 @@
+{
+    "name": "Kan oksijeni",
+    "shortName": "SpO2",
+    "descriptionTitle": "Kan oksijeni hakkında",
+    "description": "Oksijen satürasyonu (SpO2), kandaki hemoglobinin yüzde kaçının oksijenle yüklü olduğunu gösterir. ALS’de solunum kaslarının zayıflaması özellikle geceleri daha düşük oksijen düzeylerine yol açabilir. Normal değerler %95 ile %100 arasındadır. Düzenli takip solunum sorunlarının erken fark edilmesine yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Oksijen satürasyonu"
+        }
+    }
+}

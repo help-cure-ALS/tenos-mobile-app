@@ -1,0 +1,72 @@
+{
+    "title": "Legal Notice",
+    "translationNotice": "This is a translation of the German legal notice (Impressum). In case of discrepancies, the German version shall prevail.",
+    "sections": {
+        "provider": {
+            "title": "Information according to § 5 TMG (German Telemedia Act)",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nürnberg\nGermany"
+        },
+        "representation": {
+            "title": "Represented by",
+            "content": "Marie Assimidis, Board Member"
+        },
+        "registration": {
+            "title": "Register Entry",
+            "content": "Registered in the Register of Associations",
+            "court": "Register court: Amtsgericht Nürnberg",
+            "number": "Registration number: VR 203250"
+        },
+        "contact": {
+            "title": "Contact",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Responsible for Content according to § 18(2) MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Nürnberg"
+        },
+        "liability": {
+            "title": "Disclaimer",
+            "content": {
+                "title": "Liability for Content",
+                "text": "The contents of this app have been created with the greatest care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content.",
+                "tmg": "As a non-profit organization, we are responsible for our own content in this app in accordance with § 7(1) TMG under general laws. However, according to §§ 8-10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Medical Disclaimer",
+            "intro": "Important Notice: This app is exclusively intended for personal health documentation and self-observation. The content, questionnaires, and functions provided do not replace in any way:",
+            "items": [
+                "Professional medical advice",
+                "Medical diagnosis",
+                "Medical treatment",
+                "Recommendations from qualified medical professionals"
+            ],
+            "advice": "For health concerns or questions about your health, please always consult a doctor or other qualified medical professional. Never ignore professional medical advice based on information from this app.",
+            "emergency": "In emergencies, call emergency services immediately (112 in Europe, 911 in the US)."
+        },
+        "availability": {
+            "title": "No Guarantee of Availability",
+            "content": "We strive to keep the app and Vault synchronization continuously available. However, temporary outages may occur due to maintenance or technical issues. We cannot guarantee uninterrupted availability."
+        },
+        "links": {
+            "title": "Liability for Links",
+            "content": "This app may contain links to external websites. We have no influence on the content of these external pages. The respective provider or operator is always responsible for the content of the linked pages."
+        },
+        "copyright": {
+            "title": "Copyright",
+            "content": "The content and works created by help cure ALS e.V. in this app are subject to German copyright law. Reproduction, editing, distribution, and any kind of use beyond the limits of copyright law require the written consent of the organization."
+        },
+        "openSource": {
+            "title": "Open Source Components",
+            "content": "This app uses open source software. A complete list of the libraries used and their licenses can be found in the app settings under 'Licenses'."
+        },
+        "about": {
+            "title": "About the Organization",
+            "content": "help cure ALS e.V. is a non-profit organization dedicated to researching and fighting Amyotrophic Lateral Sclerosis (ALS). We support research projects, promote exchange between affected individuals and science, and develop digital tools to improve the quality of life for ALS patients.",
+            "moreInfo": "More information about our work can be found on our website:"
+        }
+    },
+    "lastUpdated": "February 2026"
+}

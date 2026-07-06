@@ -1,0 +1,11 @@
+{
+    "name": "Stabilità del cammino",
+    "shortName": "Stabilità",
+    "descriptionTitle": "Informazioni sulla stabilità del cammino",
+    "description": "La stabilità del cammino di Apple stima, in percentuale, quanto è stabile ed equilibrato il tuo modo di camminare. Una tendenza al ribasso indica un rischio di caduta più elevato. Nella SLA, può aiutare a monitorare i cambiamenti dell'andatura e dell'equilibrio. Questo valore viene importato automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Stabilità del cammino"
+        }
+    }
+}

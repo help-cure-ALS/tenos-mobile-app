@@ -1,0 +1,9 @@
+{
+    "name": "Walking Distance",
+    "shortName": "6MWT",
+    "descriptionTitle": "About the 6-Minute Walk Test",
+    "description": "The 6-Minute Walk Test (6MWT) measures the distance that can be covered in 6 minutes on flat ground. It is a standardized test for assessing functional exercise capacity. In ALS, it can help document the progression of walking ability. Normal values for adults are between 400 and 700 meters.",
+    "fields": {
+        "value": { "label": "Walking Distance" }
+    }
+}

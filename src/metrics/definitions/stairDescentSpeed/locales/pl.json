@@ -1,0 +1,11 @@
+{
+    "name": "Prędkość schodzenia po schodach",
+    "shortName": "Schodzenie",
+    "descriptionTitle": "O prędkości schodzenia po schodach",
+    "description": "Prędkość schodzenia po schodach to tempo schodzenia po schodach, w metrach na sekundę. Schodzenie wymaga dużej równowagi i kontroli nóg, więc tendencja spadkowa może być wczesnym objawem pogarszania się funkcji kończyn dolnych w ALS. Wartość ta jest importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Prędkość schodzenia po schodach"
+        }
+    }
+}

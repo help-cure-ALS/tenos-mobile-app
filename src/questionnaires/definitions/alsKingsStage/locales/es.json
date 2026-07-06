@@ -1,0 +1,63 @@
+{
+    "name": "Estadio King's",
+    "displayName": "Estadio King's",
+    "shortName": "King's",
+    "description": "Estadio de ELA confirmado por el médico según King's College, basado en regiones afectadas y compromiso nutricional o respiratorio.",
+    "domains": {
+        "structured": "Estadio King's"
+    },
+    "questions": {
+        "payload": {
+            "text": "Estadio King's",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Estadio",
+            "info": "El estadio King's se deriva de las regiones afectadas y de criterios nutricionales o respiratorios relevantes.",
+            "options": {
+                "1": { "label": "Estadio 1", "description": "Una región afectada" },
+                "2": { "label": "Estadio 2", "description": "Dos regiones afectadas" },
+                "3": { "label": "Estadio 3", "description": "Tres regiones afectadas" },
+                "4A": { "label": "Estadio 4A", "description": "Compromiso nutricional" },
+                "4B": { "label": "Estadio 4B", "description": "Compromiso respiratorio" },
+                "4": { "label": "Estadio 4", "description": "Estadio 4 sin especificar" }
+            }
+        },
+        "affectedRegions": {
+            "label": "Regiones afectadas",
+            "info": "Regiones clínicamente afectadas utilizadas para la estadificación.",
+            "options": {
+                "bulbar": { "label": "bulbar" },
+                "upper_limb": { "label": "miembro superior" },
+                "lower_limb": { "label": "miembro inferior" },
+                "thoracic": { "label": "torácico/respiratorio" }
+            }
+        },
+        "source": {
+            "label": "Fuente",
+            "info": "Base de la evaluación. Los valores sugeridos también deben ser confirmados por el médico.",
+            "options": {
+                "manual": { "label": "confirmado por clínico" },
+                "suggested_from_exam": { "label": "sugerido por exploración" },
+                "suggested_from_alsfrs": { "label": "sugerido por ALSFRS-R" },
+                "suggested_from_care": { "label": "sugerido por datos asistenciales" }
+            }
+        },
+        "stage4Reason": {
+            "label": "Motivo del estadio 4",
+            "info": "Documenta si el estadio 4 se debe a compromiso nutricional o respiratorio.",
+            "options": {
+                "nutrition": { "label": "nutrición" },
+                "respiratory": { "label": "respiración" },
+                "both": { "label": "nutrición y respiración" },
+                "unspecified": { "label": "sin especificar" }
+            }
+        },
+        "note": {
+            "label": "Comentario",
+            "placeholder": "Comentario clínico opcional"
+        }
+    }
+}

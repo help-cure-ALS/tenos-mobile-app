@@ -1,0 +1,193 @@
+{
+    "name": "BDI-FS",
+    "displayName": "Depresie",
+    "shortName": "BDI-FS",
+    "exportTitle": "Depresie – BDI-FS",
+    "description": "BDI-FS (Beck Depression Inventory - Fast Screen) este un chestionar scurt pentru evaluarea simptomelor cognitive ale depresiei. Se concentrează pe gânduri și sentimente, nu pe simptome fizice.",
+    "introText": "Te rugăm să citești fiecare afirmație și să selectezi răspunsul care descrie cel mai bine cum te-ai simțit în ultimele două săptămâni.",
+    "intro": {
+        "title": "Simptome cognitive ale depresiei",
+        "description": "Acest chestionar evaluează cum gândești despre tine și viața ta. Răspunde sincer la cele 7 întrebări – nu există răspunsuri corecte sau greșite.",
+        "researchNote": "Îți mulțumim pentru deschidere. Răspunsurile tale ajută cercetarea efectelor asociate cu ALS.",
+        "buttonText": "Începe chestionarul"
+    },
+    "domains": {
+        "cognitive": "Simptome cognitive"
+    },
+    "questions": {
+        "sadness": {
+            "text": "Tristețe",
+            "exportLabel": "Tristețe",
+            "options": {
+                "0": {
+                    "label": "Nu sunt trist",
+                    "description": "Nu sunt trist"
+                },
+                "1": {
+                    "label": "Adesea trist",
+                    "description": "Sunt adesea trist"
+                },
+                "2": {
+                    "label": "Tristețe constantă",
+                    "description": "Sunt trist în permanență"
+                },
+                "3": {
+                    "label": "Tristețe insuportabilă",
+                    "description": "Sunt atât de trist încât nu mai suport"
+                }
+            }
+        },
+        "pessimism": {
+            "text": "Pesimism",
+            "exportLabel": "Pesimism",
+            "options": {
+                "0": {
+                    "label": "Nu sunt descurajat",
+                    "description": "Nu sunt descurajat în privința viitorului meu"
+                },
+                "1": {
+                    "label": "Oarecum descurajat",
+                    "description": "Sunt mai descurajat decât eram înainte"
+                },
+                "2": {
+                    "label": "Nu mă aștept la îmbunătățire",
+                    "description": "Nu mă aștept ca lucrurile să se îmbunătățească"
+                },
+                "3": {
+                    "label": "Fără speranță",
+                    "description": "Cred că viitorul meu este fără speranță"
+                }
+            }
+        },
+        "past_failure": {
+            "text": "Eșecuri trecute",
+            "exportLabel": "Eșec",
+            "options": {
+                "0": {
+                    "label": "Nu sunt un eșec",
+                    "description": "Nu mă simt un eșec"
+                },
+                "1": {
+                    "label": "Am eșuat mai mult decât ar fi trebuit",
+                    "description": "Am eșuat mai mult decât ar fi trebuit"
+                },
+                "2": {
+                    "label": "Multe eșecuri",
+                    "description": "Privind înapoi, văd multe eșecuri"
+                },
+                "3": {
+                    "label": "Eșec total",
+                    "description": "Mă simt un eșec total"
+                }
+            }
+        },
+        "loss_of_pleasure": {
+            "text": "Pierderea plăcerii",
+            "exportLabel": "Pierderea plăcerii",
+            "options": {
+                "0": {
+                    "label": "Plăcere normală",
+                    "description": "Mă bucur de lucruri la fel ca întotdeauna"
+                },
+                "1": {
+                    "label": "Mai puțină plăcere",
+                    "description": "Nu mă mai bucur de lucruri ca înainte"
+                },
+                "2": {
+                    "label": "Puțină plăcere",
+                    "description": "Lucrurile îmi aduc foarte puțină plăcere"
+                },
+                "3": {
+                    "label": "Fără plăcere",
+                    "description": "Nu mă mai pot bucura de nimic"
+                }
+            }
+        },
+        "self_dislike": {
+            "text": "Neplăcere față de sine",
+            "exportLabel": "Respingere de sine",
+            "options": {
+                "0": {
+                    "label": "Mulțumit de mine",
+                    "description": "Sunt mulțumit de mine"
+                },
+                "1": {
+                    "label": "Dezamăgit de mine",
+                    "description": "Sunt dezamăgit de mine"
+                },
+                "2": {
+                    "label": "Nu mă plac",
+                    "description": "Nu mă plac"
+                },
+                "3": {
+                    "label": "Mă urăsc",
+                    "description": "Mă urăsc"
+                }
+            }
+        },
+        "self_criticalness": {
+            "text": "Autocritică",
+            "exportLabel": "Autocritică",
+            "options": {
+                "0": {
+                    "label": "Nu sunt autocritic",
+                    "description": "Nu sunt mai critic cu mine decât de obicei"
+                },
+                "1": {
+                    "label": "Mai critic decât înainte",
+                    "description": "Sunt mai critic cu mine decât înainte"
+                },
+                "2": {
+                    "label": "Critic față de toate greșelile",
+                    "description": "Mă critic pentru toate greșelile mele"
+                },
+                "3": {
+                    "label": "Mă învinovățesc",
+                    "description": "Mă învinovățesc pentru tot ce este rău"
+                }
+            }
+        },
+        "suicidal_thoughts": {
+            "text": "Gânduri suicidare",
+            "exportLabel": "Gânduri suicidare",
+            "options": {
+                "0": {
+                    "label": "Fără gânduri",
+                    "description": "Nu am gânduri de a-mi face rău"
+                },
+                "1": {
+                    "label": "Gânduri prezente",
+                    "description": "Am gânduri de a-mi face rău, dar nu aș face-o"
+                },
+                "2": {
+                    "label": "Aș vrea",
+                    "description": "Aș vrea să îmi fac rău"
+                },
+                "3": {
+                    "label": "Aș face-o",
+                    "description": "Mi-aș face rău dacă aș avea ocazia"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Simptome minime",
+                "description": "Răspunsurile tale sugerează simptome inexistente sau doar minime."
+            },
+            {
+                "label": "Simptome ușoare",
+                "description": "Răspunsurile tale sugerează simptome ușoare."
+            },
+            {
+                "label": "Simptome moderate",
+                "description": "Răspunsurile tale sugerează simptome moderate."
+            },
+            {
+                "label": "Simptome severe",
+                "description": "Răspunsurile tale sugerează simptome severe."
+            }
+        ]
+    }
+}

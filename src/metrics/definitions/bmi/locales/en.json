@@ -1,0 +1,9 @@
+{
+    "name": "Body Mass Index",
+    "shortName": "BMI",
+    "descriptionTitle": "About Body Mass Index",
+    "description": "The Body Mass Index (BMI) is a measure of the relationship between body weight and height. It is calculated as weight (kg) divided by height (m) squared. In ALS, a BMI in the upper normal range is often associated with a better outcome.",
+    "fields": {
+        "value": { "label": "BMI" }
+    }
+}

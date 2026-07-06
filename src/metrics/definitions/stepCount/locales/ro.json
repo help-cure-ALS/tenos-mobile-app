@@ -1,0 +1,11 @@
+{
+    "name": "Pași",
+    "shortName": "Pași",
+    "descriptionTitle": "Despre numărul de pași",
+    "description": "Numărul zilnic de pași este o măsură simplă a activității cotidiene. În SLA, o tendință descendentă poate reflecta o mobilitate în scădere. Pașii sunt importați automat din Apple Sănătate sau Health Connect; nu este necesară introducerea manuală.",
+    "fields": {
+        "value": {
+            "label": "Pași"
+        }
+    }
+}

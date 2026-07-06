@@ -1,0 +1,17 @@
+{
+  "name": "Suicidalidade (item 9 do PHQ-9)",
+  "shortName": "Suicidalidade",
+  "descriptionTitle": "Sobre suicidalidade",
+  "description": "Esta métrica capta a resposta à pergunta 9 do questionário PHQ-9: \"Pensamentos de que seria melhor estar morto ou de se magoar de alguma forma\". Valores > 0 requerem atenção clínica especial. Esta métrica destina-se à deteção precoce e deve ser sempre avaliada no contexto clínico.",
+  "fields": {
+    "value": {
+      "label": "Suicidalidade",
+      "valueLabels": {
+        "0": "Nunca",
+        "1": "Vários dias",
+        "2": "Mais de metade dos dias",
+        "3": "Quase todos os dias"
+      }
+    }
+  }
+}

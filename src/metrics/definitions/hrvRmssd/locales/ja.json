@@ -1,0 +1,11 @@
+{
+    "name": "心拍変動",
+    "shortName": "心拍変動",
+    "descriptionTitle": "心拍変動について",
+    "description": "心拍変動（HRV）は心拍と心拍の間隔の変動で、ミリ秒で表し、自律神経系の活動を反映します。AndroidではRMSSDとして測定され、Health Connectから自動的に取り込まれます。",
+    "fields": {
+        "value": {
+            "label": "心拍変動"
+        }
+    }
+}

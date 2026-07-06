@@ -1,0 +1,11 @@
+{
+  "name": "Assunzione di liquidi",
+  "shortName": "Liquidi",
+  "descriptionTitle": "Informazioni sull’assunzione di liquidi",
+  "description": "L’assunzione giornaliera di liquidi è importante per la salute generale. Nella SLA, le difficoltà di deglutizione possono portare a bere meno e causare disidratazione. Si raccomandano circa 1,5-2 litri al giorno. La documentazione aiuta a garantire un’idratazione adeguata.",
+  "fields": {
+    "value": {
+      "label": "Quantità di liquidi"
+    }
+  }
+}

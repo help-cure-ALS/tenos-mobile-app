@@ -1,0 +1,9 @@
+{
+    "name": "Forced Vital Capacity",
+    "shortName": "FVC",
+    "descriptionTitle": "About FVC",
+    "description": "Forced vital capacity (FVC) measures the maximum volume of air that can be exhaled after a deep breath. In ALS, FVC is one of the most important indicators of respiratory function and disease progression. A drop below 50% of the predicted value may indicate the need for respiratory support.",
+    "fields": {
+        "value": { "label": "FVC" }
+    }
+}

@@ -1,0 +1,149 @@
+{
+  "name": "ALSFRS-R",
+  "displayName": "Estado funcional",
+  "shortName": "ALSFRS-R",
+  "description": "La ALS Functional Rating Scale - Revised (ALSFRS-R) es un instrumento validado para evaluar el estado funcional en pacientes con ELA. El cuestionario cubre 12 áreas de la vida diaria en cuatro dominios.",
+  "introText": "Valora tu capacidad funcional actual en las siguientes áreas. Elige la descripción que mejor se ajuste a tu situación.",
+  "intro": {
+    "title": "Valoración funcional",
+    "description": "Este cuestionario evalúa tu capacidad funcional actual en 12 áreas de la vida diaria. Tarda aproximadamente 5 minutos en completarse.",
+    "buttonText": "Empezar cuestionario",
+    "researchNote": "Gracias por participar. Las valoraciones regulares nos ayudan a comprender mejor la progresión de la enfermedad y a avanzar en la investigación sobre la ELA."
+  },
+  "domains": {
+    "bulbar": "Función bulbar",
+    "fine_motor": "Motricidad fina",
+    "gross_motor": "Motricidad gruesa",
+    "respiratory": "Respiración"
+  },
+  "questions": {
+    "speech": {
+      "text": "Habla",
+      "options": {
+        "4": { "label": "Normal", "description": "Procesos del habla normales" },
+        "3": { "label": "Afectación leve", "description": "Alteración del habla perceptible" },
+        "2": { "label": "Afectación moderada", "description": "Debe repetir ocasionalmente" },
+        "1": { "label": "Afectación grave", "description": "Habla combinada con comunicación no verbal" },
+        "0": { "label": "Sin habla", "description": "Pérdida de habla útil" }
+      }
+    },
+    "salivation": {
+      "text": "Salivación",
+      "options": {
+        "4": { "label": "Normal", "description": "Salivación normal" },
+        "3": { "label": "Ligero exceso", "description": "Ligero pero claro exceso de saliva; puede haber babeo nocturno" },
+        "2": { "label": "Exceso moderado", "description": "Exceso moderado de saliva; puede haber babeo mínimo" },
+        "1": { "label": "Exceso marcado", "description": "Exceso importante de saliva con algo de babeo" },
+        "0": { "label": "Exceso grave", "description": "Babeo marcado; requiere pañuelo o toalla de forma constante" }
+      }
+    },
+    "swallowing": {
+      "text": "Deglución",
+      "options": {
+        "4": { "label": "Normal", "description": "Hábitos alimentarios normales" },
+        "3": { "label": "Problemas leves", "description": "Problemas iniciales al comer: atragantamiento ocasional" },
+        "2": { "label": "Cambio de dieta", "description": "Cambios en la consistencia de la dieta" },
+        "1": { "label": "Alimentación por sonda complementaria", "description": "Necesita alimentación por sonda adicional" },
+        "0": { "label": "Solo alimentación por sonda", "description": "Nada por boca; alimentación exclusiva por sonda" }
+      }
+    },
+    "handwriting": {
+      "text": "Escritura",
+      "options": {
+        "4": { "label": "Normal", "description": "Escritura normal" },
+        "3": { "label": "Lenta / descuidada", "description": "Lenta o descuidada; todas las palabras son legibles" },
+        "2": { "label": "Parcialmente legible", "description": "No todas las palabras son legibles" },
+        "1": { "label": "Puede sujetar el bolígrafo", "description": "Puede sujetar el bolígrafo pero no escribir" },
+        "0": { "label": "Incapaz", "description": "No puede sujetar el bolígrafo" }
+      }
+    },
+    "cutting_food": {
+      "text": "Cortar la comida y manejar utensilios",
+      "options": {
+        "4": { "label": "Normal", "description": "Normal; sin ayuda" },
+        "3": { "label": "Lento / torpe", "description": "Algo lento y torpe, pero sin necesidad de ayuda" },
+        "2": { "label": "Necesita ayuda parcial", "description": "Puede cortar la mayoría de los alimentos, aunque con lentitud y torpeza; necesita algo de ayuda" },
+        "1": { "label": "Necesita que le den de comer", "description": "Alguien debe cortar la comida, pero todavía puede comer lentamente por sí mismo/a" },
+        "0": { "label": "Dependencia total", "description": "Necesita ser alimentado/a" }
+      }
+    },
+    "dressing": {
+      "text": "Vestirse e higiene",
+      "options": {
+        "4": { "label": "Normal", "description": "Función normal" },
+        "3": { "label": "Independiente pero lento/a", "description": "Autónomo/a y con autocuidado completo, aunque con esfuerzo o menor eficacia" },
+        "2": { "label": "Ayuda ocasional", "description": "Asistencia intermitente o métodos alternativos" },
+        "1": { "label": "Necesita ayuda", "description": "Necesita asistencia para el autocuidado" },
+        "0": { "label": "Dependencia total", "description": "Dependencia total" }
+      }
+    },
+    "turning_in_bed": {
+      "text": "Girar en la cama y ajustar la ropa de cama",
+      "options": {
+        "4": { "label": "Normal", "description": "Función normal" },
+        "3": { "label": "Lento / torpe", "description": "Algo lento y torpe, pero sin ayuda" },
+        "2": { "label": "Difícil sin ayuda", "description": "Puede girarse solo/a o ajustar las sábanas, pero con mucha dificultad" },
+        "1": { "label": "Requiere ayuda", "description": "Puede iniciar el movimiento, pero no girarse o ajustar las sábanas sin ayuda" },
+        "0": { "label": "Desvalido/a", "description": "Desvalido/a" }
+      }
+    },
+    "walking": {
+      "text": "Caminar",
+      "options": {
+        "4": { "label": "Normal", "description": "Marcha normal" },
+        "3": { "label": "Ligera alteración de la marcha", "description": "Dificultades iniciales para caminar" },
+        "2": { "label": "Con ayuda", "description": "Camina con ayuda (órtesis, bastón, andador)" },
+        "1": { "label": "Solo transferencias", "description": "Solo movimiento funcional no ambulatorio" },
+        "0": { "label": "Sin movimiento de piernas", "description": "Sin movimiento voluntario de piernas" }
+      }
+    },
+    "climbing_stairs": {
+      "text": "Subir escaleras",
+      "options": {
+        "4": { "label": "Normal", "description": "Normal" },
+        "3": { "label": "Lento", "description": "Lento" },
+        "2": { "label": "Ligeramente inestable", "description": "Ligera inestabilidad o fatiga" },
+        "1": { "label": "Con ayuda", "description": "Necesita ayuda (barandilla, persona)" },
+        "0": { "label": "Incapaz", "description": "No puede subir escaleras" }
+      }
+    },
+    "dyspnea": {
+      "text": "Disnea",
+      "options": {
+        "4": { "label": "Ninguna", "description": "Sin falta de aire" },
+        "3": { "label": "Con esfuerzo", "description": "Falta de aire al caminar" },
+        "2": { "label": "Con actividad ligera", "description": "Falta de aire con una o más actividades: comer, asearse, vestirse" },
+        "1": { "label": "En reposo", "description": "Falta de aire en reposo, dificultad para respirar sentado/a o tumbado/a" },
+        "0": { "label": "Importante", "description": "Dificultad significativa; se valora soporte respiratorio mecánico" }
+      }
+    },
+    "orthopnea": {
+      "text": "Ortopnea (dificultad para respirar al estar tumbado/a)",
+      "options": {
+        "4": { "label": "Ninguna", "description": "Sin problemas" },
+        "3": { "label": "Problemas leves", "description": "Alguna dificultad para dormir por falta de aire; no utiliza habitualmente más de 2 almohadas" },
+        "2": { "label": "Necesita almohadas adicionales", "description": "Necesita más de 2 almohadas para dormir" },
+        "1": { "label": "Solo sentado/a", "description": "Solo puede dormir sentado/a" },
+        "0": { "label": "Incapaz de dormir", "description": "No puede dormir sin ayuda mecánica" }
+      }
+    },
+    "respiratory_insufficiency": {
+      "text": "Insuficiencia respiratoria",
+      "options": {
+        "4": { "label": "Ninguna", "description": "No necesita soporte" },
+        "3": { "label": "BiPAP intermitente", "description": "Uso intermitente de BiPAP" },
+        "2": { "label": "BiPAP nocturno", "description": "Uso continuo de BiPAP durante la noche" },
+        "1": { "label": "BiPAP continuo", "description": "Uso continuo de BiPAP día y noche" },
+        "0": { "label": "Ventilación invasiva", "description": "Ventilación mecánica invasiva mediante intubación o traqueostomía" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Pocos cambios", "description": "La capacidad funcional está en gran medida preservada." },
+      { "label": "Cambios leves", "description": "Se observan algunos cambios funcionales." },
+      { "label": "Cambios notables", "description": "Se observan cambios funcionales claros." },
+      { "label": "Cambios amplios", "description": "La capacidad funcional muestra cambios importantes." }
+    ]
+  }
+}

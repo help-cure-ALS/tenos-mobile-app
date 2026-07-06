@@ -1,0 +1,171 @@
+{
+  "name": "毎日の症状チェック",
+  "shortName": "",
+  "exportTitle": "毎日の症状チェック",
+  "description": "主な症状を追跡するための短い毎日のチェックインです。データは自動的に指標と同期されます。",
+  "introText": "今日はどのように感じますか？",
+  "intro": {
+    "title": "毎日の症状チェック",
+    "description": "現在の状態を簡単に確認します。痛み、疲労、睡眠、気分について4つの短い質問に答えてください。",
+    "buttonText": "開始",
+    "researchNote": "毎日のチェックは変化を早期に見つけ、ケアチームに有用な情報を提供します。"
+  },
+  "domains": {
+    "symptoms": "症状",
+    "sleep": "睡眠",
+    "mood": "気分"
+  },
+  "questions": {
+    "pain": {
+      "text": "今日の痛みはどの程度ですか？",
+      "exportLabel": "痛み",
+      "options": {
+        "0": {
+          "label": "痛みなし",
+          "description": "不快感なし"
+        },
+        "1": {
+          "label": "軽い痛み",
+          "description": "ほとんど気にならず、つらくない"
+        },
+        "2": {
+          "label": "中等度の痛み",
+          "description": "感じるが耐えられる"
+        },
+        "3": {
+          "label": "強い痛み",
+          "description": "かなり支障がある"
+        },
+        "4": {
+          "label": "非常に強い痛み",
+          "description": "ほとんど耐えられない"
+        }
+      }
+    },
+    "fatigue": {
+      "text": "どのくらい疲れていますか、または消耗していますか？",
+      "exportLabel": "疲労",
+      "options": {
+        "0": {
+          "label": "疲労なし",
+          "description": "エネルギーに満ちている"
+        },
+        "1": {
+          "label": "少し疲れている"
+        },
+        "2": {
+          "label": "少し疲れている",
+          "description": "ほとんど気にならない"
+        },
+        "3": {
+          "label": "少し疲れている"
+        },
+        "4": {
+          "label": "中等度に疲れている",
+          "description": "やや制限される"
+        },
+        "5": {
+          "label": "中等度に疲れている"
+        },
+        "6": {
+          "label": "かなり疲れている",
+          "description": "活動が大変"
+        },
+        "7": {
+          "label": "かなり疲れている"
+        },
+        "8": {
+          "label": "非常に疲れている",
+          "description": "多くの休息が必要"
+        },
+        "9": {
+          "label": "非常に疲れている"
+        },
+        "10": {
+          "label": "極度に消耗している",
+          "description": "ほとんど何もできない"
+        }
+      }
+    },
+    "sleep_quality": {
+      "text": "昨夜はどのように眠れましたか？",
+      "exportLabel": "睡眠",
+      "options": {
+        "0": {
+          "label": "とても良い",
+          "description": "休まる、中断のない睡眠"
+        },
+        "2": {
+          "label": "良い",
+          "description": "おおむね休まる睡眠"
+        },
+        "4": {
+          "label": "普通",
+          "description": "やや落ち着かないが十分"
+        },
+        "6": {
+          "label": "悪い",
+          "description": "何度も目が覚め、回復感が少ない"
+        },
+        "8": {
+          "label": "とても悪い",
+          "description": "ほとんど眠れなかった"
+        },
+        "10": {
+          "label": "まったく眠れない",
+          "description": "眠れなかった"
+        }
+      }
+    },
+    "mood": {
+      "text": "今日の気分はどうですか？",
+      "exportLabel": "気分",
+      "options": {
+        "0": {
+          "label": "とても良い",
+          "description": "落ち着いて前向き"
+        },
+        "2": {
+          "label": "良い",
+          "description": "おおむね前向き"
+        },
+        "4": {
+          "label": "まあまあ",
+          "description": "中立"
+        },
+        "6": {
+          "label": "低い",
+          "description": "少し落ち込んでいる"
+        },
+        "8": {
+          "label": "悪い",
+          "description": "悲しい、または不安"
+        },
+        "10": {
+          "label": "とても悪い",
+          "description": "希望がない、または絶望的"
+        }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      {
+        "label": "良い日",
+        "description": "今日は比較的調子が良いようです。"
+      },
+      {
+        "label": "まあまあ",
+        "description": "軽い不快感のある平均的な日です。"
+      },
+      {
+        "label": "大変な日",
+        "description": "今日は大変な日です。"
+      },
+      {
+        "label": "特に大変な日",
+        "description": "今日は症状が多く出ています。"
+      }
+    ]
+  }
+}

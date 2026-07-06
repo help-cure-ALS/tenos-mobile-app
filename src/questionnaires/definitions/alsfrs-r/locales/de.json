@@ -1,0 +1,149 @@
+{
+    "name": "ALSFRS-R",
+    "displayName": "Funktionsstatus",
+    "shortName": "ALSFRS-R",
+    "description": "Die ALS Functional Rating Scale - Revised (ALSFRS-R) ist ein validiertes Instrument zur Beurteilung des Funktionsstatus bei ALS-Patienten. Der Fragebogen erfasst 12 Bereiche des täglichen Lebens in vier Domänen.",
+    "introText": "Bitte bewerte deine aktuelle Funktionsfähigkeit in den folgenden Bereichen. Wähle die Beschreibung, die am besten auf deine Situation zutrifft.",
+    "intro": {
+        "title": "Funktionsbewertung",
+        "description": "Dieser Fragebogen erfasst deine aktuelle Funktionsfähigkeit in 12 Bereichen des täglichen Lebens. Die Beantwortung dauert ca. 5 Minuten.",
+        "buttonText": "Fragebogen starten",
+        "researchNote": "Vielen Dank für deine Teilnahme. Die regelmäßige Erfassung hilft, den Krankheitsverlauf besser zu verstehen und die ALS-Forschung voranzubringen."
+    },
+    "domains": {
+        "bulbar": "Bulbäre Funktion",
+        "fine_motor": "Feinmotorik",
+        "gross_motor": "Grobmotorik",
+        "respiratory": "Atmung"
+    },
+    "questions": {
+        "speech": {
+            "text": "Sprache",
+            "options": {
+                "4": { "label": "Normal", "description": "Normale Sprachverständlichkeit" },
+                "3": { "label": "Leichte Störung", "description": "Wahrnehmbare Sprachstörungen" },
+                "2": { "label": "Mäßige Störung", "description": "Muss gelegentlich wiederholen" },
+                "1": { "label": "Schwere Störung", "description": "Sprache mit nonverbaler Kommunikation kombiniert" },
+                "0": { "label": "Keine Sprache", "description": "Verlust nützlicher Sprache" }
+            }
+        },
+        "salivation": {
+            "text": "Speichelfluss",
+            "options": {
+                "4": { "label": "Normal", "description": "Normaler Speichelfluss" },
+                "3": { "label": "Leicht vermehrt", "description": "Leicht, aber deutlich vermehrter Speichel im Mund; nachts evtl. Sabbern" },
+                "2": { "label": "Mäßig vermehrt", "description": "Mäßig vermehrter Speichel; evtl. minimales Sabbern" },
+                "1": { "label": "Deutlich vermehrt", "description": "Deutlich vermehrter Speichel mit etwas Sabbern" },
+                "0": { "label": "Stark vermehrt", "description": "Starkes Sabbern; ständig Tuch oder Taschentuch nötig" }
+            }
+        },
+        "swallowing": {
+            "text": "Schlucken",
+            "options": {
+                "4": { "label": "Normal", "description": "Normale Essgewohnheiten" },
+                "3": { "label": "Leichte Probleme", "description": "Frühe Essprobleme – gelegentliches Verschlucken" },
+                "2": { "label": "Diätumstellung", "description": "Diätumstellung notwendig" },
+                "1": { "label": "Zusätzliche Sondenernährung", "description": "Braucht zusätzliche Sondenernährung" },
+                "0": { "label": "Nur Sondenernährung", "description": "Nichts per Mund; ausschließlich Sondenernährung" }
+            }
+        },
+        "handwriting": {
+            "text": "Handschrift",
+            "options": {
+                "4": { "label": "Normal", "description": "Normales Schreiben" },
+                "3": { "label": "Langsam/Unsauber", "description": "Langsam oder unsauber; alle Wörter leserlich" },
+                "2": { "label": "Teilweise leserlich", "description": "Nicht alle Wörter leserlich" },
+                "1": { "label": "Stift halten möglich", "description": "Kann Stift halten, aber nicht schreiben" },
+                "0": { "label": "Nicht möglich", "description": "Kann Stift nicht halten" }
+            }
+        },
+        "cutting_food": {
+            "text": "Essen schneiden und Besteck benutzen",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal; ohne Hilfe" },
+                "3": { "label": "Langsam/Ungeschickt", "description": "Etwas langsam und ungeschickt, aber keine Hilfe nötig" },
+                "2": { "label": "Hilfe teilweise nötig", "description": "Kann die meisten Speisen schneiden, aber ungeschickt und langsam; etwas Hilfe nötig" },
+                "1": { "label": "Füttern nötig", "description": "Speisen müssen von anderen geschnitten werden, kann aber noch langsam selbst essen" },
+                "0": { "label": "Vollständig gefüttert", "description": "Muss gefüttert werden" }
+            }
+        },
+        "dressing": {
+            "text": "Ankleiden und Körperpflege",
+            "options": {
+                "4": { "label": "Normal", "description": "Normale Funktion" },
+                "3": { "label": "Selbstständig aber langsam", "description": "Unabhängige und vollständige Selbstversorgung mit Aufwand oder verminderter Effizienz" },
+                "2": { "label": "Gelegentliche Hilfe", "description": "Gelegentliche Hilfe oder Ersatzmethoden" },
+                "1": { "label": "Hilfe nötig", "description": "Braucht Hilfe" },
+                "0": { "label": "Vollständige Abhängigkeit", "description": "Totale Abhängigkeit" }
+            }
+        },
+        "turning_in_bed": {
+            "text": "Umdrehen im Bett und Bettzeug zurechtlegen",
+            "options": {
+                "4": { "label": "Normal", "description": "Normale Funktion" },
+                "3": { "label": "Langsam/Ungeschickt", "description": "Etwas langsam und ungeschickt, aber keine Hilfe nötig" },
+                "2": { "label": "Selbstständig schwierig", "description": "Kann sich alleine drehen oder Bettzeug zurechtlegen, aber mit großer Schwierigkeit" },
+                "1": { "label": "Hilfe erforderlich", "description": "Kann Bewegung beginnen, aber nicht alleine drehen oder Bettzeug zurechtlegen" },
+                "0": { "label": "Hilflos", "description": "Hilflos" }
+            }
+        },
+        "walking": {
+            "text": "Gehen",
+            "options": {
+                "4": { "label": "Normal", "description": "Normales Gehen" },
+                "3": { "label": "Leichte Gangstörung", "description": "Frühe Gehschwierigkeiten" },
+                "2": { "label": "Mit Hilfsmittel", "description": "Geht mit Hilfe (Orthesen, Stock, Rollator)" },
+                "1": { "label": "Nur Transfer", "description": "Nur noch nicht-gehende funktionale Bewegung möglich" },
+                "0": { "label": "Keine Beinbewegung", "description": "Keine zielgerichtete Beinbewegung" }
+            }
+        },
+        "climbing_stairs": {
+            "text": "Treppensteigen",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal" },
+                "3": { "label": "Langsam", "description": "Langsam" },
+                "2": { "label": "Leicht unsicher", "description": "Leichte Unsicherheit oder Ermüdung" },
+                "1": { "label": "Mit Hilfe", "description": "Braucht Hilfe (Geländer, Person)" },
+                "0": { "label": "Nicht möglich", "description": "Kann keine Treppen steigen" }
+            }
+        },
+        "dyspnea": {
+            "text": "Atemnot",
+            "options": {
+                "4": { "label": "Keine", "description": "Keine Atemnot" },
+                "3": { "label": "Bei Anstrengung", "description": "Atemnot beim Gehen" },
+                "2": { "label": "Bei leichter Aktivität", "description": "Atemnot bei einer oder mehreren der folgenden Tätigkeiten: Essen, Waschen, Ankleiden" },
+                "1": { "label": "In Ruhe", "description": "Atemnot in Ruhe, Schwierigkeiten beim Atmen im Sitzen oder Liegen" },
+                "0": { "label": "Erheblich", "description": "Erhebliche Schwierigkeiten, mechanische Atemunterstützung erwogen" }
+            }
+        },
+        "orthopnea": {
+            "text": "Orthopnoe (Atemnot im Liegen)",
+            "options": {
+                "4": { "label": "Keine", "description": "Keine Probleme" },
+                "3": { "label": "Leichte Probleme", "description": "Einige Schlafprobleme wegen Kurzatmigkeit; benutzt nicht regelmäßig mehr als 2 Kissen" },
+                "2": { "label": "Extra Kissen nötig", "description": "Braucht extra Kissen zum Schlafen (mehr als 2)" },
+                "1": { "label": "Nur sitzend", "description": "Kann nur sitzend schlafen" },
+                "0": { "label": "Nicht schlaffähig", "description": "Kann nicht schlafen ohne mechanische Unterstützung" }
+            }
+        },
+        "respiratory_insufficiency": {
+            "text": "Respiratorische Insuffizienz",
+            "options": {
+                "4": { "label": "Keine", "description": "Keine Unterstützung nötig" },
+                "3": { "label": "Zeitweise BiPAP", "description": "Zeitweise Nutzung von BiPAP" },
+                "2": { "label": "Nächtlich BiPAP", "description": "Kontinuierliche nächtliche BiPAP-Nutzung" },
+                "1": { "label": "Ständig BiPAP", "description": "Kontinuierliche BiPAP-Nutzung Tag und Nacht" },
+                "0": { "label": "Invasive Beatmung", "description": "Invasive mechanische Beatmung durch Intubation oder Tracheostomie" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Wenig Veränderung", "description": "Die Funktionsfähigkeit ist weitgehend erhalten." },
+            { "label": "Leichte Veränderungen", "description": "Es zeigen sich leichte funktionelle Veränderungen." },
+            { "label": "Deutliche Veränderungen", "description": "Es zeigen sich deutliche funktionelle Veränderungen." },
+            { "label": "Weitreichende Veränderungen", "description": "Die Funktionsfähigkeit zeigt weitreichende Veränderungen." }
+        ]
+    }
+}

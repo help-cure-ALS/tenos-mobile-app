@@ -1,0 +1,18 @@
+{
+  "name": "Niveau de douleur",
+  "shortName": "Douleur",
+  "descriptionTitle": "À propos du niveau de douleur",
+  "description": "Le niveau de douleur est évalué à l'aide d'une échelle verbale descriptive (VRS). Dans la SLA, la douleur peut résulter de tensions musculaires, de crampes, de l'immobilité ou d'escarres. Une documentation régulière aide à identifier les schémas de douleur et à ajuster le traitement.",
+  "fields": {
+    "value": {
+      "label": "Niveau de douleur",
+      "valueLabels": {
+        "0": "Aucune douleur",
+        "1": "Douleur légère",
+        "2": "Douleur modérée",
+        "3": "Douleur sévère",
+        "4": "Douleur très sévère"
+      }
+    }
+  }
+}

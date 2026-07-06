@@ -1,0 +1,11 @@
+{
+  "name": "Gewicht",
+  "shortName": "Gewicht",
+  "descriptionTitle": "Over lichaamsgewicht",
+  "description": "Lichaamsgewicht is een belangrijke indicator van algemene gezondheid. Bij ALS kan onbedoeld gewichtsverlies een teken zijn van slikproblemen of verhoogd energieverbruik. Regelmatige gewichtscontrole helpt om vroeg tegenmaatregelen te nemen.",
+  "fields": {
+    "value": {
+      "label": "Gewicht"
+    }
+  }
+}

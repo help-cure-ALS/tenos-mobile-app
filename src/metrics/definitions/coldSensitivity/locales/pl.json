@@ -1,0 +1,17 @@
+{
+  "name": "Wrażliwość na zimno",
+  "shortName": "Zimno",
+  "descriptionTitle": "O wrażliwości na zimno",
+  "description": "Wrażliwość na zimno jest częstym objawem w ALS. Może wynikać ze zmniejszonej masy mięśniowej, dysfunkcji autonomicznej lub ograniczonej aktywności fizycznej. Monitorowanie pomaga rozpoznać wzorce i dostosować działania, takie jak cieplejsza odzież lub temperatura pomieszczenia. (0 = Brak, 1 = Łagodna, 2 = Umiarkowana, 3 = Ciężka)",
+  "fields": {
+    "value": {
+      "label": "Wrażliwość na zimno",
+      "valueLabels": {
+        "0": "Brak",
+        "1": "Łagodna",
+        "2": "Umiarkowana",
+        "3": "Ciężka"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Sialoree",
+    "shortName": "Salivă",
+    "descriptionTitle": "Despre sialoree",
+    "description": "Fluxul excesiv de salivă (sialoree) este un simptom frecvent în ALS, cauzat mai degrabă de dificultăți de înghițire decât de producția crescută de salivă. Înregistrează severitatea pe o scală de la 0 (normal) la 10 (foarte sever). Documentarea ajută la evaluarea eficienței tratamentelor.",
+    "fields": {
+        "value": {
+            "label": "Severitate"
+        }
+    }
+}

@@ -1,0 +1,161 @@
+{
+  "name": "Postać ALS i genetyka",
+  "displayName": "Postać ALS i genetyka",
+  "shortName": "Postać ALS",
+  "description": "Dokumentacja ALS sporadycznego lub rodzinnego, wywiadu rodzinnego oraz znanych wyników genetycznych.",
+  "domains": {
+    "structured": "Postać ALS i genetyka"
+  },
+  "questions": {
+    "payload": {
+      "text": "Postać ALS i genetyka",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "diseaseForm": {
+      "label": "Postać ALS",
+      "info": "Klasyfikacja kliniczna określająca, czy ALS jest sporadyczne, rodzinne czy niejasne.",
+      "options": {
+        "sporadic": {
+          "label": "sporadyczne"
+        },
+        "familial": {
+          "label": "rodzinne"
+        },
+        "suspected_familial": {
+          "label": "podejrzenie rodzinnego"
+        },
+        "unclear": {
+          "label": "niejasne"
+        }
+      }
+    },
+    "familyHistory": {
+      "label": "Wywiad rodzinny",
+      "info": "Dokumentuje znane ALS, FTD lub inną chorobę neuronu ruchowego w rodzinie.",
+      "options": {
+        "none_known": {
+          "label": "brak znanych"
+        },
+        "als": {
+          "label": "ALS w rodzinie"
+        },
+        "ftd": {
+          "label": "FTD w rodzinie"
+        },
+        "als_ftd": {
+          "label": "ALS/FTD w rodzinie"
+        },
+        "other_mnd": {
+          "label": "inna choroba neuronu ruchowego"
+        },
+        "other_neurodegenerative": {
+          "label": "inny wywiad neurodegeneracyjny"
+        }
+      }
+    },
+    "testingStatus": {
+      "label": "Badanie genetyczne",
+      "info": "Status badania genetycznego. Aplikacja nie interpretuje surowych danych genetycznych.",
+      "options": {
+        "not_tested": {
+          "label": "nie badano"
+        },
+        "planned": {
+          "label": "planowane"
+        },
+        "pending": {
+          "label": "oczekujące"
+        },
+        "negative": {
+          "label": "brak znanej mutacji"
+        },
+        "vus": {
+          "label": "wariant o niepewnym znaczeniu"
+        },
+        "pathogenic": {
+          "label": "wariant patogenny/prawdopodobnie patogenny"
+        }
+      }
+    },
+    "gene": {
+      "label": "Gen",
+      "info": "Znany gen z dokumentacji klinicznej lub wyniku laboratoryjnego.",
+      "placeholder": "Wprowadź gen",
+      "options": {
+        "C9orf72": {
+          "label": "C9orf72"
+        },
+        "SOD1": {
+          "label": "SOD1"
+        },
+        "FUS": {
+          "label": "FUS"
+        },
+        "TARDBP": {
+          "label": "TARDBP"
+        },
+        "TBK1": {
+          "label": "TBK1"
+        },
+        "OPTN": {
+          "label": "OPTN"
+        },
+        "VCP": {
+          "label": "VCP"
+        },
+        "other": {
+          "label": "inny"
+        }
+      }
+    },
+    "source": {
+      "label": "Źródło",
+      "info": "Skąd pochodzi ten wpis? Informacje genetyczne powinny być dokumentowane w sposób możliwy do prześledzenia.",
+      "options": {
+        "patient_reported": {
+          "label": "zgłoszenie pacjenta"
+        },
+        "clinician_documented": {
+          "label": "udokumentowane przez lekarza"
+        },
+        "lab_report": {
+          "label": "laboratorium"
+        }
+      }
+    },
+    "counselingStatus": {
+      "label": "Poradnictwo genetyczne",
+      "info": "Czy udokumentowano poradnictwo genetyczne dotyczące testu lub omówienia wyniku.",
+      "options": {
+        "completed": {
+          "label": "zakończone"
+        },
+        "recommended": {
+          "label": "zalecane"
+        },
+        "not_done": {
+          "label": "nie wykonano"
+        }
+      }
+    },
+    "otherGene": {
+      "label": "Inny gen",
+      "placeholder": "Nazwa genu"
+    },
+    "variantText": {
+      "label": "Wariant",
+      "placeholder": "Opcjonalny krótki opis wyniku"
+    },
+    "testDate": {
+      "label": "Data testu",
+      "info": "Miesiąc i rok badania genetycznego.",
+      "placeholder": "Wybierz"
+    },
+    "note": {
+      "label": "Komentarz",
+      "placeholder": "Opcjonalny komentarz"
+    }
+  }
+}

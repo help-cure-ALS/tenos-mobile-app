@@ -1,0 +1,11 @@
+{
+    "name": "Pokonane piętra",
+    "shortName": "Piętra",
+    "descriptionTitle": "O pokonanych piętrach",
+    "description": "Liczba pokonanych pięter dziennie odzwierciedla siłę i wytrzymałość nóg podczas codziennej aktywności. W ALS tendencja spadkowa może wskazywać na postępujące osłabienie nóg. Wartość ta jest importowana automatycznie z Apple Zdrowie lub Health Connect; ręczne wprowadzanie nie jest potrzebne.",
+    "fields": {
+        "value": {
+            "label": "Pokonane piętra"
+        }
+    }
+}

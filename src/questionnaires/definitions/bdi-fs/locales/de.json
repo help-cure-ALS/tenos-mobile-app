@@ -1,0 +1,97 @@
+{
+    "name": "BDI-FS",
+    "displayName": "Depression",
+    "shortName": "BDI-FS",
+    "exportTitle": "Depression – BDI-FS",
+    "description": "Der BDI-FS (Beck Depression Inventory - Fast Screen) ist ein kurzer Fragebogen zur Erfassung kognitiver Symptome einer Depression. Er fokussiert auf Gedanken und Gefühle, nicht auf körperliche Symptome.",
+    "introText": "Bitte lies jede Aussage und wähle die Antwort, die am besten beschreibt, wie du dich in den letzten zwei Wochen gefühlt hast.",
+    "intro": {
+        "title": "Kognitive Depressionssymptome",
+        "description": "Dieser Fragebogen erfasst, wie du über dich selbst und dein Leben denkst. Beantworte die 7 Fragen ehrlich – es gibt keine richtigen oder falschen Antworten.",
+        "researchNote": "Vielen Dank für deine Offenheit. Deine Antworten tragen dazu bei, die Begleiterscheinungen von ALS besser zu erforschen.",
+        "buttonText": "Fragebogen starten"
+    },
+    "domains": {
+        "cognitive": "Kognitive Symptome"
+    },
+    "questions": {
+        "sadness": {
+            "text": "Traurigkeit",
+            "exportLabel": "Traurigkeit",
+            "options": {
+                "0": { "label": "Nicht traurig", "description": "Ich bin nicht traurig" },
+                "1": { "label": "Oft traurig", "description": "Ich bin oft traurig" },
+                "2": { "label": "Ständig traurig", "description": "Ich bin ständig traurig" },
+                "3": { "label": "Unerträglich traurig", "description": "Ich bin so traurig, dass ich es nicht aushalte" }
+            }
+        },
+        "pessimism": {
+            "text": "Pessimismus",
+            "exportLabel": "Pessimismus",
+            "options": {
+                "0": { "label": "Nicht entmutigt", "description": "Ich sehe nicht mutlos in die Zukunft" },
+                "1": { "label": "Etwas entmutigt", "description": "Ich bin entmutigter als früher" },
+                "2": { "label": "Keine Besserung erwartet", "description": "Ich erwarte nicht, dass es besser wird" },
+                "3": { "label": "Hoffnungslos", "description": "Ich glaube, meine Zukunft ist hoffnungslos" }
+            }
+        },
+        "past_failure": {
+            "text": "Versagensgefühle",
+            "exportLabel": "Versagensgefühle",
+            "options": {
+                "0": { "label": "Kein Versager", "description": "Ich fühle mich nicht als Versager" },
+                "1": { "label": "Mehr versagt als früher", "description": "Ich habe mehr versagt, als ich sollte" },
+                "2": { "label": "Viele Misserfolge", "description": "Wenn ich zurückblicke, sehe ich viele Misserfolge" },
+                "3": { "label": "Totaler Versager", "description": "Ich fühle mich als totaler Versager" }
+            }
+        },
+        "loss_of_pleasure": {
+            "text": "Verlust von Freude",
+            "exportLabel": "Freudverlust",
+            "options": {
+                "0": { "label": "Normale Freude", "description": "Ich habe genauso viel Freude wie früher" },
+                "1": { "label": "Weniger Freude", "description": "Ich genieße Dinge nicht mehr so wie früher" },
+                "2": { "label": "Kaum noch Freude", "description": "Ich habe kaum noch Freude an Dingen" },
+                "3": { "label": "Keine Freude", "description": "Ich kann nichts mehr genießen" }
+            }
+        },
+        "self_dislike": {
+            "text": "Selbstablehnung",
+            "exportLabel": "Selbstablehnung",
+            "options": {
+                "0": { "label": "Zufrieden mit mir", "description": "Ich bin mit mir zufrieden" },
+                "1": { "label": "Enttäuscht von mir", "description": "Ich bin von mir enttäuscht" },
+                "2": { "label": "Mag mich nicht", "description": "Ich mag mich selbst nicht" },
+                "3": { "label": "Hasse mich", "description": "Ich hasse mich" }
+            }
+        },
+        "self_criticalness": {
+            "text": "Selbstkritik",
+            "exportLabel": "Selbstkritik",
+            "options": {
+                "0": { "label": "Nicht selbstkritisch", "description": "Ich kritisiere mich nicht mehr als sonst" },
+                "1": { "label": "Kritischer als früher", "description": "Ich bin kritischer mit mir als früher" },
+                "2": { "label": "Kritisiere alle Fehler", "description": "Ich kritisiere mich für alle meine Fehler" },
+                "3": { "label": "Gebe mir die Schuld", "description": "Ich gebe mir die Schuld für alles Schlechte" }
+            }
+        },
+        "suicidal_thoughts": {
+            "text": "Suizidgedanken",
+            "exportLabel": "Suizidgedanken",
+            "options": {
+                "0": { "label": "Keine Gedanken", "description": "Ich habe keine Gedanken daran, mir etwas anzutun" },
+                "1": { "label": "Gedanken vorhanden", "description": "Ich habe Gedanken daran, mir etwas anzutun, würde es aber nicht tun" },
+                "2": { "label": "Würde es gerne tun", "description": "Ich würde mir gerne etwas antun" },
+                "3": { "label": "Würde es tun", "description": "Ich würde mir etwas antun, wenn ich die Gelegenheit hätte" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Minimale Belastung", "description": "Deine Antworten deuten auf keine oder nur minimale Belastung hin." },
+            { "label": "Leichte Belastung", "description": "Deine Antworten deuten auf eine leichte Belastung hin." },
+            { "label": "Mäßige Belastung", "description": "Deine Antworten deuten auf eine mäßige Belastung hin." },
+            { "label": "Schwere Belastung", "description": "Deine Antworten deuten auf eine schwere Belastung hin." }
+        ]
+    }
+}

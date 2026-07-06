@@ -1,0 +1,92 @@
+{
+    "name": "Ademhalingszorg",
+    "displayName": "Ademhalingszorg",
+    "shortName": "Ademhalingszorg",
+    "exportTitle": "Ademhalingszorg",
+    "description": "Registreert symptomen die kunnen wijzen op veranderingen in uw ademhalingsondersteuning. Regelmatige antwoorden helpen veranderingen vroegtijdig te herkennen.",
+    "introText": "De volgende vragen gaan over hoe u zich de afgelopen dagen heeft gevoeld.",
+    "intro": {
+        "title": "Ademhalingszorg",
+        "description": "Deze vragenlijst registreert symptomen gerelateerd aan uw ademhalingsondersteuning aan de hand van 6 korte vragen.",
+        "researchNote": "Regelmatige antwoorden helpen veranderingen vroegtijdig te herkennen en te bespreken met uw zorgteam.",
+        "buttonText": "Vragenlijst starten"
+    },
+    "domains": {
+        "symptoms": "Symptomen"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Ik word wakker met hoofdpijn.",
+            "exportLabel": "Hoofdpijn",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        },
+        "dizziness": {
+            "text": "Ik voel me duizelig, vooral na het wakker worden.",
+            "exportLabel": "Duizeligheid",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Ik voel me overdag ongewoon moe of slaperig.",
+            "exportLabel": "Slaperigheid",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        },
+        "concentration": {
+            "text": "Ik heb moeite me te concentreren.",
+            "exportLabel": "Concentratie",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Ik word 's nachts wakker of slaap onrustig.",
+            "exportLabel": "Slaap",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Ik heb overdag moeite met ademhalen, bijv. bij het praten of in rust.",
+            "exportLabel": "Ademnood",
+            "options": {
+                "0": { "label": "Helemaal niet" },
+                "1": { "label": "Zelden" },
+                "2": { "label": "Soms" },
+                "3": { "label": "Vaak" },
+                "4": { "label": "Bijna altijd" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Weinig symptomen", "description": "Uw antwoorden wijzen op weinig of geen klachten." },
+            { "label": "Opvallende symptomen", "description": "Uw antwoorden wijzen op opvallende klachten." },
+            { "label": "Aanzienlijke symptomen", "description": "Uw antwoorden wijzen op aanzienlijke klachten." }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "FVC % din valoarea prezisă",
+    "shortName": "FVC %",
+    "descriptionTitle": "Despre FVC % din valoarea prezisă",
+    "description": "FVC ca procent din valoarea prezisă compară capacitatea vitală forțată măsurată cu valoarea așteptată pentru vârsta, sexul și înălțimea ta. Valorile peste 80% sunt considerate normale. În ALS, o scădere sub 50% este considerată critică și poate necesita inițierea ventilației non-invazive.",
+    "fields": {
+        "value": {
+            "label": "FVC % prezis"
+        }
+    }
+}

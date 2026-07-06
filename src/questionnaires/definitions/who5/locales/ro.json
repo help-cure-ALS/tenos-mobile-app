@@ -1,0 +1,185 @@
+{
+    "name": "WHO-5",
+    "displayName": "Stare de bine",
+    "shortName": "WHO-5",
+    "exportTitle": "Stare de bine – WHO-5",
+    "description": "WHO-5 este un chestionar scurt pentru evaluarea stării generale de bine. A fost dezvoltat de Organizația Mondială a Sănătății și este unul dintre cele mai utilizate instrumente la nivel mondial pentru măsurarea stării de bine subiective.",
+    "introText": "În ultimele două săptămâni...",
+    "intro": {
+        "title": "Evaluează-ți starea de bine",
+        "description": "Acest chestionar scurt măsoară starea ta generală de bine din ultimele două săptămâni. A fost dezvoltat de OMS și constă în doar 5 întrebări simple.",
+        "researchNote": "Participarea ta regulată ajută la detectarea timpurie a schimbărilor în starea de bine și la avansarea cercetării.",
+        "buttonText": "Începe chestionarul"
+    },
+    "domains": {
+        "wellbeing": "Stare de bine"
+    },
+    "questions": {
+        "cheerful": {
+            "text": "M-am simțit vesel și bine dispus.",
+            "exportLabel": "Bună dispoziție",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Niciodată în ultimele două săptămâni"
+                },
+                "1": {
+                    "label": "O parte din timp",
+                    "description": "Rareori"
+                },
+                "2": {
+                    "label": "Mai puțin de jumătate din timp",
+                    "description": "Ocazional"
+                },
+                "3": {
+                    "label": "Mai mult de jumătate din timp",
+                    "description": "Preponderent"
+                },
+                "4": {
+                    "label": "Cea mai mare parte a timpului",
+                    "description": "Cea mai mare parte a timpului"
+                },
+                "5": {
+                    "label": "Tot timpul",
+                    "description": "Constant în ultimele două săptămâni"
+                }
+            }
+        },
+        "calm": {
+            "text": "M-am simțit calm și relaxat.",
+            "exportLabel": "Calm",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Niciodată în ultimele două săptămâni"
+                },
+                "1": {
+                    "label": "O parte din timp",
+                    "description": "Rareori"
+                },
+                "2": {
+                    "label": "Mai puțin de jumătate din timp",
+                    "description": "Ocazional"
+                },
+                "3": {
+                    "label": "Mai mult de jumătate din timp",
+                    "description": "Preponderent"
+                },
+                "4": {
+                    "label": "Cea mai mare parte a timpului",
+                    "description": "Cea mai mare parte a timpului"
+                },
+                "5": {
+                    "label": "Tot timpul",
+                    "description": "Constant în ultimele două săptămâni"
+                }
+            }
+        },
+        "active": {
+            "text": "M-am simțit activ și plin de energie.",
+            "exportLabel": "Energie",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Niciodată în ultimele două săptămâni"
+                },
+                "1": {
+                    "label": "O parte din timp",
+                    "description": "Rareori"
+                },
+                "2": {
+                    "label": "Mai puțin de jumătate din timp",
+                    "description": "Ocazional"
+                },
+                "3": {
+                    "label": "Mai mult de jumătate din timp",
+                    "description": "Preponderent"
+                },
+                "4": {
+                    "label": "Cea mai mare parte a timpului",
+                    "description": "Cea mai mare parte a timpului"
+                },
+                "5": {
+                    "label": "Tot timpul",
+                    "description": "Constant în ultimele două săptămâni"
+                }
+            }
+        },
+        "rested": {
+            "text": "M-am trezit simțindu-mă proaspăt și odihnit.",
+            "exportLabel": "Odihnă",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Niciodată în ultimele două săptămâni"
+                },
+                "1": {
+                    "label": "O parte din timp",
+                    "description": "Rareori"
+                },
+                "2": {
+                    "label": "Mai puțin de jumătate din timp",
+                    "description": "Ocazional"
+                },
+                "3": {
+                    "label": "Mai mult de jumătate din timp",
+                    "description": "Preponderent"
+                },
+                "4": {
+                    "label": "Cea mai mare parte a timpului",
+                    "description": "Cea mai mare parte a timpului"
+                },
+                "5": {
+                    "label": "Tot timpul",
+                    "description": "Constant în ultimele două săptămâni"
+                }
+            }
+        },
+        "interesting": {
+            "text": "Viața mea de zi cu zi a fost plină de lucruri care mă interesează.",
+            "exportLabel": "Interes",
+            "options": {
+                "0": {
+                    "label": "Niciodată",
+                    "description": "Niciodată în ultimele două săptămâni"
+                },
+                "1": {
+                    "label": "O parte din timp",
+                    "description": "Rareori"
+                },
+                "2": {
+                    "label": "Mai puțin de jumătate din timp",
+                    "description": "Ocazional"
+                },
+                "3": {
+                    "label": "Mai mult de jumătate din timp",
+                    "description": "Preponderent"
+                },
+                "4": {
+                    "label": "Cea mai mare parte a timpului",
+                    "description": "Cea mai mare parte a timpului"
+                },
+                "5": {
+                    "label": "Tot timpul",
+                    "description": "Constant în ultimele două săptămâni"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Stare de bine bună",
+                "description": "Răspunsurile tale sugerează o stare de bine bună."
+            },
+            {
+                "label": "Stare de bine redusă",
+                "description": "Răspunsurile tale sugerează o stare de bine redusă."
+            },
+            {
+                "label": "Stare de bine scăzută",
+                "description": "Răspunsurile tale sugerează o stare de bine semnificativ redusă."
+            }
+        ]
+    }
+}

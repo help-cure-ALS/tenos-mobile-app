@@ -1,0 +1,24 @@
+{
+  "name": "Douleur -> Humeur",
+  "shortName": "Humeur",
+  "descriptionTitle": "Impact de la douleur sur l'humeur",
+  "description": "Enregistre dans quelle mesure la douleur affecte votre humeur. Échelle de 0 (aucun impact) à 10 (impact extrême). Une douleur chronique peut avoir des effets importants sur la santé mentale.",
+  "fields": {
+    "value": {
+      "label": "Altération",
+      "valueLabels": {
+        "0": "Aucune",
+        "1": "Minime",
+        "2": "Minime",
+        "3": "Légère",
+        "4": "Modérée",
+        "5": "Modérée",
+        "6": "Modérée",
+        "7": "Sévère",
+        "8": "Sévère",
+        "9": "Très sévère",
+        "10": "Extrême"
+      }
+    }
+  }
+}

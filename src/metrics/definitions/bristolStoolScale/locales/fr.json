@@ -1,0 +1,20 @@
+{
+  "name": "Consistance des selles",
+  "shortName": "Selles",
+  "descriptionTitle": "À propos de l'échelle de Bristol",
+  "description": "L'échelle de Bristol est un outil clinique pour évaluer la consistance des selles. Dans la SLA, la constipation est fréquente en raison d'une mobilité réduite, de muscles abdominaux affaiblis ou des médicaments. Les types 3-4 sont considérés comme idéaux. Les types 1-2 indiquent une constipation, les types 6-7 une diarrhée. (1 = Dur/en morceaux, 4 = Idéal, 7 = Liquide)",
+  "fields": {
+    "value": {
+      "label": "Type de selles",
+      "valueLabels": {
+        "1": "Type 1 - Boules dures séparées",
+        "2": "Type 2 - En forme de saucisse grumeleuse",
+        "3": "Type 3 - Saucisse avec des fissures",
+        "4": "Type 4 - Lisse et souple (idéal)",
+        "5": "Type 5 - Morceaux mous",
+        "6": "Type 6 - Morceaux pâteux et floconneux",
+        "7": "Type 7 - Aqueux, liquide"
+      }
+    }
+  }
+}

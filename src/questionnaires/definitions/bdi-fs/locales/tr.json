@@ -1,0 +1,193 @@
+{
+    "name": "BDI-FS",
+    "displayName": "Depresyon",
+    "shortName": "BDI-FS",
+    "exportTitle": "Depresyon – BDI-FS",
+    "description": "BDI-FS (Beck Depression Inventory - Fast Screen), depresyonun bilişsel belirtilerini değerlendirmek için kısa bir ankettir. Fiziksel belirtilere değil, düşünce ve duygulara odaklanır.",
+    "introText": "Lütfen her ifadeyi oku ve son iki haftada nasıl hissettiğini en iyi açıklayan yanıtı seç.",
+    "intro": {
+        "title": "Bilişsel depresyon belirtileri",
+        "description": "Bu anket, kendin ve yaşamın hakkında nasıl düşündüğünü değerlendirir. 7 soruyu dürüstçe yanıtla; doğru veya yanlış yanıt yoktur.",
+        "researchNote": "Açıklığın için teşekkürler. Yanıtların ALS ile ilişkili etkiler üzerine araştırmaları ilerletmeye yardımcı olur.",
+        "buttonText": "Anketi başlat"
+    },
+    "domains": {
+        "cognitive": "Bilişsel belirtiler"
+    },
+    "questions": {
+        "sadness": {
+            "text": "Üzüntü",
+            "exportLabel": "Üzüntü",
+            "options": {
+                "0": {
+                    "label": "Üzgün değilim",
+                    "description": "Üzgün değilim"
+                },
+                "1": {
+                    "label": "Sık sık üzgünüm",
+                    "description": "Sık sık üzgünüm"
+                },
+                "2": {
+                    "label": "Sürekli üzgünüm",
+                    "description": "Sürekli üzgünüm"
+                },
+                "3": {
+                    "label": "Dayanılmaz derecede üzgünüm",
+                    "description": "Dayanamayacağım kadar üzgünüm"
+                }
+            }
+        },
+        "pessimism": {
+            "text": "Karamsarlık",
+            "exportLabel": "Karamsarlık",
+            "options": {
+                "0": {
+                    "label": "Cesaretim kırılmış değil",
+                    "description": "Geleceğim konusunda cesaretim kırılmış değil"
+                },
+                "1": {
+                    "label": "Biraz cesaretim kırılmış",
+                    "description": "Eskisine göre daha fazla cesaretim kırılmış hissediyorum"
+                },
+                "2": {
+                    "label": "İyileşme beklemiyorum",
+                    "description": "İşlerin düzeleceğini beklemiyorum"
+                },
+                "3": {
+                    "label": "Umutsuz",
+                    "description": "Geleceğimin umutsuz olduğuna inanıyorum"
+                }
+            }
+        },
+        "past_failure": {
+            "text": "Geçmiş başarısızlık",
+            "exportLabel": "Başarısızlık",
+            "options": {
+                "0": {
+                    "label": "Başarısız değilim",
+                    "description": "Kendimi başarısız hissetmiyorum"
+                },
+                "1": {
+                    "label": "Gereğinden fazla başarısız oldum",
+                    "description": "Olması gerekenden fazla başarısız olduğumu düşünüyorum"
+                },
+                "2": {
+                    "label": "Çok sayıda başarısızlık",
+                    "description": "Geriye baktığımda birçok başarısızlık görüyorum"
+                },
+                "3": {
+                    "label": "Tam başarısızlık",
+                    "description": "Kendimi tamamen başarısız hissediyorum"
+                }
+            }
+        },
+        "loss_of_pleasure": {
+            "text": "Haz kaybı",
+            "exportLabel": "Zevk kaybı",
+            "options": {
+                "0": {
+                    "label": "Normal haz",
+                    "description": "Şeylerden eskisi kadar keyif alıyorum"
+                },
+                "1": {
+                    "label": "Daha az haz",
+                    "description": "Şeylerden eskisi kadar keyif almıyorum"
+                },
+                "2": {
+                    "label": "Çok az haz",
+                    "description": "Şeylerden çok az keyif alıyorum"
+                },
+                "3": {
+                    "label": "Hiç haz yok",
+                    "description": "Artık hiçbir şeyden keyif alamıyorum"
+                }
+            }
+        },
+        "self_dislike": {
+            "text": "Kendinden hoşlanmama",
+            "exportLabel": "Kendinden hoşlanmama",
+            "options": {
+                "0": {
+                    "label": "Kendimden memnunum",
+                    "description": "Kendimden memnunum"
+                },
+                "1": {
+                    "label": "Kendimden hayal kırıklığına uğradım",
+                    "description": "Kendimden hayal kırıklığına uğradım"
+                },
+                "2": {
+                    "label": "Kendimden hoşlanmıyorum",
+                    "description": "Kendimden hoşlanmıyorum"
+                },
+                "3": {
+                    "label": "Kendimden nefret ediyorum",
+                    "description": "Kendimden nefret ediyorum"
+                }
+            }
+        },
+        "self_criticalness": {
+            "text": "Kendini eleştirme",
+            "exportLabel": "Öz eleştiri",
+            "options": {
+                "0": {
+                    "label": "Kendimi fazla eleştirmiyorum",
+                    "description": "Kendimi her zamankinden daha fazla eleştirmiyorum"
+                },
+                "1": {
+                    "label": "Eskisinden daha eleştirelim",
+                    "description": "Kendimi eskisinden daha fazla eleştiriyorum"
+                },
+                "2": {
+                    "label": "Tüm hataları eleştiriyorum",
+                    "description": "Tüm hatalarım için kendimi eleştiriyorum"
+                },
+                "3": {
+                    "label": "Kendimi suçluyorum",
+                    "description": "Kötü olan her şey için kendimi suçluyorum"
+                }
+            }
+        },
+        "suicidal_thoughts": {
+            "text": "İntihar düşünceleri",
+            "exportLabel": "İntihar düşünceleri",
+            "options": {
+                "0": {
+                    "label": "Düşünce yok",
+                    "description": "Kendime zarar verme düşüncem yok"
+                },
+                "1": {
+                    "label": "Düşünceler var",
+                    "description": "Kendime zarar verme düşüncelerim var ama bunu yapmam"
+                },
+                "2": {
+                    "label": "Yapmak isterdim",
+                    "description": "Kendime zarar vermek isterdim"
+                },
+                "3": {
+                    "label": "Yapardım",
+                    "description": "Fırsatım olsa kendime zarar verirdim"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Minimal belirtiler",
+                "description": "Yanıtların hiç belirti olmadığını veya yalnızca minimal belirtiler olduğunu düşündürüyor."
+            },
+            {
+                "label": "Hafif belirtiler",
+                "description": "Yanıtların hafif belirtilere işaret ediyor."
+            },
+            {
+                "label": "Orta düzey belirtiler",
+                "description": "Yanıtların orta düzey belirtilere işaret ediyor."
+            },
+            {
+                "label": "Şiddetli belirtiler",
+                "description": "Yanıtların şiddetli belirtilere işaret ediyor."
+            }
+        ]
+    }
+}

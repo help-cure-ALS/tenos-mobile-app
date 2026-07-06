@@ -1,0 +1,11 @@
+{
+    "name": "Zorlu vital kapasite",
+    "shortName": "FVC",
+    "descriptionTitle": "FVC hakkında",
+    "description": "Zorlu vital kapasite (FVC), derin bir nefesten sonra verilebilen maksimum hava hacmini ölçer. ALS’de FVC, solunum fonksiyonu ve hastalık ilerlemesinin en önemli göstergelerinden biridir. Beklenen değerin %50 altına düşmesi solunum desteği ihtiyacına işaret edebilir.",
+    "fields": {
+        "value": {
+            "label": "FVC"
+        }
+    }
+}

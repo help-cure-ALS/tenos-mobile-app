@@ -1,0 +1,24 @@
+{
+  "name": "Pijn -> Stemming",
+  "shortName": "Stemming",
+  "descriptionTitle": "Invloed van pijn op stemming",
+  "description": "Registreert hoeveel pijn je stemming beïnvloedt. Op een schaal van 0 (geen invloed) tot 10 (extreme invloed). Chronische pijn kan aanzienlijke effecten hebben op de mentale gezondheid.",
+  "fields": {
+    "value": {
+      "label": "Beperking",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Minimaal",
+        "2": "Minimaal",
+        "3": "Licht",
+        "4": "Matig",
+        "5": "Matig",
+        "6": "Matig",
+        "7": "Ernstig",
+        "8": "Ernstig",
+        "9": "Zeer ernstig",
+        "10": "Extreem"
+      }
+    }
+  }
+}

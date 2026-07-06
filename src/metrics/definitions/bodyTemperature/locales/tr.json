@@ -1,0 +1,11 @@
+{
+    "name": "Vücut sıcaklığı",
+    "shortName": "Temp.",
+    "descriptionTitle": "Vücut sıcaklığı hakkında",
+    "description": "Vücut sıcaklığı önemli bir yaşamsal parametredir. Normal değerler 36,0 ile 37,5 °C arasındadır. ALS’de otonom disfonksiyon veya azalmış kas kütlesi nedeniyle ısı düzenlemesi bozulabilir. Düzenli ölçüm enfeksiyonları erken fark etmeye ve sıcaklık düzenlemesindeki değişiklikleri belgelemeye yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Sıcaklık"
+        }
+    }
+}

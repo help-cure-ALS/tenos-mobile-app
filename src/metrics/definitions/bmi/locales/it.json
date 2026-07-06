@@ -1,0 +1,11 @@
+{
+  "name": "Indice di massa corporea",
+  "shortName": "BMI",
+  "descriptionTitle": "Informazioni sull’indice di massa corporea",
+  "description": "L’indice di massa corporea (BMI) misura il rapporto tra peso corporeo e altezza. Si calcola dividendo il peso (kg) per l’altezza (m) al quadrato. Nella SLA, un BMI nella parte alta dell’intervallo normale è spesso associato a un esito migliore.",
+  "fields": {
+    "value": {
+      "label": "BMI"
+    }
+  }
+}

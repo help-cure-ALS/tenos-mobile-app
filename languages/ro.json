@@ -1,0 +1,14 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "TENOS",
+    "CFBundleName": "TENOS",
+    "NSCameraUsageDescription": "TENOS are nevoie de acces la cameră pentru a scana coduri QR pentru asocierea dispozitivelor și verificarea clinicii.",
+    "NSFaceIDUsageDescription": "Permite TENOS să folosească Face ID pentru a debloca datele tale protejate.",
+    "NSHealthShareUsageDescription": "TENOS poate citi date de sănătate selectate, inclusiv măsurători și medicamente aprobate, din Apple Health și le poate importa în dosarul tău de pacient criptat.",
+    "NSHealthUpdateUsageDescription": "TENOS nu scrie date de sănătate în Apple Health. Această descriere a permisiunii este inclusă deoarece TENOS folosește HealthKit pentru a importa date de sănătate aprobate.",
+    "NSMicrophoneUsageDescription": "TENOS are nevoie de acces la microfon când folosești funcții care înregistrează audio."
+  },
+  "android": {
+    "app_name": "TENOS"
+  }
+}

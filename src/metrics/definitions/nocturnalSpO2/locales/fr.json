@@ -1,0 +1,9 @@
+{
+  "name": "Saturation en oxygène nocturne",
+  "shortName": "SpO2 nuit",
+  "descriptionTitle": "À propos de la saturation en oxygène nocturne",
+  "description": "La saturation en oxygène nocturne indique dans quelle mesure le corps est alimenté en oxygène pendant le sommeil. Dans la SLA, une hypoventilation nocturne (respiration superficielle) peut apparaître avant les symptômes diurnes. Des valeurs inférieures à 90 % pendant le sommeil peuvent indiquer une faiblesse respiratoire précoce. La mesure se fait idéalement avec un oxymètre pendant la nuit.",
+  "fields": {
+    "value": { "label": "SpO2 min. (nuit)" }
+  }
+}

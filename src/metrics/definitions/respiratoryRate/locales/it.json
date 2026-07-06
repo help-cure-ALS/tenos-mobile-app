@@ -1,0 +1,11 @@
+{
+    "name": "Frequenza respiratoria",
+    "shortName": "Freq. resp.",
+    "descriptionTitle": "Informazioni sulla frequenza respiratoria",
+    "description": "La frequenza respiratoria è il numero di respiri al minuto. Nella SLA, la funzione respiratoria è un parametro chiave; una frequenza respiratoria a riposo in aumento può essere un segno precoce di debolezza dei muscoli respiratori. Questo valore viene importato automaticamente da Apple Salute o Health Connect (spesso misurato durante il sonno) e mostrato come media giornaliera.",
+    "fields": {
+        "value": {
+            "label": "Frequenza respiratoria"
+        }
+    }
+}

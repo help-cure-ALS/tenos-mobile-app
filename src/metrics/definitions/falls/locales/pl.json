@@ -1,0 +1,11 @@
+{
+  "name": "Upadki",
+  "shortName": "Upadki",
+  "descriptionTitle": "O monitorowaniu upadków",
+  "description": "Rejestrowanie upadków pomaga ocenić ryzyko upadku i podjąć działania profilaktyczne. W ALS narastające osłabienie mięśni znacznie zwiększa ryzyko upadków. Dokumentuj każdy upadek, aby omówić odpowiednie pomoce lub modyfikacje otoczenia z zespołem opieki.",
+  "fields": {
+    "value": {
+      "label": "Liczba upadków"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Energía activa",
+    "shortName": "Energía activa",
+    "descriptionTitle": "Acerca de la energía activa",
+    "description": "La energía activa son las calorías gastadas mediante el movimiento y la actividad cada día (sin contar el metabolismo en reposo). En la ELA, una tendencia descendente puede reflejar una menor actividad física a medida que cambia la movilidad. Este valor se importa automáticamente desde Apple Salud o Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Energía activa"
+        }
+    }
+}

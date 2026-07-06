@@ -1,0 +1,9 @@
+{
+    "name": "Herzfrequenzvariabilität",
+    "shortName": "HRV",
+    "descriptionTitle": "Über die Herzfrequenzvariabilität",
+    "description": "Die Herzfrequenzvariabilität (HRV) ist die zeitliche Schwankung zwischen Herzschlägen in Millisekunden und spiegelt die Aktivität des vegetativen Nervensystems wider. Auf Android wird sie als RMSSD gemessen und automatisch aus Health Connect importiert.",
+    "fields": {
+        "value": { "label": "Herzfrequenzvariabilität" }
+    }
+}

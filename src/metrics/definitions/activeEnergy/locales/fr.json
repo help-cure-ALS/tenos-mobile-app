@@ -1,0 +1,11 @@
+{
+    "name": "Énergie active",
+    "shortName": "Énergie active",
+    "descriptionTitle": "À propos de l'énergie active",
+    "description": "L'énergie active correspond aux calories dépensées par le mouvement et l'activité chaque jour (hors métabolisme de repos). Dans la SLA, une tendance à la baisse peut refléter une activité physique réduite à mesure que la mobilité change. Cette valeur est importée automatiquement depuis Apple Santé ou Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Énergie active"
+        }
+    }
+}

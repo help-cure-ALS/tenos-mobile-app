@@ -1,0 +1,11 @@
+{
+    "name": "Adım uzunluğu",
+    "shortName": "Adım uzunl.",
+    "descriptionTitle": "Adım uzunluğu hakkında",
+    "description": "Adım uzunluğu, ardışık adımlar arasındaki ortalama mesafedir (metre). ALS'de adım uzunluğunun kısalması, yürüyüşteki değişiklikleri yansıtabilir. Bu değer Apple Sağlık'tan otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Adım uzunluğu"
+        }
+    }
+}

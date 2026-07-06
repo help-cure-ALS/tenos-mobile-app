@@ -1,0 +1,10 @@
+{
+  "name": "Pression artérielle",
+  "shortName": "TA",
+  "descriptionTitle": "À propos de la pression artérielle",
+  "description": "La pression artérielle mesure la pression du sang dans les artères. Elle est donnée sous deux valeurs : systolique (valeur supérieure) et diastolique (valeur inférieure). Un suivi régulier aide à détecter tôt les maladies cardiovasculaires.",
+  "fields": {
+    "systolic": { "label": "Systolique" },
+    "diastolic": { "label": "Diastolique" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Passos",
+    "shortName": "Passos",
+    "descriptionTitle": "Sobre a contagem de passos",
+    "description": "A contagem diária de passos é uma medida simples da atividade do dia a dia. Na ELA, uma tendência de queda pode refletir uma mobilidade em declínio. Os passos são importados automaticamente do Apple Saúde ou do Health Connect; não é necessária inserção manual.",
+    "fields": {
+        "value": {
+            "label": "Passos"
+        }
+    }
+}

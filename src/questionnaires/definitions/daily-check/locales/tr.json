@@ -1,0 +1,171 @@
+{
+    "name": "Günlük belirti kontrolü",
+    "shortName": "",
+    "exportTitle": "Günlük belirti kontrolü",
+    "description": "Başlıca belirtilerini takip etmek için kısa bir günlük kontrol. Veriler otomatik olarak metriklerinle senkronize edilir.",
+    "introText": "Bugün nasıl hissediyorsun?",
+    "intro": {
+        "title": "Günlük belirti kontrolü",
+        "description": "Güncel durumuna hızlı bir bakış. Ağrı, yorgunluk, uyku ve ruh hali hakkında 4 kısa soruyu yanıtla.",
+        "buttonText": "Başla",
+        "researchNote": "Günlük kontrolün değişiklikleri erken fark etmeye yardımcı olur ve bakım ekibine değerli bilgiler sağlar."
+    },
+    "domains": {
+        "symptoms": "Belirtiler",
+        "sleep": "Uyku",
+        "mood": "Ruh hali"
+    },
+    "questions": {
+        "pain": {
+            "text": "Bugün ağrın ne kadar şiddetli?",
+            "exportLabel": "Ağrı",
+            "options": {
+                "0": {
+                    "label": "Ağrı yok",
+                    "description": "Rahatsızlık yok"
+                },
+                "1": {
+                    "label": "Hafif ağrı",
+                    "description": "Neredeyse fark edilmiyor, rahatsız etmiyor"
+                },
+                "2": {
+                    "label": "Orta ağrı",
+                    "description": "Fark edilir ama katlanılabilir"
+                },
+                "3": {
+                    "label": "Şiddetli ağrı",
+                    "description": "Belirgin şekilde kısıtlıyor"
+                },
+                "4": {
+                    "label": "Çok şiddetli ağrı",
+                    "description": "Zar zor tolere edilebilir"
+                }
+            }
+        },
+        "fatigue": {
+            "text": "Ne kadar yorgun veya bitkin hissediyorsun?",
+            "exportLabel": "Yorgunluk",
+            "options": {
+                "0": {
+                    "label": "Yorgunluk yok",
+                    "description": "Enerji dolu"
+                },
+                "1": {
+                    "label": "Biraz yorgun"
+                },
+                "2": {
+                    "label": "Biraz yorgun",
+                    "description": "Neredeyse fark edilmiyor"
+                },
+                "3": {
+                    "label": "Biraz yorgun"
+                },
+                "4": {
+                    "label": "Orta derecede yorgun",
+                    "description": "Biraz kısıtlı"
+                },
+                "5": {
+                    "label": "Orta derecede yorgun"
+                },
+                "6": {
+                    "label": "Oldukça yorgun",
+                    "description": "Aktiviteler yorucu geliyor"
+                },
+                "7": {
+                    "label": "Oldukça yorgun"
+                },
+                "8": {
+                    "label": "Çok yorgun",
+                    "description": "Çok dinlenmeye ihtiyaç var"
+                },
+                "9": {
+                    "label": "Çok yorgun"
+                },
+                "10": {
+                    "label": "Aşırı bitkin",
+                    "description": "Neredeyse hiçbir şey yapamıyor"
+                }
+            }
+        },
+        "sleep_quality": {
+            "text": "Dün gece nasıl uyudun?",
+            "exportLabel": "Uyku",
+            "options": {
+                "0": {
+                    "label": "Çok iyi",
+                    "description": "Dinlendirici, kesintisiz uyku"
+                },
+                "2": {
+                    "label": "İyi",
+                    "description": "Çoğunlukla dinlendirici uyku"
+                },
+                "4": {
+                    "label": "Orta",
+                    "description": "Biraz huzursuz ama yeterli"
+                },
+                "6": {
+                    "label": "Kötü",
+                    "description": "Birçok kez uyandım, az dinlendim"
+                },
+                "8": {
+                    "label": "Çok kötü",
+                    "description": "Neredeyse uyumadım"
+                },
+                "10": {
+                    "label": "Hiç",
+                    "description": "Uyumadım"
+                }
+            }
+        },
+        "mood": {
+            "text": "Bugün ruh halin nasıl?",
+            "exportLabel": "Ruh hali",
+            "options": {
+                "0": {
+                    "label": "Çok iyi",
+                    "description": "Dengeli ve olumlu"
+                },
+                "2": {
+                    "label": "İyi",
+                    "description": "Çoğunlukla olumlu"
+                },
+                "4": {
+                    "label": "Fena değil",
+                    "description": "Nötr"
+                },
+                "6": {
+                    "label": "Düşük",
+                    "description": "Biraz keyifsiz"
+                },
+                "8": {
+                    "label": "Kötü",
+                    "description": "Üzgün veya kaygılı"
+                },
+                "10": {
+                    "label": "Çok kötü",
+                    "description": "Umutsuz veya çaresiz"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "İyi gün",
+                "description": "Bugün görece iyi hissediyorsun."
+            },
+            {
+                "label": "Fena değil",
+                "description": "Küçük rahatsızlıklarla ortalama bir gün."
+            },
+            {
+                "label": "Zorlayıcı gün",
+                "description": "Bugün zorlayıcı bir gün."
+            },
+            {
+                "label": "Özellikle zorlayıcı gün",
+                "description": "Bugün daha fazla belirti yaşıyorsun."
+            }
+        ]
+    }
+}

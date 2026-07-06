@@ -1,0 +1,11 @@
+{
+  "name": "脑脊液NFL",
+  "shortName": "NFL（脑脊液）",
+  "descriptionTitle": "关于脑脊液中的NFL",
+  "description": "脑脊液（CSF）中的神经丝轻链（NFL）是神经细胞损伤的敏感生物标志物。脑脊液测量通常比血液测量提供更早、更准确的数值。在ALS中，脑脊液NFL水平升高与疾病进展更快相关。样本通过腰椎穿刺获得。",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

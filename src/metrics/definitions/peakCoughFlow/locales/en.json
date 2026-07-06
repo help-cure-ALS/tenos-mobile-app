@@ -1,0 +1,9 @@
+{
+    "name": "Peak Cough Flow",
+    "shortName": "PCF",
+    "descriptionTitle": "About Peak Cough Flow",
+    "description": "Peak Cough Flow (PCF) measures the maximum air velocity during a cough. It shows how effectively you can clear secretions from your airways. Values below 270 L/min increase the risk of respiratory infections. Below 160 L/min, coughing is often no longer effective.",
+    "fields": {
+        "value": { "label": "Peak Cough Flow" }
+    }
+}

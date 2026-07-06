@@ -1,0 +1,72 @@
+{
+    "title": "Date legale",
+    "translationNotice": "Aceasta este o traducere a datelor legale germane (Impressum). În caz de neconcordanțe, versiunea germană prevalează.",
+    "sections": {
+        "provider": {
+            "title": "Informații conform § 5 TMG (Legea germană privind telemedia)",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nürnberg\nGermania"
+        },
+        "representation": {
+            "title": "Reprezentat de",
+            "content": "Marie Assimidis, membru al consiliului"
+        },
+        "registration": {
+            "title": "Înregistrare în registru",
+            "content": "Înregistrat în Registrul Asociațiilor",
+            "court": "Instanța registrului: Amtsgericht Nürnberg",
+            "number": "Număr de înregistrare: VR 203250"
+        },
+        "contact": {
+            "title": "Contact",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Responsabil pentru conținut conform § 18 alin. (2) MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Nürnberg"
+        },
+        "liability": {
+            "title": "Declinarea răspunderii",
+            "content": {
+                "title": "Răspunderea pentru conținut",
+                "text": "Conținutul acestei aplicații a fost creat cu cea mai mare grijă. Totuși, nu putem garanta exactitatea, caracterul complet sau actualitatea conținutului.",
+                "tmg": "Ca organizație non-profit, suntem responsabili pentru propriul conținut din această aplicație conform § 7 alin. (1) TMG și legislației generale. Totuși, conform §§ 8-10 TMG, nu suntem obligați să monitorizăm informațiile transmise sau stocate de terți ori să investigăm circumstanțe care indică activități ilegale."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Declinarea responsabilității medicale",
+            "intro": "Notă importantă: această aplicație este destinată exclusiv documentării personale a sănătății și autoobservării. Conținutul, chestionarele și funcțiile puse la dispoziție nu înlocuiesc în niciun fel:",
+            "items": [
+                "Sfatul medical profesionist",
+                "Diagnosticul medical",
+                "Tratamentul medical",
+                "Recomandările personalului medical calificat"
+            ],
+            "advice": "Pentru probleme de sănătate sau întrebări despre sănătatea ta, consultă întotdeauna un medic sau alt profesionist medical calificat. Nu ignora niciodată sfatul medical profesionist pe baza informațiilor din această aplicație.",
+            "emergency": "În caz de urgență, sună imediat serviciile de urgență (112 în Europa, 911 în SUA)."
+        },
+        "availability": {
+            "title": "Fără garanție de disponibilitate",
+            "content": "Ne străduim să menținem aplicația și sincronizarea opțională în cloud disponibile continuu. Totuși, pot apărea întreruperi temporare din cauza mentenanței sau problemelor tehnice. Nu putem garanta disponibilitatea neîntreruptă."
+        },
+        "links": {
+            "title": "Răspunderea pentru linkuri",
+            "content": "Această aplicație poate conține linkuri către site-uri externe. Nu avem nicio influență asupra conținutului acestor pagini externe. Furnizorul sau operatorul respectiv este întotdeauna responsabil pentru conținutul paginilor indicate."
+        },
+        "copyright": {
+            "title": "Drepturi de autor",
+            "content": "Conținutul și lucrările create de help cure ALS e.V. în această aplicație sunt supuse legislației germane privind drepturile de autor. Reproducerea, editarea, distribuirea și orice utilizare dincolo de limitele dreptului de autor necesită consimțământul scris al organizației."
+        },
+        "openSource": {
+            "title": "Componente open source",
+            "content": "Această aplicație folosește software open source. O listă completă a bibliotecilor folosite și a licențelor acestora se găsește în setările aplicației la „Licențe”."
+        },
+        "about": {
+            "title": "Despre organizație",
+            "content": "help cure ALS e.V. este o organizație non-profit dedicată cercetării și combaterii sclerozei laterale amiotrofice (ALS). Sprijinim proiecte de cercetare, promovăm schimbul între persoanele afectate și știință și dezvoltăm instrumente digitale pentru îmbunătățirea calității vieții pacienților cu ALS.",
+            "moreInfo": "Mai multe informații despre activitatea noastră se găsesc pe site-ul nostru:"
+        }
+    },
+    "lastUpdated": "Februarie 2026"
+}

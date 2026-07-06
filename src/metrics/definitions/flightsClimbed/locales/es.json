@@ -1,0 +1,11 @@
+{
+    "name": "Pisos subidos",
+    "shortName": "Pisos",
+    "descriptionTitle": "Acerca de los pisos subidos",
+    "description": "El número de pisos subidos al día refleja la fuerza y la resistencia de las piernas en la actividad cotidiana. En la ELA, una tendencia descendente puede indicar una debilidad en las piernas que progresa. Este valor se importa automáticamente desde Apple Salud o Health Connect; no es necesario introducirlo manualmente.",
+    "fields": {
+        "value": {
+            "label": "Pisos subidos"
+        }
+    }
+}

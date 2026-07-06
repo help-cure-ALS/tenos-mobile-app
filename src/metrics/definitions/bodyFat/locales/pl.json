@@ -1,0 +1,11 @@
+{
+  "name": "Procent tkanki tłuszczowej",
+  "shortName": "Tkanka tłuszczowa",
+  "descriptionTitle": "O procencie tkanki tłuszczowej",
+  "description": "Procent tkanki tłuszczowej wskazuje, jaka część masy ciała składa się z tkanki tłuszczowej. W ALS monitorowanie jest ważne, ponieważ utrata masy mięśniowej przy stałej masie ciała może oznaczać wzrost udziału tłuszczu. Regularne pomiary pomagają śledzić skład ciała.",
+  "fields": {
+    "value": {
+      "label": "Procent tkanki tłuszczowej"
+    }
+  }
+}

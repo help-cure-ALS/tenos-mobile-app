@@ -1,0 +1,17 @@
+{
+  "name": "Fasciculaciones",
+  "shortName": "Fascic.",
+  "descriptionTitle": "Sobre las fasciculaciones",
+  "description": "Las fasciculaciones son contracciones breves e involuntarias de fibras musculares individuales que a veces pueden verse bajo la piel. Son un síntoma típico de la ELA y se diferencian de los calambres musculares, que son dolorosos y persistentes. Su seguimiento ayuda a identificar patrones y a documentar la progresión de la enfermedad. (0 = Ninguna, 1 = Rara, 2 = Frecuente, 3 = Muy frecuente)",
+  "fields": {
+    "value": {
+      "label": "Fasciculaciones",
+      "valueLabels": {
+        "0": "Ninguna",
+        "1": "Rara",
+        "2": "Frecuente",
+        "3": "Muy frecuente"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Müdigkeit",
+    "shortName": "Fatigue",
+    "descriptionTitle": "Über Müdigkeit",
+    "description": "Müdigkeit (Fatigue) wird auf einer Skala von 0 (keine Müdigkeit) bis 10 (extreme Erschöpfung) erfasst. Bei ALS ist Fatigue ein häufiges Symptom, das durch den erhöhten Energieaufwand für alltägliche Aktivitäten, Atemprobleme oder Schlafstörungen verursacht werden kann. Die Dokumentation hilft, Muster zu erkennen und die Tagesplanung anzupassen.",
+    "fields": {
+        "value": {
+            "label": "Müdigkeit",
+            "valueLabels": {
+                "0": "Keine",
+                "1": "Leicht",
+                "2": "Leicht",
+                "3": "Leicht",
+                "4": "Mäßig",
+                "5": "Mäßig",
+                "6": "Mäßig",
+                "7": "Stark",
+                "8": "Stark",
+                "9": "Stark",
+                "10": "Extrem"
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+ALS,SLA,neuron motor,Lou Gehrig,ALSFRS,simptome,medicamente,cercetare

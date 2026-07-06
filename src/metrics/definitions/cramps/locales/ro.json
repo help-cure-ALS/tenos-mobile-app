@@ -1,0 +1,11 @@
+{
+    "name": "Crampe musculare",
+    "shortName": "Crampe",
+    "descriptionTitle": "Despre crampele musculare",
+    "description": "Crampele musculare sunt contracții musculare dureroase, susținute și involuntare. Ele diferă de fasciculații (tresăriri scurte), care sunt înregistrate separat. Crampele sunt frecvente în ALS, mai ales noaptea, și pot perturba somnul. Înregistrează numărul de crampe pe zi pentru a identifica tipare.",
+    "fields": {
+        "value": {
+            "label": "Număr de crampe"
+        }
+    }
+}

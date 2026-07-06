@@ -1,0 +1,11 @@
+{
+    "name": "Velocità in discesa delle scale",
+    "shortName": "Discesa",
+    "descriptionTitle": "Informazioni sulla velocità in discesa delle scale",
+    "description": "La velocità in discesa delle scale indica quanto velocemente scendi le scale, in metri al secondo. Scendere le scale richiede molto equilibrio e controllo delle gambe, quindi una tendenza al ribasso può essere un segno precoce di declino della funzione degli arti inferiori nella SLA. Questo valore viene importato automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Velocità in discesa delle scale"
+        }
+    }
+}

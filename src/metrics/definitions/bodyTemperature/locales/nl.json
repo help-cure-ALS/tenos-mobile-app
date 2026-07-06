@@ -1,0 +1,11 @@
+{
+  "name": "Lichaamstemperatuur",
+  "shortName": "Temp.",
+  "descriptionTitle": "Over lichaamstemperatuur",
+  "description": "Lichaamstemperatuur is een belangrijke vitale parameter. Normale waarden liggen tussen 36,0 en 37,5 °C. Bij ALS kan thermoregulatie verstoord zijn door autonome dysfunctie of verminderde spiermassa. Regelmatige meting helpt infecties vroeg te herkennen en veranderingen in temperatuurregulatie te documenteren.",
+  "fields": {
+    "value": {
+      "label": "Temperatuur"
+    }
+  }
+}

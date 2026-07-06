@@ -1,0 +1,11 @@
+{
+  "name": "Body Mass Index",
+  "shortName": "BMI",
+  "descriptionTitle": "Over Body Mass Index",
+  "description": "De Body Mass Index (BMI) is een maat voor de verhouding tussen lichaamsgewicht en lengte. Hij wordt berekend als gewicht (kg) gedeeld door lengte (m) in het kwadraat. Bij ALS wordt een BMI in het hogere normale bereik vaak geassocieerd met een betere uitkomst.",
+  "fields": {
+    "value": {
+      "label": "BMI"
+    }
+  }
+}

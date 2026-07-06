@@ -1,0 +1,11 @@
+{
+  "name": "Nachtelijke zuurstofsaturatie",
+  "shortName": "Nacht SpO2",
+  "descriptionTitle": "Over nachtelijke zuurstofsaturatie",
+  "description": "Nachtelijke zuurstofsaturatie laat zien hoe goed het lichaam tijdens de slaap van zuurstof wordt voorzien. Bij ALS kan nachtelijke hypoventilatie (oppervlakkige ademhaling) optreden voordat dagsymptomen merkbaar worden. Waarden onder 90% tijdens de slaap kunnen wijzen op vroege ademhalingszwakte. De meting wordt bij voorkeur ’s nachts met een pulsoximeter uitgevoerd.",
+  "fields": {
+    "value": {
+      "label": "Min. SpO2 (nacht)"
+    }
+  }
+}

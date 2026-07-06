@@ -1,0 +1,11 @@
+{
+    "name": "Stabilité de la marche",
+    "shortName": "Stabilité",
+    "descriptionTitle": "À propos de la stabilité de la marche",
+    "description": "La stabilité de la marche d'Apple estime, en pourcentage, à quel point votre marche est stable et équilibrée. Une tendance à la baisse indique un risque de chute plus élevé. Dans la SLA, cela peut aider à suivre les changements de la marche et de l'équilibre. Cette valeur est importée automatiquement depuis Apple Santé.",
+    "fields": {
+        "value": {
+            "label": "Stabilité de la marche"
+        }
+    }
+}

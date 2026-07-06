@@ -1,0 +1,11 @@
+{
+  "name": "血清NFL",
+  "shortName": "NFL",
+  "descriptionTitle": "关于神经丝轻链",
+  "description": "神经丝轻链（NFL）是神经细胞受损时释放到血液中的生物标志物。NFL水平升高可能提示活跃的神经变性。在ALS中，NFL用于监测疾病进展并作为预后标志物。",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

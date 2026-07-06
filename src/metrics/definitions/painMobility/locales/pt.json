@@ -1,0 +1,24 @@
+{
+  "name": "Dor -> Mobilidade",
+  "shortName": "Mobilidade",
+  "descriptionTitle": "Impacto da dor na mobilidade",
+  "description": "Regista quanto a dor afeta a mobilidade e a atividade física. Numa escala de 0 (sem impacto) a 10 (impacto extremo). A mobilidade limitada pela dor pode levar a outros problemas de saúde.",
+  "fields": {
+    "value": {
+      "label": "Limitação",
+      "valueLabels": {
+        "0": "Nenhuma",
+        "1": "Mínima",
+        "2": "Mínima",
+        "3": "Ligeira",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Muito grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

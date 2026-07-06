@@ -1,0 +1,11 @@
+{
+  "name": "Ślinotok",
+  "shortName": "Ślina",
+  "descriptionTitle": "O ślinotoku",
+  "description": "Nadmierny wypływ śliny (ślinotok) jest częstym objawem w ALS, spowodowanym trudnościami w połykaniu, a nie zwiększoną produkcją śliny. Zapisuj nasilenie w skali od 0 (normalnie) do 10 (bardzo ciężkie). Dokumentacja pomaga ocenić skuteczność leczenia.",
+  "fields": {
+    "value": {
+      "label": "Nasilenie"
+    }
+  }
+}

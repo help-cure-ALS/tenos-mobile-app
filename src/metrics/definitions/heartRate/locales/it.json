@@ -1,0 +1,11 @@
+{
+  "name": "Frequenza cardiaca",
+  "shortName": "Polso",
+  "descriptionTitle": "Informazioni sulla frequenza cardiaca",
+  "description": "La frequenza cardiaca indica quante volte il cuore batte al minuto. Un normale polso a riposo negli adulti è tra 60 e 100 battiti al minuto. Nella SLA, può essere influenzata da stress, problemi respiratori o farmaci. Misurazioni regolari aiutano a rilevare precocemente cambiamenti.",
+  "fields": {
+    "value": {
+      "label": "Frequenza cardiaca"
+    }
+  }
+}

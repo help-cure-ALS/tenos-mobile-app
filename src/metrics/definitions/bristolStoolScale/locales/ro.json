@@ -1,0 +1,20 @@
+{
+    "name": "Consistența scaunului",
+    "shortName": "Scaun",
+    "descriptionTitle": "Despre scala Bristol pentru scaun",
+    "description": "Scala Bristol pentru scaun este un instrument clinic pentru evaluarea consistenței scaunului. În ALS, constipația este frecventă din cauza mobilității reduse, slăbirii mușchilor abdominali sau medicamentelor. Tipul 3-4 este considerat ideal. Tipul 1-2 indică constipație, tipul 6-7 indică diaree. (1 = tare/bucăți, 4 = ideal, 7 = apos)",
+    "fields": {
+        "value": {
+            "label": "Tip scaun",
+            "valueLabels": {
+                "1": "Tip 1 - Bucăți tari separate",
+                "2": "Tip 2 - În formă de cârnat, cu noduli",
+                "3": "Tip 3 - Cârnat cu crăpături",
+                "4": "Tip 4 - Neted și moale (ideal)",
+                "5": "Tip 5 - Bucăți moi",
+                "6": "Tip 6 - Bucăți moi, pufoase",
+                "7": "Tip 7 - Apos, lichid"
+            }
+        }
+    }
+}

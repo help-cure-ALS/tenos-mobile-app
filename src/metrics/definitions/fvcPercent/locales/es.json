@@ -1,0 +1,9 @@
+{
+  "name": "CVF % del valor esperado",
+  "shortName": "CVF %",
+  "descriptionTitle": "Sobre el porcentaje de CVF esperado",
+  "description": "La CVF como porcentaje del valor esperado compara tu capacidad vital forzada medida con el valor esperado según tu edad, sexo y altura. Valores superiores al 80 % se consideran normales. En la ELA, una caída por debajo del 50 % se considera crítica y puede requerir el inicio de ventilación no invasiva.",
+  "fields": {
+    "value": { "label": "CVF % esperado" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Fuerza de prensión",
+  "shortName": "Prensión",
+  "descriptionTitle": "Sobre la fuerza de prensión",
+  "description": "La fuerza de prensión mide la fuerza máxima que puede ejercerse con la mano. Se mide con un dinamómetro de mano y es un indicador objetivo de la fuerza muscular. En la ELA, puede ayudar a documentar la progresión de la debilidad muscular. Los valores normales varían según la edad y el sexo (hombres: 30-55 kg, mujeres: 20-35 kg).",
+  "fields": {
+    "left": { "label": "Izquierda" },
+    "right": { "label": "Derecha" }
+  }
+}

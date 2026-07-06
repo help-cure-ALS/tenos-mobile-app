@@ -1,0 +1,18 @@
+{
+    "name": "Pain Level",
+    "shortName": "Pain",
+    "descriptionTitle": "About Pain Level",
+    "description": "Pain level is assessed using a verbal descriptor scale (VRS). In ALS, pain can result from muscle tension, cramps, immobility, or pressure sores. Regular documentation helps identify pain patterns and adjust treatment.",
+    "fields": {
+        "value": {
+            "label": "Pain Level",
+            "valueLabels": {
+                "0": "No pain",
+                "1": "Mild pain",
+                "2": "Moderate pain",
+                "3": "Severe pain",
+                "4": "Very severe pain"
+            }
+        }
+    }
+}

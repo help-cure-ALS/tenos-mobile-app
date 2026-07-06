@@ -1,0 +1,11 @@
+{
+  "name": "Częstość akcji serca",
+  "shortName": "Puls",
+  "descriptionTitle": "O częstości akcji serca",
+  "description": "Częstość akcji serca wskazuje, ile razy serce bije na minutę. Prawidłowy puls spoczynkowy u dorosłych wynosi 60-100 uderzeń na minutę. W ALS może być zależny od stresu, problemów z oddychaniem lub leków. Regularne pomiary pomagają wcześnie wykrywać zmiany.",
+  "fields": {
+    "value": {
+      "label": "Częstość akcji serca"
+    }
+  }
+}

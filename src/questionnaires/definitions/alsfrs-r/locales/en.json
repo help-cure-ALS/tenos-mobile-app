@@ -1,0 +1,149 @@
+{
+    "name": "ALSFRS-R",
+    "displayName": "Functional Status",
+    "shortName": "ALSFRS-R",
+    "description": "The ALS Functional Rating Scale - Revised (ALSFRS-R) is a validated instrument for assessing functional status in ALS patients. The questionnaire covers 12 areas of daily life across four domains.",
+    "introText": "Please rate your current functional ability in the following areas. Choose the description that best matches your situation.",
+    "intro": {
+        "title": "Functional Assessment",
+        "description": "This questionnaire assesses your current functional ability in 12 areas of daily life. It takes about 5 minutes to complete.",
+        "buttonText": "Start questionnaire",
+        "researchNote": "Thank you for participating. Regular assessments help us better understand disease progression and advance ALS research."
+    },
+    "domains": {
+        "bulbar": "Bulbar Function",
+        "fine_motor": "Fine Motor",
+        "gross_motor": "Gross Motor",
+        "respiratory": "Respiratory"
+    },
+    "questions": {
+        "speech": {
+            "text": "Speech",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal speech processes" },
+                "3": { "label": "Slight impairment", "description": "Detectable speech disturbance" },
+                "2": { "label": "Moderate impairment", "description": "Must repeat occasionally" },
+                "1": { "label": "Severe impairment", "description": "Speech combined with nonverbal communication" },
+                "0": { "label": "No speech", "description": "Loss of useful speech" }
+            }
+        },
+        "salivation": {
+            "text": "Salivation",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal salivation" },
+                "3": { "label": "Slight excess", "description": "Slight but definite excess saliva; may have nighttime drooling" },
+                "2": { "label": "Moderate excess", "description": "Moderately excessive saliva; may have minimal drooling" },
+                "1": { "label": "Marked excess", "description": "Marked excess saliva with some drooling" },
+                "0": { "label": "Severe excess", "description": "Marked drooling; requires constant tissue or handkerchief" }
+            }
+        },
+        "swallowing": {
+            "text": "Swallowing",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal eating habits" },
+                "3": { "label": "Slight problems", "description": "Early eating problems - occasional choking" },
+                "2": { "label": "Diet change", "description": "Dietary consistency changes" },
+                "1": { "label": "Supplemental tube feeding", "description": "Needs supplemental tube feeding" },
+                "0": { "label": "Tube feeding only", "description": "Nothing by mouth; exclusively tube fed" }
+            }
+        },
+        "handwriting": {
+            "text": "Handwriting",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal writing" },
+                "3": { "label": "Slow/Sloppy", "description": "Slow or sloppy; all words are legible" },
+                "2": { "label": "Partially legible", "description": "Not all words are legible" },
+                "1": { "label": "Can hold pen", "description": "Able to grip pen but unable to write" },
+                "0": { "label": "Unable", "description": "Unable to grip pen" }
+            }
+        },
+        "cutting_food": {
+            "text": "Cutting food and handling utensils",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal; without help" },
+                "3": { "label": "Slow/Clumsy", "description": "Somewhat slow and clumsy, but no help needed" },
+                "2": { "label": "Partial help needed", "description": "Can cut most foods, although clumsy and slow; some help needed" },
+                "1": { "label": "Needs to be fed", "description": "Food must be cut by someone, but can still feed slowly" },
+                "0": { "label": "Fully dependent", "description": "Needs to be fed" }
+            }
+        },
+        "dressing": {
+            "text": "Dressing and hygiene",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal function" },
+                "3": { "label": "Independent but slow", "description": "Independent and complete self-care with effort or decreased efficiency" },
+                "2": { "label": "Occasional help", "description": "Intermittent assistance or substitute methods" },
+                "1": { "label": "Help needed", "description": "Needs attendant for self-care" },
+                "0": { "label": "Fully dependent", "description": "Total dependence" }
+            }
+        },
+        "turning_in_bed": {
+            "text": "Turning in bed and adjusting bed clothes",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal function" },
+                "3": { "label": "Slow/Clumsy", "description": "Somewhat slow and clumsy, but no help needed" },
+                "2": { "label": "Difficult alone", "description": "Can turn alone or adjust sheets, but with great difficulty" },
+                "1": { "label": "Help required", "description": "Can initiate, but not turn or adjust sheets alone" },
+                "0": { "label": "Helpless", "description": "Helpless" }
+            }
+        },
+        "walking": {
+            "text": "Walking",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal walking" },
+                "3": { "label": "Slight gait impairment", "description": "Early ambulation difficulties" },
+                "2": { "label": "With assistance", "description": "Walks with assistance (orthotics, cane, walker)" },
+                "1": { "label": "Transfer only", "description": "Non-ambulatory functional movement only" },
+                "0": { "label": "No leg movement", "description": "No purposeful leg movement" }
+            }
+        },
+        "climbing_stairs": {
+            "text": "Climbing stairs",
+            "options": {
+                "4": { "label": "Normal", "description": "Normal" },
+                "3": { "label": "Slow", "description": "Slow" },
+                "2": { "label": "Slightly unsteady", "description": "Mild unsteadiness or fatigue" },
+                "1": { "label": "With help", "description": "Needs assistance (handrail, person)" },
+                "0": { "label": "Unable", "description": "Cannot climb stairs" }
+            }
+        },
+        "dyspnea": {
+            "text": "Dyspnea",
+            "options": {
+                "4": { "label": "None", "description": "No shortness of breath" },
+                "3": { "label": "With exertion", "description": "Shortness of breath when walking" },
+                "2": { "label": "With light activity", "description": "Shortness of breath with one or more: eating, bathing, dressing" },
+                "1": { "label": "At rest", "description": "Shortness of breath at rest, difficulty breathing when sitting or lying" },
+                "0": { "label": "Significant", "description": "Significant difficulty, mechanical respiratory support considered" }
+            }
+        },
+        "orthopnea": {
+            "text": "Orthopnea (difficulty breathing when lying down)",
+            "options": {
+                "4": { "label": "None", "description": "No problems" },
+                "3": { "label": "Slight problems", "description": "Some difficulty sleeping due to shortness of breath; does not routinely use more than 2 pillows" },
+                "2": { "label": "Extra pillows needed", "description": "Needs extra pillows to sleep (more than 2)" },
+                "1": { "label": "Sitting only", "description": "Can only sleep sitting up" },
+                "0": { "label": "Unable to sleep", "description": "Unable to sleep without mechanical assistance" }
+            }
+        },
+        "respiratory_insufficiency": {
+            "text": "Respiratory insufficiency",
+            "options": {
+                "4": { "label": "None", "description": "No support needed" },
+                "3": { "label": "Intermittent BiPAP", "description": "Intermittent use of BiPAP" },
+                "2": { "label": "Nocturnal BiPAP", "description": "Continuous nocturnal BiPAP use" },
+                "1": { "label": "Continuous BiPAP", "description": "Continuous BiPAP use day and night" },
+                "0": { "label": "Invasive ventilation", "description": "Invasive mechanical ventilation by intubation or tracheostomy" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Little change", "description": "Functional ability is largely preserved." },
+            { "label": "Slight changes", "description": "Some functional changes are noted." },
+            { "label": "Notable changes", "description": "Notable functional changes are observed." },
+            { "label": "Extensive changes", "description": "Functional ability shows extensive changes." }
+        ]
+    }
+}

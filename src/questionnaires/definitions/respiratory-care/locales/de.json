@@ -1,0 +1,92 @@
+{
+    "name": "Atemversorgung",
+    "displayName": "Atemversorgung",
+    "shortName": "Atemversorgung",
+    "exportTitle": "Atemversorgung",
+    "description": "Erfasst Symptome, die auf eine unzureichende Atemversorgung hinweisen können. Regelmäßiges Ausfüllen hilft, Veränderungen frühzeitig zu erkennen.",
+    "introText": "Die folgenden Fragen beziehen sich auf Ihr Befinden in den letzten Tagen.",
+    "intro": {
+        "title": "Atemversorgung",
+        "description": "Dieser Fragebogen erfasst Symptome rund um Ihre Atemversorgung anhand von 6 kurzen Fragen.",
+        "researchNote": "Regelmäßige Angaben helfen, Veränderungen frühzeitig zu erkennen und mit Ihrem Versorgungsteam zu besprechen.",
+        "buttonText": "Fragebogen starten"
+    },
+    "domains": {
+        "symptoms": "Symptome"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Ich wache mit Kopfschmerzen auf.",
+            "exportLabel": "Kopfschmerzen",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        },
+        "dizziness": {
+            "text": "Mir ist schwindelig, besonders nach dem Aufwachen.",
+            "exportLabel": "Schwindel",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Ich fühle mich tagsüber ungewöhnlich müde oder schläfrig.",
+            "exportLabel": "Tagesmüdigkeit",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        },
+        "concentration": {
+            "text": "Es fällt mir schwer, mich zu konzentrieren.",
+            "exportLabel": "Konzentration",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Ich wache nachts auf oder schlafe unruhig.",
+            "exportLabel": "Schlafqualität",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Mir fehlt tagsüber die Luft, z. B. beim Sprechen oder in Ruhe.",
+            "exportLabel": "Atemnot",
+            "options": {
+                "0": { "label": "Gar nicht" },
+                "1": { "label": "Selten" },
+                "2": { "label": "Manchmal" },
+                "3": { "label": "Häufig" },
+                "4": { "label": "Fast immer" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Kaum Symptome", "description": "Ihre Antworten deuten auf keine oder nur geringe Beschwerden hin." },
+            { "label": "Auffällige Symptome", "description": "Ihre Antworten deuten auf auffällige Beschwerden hin." },
+            { "label": "Deutliche Symptome", "description": "Ihre Antworten deuten auf deutliche Beschwerden hin." }
+        ]
+    }
+}

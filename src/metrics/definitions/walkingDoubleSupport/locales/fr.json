@@ -1,0 +1,11 @@
+{
+    "name": "Temps de double appui",
+    "shortName": "Double appui",
+    "descriptionTitle": "À propos du temps de double appui",
+    "description": "Le temps de double appui est le pourcentage du cycle de marche pendant lequel les deux pieds touchent le sol. Une valeur plus élevée indique souvent une démarche plus prudente et moins stable et un risque de chute plus élevé. Dans la SLA, cela peut aider à suivre les changements d'équilibre. Cette valeur est importée automatiquement depuis Apple Santé.",
+    "fields": {
+        "value": {
+            "label": "Temps de double appui"
+        }
+    }
+}

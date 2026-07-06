@@ -1,0 +1,11 @@
+{
+    "name": "Speech Rate",
+    "shortName": "Speech",
+    "descriptionTitle": "About Speech Rate",
+    "description": "Speech rate measures how many words can be spoken per minute. In ALS, bulbar involvement can lead to slowed and slurred speech (dysarthria). Normal speech rate is about 120-150 words per minute. Regular measurement helps to detect changes early.",
+    "fields": {
+        "value": {
+            "label": "Words per Minute"
+        }
+    }
+}

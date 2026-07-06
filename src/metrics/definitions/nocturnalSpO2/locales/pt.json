@@ -1,0 +1,11 @@
+{
+  "name": "Saturação noturna de oxigénio",
+  "shortName": "SpO2 noite",
+  "descriptionTitle": "Sobre a saturação noturna de oxigénio",
+  "description": "A saturação noturna de oxigénio mostra quão bem o corpo é abastecido com oxigénio durante o sono. Na ELA, a hipoventilação noturna (respiração superficial) pode ocorrer antes de sintomas diurnos. Valores abaixo de 90% durante o sono podem indicar fraqueza respiratória precoce. A medição é idealmente feita com um oxímetro de pulso durante a noite.",
+  "fields": {
+    "value": {
+      "label": "SpO2 mín. (noite)"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Forma da ELA e genética",
+  "shortName": "Forma da ELA",
+  "descriptionTitle": "Sobre forma da ELA e genética",
+  "description": "Esta métrica regista se a ELA é classificada como esporádica, familiar ou incerta, e se há um achado genético ou mutação conhecida documentada. As informações genéticas são especialmente sensíveis e são partilhadas separadamente.",
+  "fields": {}
+}

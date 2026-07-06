@@ -1,0 +1,241 @@
+{
+    "name": "PHQ-9",
+    "displayName": "Depresyon taraması",
+    "shortName": "PHQ-9",
+    "exportTitle": "Depresyon taraması – PHQ-9",
+    "description": "PHQ-9 (Patient Health Questionnaire), depresyonu saptamak ve şiddetini ölçmek için doğrulanmış bir tarama aracıdır. Klinik uygulama ve araştırmada dünya çapında kullanılır.",
+    "introText": "Son 2 haftada aşağıdaki sorunlar seni ne sıklıkta rahatsız etti?",
+    "intro": {
+        "title": "Depresyon taraması",
+        "description": "Bu anket son iki haftada nasıl hissettiğinle ilgilidir. 9 soruyu dürüstçe yanıtla; doğru veya yanlış yanıt yoktur. Yanıtların olası depresif belirtileri belirlemeye yardımcı olur.",
+        "buttonText": "Anketi başlat",
+        "researchNote": "Zaman ayırdığın için teşekkürler. Yanıtların hastalık ilerlemesini daha iyi anlamamıza ve ALS araştırmasını ilerletmemize yardımcı olur."
+    },
+    "domains": {
+        "depression": "Depresif belirtiler"
+    },
+    "questions": {
+        "interest": {
+            "text": "Bir şeyler yapmaya karşı az ilgi veya zevk alma",
+            "exportLabel": "İlgi",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "mood": {
+            "text": "Keyifsiz, depresif veya umutsuz hissetme",
+            "exportLabel": "Çökkünlük",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "sleep": {
+            "text": "Uykuya dalmakta veya uykuyu sürdürmekte zorlanma ya da çok fazla uyuma",
+            "exportLabel": "Uyku",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "energy": {
+            "text": "Yorgun hissetme veya enerjinin az olması",
+            "exportLabel": "Enerji",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "appetite": {
+            "text": "İştahsızlık veya aşırı yeme",
+            "exportLabel": "İştah",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "self_esteem": {
+            "text": "Kendin hakkında kötü hissetme; başarısız olduğunu veya kendini ya da aileni hayal kırıklığına uğrattığını düşünme",
+            "exportLabel": "Öz saygı",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "concentration": {
+            "text": "Gazete okumak veya televizyon izlemek gibi şeylere konsantre olmakta zorlanma",
+            "exportLabel": "Konsantrasyon",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "psychomotor": {
+            "text": "Başkalarının fark edebileceği kadar yavaş hareket etme veya konuşma? Ya da tam tersi, her zamankinden çok daha fazla hareket edecek kadar huzursuz veya kıpır kıpır olma?",
+            "exportLabel": "Psikomotor",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        },
+        "suicidality": {
+            "text": "Ölmüş olsan daha iyi olacağını veya bir şekilde kendine zarar vermeyi düşünme",
+            "exportLabel": "İntihar eğilimi",
+            "options": {
+                "0": {
+                    "label": "Hiç",
+                    "description": "Son 2 haftada hiç"
+                },
+                "1": {
+                    "label": "Birkaç gün",
+                    "description": "Günlerin yarısından azında"
+                },
+                "2": {
+                    "label": "Günlerin yarısından fazlasında",
+                    "description": "Sık sık"
+                },
+                "3": {
+                    "label": "Neredeyse her gün",
+                    "description": "Neredeyse her gün"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Minimal belirtiler",
+                "description": "Yanıtların dikkat çekici olmayan aralıktadır."
+            },
+            {
+                "label": "Hafif belirtiler",
+                "description": "Yanıtların hafif düzeyde zorlanmaya işaret ediyor."
+            },
+            {
+                "label": "Orta düzey belirtiler",
+                "description": "Yanıtların fark edilir düzeyde zorlanmaya işaret ediyor."
+            },
+            {
+                "label": "Belirgin belirtiler",
+                "description": "Yanıtların artmış düzeyde zorlanmaya işaret ediyor."
+            },
+            {
+                "label": "Çok belirgin belirtiler",
+                "description": "Yanıtların yüksek düzeyde zorlanmaya işaret ediyor."
+            }
+        ]
+    }
+}

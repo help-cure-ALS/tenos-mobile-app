@@ -1,0 +1,11 @@
+{
+  "name": "NFL nel liquor",
+  "shortName": "NFL (liquor)",
+  "descriptionTitle": "Informazioni sulla NFL nel liquido cerebrospinale",
+  "description": "La catena leggera dei neurofilamenti (NFL) nel liquido cerebrospinale (liquor) è un biomarcatore sensibile di danno alle cellule nervose. La misurazione nel liquor spesso fornisce valori più precoci e accurati rispetto al sangue. Nella SLA, livelli elevati nel liquor sono associati a progressione più rapida. Il campione viene ottenuto tramite puntura lombare.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

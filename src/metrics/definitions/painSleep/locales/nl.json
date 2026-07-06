@@ -1,0 +1,24 @@
+{
+  "name": "Pijn -> Slaap",
+  "shortName": "Slaap",
+  "descriptionTitle": "Invloed van pijn op slaap",
+  "description": "Registreert hoeveel pijn je slaap beïnvloedt. Op een schaal van 0 (geen invloed) tot 10 (extreme invloed). Slaapstoornissen door pijn kunnen de kwaliteit van leven aanzienlijk beïnvloeden.",
+  "fields": {
+    "value": {
+      "label": "Beperking",
+      "valueLabels": {
+        "0": "Geen",
+        "1": "Minimaal",
+        "2": "Minimaal",
+        "3": "Licht",
+        "4": "Matig",
+        "5": "Matig",
+        "6": "Matig",
+        "7": "Ernstig",
+        "8": "Ernstig",
+        "9": "Zeer ernstig",
+        "10": "Extreem"
+      }
+    }
+  }
+}

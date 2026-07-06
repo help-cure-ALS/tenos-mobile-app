@@ -1,0 +1,10 @@
+{
+    "name": "Griffstärke",
+    "shortName": "Griff",
+    "descriptionTitle": "Über Griffstärke",
+    "description": "Die Griffstärke misst die maximale Kraft, die mit der Hand ausgeübt werden kann. Sie wird mit einem Handdynamometer gemessen und ist ein objektiver Indikator für die Muskelkraft. Bei ALS kann die Griffstärke helfen, den Verlauf der Muskelschwäche zu dokumentieren. Normale Werte variieren je nach Alter und Geschlecht (Männer: 30-55 kg, Frauen: 20-35 kg).",
+    "fields": {
+        "left": { "label": "Links" },
+        "right": { "label": "Rechts" }
+    }
+}

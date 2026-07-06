@@ -1,0 +1,11 @@
+{
+    "name": "Energia ativa",
+    "shortName": "Energia ativa",
+    "descriptionTitle": "Sobre a energia ativa",
+    "description": "A energia ativa são as calorias gastas com movimento e atividade por dia (excluindo o metabolismo em repouso). Na ELA, uma tendência de queda pode refletir uma menor atividade física à medida que a mobilidade muda. Este valor é importado automaticamente do Apple Saúde ou do Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Energia ativa"
+        }
+    }
+}

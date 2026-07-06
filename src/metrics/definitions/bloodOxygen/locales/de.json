@@ -1,0 +1,9 @@
+{
+    "name": "Blutsauerstoff",
+    "shortName": "SpO2",
+    "descriptionTitle": "Über Blutsauerstoff",
+    "description": "Die Sauerstoffsättigung (SpO2) zeigt, wie viel Prozent des Hämoglobins im Blut mit Sauerstoff beladen ist. Bei ALS kann eine Schwächung der Atemmuskulatur zu niedrigeren Sauerstoffwerten führen, besonders nachts. Normale Werte liegen zwischen 95% und 100%. Regelmäßige Kontrollen helfen, Atemprobleme frühzeitig zu erkennen.",
+    "fields": {
+        "value": { "label": "Sauerstoffsättigung" }
+    }
+}

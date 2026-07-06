@@ -1,0 +1,72 @@
+{
+    "title": "法律声明",
+    "translationNotice": "这是德国法律声明（Impressum）的翻译。如有差异，以德文版本为准。",
+    "sections": {
+        "provider": {
+            "title": "根据德国 TMG 第5条提供的信息",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nürnberg\nGermany"
+        },
+        "representation": {
+            "title": "代表人",
+            "content": "Marie Assimidis，董事会成员"
+        },
+        "registration": {
+            "title": "注册信息",
+            "content": "已登记于协会登记册",
+            "court": "登记法院: Amtsgericht Nürnberg",
+            "number": "注册号: VR 203250"
+        },
+        "contact": {
+            "title": "联系方式",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "根据 MStV 第18条第2款负责内容的人",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Nürnberg"
+        },
+        "liability": {
+            "title": "免责声明",
+            "content": {
+                "title": "内容责任",
+                "text": "本应用的内容已尽最大谨慎创建。然而，我们无法保证内容的准确性、完整性或时效性。",
+                "tmg": "作为非营利协会，我们根据德国 TMG 第7条第1款及一般法律对本应用中的自有内容负责。但根据 TMG 第8至10条，我们没有义务监控传输或存储的第三方信息，也没有义务调查可能表明违法活动的情形。"
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "医疗免责声明",
+            "intro": "重要提示：本应用仅用于个人健康记录和自我观察。所提供的内容、问卷和功能绝不替代：",
+            "items": [
+                "专业医疗建议",
+                "医学诊断",
+                "医疗治疗",
+                "合格医疗专业人员的建议"
+            ],
+            "advice": "如有健康问题或关于健康的疑问，请始终咨询医生或其他合格医疗专业人员。不要因为本应用中的信息而忽视专业医疗建议。",
+            "emergency": "如遇紧急情况，请立即拨打急救电话112。"
+        },
+        "availability": {
+            "title": "不保证可用性",
+            "content": "我们努力保持应用和可选云同步持续可用。但由于维护或技术问题，可能会发生临时中断。我们无法保证不中断的可用性。"
+        },
+        "links": {
+            "title": "链接责任",
+            "content": "本应用可能包含指向外部网站的链接。我们无法影响这些外部页面的内容。链接页面的内容始终由相应提供者或运营者负责。"
+        },
+        "copyright": {
+            "title": "版权",
+            "content": "help cure ALS e.V. 在本应用中创建的内容和作品受德国版权法保护。复制、编辑、分发以及任何超出版权法限制的使用均需获得协会的书面同意。"
+        },
+        "openSource": {
+            "title": "开源组件",
+            "content": "本应用使用开源软件。所用库及其许可证的完整列表可在应用设置中的“许可证”下查看。"
+        },
+        "about": {
+            "title": "关于本协会",
+            "content": "help cure ALS e.V. 是一家致力于研究和对抗肌萎缩侧索硬化症（ALS）的非营利协会。我们支持研究项目，促进患者与科学界之间的交流，并开发数字工具以改善 ALS 患者的生活质量。",
+            "moreInfo": "有关我们工作的更多信息，请访问我们的网站："
+        }
+    },
+    "lastUpdated": "2026年2月"
+}

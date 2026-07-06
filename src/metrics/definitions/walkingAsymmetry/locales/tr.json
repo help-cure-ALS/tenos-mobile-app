@@ -1,0 +1,11 @@
+{
+    "name": "Yürüyüş asimetrisi",
+    "shortName": "Asimetri",
+    "descriptionTitle": "Yürüyüş asimetrisi hakkında",
+    "description": "Yürüyüş asimetrisi, bir ayağın diğerinden farklı bir hızda hareket ettiği zamanın yüzdesidir. Daha yüksek bir değer, daha düzensiz bir yürüyüş anlamına gelir. ALS'de asimetrik bacak güçsüzlüğünü izlemeye yardımcı olabilir. Bu değer Apple Sağlık'tan otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Yürüyüş asimetrisi"
+        }
+    }
+}

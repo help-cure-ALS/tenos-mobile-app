@@ -1,0 +1,9 @@
+{
+    "name": "NFL in CSF",
+    "shortName": "NFL (CSF)",
+    "descriptionTitle": "About NFL in Cerebrospinal Fluid",
+    "description": "Neurofilament Light Chain (NFL) in cerebrospinal fluid (CSF) is a sensitive biomarker for nerve cell damage. CSF measurement often provides earlier and more accurate values than blood measurement. In ALS, elevated NFL levels in CSF are associated with faster disease progression. The sample is obtained through a lumbar puncture.",
+    "fields": {
+        "value": { "label": "NFL" }
+    }
+}

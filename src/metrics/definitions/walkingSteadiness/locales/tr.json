@@ -1,0 +1,11 @@
+{
+    "name": "Yürüyüş dengesi",
+    "shortName": "Denge",
+    "descriptionTitle": "Yürüyüş dengesi hakkında",
+    "description": "Apple Yürüyüş Dengesi, yürüyüşünüzün ne kadar dengeli ve istikrarlı olduğunu yüzde olarak tahmin eder. Azalan bir eğilim, daha yüksek düşme riskine işaret eder. ALS'de yürüyüş ve denge değişikliklerini izlemeye yardımcı olabilir. Bu değer Apple Sağlık'tan otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Yürüyüş dengesi"
+        }
+    }
+}

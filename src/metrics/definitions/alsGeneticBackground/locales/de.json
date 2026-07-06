@@ -1,0 +1,7 @@
+{
+  "name": "ALS-Form & Genetik",
+  "shortName": "ALS-Form",
+  "descriptionTitle": "Über ALS-Form & Genetik",
+  "description": "Diese Metrik hält fest, ob eine ALS als sporadisch, familiär oder unklar eingeordnet wurde und ob ein genetischer Befund oder eine bekannte Mutation dokumentiert ist. Genetische Angaben sind besonders sensibel und werden separat freigegeben.",
+  "fields": {}
+}

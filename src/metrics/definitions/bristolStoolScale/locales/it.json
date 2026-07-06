@@ -1,0 +1,20 @@
+{
+  "name": "Consistenza delle feci",
+  "shortName": "Feci",
+  "descriptionTitle": "Informazioni sulla scala di Bristol",
+  "description": "La scala di Bristol è uno strumento clinico per valutare la consistenza delle feci. Nella SLA, la stitichezza è frequente per ridotta mobilità, indebolimento dei muscoli addominali o farmaci. Il tipo 3-4 è considerato ideale. Il tipo 1-2 indica stitichezza, il tipo 6-7 diarrea. (1 = duro/grumoso, 4 = ideale, 7 = acquoso)",
+  "fields": {
+    "value": {
+      "label": "Tipo di feci",
+      "valueLabels": {
+        "1": "Tipo 1 - Palline dure separate",
+        "2": "Tipo 2 - A forma di salsiccia, grumosa",
+        "3": "Tipo 3 - A salsiccia con crepe",
+        "4": "Tipo 4 - Liscia e morbida (ideale)",
+        "5": "Tipo 5 - Frammenti morbidi",
+        "6": "Tipo 6 - Pezzi molli e sfaldati",
+        "7": "Tipo 7 - Acquosa, liquida"
+      }
+    }
+  }
+}

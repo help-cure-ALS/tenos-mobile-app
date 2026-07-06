@@ -1,0 +1,14 @@
+{
+  "name": "Forza di presa",
+  "shortName": "Presa",
+  "descriptionTitle": "Informazioni sulla forza di presa",
+  "description": "La forza di presa misura la massima forza esercitabile con la mano. Si misura con un dinamometro manuale ed è un indicatore oggettivo della forza muscolare. Nella SLA, può aiutare a documentare la progressione della debolezza muscolare. I valori normali variano per età e sesso (uomini: 30-55 kg, donne: 20-35 kg).",
+  "fields": {
+    "left": {
+      "label": "Sinistra"
+    },
+    "right": {
+      "label": "Destra"
+    }
+  }
+}

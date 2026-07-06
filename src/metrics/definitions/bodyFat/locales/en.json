@@ -1,0 +1,9 @@
+{
+    "name": "Body Fat Percentage",
+    "shortName": "Body Fat",
+    "descriptionTitle": "About Body Fat Percentage",
+    "description": "Body fat percentage indicates how much of your body weight consists of fat tissue. In ALS, monitoring body fat percentage is important because a loss of muscle mass with constant weight may indicate an increased fat percentage. Regular measurements help to keep track of body composition.",
+    "fields": {
+        "value": { "label": "Body Fat Percentage" }
+    }
+}

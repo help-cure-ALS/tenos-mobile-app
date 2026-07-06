@@ -1,0 +1,11 @@
+{
+  "name": "Percentuale di grasso corporeo",
+  "shortName": "Grasso corporeo",
+  "descriptionTitle": "Informazioni sulla percentuale di grasso corporeo",
+  "description": "La percentuale di grasso corporeo indica quanta parte del peso corporeo è costituita da tessuto adiposo. Nella SLA, monitorarla è importante perché una perdita di massa muscolare con peso stabile può indicare un aumento della percentuale di grasso. Misurazioni regolari aiutano a seguire la composizione corporea.",
+  "fields": {
+    "value": {
+      "label": "Percentuale di grasso corporeo"
+    }
+  }
+}

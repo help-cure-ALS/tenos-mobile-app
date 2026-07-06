@@ -1,0 +1,14 @@
+{
+  "name": "Força de preensão",
+  "shortName": "Preensão",
+  "descriptionTitle": "Sobre a força de preensão",
+  "description": "A força de preensão mede a força máxima que pode ser exercida com a mão. É medida com um dinamómetro manual e é um indicador objetivo da força muscular. Na ELA, pode ajudar a documentar a progressão da fraqueza muscular. Os valores normais variam por idade e sexo (homens: 30-55 kg, mulheres: 20-35 kg).",
+  "fields": {
+    "left": {
+      "label": "Esquerda"
+    },
+    "right": {
+      "label": "Direita"
+    }
+  }
+}

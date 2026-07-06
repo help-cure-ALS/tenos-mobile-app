@@ -1,0 +1,11 @@
+{
+    "name": "Loopsnelheid",
+    "shortName": "Snelheid",
+    "descriptionTitle": "Over de loopsnelheid",
+    "description": "De loopsnelheid is het gemiddelde tempo waarmee je loopt, in meter per seconde. Bij ALS kan een dalende trend wijzen op toenemende beenzwakte. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid of Health Connect en als daggemiddelde getoond.",
+    "fields": {
+        "value": {
+            "label": "Loopsnelheid"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Capacidad vital forzada",
+  "shortName": "CVF",
+  "descriptionTitle": "Sobre la CVF",
+  "description": "La capacidad vital forzada (CVF) mide el volumen máximo de aire que puede espirarse tras una inspiración profunda. En la ELA, la CVF es uno de los indicadores más importantes de la función respiratoria y de la progresión de la enfermedad. Una caída por debajo del 50 % del valor esperado puede indicar la necesidad de soporte respiratorio.",
+  "fields": {
+    "value": { "label": "CVF" }
+  }
+}

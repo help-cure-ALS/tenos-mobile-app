@@ -1,0 +1,9 @@
+{
+    "name": "Gehstabilität",
+    "shortName": "Stabilität",
+    "descriptionTitle": "Über die Gehstabilität",
+    "description": "Die Apple-Gehstabilität schätzt als Prozentwert ein, wie stabil und ausbalanciert dein Gang ist. Ein abnehmender Trend deutet auf ein erhöhtes Sturzrisiko hin. Bei ALS kann dies helfen, Veränderungen von Gang und Gleichgewicht zu verfolgen. Der Wert wird automatisch aus Apple Health auf dem iPhone importiert.",
+    "fields": {
+        "value": { "label": "Gehstabilität" }
+    }
+}

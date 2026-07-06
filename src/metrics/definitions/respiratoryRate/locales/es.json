@@ -1,0 +1,11 @@
+{
+    "name": "Frecuencia respiratoria",
+    "shortName": "Frec. resp.",
+    "descriptionTitle": "Acerca de la frecuencia respiratoria",
+    "description": "La frecuencia respiratoria es el número de respiraciones por minuto. En la ELA, la función respiratoria es un parámetro clave; una frecuencia respiratoria en reposo que aumenta puede ser un signo temprano de debilidad de los músculos respiratorios. Este valor se importa automáticamente desde Apple Salud o Health Connect (a menudo medido durante el sueño) y se muestra como promedio diario.",
+    "fields": {
+        "value": {
+            "label": "Frecuencia respiratoria"
+        }
+    }
+}

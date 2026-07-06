@@ -1,0 +1,11 @@
+{
+  "name": "FVC % van voorspeld",
+  "shortName": "FVC %",
+  "descriptionTitle": "Over FVC % van voorspeld",
+  "description": "FVC als percentage van voorspeld vergelijkt de gemeten geforceerde vitale capaciteit met de verwachte waarde voor leeftijd, geslacht en lengte. Waarden boven 80% worden als normaal beschouwd. Bij ALS wordt een daling onder 50% als kritisch gezien en kan start van niet-invasieve beademing nodig zijn.",
+  "fields": {
+    "value": {
+      "label": "FVC % voorspeld"
+    }
+  }
+}

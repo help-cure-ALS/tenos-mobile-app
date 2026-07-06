@@ -1,0 +1,17 @@
+{
+    "name": "Kälteempfindlichkeit",
+    "shortName": "Kälte",
+    "descriptionTitle": "Über Kälteempfindlichkeit",
+    "description": "Kälteempfindlichkeit ist ein häufiges Symptom bei ALS. Sie kann durch reduzierte Muskelmasse, autonome Dysfunktion oder verminderte körperliche Aktivität verursacht werden. Die Erfassung hilft, Muster zu erkennen und Maßnahmen wie wärmere Kleidung oder Raumtemperatur anzupassen. (0 = Keine, 1 = Leicht, 2 = Mäßig, 3 = Stark)",
+    "fields": {
+        "value": {
+            "label": "Kälteempfindlichkeit",
+            "valueLabels": {
+                "0": "Keine",
+                "1": "Leicht",
+                "2": "Mäßig",
+                "3": "Stark"
+            }
+        }
+    }
+}

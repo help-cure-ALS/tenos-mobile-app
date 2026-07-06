@@ -1,0 +1,11 @@
+{
+  "name": "Spierkrampen",
+  "shortName": "Krampen",
+  "descriptionTitle": "Over spierkrampen",
+  "description": "Spierkrampen zijn pijnlijke, aanhoudende en onwillekeurige spiercontracties. Ze verschillen van fasciculaties (korte trekkingen), die apart worden geregistreerd. Krampen komen vaak voor bij ALS, vooral ’s nachts, en kunnen de slaap verstoren. Registreer het aantal krampen per dag om patronen te herkennen.",
+  "fields": {
+    "value": {
+      "label": "Aantal krampen"
+    }
+  }
+}

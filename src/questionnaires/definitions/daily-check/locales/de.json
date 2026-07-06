@@ -1,0 +1,80 @@
+{
+    "name": "Täglicher Symptom-Check",
+    "shortName": "",
+    "exportTitle": "Täglicher Symptom-Check",
+    "description": "Ein kurzer täglicher Check-in zur Erfassung deiner wichtigsten Symptome. Die Daten werden automatisch mit deinen Metriken synchronisiert.",
+    "introText": "Wie geht es dir heute?",
+    "intro": {
+        "title": "Täglicher Symptom-Check",
+        "description": "Ein schneller Überblick über deinen aktuellen Zustand. Beantworte 4 kurze Fragen zu Schmerzen, Müdigkeit, Schlaf und Stimmung.",
+        "buttonText": "Starten",
+        "researchNote": "Dein täglicher Check hilft, Veränderungen frühzeitig zu erkennen und deinem Behandlungsteam wertvolle Einblicke zu geben."
+    },
+    "domains": {
+        "symptoms": "Symptome",
+        "sleep": "Schlaf",
+        "mood": "Stimmung"
+    },
+    "questions": {
+        "pain": {
+            "text": "Wie stark sind deine Schmerzen heute?",
+            "exportLabel": "Schmerz",
+            "options": {
+                "0": { "label": "Kein Schmerz", "description": "Keine Beschwerden" },
+                "1": { "label": "Leichter Schmerz", "description": "Kaum spürbar, stört nicht" },
+                "2": { "label": "Mäßiger Schmerz", "description": "Spürbar, aber aushaltbar" },
+                "3": { "label": "Starker Schmerz", "description": "Deutlich beeinträchtigend" },
+                "4": { "label": "Sehr starker Schmerz", "description": "Kaum auszuhalten" }
+            }
+        },
+        "fatigue": {
+            "text": "Wie müde oder erschöpft fühlst du dich?",
+            "exportLabel": "Müdigkeit",
+            "options": {
+                "0": { "label": "Keine Müdigkeit", "description": "Voller Energie" },
+                "1": { "label": "Leicht müde" },
+                "2": { "label": "Leicht müde", "description": "Kaum spürbar" },
+                "3": { "label": "Leicht müde" },
+                "4": { "label": "Mäßig müde", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig müde" },
+                "6": { "label": "Deutlich müde", "description": "Aktivitäten anstrengend" },
+                "7": { "label": "Deutlich müde" },
+                "8": { "label": "Sehr müde", "description": "Brauche viel Ruhe" },
+                "9": { "label": "Sehr müde" },
+                "10": { "label": "Extrem erschöpft", "description": "Kann kaum etwas tun" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Wie hast du letzte Nacht geschlafen?",
+            "exportLabel": "Schlaf",
+            "options": {
+                "0": { "label": "Sehr gut", "description": "Erholsamer, durchgehender Schlaf" },
+                "2": { "label": "Gut", "description": "Meist erholsamer Schlaf" },
+                "4": { "label": "Mäßig", "description": "Etwas unruhig, aber ausreichend" },
+                "6": { "label": "Schlecht", "description": "Mehrfach aufgewacht, wenig Erholung" },
+                "8": { "label": "Sehr schlecht", "description": "Kaum geschlafen" },
+                "10": { "label": "Gar nicht", "description": "Nicht geschlafen" }
+            }
+        },
+        "mood": {
+            "text": "Wie ist deine Stimmung heute?",
+            "exportLabel": "Stimmung",
+            "options": {
+                "0": { "label": "Sehr gut", "description": "Ausgeglichen und positiv" },
+                "2": { "label": "Gut", "description": "Überwiegend positiv" },
+                "4": { "label": "Okay", "description": "Neutral" },
+                "6": { "label": "Gedrückt", "description": "Etwas niedergeschlagen" },
+                "8": { "label": "Schlecht", "description": "Traurig oder ängstlich" },
+                "10": { "label": "Sehr schlecht", "description": "Hoffnungslos oder verzweifelt" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Guter Tag", "description": "Du fühlst dich heute relativ gut." },
+            { "label": "Okay", "description": "Ein durchschnittlicher Tag mit leichten Beschwerden." },
+            { "label": "Herausfordernder Tag", "description": "Heute ist ein anstrengender Tag." },
+            { "label": "Besonders herausfordernder Tag", "description": "Du hast heute starke Beschwerden." }
+        ]
+    }
+}

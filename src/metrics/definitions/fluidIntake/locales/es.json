@@ -1,0 +1,9 @@
+{
+  "name": "Ingesta de líquidos",
+  "shortName": "Líquidos",
+  "descriptionTitle": "Sobre la ingesta de líquidos",
+  "description": "La ingesta diaria de líquidos es importante para la salud general. En la ELA, las dificultades para tragar pueden reducir la cantidad de bebida y provocar deshidratación. Se recomiendan unos 1,5-2 litros al día. La documentación ayuda a mantener una hidratación adecuada.",
+  "fields": {
+    "value": { "label": "Cantidad de líquido" }
+  }
+}

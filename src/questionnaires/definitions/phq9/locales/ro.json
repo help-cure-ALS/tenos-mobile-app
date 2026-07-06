@@ -1,0 +1,241 @@
+{
+    "name": "PHQ-9",
+    "displayName": "Screening pentru depresie",
+    "shortName": "PHQ-9",
+    "exportTitle": "Screening pentru depresie – PHQ-9",
+    "description": "PHQ-9 (Patient Health Questionnaire) este un instrument de screening validat pentru detectarea și măsurarea severității depresiei. Este folosit la nivel mondial în practica clinică și cercetare.",
+    "introText": "Cât de des te-au deranjat următoarele probleme în ultimele 2 săptămâni?",
+    "intro": {
+        "title": "Screening pentru depresie",
+        "description": "Acest chestionar se referă la felul în care te-ai simțit în ultimele două săptămâni. Răspunde sincer la cele 9 întrebări – nu există răspunsuri corecte sau greșite. Răspunsurile tale ajută la identificarea posibilelor simptome depresive.",
+        "buttonText": "Începe chestionarul",
+        "researchNote": "Îți mulțumim pentru timpul acordat. Răspunsurile tale ne ajută să înțelegem mai bine progresia bolii și să avansăm cercetarea ALS."
+    },
+    "domains": {
+        "depression": "Simptome depresive"
+    },
+    "questions": {
+        "interest": {
+            "text": "Interes sau plăcere redusă pentru activități",
+            "exportLabel": "Interes",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "mood": {
+            "text": "Te-ai simțit trist, deprimat sau fără speranță",
+            "exportLabel": "Deprimare",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "sleep": {
+            "text": "Dificultăți de adormire sau menținere a somnului ori somn prea mult",
+            "exportLabel": "Somn",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "energy": {
+            "text": "Te-ai simțit obosit sau ai avut puțină energie",
+            "exportLabel": "Energie",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "appetite": {
+            "text": "Apetit scăzut sau alimentație excesivă",
+            "exportLabel": "Apetit",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "self_esteem": {
+            "text": "Te-ai simțit prost cu tine însuți – sau ai simțit că ești un eșec ori că te-ai dezamăgit pe tine sau familia ta",
+            "exportLabel": "Stimă de sine",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "concentration": {
+            "text": "Dificultăți de concentrare asupra lucrurilor, cum ar fi cititul ziarului sau privitul la televizor",
+            "exportLabel": "Concentrare",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "psychomotor": {
+            "text": "Te-ai mișcat sau ai vorbit atât de încet încât alte persoane ar fi putut observa? Sau invers – ai fost atât de agitat sau neliniștit încât te-ai mișcat mult mai mult decât de obicei?",
+            "exportLabel": "Psihomotricitate",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        },
+        "suicidality": {
+            "text": "Gânduri că ți-ar fi mai bine mort sau că ți-ai face rău într-un fel",
+            "exportLabel": "Suicidalitate",
+            "options": {
+                "0": {
+                    "label": "Deloc",
+                    "description": "Niciodată în ultimele 2 săptămâni"
+                },
+                "1": {
+                    "label": "Câteva zile",
+                    "description": "Mai puțin de jumătate din zile"
+                },
+                "2": {
+                    "label": "Mai mult de jumătate din zile",
+                    "description": "Frecvent"
+                },
+                "3": {
+                    "label": "Aproape în fiecare zi",
+                    "description": "Aproape zilnic"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Simptome minime",
+                "description": "Răspunsurile tale sunt în intervalul neobservabil clinic."
+            },
+            {
+                "label": "Simptome ușoare",
+                "description": "Răspunsurile tale indică un nivel ușor de suferință."
+            },
+            {
+                "label": "Simptome moderate",
+                "description": "Răspunsurile tale indică un nivel sesizabil de suferință."
+            },
+            {
+                "label": "Simptome pronunțate",
+                "description": "Răspunsurile tale sugerează un nivel crescut de suferință."
+            },
+            {
+                "label": "Simptome foarte pronunțate",
+                "description": "Răspunsurile tale sugerează un nivel ridicat de suferință."
+            }
+        ]
+    }
+}

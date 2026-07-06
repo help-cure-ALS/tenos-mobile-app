@@ -1,0 +1,11 @@
+{
+  "name": "Ossigeno nel sangue",
+  "shortName": "SpO2",
+  "descriptionTitle": "Informazioni sull’ossigeno nel sangue",
+  "description": "La saturazione di ossigeno (SpO2) indica quale percentuale di emoglobina nel sangue è carica di ossigeno. Nella SLA, l’indebolimento dei muscoli respiratori può portare a livelli di ossigeno più bassi, soprattutto di notte. I valori normali sono tra 95% e 100%. Il monitoraggio regolare aiuta a rilevare precocemente problemi respiratori.",
+  "fields": {
+    "value": {
+      "label": "Saturazione di ossigeno"
+    }
+  }
+}

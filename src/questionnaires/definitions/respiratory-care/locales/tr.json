@@ -1,0 +1,92 @@
+{
+    "name": "Solunum bakımı",
+    "displayName": "Solunum bakımı",
+    "shortName": "Solunum bakımı",
+    "exportTitle": "Solunum bakımı",
+    "description": "Solunum desteğinizdeki değişiklikleri gösterebilecek belirtileri kaydeder. Düzenli yanıtlar değişikliklerin erken tespit edilmesine yardımcı olur.",
+    "introText": "Aşağıdaki sorular son birkaç gün içinde nasıl hissettiğinize yöneliktir.",
+    "intro": {
+        "title": "Solunum bakımı",
+        "description": "Bu anket, solunum desteğinizle ilgili belirtileri 6 kısa soruyla kaydeder.",
+        "researchNote": "Düzenli yanıtlar değişikliklerin erken tespit edilmesine ve bakım ekibinizle görüşülmesine yardımcı olur.",
+        "buttonText": "Ankete başla"
+    },
+    "domains": {
+        "symptoms": "Belirtiler"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Baş ağrısıyla uyanıyorum.",
+            "exportLabel": "Baş ağrısı",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        },
+        "dizziness": {
+            "text": "Özellikle uyandıktan sonra baş dönmesi hissediyorum.",
+            "exportLabel": "Baş dönmesi",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Gün içinde alışılmadık şekilde yorgun veya uykulu hissediyorum.",
+            "exportLabel": "Uyuklama",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        },
+        "concentration": {
+            "text": "Konsantre olmakta zorlanıyorum.",
+            "exportLabel": "Konsantrasyon",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Gece uyanıyorum veya huzursuz uyuyorum.",
+            "exportLabel": "Uyku",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Gün içinde nefes darlığı hissediyorum, örn. konuşurken veya dinlenirken.",
+            "exportLabel": "Nefes darlığı",
+            "options": {
+                "0": { "label": "Hiç" },
+                "1": { "label": "Nadiren" },
+                "2": { "label": "Bazen" },
+                "3": { "label": "Sık sık" },
+                "4": { "label": "Neredeyse her zaman" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Az belirti", "description": "Yanıtlarınız az veya hiç rahatsızlık olmadığını göstermektedir." },
+            { "label": "Dikkat çeken belirtiler", "description": "Yanıtlarınız dikkat çeken rahatsızlıklar olduğunu göstermektedir." },
+            { "label": "Belirgin belirtiler", "description": "Yanıtlarınız belirgin rahatsızlıklar olduğunu göstermektedir." }
+        ]
+    }
+}

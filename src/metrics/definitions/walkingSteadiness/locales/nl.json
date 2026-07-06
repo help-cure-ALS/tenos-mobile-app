@@ -1,0 +1,11 @@
+{
+    "name": "Loopstabiliteit",
+    "shortName": "Stabiliteit",
+    "descriptionTitle": "Over de loopstabiliteit",
+    "description": "Apple-loopstabiliteit schat in procenten in hoe stabiel en in balans je loopt. Een dalende trend wijst op een hoger valrisico. Bij ALS kan dit helpen om veranderingen in gang en evenwicht te volgen. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid.",
+    "fields": {
+        "value": {
+            "label": "Loopstabiliteit"
+        }
+    }
+}

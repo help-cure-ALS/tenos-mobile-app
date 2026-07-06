@@ -1,0 +1,11 @@
+{
+    "name": "Saturație nocturnă de oxigen",
+    "shortName": "SpO2 noapte",
+    "descriptionTitle": "Despre saturația nocturnă de oxigen",
+    "description": "Saturația nocturnă de oxigen arată cât de bine este alimentat corpul cu oxigen în timpul somnului. În ALS, hipoventilația nocturnă (respirație superficială) poate apărea înainte ca simptomele diurne să devină observabile. Valorile sub 90% în timpul somnului pot indica slăbiciune respiratorie timpurie. Măsurarea se face ideal peste noapte cu un pulsoximetru.",
+    "fields": {
+        "value": {
+            "label": "SpO2 min. (noapte)"
+        }
+    }
+}

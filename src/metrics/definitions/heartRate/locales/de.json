@@ -1,0 +1,9 @@
+{
+    "name": "Herzfrequenz",
+    "shortName": "Puls",
+    "descriptionTitle": "Über Herzfrequenz",
+    "description": "Die Herzfrequenz gibt an, wie oft das Herz pro Minute schlägt. Ein normaler Ruhepuls liegt bei Erwachsenen zwischen 60 und 100 Schlägen pro Minute. Bei ALS kann die Herzfrequenz durch Stress, Atemprobleme oder Medikamente beeinflusst werden. Regelmäßige Messungen helfen, Veränderungen frühzeitig zu bemerken.",
+    "fields": {
+        "value": { "label": "Herzfrequenz" }
+    }
+}

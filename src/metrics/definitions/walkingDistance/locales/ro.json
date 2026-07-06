@@ -1,0 +1,11 @@
+{
+    "name": "Distanță de mers",
+    "shortName": "6MWT",
+    "descriptionTitle": "Despre testul de mers de 6 minute",
+    "description": "Testul de mers de 6 minute (6MWT) măsoară distanța care poate fi parcursă în 6 minute pe teren plat. Este un test standardizat pentru evaluarea capacității funcționale de efort. În ALS, poate ajuta la documentarea progresiei capacității de mers. Valorile normale pentru adulți sunt între 400 și 700 de metri.",
+    "fields": {
+        "value": {
+            "label": "Distanță de mers"
+        }
+    }
+}

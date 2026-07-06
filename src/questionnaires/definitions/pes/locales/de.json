@@ -1,0 +1,130 @@
+{
+    "name": "MOS Pain Effects Scale",
+    "displayName": "Schmerz",
+    "shortName": "PES",
+    "exportTitle": "Schmerzauswirkungen – PES",
+    "description": "Der MOS Pain Effects Scale erfasst, wie stark Schmerzen verschiedene Bereiche deines täglichen Lebens beeinträchtigen. Beantworte 6 kurze Fragen zu Schlaf, Mobilität, Stimmung und Aktivitäten.",
+    "introText": "Wie stark beeinträchtigen deine Schmerzen dich?",
+    "intro": {
+        "title": "Schmerzauswirkungen",
+        "description": "Dieser Fragebogen erfasst, wie Schmerzen deinen Alltag beeinflussen. Bewerte auf einer Skala von 0-10, wie stark deine Schmerzen in den letzten 7 Tagen verschiedene Lebensbereiche beeinträchtigt haben.",
+        "buttonText": "Starten",
+        "researchNote": "Vielen Dank für deine Angaben. Sie helfen, die Auswirkungen von Schmerzen besser zu verstehen und die Forschung voranzubringen."
+    },
+    "domains": {
+        "daily_activities": "Tägliche Aktivitäten",
+        "other_areas": "Weitere Bereiche"
+    },
+    "questions": {
+        "sleep": {
+            "text": "Wie stark haben Schmerzen deinen Schlaf beeinträchtigt?",
+            "exportLabel": "Schlaf",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        },
+        "mobility": {
+            "text": "Wie stark haben Schmerzen deine Mobilität beeinträchtigt?",
+            "exportLabel": "Mobilität",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        },
+        "mood": {
+            "text": "Wie stark haben Schmerzen deine Stimmung beeinträchtigt?",
+            "exportLabel": "Stimmung",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        },
+        "work": {
+            "text": "Wie stark haben Schmerzen deine Arbeit (inkl. Hausarbeit) beeinträchtigt?",
+            "exportLabel": "Arbeit",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        },
+        "recreation": {
+            "text": "Wie stark haben Schmerzen deine Freizeitaktivitäten beeinträchtigt?",
+            "exportLabel": "Freizeit",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        },
+        "enjoyment": {
+            "text": "Wie stark haben Schmerzen deine Lebensfreude beeinträchtigt?",
+            "exportLabel": "Lebensfreude",
+            "options": {
+                "0": { "label": "Keine Beeinträchtigung", "description": "Überhaupt nicht" },
+                "1": { "label": "Minimal" },
+                "2": { "label": "Minimal", "description": "Kaum spürbar" },
+                "3": { "label": "Gering" },
+                "4": { "label": "Mäßig", "description": "Etwas eingeschränkt" },
+                "5": { "label": "Mäßig" },
+                "6": { "label": "Mäßig", "description": "Deutlich eingeschränkt" },
+                "7": { "label": "Stark" },
+                "8": { "label": "Stark", "description": "Sehr eingeschränkt" },
+                "9": { "label": "Sehr stark" },
+                "10": { "label": "Extrem", "description": "Vollständig beeinträchtigt" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Wenig Einfluss", "description": "Schmerzen haben kaum Einfluss auf deinen Alltag." },
+            { "label": "Leichter Einfluss", "description": "Schmerzen haben einen leichten Einfluss auf deinen Alltag." },
+            { "label": "Merklicher Einfluss", "description": "Schmerzen beeinflussen mehrere Lebensbereiche spürbar." },
+            { "label": "Starker Einfluss", "description": "Schmerzen haben einen deutlichen Einfluss auf deinen Alltag." }
+        ]
+    }
+}

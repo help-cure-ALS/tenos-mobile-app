@@ -1,0 +1,24 @@
+{
+  "name": "Fatigue",
+  "shortName": "Fatigue",
+  "descriptionTitle": "Informazioni sulla fatigue",
+  "description": "La fatigue viene valutata su una scala da 0 (nessuna fatigue) a 10 (esaurimento estremo). Nella SLA, la fatigue è un sintomo comune che può essere causato da un maggiore dispendio energetico nelle attività quotidiane, problemi respiratori o disturbi del sonno. La documentazione aiuta a identificare schemi ricorrenti e ad adattare la pianificazione quotidiana.",
+  "fields": {
+    "value": {
+      "label": "Fatigue",
+      "valueLabels": {
+        "0": "Nessuna",
+        "1": "Lieve",
+        "2": "Lieve",
+        "3": "Lieve",
+        "4": "Moderata",
+        "5": "Moderata",
+        "6": "Moderata",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Grave",
+        "10": "Estrema"
+      }
+    }
+  }
+}

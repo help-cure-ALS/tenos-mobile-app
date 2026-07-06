@@ -1,0 +1,11 @@
+{
+  "name": "Peak Cough Flow",
+  "shortName": "PCF",
+  "descriptionTitle": "Over Peak Cough Flow",
+  "description": "Peak Cough Flow (PCF) meet de maximale luchtsnelheid tijdens hoesten. Het laat zien hoe effectief je slijm uit de luchtwegen kunt verwijderen. Waarden onder 270 L/min verhogen het risico op luchtweginfecties. Onder 160 L/min is hoesten vaak niet meer effectief.",
+  "fields": {
+    "value": {
+      "label": "Peak Cough Flow"
+    }
+  }
+}

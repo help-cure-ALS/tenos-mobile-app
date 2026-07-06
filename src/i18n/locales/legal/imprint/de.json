@@ -1,0 +1,72 @@
+{
+    "title": "Impressum",
+    "translationNotice": "Dies ist die maßgebliche deutsche Fassung des Impressums.",
+    "sections": {
+        "provider": {
+            "title": "Angaben gemäß § 5 TMG",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nürnberg\nDeutschland"
+        },
+        "representation": {
+            "title": "Vertreten durch",
+            "content": "Marie Assimidis, Vorstand"
+        },
+        "registration": {
+            "title": "Registereintrag",
+            "content": "Eingetragen im Vereinsregister",
+            "court": "Registergericht: Amtsgericht Nürnberg",
+            "number": "Registernummer: VR 203250"
+        },
+        "contact": {
+            "title": "Kontakt",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Nürnberg"
+        },
+        "liability": {
+            "title": "Haftungsausschluss",
+            "content": {
+                "title": "Haftung für Inhalte",
+                "text": "Die Inhalte dieser App wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+                "tmg": "Als gemeinnütziger Verein sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte in dieser App nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Medizinischer Haftungsausschluss",
+            "intro": "Wichtiger Hinweis: Diese App dient ausschließlich der persönlichen Gesundheitsdokumentation und Selbstbeobachtung. Die bereitgestellten Inhalte, Fragebögen und Funktionen ersetzen in keiner Weise:",
+            "items": [
+                "Eine professionelle medizinische Beratung",
+                "Eine ärztliche Diagnose",
+                "Eine medizinische Behandlung",
+                "Die Empfehlungen qualifizierten medizinischen Fachpersonals"
+            ],
+            "advice": "Bei gesundheitlichen Beschwerden oder Fragen zu deiner Gesundheit wende dich bitte immer an eine Ärztin, einen Arzt oder anderes qualifiziertes medizinisches Fachpersonal. Ignoriere niemals professionellen medizinischen Rat aufgrund von Informationen aus dieser App.",
+            "emergency": "In Notfällen wähle sofort den Notruf 112."
+        },
+        "availability": {
+            "title": "Keine Garantie für Verfügbarkeit",
+            "content": "Wir bemühen uns, die App und die Vault-Synchronisation kontinuierlich verfügbar zu halten. Es kann jedoch zu vorübergehenden Ausfällen kommen, etwa durch Wartungsarbeiten oder technische Störungen. Eine Garantie für ununterbrochene Verfügbarkeit können wir nicht übernehmen."
+        },
+        "links": {
+            "title": "Haftung für Links",
+            "content": "Diese App kann Links zu externen Websites enthalten. Auf den Inhalt dieser externen Seiten haben wir keinen Einfluss. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich."
+        },
+        "copyright": {
+            "title": "Urheberrecht",
+            "content": "Die durch den help cure ALS e.V. erstellten Inhalte und Werke in dieser App unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Vereins."
+        },
+        "openSource": {
+            "title": "Open-Source-Komponenten",
+            "content": "Diese App verwendet Open-Source-Software. Eine vollständige Liste der verwendeten Bibliotheken und deren Lizenzen findest du in den App-Einstellungen unter 'Lizenzen'."
+        },
+        "about": {
+            "title": "Über den Verein",
+            "content": "Der help cure ALS e.V. ist ein gemeinnütziger Verein, der sich für die Erforschung und Bekämpfung der Amyotrophen Lateralsklerose (ALS) einsetzt. Wir unterstützen Forschungsprojekte, fördern den Austausch zwischen Betroffenen und Wissenschaft und entwickeln digitale Werkzeuge zur Verbesserung der Lebensqualität von ALS-Patienten.",
+            "moreInfo": "Mehr Informationen über unsere Arbeit findest du auf unserer Website:"
+        }
+    },
+    "lastUpdated": "Februar 2026"
+}

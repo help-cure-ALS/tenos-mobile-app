@@ -1,0 +1,97 @@
+{
+  "name": "BDI-FS",
+  "displayName": "Dépression",
+  "shortName": "BDI-FS",
+  "exportTitle": "Dépression – BDI-FS",
+  "description": "Le BDI-FS (Beck Depression Inventory - Fast Screen) est un bref questionnaire destiné à évaluer les symptômes cognitifs de la dépression. Il se concentre sur les pensées et les sentiments, et non sur les symptômes physiques.",
+  "introText": "Veuillez lire chaque affirmation et sélectionner la réponse qui décrit le mieux ce que vous avez ressenti au cours des deux dernières semaines.",
+  "intro": {
+    "title": "Symptômes cognitifs de dépression",
+    "description": "Ce questionnaire évalue la façon dont vous pensez à vous-même et à votre vie. Répondez honnêtement aux 7 questions : il n'y a pas de bonne ou de mauvaise réponse.",
+    "researchNote": "Merci pour votre ouverture. Vos réponses nous aident à faire progresser la recherche sur les effets associés à la SLA.",
+    "buttonText": "Commencer le questionnaire"
+  },
+  "domains": {
+    "cognitive": "Symptômes cognitifs"
+  },
+  "questions": {
+    "sadness": {
+      "text": "Tristesse",
+      "exportLabel": "Tristesse",
+      "options": {
+        "0": { "label": "Pas triste", "description": "Je ne suis pas triste" },
+        "1": { "label": "Souvent triste", "description": "Je suis souvent triste" },
+        "2": { "label": "Constamment triste", "description": "Je suis constamment triste" },
+        "3": { "label": "Tristesse insupportable", "description": "Je suis si triste que je ne le supporte plus" }
+      }
+    },
+    "pessimism": {
+      "text": "Pessimisme",
+      "exportLabel": "Pessimisme",
+      "options": {
+        "0": { "label": "Pas découragé(e)", "description": "Je ne me sens pas découragé(e) par mon avenir" },
+        "1": { "label": "Un peu découragé(e)", "description": "Je suis plus découragé(e) qu'avant" },
+        "2": { "label": "Je n'attends plus d'amélioration", "description": "Je ne pense pas que les choses vont s'améliorer" },
+        "3": { "label": "Sans espoir", "description": "Je crois que mon avenir est sans espoir" }
+      }
+    },
+    "past_failure": {
+      "text": "Sentiment d'échec",
+      "exportLabel": "Échec",
+      "options": {
+        "0": { "label": "Pas un échec", "description": "Je n'ai pas l'impression d'être un échec" },
+        "1": { "label": "Plus d'échecs que je ne devrais", "description": "J'ai plus échoué que je n'aurais dû" },
+        "2": { "label": "Beaucoup d'échecs", "description": "En regardant en arrière, je vois beaucoup d'échecs" },
+        "3": { "label": "Échec total", "description": "Je me sens comme un échec total" }
+      }
+    },
+    "loss_of_pleasure": {
+      "text": "Perte de plaisir",
+      "exportLabel": "Perte de plaisir",
+      "options": {
+        "0": { "label": "Plaisir normal", "description": "Je prends autant de plaisir qu'avant" },
+        "1": { "label": "Moins de plaisir", "description": "Je ne prends plus autant de plaisir qu'avant" },
+        "2": { "label": "Peu de plaisir", "description": "Les choses me procurent très peu de plaisir" },
+        "3": { "label": "Plus aucun plaisir", "description": "Je ne peux plus rien apprécier" }
+      }
+    },
+    "self_dislike": {
+      "text": "Dévalorisation de soi",
+      "exportLabel": "Dégoût de soi",
+      "options": {
+        "0": { "label": "Satisfait(e) de moi", "description": "Je suis satisfait(e) de moi-même" },
+        "1": { "label": "Déçu(e) de moi", "description": "Je suis déçu(e) de moi-même" },
+        "2": { "label": "Je ne m'aime pas", "description": "Je ne m'aime pas" },
+        "3": { "label": "Je me déteste", "description": "Je me déteste" }
+      }
+    },
+    "self_criticalness": {
+      "text": "Autocritique",
+      "exportLabel": "Autocritique",
+      "options": {
+        "0": { "label": "Pas plus critique que d'habitude", "description": "Je ne suis pas plus critique envers moi qu'à l'habitude" },
+        "1": { "label": "Plus critique qu'avant", "description": "Je suis plus critique envers moi qu'avant" },
+        "2": { "label": "Je me critique pour toutes mes erreurs", "description": "Je me critique pour toutes mes erreurs" },
+        "3": { "label": "Je me blâme pour tout", "description": "Je me rends responsable de tout ce qui va mal" }
+      }
+    },
+    "suicidal_thoughts": {
+      "text": "Pensées suicidaires",
+      "exportLabel": "Pensées suicidaires",
+      "options": {
+        "0": { "label": "Aucune pensée", "description": "Je n'ai pas de pensées pour me faire du mal" },
+        "1": { "label": "Pensées présentes", "description": "J'ai des pensées pour me faire du mal, mais je ne le ferais pas" },
+        "2": { "label": "J'aimerais le faire", "description": "J'aimerais me faire du mal" },
+        "3": { "label": "Je le ferais", "description": "Je me ferais du mal si j'en avais l'occasion" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Symptômes minimes", "description": "Vos réponses suggèrent l'absence de symptômes ou seulement des symptômes minimes." },
+      { "label": "Symptômes légers", "description": "Vos réponses suggèrent des symptômes légers." },
+      { "label": "Symptômes modérés", "description": "Vos réponses suggèrent des symptômes modérés." },
+      { "label": "Symptômes sévères", "description": "Vos réponses suggèrent des symptômes sévères." }
+    ]
+  }
+}

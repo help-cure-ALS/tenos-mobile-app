@@ -1,0 +1,169 @@
+{
+    "name": "PDQ-5",
+    "displayName": "Bilişsel etkilenme",
+    "shortName": "PDQ-5",
+    "exportTitle": "Bilişsel etkilenme – PDQ-5",
+    "description": "PDQ-5 (Perceived Deficits Questionnaire), konsantrasyon güçlüğü, unutkanlık ve planlama sorunları gibi öznel olarak algılanan bilişsel etkilenmeleri değerlendirir.",
+    "introText": "Aşağıdakiler son 4 haftada ne sıklıkta oldu?",
+    "intro": {
+        "title": "Bilişsel öz değerlendirme",
+        "description": "Bu kısa anket günlük yaşamda zihinsel performansını nasıl algıladığını değerlendirir. 5 soruyu son 4 haftaya göre yanıtla.",
+        "buttonText": "Anketi başlat",
+        "researchNote": "Zaman ayırdığın için teşekkürler. Yanıtların hastalık ilerlemesini daha iyi anlamamıza ve ALS araştırmasını ilerletmemize yardımcı olur."
+    },
+    "domains": {
+        "cognitive": "Bilişsel fonksiyonlar"
+    },
+    "questions": {
+        "attention": {
+            "text": "Bir şeye odaklanmakta zorlandın mı?",
+            "exportLabel": "Dikkat",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Bu bende hiç olmaz"
+                },
+                "1": {
+                    "label": "Nadiren",
+                    "description": "Ara sıra olur"
+                },
+                "2": {
+                    "label": "Bazen",
+                    "description": "Zaman zaman olur"
+                },
+                "3": {
+                    "label": "Sık sık",
+                    "description": "Sık görülür"
+                },
+                "4": {
+                    "label": "Neredeyse her zaman",
+                    "description": "Sürekli olur"
+                }
+            }
+        },
+        "memory_conversation": {
+            "text": "Birinin az önce söylediğini unuttun mu?",
+            "exportLabel": "Konuşma hatırlama",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Bu bende hiç olmaz"
+                },
+                "1": {
+                    "label": "Nadiren",
+                    "description": "Ara sıra olur"
+                },
+                "2": {
+                    "label": "Bazen",
+                    "description": "Zaman zaman olur"
+                },
+                "3": {
+                    "label": "Sık sık",
+                    "description": "Sık görülür"
+                },
+                "4": {
+                    "label": "Neredeyse her zaman",
+                    "description": "Sürekli olur"
+                }
+            }
+        },
+        "prospective_memory": {
+            "text": "Ne yapmak üzere olduğunu unuttun mu?",
+            "exportLabel": "İleriye dönük bellek",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Bu bende hiç olmaz"
+                },
+                "1": {
+                    "label": "Nadiren",
+                    "description": "Ara sıra olur"
+                },
+                "2": {
+                    "label": "Bazen",
+                    "description": "Zaman zaman olur"
+                },
+                "3": {
+                    "label": "Sık sık",
+                    "description": "Sık görülür"
+                },
+                "4": {
+                    "label": "Neredeyse her zaman",
+                    "description": "Sürekli olur"
+                }
+            }
+        },
+        "organization": {
+            "text": "Düşüncelerini düzenlemekte zorlandın mı?",
+            "exportLabel": "Organizasyon",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Bu bende hiç olmaz"
+                },
+                "1": {
+                    "label": "Nadiren",
+                    "description": "Ara sıra olur"
+                },
+                "2": {
+                    "label": "Bazen",
+                    "description": "Zaman zaman olur"
+                },
+                "3": {
+                    "label": "Sık sık",
+                    "description": "Sık görülür"
+                },
+                "4": {
+                    "label": "Neredeyse her zaman",
+                    "description": "Sürekli olur"
+                }
+            }
+        },
+        "concentration": {
+            "text": "Konsantre olmakta sorun yaşadın mı?",
+            "exportLabel": "Konsantrasyon",
+            "options": {
+                "0": {
+                    "label": "Hiçbir zaman",
+                    "description": "Bu bende hiç olmaz"
+                },
+                "1": {
+                    "label": "Nadiren",
+                    "description": "Ara sıra olur"
+                },
+                "2": {
+                    "label": "Bazen",
+                    "description": "Zaman zaman olur"
+                },
+                "3": {
+                    "label": "Sık sık",
+                    "description": "Sık görülür"
+                },
+                "4": {
+                    "label": "Neredeyse her zaman",
+                    "description": "Sürekli olur"
+                }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            {
+                "label": "Az fark edilir değişiklik",
+                "description": "Bilişsel değişiklikleri neredeyse fark etmiyorsun."
+            },
+            {
+                "label": "Hafif değişiklikler",
+                "description": "Ara sıra hafif bilişsel değişiklikler fark ediyorsun."
+            },
+            {
+                "label": "Fark edilir değişiklikler",
+                "description": "Bilişsel değişiklikleri düzenli olarak fark ediyorsun."
+            },
+            {
+                "label": "Belirgin değişiklikler",
+                "description": "Bilişsel değişiklikleri sık sık fark ediyorsun."
+            }
+        ]
+    }
+}

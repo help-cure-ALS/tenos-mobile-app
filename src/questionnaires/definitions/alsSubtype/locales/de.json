@@ -1,0 +1,78 @@
+{
+    "name": "ALS-Subtyp",
+    "displayName": "ALS-Subtyp",
+    "shortName": "Subtyp",
+    "description": "Ärztliche Klassifikation des ALS-Phänotyps nach Ort des Symptombeginns, Propagation und Motoneuron-Muster.",
+    "domains": {
+        "structured": "ALS-Subtyp"
+    },
+    "questions": {
+        "payload": {
+            "text": "ALS-Subtyp",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Ort des Symptombeginns",
+            "info": "Die O-Achse beschreibt die Körperregion, in der die ersten motorischen Symptome begonnen haben. Gewertet werden Schwäche oder verlangsamte/ungeschickte willkürliche Bewegungen, z.B. Dysarthrie, Dysphagie, Dysphonie, Dyspnoe, Fallkopf, axiale Instabilität oder Kamptokormie. Faszikulationen, Muskelatrophie und Reflexzeichen allein zählen nicht als Symptombeginn.",
+            "options": {
+                "O1": { "label": "Kopf/bulbär" },
+                "O2d": { "label": "Arm distal" },
+                "O2p": { "label": "Arm proximal" },
+                "O2x": { "label": "Arm unklar" },
+                "O3r": { "label": "Respiration" },
+                "O3a": { "label": "Axial/Rumpf" },
+                "O4d": { "label": "Bein distal" },
+                "O4p": { "label": "Bein proximal" },
+                "O4x": { "label": "Bein unklar" }
+            }
+        },
+        "propagationStatus": {
+            "label": "Ausbreitung",
+            "info": "Die P-Achse beschreibt die vertikale Ausbreitung motorischer Symptome aus der Beginnregion in eine andere Körperregion: Kopf, Arm, Rumpf oder Bein. Horizontale Ausbreitung von einem Arm zum anderen oder von einem Bein zum anderen zählt nicht. Faszikulationen, Atrophie oder Reflexzeichen allein zählen nicht als Propagation.",
+            "options": {
+                "P0": { "label": "keine vertikale Ausbreitung" },
+                "P1": { "label": "Ausbreitung erfolgt" }
+            }
+        },
+        "propagationPattern": {
+            "label": "Ausbreitung",
+            "info": "Die P-Achse beschreibt die vertikale Ausbreitung motorischer Symptome aus der Beginnregion in eine andere Körperregion: Kopf, Arm, Rumpf oder Bein. Horizontale Ausbreitung von einem Arm zum anderen oder von einem Bein zum anderen zählt nicht. Faszikulationen, Atrophie oder Reflexzeichen allein zählen nicht als Propagation.",
+            "options": {
+                "P0n": { "label": "P0(n)", "description": "Keine vertikale Ausbreitung; n = Monate bis zur Bewertung" },
+                "P1n": { "label": "P1(n)", "description": "Vertikale Ausbreitung erfolgt; n = Monate bis zur Ausbreitung" },
+                "P1x": { "label": "P1(x)", "description": "Vertikale Ausbreitung erfolgt, Zeitpunkt unklar" }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Motoneuron-Phänotyp",
+            "info": "Die M-Achse beschreibt das Verhältnis von Zeichen des ersten/oberen Motoneurons (UMN) und zweiten/unteren Motoneurons (LMN). UMN-Zeichen sind z.B. verlangsamte oder unkoordinierte willkürliche Bewegungen, gesteigerte Reflexe, Spastik oder pseudobulbärer Affekt. LMN-Zeichen sind z.B. Schwäche mit Atrophie, fehlende Reflexe oder Faszikulationen in betroffenen Muskeln. M0 ist balanciert, M1 UMN-betont, M2 LMN-betont, M3 dissoziiert.",
+            "options": {
+                "M0": { "label": "UMN/LMN balanciert" },
+                "M1d": { "label": "UMN dominant" },
+                "M1p": { "label": "pure UMN" },
+                "M2d": { "label": "LMN dominant" },
+                "M2p": { "label": "pure LMN" },
+                "M3": { "label": "dissoziiert" }
+            }
+        },
+        "certainty": {
+            "label": "Status",
+            "info": "Der Status beschreibt die Sicherheit der ärztlichen Einordnung: vorläufig bei erster oder noch nicht vollständig gesicherter Bewertung, bestätigt bei ausreichend gesicherter Befundlage, unsicher wenn die Kriterien nicht klar trennbar sind.",
+            "options": {
+                "preliminary": { "label": "vorläufig" },
+                "confirmed": { "label": "bestätigt" },
+                "uncertain": { "label": "unsicher" }
+            }
+        },
+        "propagationMonths": {
+            "label": "Monate",
+            "info": "Bei P0(n): Monate vom Symptombeginn bis zur Bewertung, bei der keine vertikale Ausbreitung gefunden wurde. Bei P1(n): Monate vom Symptombeginn bis zur ersten vertikalen Ausbreitung."
+        },
+        "note": {
+            "label": "Kommentar",
+            "placeholder": "Optionaler ärztlicher Kommentar"
+        }
+    }
+}

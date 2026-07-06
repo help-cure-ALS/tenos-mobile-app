@@ -1,0 +1,11 @@
+{
+  "name": "Spożycie kalorii",
+  "shortName": "Kalorie",
+  "descriptionTitle": "O spożyciu kalorii",
+  "description": "Dzienne spożycie kalorii jest szczególnie ważne w ALS, ponieważ organizm często ma zwiększone zapotrzebowanie energetyczne z powodu choroby. Jednocześnie trudności w połykaniu mogą utrudniać jedzenie. Odpowiednia podaż kalorii może korzystnie wpływać na przebieg choroby. Omów wartości docelowe z lekarzem lub dietetykiem.",
+  "fields": {
+    "value": {
+      "label": "Kalorie"
+    }
+  }
+}

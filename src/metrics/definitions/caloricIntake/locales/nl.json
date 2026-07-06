@@ -1,0 +1,11 @@
+{
+  "name": "Calorie-inname",
+  "shortName": "Calorieën",
+  "descriptionTitle": "Over calorie-inname",
+  "description": "Dagelijkse calorie-inname is bij ALS bijzonder belangrijk, omdat het lichaam door de ziekte vaak meer energie nodig heeft. Tegelijk kunnen slikproblemen eten moeilijker maken. Voldoende calorie-inname kan het ziekteverloop positief beïnvloeden. Bespreek streefwaarden met een arts of diëtist.",
+  "fields": {
+    "value": {
+      "label": "Calorieën"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Caloric Intake",
+    "shortName": "Calories",
+    "descriptionTitle": "About Caloric Intake",
+    "description": "Daily caloric intake is especially important in ALS, as the body often has increased energy needs due to the disease. At the same time, swallowing difficulties can make eating more difficult. Adequate calorie intake can positively influence disease progression. Discuss your target values with a doctor or nutritionist.",
+    "fields": {
+        "value": { "label": "Calories" }
+    }
+}

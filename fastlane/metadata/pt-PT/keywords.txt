@@ -1,0 +1,1 @@
+ELA,ALS,motoneurónio,Lou Gehrig,ALSFRS,sintomas,medicação,investigação

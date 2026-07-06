@@ -1,0 +1,7 @@
+{
+    "name": "Necesar energetic",
+    "shortName": "TDEE",
+    "descriptionTitle": "Despre necesarul energetic",
+    "description": "Cheltuiala energetică zilnică totală (TDEE) este calculată folosind formula Kasarskis, dezvoltată special pentru pacienții cu ALS. Calculul ia în considerare rata metabolică bazală, nivelul de activitate (bazat pe ALSFRS-6) și ajustările specifice ALS.",
+    "fields": {}
+}

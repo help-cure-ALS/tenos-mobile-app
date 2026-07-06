@@ -1,0 +1,9 @@
+{
+    "name": "Aktive Energie",
+    "shortName": "Aktive Energie",
+    "descriptionTitle": "Über die aktive Energie",
+    "description": "Die aktive Energie ist die Anzahl der pro Tag durch Bewegung und Aktivität verbrannten Kalorien (ohne Ruheumsatz). Bei ALS kann ein abnehmender Trend eine geringere körperliche Aktivität bei nachlassender Mobilität widerspiegeln. Der Wert wird automatisch aus Apple Health oder Health Connect importiert.",
+    "fields": {
+        "value": { "label": "Aktive Energie" }
+    }
+}

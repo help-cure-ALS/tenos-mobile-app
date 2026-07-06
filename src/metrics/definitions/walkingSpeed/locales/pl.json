@@ -1,0 +1,11 @@
+{
+    "name": "Prędkość chodu",
+    "shortName": "Prędkość",
+    "descriptionTitle": "O prędkości chodu",
+    "description": "Prędkość chodu to średnie tempo chodzenia, w metrach na sekundę. W ALS tendencja spadkowa może odzwierciedlać postępujące osłabienie nóg. Wartość ta jest importowana automatycznie z Apple Zdrowie lub Health Connect i pokazywana jako średnia dzienna.",
+    "fields": {
+        "value": {
+            "label": "Prędkość chodu"
+        }
+    }
+}

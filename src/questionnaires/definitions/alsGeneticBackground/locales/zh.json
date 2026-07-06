@@ -1,0 +1,161 @@
+{
+  "name": "ALS类型与遗传",
+  "displayName": "ALS类型与遗传",
+  "shortName": "ALS类型",
+  "description": "记录散发性或家族性ALS、家族史以及已知遗传发现。",
+  "domains": {
+    "structured": "ALS类型与遗传"
+  },
+  "questions": {
+    "payload": {
+      "text": "ALS类型与遗传",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "diseaseForm": {
+      "label": "ALS类型",
+      "info": "临床分类：ALS是散发性、家族性还是不明确。",
+      "options": {
+        "sporadic": {
+          "label": "散发性"
+        },
+        "familial": {
+          "label": "家族性"
+        },
+        "suspected_familial": {
+          "label": "疑似家族性"
+        },
+        "unclear": {
+          "label": "不明确"
+        }
+      }
+    },
+    "familyHistory": {
+      "label": "家族史",
+      "info": "记录家族中已知ALS、FTD或其他运动神经元疾病。",
+      "options": {
+        "none_known": {
+          "label": "无已知"
+        },
+        "als": {
+          "label": "家族中有ALS"
+        },
+        "ftd": {
+          "label": "家族中有FTD"
+        },
+        "als_ftd": {
+          "label": "家族中有ALS/FTD"
+        },
+        "other_mnd": {
+          "label": "其他运动神经元疾病"
+        },
+        "other_neurodegenerative": {
+          "label": "其他神经退行性病史"
+        }
+      }
+    },
+    "testingStatus": {
+      "label": "遗传检测",
+      "info": "遗传检测状态。应用不会解释原始遗传数据。",
+      "options": {
+        "not_tested": {
+          "label": "未检测"
+        },
+        "planned": {
+          "label": "已计划"
+        },
+        "pending": {
+          "label": "等待结果"
+        },
+        "negative": {
+          "label": "无已知突变"
+        },
+        "vus": {
+          "label": "意义不明变异"
+        },
+        "pathogenic": {
+          "label": "致病/可能致病变异"
+        }
+      }
+    },
+    "gene": {
+      "label": "基因",
+      "info": "来自临床记录或实验室报告的已知基因。",
+      "placeholder": "输入基因",
+      "options": {
+        "C9orf72": {
+          "label": "C9orf72"
+        },
+        "SOD1": {
+          "label": "SOD1"
+        },
+        "FUS": {
+          "label": "FUS"
+        },
+        "TARDBP": {
+          "label": "TARDBP"
+        },
+        "TBK1": {
+          "label": "TBK1"
+        },
+        "OPTN": {
+          "label": "OPTN"
+        },
+        "VCP": {
+          "label": "VCP"
+        },
+        "other": {
+          "label": "其他"
+        }
+      }
+    },
+    "source": {
+      "label": "来源",
+      "info": "该条目来自哪里？遗传信息应可追溯地记录。",
+      "options": {
+        "patient_reported": {
+          "label": "患者报告"
+        },
+        "clinician_documented": {
+          "label": "临床医生记录"
+        },
+        "lab_report": {
+          "label": "实验室"
+        }
+      }
+    },
+    "counselingStatus": {
+      "label": "遗传咨询",
+      "info": "是否记录了检测或结果讨论相关的遗传咨询。",
+      "options": {
+        "completed": {
+          "label": "已完成"
+        },
+        "recommended": {
+          "label": "已建议"
+        },
+        "not_done": {
+          "label": "未进行"
+        }
+      }
+    },
+    "otherGene": {
+      "label": "其他基因",
+      "placeholder": "基因名称"
+    },
+    "variantText": {
+      "label": "变异",
+      "placeholder": "可选的简短发现文本"
+    },
+    "testDate": {
+      "label": "检测日期",
+      "info": "遗传检测的月份和年份。",
+      "placeholder": "选择"
+    },
+    "note": {
+      "label": "备注",
+      "placeholder": "可选备注"
+    }
+  }
+}

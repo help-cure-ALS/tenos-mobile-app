@@ -1,0 +1,11 @@
+{
+    "name": "Ritm de vorbire",
+    "shortName": "Vorbire",
+    "descriptionTitle": "Despre ritmul de vorbire",
+    "description": "Ritmul de vorbire măsoară câte cuvinte pot fi rostite pe minut. În ALS, afectarea bulbară poate duce la vorbire încetinită și neclară (disartrie). Ritmul normal de vorbire este de aproximativ 120-150 de cuvinte pe minut. Măsurarea regulată ajută la detectarea timpurie a schimbărilor.",
+    "fields": {
+        "value": {
+            "label": "Cuvinte pe minut"
+        }
+    }
+}

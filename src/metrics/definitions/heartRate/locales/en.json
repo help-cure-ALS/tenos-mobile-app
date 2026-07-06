@@ -1,0 +1,9 @@
+{
+    "name": "Heart Rate",
+    "shortName": "Pulse",
+    "descriptionTitle": "About Heart Rate",
+    "description": "Heart rate indicates how many times the heart beats per minute. A normal resting pulse for adults is between 60 and 100 beats per minute. In ALS, heart rate can be affected by stress, breathing problems, or medications. Regular measurements help detect changes early.",
+    "fields": {
+        "value": { "label": "Heart rate" }
+    }
+}

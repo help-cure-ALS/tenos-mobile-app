@@ -1,0 +1,7 @@
+{
+  "name": "Besoins énergétiques",
+  "shortName": "TDEE",
+  "descriptionTitle": "À propos des besoins énergétiques",
+  "description": "La dépense énergétique quotidienne totale (TDEE) est calculée à l'aide de la formule de Kasarskis, spécialement développée pour les patients atteints de SLA. Le calcul prend en compte votre métabolisme de base, votre niveau d'activité (basé sur l'ALSFRS-6) et des ajustements spécifiques à la SLA.",
+  "fields": {}
+}

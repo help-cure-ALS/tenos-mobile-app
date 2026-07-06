@@ -1,0 +1,92 @@
+{
+    "name": "Opieka oddechowa",
+    "displayName": "Opieka oddechowa",
+    "shortName": "Opieka oddechowa",
+    "exportTitle": "Opieka oddechowa",
+    "description": "Rejestruje objawy, które mogą wskazywać na zmiany w wspomaganiu oddychania. Regularne odpowiedzi pomagają wcześnie wykrywać zmiany.",
+    "introText": "Poniższe pytania dotyczą Twojego samopoczucia w ciągu ostatnich kilku dni.",
+    "intro": {
+        "title": "Opieka oddechowa",
+        "description": "Ten kwestionariusz rejestruje objawy związane ze wspomaganiem oddychania za pomocą 6 krótkich pytań.",
+        "researchNote": "Regularne odpowiedzi pomagają wcześnie wykrywać zmiany i omawiać je z zespołem opiekuńczym.",
+        "buttonText": "Rozpocznij kwestionariusz"
+    },
+    "domains": {
+        "symptoms": "Objawy"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Budzę się z bólem głowy.",
+            "exportLabel": "Bóle głowy",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        },
+        "dizziness": {
+            "text": "Mam zawroty głowy, zwłaszcza po przebudzeniu.",
+            "exportLabel": "Zawroty głowy",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Czuję się niezwykle zmęczony/a lub senny/a w ciągu dnia.",
+            "exportLabel": "Senność",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        },
+        "concentration": {
+            "text": "Trudno mi się skoncentrować.",
+            "exportLabel": "Koncentracja",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Budzę się w nocy lub śpię niespokojnie.",
+            "exportLabel": "Sen",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Brakuje mi powietrza w ciągu dnia, np. podczas mówienia lub w spoczynku.",
+            "exportLabel": "Duszność",
+            "options": {
+                "0": { "label": "Wcale" },
+                "1": { "label": "Rzadko" },
+                "2": { "label": "Czasami" },
+                "3": { "label": "Często" },
+                "4": { "label": "Prawie zawsze" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Niewiele objawów", "description": "Twoje odpowiedzi wskazują na niewielkie lub żadne dolegliwości." },
+            { "label": "Zauważalne objawy", "description": "Twoje odpowiedzi wskazują na zauważalne dolegliwości." },
+            { "label": "Znaczące objawy", "description": "Twoje odpowiedzi wskazują na znaczące dolegliwości." }
+        ]
+    }
+}

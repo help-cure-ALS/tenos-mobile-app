@@ -1,0 +1,11 @@
+{
+    "name": "Kilo",
+    "shortName": "Kilo",
+    "descriptionTitle": "Vücut ağırlığı hakkında",
+    "description": "Vücut ağırlığı genel sağlığın önemli bir göstergesidir. ALS’de istemsiz kilo kaybı yutma güçlüklerinin veya artmış enerji harcamasının belirtisi olabilir. Düzenli kilo takibi erken önlem almaya yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Kilo"
+        }
+    }
+}

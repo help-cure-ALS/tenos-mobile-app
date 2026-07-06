@@ -1,0 +1,17 @@
+{
+  "name": "Fascykulacje",
+  "shortName": "Fasc.",
+  "descriptionTitle": "O fascykulacjach",
+  "description": "Fascykulacje to krótkie, mimowolne drżenia pojedynczych włókien mięśniowych, które mogą być widoczne pod skórą. Są typowym objawem ALS i różnią się od bolesnych, utrzymujących się kurczów mięśni. Monitorowanie pomaga rozpoznawać wzorce i dokumentować postęp choroby. (0 = Brak, 1 = Rzadkie, 2 = Częste, 3 = Bardzo częste)",
+  "fields": {
+    "value": {
+      "label": "Fascykulacje",
+      "valueLabels": {
+        "0": "Brak",
+        "1": "Rzadkie",
+        "2": "Częste",
+        "3": "Bardzo częste"
+      }
+    }
+  }
+}

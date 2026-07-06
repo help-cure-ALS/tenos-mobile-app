@@ -1,0 +1,11 @@
+{
+    "name": "Longueur de pas",
+    "shortName": "Long. de pas",
+    "descriptionTitle": "À propos de la longueur de pas",
+    "description": "La longueur de pas est la distance moyenne entre deux pas consécutifs, en mètres. Dans la SLA, un raccourcissement de la longueur de pas peut refléter des changements de la marche. Cette valeur est importée automatiquement depuis Apple Santé.",
+    "fields": {
+        "value": {
+            "label": "Longueur de pas"
+        }
+    }
+}

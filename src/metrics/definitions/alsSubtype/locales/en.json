@@ -1,0 +1,7 @@
+{
+  "name": "ALS subtype",
+  "shortName": "ALS subtype",
+  "descriptionTitle": "About ALS subtype",
+  "description": "The ALS subtype describes the motor phenotype using ALS-OPM classification: site of onset, propagation, and motor neuron pattern.",
+  "fields": {}
+}

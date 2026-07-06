@@ -1,0 +1,11 @@
+{
+  "name": "NFL in CSF",
+  "shortName": "NFL (CSF)",
+  "descriptionTitle": "Over NFL in cerebrospinaal vocht",
+  "description": "Neurofilament Light Chain (NFL) in cerebrospinaal vocht (CSF) is een gevoelige biomarker voor zenuwcelbeschadiging. CSF-meting geeft vaak eerdere en nauwkeurigere waarden dan bloedmeting. Bij ALS zijn verhoogde NFL-waarden in CSF geassocieerd met snellere ziekteprogressie. Het monster wordt verkregen via een lumbaalpunctie.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

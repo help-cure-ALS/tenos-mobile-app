@@ -1,0 +1,24 @@
+{
+  "name": "Ból -> Mobilność",
+  "shortName": "Mobilność",
+  "descriptionTitle": "Wpływ bólu na mobilność",
+  "description": "Rejestruje, jak bardzo ból wpływa na mobilność i aktywność fizyczną. W skali od 0 (brak wpływu) do 10 (skrajny wpływ). Ograniczona mobilność z powodu bólu może prowadzić do dalszych problemów zdrowotnych.",
+  "fields": {
+    "value": {
+      "label": "Upośledzenie",
+      "valueLabels": {
+        "0": "Brak",
+        "1": "Minimalne",
+        "2": "Minimalne",
+        "3": "Niewielkie",
+        "4": "Umiarkowane",
+        "5": "Umiarkowane",
+        "6": "Umiarkowane",
+        "7": "Ciężkie",
+        "8": "Ciężkie",
+        "9": "Bardzo ciężkie",
+        "10": "Skrajne"
+      }
+    }
+  }
+}

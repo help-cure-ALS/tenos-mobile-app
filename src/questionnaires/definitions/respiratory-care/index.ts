@@ -1,0 +1,62 @@
+/**
+ * Atemversorgung / Respiratory Care Questionnaire Definition
+ *
+ * Tracks symptoms that may indicate nighttime NIV is becoming insufficient.
+ * Merges base (technical) definition with locale (text) content.
+ */
+
+import { base } from './base';
+import { mergeDefinition, type QuestionnaireDefinition, type QuestionnaireLocale } from '../../types';
+
+// Import locale files
+import deLocale from './locales/de.json';
+import enLocale from './locales/en.json';
+import esLocale from './locales/es.json';
+import frLocale from './locales/fr.json';
+import itLocale from './locales/it.json';
+import jaLocale from './locales/ja.json';
+import nlLocale from './locales/nl.json';
+import plLocale from './locales/pl.json';
+import ptLocale from './locales/pt.json';
+import roLocale from './locales/ro.json';
+import trLocale from './locales/tr.json';
+import zhLocale from './locales/zh.json';
+
+const locales: Record<string, QuestionnaireLocale> = {
+    de: deLocale as QuestionnaireLocale,
+    en: enLocale as QuestionnaireLocale,
+    es: esLocale as QuestionnaireLocale,
+    fr: frLocale as QuestionnaireLocale,
+    it: itLocale as QuestionnaireLocale,
+    ja: jaLocale as QuestionnaireLocale,
+    nl: nlLocale as QuestionnaireLocale,
+    pl: plLocale as QuestionnaireLocale,
+    pt: ptLocale as QuestionnaireLocale,
+    ro: roLocale as QuestionnaireLocale,
+    tr: trLocale as QuestionnaireLocale,
+    zh: zhLocale as QuestionnaireLocale,
+};
+
+/**
+ * Get the Respiratory Care definition for a specific language.
+ */
+export function getDefinition(language: string): QuestionnaireDefinition {
+    const locale = locales[language] ?? locales.en;
+    return mergeDefinition(base, locale);
+}
+
+/**
+ * Get the Respiratory Care definition using the current app language.
+ */
+export function getLocalizedDefinition(getLanguage: () => string): QuestionnaireDefinition {
+    return getDefinition(getLanguage());
+}
+
+/**
+ * Default export using German locale.
+ * @deprecated Use getDefinition(language) for proper i18n support.
+ */
+export const respiratoryCare = getDefinition('de');
+
+// Re-export base for direct access if needed
+export { base };

@@ -1,0 +1,359 @@
+{
+    "name": "Nörolojik muayene",
+    "displayName": "Nörolojik muayene",
+    "shortName": "Muayene",
+    "description": "ALS seyri boyunca motor UMN ve LMN bulgularının klinik dokümantasyonu.",
+    "domains": {
+        "structured": "Nörolojik muayene"
+    },
+    "questions": {
+        "payload": {
+            "text": "Nörolojik muayene",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Vücut bölgesi",
+            "info": "Bu muayenede en ilgili nörolojik bulguların belgelendiği vücut bölgesi.",
+            "options": {
+                "head": {
+                    "label": "Baş/bulber"
+                },
+                "right_arm": {
+                    "label": "Sağ kol"
+                },
+                "left_arm": {
+                    "label": "Sol kol"
+                },
+                "trunk": {
+                    "label": "Gövde/aksiyal"
+                },
+                "right_leg": {
+                    "label": "Sağ bacak"
+                },
+                "left_leg": {
+                    "label": "Sol bacak"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Şiddet",
+            "options": {
+                "absent": {
+                    "label": "yok"
+                },
+                "mild": {
+                    "label": "hafif"
+                },
+                "moderate": {
+                    "label": "orta"
+                },
+                "severe": {
+                    "label": "şiddetli"
+                },
+                "not_tested": {
+                    "label": "test yapılmadı"
+                }
+            }
+        },
+        "burden": {
+            "label": "Genel yük",
+            "options": {
+                "none": {
+                    "label": "yok"
+                },
+                "mild": {
+                    "label": "hafif"
+                },
+                "moderate": {
+                    "label": "orta"
+                },
+                "severe": {
+                    "label": "şiddetli"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Önerilen M fenotipi",
+            "info": "ALS alt tipinin M ekseni için motor nöron paterninin klinik sınıflandırması.",
+            "options": {
+                "M0": {
+                    "label": "Dengeli UMN/LMN"
+                },
+                "M1d": {
+                    "label": "UMN baskın"
+                },
+                "M1p": {
+                    "label": "saf UMN"
+                },
+                "M2d": {
+                    "label": "LMN baskın"
+                },
+                "M2p": {
+                    "label": "saf LMN"
+                },
+                "M3": {
+                    "label": "ayrışmış"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: güçsüzlük",
+            "info": "Alt motor nöron tutulumunun bir işareti olarak klinik kas güçsüzlüğünü belgeler."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: atrofi",
+            "info": "Muayene edilen bölgede görülebilir veya palpe edilebilir kas erimesini belgeler."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fasikülasyonlar",
+            "info": "Alt motor nöron irritasyonu veya hasarının işareti olarak spontan kas seğirmelerini belgeler."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hiperrefleksi",
+            "info": "Üst motor nöron tutulumunun bir işareti olarak artmış derin tendon reflekslerini belgeler."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: patolojik refleksler",
+            "info": "Babinski veya Hoffmann bulguları gibi patolojik refleks bulgularını belgeler."
+        },
+        "umnSpasticity": {
+            "label": "UMN: spastisite",
+            "info": "Üst motor nöron tutulumunun bir işareti olarak artmış kas tonusu veya spastisiteyi belgeler."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: yavaşlamış hareket",
+            "info": "Yalnızca güçsüzlükle açıklanamayan yavaşlamış veya koordinasyonu bozulmuş hareketi belgeler."
+        },
+        "overallUmnBurden": {
+            "label": "Genel UMN yükü",
+            "info": "Üst motor nöron bulgu yükünün genel klinik tahmini."
+        },
+        "overallLmnBurden": {
+            "label": "Genel LMN yükü",
+            "info": "Alt motor nöron bulgu yükünün genel klinik tahmini."
+        },
+        "note": {
+            "label": "Dahili not",
+            "info": "Muayene için isteğe bağlı ek not. Bu not araştırma bağışlarına dahil edilmez.",
+            "placeholder": "İsteğe bağlı"
+        },
+        "clinicalRegion": {
+            "label": "ALS bölgesi",
+            "info": "Bölgesel tutulumu değerlendirmek için standart klinik ALS bölgeleri.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulber"
+                },
+                "cervical": {
+                    "label": "Servikal/kollar"
+                },
+                "thoracic": {
+                    "label": "Torasik/aksiyel"
+                },
+                "lumbosacral": {
+                    "label": "Lumbosakral/bacaklar"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Sol"
+                },
+                "right": {
+                    "label": "Sağ"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "yok"
+                },
+                "present": {
+                    "label": "var"
+                },
+                "not_tested": {
+                    "label": "test edilmedi"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "test edilmedi"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Omuz abdüksiyonu"
+                },
+                "elbow_flexion": {
+                    "label": "Dirsek fleksiyonu"
+                },
+                "elbow_extension": {
+                    "label": "Dirsek ekstansiyonu"
+                },
+                "wrist_extension": {
+                    "label": "El bileği ekstansiyonu"
+                },
+                "finger_abduction": {
+                    "label": "Parmak abdüksiyonu"
+                },
+                "hip_flexion": {
+                    "label": "Kalça fleksiyonu"
+                },
+                "knee_extension": {
+                    "label": "Diz ekstansiyonu"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Ayak dorsifleksiyonu"
+                },
+                "toe_extension": {
+                    "label": "Ayak parmağı ekstansiyonu"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Biseps refleksi"
+                },
+                "triceps": {
+                    "label": "Triseps refleksi"
+                },
+                "brachioradialis": {
+                    "label": "Brakioradialis refleksi"
+                },
+                "patellar": {
+                    "label": "Patella refleksi"
+                },
+                "achilles": {
+                    "label": "Aşil refleksi"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "test edilmedi"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Piramidal yol bulguları",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Palmomental refleks"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN bulguları",
+            "options": {
+                "atrophy": {
+                    "label": "Atrofi"
+                },
+                "fasciculations": {
+                    "label": "Fasikülasyonlar"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Bulber bulgular",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Dil atrofisi"
+                },
+                "tongue_fasciculations": {
+                    "label": "Dil fasikülasyonları"
+                },
+                "dysarthria": {
+                    "label": "Dizartri"
+                },
+                "dysphagia": {
+                    "label": "Disfaji"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Bölgesel tutulum",
+            "info": "Dört klinik ALS bölgesinde UMN ve LMN tutulumunu kaydeder."
+        },
+        "mrcStrength": {
+            "label": "MRC kuvvet muayenesi",
+            "info": "Kuvveti MRC 0-5 ölçeğinde belgeler. Sol her zaman sağdan önce kaydedilir."
+        },
+        "reflexes": {
+            "label": "Refleksler",
+            "info": "Derin tendon reflekslerini taraflara göre, sol önce olacak şekilde belgeler."
+        },
+        "pathologicalSigns": {
+            "label": "Piramidal yol bulguları",
+            "info": "UMN tutulumunu düşündüren patolojik refleks bulgularını belgeler."
+        },
+        "lmnSideSigns": {
+            "label": "LMN bulguları",
+            "info": "Atrofi ve fasikülasyonları taraflara göre belgeler."
+        },
+        "bulbarSigns": {
+            "label": "Bulber bulgular",
+            "info": "Dil atrofisi, dil fasikülasyonları, dizartri ve disfaji gibi tipik bulber bulguları belgeler."
+        }
+    }
+}

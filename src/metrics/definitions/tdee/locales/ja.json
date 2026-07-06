@@ -1,0 +1,7 @@
+{
+  "name": "エネルギー必要量",
+  "shortName": "TDEE",
+  "descriptionTitle": "エネルギー必要量について",
+  "description": "総1日エネルギー消費量（TDEE）は、ALS患者向けに開発されたKasarskis式を用いて計算されます。計算には基礎代謝量、活動レベル（ALSFRS-6に基づく）、ALS特有の補正が含まれます。",
+  "fields": {}
+}

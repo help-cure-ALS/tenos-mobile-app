@@ -1,0 +1,11 @@
+{
+    "name": "Comprimento do passo",
+    "shortName": "Compr. passo",
+    "descriptionTitle": "Sobre o comprimento do passo",
+    "description": "O comprimento do passo é a distância média entre passos consecutivos, em metros. Na ELA, um encurtamento do comprimento do passo pode refletir mudanças na marcha. Este valor é importado automaticamente do Apple Saúde.",
+    "fields": {
+        "value": {
+            "label": "Comprimento do passo"
+        }
+    }
+}

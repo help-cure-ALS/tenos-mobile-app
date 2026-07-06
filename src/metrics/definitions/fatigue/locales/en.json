@@ -1,0 +1,24 @@
+{
+    "name": "Fatigue",
+    "shortName": "Fatigue",
+    "descriptionTitle": "About Fatigue",
+    "description": "Fatigue is assessed on a scale from 0 (no fatigue) to 10 (extreme exhaustion). In ALS, fatigue is a common symptom that can be caused by increased energy expenditure for daily activities, breathing problems, or sleep disturbances. Documentation helps identify patterns and adjust daily planning.",
+    "fields": {
+        "value": {
+            "label": "Fatigue",
+            "valueLabels": {
+                "0": "None",
+                "1": "Mild",
+                "2": "Mild",
+                "3": "Mild",
+                "4": "Moderate",
+                "5": "Moderate",
+                "6": "Moderate",
+                "7": "Severe",
+                "8": "Severe",
+                "9": "Severe",
+                "10": "Extreme"
+            }
+        }
+    }
+}

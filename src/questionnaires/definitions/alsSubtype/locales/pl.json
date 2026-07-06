@@ -1,0 +1,127 @@
+{
+  "name": "Podtyp ALS",
+  "displayName": "Podtyp ALS",
+  "shortName": "Podtyp",
+  "description": "Kliniczna klasyfikacja fenotypu ALS według miejsca początku objawów, propagacji i wzorca neuronów ruchowych.",
+  "domains": {
+    "structured": "Podtyp ALS"
+  },
+  "questions": {
+    "payload": {
+      "text": "Podtyp ALS",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "onsetCode": {
+      "label": "Miejsce początku objawów",
+      "info": "Oś O opisuje region ciała, w którym rozpoczęły się pierwsze objawy ruchowe. Uwzględniaj osłabienie lub spowolniony/słabo skoordynowany ruch dowolny, w tym objawy opuszkowe, oddechowe lub osiowe. Same fascykulacje, zanik mięśni i objawy odruchowe nie liczą się jako początek objawów.",
+      "options": {
+        "O1": {
+          "label": "Głowa/opuszkowy"
+        },
+        "O2d": {
+          "label": "Dystalna część ramienia"
+        },
+        "O2p": {
+          "label": "Proksymalna część ramienia"
+        },
+        "O2x": {
+          "label": "Ramię niejasne"
+        },
+        "O3r": {
+          "label": "Oddychanie"
+        },
+        "O3a": {
+          "label": "Osiowo/tułów"
+        },
+        "O4d": {
+          "label": "Dystalna część nogi"
+        },
+        "O4p": {
+          "label": "Proksymalna część nogi"
+        },
+        "O4x": {
+          "label": "Noga niejasna"
+        }
+      }
+    },
+    "propagationStatus": {
+      "label": "Propagacja",
+      "info": "Oś P opisuje pionowe szerzenie się objawów ruchowych z regionu początku do innego regionu ciała: głowy, ramienia, tułowia lub nogi. Szerzenie poziome z jednego ramienia na drugie lub z jednej nogi na drugą nie liczy się. Same fascykulacje, zanik lub objawy odruchowe nie liczą się jako propagacja.",
+      "options": {
+        "P0": {
+          "label": "brak pionowej propagacji"
+        },
+        "P1": {
+          "label": "propagacja wystąpiła"
+        }
+      }
+    },
+    "propagationPattern": {
+      "label": "Propagacja",
+      "info": "Oś P opisuje pionowe szerzenie się objawów ruchowych z regionu początku do innego regionu ciała: głowy, ramienia, tułowia lub nogi. Szerzenie poziome z jednego ramienia na drugie lub z jednej nogi na drugą nie liczy się. Same fascykulacje, zanik lub objawy odruchowe nie liczą się jako propagacja.",
+      "options": {
+        "P0n": {
+          "label": "P0(n)",
+          "description": "Brak pionowej propagacji; n = miesiące do oceny"
+        },
+        "P1n": {
+          "label": "P1(n)",
+          "description": "Wystąpiła pionowa propagacja; n = miesiące do propagacji"
+        },
+        "P1x": {
+          "label": "P1(x)",
+          "description": "Wystąpiła pionowa propagacja, czas niejasny"
+        }
+      }
+    },
+    "motorNeuronCode": {
+      "label": "Fenotyp neuronu ruchowego",
+      "info": "Oś M opisuje równowagę objawów górnego neuronu ruchowego (UMN) i dolnego neuronu ruchowego (LMN). Objawy UMN obejmują spowolniony lub słabo skoordynowany ruch dowolny, żywe odruchy, spastyczność lub afekt rzekomoopuszkowy. Objawy LMN obejmują osłabienie z zanikiem, brak odruchów lub fascykulacje w zajętych mięśniach. M0 oznacza równowagę, M1 przewagę UMN, M2 przewagę LMN, M3 postać zdysocjowaną.",
+      "options": {
+        "M0": {
+          "label": "Zrównoważone UMN/LMN"
+        },
+        "M1d": {
+          "label": "dominacja UMN"
+        },
+        "M1p": {
+          "label": "czyste UMN"
+        },
+        "M2d": {
+          "label": "dominacja LMN"
+        },
+        "M2p": {
+          "label": "czyste LMN"
+        },
+        "M3": {
+          "label": "zdysocjowane"
+        }
+      }
+    },
+    "certainty": {
+      "label": "Status",
+      "info": "Status opisuje pewność klasyfikacji klinicznej: wstępny dla oceny początkowej lub nie w pełni potwierdzonej, potwierdzony przy dostatecznie jasnych wynikach, niepewny gdy kryteriów nie można wiarygodnie rozdzielić.",
+      "options": {
+        "preliminary": {
+          "label": "wstępny"
+        },
+        "confirmed": {
+          "label": "potwierdzony"
+        },
+        "uncertain": {
+          "label": "niepewny"
+        }
+      }
+    },
+    "propagationMonths": {
+      "label": "Miesiące",
+      "info": "Dla P0(n): miesiące od początku objawów do oceny, w której nie stwierdzono pionowej propagacji. Dla P1(n): miesiące od początku objawów do pierwszej pionowej propagacji."
+    },
+    "note": {
+      "label": "Komentarz",
+      "placeholder": "Opcjonalny komentarz kliniczny"
+    }
+  }
+}

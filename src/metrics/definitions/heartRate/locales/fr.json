@@ -1,0 +1,9 @@
+{
+  "name": "Fréquence cardiaque",
+  "shortName": "Pouls",
+  "descriptionTitle": "À propos de la fréquence cardiaque",
+  "description": "La fréquence cardiaque indique combien de fois le cœur bat par minute. Une fréquence de repos normale chez l'adulte se situe entre 60 et 100 battements par minute. Dans la SLA, la fréquence cardiaque peut être influencée par le stress, des problèmes respiratoires ou des médicaments. Des mesures régulières aident à détecter tôt les changements.",
+  "fields": {
+    "value": { "label": "Fréquence cardiaque" }
+  }
+}

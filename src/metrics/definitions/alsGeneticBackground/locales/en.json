@@ -1,0 +1,7 @@
+{
+  "name": "ALS form & genetics",
+  "shortName": "ALS form",
+  "descriptionTitle": "About ALS form & genetics",
+  "description": "This metric records whether ALS is classified as sporadic, familial, or unclear, and whether a genetic finding or known mutation is documented. Genetic information is especially sensitive and is shared separately.",
+  "fields": {}
+}

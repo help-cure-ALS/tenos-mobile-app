@@ -1,0 +1,11 @@
+{
+  "name": "Capacidade vital forçada",
+  "shortName": "FVC",
+  "descriptionTitle": "Sobre FVC",
+  "description": "A capacidade vital forçada (FVC) mede o volume máximo de ar que pode ser expirado após uma inspiração profunda. Na ELA, a FVC é um dos indicadores mais importantes da função respiratória e da progressão da doença. Uma queda abaixo de 50% do valor previsto pode indicar necessidade de suporte respiratório.",
+  "fields": {
+    "value": {
+      "label": "FVC"
+    }
+  }
+}

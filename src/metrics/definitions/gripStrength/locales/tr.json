@@ -1,0 +1,14 @@
+{
+    "name": "Kavrama gücü",
+    "shortName": "Kavrama",
+    "descriptionTitle": "Kavrama gücü hakkında",
+    "description": "Kavrama gücü, elle uygulanabilen maksimum kuvveti ölçer. El dinamometresiyle ölçülür ve kas gücünün nesnel bir göstergesidir. ALS’de kavrama gücü kas zayıflığının ilerlemesini belgelemeye yardımcı olabilir. Normal değerler yaşa ve cinsiyete göre değişir (erkek: 30-55 kg, kadın: 20-35 kg).",
+    "fields": {
+        "left": {
+            "label": "Sol"
+        },
+        "right": {
+            "label": "Sağ"
+        }
+    }
+}

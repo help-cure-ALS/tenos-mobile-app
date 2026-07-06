@@ -1,0 +1,11 @@
+{
+  "name": "Nocna saturacja tlenu",
+  "shortName": "Nocna SpO2",
+  "descriptionTitle": "O nocnej saturacji tlenu",
+  "description": "Nocna saturacja tlenu pokazuje, jak dobrze organizm jest zaopatrywany w tlen podczas snu. W ALS nocna hipowentylacja (płytki oddech) może wystąpić zanim pojawią się objawy w ciągu dnia. Wartości poniżej 90% podczas snu mogą wskazywać na wczesne osłabienie oddechowe. Pomiar najlepiej wykonać pulsoksymetrem przez noc.",
+  "fields": {
+    "value": {
+      "label": "Min. SpO2 (noc)"
+    }
+  }
+}

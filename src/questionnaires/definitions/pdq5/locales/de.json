@@ -1,0 +1,82 @@
+{
+    "name": "PDQ-5",
+    "displayName": "Kognitive Einschränkungen",
+    "shortName": "PDQ-5",
+    "exportTitle": "Kognitive Einschränkungen – PDQ-5",
+    "description": "Der PDQ-5 (Perceived Deficits Questionnaire) erfasst subjektiv wahrgenommene kognitive Einschränkungen wie Konzentrationsschwierigkeiten, Vergesslichkeit und Probleme beim Planen.",
+    "introText": "Wie oft ist dir in den letzten 4 Wochen Folgendes passiert?",
+    "intro": {
+        "title": "Kognitive Selbsteinschätzung",
+        "description": "Dieser kurze Fragebogen erfasst, wie du deine geistige Leistungsfähigkeit im Alltag wahrnimmst. Beantworte die 5 Fragen basierend auf den letzten 4 Wochen.",
+        "buttonText": "Fragebogen starten",
+        "researchNote": "Vielen Dank, dass du dir die Zeit nimmst. Deine Antworten helfen, den Krankheitsverlauf besser zu verstehen und die ALS-Forschung voranzubringen."
+    },
+    "domains": {
+        "cognitive": "Kognitive Funktionen"
+    },
+    "questions": {
+        "attention": {
+            "text": "Hattest du Schwierigkeiten, bei einer Sache aufmerksam zu bleiben?",
+            "exportLabel": "Aufmerksamkeit",
+            "options": {
+                "0": { "label": "Nie", "description": "Das passiert mir nie" },
+                "1": { "label": "Selten", "description": "Kommt gelegentlich vor" },
+                "2": { "label": "Manchmal", "description": "Passiert ab und zu" },
+                "3": { "label": "Oft", "description": "Passiert häufig" },
+                "4": { "label": "Fast immer", "description": "Passiert ständig" }
+            }
+        },
+        "memory_conversation": {
+            "text": "Hast du vergessen, was jemand dir gerade erzählt hat?",
+            "exportLabel": "Gespräche erinnern",
+            "options": {
+                "0": { "label": "Nie", "description": "Das passiert mir nie" },
+                "1": { "label": "Selten", "description": "Kommt gelegentlich vor" },
+                "2": { "label": "Manchmal", "description": "Passiert ab und zu" },
+                "3": { "label": "Oft", "description": "Passiert häufig" },
+                "4": { "label": "Fast immer", "description": "Passiert ständig" }
+            }
+        },
+        "prospective_memory": {
+            "text": "Hast du vergessen, was du gerade tun wolltest?",
+            "exportLabel": "Vorhaben erinnern",
+            "options": {
+                "0": { "label": "Nie", "description": "Das passiert mir nie" },
+                "1": { "label": "Selten", "description": "Kommt gelegentlich vor" },
+                "2": { "label": "Manchmal", "description": "Passiert ab und zu" },
+                "3": { "label": "Oft", "description": "Passiert häufig" },
+                "4": { "label": "Fast immer", "description": "Passiert ständig" }
+            }
+        },
+        "organization": {
+            "text": "Hattest du Schwierigkeiten, deine Gedanken zu ordnen?",
+            "exportLabel": "Gedanken ordnen",
+            "options": {
+                "0": { "label": "Nie", "description": "Das passiert mir nie" },
+                "1": { "label": "Selten", "description": "Kommt gelegentlich vor" },
+                "2": { "label": "Manchmal", "description": "Passiert ab und zu" },
+                "3": { "label": "Oft", "description": "Passiert häufig" },
+                "4": { "label": "Fast immer", "description": "Passiert ständig" }
+            }
+        },
+        "concentration": {
+            "text": "Hattest du Probleme, dich zu konzentrieren?",
+            "exportLabel": "Konzentration",
+            "options": {
+                "0": { "label": "Nie", "description": "Das passiert mir nie" },
+                "1": { "label": "Selten", "description": "Kommt gelegentlich vor" },
+                "2": { "label": "Manchmal", "description": "Passiert ab und zu" },
+                "3": { "label": "Oft", "description": "Passiert häufig" },
+                "4": { "label": "Fast immer", "description": "Passiert ständig" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Kaum Auffälligkeiten", "description": "Du nimmst kaum kognitive Veränderungen wahr." },
+            { "label": "Leichte Auffälligkeiten", "description": "Du bemerkst gelegentlich leichte kognitive Veränderungen." },
+            { "label": "Merkliche Auffälligkeiten", "description": "Du nimmst regelmäßig kognitive Veränderungen wahr." },
+            { "label": "Deutliche Auffälligkeiten", "description": "Du bemerkst häufig kognitive Veränderungen." }
+        ]
+    }
+}

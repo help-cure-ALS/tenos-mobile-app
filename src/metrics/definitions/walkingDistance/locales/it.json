@@ -1,0 +1,11 @@
+{
+  "name": "Distanza percorsa",
+  "shortName": "6MWT",
+  "descriptionTitle": "Informazioni sul test del cammino di 6 minuti",
+  "description": "Il test del cammino di 6 minuti (6MWT) misura la distanza che può essere percorsa in 6 minuti su terreno pianeggiante. È un test standardizzato per valutare la capacità funzionale di esercizio. Nella SLA, può aiutare a documentare la progressione della capacità di cammino. I valori normali negli adulti sono tra 400 e 700 metri.",
+  "fields": {
+    "value": {
+      "label": "Distanza percorsa"
+    }
+  }
+}

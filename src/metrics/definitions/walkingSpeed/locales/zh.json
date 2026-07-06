@@ -1,0 +1,11 @@
+{
+    "name": "步行速度",
+    "shortName": "步速",
+    "descriptionTitle": "关于步行速度",
+    "description": "步行速度是您行走时的平均速度，以米每秒表示。在ALS中，下降趋势可能反映腿部力量的逐渐减弱。该数值会自动从Apple健康或Health Connect导入，并以每日平均值显示。",
+    "fields": {
+        "value": {
+            "label": "步行速度"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "name": "Stade King's",
+    "displayName": "Stade King's",
+    "shortName": "King's",
+    "description": "Stade de SLA confirmé par le médecin selon King's College, basé sur les régions atteintes et l'atteinte nutritionnelle ou respiratoire.",
+    "domains": {
+        "structured": "Stade King's"
+    },
+    "questions": {
+        "payload": {
+            "text": "Stade King's",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Stade",
+            "info": "Le stade King's est dérivé des régions atteintes et des critères nutritionnels ou respiratoires pertinents.",
+            "options": {
+                "1": { "label": "Stade 1", "description": "Une région atteinte" },
+                "2": { "label": "Stade 2", "description": "Deux régions atteintes" },
+                "3": { "label": "Stade 3", "description": "Trois régions atteintes" },
+                "4A": { "label": "Stade 4A", "description": "Atteinte nutritionnelle" },
+                "4B": { "label": "Stade 4B", "description": "Atteinte respiratoire" },
+                "4": { "label": "Stade 4", "description": "Stade 4 non précisé" }
+            }
+        },
+        "affectedRegions": {
+            "label": "Régions atteintes",
+            "info": "Régions cliniquement atteintes utilisées pour la stadification.",
+            "options": {
+                "bulbar": { "label": "bulbaire" },
+                "upper_limb": { "label": "membre supérieur" },
+                "lower_limb": { "label": "membre inférieur" },
+                "thoracic": { "label": "thoracique/respiratoire" }
+            }
+        },
+        "source": {
+            "label": "Source",
+            "info": "Base de l'évaluation. Les valeurs suggérées doivent aussi être confirmées par le médecin.",
+            "options": {
+                "manual": { "label": "confirmé par le médecin" },
+                "suggested_from_exam": { "label": "suggéré par l'examen" },
+                "suggested_from_alsfrs": { "label": "suggéré par l'ALSFRS-R" },
+                "suggested_from_care": { "label": "suggéré par les soins" }
+            }
+        },
+        "stage4Reason": {
+            "label": "Raison du stade 4",
+            "info": "Documente si le stade 4 est lié à l'atteinte nutritionnelle ou respiratoire.",
+            "options": {
+                "nutrition": { "label": "nutrition" },
+                "respiratory": { "label": "respiration" },
+                "both": { "label": "nutrition et respiration" },
+                "unspecified": { "label": "non précisé" }
+            }
+        },
+        "note": {
+            "label": "Commentaire",
+            "placeholder": "Commentaire clinique optionnel"
+        }
+    }
+}

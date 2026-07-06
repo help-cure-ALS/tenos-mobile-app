@@ -1,0 +1,14 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "TENOS",
+    "CFBundleName": "TENOS",
+    "NSCameraUsageDescription": "TENOS 需要访问相机，以扫描用于设备配对和诊所验证的二维码。",
+    "NSFaceIDUsageDescription": "允许 TENOS 使用 Face ID 解锁你的受保护数据。",
+    "NSHealthShareUsageDescription": "TENOS 可以从 Apple Health 读取你批准的部分健康数据，包括测量值和药物，并将其导入你的加密患者记录。",
+    "NSHealthUpdateUsageDescription": "TENOS 不会向 Apple Health 写入健康数据。包含此权限说明是因为 TENOS 使用 HealthKit 导入你批准的健康数据。",
+    "NSMicrophoneUsageDescription": "当你使用录音功能时，TENOS 需要访问麦克风。"
+  },
+  "android": {
+    "app_name": "TENOS"
+  }
+}

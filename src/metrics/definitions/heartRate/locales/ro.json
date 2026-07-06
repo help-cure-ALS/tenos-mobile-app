@@ -1,0 +1,11 @@
+{
+    "name": "Frecvență cardiacă",
+    "shortName": "Puls",
+    "descriptionTitle": "Despre frecvența cardiacă",
+    "description": "Frecvența cardiacă indică de câte ori bate inima pe minut. Un puls normal în repaus la adulți este între 60 și 100 de bătăi pe minut. În ALS, frecvența cardiacă poate fi influențată de stres, probleme respiratorii sau medicamente. Măsurătorile regulate ajută la detectarea timpurie a schimbărilor.",
+    "fields": {
+        "value": {
+            "label": "Frecvență cardiacă"
+        }
+    }
+}

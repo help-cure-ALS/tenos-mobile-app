@@ -1,0 +1,17 @@
+{
+    "name": "Suicidalitate (PHQ-9 item 9)",
+    "shortName": "Suicidalitate",
+    "descriptionTitle": "Despre suicidalitate",
+    "description": "Această metrică înregistrează răspunsul la întrebarea 9 din chestionarul PHQ-9: „Gânduri că ți-ar fi mai bine mort sau că ți-ai face rău”. Valorile > 0 necesită atenție clinică specială. Această metrică este pentru detectare timpurie și trebuie evaluată întotdeauna în context clinic.",
+    "fields": {
+        "value": {
+            "label": "Suicidalitate",
+            "valueLabels": {
+                "0": "Deloc",
+                "1": "Câteva zile",
+                "2": "Mai mult de jumătate din zile",
+                "3": "Aproape în fiecare zi"
+            }
+        }
+    }
+}

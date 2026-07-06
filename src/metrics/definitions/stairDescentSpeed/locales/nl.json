@@ -1,0 +1,11 @@
+{
+    "name": "Snelheid trap afgaan",
+    "shortName": "Trap af",
+    "descriptionTitle": "Over de snelheid bij het traplopen omlaag",
+    "description": "De snelheid bij het traplopen omlaag geeft aan hoe snel je de trap afloopt, in meter per seconde. Trap afgaan vraagt veel van het evenwicht en de beencontrole, dus een dalende trend kan een vroeg teken zijn van afnemende functie van de onderste ledematen bij ALS. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid.",
+    "fields": {
+        "value": {
+            "label": "Snelheid trap afgaan"
+        }
+    }
+}

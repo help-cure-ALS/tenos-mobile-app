@@ -1,0 +1,11 @@
+{
+    "name": "Muscle Cramps",
+    "shortName": "Cramps",
+    "descriptionTitle": "About Muscle Cramps",
+    "description": "Muscle cramps are painful, sustained, and involuntary muscle contractions. They differ from fasciculations (brief twitches), which are recorded separately. Cramps are common in ALS, especially at night, and can disrupt sleep. Record the number of cramps per day to identify patterns.",
+    "fields": {
+        "value": {
+            "label": "Number of Cramps"
+        }
+    }
+}

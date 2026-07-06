@@ -1,0 +1,11 @@
+{
+    "name": "Oxigen în sânge",
+    "shortName": "SpO2",
+    "descriptionTitle": "Despre oxigenul în sânge",
+    "description": "Saturația oxigenului (SpO2) arată ce procent din hemoglobina din sânge este încărcat cu oxigen. În ALS, slăbirea mușchilor respiratori poate duce la niveluri mai scăzute de oxigen, mai ales noaptea. Valorile normale sunt între 95% și 100%. Monitorizarea regulată ajută la detectarea timpurie a problemelor respiratorii.",
+    "fields": {
+        "value": {
+            "label": "Saturația oxigenului"
+        }
+    }
+}

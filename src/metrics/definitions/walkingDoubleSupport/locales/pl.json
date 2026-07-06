@@ -1,0 +1,11 @@
+{
+    "name": "Czas podwójnego podparcia",
+    "shortName": "Podw. podparcie",
+    "descriptionTitle": "O czasie podwójnego podparcia",
+    "description": "Czas podwójnego podparcia to odsetek cyklu chodu, w którym obie stopy dotykają podłoża. Wyższa wartość często wskazuje na ostrożniejszy, mniej stabilny chód i wyższe ryzyko upadku. W ALS może to pomóc śledzić zmiany równowagi. Wartość ta jest importowana automatycznie z Apple Zdrowie.",
+    "fields": {
+        "value": {
+            "label": "Czas podwójnego podparcia"
+        }
+    }
+}

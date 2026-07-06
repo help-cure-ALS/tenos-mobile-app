@@ -1,0 +1,17 @@
+{
+  "name": "Fasciculations",
+  "shortName": "Fascic.",
+  "descriptionTitle": "À propos des fasciculations",
+  "description": "Les fasciculations sont de brèves contractions involontaires de fibres musculaires isolées, parfois visibles sous la peau. Elles constituent un symptôme typique de la SLA et se distinguent des crampes musculaires, qui sont douloureuses et durables. Leur suivi aide à identifier des schémas et à documenter la progression de la maladie. (0 = Aucune, 1 = Rare, 2 = Fréquente, 3 = Très fréquente)",
+  "fields": {
+    "value": {
+      "label": "Fasciculations",
+      "valueLabels": {
+        "0": "Aucune",
+        "1": "Rare",
+        "2": "Fréquente",
+        "3": "Très fréquente"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Kalori alımı",
+    "shortName": "Kalori",
+    "descriptionTitle": "Kalori alımı hakkında",
+    "description": "Günlük kalori alımı ALS’de özellikle önemlidir, çünkü hastalık nedeniyle vücudun enerji gereksinimi sıklıkla artar. Aynı zamanda yutma güçlükleri yemek yemeyi zorlaştırabilir. Yeterli kalori alımı hastalık seyrini olumlu etkileyebilir. Hedef değerlerini doktorun veya beslenme uzmanıyla görüş.",
+    "fields": {
+        "value": {
+            "label": "Kalori"
+        }
+    }
+}

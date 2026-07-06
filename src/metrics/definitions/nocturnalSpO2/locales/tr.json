@@ -1,0 +1,11 @@
+{
+    "name": "Gece oksijen satürasyonu",
+    "shortName": "Gece SpO2",
+    "descriptionTitle": "Gece oksijen satürasyonu hakkında",
+    "description": "Gece oksijen satürasyonu, uyku sırasında vücudun oksijenle ne kadar iyi beslendiğini gösterir. ALS’de gündüz belirtileri fark edilmeden önce gece hipoventilasyonu (yüzeysel solunum) ortaya çıkabilir. Uyku sırasında %90’ın altındaki değerler erken solunum zayıflığına işaret edebilir. Ölçüm ideal olarak gece boyunca pulse oksimetre ile yapılır.",
+    "fields": {
+        "value": {
+            "label": "Min. SpO2 (gece)"
+        }
+    }
+}

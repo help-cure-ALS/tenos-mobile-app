@@ -1,0 +1,11 @@
+{
+    "name": "Velocidade a descer escadas",
+    "shortName": "Descida",
+    "descriptionTitle": "Sobre a velocidade a descer escadas",
+    "description": "A velocidade a descer escadas indica a rapidez com que você desce escadas, em metros por segundo. Descer escadas exige muito equilíbrio e controlo das pernas, por isso uma tendência de queda pode ser um sinal precoce de declínio da função dos membros inferiores na ELA. Este valor é importado automaticamente do Apple Saúde.",
+    "fields": {
+        "value": {
+            "label": "Velocidade a descer escadas"
+        }
+    }
+}

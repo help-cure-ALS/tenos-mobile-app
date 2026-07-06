@@ -1,0 +1,92 @@
+{
+    "name": "呼吸护理",
+    "displayName": "呼吸护理",
+    "shortName": "呼吸护理",
+    "exportTitle": "呼吸护理",
+    "description": "记录可能表明呼吸支持变化的症状。定期回答有助于及早发现变化。",
+    "introText": "以下问题涉及您过去几天的感受。",
+    "intro": {
+        "title": "呼吸护理",
+        "description": "本问卷通过6个简短问题记录与呼吸支持相关的症状。",
+        "researchNote": "定期回答有助于及早发现变化并与您的护理团队讨论。",
+        "buttonText": "开始问卷"
+    },
+    "domains": {
+        "symptoms": "症状"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "我醒来时头痛。",
+            "exportLabel": "头痛",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        },
+        "dizziness": {
+            "text": "我感到头晕，尤其是醒来后。",
+            "exportLabel": "头晕",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "我白天感到异常疲倦或困倦。",
+            "exportLabel": "嗜睡",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        },
+        "concentration": {
+            "text": "我难以集中注意力。",
+            "exportLabel": "注意力",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        },
+        "sleep_quality": {
+            "text": "我夜间会醒来或睡眠不安稳。",
+            "exportLabel": "睡眠",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "我白天感到气短，例如说话时或休息时。",
+            "exportLabel": "呼吸困难",
+            "options": {
+                "0": { "label": "从不" },
+                "1": { "label": "很少" },
+                "2": { "label": "有时" },
+                "3": { "label": "经常" },
+                "4": { "label": "几乎总是" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "症状很少", "description": "您的回答表明几乎没有或完全没有不适。" },
+            { "label": "明显症状", "description": "您的回答表明有明显的不适。" },
+            { "label": "显著症状", "description": "您的回答表明有显著的不适。" }
+        ]
+    }
+}

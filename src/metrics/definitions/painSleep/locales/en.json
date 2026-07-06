@@ -1,0 +1,24 @@
+{
+    "name": "Pain -> Sleep",
+    "shortName": "Sleep",
+    "descriptionTitle": "Pain Impact on Sleep",
+    "description": "Records how much pain affects your sleep. On a scale from 0 (no impact) to 10 (extreme impact). Sleep disturbances due to pain can significantly affect quality of life.",
+    "fields": {
+        "value": {
+            "label": "Impairment",
+            "valueLabels": {
+                "0": "None",
+                "1": "Minimal",
+                "2": "Minimal",
+                "3": "Slight",
+                "4": "Moderate",
+                "5": "Moderate",
+                "6": "Moderate",
+                "7": "Severe",
+                "8": "Severe",
+                "9": "Very severe",
+                "10": "Extreme"
+            }
+        }
+    }
+}

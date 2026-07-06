@@ -1,0 +1,11 @@
+{
+    "name": "Temperatură corporală",
+    "shortName": "Temp.",
+    "descriptionTitle": "Despre temperatura corporală",
+    "description": "Temperatura corporală este un parametru vital important. Valorile normale sunt între 36,0 și 37,5 °C. În ALS, termoreglarea poate fi afectată din cauza disfuncției autonome sau a masei musculare reduse. Măsurarea regulată ajută la detectarea timpurie a infecțiilor și la documentarea schimbărilor în reglarea temperaturii.",
+    "fields": {
+        "value": {
+            "label": "Temperatură"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Energiebedarf",
+    "shortName": "TDEE",
+    "descriptionTitle": "Über den Energiebedarf",
+    "description": "Der tägliche Energiebedarf (TDEE) wird anhand der Kasarskis-Formel berechnet, die speziell für ALS-Patienten entwickelt wurde. Die Berechnung berücksichtigt deinen Grundumsatz, Aktivitätslevel (basierend auf ALSFRS-6) und ALS-spezifische Anpassungen.",
+    "fields": {}
+}

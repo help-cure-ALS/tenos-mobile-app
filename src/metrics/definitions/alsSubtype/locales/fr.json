@@ -1,0 +1,7 @@
+{
+  "name": "Sous-type de SLA",
+  "shortName": "Sous-type SLA",
+  "descriptionTitle": "À propos du sous-type de SLA",
+  "description": "Le sous-type de SLA décrit le phénotype moteur avec la classification ALS-OPM : site de début, propagation et profil des motoneurones.",
+  "fields": {}
+}

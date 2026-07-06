@@ -1,0 +1,11 @@
+{
+    "name": "Hartritmevariabiliteit",
+    "shortName": "HRV",
+    "descriptionTitle": "Over de hartritmevariabiliteit",
+    "description": "De hartritmevariabiliteit (HRV) is de variatie in tijd tussen hartslagen, in milliseconden, en weerspiegelt de activiteit van het autonome zenuwstelsel. Op Android wordt deze als RMSSD gemeten en automatisch geïmporteerd uit Health Connect.",
+    "fields": {
+        "value": {
+            "label": "Hartritmevariabiliteit"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Forța de prindere",
+    "shortName": "Prindere",
+    "descriptionTitle": "Despre forța de prindere",
+    "description": "Forța de prindere măsoară forța maximă care poate fi exercitată cu mâna. Este măsurată cu un dinamometru de mână și este un indicator obiectiv al forței musculare. În ALS, forța de prindere poate ajuta la documentarea progresiei slăbiciunii musculare. Valorile normale variază în funcție de vârstă și sex (bărbați: 30-55 kg, femei: 20-35 kg).",
+    "fields": {
+        "left": {
+            "label": "Stânga"
+        },
+        "right": {
+            "label": "Dreapta"
+        }
+    }
+}

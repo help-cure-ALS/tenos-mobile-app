@@ -1,0 +1,14 @@
+{
+  "name": "血圧",
+  "shortName": "血圧",
+  "descriptionTitle": "血圧について",
+  "description": "血圧は動脈内の血液の圧力を測定します。収縮期（上の値）と拡張期（下の値）の2つの値で示されます。定期的な測定は心血管疾患の早期発見に役立ちます。",
+  "fields": {
+    "systolic": {
+      "label": "収縮期"
+    },
+    "diastolic": {
+      "label": "拡張期"
+    }
+  }
+}

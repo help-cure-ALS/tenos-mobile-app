@@ -1,0 +1,24 @@
+{
+  "name": "Fatiga",
+  "shortName": "Fatiga",
+  "descriptionTitle": "Sobre la fatiga",
+  "description": "La fatiga se valora en una escala de 0 (sin fatiga) a 10 (agotamiento extremo). En la ELA, la fatiga es un síntoma frecuente que puede deberse a un mayor gasto energético en las actividades diarias, problemas respiratorios o alteraciones del sueño. Documentarla ayuda a identificar patrones y a adaptar la planificación del día.",
+  "fields": {
+    "value": {
+      "label": "Fatiga",
+      "valueLabels": {
+        "0": "Ninguna",
+        "1": "Leve",
+        "2": "Leve",
+        "3": "Leve",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

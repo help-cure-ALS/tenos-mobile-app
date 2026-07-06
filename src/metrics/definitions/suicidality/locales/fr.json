@@ -1,0 +1,17 @@
+{
+  "name": "Suicidalité (PHQ-9 Item 9)",
+  "shortName": "Suicidalité",
+  "descriptionTitle": "À propos de la suicidalité",
+  "description": "Cette métrique saisit la réponse à la question 9 du questionnaire PHQ-9 : « Pensées selon lesquelles vous seriez mieux mort(e) ou de vous faire du mal ». Des valeurs > 0 nécessitent une attention clinique particulière. Cette métrique sert au repérage précoce et doit toujours être interprétée dans un contexte clinique.",
+  "fields": {
+    "value": {
+      "label": "Suicidalité",
+      "valueLabels": {
+        "0": "Pas du tout",
+        "1": "Plusieurs jours",
+        "2": "Plus de la moitié des jours",
+        "3": "Presque tous les jours"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "爬楼层数",
+    "shortName": "楼层",
+    "descriptionTitle": "关于爬楼层数",
+    "description": "每天爬升的楼层数反映日常活动中下肢的力量和耐力。在ALS中，下降趋势可能提示腿部力量逐渐减弱。该数值会自动从Apple健康或Health Connect导入，无需手动输入。",
+    "fields": {
+        "value": {
+            "label": "爬楼层数"
+        }
+    }
+}

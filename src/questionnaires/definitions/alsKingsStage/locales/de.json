@@ -1,0 +1,63 @@
+{
+    "name": "King's Stage",
+    "displayName": "King's Stage",
+    "shortName": "King's",
+    "description": "Ärztlich bestätigtes ALS-Stadium nach King's College anhand betroffener Regionen sowie Ernährungs- oder Atembeteiligung.",
+    "domains": {
+        "structured": "King's Stage"
+    },
+    "questions": {
+        "payload": {
+            "text": "King's Stage",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "stage": {
+            "label": "Stadium",
+            "info": "King's Stage wird aus betroffenen Regionen und relevanten Ernährungs- oder Atemkriterien abgeleitet.",
+            "options": {
+                "1": { "label": "Stadium 1", "description": "Eine betroffene Region" },
+                "2": { "label": "Stadium 2", "description": "Zwei betroffene Regionen" },
+                "3": { "label": "Stadium 3", "description": "Drei betroffene Regionen" },
+                "4A": { "label": "Stadium 4A", "description": "Ernährungsbeteiligung" },
+                "4B": { "label": "Stadium 4B", "description": "Atembeteiligung" },
+                "4": { "label": "Stadium 4", "description": "Stadium 4, nicht weiter spezifiziert" }
+            }
+        },
+        "affectedRegions": {
+            "label": "Betroffene Regionen",
+            "info": "Klinisch betroffene Regionen, auf denen die Stadieneinteilung basiert.",
+            "options": {
+                "bulbar": { "label": "bulbär" },
+                "upper_limb": { "label": "obere Extremität" },
+                "lower_limb": { "label": "untere Extremität" },
+                "thoracic": { "label": "thorakal/respiratorisch" }
+            }
+        },
+        "source": {
+            "label": "Quelle",
+            "info": "Grundlage der Bewertung. Auch vorgeschlagene Werte müssen ärztlich bestätigt werden.",
+            "options": {
+                "manual": { "label": "ärztlich festgelegt" },
+                "suggested_from_exam": { "label": "aus Untersuchung vorgeschlagen" },
+                "suggested_from_alsfrs": { "label": "aus ALSFRS-R vorgeschlagen" },
+                "suggested_from_care": { "label": "aus Versorgung vorgeschlagen" }
+            }
+        },
+        "stage4Reason": {
+            "label": "Stadium-4-Grund",
+            "info": "Dokumentiert, ob Stadium 4 durch Ernährungs- oder Atembeteiligung begründet ist.",
+            "options": {
+                "nutrition": { "label": "Ernährung" },
+                "respiratory": { "label": "Atmung" },
+                "both": { "label": "Ernährung und Atmung" },
+                "unspecified": { "label": "nicht spezifiziert" }
+            }
+        },
+        "note": {
+            "label": "Kommentar",
+            "placeholder": "Optionaler ärztlicher Kommentar"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "NFL sérique",
+  "shortName": "NFL",
+  "descriptionTitle": "À propos de la chaîne légère des neurofilaments",
+  "description": "La chaîne légère des neurofilaments (NFL) est un biomarqueur libéré dans le sang lorsque des cellules nerveuses sont endommagées. Des taux élevés de NFL peuvent indiquer une neurodégénérescence active. Dans la SLA, la NFL est utilisée pour suivre la progression de la maladie et comme marqueur pronostique.",
+  "fields": {
+    "value": { "label": "NFL" }
+  }
+}

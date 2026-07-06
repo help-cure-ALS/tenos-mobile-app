@@ -1,0 +1,11 @@
+{
+    "name": "Çift destek süresi",
+    "shortName": "Çift destek",
+    "descriptionTitle": "Çift destek süresi hakkında",
+    "description": "Çift destek süresi, yürüyüş döngüsünde her iki ayağın da yere değdiği zamanın yüzdesidir. Daha yüksek bir değer genellikle daha temkinli, daha az dengeli bir yürüyüşe ve daha yüksek düşme riskine işaret eder. ALS'de denge değişikliklerini izlemeye yardımcı olabilir. Bu değer Apple Sağlık'tan otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Çift destek süresi"
+        }
+    }
+}

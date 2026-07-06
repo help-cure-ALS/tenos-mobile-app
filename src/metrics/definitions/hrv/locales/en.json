@@ -1,0 +1,9 @@
+{
+    "name": "Heart Rate Variability",
+    "shortName": "HRV",
+    "descriptionTitle": "About Heart Rate Variability",
+    "description": "Heart rate variability (HRV) is the variation in time between heartbeats, in milliseconds, and reflects autonomic nervous system activity. On iPhone it is measured as SDNN and imported automatically from Apple Health.",
+    "fields": {
+        "value": { "label": "Heart Rate Variability" }
+    }
+}

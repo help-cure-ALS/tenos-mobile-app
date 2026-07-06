@@ -1,0 +1,11 @@
+{
+  "name": "FVC预测值百分比",
+  "shortName": "FVC %",
+  "descriptionTitle": "关于FVC预测值百分比",
+  "description": "FVC预测值百分比将测得的用力肺活量与根据年龄、性别和身高预期的值进行比较。80%以上通常被认为正常。在ALS中，低于50%被认为具有临界意义，可能需要开始无创通气。",
+  "fields": {
+    "value": {
+      "label": "FVC预测百分比"
+    }
+  }
+}

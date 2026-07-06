@@ -1,0 +1,9 @@
+{
+  "name": "NFL en LCR",
+  "shortName": "NFL (LCR)",
+  "descriptionTitle": "Sobre la NFL en líquido cefalorraquídeo",
+  "description": "La cadena ligera de neurofilamentos (NFL) en líquido cefalorraquídeo (LCR) es un biomarcador sensible del daño de las células nerviosas. La medición en LCR suele proporcionar valores más precoces y precisos que la medición en sangre. En la ELA, niveles elevados de NFL en LCR se asocian a una progresión más rápida de la enfermedad. La muestra se obtiene mediante punción lumbar.",
+  "fields": {
+    "value": { "label": "NFL" }
+  }
+}

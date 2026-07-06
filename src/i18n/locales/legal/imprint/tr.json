@@ -1,0 +1,72 @@
+{
+    "title": "Yasal bildirim",
+    "translationNotice": "Bu, Almanca yasal bildirimin (Impressum) çevirisidir. Çelişki olması halinde Almanca sürüm geçerlidir.",
+    "sections": {
+        "provider": {
+            "title": "§ 5 TMG (Alman Telemedya Yasası) uyarınca bilgiler",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Nürnberg\nAlmanya"
+        },
+        "representation": {
+            "title": "Temsil eden",
+            "content": "Marie Assimidis, Yönetim Kurulu Üyesi"
+        },
+        "registration": {
+            "title": "Sicil kaydı",
+            "content": "Dernekler siciline kayıtlıdır",
+            "court": "Sicil mahkemesi: Amtsgericht Nürnberg",
+            "number": "Sicil numarası: VR 203250"
+        },
+        "contact": {
+            "title": "İletişim",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "§ 18(2) MStV uyarınca içerikten sorumlu",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Nürnberg"
+        },
+        "liability": {
+            "title": "Sorumluluk reddi",
+            "content": {
+                "title": "İçerik sorumluluğu",
+                "text": "Bu uygulamanın içerikleri büyük bir özenle oluşturulmuştur. Ancak içeriklerin doğruluğu, eksiksizliği veya güncelliği konusunda garanti veremeyiz.",
+                "tmg": "Kâr amacı gütmeyen bir kuruluş olarak, genel yasalar uyarınca § 7(1) TMG kapsamında bu uygulamadaki kendi içeriklerimizden sorumluyuz. Ancak §§ 8-10 TMG uyarınca iletilen veya saklanan üçüncü taraf bilgilerini izlemek ya da hukuka aykırı faaliyeti gösteren durumları araştırmakla yükümlü değiliz."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Tıbbi sorumluluk reddi",
+            "intro": "Önemli not: Bu uygulama yalnızca kişisel sağlık dokümantasyonu ve öz gözlem için tasarlanmıştır. Sağlanan içerikler, anketler ve işlevler hiçbir şekilde şunların yerine geçmez:",
+            "items": [
+                "Profesyonel tıbbi tavsiye",
+                "Tıbbi tanı",
+                "Tıbbi tedavi",
+                "Nitelikli sağlık profesyonellerinin önerileri"
+            ],
+            "advice": "Sağlıkla ilgili endişelerin veya soruların için lütfen her zaman bir doktora veya başka bir nitelikli sağlık profesyoneline danış. Bu uygulamadaki bilgilere dayanarak profesyonel tıbbi tavsiyeyi asla göz ardı etme.",
+            "emergency": "Acil durumlarda derhal acil servisi ara (Avrupa'da 112, ABD'de 911)."
+        },
+        "availability": {
+            "title": "Kullanılabilirlik garantisi yok",
+            "content": "Uygulamayı ve isteğe bağlı bulut senkronizasyonunu sürekli kullanılabilir tutmaya çalışırız. Ancak bakım veya teknik sorunlar nedeniyle geçici kesintiler olabilir. Kesintisiz kullanılabilirliği garanti edemeyiz."
+        },
+        "links": {
+            "title": "Bağlantılar için sorumluluk",
+            "content": "Bu uygulama harici web sitelerine bağlantılar içerebilir. Bu harici sayfaların içerikleri üzerinde etkimiz yoktur. Bağlantı verilen sayfaların içeriğinden her zaman ilgili sağlayıcı veya işletmeci sorumludur."
+        },
+        "copyright": {
+            "title": "Telif hakkı",
+            "content": "Bu uygulamada help cure ALS e.V. tarafından oluşturulan içerikler ve eserler Alman telif hakkı yasasına tabidir. Çoğaltma, düzenleme, dağıtım ve telif hakkı sınırlarını aşan her türlü kullanım kuruluşun yazılı iznini gerektirir."
+        },
+        "openSource": {
+            "title": "Açık kaynak bileşenleri",
+            "content": "Bu uygulama açık kaynak yazılım kullanır. Kullanılan kütüphanelerin ve lisanslarının tam listesi uygulama ayarlarında 'Lisanslar' bölümünde bulunabilir."
+        },
+        "about": {
+            "title": "Kuruluş hakkında",
+            "content": "help cure ALS e.V., Amyotrofik Lateral Skleroz (ALS) araştırması ve ALS ile mücadeleye adanmış kâr amacı gütmeyen bir kuruluştur. Araştırma projelerini destekler, etkilenen kişiler ile bilim arasındaki alışverişi teşvik eder ve ALS hastalarının yaşam kalitesini iyileştirmek için dijital araçlar geliştirir.",
+            "moreInfo": "Çalışmalarımız hakkında daha fazla bilgiyi web sitemizde bulabilirsin:"
+        }
+    },
+    "lastUpdated": "Şubat 2026"
+}

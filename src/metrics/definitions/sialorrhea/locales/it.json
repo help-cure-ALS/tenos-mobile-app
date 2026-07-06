@@ -1,0 +1,11 @@
+{
+  "name": "Scialorrea",
+  "shortName": "Saliva",
+  "descriptionTitle": "Informazioni sulla scialorrea",
+  "description": "Il flusso eccessivo di saliva (scialorrea) è un sintomo comune nella SLA, causato da difficoltà di deglutizione più che da aumento della produzione di saliva. Registra la gravità su una scala da 0 (normale) a 10 (molto grave). La documentazione aiuta a valutare l’efficacia dei trattamenti.",
+  "fields": {
+    "value": {
+      "label": "Gravità"
+    }
+  }
+}

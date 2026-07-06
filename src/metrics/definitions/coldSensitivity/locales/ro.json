@@ -1,0 +1,17 @@
+{
+    "name": "Sensibilitate la frig",
+    "shortName": "Frig",
+    "descriptionTitle": "Despre sensibilitatea la frig",
+    "description": "Sensibilitatea la frig este un simptom frecvent în ALS. Poate fi cauzată de masa musculară redusă, disfuncția autonomă sau activitatea fizică redusă. Urmărirea ajută la identificarea tiparelor și la ajustarea măsurilor, cum ar fi îmbrăcămintea mai călduroasă sau temperatura camerei. (0 = Niciuna, 1 = Ușoară, 2 = Moderată, 3 = Severă)",
+    "fields": {
+        "value": {
+            "label": "Sensibilitate la frig",
+            "valueLabels": {
+                "0": "Niciuna",
+                "1": "Ușoară",
+                "2": "Moderată",
+                "3": "Severă"
+            }
+        }
+    }
+}

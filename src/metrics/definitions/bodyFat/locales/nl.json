@@ -1,0 +1,11 @@
+{
+  "name": "Lichaamsvetpercentage",
+  "shortName": "Lichaamsvet",
+  "descriptionTitle": "Over lichaamsvetpercentage",
+  "description": "Het lichaamsvetpercentage geeft aan welk deel van het lichaamsgewicht uit vetweefsel bestaat. Bij ALS is controle belangrijk omdat verlies van spiermassa bij gelijkblijvend gewicht kan wijzen op een hoger vetpercentage. Regelmatige metingen helpen de lichaamssamenstelling te volgen.",
+  "fields": {
+    "value": {
+      "label": "Lichaamsvetpercentage"
+    }
+  }
+}

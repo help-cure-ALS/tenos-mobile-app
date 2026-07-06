@@ -1,0 +1,9 @@
+{
+    "name": "Körperfettanteil",
+    "shortName": "Körperfett",
+    "descriptionTitle": "Über Körperfettanteil",
+    "description": "Der Körperfettanteil gibt an, wie viel Prozent des Körpergewichts aus Fettgewebe besteht. Bei ALS ist die Überwachung des Körperfettanteils wichtig, da ein Verlust von Muskelmasse bei gleichbleibendem Gewicht auf einen erhöhten Fettanteil hindeuten kann. Regelmäßige Messungen helfen, die Körperzusammensetzung im Blick zu behalten.",
+    "fields": {
+        "value": { "label": "Körperfettanteil" }
+    }
+}

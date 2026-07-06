@@ -1,0 +1,11 @@
+{
+  "name": "NFL no soro",
+  "shortName": "NFL",
+  "descriptionTitle": "Sobre a cadeia leve de neurofilamentos",
+  "description": "A cadeia leve de neurofilamentos (NFL) é um biomarcador libertado no sangue quando as células nervosas são danificadas. Níveis elevados de NFL podem indicar neurodegeneração ativa. Na ELA, a NFL é usada para monitorizar a progressão da doença e como marcador prognóstico.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+    "name": "Neurologische Untersuchung",
+    "displayName": "Neurologische Untersuchung",
+    "shortName": "Untersuchung",
+    "description": "Ärztliche Dokumentation motorischer UMN- und LMN-Befunde im ALS-Verlauf.",
+    "domains": {
+        "structured": "Neurologische Untersuchung"
+    },
+    "questions": {
+        "payload": {
+            "text": "Neurologische Untersuchung",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Körperregion",
+            "info": "Körperregion, in der die auffälligsten neurologischen Zeichen dieser Untersuchung dokumentiert werden.",
+            "options": {
+                "head": {
+                    "label": "Kopf/bulbär"
+                },
+                "right_arm": {
+                    "label": "Rechter Arm"
+                },
+                "left_arm": {
+                    "label": "Linker Arm"
+                },
+                "trunk": {
+                    "label": "Rumpf/axial"
+                },
+                "right_leg": {
+                    "label": "Rechtes Bein"
+                },
+                "left_leg": {
+                    "label": "Linkes Bein"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Ausprägung",
+            "options": {
+                "absent": {
+                    "label": "nicht vorhanden"
+                },
+                "mild": {
+                    "label": "leicht"
+                },
+                "moderate": {
+                    "label": "mittel"
+                },
+                "severe": {
+                    "label": "schwer"
+                },
+                "not_tested": {
+                    "label": "nicht getestet"
+                }
+            }
+        },
+        "burden": {
+            "label": "Gesamtlast",
+            "options": {
+                "none": {
+                    "label": "keine"
+                },
+                "mild": {
+                    "label": "leicht"
+                },
+                "moderate": {
+                    "label": "mittel"
+                },
+                "severe": {
+                    "label": "schwer"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Vorgeschlagener M-Phänotyp",
+            "info": "Ärztliche Einordnung des Motoneuron-Musters für die M-Achse der ALS-Subtyp-Klassifikation.",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN balanciert"
+                },
+                "M1d": {
+                    "label": "UMN dominant"
+                },
+                "M1p": {
+                    "label": "pure UMN"
+                },
+                "M2d": {
+                    "label": "LMN dominant"
+                },
+                "M2p": {
+                    "label": "pure LMN"
+                },
+                "M3": {
+                    "label": "dissoziiert"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: Schwäche",
+            "info": "Dokumentiert klinische Muskelschwäche als Zeichen einer Beteiligung des zweiten Motoneurons."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: Atrophie",
+            "info": "Dokumentiert sichtbaren oder tastbaren Muskelschwund in der untersuchten Region."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: Faszikulationen",
+            "info": "Dokumentiert spontane Muskelzuckungen als Zeichen einer Reizung oder Schädigung des zweiten Motoneurons."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: Hyperreflexie",
+            "info": "Dokumentiert gesteigerte Muskeleigenreflexe als Zeichen einer Beteiligung des ersten Motoneurons."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: pathologische Reflexe",
+            "info": "Dokumentiert pathologische Reflexzeichen wie Babinski- oder Hoffmann-Zeichen."
+        },
+        "umnSpasticity": {
+            "label": "UMN: Spastik",
+            "info": "Dokumentiert erhöhten Muskeltonus oder spastische Tonuserhöhung als Zeichen des ersten Motoneurons."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: verlangsamte Bewegung",
+            "info": "Dokumentiert verlangsamte oder schlecht koordinierte Bewegungen ohne alleinige Erklärung durch Schwäche."
+        },
+        "overallUmnBurden": {
+            "label": "Gesamtlast UMN",
+            "info": "Zusammenfassende Einschätzung, wie stark Zeichen des ersten Motoneurons insgesamt ausgeprägt sind."
+        },
+        "overallLmnBurden": {
+            "label": "Gesamtlast LMN",
+            "info": "Zusammenfassende Einschätzung, wie stark Zeichen des zweiten Motoneurons insgesamt ausgeprägt sind."
+        },
+        "note": {
+            "label": "Interner Kommentar",
+            "info": "Optionaler Zusatzkommentar zur Untersuchung. Dieser Kommentar wird nicht für Forschungsdonationen übernommen.",
+            "placeholder": "Optional"
+        },
+        "clinicalRegion": {
+            "label": "ALS-Region",
+            "info": "Standardisierte klinische ALS-Regionen für die Beurteilung der regionalen Beteiligung.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulbär"
+                },
+                "cervical": {
+                    "label": "Zervikal/Arme"
+                },
+                "thoracic": {
+                    "label": "Thorakal/axial"
+                },
+                "lumbosacral": {
+                    "label": "Lumbosakral/Beine"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Seite",
+            "options": {
+                "left": {
+                    "label": "Links"
+                },
+                "right": {
+                    "label": "Rechts"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Befund",
+            "options": {
+                "absent": {
+                    "label": "nicht vorhanden"
+                },
+                "present": {
+                    "label": "vorhanden"
+                },
+                "not_tested": {
+                    "label": "nicht getestet"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC-Grad",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "nicht getestet"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muskelgruppe",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Armhebung"
+                },
+                "elbow_flexion": {
+                    "label": "Armbeugung"
+                },
+                "elbow_extension": {
+                    "label": "Armstreckung"
+                },
+                "wrist_extension": {
+                    "label": "Handstreckung"
+                },
+                "finger_abduction": {
+                    "label": "Fingerspreizung"
+                },
+                "hip_flexion": {
+                    "label": "Hüftbeugung"
+                },
+                "knee_extension": {
+                    "label": "Kniestreckung"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Fußhebung"
+                },
+                "toe_extension": {
+                    "label": "Zehenstreckung"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "BSR"
+                },
+                "triceps": {
+                    "label": "TSR"
+                },
+                "brachioradialis": {
+                    "label": "RPR"
+                },
+                "patellar": {
+                    "label": "PSR"
+                },
+                "achilles": {
+                    "label": "ASR"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflexgrad",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "nicht getestet"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Pyramidenbahnzeichen",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Palmomentalreflex"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN-Zeichen",
+            "options": {
+                "atrophy": {
+                    "label": "Atrophie"
+                },
+                "fasciculations": {
+                    "label": "Faszikulationen"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Bulbäres Zeichen",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Zungenatrophie"
+                },
+                "tongue_fasciculations": {
+                    "label": "Zungenfaszikulationen"
+                },
+                "dysarthria": {
+                    "label": "Dysarthrie"
+                },
+                "dysphagia": {
+                    "label": "Dysphagie"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Regionale Beteiligung",
+            "info": "Erfasst UMN- und LMN-Beteiligung in den vier klinischen ALS-Regionen."
+        },
+        "mrcStrength": {
+            "label": "MRC-Kraftprüfung",
+            "info": "Dokumentiert die Kraft nach MRC-Skala von 0 bis 5. Links wird immer vor rechts erfasst."
+        },
+        "reflexes": {
+            "label": "Reflexe",
+            "info": "Dokumentiert Muskeleigenreflexe seitengetrennt, links vor rechts."
+        },
+        "pathologicalSigns": {
+            "label": "Pyramidenbahnzeichen",
+            "info": "Dokumentiert pathologische Reflexzeichen als Hinweis auf UMN-Beteiligung."
+        },
+        "lmnSideSigns": {
+            "label": "LMN-Zeichen",
+            "info": "Dokumentiert Atrophien und Faszikulationen seitengetrennt."
+        },
+        "bulbarSigns": {
+            "label": "Bulbäre Zeichen",
+            "info": "Dokumentiert typische bulbäre Zeichen wie Zungenatrophie, Zungenfaszikulationen, Dysarthrie und Dysphagie."
+        }
+    }
+}

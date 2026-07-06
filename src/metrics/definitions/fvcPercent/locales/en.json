@@ -1,0 +1,9 @@
+{
+    "name": "FVC % of Predicted",
+    "shortName": "FVC %",
+    "descriptionTitle": "About FVC % of Predicted",
+    "description": "FVC as a percentage of predicted compares your measured forced vital capacity with the expected value for your age, sex, and height. Values above 80% are considered normal. In ALS, a drop below 50% is considered critical and may require initiation of non-invasive ventilation.",
+    "fields": {
+        "value": { "label": "FVC % Predicted" }
+    }
+}

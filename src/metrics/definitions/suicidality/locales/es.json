@@ -1,0 +1,17 @@
+{
+  "name": "Ideas suicidas (PHQ-9 ítem 9)",
+  "shortName": "Ideas suicidas",
+  "descriptionTitle": "Sobre las ideas suicidas",
+  "description": "Esta métrica recoge la respuesta a la pregunta 9 del cuestionario PHQ-9: «Pensamientos de que estaría mejor muerto/a o de hacerse daño de alguna manera». Los valores > 0 requieren especial atención clínica. Esta métrica sirve para la detección precoz y siempre debe interpretarse en un contexto clínico.",
+  "fields": {
+    "value": {
+      "label": "Ideas suicidas",
+      "valueLabels": {
+        "0": "En absoluto",
+        "1": "Varios días",
+        "2": "Más de la mitad de los días",
+        "3": "Casi todos los días"
+      }
+    }
+  }
+}

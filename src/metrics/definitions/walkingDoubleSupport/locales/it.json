@@ -1,0 +1,11 @@
+{
+    "name": "Tempo di doppio appoggio",
+    "shortName": "Doppio appoggio",
+    "descriptionTitle": "Informazioni sul tempo di doppio appoggio",
+    "description": "Il tempo di doppio appoggio è la percentuale del ciclo del cammino in cui entrambi i piedi sono a terra. Un valore più alto indica spesso un'andatura più cauta e meno stabile e un rischio di caduta più elevato. Nella SLA, può aiutare a monitorare i cambiamenti dell'equilibrio. Questo valore viene importato automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Tempo di doppio appoggio"
+        }
+    }
+}

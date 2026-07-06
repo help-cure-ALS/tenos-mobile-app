@@ -1,0 +1,86 @@
+{
+    "name": "WHO-5",
+    "displayName": "Well-being",
+    "shortName": "WHO-5",
+    "exportTitle": "Well-being – WHO-5",
+    "description": "The WHO-5 is a brief questionnaire for assessing general well-being. It was developed by the World Health Organization and is one of the most widely used instruments worldwide for measuring subjective well-being.",
+    "introText": "Over the last two weeks...",
+    "intro": {
+        "title": "Assess Your Well-being",
+        "description": "This brief questionnaire measures your general well-being over the last two weeks. It was developed by the WHO and consists of only 5 simple questions.",
+        "researchNote": "Your regular participation helps detect changes in well-being early and advance research.",
+        "buttonText": "Start questionnaire"
+    },
+    "domains": {
+        "wellbeing": "Well-being"
+    },
+    "questions": {
+        "cheerful": {
+            "text": "I have felt cheerful and in good spirits.",
+            "exportLabel": "Cheerfulness",
+            "options": {
+                "5": { "label": "All of the time", "description": "Constantly over the last two weeks" },
+                "4": { "label": "Most of the time", "description": "The majority of the time" },
+                "3": { "label": "More than half of the time", "description": "Predominantly" },
+                "2": { "label": "Less than half of the time", "description": "Occasionally" },
+                "1": { "label": "Some of the time", "description": "Rarely" },
+                "0": { "label": "At no time", "description": "Never in the last two weeks" }
+            }
+        },
+        "calm": {
+            "text": "I have felt calm and relaxed.",
+            "exportLabel": "Calmness",
+            "options": {
+                "5": { "label": "All of the time", "description": "Constantly over the last two weeks" },
+                "4": { "label": "Most of the time", "description": "The majority of the time" },
+                "3": { "label": "More than half of the time", "description": "Predominantly" },
+                "2": { "label": "Less than half of the time", "description": "Occasionally" },
+                "1": { "label": "Some of the time", "description": "Rarely" },
+                "0": { "label": "At no time", "description": "Never in the last two weeks" }
+            }
+        },
+        "active": {
+            "text": "I have felt active and vigorous.",
+            "exportLabel": "Energy",
+            "options": {
+                "5": { "label": "All of the time", "description": "Constantly over the last two weeks" },
+                "4": { "label": "Most of the time", "description": "The majority of the time" },
+                "3": { "label": "More than half of the time", "description": "Predominantly" },
+                "2": { "label": "Less than half of the time", "description": "Occasionally" },
+                "1": { "label": "Some of the time", "description": "Rarely" },
+                "0": { "label": "At no time", "description": "Never in the last two weeks" }
+            }
+        },
+        "rested": {
+            "text": "I woke up feeling fresh and rested.",
+            "exportLabel": "Restedness",
+            "options": {
+                "5": { "label": "All of the time", "description": "Constantly over the last two weeks" },
+                "4": { "label": "Most of the time", "description": "The majority of the time" },
+                "3": { "label": "More than half of the time", "description": "Predominantly" },
+                "2": { "label": "Less than half of the time", "description": "Occasionally" },
+                "1": { "label": "Some of the time", "description": "Rarely" },
+                "0": { "label": "At no time", "description": "Never in the last two weeks" }
+            }
+        },
+        "interesting": {
+            "text": "My daily life has been filled with things that interest me.",
+            "exportLabel": "Interest",
+            "options": {
+                "5": { "label": "All of the time", "description": "Constantly over the last two weeks" },
+                "4": { "label": "Most of the time", "description": "The majority of the time" },
+                "3": { "label": "More than half of the time", "description": "Predominantly" },
+                "2": { "label": "Less than half of the time", "description": "Occasionally" },
+                "1": { "label": "Some of the time", "description": "Rarely" },
+                "0": { "label": "At no time", "description": "Never in the last two weeks" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Good well-being", "description": "Your responses suggest good well-being." },
+            { "label": "Reduced well-being", "description": "Your responses suggest reduced well-being." },
+            { "label": "Low well-being", "description": "Your responses suggest significantly reduced well-being." }
+        ]
+    }
+}

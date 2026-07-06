@@ -1,0 +1,7 @@
+{
+    "name": "Forma ALS și genetică",
+    "shortName": "Forma ALS",
+    "descriptionTitle": "Despre forma ALS și genetică",
+    "description": "Această metrică înregistrează dacă ALS este clasificată ca sporadică, familială sau neclară și dacă este documentată o constatare genetică sau o mutație cunoscută. Informațiile genetice sunt deosebit de sensibile și sunt partajate separat.",
+    "fields": {}
+}

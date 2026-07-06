@@ -1,0 +1,24 @@
+{
+    "name": "Durere -> Mobilitate",
+    "shortName": "Mobilitate",
+    "descriptionTitle": "Impactul durerii asupra mobilității",
+    "description": "Înregistrează cât de mult îți afectează durerea mobilitatea și activitatea fizică. Pe o scală de la 0 (fără impact) la 10 (impact extrem). Mobilitatea limitată din cauza durerii poate duce la probleme de sănătate suplimentare.",
+    "fields": {
+        "value": {
+            "label": "Afectare",
+            "valueLabels": {
+                "0": "Niciuna",
+                "1": "Minimă",
+                "2": "Minimă",
+                "3": "Ușoară",
+                "4": "Moderată",
+                "5": "Moderată",
+                "6": "Moderată",
+                "7": "Severă",
+                "8": "Severă",
+                "9": "Foarte severă",
+                "10": "Extremă"
+            }
+        }
+    }
+}

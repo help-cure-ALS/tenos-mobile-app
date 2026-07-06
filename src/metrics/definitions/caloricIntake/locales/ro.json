@@ -1,0 +1,11 @@
+{
+    "name": "Aport caloric",
+    "shortName": "Calorii",
+    "descriptionTitle": "Despre aportul caloric",
+    "description": "Aportul caloric zilnic este deosebit de important în ALS, deoarece corpul are adesea nevoi energetice crescute din cauza bolii. În același timp, dificultățile de înghițire pot îngreuna alimentația. Un aport caloric adecvat poate influența pozitiv evoluția bolii. Discută valorile țintă cu un medic sau nutriționist.",
+    "fields": {
+        "value": {
+            "label": "Calorii"
+        }
+    }
+}

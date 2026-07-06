@@ -1,0 +1,11 @@
+{
+  "name": "Velocidad del habla",
+  "shortName": "Habla",
+  "descriptionTitle": "Sobre la velocidad del habla",
+  "description": "La velocidad del habla mide cuántas palabras pueden pronunciarse por minuto. En la ELA, la afectación bulbar puede hacer que el habla se vuelva más lenta y poco clara (disartria). La velocidad normal es de unos 120-150 palabras por minuto. La medición regular ayuda a detectar cambios a tiempo.",
+  "fields": {
+    "value": {
+      "label": "Palabras por minuto"
+    }
+  }
+}

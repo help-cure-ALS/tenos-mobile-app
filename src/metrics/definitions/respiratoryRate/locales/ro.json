@@ -1,0 +1,11 @@
+{
+    "name": "Frecvența respiratorie",
+    "shortName": "Frecv. resp.",
+    "descriptionTitle": "Despre frecvența respiratorie",
+    "description": "Frecvența respiratorie este numărul de respirații pe minut. În SLA, funcția respiratorie este un parametru esențial; o frecvență respiratorie de repaus în creștere poate fi un semn timpuriu de slăbiciune a mușchilor respiratori. Această valoare este importată automat din Apple Sănătate sau Health Connect (adesea măsurată în timpul somnului) și afișată ca medie zilnică.",
+    "fields": {
+        "value": {
+            "label": "Frecvența respiratorie"
+        }
+    }
+}

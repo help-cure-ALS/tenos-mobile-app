@@ -1,0 +1,11 @@
+{
+    "name": "Variabilità della frequenza cardiaca",
+    "shortName": "VFC",
+    "descriptionTitle": "Informazioni sulla variabilità della frequenza cardiaca",
+    "description": "La variabilità della frequenza cardiaca (VFC) è la variazione del tempo tra i battiti, in millisecondi, e riflette l'attività del sistema nervoso autonomo. Su iPhone è misurata come SDNN e importata automaticamente da Apple Salute.",
+    "fields": {
+        "value": {
+            "label": "Variabilità della frequenza cardiaca"
+        }
+    }
+}

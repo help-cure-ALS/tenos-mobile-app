@@ -1,0 +1,11 @@
+{
+    "name": "Yürüme mesafesi",
+    "shortName": "6MWT",
+    "descriptionTitle": "6 Dakika Yürüme Testi hakkında",
+    "description": "6 Dakika Yürüme Testi (6MWT), düz zeminde 6 dakikada kat edilebilen mesafeyi ölçer. Fonksiyonel egzersiz kapasitesini değerlendirmek için standart bir testtir. ALS’de yürüme yetisinin ilerlemesini belgelemeye yardımcı olabilir. Yetişkinler için normal değerler 400 ile 700 metre arasındadır.",
+    "fields": {
+        "value": {
+            "label": "Yürüme mesafesi"
+        }
+    }
+}

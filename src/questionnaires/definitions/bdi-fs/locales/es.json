@@ -1,0 +1,97 @@
+{
+  "name": "BDI-FS",
+  "displayName": "Depresión",
+  "shortName": "BDI-FS",
+  "exportTitle": "Depresión – BDI-FS",
+  "description": "El BDI-FS (Beck Depression Inventory - Fast Screen) es un breve cuestionario para evaluar síntomas cognitivos de depresión. Se centra en pensamientos y sentimientos, no en síntomas físicos.",
+  "introText": "Lee cada afirmación y selecciona la respuesta que mejor describa cómo te has sentido durante las últimas dos semanas.",
+  "intro": {
+    "title": "Síntomas cognitivos de depresión",
+    "description": "Este cuestionario evalúa cómo piensas sobre ti mismo/a y sobre tu vida. Responde honestamente a las 7 preguntas: no hay respuestas correctas o incorrectas.",
+    "researchNote": "Gracias por tu sinceridad. Tus respuestas nos ayudan a avanzar en la investigación sobre los efectos asociados a la ELA.",
+    "buttonText": "Empezar cuestionario"
+  },
+  "domains": {
+    "cognitive": "Síntomas cognitivos"
+  },
+  "questions": {
+    "sadness": {
+      "text": "Tristeza",
+      "exportLabel": "Tristeza",
+      "options": {
+        "0": { "label": "No estoy triste", "description": "No estoy triste" },
+        "1": { "label": "A menudo estoy triste", "description": "A menudo estoy triste" },
+        "2": { "label": "Siempre estoy triste", "description": "Estoy constantemente triste" },
+        "3": { "label": "Tristeza insoportable", "description": "Estoy tan triste que no lo soporto" }
+      }
+    },
+    "pessimism": {
+      "text": "Pesimismo",
+      "exportLabel": "Pesimismo",
+      "options": {
+        "0": { "label": "No estoy desanimado/a", "description": "No me siento desanimado/a respecto al futuro" },
+        "1": { "label": "Algo desanimado/a", "description": "Estoy más desanimado/a que antes" },
+        "2": { "label": "No espero mejorar", "description": "No espero que las cosas mejoren" },
+        "3": { "label": "Sin esperanza", "description": "Creo que mi futuro es desesperanzador" }
+      }
+    },
+    "past_failure": {
+      "text": "Sensación de fracaso",
+      "exportLabel": "Fracaso",
+      "options": {
+        "0": { "label": "No me siento un fracaso", "description": "No siento que sea un fracaso" },
+        "1": { "label": "He fracasado más de lo que debería", "description": "He fracasado más de lo que debería" },
+        "2": { "label": "Muchos fracasos", "description": "Mirando atrás veo muchos fracasos" },
+        "3": { "label": "Fracaso total", "description": "Me siento un fracaso total" }
+      }
+    },
+    "loss_of_pleasure": {
+      "text": "Pérdida de placer",
+      "exportLabel": "Pérdida de placer",
+      "options": {
+        "0": { "label": "Placer normal", "description": "Disfruto de las cosas tanto como antes" },
+        "1": { "label": "Menos placer", "description": "No disfruto de las cosas tanto como antes" },
+        "2": { "label": "Poco placer", "description": "Las cosas me producen muy poco placer" },
+        "3": { "label": "Sin placer", "description": "Ya no puedo disfrutar de nada" }
+      }
+    },
+    "self_dislike": {
+      "text": "Desagrado hacia uno mismo",
+      "exportLabel": "Autorechazo",
+      "options": {
+        "0": { "label": "Satisfecho/a conmigo", "description": "Estoy satisfecho/a conmigo mismo/a" },
+        "1": { "label": "Decepcionado/a de mí", "description": "Estoy decepcionado/a conmigo mismo/a" },
+        "2": { "label": "No me gusto", "description": "No me gusto" },
+        "3": { "label": "Me odio", "description": "Me odio" }
+      }
+    },
+    "self_criticalness": {
+      "text": "Autocrítica",
+      "exportLabel": "Autocrítica",
+      "options": {
+        "0": { "label": "No más crítico/a que antes", "description": "No soy más crítico/a conmigo que de costumbre" },
+        "1": { "label": "Más crítico/a que antes", "description": "Soy más crítico/a conmigo que antes" },
+        "2": { "label": "Me critico por todos mis errores", "description": "Me critico por todos mis errores" },
+        "3": { "label": "Me culpo de todo", "description": "Me culpo de todo lo malo" }
+      }
+    },
+    "suicidal_thoughts": {
+      "text": "Pensamientos suicidas",
+      "exportLabel": "Ideas suicidas",
+      "options": {
+        "0": { "label": "Sin pensamientos", "description": "No tengo pensamientos de hacerme daño" },
+        "1": { "label": "Hay pensamientos", "description": "Tengo pensamientos de hacerme daño, pero no lo haría" },
+        "2": { "label": "Me gustaría hacerlo", "description": "Me gustaría hacerme daño" },
+        "3": { "label": "Lo haría", "description": "Me haría daño si tuviera la oportunidad" }
+      }
+    }
+  },
+  "scoring": {
+    "interpretations": [
+      { "label": "Síntomas mínimos", "description": "Tus respuestas sugieren ausencia de síntomas o solo síntomas mínimos." },
+      { "label": "Síntomas leves", "description": "Tus respuestas sugieren síntomas leves." },
+      { "label": "Síntomas moderados", "description": "Tus respuestas sugieren síntomas moderados." },
+      { "label": "Síntomas graves", "description": "Tus respuestas sugieren síntomas graves." }
+    ]
+  }
+}

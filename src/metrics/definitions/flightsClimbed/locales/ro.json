@@ -1,0 +1,11 @@
+{
+    "name": "Etaje urcate",
+    "shortName": "Etaje",
+    "descriptionTitle": "Despre etajele urcate",
+    "description": "Numărul de etaje urcate pe zi reflectă forța și rezistența membrelor inferioare în activitatea zilnică. În SLA, o tendință descendentă poate indica o slăbiciune a picioarelor în progresie. Această valoare este importată automat din Apple Sănătate sau Health Connect; nu este necesară introducerea manuală.",
+    "fields": {
+        "value": {
+            "label": "Etaje urcate"
+        }
+    }
+}

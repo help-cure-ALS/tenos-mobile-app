@@ -1,0 +1,11 @@
+{
+    "name": "Fréquence respiratoire",
+    "shortName": "Fréq. resp.",
+    "descriptionTitle": "À propos de la fréquence respiratoire",
+    "description": "La fréquence respiratoire est le nombre de respirations par minute. Dans la SLA, la fonction respiratoire est un paramètre clé ; une fréquence respiratoire de repos qui augmente peut être un signe précoce de faiblesse des muscles respiratoires. Cette valeur est importée automatiquement depuis Apple Santé ou Health Connect (souvent mesurée pendant le sommeil) et affichée en moyenne journalière.",
+    "fields": {
+        "value": {
+            "label": "Fréquence respiratoire"
+        }
+    }
+}

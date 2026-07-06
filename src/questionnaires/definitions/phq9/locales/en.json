@@ -1,0 +1,118 @@
+{
+    "name": "PHQ-9",
+    "displayName": "Depression Screening",
+    "shortName": "PHQ-9",
+    "exportTitle": "Depression Screening – PHQ-9",
+    "description": "The PHQ-9 (Patient Health Questionnaire) is a validated screening tool for detecting and measuring the severity of depression. It is used worldwide in clinical practice and research.",
+    "introText": "How often have you been bothered by the following problems over the last 2 weeks?",
+    "intro": {
+        "title": "Depression Screening",
+        "description": "This questionnaire is about how you have been feeling over the last two weeks. Answer the 9 questions honestly – there are no right or wrong answers. Your responses help identify possible depressive symptoms.",
+        "buttonText": "Start questionnaire",
+        "researchNote": "Thank you for taking the time. Your responses help us better understand disease progression and advance ALS research."
+    },
+    "domains": {
+        "depression": "Depressive Symptoms"
+    },
+    "questions": {
+        "interest": {
+            "text": "Little interest or pleasure in doing things",
+            "exportLabel": "Interest",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "mood": {
+            "text": "Feeling down, depressed, or hopeless",
+            "exportLabel": "Feeling down",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "sleep": {
+            "text": "Trouble falling or staying asleep, or sleeping too much",
+            "exportLabel": "Sleep",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "energy": {
+            "text": "Feeling tired or having little energy",
+            "exportLabel": "Energy",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "appetite": {
+            "text": "Poor appetite or overeating",
+            "exportLabel": "Appetite",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "self_esteem": {
+            "text": "Feeling bad about yourself – or that you are a failure or have let yourself or your family down",
+            "exportLabel": "Self-esteem",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "concentration": {
+            "text": "Trouble concentrating on things, such as reading the newspaper or watching television",
+            "exportLabel": "Concentration",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "psychomotor": {
+            "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual?",
+            "exportLabel": "Psychomotor",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        },
+        "suicidality": {
+            "text": "Thoughts that you would be better off dead or of hurting yourself in some way",
+            "exportLabel": "Suicidality",
+            "options": {
+                "0": { "label": "Not at all", "description": "Never in the last 2 weeks" },
+                "1": { "label": "Several days", "description": "Less than half the days" },
+                "2": { "label": "More than half the days", "description": "Frequently" },
+                "3": { "label": "Nearly every day", "description": "Almost daily" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Minimal symptoms", "description": "Your responses are within the unremarkable range." },
+            { "label": "Mild symptoms", "description": "Your responses indicate a mild level of distress." },
+            { "label": "Moderate symptoms", "description": "Your responses indicate a noticeable level of distress." },
+            { "label": "Pronounced symptoms", "description": "Your responses suggest an elevated level of distress." },
+            { "label": "Strongly pronounced symptoms", "description": "Your responses suggest a high level of distress." }
+        ]
+    }
+}

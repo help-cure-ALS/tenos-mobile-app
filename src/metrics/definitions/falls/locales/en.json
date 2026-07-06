@@ -1,0 +1,9 @@
+{
+    "name": "Falls",
+    "shortName": "Falls",
+    "descriptionTitle": "About Fall Tracking",
+    "description": "Tracking falls helps assess fall risk and take preventive measures. In ALS, increasing muscle weakness significantly increases the risk of falls. Document each fall to discuss appropriate aids or environmental modifications with your care team.",
+    "fields": {
+        "value": { "label": "Number of Falls" }
+    }
+}

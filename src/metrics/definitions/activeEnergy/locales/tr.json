@@ -1,0 +1,11 @@
+{
+    "name": "Aktif enerji",
+    "shortName": "Aktif enerji",
+    "descriptionTitle": "Aktif enerji hakkında",
+    "description": "Aktif enerji, her gün hareket ve aktiviteyle yakılan kaloridir (dinlenme metabolizması hariç). ALS'de azalan bir eğilim, hareket kabiliyeti değiştikçe azalan fiziksel aktiviteyi yansıtabilir. Bu değer Apple Sağlık veya Health Connect'ten otomatik olarak alınır.",
+    "fields": {
+        "value": {
+            "label": "Aktif enerji"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Force de préhension",
+  "shortName": "Préhension",
+  "descriptionTitle": "À propos de la force de préhension",
+  "description": "La force de préhension mesure la force maximale pouvant être exercée avec la main. Elle est mesurée avec un dynamomètre manuel et constitue un indicateur objectif de la force musculaire. Dans la SLA, elle peut aider à documenter la progression de la faiblesse musculaire. Les valeurs normales varient selon l'âge et le sexe (hommes : 30-55 kg, femmes : 20-35 kg).",
+  "fields": {
+    "left": { "label": "Gauche" },
+    "right": { "label": "Droite" }
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "title": "Note legali",
+    "translationNotice": "Questa è una traduzione dell'impressum tedesco. In caso di discrepanze prevale la versione tedesca.",
+    "sections": {
+        "provider": {
+            "title": "Informazioni ai sensi del § 5 TMG",
+            "organization": "help cure ALS e.V.",
+            "address": "Wredestrasse 21\n90431 Norimberga\nGermania"
+        },
+        "representation": {
+            "title": "Rappresentato da",
+            "content": "Marie Assimidis, membro del consiglio direttivo"
+        },
+        "registration": {
+            "title": "Iscrizione al registro",
+            "content": "Iscritto nel registro delle associazioni",
+            "court": "Tribunale del registro: Amtsgericht Nürnberg",
+            "number": "Numero di registrazione: VR 203250"
+        },
+        "contact": {
+            "title": "Contatto",
+            "email": "team@help-cure-als.org",
+            "website": "https://tenos.app"
+        },
+        "responsible": {
+            "title": "Responsabile dei contenuti ai sensi del § 18 comma 2 MStV",
+            "content": "Harald Hanek\nWredestrasse 21\n90431 Norimberga"
+        },
+        "liability": {
+            "title": "Esclusione di responsabilità",
+            "content": {
+                "title": "Responsabilità per i contenuti",
+                "text": "I contenuti di questa app sono stati creati con la massima cura. Tuttavia non possiamo garantire l'accuratezza, la completezza o l'attualità dei contenuti.",
+                "tmg": "In quanto associazione senza scopo di lucro, siamo responsabili dei nostri contenuti in questa app ai sensi del § 7 comma 1 TMG e delle leggi generali. Tuttavia, ai sensi dei §§ 8-10 TMG, non siamo obbligati a monitorare informazioni di terzi trasmesse o memorizzate né a ricercare circostanze che indichino attività illecite."
+            }
+        },
+        "medicalDisclaimer": {
+            "title": "Esclusione di responsabilità medica",
+            "intro": "Avviso importante: questa app è destinata esclusivamente alla documentazione personale della salute e all'auto-osservazione. I contenuti, i questionari e le funzioni forniti non sostituiscono in alcun modo:",
+            "items": [
+                "Una consulenza medica professionale",
+                "Una diagnosi medica",
+                "Un trattamento medico",
+                "Le raccomandazioni di personale medico qualificato"
+            ],
+            "advice": "In caso di disturbi o domande sulla tua salute, rivolgiti sempre a un medico o ad altro personale sanitario qualificato. Non ignorare mai un consiglio medico professionale sulla base di informazioni tratte da questa app.",
+            "emergency": "In caso di emergenza chiama immediatamente il numero di emergenza 112."
+        },
+        "availability": {
+            "title": "Nessuna garanzia di disponibilità",
+            "content": "Ci impegniamo a mantenere l'app e la sincronizzazione cloud opzionale continuamente disponibili. Tuttavia possono verificarsi interruzioni temporanee, ad esempio per manutenzione o problemi tecnici. Non possiamo garantire una disponibilità ininterrotta."
+        },
+        "links": {
+            "title": "Responsabilità per i link",
+            "content": "Questa app può contenere link a siti web esterni. Non abbiamo alcuna influenza sui contenuti di tali pagine esterne. Il rispettivo fornitore o gestore è sempre responsabile dei contenuti delle pagine collegate."
+        },
+        "copyright": {
+            "title": "Diritto d'autore",
+            "content": "I contenuti e le opere creati da help cure ALS e.V. in questa app sono soggetti al diritto d'autore tedesco. La riproduzione, modifica, distribuzione e qualsiasi uso oltre i limiti del diritto d'autore richiedono il consenso scritto dell'associazione."
+        },
+        "openSource": {
+            "title": "Componenti open source",
+            "content": "Questa app utilizza software open source. Un elenco completo delle librerie utilizzate e delle relative licenze è disponibile nelle impostazioni dell'app alla voce \"Licenze\"."
+        },
+        "about": {
+            "title": "Informazioni sull'associazione",
+            "content": "help cure ALS e.V. è un'associazione senza scopo di lucro impegnata nella ricerca e nella lotta contro la sclerosi laterale amiotrofica (ALS). Sosteniamo progetti di ricerca, promuoviamo lo scambio tra persone colpite e scienza e sviluppiamo strumenti digitali per migliorare la qualità di vita dei pazienti con ALS.",
+            "moreInfo": "Maggiori informazioni sul nostro lavoro sono disponibili sul nostro sito web:"
+        }
+    },
+    "lastUpdated": "Febbraio 2026"
+}

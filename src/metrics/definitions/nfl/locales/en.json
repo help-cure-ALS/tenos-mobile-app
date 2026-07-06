@@ -1,0 +1,9 @@
+{
+    "name": "NFL in Serum",
+    "shortName": "NFL",
+    "descriptionTitle": "About Neurofilament Light Chain",
+    "description": "Neurofilament Light Chain (NFL) is a biomarker released into the blood when nerve cells are damaged. Elevated NFL levels may indicate active neurodegeneration. In ALS, NFL is used for monitoring disease progression and as a prognostic marker.",
+    "fields": {
+        "value": { "label": "NFL" }
+    }
+}

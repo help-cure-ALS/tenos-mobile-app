@@ -1,0 +1,9 @@
+{
+  "name": "Oxygène sanguin",
+  "shortName": "SpO2",
+  "descriptionTitle": "À propos de l'oxygène sanguin",
+  "description": "La saturation en oxygène (SpO2) indique quel pourcentage de l'hémoglobine dans le sang est chargé en oxygène. Dans la SLA, un affaiblissement des muscles respiratoires peut entraîner une baisse du taux d'oxygène, surtout la nuit. Les valeurs normales se situent entre 95 % et 100 %. Un suivi régulier aide à détecter tôt les problèmes respiratoires.",
+  "fields": {
+    "value": { "label": "Saturation en oxygène" }
+  }
+}

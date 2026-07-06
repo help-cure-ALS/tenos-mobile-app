@@ -1,0 +1,11 @@
+{
+  "name": "Sliktijd",
+  "shortName": "Slikken",
+  "descriptionTitle": "Over sliktijd",
+  "description": "Sliktijd meet hoe lang het duurt om een gedefinieerde hoeveelheid (bijv. 150 ml water) door te slikken. Bij ALS kan dysfagie (slikproblemen) voedselinname bemoeilijken en het risico op aspiratie verhogen. Verlengde sliktijd kan wijzen op progressieve bulbaire symptomen. Normale waarden liggen onder 20 seconden voor 150 ml water.",
+  "fields": {
+    "value": {
+      "label": "Sliktijd"
+    }
+  }
+}

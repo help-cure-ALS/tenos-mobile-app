@@ -1,0 +1,14 @@
+{
+  "name": "血压",
+  "shortName": "血压",
+  "descriptionTitle": "关于血压",
+  "description": "血压测量血液在动脉中的压力。它由两个数值表示：收缩压（上压）和舒张压（下压）。定期监测有助于及早发现心血管疾病。",
+  "fields": {
+    "systolic": {
+      "label": "收缩压"
+    },
+    "diastolic": {
+      "label": "舒张压"
+    }
+  }
+}

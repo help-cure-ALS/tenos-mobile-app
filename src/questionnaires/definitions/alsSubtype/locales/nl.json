@@ -1,0 +1,127 @@
+{
+  "name": "ALS-subtype",
+  "displayName": "ALS-subtype",
+  "shortName": "Subtype",
+  "description": "Klinische ALS-fenotypeclassificatie op basis van plaats van symptoombegin, propagatie en motorneuronpatroon.",
+  "domains": {
+    "structured": "ALS-subtype"
+  },
+  "questions": {
+    "payload": {
+      "text": "ALS-subtype",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "onsetCode": {
+      "label": "Plaats van symptoombegin",
+      "info": "De O-as beschrijft de lichaamsregio waar de eerste motorische symptomen begonnen. Tel zwakte of vertraagde/slecht gecoördineerde willekeurige beweging mee, inclusief bulbaire, respiratoire of axiale motorische symptomen. Fasciculaties, spieratrofie en reflextekens alleen tellen niet als symptoombegin.",
+      "options": {
+        "O1": {
+          "label": "Hoofd/bulbair"
+        },
+        "O2d": {
+          "label": "Distale arm"
+        },
+        "O2p": {
+          "label": "Proximale arm"
+        },
+        "O2x": {
+          "label": "Arm onduidelijk"
+        },
+        "O3r": {
+          "label": "Ademhaling"
+        },
+        "O3a": {
+          "label": "Axiaal/romp"
+        },
+        "O4d": {
+          "label": "Distaal been"
+        },
+        "O4p": {
+          "label": "Proximaal been"
+        },
+        "O4x": {
+          "label": "Been onduidelijk"
+        }
+      }
+    },
+    "propagationStatus": {
+      "label": "Propagatie",
+      "info": "De P-as beschrijft verticale verspreiding van motorische symptomen van de beginregio naar een andere lichaamsregio: hoofd, arm, romp of been. Horizontale verspreiding van de ene arm naar de andere of van het ene been naar het andere telt niet. Fasciculaties, atrofie of reflextekens alleen tellen niet als propagatie.",
+      "options": {
+        "P0": {
+          "label": "geen verticale propagatie"
+        },
+        "P1": {
+          "label": "propagatie opgetreden"
+        }
+      }
+    },
+    "propagationPattern": {
+      "label": "Propagatie",
+      "info": "De P-as beschrijft verticale verspreiding van motorische symptomen van de beginregio naar een andere lichaamsregio: hoofd, arm, romp of been. Horizontale verspreiding van de ene arm naar de andere of van het ene been naar het andere telt niet. Fasciculaties, atrofie of reflextekens alleen tellen niet als propagatie.",
+      "options": {
+        "P0n": {
+          "label": "P0(n)",
+          "description": "Geen verticale propagatie; n = maanden tot beoordeling"
+        },
+        "P1n": {
+          "label": "P1(n)",
+          "description": "Verticale propagatie opgetreden; n = maanden tot propagatie"
+        },
+        "P1x": {
+          "label": "P1(x)",
+          "description": "Verticale propagatie opgetreden, timing onduidelijk"
+        }
+      }
+    },
+    "motorNeuronCode": {
+      "label": "Motorneuronfenotype",
+      "info": "De M-as beschrijft de balans tussen tekenen van het bovenste motorneuron (UMN) en onderste motorneuron (LMN). UMN-tekenen omvatten vertraagde of slecht gecoördineerde willekeurige beweging, levendige reflexen, spasticiteit of pseudobulbair affect. LMN-tekenen omvatten zwakte met atrofie, afwezige reflexen of fasciculaties in aangedane spieren. M0 is in balans, M1 is UMN-overwegend, M2 is LMN-overwegend, M3 is gedissocieerd.",
+      "options": {
+        "M0": {
+          "label": "UMN/LMN in balans"
+        },
+        "M1d": {
+          "label": "UMN-dominant"
+        },
+        "M1p": {
+          "label": "zuiver UMN"
+        },
+        "M2d": {
+          "label": "LMN-dominant"
+        },
+        "M2p": {
+          "label": "zuiver LMN"
+        },
+        "M3": {
+          "label": "gedissocieerd"
+        }
+      }
+    },
+    "certainty": {
+      "label": "Status",
+      "info": "Status beschrijft het vertrouwen in de klinische classificatie: voorlopig bij een eerste of nog niet volledig zekere beoordeling, bevestigd wanneer bevindingen voldoende duidelijk zijn, onzeker wanneer criteria niet betrouwbaar te scheiden zijn.",
+      "options": {
+        "preliminary": {
+          "label": "voorlopig"
+        },
+        "confirmed": {
+          "label": "bevestigd"
+        },
+        "uncertain": {
+          "label": "onzeker"
+        }
+      }
+    },
+    "propagationMonths": {
+      "label": "Maanden",
+      "info": "Voor P0(n): maanden van symptoombegin tot de beoordeling waarbij geen verticale propagatie werd gevonden. Voor P1(n): maanden van symptoombegin tot eerste verticale propagatie."
+    },
+    "note": {
+      "label": "Opmerking",
+      "placeholder": "Optionele klinische opmerking"
+    }
+  }
+}

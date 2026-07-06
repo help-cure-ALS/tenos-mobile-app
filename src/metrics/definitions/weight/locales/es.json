@@ -1,0 +1,9 @@
+{
+  "name": "Peso",
+  "shortName": "Peso",
+  "descriptionTitle": "Sobre el peso corporal",
+  "description": "El peso corporal es un indicador importante del estado general de salud. En la ELA, una pérdida de peso involuntaria puede ser signo de dificultades para tragar o de un mayor gasto energético. Un control regular del peso ayuda a tomar medidas de forma temprana.",
+  "fields": {
+    "value": { "label": "Peso" }
+  }
+}

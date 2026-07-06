@@ -1,0 +1,9 @@
+{
+  "name": "Apport calorique",
+  "shortName": "Calories",
+  "descriptionTitle": "À propos de l'apport calorique",
+  "description": "L'apport calorique quotidien est particulièrement important dans la SLA, car l'organisme a souvent des besoins énergétiques accrus à cause de la maladie. En même temps, des troubles de la déglutition peuvent rendre l'alimentation plus difficile. Un apport calorique suffisant peut influencer positivement l'évolution de la maladie. Discutez de vos valeurs cibles avec un médecin ou un nutritionniste.",
+  "fields": {
+    "value": { "label": "Calories" }
+  }
+}

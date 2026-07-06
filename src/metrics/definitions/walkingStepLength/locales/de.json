@@ -1,0 +1,9 @@
+{
+    "name": "Schrittlänge",
+    "shortName": "Schrittlänge",
+    "descriptionTitle": "Über die Schrittlänge",
+    "description": "Die Schrittlänge ist der durchschnittliche Abstand zwischen aufeinanderfolgenden Schritten in Metern. Bei ALS kann eine kürzer werdende Schrittlänge Veränderungen des Gangbilds widerspiegeln. Der Wert wird automatisch aus Apple Health auf dem iPhone importiert.",
+    "fields": {
+        "value": { "label": "Schrittlänge" }
+    }
+}

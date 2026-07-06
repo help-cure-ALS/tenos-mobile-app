@@ -1,0 +1,9 @@
+{
+  "name": "Ingesta calórica",
+  "shortName": "Calorías",
+  "descriptionTitle": "Sobre la ingesta calórica",
+  "description": "La ingesta calórica diaria es especialmente importante en la ELA, ya que el organismo suele tener unas necesidades energéticas aumentadas por la enfermedad. Al mismo tiempo, las dificultades para tragar pueden dificultar la alimentación. Una ingesta calórica adecuada puede influir positivamente en la evolución de la enfermedad. Comenta tus objetivos con un médico o nutricionista.",
+  "fields": {
+    "value": { "label": "Calorías" }
+  }
+}

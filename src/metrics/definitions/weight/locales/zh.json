@@ -1,0 +1,11 @@
+{
+  "name": "体重",
+  "shortName": "体重",
+  "descriptionTitle": "关于体重",
+  "description": "体重是整体健康的重要指标。在ALS中，非意愿体重下降可能是吞咽困难或能量消耗增加的信号。定期监测体重有助于及早采取应对措施。",
+  "fields": {
+    "value": {
+      "label": "体重"
+    }
+  }
+}

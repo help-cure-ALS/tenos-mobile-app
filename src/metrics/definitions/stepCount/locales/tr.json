@@ -1,0 +1,11 @@
+{
+    "name": "Adımlar",
+    "shortName": "Adımlar",
+    "descriptionTitle": "Adım sayısı hakkında",
+    "description": "Günlük adım sayısı, genel günlük aktivitenin basit bir ölçüsüdür. ALS'de azalan bir eğilim, gerileyen hareket kabiliyetini yansıtabilir. Adımlar Apple Sağlık veya Health Connect'ten otomatik olarak alınır; elle giriş gerekmez.",
+    "fields": {
+        "value": {
+            "label": "Adımlar"
+        }
+    }
+}

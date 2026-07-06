@@ -1,0 +1,11 @@
+{
+    "name": "Konuşma hızı",
+    "shortName": "Konuşma",
+    "descriptionTitle": "Konuşma hızı hakkında",
+    "description": "Konuşma hızı dakikada kaç kelime söylenebildiğini ölçer. ALS’de bulber tutulum konuşmanın yavaşlamasına ve peltekleşmesine (dizartri) yol açabilir. Normal konuşma hızı dakikada yaklaşık 120-150 kelimedir. Düzenli ölçüm değişiklikleri erken fark etmeye yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Dakikadaki kelime"
+        }
+    }
+}

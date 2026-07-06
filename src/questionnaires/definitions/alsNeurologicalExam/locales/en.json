@@ -1,0 +1,359 @@
+{
+    "name": "Neurological exam",
+    "displayName": "Neurological exam",
+    "shortName": "Exam",
+    "description": "Clinical documentation of motor UMN and LMN findings over the ALS course.",
+    "domains": {
+        "structured": "Neurological exam"
+    },
+    "questions": {
+        "payload": {
+            "text": "Neurological exam",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "bodyRegion": {
+            "label": "Body region",
+            "info": "Body region where the most relevant neurological signs in this exam are documented.",
+            "options": {
+                "head": {
+                    "label": "Head/bulbar"
+                },
+                "right_arm": {
+                    "label": "Right arm"
+                },
+                "left_arm": {
+                    "label": "Left arm"
+                },
+                "trunk": {
+                    "label": "Trunk/axial"
+                },
+                "right_leg": {
+                    "label": "Right leg"
+                },
+                "left_leg": {
+                    "label": "Left leg"
+                }
+            }
+        },
+        "findingSeverity": {
+            "label": "Severity",
+            "options": {
+                "absent": {
+                    "label": "absent"
+                },
+                "mild": {
+                    "label": "mild"
+                },
+                "moderate": {
+                    "label": "moderate"
+                },
+                "severe": {
+                    "label": "severe"
+                },
+                "not_tested": {
+                    "label": "not tested"
+                }
+            }
+        },
+        "burden": {
+            "label": "Overall burden",
+            "options": {
+                "none": {
+                    "label": "none"
+                },
+                "mild": {
+                    "label": "mild"
+                },
+                "moderate": {
+                    "label": "moderate"
+                },
+                "severe": {
+                    "label": "severe"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Suggested M phenotype",
+            "info": "Clinical classification of the motor neuron pattern for the M axis of the ALS subtype.",
+            "options": {
+                "M0": {
+                    "label": "Balanced UMN/LMN"
+                },
+                "M1d": {
+                    "label": "UMN dominant"
+                },
+                "M1p": {
+                    "label": "pure UMN"
+                },
+                "M2d": {
+                    "label": "LMN dominant"
+                },
+                "M2p": {
+                    "label": "pure LMN"
+                },
+                "M3": {
+                    "label": "dissociated"
+                }
+            }
+        },
+        "lmnWeakness": {
+            "label": "LMN: weakness",
+            "info": "Documents clinical muscle weakness as a sign of lower motor neuron involvement."
+        },
+        "lmnAtrophy": {
+            "label": "LMN: atrophy",
+            "info": "Documents visible or palpable muscle wasting in the examined region."
+        },
+        "lmnFasciculations": {
+            "label": "LMN: fasciculations",
+            "info": "Documents spontaneous muscle twitches as a sign of lower motor neuron irritation or damage."
+        },
+        "umnHyperreflexia": {
+            "label": "UMN: hyperreflexia",
+            "info": "Documents increased deep tendon reflexes as a sign of upper motor neuron involvement."
+        },
+        "umnPathologicalReflexes": {
+            "label": "UMN: pathological reflexes",
+            "info": "Documents pathological reflex signs such as Babinski or Hoffmann signs."
+        },
+        "umnSpasticity": {
+            "label": "UMN: spasticity",
+            "info": "Documents increased muscle tone or spasticity as a sign of upper motor neuron involvement."
+        },
+        "umnSlowedMovement": {
+            "label": "UMN: slowed movement",
+            "info": "Documents slowed or poorly coordinated movement not explained by weakness alone."
+        },
+        "overallUmnBurden": {
+            "label": "Overall UMN burden",
+            "info": "Overall clinical estimate of upper motor neuron sign burden."
+        },
+        "overallLmnBurden": {
+            "label": "Overall LMN burden",
+            "info": "Overall clinical estimate of lower motor neuron sign burden."
+        },
+        "note": {
+            "label": "Internal note",
+            "info": "Optional additional note for the exam. This note is not included in research donations.",
+            "placeholder": "Optional"
+        },
+        "clinicalRegion": {
+            "label": "ALS region",
+            "info": "Standard clinical ALS regions used to assess regional involvement.",
+            "options": {
+                "bulbar": {
+                    "label": "Bulbar"
+                },
+                "cervical": {
+                    "label": "Cervical/arms"
+                },
+                "thoracic": {
+                    "label": "Thoracic/axial"
+                },
+                "lumbosacral": {
+                    "label": "Lumbosacral/legs"
+                }
+            }
+        },
+        "examSide": {
+            "label": "Side",
+            "options": {
+                "left": {
+                    "label": "Left"
+                },
+                "right": {
+                    "label": "Right"
+                }
+            }
+        },
+        "signPresence": {
+            "label": "Finding",
+            "options": {
+                "absent": {
+                    "label": "absent"
+                },
+                "present": {
+                    "label": "present"
+                },
+                "not_tested": {
+                    "label": "not tested"
+                }
+            }
+        },
+        "mrcGrade": {
+            "label": "MRC grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1": {
+                    "label": "1"
+                },
+                "2": {
+                    "label": "2"
+                },
+                "3": {
+                    "label": "3"
+                },
+                "4": {
+                    "label": "4"
+                },
+                "5": {
+                    "label": "5"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "4-": {
+                    "label": "4-"
+                },
+                "not_tested": {
+                    "label": "not tested"
+                }
+            }
+        },
+        "mrcMuscleGroup": {
+            "label": "Muscle group",
+            "options": {
+                "shoulder_abduction": {
+                    "label": "Shoulder abduction"
+                },
+                "elbow_flexion": {
+                    "label": "Elbow flexion"
+                },
+                "elbow_extension": {
+                    "label": "Elbow extension"
+                },
+                "wrist_extension": {
+                    "label": "Wrist extension"
+                },
+                "finger_abduction": {
+                    "label": "Finger abduction"
+                },
+                "hip_flexion": {
+                    "label": "Hip flexion"
+                },
+                "knee_extension": {
+                    "label": "Knee extension"
+                },
+                "ankle_dorsiflexion": {
+                    "label": "Ankle dorsiflexion"
+                },
+                "toe_extension": {
+                    "label": "Toe extension"
+                }
+            }
+        },
+        "reflexName": {
+            "label": "Reflex",
+            "options": {
+                "biceps": {
+                    "label": "Biceps reflex"
+                },
+                "triceps": {
+                    "label": "Triceps reflex"
+                },
+                "brachioradialis": {
+                    "label": "Brachioradialis reflex"
+                },
+                "patellar": {
+                    "label": "Patellar reflex"
+                },
+                "achilles": {
+                    "label": "Achilles reflex"
+                }
+            }
+        },
+        "reflexGrade": {
+            "label": "Reflex grade",
+            "options": {
+                "0": {
+                    "label": "0"
+                },
+                "1+": {
+                    "label": "1+"
+                },
+                "2+": {
+                    "label": "2+"
+                },
+                "3+": {
+                    "label": "3+"
+                },
+                "4+": {
+                    "label": "4+"
+                },
+                "not_tested": {
+                    "label": "not tested"
+                }
+            }
+        },
+        "pathologicalSignName": {
+            "label": "Pyramidal sign",
+            "options": {
+                "babinski": {
+                    "label": "Babinski"
+                },
+                "hoffmann": {
+                    "label": "Hoffmann"
+                },
+                "palmomental": {
+                    "label": "Palmomental reflex"
+                }
+            }
+        },
+        "lmnSignName": {
+            "label": "LMN sign",
+            "options": {
+                "atrophy": {
+                    "label": "Atrophy"
+                },
+                "fasciculations": {
+                    "label": "Fasciculations"
+                }
+            }
+        },
+        "bulbarSignName": {
+            "label": "Bulbar sign",
+            "options": {
+                "tongue_atrophy": {
+                    "label": "Tongue atrophy"
+                },
+                "tongue_fasciculations": {
+                    "label": "Tongue fasciculations"
+                },
+                "dysarthria": {
+                    "label": "Dysarthria"
+                },
+                "dysphagia": {
+                    "label": "Dysphagia"
+                }
+            }
+        },
+        "clinicalRegions": {
+            "label": "Regional involvement",
+            "info": "Records UMN and LMN involvement in the four clinical ALS regions."
+        },
+        "mrcStrength": {
+            "label": "MRC strength exam",
+            "info": "Documents strength on the MRC 0 to 5 scale. Left is always recorded before right."
+        },
+        "reflexes": {
+            "label": "Reflexes",
+            "info": "Documents deep tendon reflexes separately by side, left before right."
+        },
+        "pathologicalSigns": {
+            "label": "Pyramidal tract signs",
+            "info": "Documents pathological reflex signs suggesting UMN involvement."
+        },
+        "lmnSideSigns": {
+            "label": "LMN signs",
+            "info": "Documents atrophy and fasciculations separately by side."
+        },
+        "bulbarSigns": {
+            "label": "Bulbar signs",
+            "info": "Documents typical bulbar signs such as tongue atrophy, tongue fasciculations, dysarthria, and dysphagia."
+        }
+    }
+}

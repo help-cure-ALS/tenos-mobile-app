@@ -1,0 +1,9 @@
+{
+    "name": "NFL im Liquor",
+    "shortName": "NFL (Liquor)",
+    "descriptionTitle": "Über NFL im Liquor",
+    "description": "Neurofilament Light Chain (NFL) im Liquor (Gehirn-Rückenmarks-Flüssigkeit) ist ein sensibler Biomarker für Nervenzellschäden. Die Liquor-Messung liefert oft frühere und genauere Werte als die Blutmessung. Bei ALS sind erhöhte NFL-Werte im Liquor mit einem schnelleren Krankheitsverlauf assoziiert. Die Entnahme erfolgt durch eine Lumbalpunktion.",
+    "fields": {
+        "value": { "label": "NFL" }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Ağrı düzeyi",
+    "shortName": "Ağrı",
+    "descriptionTitle": "Ağrı düzeyi hakkında",
+    "description": "Ağrı düzeyi sözel tanımlayıcı skala (VRS) ile değerlendirilir. ALS’de ağrı kas gerginliği, kramplar, hareketsizlik veya bası yaralarından kaynaklanabilir. Düzenli dokümantasyon ağrı kalıplarını belirlemeye ve tedaviyi ayarlamaya yardımcı olur.",
+    "fields": {
+        "value": {
+            "label": "Ağrı düzeyi",
+            "valueLabels": {
+                "0": "Ağrı yok",
+                "1": "Hafif ağrı",
+                "2": "Orta ağrı",
+                "3": "Şiddetli ağrı",
+                "4": "Çok şiddetli ağrı"
+            }
+        }
+    }
+}

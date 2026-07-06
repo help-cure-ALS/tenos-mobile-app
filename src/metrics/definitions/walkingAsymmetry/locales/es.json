@@ -1,0 +1,11 @@
+{
+    "name": "Asimetría al caminar",
+    "shortName": "Asimetría",
+    "descriptionTitle": "Acerca de la asimetría al caminar",
+    "description": "La asimetría al caminar es el porcentaje de tiempo en que un pie se mueve a un ritmo diferente al otro. Un valor más alto indica una marcha más desigual. En la ELA, puede ayudar a seguir una debilidad asimétrica de las piernas. Este valor se importa automáticamente desde Apple Salud.",
+    "fields": {
+        "value": {
+            "label": "Asimetría al caminar"
+        }
+    }
+}

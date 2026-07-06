@@ -1,0 +1,11 @@
+{
+    "name": "Asymétrie de la marche",
+    "shortName": "Asymétrie",
+    "descriptionTitle": "À propos de l'asymétrie de la marche",
+    "description": "L'asymétrie de la marche est le pourcentage de temps pendant lequel un pied avance à une allure différente de l'autre. Une valeur plus élevée signifie une démarche plus inégale. Dans la SLA, cela peut aider à suivre une faiblesse asymétrique des jambes. Cette valeur est importée automatiquement depuis Apple Santé.",
+    "fields": {
+        "value": {
+            "label": "Asymétrie de la marche"
+        }
+    }
+}

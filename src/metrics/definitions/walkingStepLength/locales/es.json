@@ -1,0 +1,11 @@
+{
+    "name": "Longitud de paso",
+    "shortName": "Long. paso",
+    "descriptionTitle": "Acerca de la longitud de paso",
+    "description": "La longitud de paso es la distancia media entre pasos consecutivos, en metros. En la ELA, un acortamiento de la longitud de paso puede reflejar cambios en la marcha. Este valor se importa automáticamente desde Apple Salud.",
+    "fields": {
+        "value": {
+            "label": "Longitud de paso"
+        }
+    }
+}

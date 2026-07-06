@@ -1,0 +1,18 @@
+{
+  "name": "Nível de dor",
+  "shortName": "Dor",
+  "descriptionTitle": "Sobre o nível de dor",
+  "description": "O nível de dor é avaliado usando uma escala descritiva verbal (VRS). Na ELA, a dor pode resultar de tensão muscular, cãibras, imobilidade ou lesões por pressão. A documentação regular ajuda a identificar padrões de dor e ajustar o tratamento.",
+  "fields": {
+    "value": {
+      "label": "Nível de dor",
+      "valueLabels": {
+        "0": "Sem dor",
+        "1": "Dor leve",
+        "2": "Dor moderada",
+        "3": "Dor grave",
+        "4": "Dor muito grave"
+      }
+    }
+  }
+}

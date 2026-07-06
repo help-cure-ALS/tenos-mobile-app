@@ -1,0 +1,11 @@
+{
+  "name": "Kurcze mięśni",
+  "shortName": "Kurcze",
+  "descriptionTitle": "O kurczach mięśni",
+  "description": "Kurcze mięśni to bolesne, utrzymujące się i mimowolne skurcze mięśni. Różnią się od fascykulacji (krótkich drżeń), które są zapisywane oddzielnie. Kurcze są częste w ALS, szczególnie w nocy, i mogą zaburzać sen. Zapisuj liczbę kurczów dziennie, aby rozpoznać wzorce.",
+  "fields": {
+    "value": {
+      "label": "Liczba kurczów"
+    }
+  }
+}

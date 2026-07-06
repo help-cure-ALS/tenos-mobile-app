@@ -1,0 +1,127 @@
+{
+    "name": "Subtip ALS",
+    "displayName": "Subtip ALS",
+    "shortName": "Subtip",
+    "description": "Clasificarea clinică a fenotipului ALS după locul debutului simptomelor, propagare și tiparul neuronilor motori.",
+    "domains": {
+        "structured": "Subtip ALS"
+    },
+    "questions": {
+        "payload": {
+            "text": "Subtip ALS",
+            "options": {}
+        }
+    },
+    "structuredFields": {
+        "onsetCode": {
+            "label": "Locul debutului simptomelor",
+            "info": "Axa O descrie regiunea corpului în care au început primele simptome motorii. Se iau în considerare slăbiciunea sau mișcarea voluntară încetinită/slab coordonată, inclusiv simptomele motorii bulbare, respiratorii sau axiale. Fasciculațiile, atrofia musculară și semnele reflexe singure nu sunt considerate debut simptomatic.",
+            "options": {
+                "O1": {
+                    "label": "Cap/bulbar"
+                },
+                "O2d": {
+                    "label": "Braț distal"
+                },
+                "O2p": {
+                    "label": "Braț proximal"
+                },
+                "O2x": {
+                    "label": "Braț neclar"
+                },
+                "O3r": {
+                    "label": "Respirație"
+                },
+                "O3a": {
+                    "label": "Axial/trunchi"
+                },
+                "O4d": {
+                    "label": "Picior distal"
+                },
+                "O4p": {
+                    "label": "Picior proximal"
+                },
+                "O4x": {
+                    "label": "Picior neclar"
+                }
+            }
+        },
+        "propagationStatus": {
+            "label": "Propagare",
+            "info": "Axa P descrie răspândirea verticală a simptomelor motorii din regiunea de debut către o altă regiune corporală: cap, braț, trunchi sau picior. Răspândirea orizontală de la un braț la celălalt sau de la un picior la celălalt nu contează. Fasciculațiile, atrofia sau semnele reflexe singure nu sunt considerate propagare.",
+            "options": {
+                "P0": {
+                    "label": "fără propagare verticală"
+                },
+                "P1": {
+                    "label": "propagare apărută"
+                }
+            }
+        },
+        "propagationPattern": {
+            "label": "Propagare",
+            "info": "Axa P descrie răspândirea verticală a simptomelor motorii din regiunea de debut către o altă regiune corporală: cap, braț, trunchi sau picior. Răspândirea orizontală de la un braț la celălalt sau de la un picior la celălalt nu contează. Fasciculațiile, atrofia sau semnele reflexe singure nu sunt considerate propagare.",
+            "options": {
+                "P0n": {
+                    "label": "P0(n)",
+                    "description": "Fără propagare verticală; n = luni până la evaluare"
+                },
+                "P1n": {
+                    "label": "P1(n)",
+                    "description": "Propagare verticală apărută; n = luni până la propagare"
+                },
+                "P1x": {
+                    "label": "P1(x)",
+                    "description": "Propagarea verticală a apărut, momentul este neclar"
+                }
+            }
+        },
+        "motorNeuronCode": {
+            "label": "Fenotipul neuronilor motori",
+            "info": "Axa M descrie echilibrul semnelor de neuron motor superior (UMN) și neuron motor inferior (LMN). Semnele UMN includ mișcare voluntară încetinită sau slab coordonată, reflexe vii, spasticitate sau afect pseudobulbar. Semnele LMN includ slăbiciune cu atrofie, reflexe absente sau fasciculații în mușchii afectați. M0 este echilibrat, M1 este predominant UMN, M2 este predominant LMN, M3 este disociat.",
+            "options": {
+                "M0": {
+                    "label": "UMN/LMN echilibrat"
+                },
+                "M1d": {
+                    "label": "dominant UMN"
+                },
+                "M1p": {
+                    "label": "UMN pur"
+                },
+                "M2d": {
+                    "label": "dominant LMN"
+                },
+                "M2p": {
+                    "label": "LMN pur"
+                },
+                "M3": {
+                    "label": "disociat"
+                }
+            }
+        },
+        "certainty": {
+            "label": "Stare",
+            "info": "Starea descrie gradul de încredere în clasificarea clinică: preliminară pentru o evaluare inițială sau încă neconfirmată complet, confirmată când constatările sunt suficient de clare, incertă când criteriile nu pot fi separate în mod fiabil.",
+            "options": {
+                "preliminary": {
+                    "label": "preliminar"
+                },
+                "confirmed": {
+                    "label": "confirmat"
+                },
+                "uncertain": {
+                    "label": "incert"
+                }
+            }
+        },
+        "propagationMonths": {
+            "label": "Luni",
+            "info": "Pentru P0(n): luni de la debutul simptomelor până la evaluarea la care nu s-a constatat propagare verticală. Pentru P1(n): luni de la debutul simptomelor până la prima propagare verticală."
+        },
+        "note": {
+            "label": "Comentariu",
+            "placeholder": "Comentariu clinic opțional"
+        }
+    }
+}

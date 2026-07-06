@@ -1,0 +1,11 @@
+{
+    "name": "Vitesse en descente d'escalier",
+    "shortName": "Descente",
+    "descriptionTitle": "À propos de la vitesse en descente d'escalier",
+    "description": "La vitesse en descente d'escalier indique la rapidité avec laquelle vous descendez les escaliers, en mètres par seconde. Descendre les escaliers sollicite fortement l'équilibre et le contrôle des jambes ; une tendance à la baisse peut donc être un signe précoce de déclin de la fonction des membres inférieurs dans la SLA. Cette valeur est importée automatiquement depuis Apple Santé.",
+    "fields": {
+        "value": {
+            "label": "Vitesse en descente d'escalier"
+        }
+    }
+}

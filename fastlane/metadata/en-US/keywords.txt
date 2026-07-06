@@ -1,0 +1,1 @@
+ALS,amyotrophic lateral sclerosis,motor neuron disease,Lou Gehrig's disease,ALSFRS,symptoms,care

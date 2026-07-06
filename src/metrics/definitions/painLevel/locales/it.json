@@ -1,0 +1,18 @@
+{
+  "name": "Livello di dolore",
+  "shortName": "Dolore",
+  "descriptionTitle": "Informazioni sul livello di dolore",
+  "description": "Il livello di dolore viene valutato con una scala descrittiva verbale (VRS). Nella SLA, il dolore può derivare da tensione muscolare, crampi, immobilità o lesioni da pressione. La documentazione regolare aiuta a identificare schemi di dolore e ad adattare il trattamento.",
+  "fields": {
+    "value": {
+      "label": "Livello di dolore",
+      "valueLabels": {
+        "0": "Nessun dolore",
+        "1": "Dolore lieve",
+        "2": "Dolore moderato",
+        "3": "Dolore grave",
+        "4": "Dolore molto grave"
+      }
+    }
+  }
+}

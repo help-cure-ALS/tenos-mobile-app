@@ -1,0 +1,9 @@
+{
+  "name": "Distancia caminada",
+  "shortName": "TM6",
+  "descriptionTitle": "Sobre la prueba de marcha de 6 minutos",
+  "description": "La prueba de marcha de 6 minutos (TM6) mide la distancia que puede recorrerse en 6 minutos sobre una superficie llana. Es una prueba estandarizada para evaluar la capacidad funcional de ejercicio. En la ELA, puede ayudar a documentar la progresión de la capacidad de marcha. Los valores normales en adultos se sitúan entre 400 y 700 metros.",
+  "fields": {
+    "value": { "label": "Distancia caminada" }
+  }
+}

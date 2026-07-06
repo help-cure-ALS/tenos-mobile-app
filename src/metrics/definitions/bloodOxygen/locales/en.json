@@ -1,0 +1,9 @@
+{
+    "name": "Blood Oxygen",
+    "shortName": "SpO2",
+    "descriptionTitle": "About Blood Oxygen",
+    "description": "Oxygen saturation (SpO2) shows what percentage of hemoglobin in the blood is loaded with oxygen. In ALS, weakening of the respiratory muscles can lead to lower oxygen levels, especially at night. Normal values are between 95% and 100%. Regular monitoring helps to detect breathing problems early.",
+    "fields": {
+        "value": { "label": "Oxygen Saturation" }
+    }
+}

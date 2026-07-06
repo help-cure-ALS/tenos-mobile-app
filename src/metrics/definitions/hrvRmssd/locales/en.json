@@ -1,0 +1,9 @@
+{
+    "name": "Heart Rate Variability",
+    "shortName": "HRV",
+    "descriptionTitle": "About Heart Rate Variability",
+    "description": "Heart rate variability (HRV) is the variation in time between heartbeats, in milliseconds, and reflects autonomic nervous system activity. On Android it is measured as RMSSD and imported automatically from Health Connect.",
+    "fields": {
+        "value": { "label": "Heart Rate Variability" }
+    }
+}

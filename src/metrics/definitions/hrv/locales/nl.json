@@ -1,0 +1,11 @@
+{
+    "name": "Hartritmevariabiliteit",
+    "shortName": "HRV",
+    "descriptionTitle": "Over de hartritmevariabiliteit",
+    "description": "De hartritmevariabiliteit (HRV) is de variatie in tijd tussen hartslagen, in milliseconden, en weerspiegelt de activiteit van het autonome zenuwstelsel. Op de iPhone wordt deze als SDNN gemeten en automatisch geïmporteerd uit Apple Gezondheid.",
+    "fields": {
+        "value": {
+            "label": "Hartritmevariabiliteit"
+        }
+    }
+}

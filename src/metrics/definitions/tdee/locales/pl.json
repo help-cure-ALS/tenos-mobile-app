@@ -1,0 +1,7 @@
+{
+  "name": "Zapotrzebowanie energetyczne",
+  "shortName": "TDEE",
+  "descriptionTitle": "O zapotrzebowaniu energetycznym",
+  "description": "Całkowity dzienny wydatek energetyczny (TDEE) jest obliczany za pomocą wzoru Kasarskisa, opracowanego specjalnie dla pacjentów z ALS. Obliczenie uwzględnia podstawową przemianę materii, poziom aktywności (na podstawie ALSFRS-6) oraz korekty specyficzne dla ALS.",
+  "fields": {}
+}

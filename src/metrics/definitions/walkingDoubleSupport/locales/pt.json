@@ -1,0 +1,11 @@
+{
+    "name": "Tempo de duplo apoio",
+    "shortName": "Duplo apoio",
+    "descriptionTitle": "Sobre o tempo de duplo apoio",
+    "description": "O tempo de duplo apoio é a percentagem do ciclo de marcha em que ambos os pés estão no chão. Um valor mais alto indica frequentemente uma marcha mais cautelosa e menos estável e um maior risco de quedas. Na ELA, pode ajudar a acompanhar mudanças no equilíbrio. Este valor é importado automaticamente do Apple Saúde.",
+    "fields": {
+        "value": {
+            "label": "Tempo de duplo apoio"
+        }
+    }
+}

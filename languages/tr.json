@@ -1,0 +1,14 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "TENOS",
+    "CFBundleName": "TENOS",
+    "NSCameraUsageDescription": "TENOS, cihaz eşleştirme ve klinik doğrulama için QR kodlarını taramak üzere kameraya erişim ister.",
+    "NSFaceIDUsageDescription": "Korunan verilerini açmak için TENOS'un Face ID kullanmasına izin ver.",
+    "NSHealthShareUsageDescription": "TENOS, ölçümler ve onayladığın ilaçlar dahil seçili sağlık verilerini Apple Health'ten okuyabilir ve şifrelenmiş hasta kaydına aktarabilir.",
+    "NSHealthUpdateUsageDescription": "TENOS Apple Health'e sağlık verisi yazmaz. Bu izin açıklaması, TENOS'un onaylanmış sağlık verilerini içe aktarmak için HealthKit kullanması nedeniyle eklenmiştir.",
+    "NSMicrophoneUsageDescription": "Ses kaydeden özellikleri kullandığında TENOS'un mikrofona erişmesi gerekir."
+  },
+  "android": {
+    "app_name": "TENOS"
+  }
+}

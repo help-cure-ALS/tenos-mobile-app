@@ -1,0 +1,17 @@
+{
+    "name": "İntihar düşüncesi (PHQ-9 madde 9)",
+    "shortName": "İntihar düşüncesi",
+    "descriptionTitle": "İntihar düşüncesi hakkında",
+    "description": "Bu metrik PHQ-9 anketinin 9. sorusuna verilen yanıtı kaydeder: \"Ölmüş olsan daha iyi olacağını veya kendine zarar vermeyi düşünmek\". 0’dan büyük değerler özel klinik dikkat gerektirir. Bu metrik erken fark etme içindir ve her zaman klinik bağlamda değerlendirilmelidir.",
+    "fields": {
+        "value": {
+            "label": "İntihar düşüncesi",
+            "valueLabels": {
+                "0": "Hiç",
+                "1": "Birkaç gün",
+                "2": "Günlerin yarısından fazlasında",
+                "3": "Neredeyse her gün"
+            }
+        }
+    }
+}

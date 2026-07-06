@@ -1,0 +1,24 @@
+{
+  "name": "Fatigue",
+  "shortName": "Fatigue",
+  "descriptionTitle": "À propos de la fatigue",
+  "description": "La fatigue est évaluée sur une échelle de 0 (aucune fatigue) à 10 (épuisement extrême). Dans la SLA, la fatigue est un symptôme fréquent, lié à une dépense énergétique accrue pour les activités quotidiennes, à des problèmes respiratoires ou à des troubles du sommeil. La documentation aide à identifier les schémas et à adapter l'organisation de la journée.",
+  "fields": {
+    "value": {
+      "label": "Fatigue",
+      "valueLabels": {
+        "0": "Aucune",
+        "1": "Légère",
+        "2": "Légère",
+        "3": "Légère",
+        "4": "Modérée",
+        "5": "Modérée",
+        "6": "Modérée",
+        "7": "Sévère",
+        "8": "Sévère",
+        "9": "Sévère",
+        "10": "Extrême"
+      }
+    }
+  }
+}

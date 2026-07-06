@@ -1,0 +1,17 @@
+{
+  "name": "Sensibilità al freddo",
+  "shortName": "Freddo",
+  "descriptionTitle": "Informazioni sulla sensibilità al freddo",
+  "description": "La sensibilità al freddo è un sintomo comune nella SLA. Può essere causata da ridotta massa muscolare, disfunzione autonomica o ridotta attività fisica. Il monitoraggio aiuta a identificare schemi ricorrenti e ad adattare misure come abbigliamento più caldo o temperatura della stanza. (0 = Nessuna, 1 = Lieve, 2 = Moderata, 3 = Grave)",
+  "fields": {
+    "value": {
+      "label": "Sensibilità al freddo",
+      "valueLabels": {
+        "0": "Nessuna",
+        "1": "Lieve",
+        "2": "Moderata",
+        "3": "Grave"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "NFL en suero",
+  "shortName": "NFL",
+  "descriptionTitle": "Sobre la cadena ligera de neurofilamentos",
+  "description": "La cadena ligera de neurofilamentos (NFL) es un biomarcador que se libera a la sangre cuando las células nerviosas están dañadas. Los niveles elevados de NFL pueden indicar una neurodegeneración activa. En la ELA, la NFL se utiliza para seguir la progresión de la enfermedad y como marcador pronóstico.",
+  "fields": {
+    "value": { "label": "NFL" }
+  }
+}

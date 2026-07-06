@@ -1,0 +1,9 @@
+{
+  "name": "Chutes",
+  "shortName": "Chutes",
+  "descriptionTitle": "À propos du suivi des chutes",
+  "description": "Le suivi des chutes aide à évaluer le risque de chute et à prendre des mesures préventives. Dans la SLA, l'augmentation de la faiblesse musculaire accroît nettement le risque de chute. Documentez chaque chute afin de discuter d'aides appropriées ou d'adaptations de l'environnement avec votre équipe soignante.",
+  "fields": {
+    "value": { "label": "Nombre de chutes" }
+  }
+}

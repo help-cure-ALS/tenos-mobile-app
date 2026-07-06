@@ -1,0 +1,9 @@
+{
+  "name": "Poids",
+  "shortName": "Poids",
+  "descriptionTitle": "À propos du poids corporel",
+  "description": "Le poids corporel est un indicateur important de l'état de santé général. Dans la SLA, une perte de poids involontaire peut être un signe de difficultés de déglutition ou d'une dépense énergétique accrue. Un suivi régulier du poids aide à prendre des mesures précoces.",
+  "fields": {
+    "value": { "label": "Poids" }
+  }
+}

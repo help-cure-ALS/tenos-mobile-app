@@ -1,0 +1,11 @@
+{
+    "name": "步长",
+    "shortName": "步长",
+    "descriptionTitle": "关于步长",
+    "description": "步长是连续步伐之间的平均距离，以米表示。在ALS中，步长缩短可能反映步态的变化。该数值会自动从Apple健康导入。",
+    "fields": {
+        "value": {
+            "label": "步长"
+        }
+    }
+}

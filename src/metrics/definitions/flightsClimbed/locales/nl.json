@@ -1,0 +1,11 @@
+{
+    "name": "Beklommen trappen",
+    "shortName": "Trappen",
+    "descriptionTitle": "Over beklommen trappen",
+    "description": "Het aantal beklommen verdiepingen per dag weerspiegelt de kracht en het uithoudingsvermogen van de benen bij dagelijkse activiteit. Bij ALS kan een dalende trend wijzen op toenemende beenzwakte. Deze waarde wordt automatisch geïmporteerd uit Apple Gezondheid of Health Connect; handmatige invoer is niet nodig.",
+    "fields": {
+        "value": {
+            "label": "Beklommen trappen"
+        }
+    }
+}

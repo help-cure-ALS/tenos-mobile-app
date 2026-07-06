@@ -1,0 +1,11 @@
+{
+    "name": "Yutma süresi",
+    "shortName": "Yutma",
+    "descriptionTitle": "Yutma süresi hakkında",
+    "description": "Yutma süresi, tanımlı bir miktarı (örn. 150 ml su) yutmanın ne kadar sürdüğünü ölçer. ALS’de disfaji (yutma güçlüğü) besin alımını zorlaştırabilir ve aspirasyon riskini artırabilir. Uzamış yutma süresi ilerleyici bulber belirtilere işaret edebilir. 150 ml su için normal değerler 20 saniyenin altındadır.",
+    "fields": {
+        "value": {
+            "label": "Yutma süresi"
+        }
+    }
+}

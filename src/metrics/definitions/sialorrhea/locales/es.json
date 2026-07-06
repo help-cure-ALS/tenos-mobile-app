@@ -1,0 +1,11 @@
+{
+  "name": "Sialorrea",
+  "shortName": "Saliva",
+  "descriptionTitle": "Sobre la sialorrea",
+  "description": "El exceso de salivación (sialorrea) es un síntoma frecuente en la ELA, causado por problemas de deglución más que por una mayor producción de saliva. Registra la intensidad en una escala de 0 (normal) a 10 (muy intensa). La documentación ayuda a valorar la eficacia de los tratamientos.",
+  "fields": {
+    "value": {
+      "label": "Severidad"
+    }
+  }
+}

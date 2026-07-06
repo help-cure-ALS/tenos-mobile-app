@@ -1,0 +1,127 @@
+{
+  "name": "ALS亚型",
+  "displayName": "ALS亚型",
+  "shortName": "亚型",
+  "description": "按症状起病部位、进展和运动神经元模式进行的ALS临床表型分类。",
+  "domains": {
+    "structured": "ALS亚型"
+  },
+  "questions": {
+    "payload": {
+      "text": "ALS亚型",
+      "options": {}
+    }
+  },
+  "structuredFields": {
+    "onsetCode": {
+      "label": "症状起病部位",
+      "info": "O轴描述最早运动症状开始的身体区域。包括无力或随意运动迟缓/协调不良，也包括延髓、呼吸或轴性运动症状。单纯肌束颤动、肌肉萎缩和反射体征不计为症状起病。",
+      "options": {
+        "O1": {
+          "label": "头部/延髓"
+        },
+        "O2d": {
+          "label": "远端上肢"
+        },
+        "O2p": {
+          "label": "近端上肢"
+        },
+        "O2x": {
+          "label": "上肢不明确"
+        },
+        "O3r": {
+          "label": "呼吸"
+        },
+        "O3a": {
+          "label": "轴性/躯干"
+        },
+        "O4d": {
+          "label": "远端下肢"
+        },
+        "O4p": {
+          "label": "近端下肢"
+        },
+        "O4x": {
+          "label": "下肢不明确"
+        }
+      }
+    },
+    "propagationStatus": {
+      "label": "进展",
+      "info": "P轴描述运动症状从起病区域向另一个身体区域（头部、上肢、躯干或下肢）的垂直扩散。从一侧上肢到另一侧上肢，或一侧下肢到另一侧下肢的水平扩散不计入。单纯肌束颤动、萎缩或反射体征不计为进展。",
+      "options": {
+        "P0": {
+          "label": "无垂直进展"
+        },
+        "P1": {
+          "label": "已发生进展"
+        }
+      }
+    },
+    "propagationPattern": {
+      "label": "进展",
+      "info": "P轴描述运动症状从起病区域向另一个身体区域（头部、上肢、躯干或下肢）的垂直扩散。从一侧上肢到另一侧上肢，或一侧下肢到另一侧下肢的水平扩散不计入。单纯肌束颤动、萎缩或反射体征不计为进展。",
+      "options": {
+        "P0n": {
+          "label": "P0(n)",
+          "description": "无垂直进展；n = 至评估的月数"
+        },
+        "P1n": {
+          "label": "P1(n)",
+          "description": "已发生垂直进展；n = 至进展的月数"
+        },
+        "P1x": {
+          "label": "P1(x)",
+          "description": "已发生垂直进展，时间不明确"
+        }
+      }
+    },
+    "motorNeuronCode": {
+      "label": "运动神经元表型",
+      "info": "M轴描述上运动神经元（UMN）和下运动神经元（LMN）体征的平衡。UMN体征包括随意运动迟缓或协调不良、反射活跃、痉挛状态或假性延髓情感。LMN体征包括伴萎缩的无力、反射消失或受累肌肉肌束颤动。M0为平衡，M1为UMN占优，M2为LMN占优，M3为分离型。",
+      "options": {
+        "M0": {
+          "label": "UMN/LMN平衡"
+        },
+        "M1d": {
+          "label": "UMN占优"
+        },
+        "M1p": {
+          "label": "纯UMN"
+        },
+        "M2d": {
+          "label": "LMN占优"
+        },
+        "M2p": {
+          "label": "纯LMN"
+        },
+        "M3": {
+          "label": "分离型"
+        }
+      }
+    },
+    "certainty": {
+      "label": "状态",
+      "info": "状态描述临床分类的信心：初始或尚未完全确定的评估为初步；发现足够清楚时为确认；标准无法可靠区分时为不确定。",
+      "options": {
+        "preliminary": {
+          "label": "初步"
+        },
+        "confirmed": {
+          "label": "已确认"
+        },
+        "uncertain": {
+          "label": "不确定"
+        }
+      }
+    },
+    "propagationMonths": {
+      "label": "月数",
+      "info": "P0(n)：从症状起病到未发现垂直进展的评估之间的月数。P1(n)：从症状起病到首次垂直进展之间的月数。"
+    },
+    "note": {
+      "label": "备注",
+      "placeholder": "可选临床备注"
+    }
+  }
+}

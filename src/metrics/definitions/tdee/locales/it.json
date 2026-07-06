@@ -1,0 +1,7 @@
+{
+  "name": "Fabbisogno energetico",
+  "shortName": "TDEE",
+  "descriptionTitle": "Informazioni sul fabbisogno energetico",
+  "description": "Il dispendio energetico giornaliero totale (TDEE) viene calcolato con la formula di Kasarskis, sviluppata specificamente per pazienti con SLA. Il calcolo considera il metabolismo basale, il livello di attività (basato su ALSFRS-6) e adattamenti specifici per la SLA.",
+  "fields": {}
+}

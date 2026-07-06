@@ -1,0 +1,24 @@
+{
+  "name": "Dolor -> Movilidad",
+  "shortName": "Movilidad",
+  "descriptionTitle": "Impacto del dolor en la movilidad",
+  "description": "Registra cuánto afecta el dolor a tu movilidad y a tu actividad física. Escala de 0 (sin impacto) a 10 (impacto extremo). La movilidad limitada por el dolor puede provocar otros problemas de salud.",
+  "fields": {
+    "value": {
+      "label": "Afectación",
+      "valueLabels": {
+        "0": "Ninguna",
+        "1": "Mínima",
+        "2": "Mínima",
+        "3": "Leve",
+        "4": "Moderada",
+        "5": "Moderada",
+        "6": "Moderada",
+        "7": "Grave",
+        "8": "Grave",
+        "9": "Muy grave",
+        "10": "Extrema"
+      }
+    }
+  }
+}

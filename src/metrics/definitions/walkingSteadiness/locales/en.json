@@ -1,0 +1,9 @@
+{
+    "name": "Walking Steadiness",
+    "shortName": "Steadiness",
+    "descriptionTitle": "About Walking Steadiness",
+    "description": "Apple Walking Steadiness estimates how stable and balanced your walking is, as a percentage. A downward trend indicates a higher risk of falling. In ALS, this can help track changes in gait and balance. This value is imported automatically from Apple Health on iPhone.",
+    "fields": {
+        "value": { "label": "Walking Steadiness" }
+    }
+}

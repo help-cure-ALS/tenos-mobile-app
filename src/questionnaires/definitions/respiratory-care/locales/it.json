@@ -1,0 +1,92 @@
+{
+    "name": "Assistenza respiratoria",
+    "displayName": "Assistenza respiratoria",
+    "shortName": "Assistenza respiratoria",
+    "exportTitle": "Assistenza respiratoria",
+    "description": "Registra i sintomi che possono indicare cambiamenti nel supporto respiratorio. Risposte regolari aiutano a rilevare i cambiamenti precocemente.",
+    "introText": "Le seguenti domande riguardano come si è sentito/a negli ultimi giorni.",
+    "intro": {
+        "title": "Assistenza respiratoria",
+        "description": "Questo questionario registra i sintomi legati al supporto respiratorio con 6 brevi domande.",
+        "researchNote": "Risposte regolari aiutano a rilevare i cambiamenti precocemente e a discuterli con il team di cura.",
+        "buttonText": "Inizia il questionario"
+    },
+    "domains": {
+        "symptoms": "Sintomi"
+    },
+    "questions": {
+        "morning_headaches": {
+            "text": "Mi sveglio con mal di testa.",
+            "exportLabel": "Cefalea",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        },
+        "dizziness": {
+            "text": "Ho le vertigini, soprattutto dopo il risveglio.",
+            "exportLabel": "Vertigini",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        },
+        "daytime_sleepiness": {
+            "text": "Mi sento insolitamente stanco/a o sonnolento/a durante il giorno.",
+            "exportLabel": "Sonnolenza",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        },
+        "concentration": {
+            "text": "Faccio fatica a concentrarmi.",
+            "exportLabel": "Concentrazione",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        },
+        "sleep_quality": {
+            "text": "Mi sveglio di notte o dormo in modo agitato.",
+            "exportLabel": "Sonno",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        },
+        "daytime_breathlessness": {
+            "text": "Mi manca l'aria durante il giorno, ad es. parlando o a riposo.",
+            "exportLabel": "Dispnea",
+            "options": {
+                "0": { "label": "Per niente" },
+                "1": { "label": "Raramente" },
+                "2": { "label": "A volte" },
+                "3": { "label": "Spesso" },
+                "4": { "label": "Quasi sempre" }
+            }
+        }
+    },
+    "scoring": {
+        "interpretations": [
+            { "label": "Pochi sintomi", "description": "Le sue risposte indicano poco o nessun disagio." },
+            { "label": "Sintomi rilevanti", "description": "Le sue risposte indicano un disagio rilevante." },
+            { "label": "Sintomi significativi", "description": "Le sue risposte indicano un disagio significativo." }
+        ]
+    }
+}

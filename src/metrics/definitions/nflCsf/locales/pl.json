@@ -1,0 +1,11 @@
+{
+  "name": "NFL w płynie mózgowo-rdzeniowym",
+  "shortName": "NFL (PMR)",
+  "descriptionTitle": "O NFL w płynie mózgowo-rdzeniowym",
+  "description": "Lekki łańcuch neurofilamentów (NFL) w płynie mózgowo-rdzeniowym (PMR) jest czułym biomarkerem uszkodzenia komórek nerwowych. Pomiar w PMR często dostarcza wcześniejszych i dokładniejszych wartości niż pomiar we krwi. W ALS podwyższone poziomy NFL w PMR wiążą się z szybszym postępem choroby. Próbkę pobiera się przez nakłucie lędźwiowe.",
+  "fields": {
+    "value": {
+      "label": "NFL"
+    }
+  }
+}

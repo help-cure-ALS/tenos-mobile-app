@@ -1,0 +1,11 @@
+{
+  "name": "Cãibras musculares",
+  "shortName": "Cãibras",
+  "descriptionTitle": "Sobre cãibras musculares",
+  "description": "As cãibras musculares são contrações musculares dolorosas, sustentadas e involuntárias. Diferem das fasciculações (pequenas contrações breves), registadas separadamente. As cãibras são comuns na ELA, especialmente à noite, e podem perturbar o sono. Registe o número de cãibras por dia para identificar padrões.",
+  "fields": {
+    "value": {
+      "label": "Número de cãibras"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "步行稳定性",
+    "shortName": "稳定性",
+    "descriptionTitle": "关于步行稳定性",
+    "description": "Apple步行稳定性以百分比估算您行走的稳定与平衡程度。下降趋势提示跌倒风险升高。在ALS中，这有助于追踪步态和平衡的变化。该数值会自动从Apple健康导入。",
+    "fields": {
+        "value": {
+            "label": "步行稳定性"
+        }
+    }
+}

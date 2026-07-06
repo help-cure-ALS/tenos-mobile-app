@@ -1,0 +1,11 @@
+{
+    "name": "Sialorrhea",
+    "shortName": "Saliva",
+    "descriptionTitle": "About Sialorrhea",
+    "description": "Excessive saliva flow (sialorrhea) is a common symptom in ALS, caused by swallowing difficulties rather than increased saliva production. Record the severity on a scale from 0 (normal) to 10 (very severe). Documentation helps to assess the effectiveness of treatments.",
+    "fields": {
+        "value": {
+            "label": "Severity"
+        }
+    }
+}
