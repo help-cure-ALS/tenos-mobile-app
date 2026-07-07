@@ -71,14 +71,24 @@ export function StudiesProvider({ children }: { children: React.ReactNode }) {
 
         try {
             const client = await getCareClient();
-            const resources = await client.searchResources('ResearchStudy', {
-                _count: '1000',
-                _sort: '-date',
-            });
+            // Medplum caps _count at 1000 per request — paginate with
+            // _offset so registries with more studies load completely.
+            // Guard at 20 pages (20k studies).
+            const PAGE_SIZE = 1000;
+            const resources: ResearchStudy[] = [];
+            for (let offset = 0; offset < 20000; offset += PAGE_SIZE) {
+                const page = await client.searchResources('ResearchStudy', {
+                    _count: String(PAGE_SIZE),
+                    _offset: String(offset),
+                    _sort: '-date',
+                });
+                resources.push(...(page as ResearchStudy[]));
+                if (page.length < PAGE_SIZE) break;
+            }
 
             if (!mounted.current) return;
 
-            setRawStudies(resources as ResearchStudy[]);
+            setRawStudies(resources);
             hasLoaded.current = true;
 
             // Fetch clinic-study assignments if patient is verified
