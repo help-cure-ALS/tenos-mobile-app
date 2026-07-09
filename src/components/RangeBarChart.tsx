@@ -1,11 +1,11 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { View, StyleSheet, Text, useColorScheme, useWindowDimensions } from 'react-native';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { View, StyleSheet, Text, useColorScheme, useWindowDimensions, Pressable, type GestureResponderEvent } from 'react-native';
 import { BarChart as GiftedBarChart } from 'react-native-gifted-charts';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useTranslation } from 'react-i18next';
 import { AppColors, useAppTheme } from "@/src/theme";
 import type { MetricDefinition, MetricEntry } from '@/src/metrics/types';
-import { fmtTime, fmtWeekdayShort, fmtMonthShort, fmtMonthYear, fmtDate } from '@/src/lib/formatDate';
+import { fmtTime, fmtWeekdayShort, fmtMonthShort, fmtMonthYear, fmtDate, fmtDateRangeLong } from '@/src/lib/formatDate';
 
 type TimeRange = 'day' | 'week' | 'month' | 'all';
 
@@ -192,10 +192,6 @@ export function RangeBarChart({
         .map(e => e.values[primaryFieldKey])
         .filter((v): v is number => v !== undefined);
 
-    const average = allValues.length > 0
-        ? allValues.reduce((a, b) => a + b, 0) / allValues.length
-        : 0;
-
     // ── Y-axis calculation ─────────────────────────────────────────
     const getNiceStepSize = (range: number, targetSteps: number = 4): number => {
         if (range === 0) return 10;
@@ -240,12 +236,14 @@ export function RangeBarChart({
     const chartRange = niceMax - niceMin;
     const chartHeight = 160; // px
 
-    // ── Bar sizing ─────────────────────────────────────────────────
+    // ── Bar sizing (Apple Health style: fixed thin bars, dynamic spacing) ──
     const barCount = aggregatedData.length;
     const initialSp = 20;
     const endSp = 20;
     // Available width: screen − container padding (15×2) − chartWrapper offset (10) − y-axis (~45)
     const availableWidth = screenWidth - 30 - 10 - 45 - initialSp - endSp;
+
+    const BAR_WIDTH = 5;
 
     // "Alle" → fixed bar size with horizontal scroll; T/W/M → fill width
     const scrollable = timeRange === 'all' && barCount > 15;
@@ -253,17 +251,19 @@ export function RangeBarChart({
     let barSpacing: number;
 
     if (scrollable) {
-        // Fixed comfortable size for scrollable view
-        barWidth = 5;
+        barWidth = BAR_WIDTH;
         barSpacing = 6;
     } else {
-        // Dynamic — distribute evenly across the full chart width
-        const slotWidth = barCount > 0 ? availableWidth / barCount : availableWidth;
-        barWidth = Math.max(3, Math.min(14, Math.round(slotWidth * 0.4)));
-        barSpacing = Math.max(2, Math.round(slotWidth - barWidth));
+        barWidth = BAR_WIDTH;
+        barSpacing = barCount > 0
+            ? Math.min(12, Math.max(3, Math.round((availableWidth / barCount) - BAR_WIDTH)))
+            : 12;
     }
 
     const barRadius = barWidth / 2; // pill / capsule shape (fully rounded)
+
+    // Slot width for the touch overlay (bar + spacing)
+    const slotWidth = barWidth + barSpacing;
 
     /**
      * Minimum visible bar height for single-value periods (min === max).
@@ -355,9 +355,35 @@ export function RangeBarChart({
     const latestValue = latestEntry ? latestEntry.values[primaryFieldKey] : null;
 
     const selectedAgg = selectedIndex !== null ? aggregatedData[selectedIndex] : null;
-    const showAverage = definition?.chart?.showAverage !== false && allValues.length > 1;
+    const showRange = definition?.chart?.showRange === true;
+    const showLastMeasurement = definition?.chart?.showLastMeasurement === true;
 
     const referenceLine = showReferenceLine ? definition.chart.referenceLine : undefined;
+
+    // ── Range header data ─────────────────────────────────────────
+    const rangeMin = hasData ? Math.min(...allValues) : null;
+    const rangeMax = hasData ? Math.max(...allValues) : null;
+    const periodStartDate = sortedEntries.length > 0 ? sortedEntries[0].date : null;
+    const periodEndDate = sortedEntries.length > 0 ? sortedEntries[sortedEntries.length - 1].date : null;
+
+    // ── Touch overlay ─────────────────────────────────────────────
+    // Covers the entire chart area so taps in the spacing between
+    // bars are forwarded to the nearest bar (Apple Health style).
+    // Only used for non-scrollable views (scrollable would block scrolling).
+    const chartRef = useRef<View>(null);
+    const handleOverlayPress = useCallback((e: GestureResponderEvent) => {
+        const touchX = e.nativeEvent.locationX;
+        // Y-axis default width is ~35px, then initialSpacing
+        const chartStartX = 35 + initialSp;
+        const relativeX = touchX - chartStartX;
+        if (relativeX < 0) return;
+        // Offset by half the spacing so the slot boundary falls
+        // in the middle of the gap between bars, not at the bar edge.
+        const index = Math.floor((relativeX + barSpacing / 2) / slotWidth);
+        if (index >= 0 && index < barCount) {
+            setSelectedIndex(prev => prev === index ? null : index);
+        }
+    }, [slotWidth, barCount, initialSp]);
 
     const primaryField = definition.fields.find(f => f.key === primaryFieldKey);
 
@@ -405,71 +431,115 @@ export function RangeBarChart({
                 />
             </View>
 
-            {/* Current / Selected Value */}
-            <Text style={styles.label}>{t('common.current').toUpperCase()}</Text>
-            <View style={styles.valueHeader}>
-                <Text style={styles.currentValue}>{headerValueText}</Text>
-                {unit && headerValueText !== '–' && (
-                    <Text style={styles.unit}>{unit}</Text>
-                )}
-            </View>
-            {headerDate && <Text style={styles.dateText}>{headerDate}</Text>}
-
-            {/* Average */}
-            {showAverage && (
-                <View style={styles.averageSection}>
-                    <Text style={styles.label}>{t('metric.average').toUpperCase()}</Text>
-                    <View style={styles.averageRow}>
-                        <Text style={styles.averageValue}>{formatValue(average)}</Text>
-                        {unit && <Text style={styles.averageUnit}>{unit}</Text>}
+            {/* Header: Range mode or Current mode */}
+            {showRange && selectedIndex === null ? (
+                <>
+                    <Text style={styles.label}>{t('metric.valueRange').toUpperCase()}</Text>
+                    <View style={styles.valueHeader}>
+                        <Text style={styles.currentValue}>
+                            {rangeMin != null && rangeMax != null
+                                ? `${formatValue(rangeMin)}–${formatValue(rangeMax)}`
+                                : '–'}
+                        </Text>
+                        {unit && rangeMin != null && <Text style={styles.unit}>{unit}</Text>}
                     </View>
-                </View>
+                    {periodStartDate && periodEndDate && (
+                        <Text style={styles.dateText}>
+                            {fmtDateRangeLong(periodStartDate, periodEndDate, useGerman)}
+                        </Text>
+                    )}
+                </>
+            ) : (
+                <>
+                    <Text style={styles.label}>{t('common.current').toUpperCase()}</Text>
+                    <View style={styles.valueHeader}>
+                        <Text style={styles.currentValue}>{headerValueText}</Text>
+                        {unit && headerValueText !== '–' && (
+                            <Text style={styles.unit}>{unit}</Text>
+                        )}
+                    </View>
+                    {headerDate && <Text style={styles.dateText}>{headerDate}</Text>}
+                </>
             )}
 
             {/* Chart */}
-            <View style={styles.chartWrapper}>
+            <View style={styles.chartWrapper} ref={chartRef}>
                 {hasData ? (
-                    <GiftedBarChart
-                        key={`range-${timeRange}-${stackData.length}`}
-                        stackData={stackData}
-                        barWidth={barWidth}
-                        spacing={barSpacing}
-                        height={chartHeight}
-                        initialSpacing={initialSp}
-                        endSpacing={endSp}
-                        disableScroll={!scrollable}
-                        scrollToEnd={scrollable}
-                        scrollAnimation={false}
-                        noOfSections={numSections}
-                        maxValue={chartRange}
-                        yAxisTextStyle={styles.axisText}
-                        xAxisLabelTextStyle={styles.axisText}
-                        xAxisColor="transparent"
-                        yAxisColor={colors.border}
-                        yAxisThickness={StyleSheet.hairlineWidth}
-                        hideRules
-                        yAxisTextNumberOfLines={1}
-                        formatYLabel={(label: string) => {
-                            const val = parseFloat(label) + niceMin;
-                            return Number.isInteger(val) ? val.toString() : val.toFixed(0);
-                        }}
-                        showReferenceLine1={!!referenceLine}
-                        referenceLine1Position={referenceLine ? referenceLine.value - niceMin : undefined}
-                        referenceLine1Config={{
-                            color: colors.textHint,
-                            dashWidth: 4,
-                            dashGap: 4,
-                            thickness: 1,
-                            labelText: referenceLine?.label,
-                            labelTextStyle: styles.referenceLineLabel,
-                        }}
-                    />
+                    <>
+                        <GiftedBarChart
+                            key={`range-${timeRange}-${stackData.length}`}
+                            stackData={stackData}
+                            barWidth={barWidth}
+                            spacing={barSpacing}
+                            height={chartHeight}
+                            initialSpacing={initialSp}
+                            endSpacing={endSp}
+                            disableScroll={!scrollable}
+                            scrollToEnd={scrollable}
+                            scrollAnimation={false}
+                            noOfSections={numSections}
+                            maxValue={chartRange}
+                            yAxisTextStyle={styles.axisText}
+                            xAxisLabelTextStyle={styles.axisText}
+                            xAxisColor="transparent"
+                            yAxisColor={colors.border}
+                            yAxisThickness={StyleSheet.hairlineWidth}
+                            hideRules
+                            yAxisTextNumberOfLines={1}
+                            formatYLabel={(label: string) => {
+                                const val = parseFloat(label) + niceMin;
+                                return Number.isInteger(val) ? val.toString() : val.toFixed(0);
+                            }}
+                            showReferenceLine1={!!referenceLine}
+                            referenceLine1Position={referenceLine ? referenceLine.value - niceMin : undefined}
+                            referenceLine1Config={{
+                                color: colors.textHint,
+                                dashWidth: 4,
+                                dashGap: 4,
+                                thickness: 1,
+                                labelText: referenceLine?.label,
+                                labelTextStyle: styles.referenceLineLabel,
+                            }}
+                        />
+                        {/* Transparent touch overlay — expands tap targets to full slot width.
+                            Only for non-scrollable views; in scrollable mode it would block scroll gestures. */}
+                        {!scrollable && (
+                            <Pressable
+                                style={StyleSheet.absoluteFill}
+                                onPress={handleOverlayPress}
+                            />
+                        )}
+                    </>
                 ) : (
                     <View style={styles.emptyChart}>
                         <Text style={styles.emptyChartText}>{t('lineChart.noData')}</Text>
                     </View>
                 )}
             </View>
+
+            {/* Last Measurement */}
+            {showLastMeasurement && latestEntry && (() => {
+                const lastIdx = aggregatedData.length - 1;
+                const isLastSelected = selectedIndex === lastIdx;
+                return (
+                    <Pressable
+                        style={[
+                            styles.lastMeasurementRow,
+                            isLastSelected && { backgroundColor: colors.primary },
+                        ]}
+                        onPress={() => setSelectedIndex(prev => prev === lastIdx ? null : lastIdx)}
+                    >
+                        <Text style={[styles.lastMeasurementLabel, isLastSelected && { color: '#fff' }]}>
+                            {t('common.lastRecorded')}: {fmtTime(latestEntry.date)}
+                        </Text>
+                        <Text style={[styles.lastMeasurementValue, isLastSelected && { color: '#fff' }]}>
+                            {latestValue != null
+                                ? `${formatValue(latestValue)}${unit ? unit : ''}`
+                                : '–'}
+                        </Text>
+                    </Pressable>
+                );
+            })()}
         </View>
     );
 }
@@ -514,24 +584,6 @@ const createStyles = (colors: AppColors) =>
             marginTop: -4,
             marginBottom: 8,
         },
-        averageSection: {
-            marginBottom: 8,
-        },
-        averageRow: {
-            flexDirection: 'row',
-            alignItems: 'baseline',
-            gap: 4,
-            marginTop: 2,
-        },
-        averageValue: {
-            fontSize: 20,
-            fontWeight: '600',
-            color: colors.textSecondary,
-        },
-        averageUnit: {
-            fontSize: 14,
-            color: colors.textHint,
-        },
         chartWrapper: {
             marginLeft: -10,
         },
@@ -551,5 +603,24 @@ const createStyles = (colors: AppColors) =>
         emptyChartText: {
             fontSize: 14,
             color: colors.textHint,
+        },
+        lastMeasurementRow: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            backgroundColor: colors.background,
+            borderRadius: 10,
+            paddingHorizontal: 14,
+            paddingVertical: 12,
+            marginTop: 12,
+        },
+        lastMeasurementLabel: {
+            fontSize: 15,
+            color: colors.text,
+        },
+        lastMeasurementValue: {
+            fontSize: 15,
+            fontWeight: '600',
+            color: colors.text,
         },
     });

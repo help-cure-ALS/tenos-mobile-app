@@ -50,6 +50,8 @@ export const base: MetricBaseDefinition = {
     },
     chart: {
         type: 'range',
+        showRange: true,
+        showLastMeasurement: true,
         yAxis: {
             min: 85,
             max: 100,

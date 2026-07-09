@@ -27,6 +27,8 @@ export const base: MetricBaseDefinition = {
     defaultUnit: '%',
     chart: {
         type: 'range',
+        showRange: true,
+        showLastMeasurement: true,
         yAxis: {
             min: 80,
             max: 100,

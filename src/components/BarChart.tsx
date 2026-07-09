@@ -1,11 +1,11 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { View, StyleSheet, Text, useColorScheme } from 'react-native';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { View, StyleSheet, Text, useColorScheme, Pressable, useWindowDimensions, type GestureResponderEvent } from 'react-native';
 import { BarChart as GiftedBarChart } from 'react-native-gifted-charts';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useTranslation } from 'react-i18next';
 import { AppColors, useAppTheme } from "@/src/theme";
 import type { MetricDefinition, MetricEntry } from '@/src/metrics/types';
-import { fmtTime, fmtWeekdayShort, fmtDayMonthShort, fmtMonthYear, fmtDate } from '@/src/lib/formatDate';
+import { fmtTime, fmtWeekdayShort, fmtDayMonthShort, fmtMonthYear, fmtDate, fmtDateRangeLong } from '@/src/lib/formatDate';
 
 type TimeRange = 'day' | 'week' | 'month' | 'all';
 
@@ -141,9 +141,6 @@ export function BarChart({
 
     const hasData = primaryValues.length > 0;
 
-    const average = hasData
-        ? primaryValues.reduce((a, b) => a + b, 0) / primaryValues.length
-        : 0;
     const dataMaxValue = hasData ? Math.max(...primaryValues) : 100;
 
     const yAxisConfig = definition.chart.yAxis;
@@ -182,9 +179,26 @@ export function BarChart({
     const labelStep = barCount > 25 ? 5 : barCount > 15 ? 3 : barCount > 7 ? 2 : 1;
 
     // ── Bar sizing ─────────────────────────────────────────────────
-    const barWidth = barCount > 25 ? 4 : barCount > 15 ? 6 : barCount > 7 ? 10 : 16;
-    const barSpacing = barCount > 25 ? 3 : barCount > 15 ? 5 : barCount > 7 ? 8 : 12;
-    const barRadius = barWidth > 10 ? 3 : 2;
+    // Fixed thin bar width (Apple Health style), dynamic spacing fills the rest.
+    const { width: screenWidth } = useWindowDimensions();
+    const initialSp = 20;
+    const endSp = 20;
+    // Available width: screen − container padding (15×2) − chartWrapper offset (10) − y-axis (~45)
+    const availableWidth = screenWidth - 30 - 10 - 45 - initialSp - endSp;
+
+    const BAR_WIDTH = 5;
+    const barWidth = BAR_WIDTH;
+    const barSpacing = barCount > 0
+        ? Math.min(12, Math.max(3, Math.round((availableWidth / barCount) - BAR_WIDTH)))
+        : 12;
+    const barRadius = 2;
+
+    // Slot width for the touch overlay (bar + spacing)
+    const slotWidth = barWidth + barSpacing;
+
+    // In scrollable mode the overlay can't track scroll offset,
+    // so we fall back to the bars' own onPress handlers.
+    const scrollable = barCount * slotWidth > availableWidth;
 
     // ── Bar data ───────────────────────────────────────────────────
     const barData = validEntries.map((entry, index) => ({
@@ -196,13 +210,32 @@ export function BarChart({
         onPress: () => setSelectedIndex(prev => prev === index ? null : index),
     }));
 
+    // ── Touch overlay ─────────────────────────────────────────────
+    // Covers the entire chart area so taps in the spacing between
+    // bars are forwarded to the nearest bar (Apple Health style).
+    const chartRef = useRef<View>(null);
+    const handleOverlayPress = useCallback((e: GestureResponderEvent) => {
+        const touchX = e.nativeEvent.locationX;
+        // Y-axis default width is ~35px, then initialSpacing
+        const chartStartX = 35 + initialSp;
+        const relativeX = touchX - chartStartX;
+        if (relativeX < 0) return;
+        // Offset by half the spacing so the slot boundary falls
+        // in the middle of the gap between bars, not at the bar edge.
+        const index = Math.floor((relativeX + barSpacing / 2) / slotWidth);
+        if (index >= 0 && index < barCount) {
+            setSelectedIndex(prev => prev === index ? null : index);
+        }
+    }, [slotWidth, barCount, initialSp]);
+
     // ── Display value (header updates on bar selection) ────────────
     const latestEntry = validEntries.length > 0 ? validEntries[validEntries.length - 1] : null;
     const displayEntry = selectedIndex !== null ? validEntries[selectedIndex] : latestEntry;
     const displayValue = displayEntry ? extractValue(displayEntry, primaryFieldKey) : null;
 
     const primaryField = definition.fields.find(f => f.key === primaryFieldKey);
-    const showAverage = definition?.chart?.showAverage !== false && primaryValues.length > 1;
+    const showRange = definition?.chart?.showRange === true;
+    const showLastMeasurement = definition?.chart?.showLastMeasurement === true;
 
     const referenceLine = showReferenceLine ? definition.chart.referenceLine : undefined;
 
@@ -215,6 +248,12 @@ export function BarChart({
     };
 
     const formatDateDisplay = (date: Date): string => fmtDate(date, useGerman);
+
+    // ── Range header data ─────────────────────────────────────────
+    const rangeMin = hasData ? Math.min(...primaryValues) : null;
+    const rangeMax = hasData ? Math.max(...primaryValues) : null;
+    const periodStart = validEntries.length > 0 ? validEntries[0].date : null;
+    const periodEnd = validEntries.length > 0 ? validEntries[validEntries.length - 1].date : null;
 
     if (!definition) return null;
 
@@ -235,70 +274,115 @@ export function BarChart({
                 />
             </View>
 
-            {/* Current / Selected Value */}
-            <Text style={styles.label}>{t('common.current').toUpperCase()}</Text>
-            <View style={styles.valueHeader}>
-                <Text style={styles.currentValue}>
-                    {displayValue != null ? formatValue(displayValue) : '–'}
-                </Text>
-                {unit && displayValue != null && <Text style={styles.unit}>{unit}</Text>}
-            </View>
-            {displayEntry && (
-                <Text style={styles.dateText}>{formatDateDisplay(displayEntry.date)}</Text>
-            )}
-
-            {/* Average */}
-            {showAverage && (
-                <View style={styles.averageSection}>
-                    <Text style={styles.label}>{t('metric.average').toUpperCase()}</Text>
-                    <View style={styles.averageRow}>
-                        <Text style={styles.averageValue}>{formatValue(average)}</Text>
-                        {unit && <Text style={styles.averageUnit}>{unit}</Text>}
+            {/* Header: Range mode or Current mode */}
+            {showRange && selectedIndex === null ? (
+                <>
+                    <Text style={styles.label}>{t('metric.valueRange').toUpperCase()}</Text>
+                    <View style={styles.valueHeader}>
+                        <Text style={styles.currentValue}>
+                            {rangeMin != null && rangeMax != null
+                                ? `${formatValue(rangeMin)}–${formatValue(rangeMax)}`
+                                : '–'}
+                        </Text>
+                        {unit && rangeMin != null && <Text style={styles.unit}>{unit}</Text>}
                     </View>
-                </View>
+                    {periodStart && periodEnd && (
+                        <Text style={styles.dateText}>
+                            {fmtDateRangeLong(periodStart, periodEnd, useGerman)}
+                        </Text>
+                    )}
+                </>
+            ) : (
+                <>
+                    <Text style={styles.label}>{t('common.current').toUpperCase()}</Text>
+                    <View style={styles.valueHeader}>
+                        <Text style={styles.currentValue}>
+                            {displayValue != null ? formatValue(displayValue) : '–'}
+                        </Text>
+                        {unit && displayValue != null && <Text style={styles.unit}>{unit}</Text>}
+                    </View>
+                    {displayEntry && (
+                        <Text style={styles.dateText}>{formatDateDisplay(displayEntry.date)}</Text>
+                    )}
+                </>
             )}
 
             {/* Chart */}
-            <View style={styles.chartWrapper}>
+            <View style={styles.chartWrapper} ref={chartRef}>
                 {hasData ? (
-                    <GiftedBarChart
-                        key={`bar-${timeRange}-${barData.length}`}
-                        data={barData}
-                        barWidth={barWidth}
-                        spacing={barSpacing}
-                        height={160}
-                        initialSpacing={20}
-                        endSpacing={20}
-                        scrollToEnd
-                        scrollAnimation={false}
-                        noOfSections={numSections}
-                        maxValue={niceMax - niceMin}
-                        yAxisOffset={niceMin}
-                        yAxisTextStyle={styles.axisText}
-                        xAxisLabelTextStyle={styles.axisText}
-                        xAxisColor="transparent"
-                        yAxisColor={colors.border}
-                        yAxisThickness={StyleSheet.hairlineWidth}
-                        hideRules
-                        yAxisTextNumberOfLines={1}
-                        formatYLabel={(label: string) => parseFloat(label).toFixed(0)}
-                        showReferenceLine1={!!referenceLine}
-                        referenceLine1Position={referenceLine ? referenceLine.value - niceMin : undefined}
-                        referenceLine1Config={{
-                            color: colors.textHint,
-                            dashWidth: 4,
-                            dashGap: 4,
-                            thickness: 1,
-                            labelText: referenceLine?.label,
-                            labelTextStyle: styles.referenceLineLabel,
-                        }}
-                    />
+                    <>
+                        <GiftedBarChart
+                            key={`bar-${timeRange}-${barData.length}`}
+                            data={barData}
+                            barWidth={barWidth}
+                            spacing={barSpacing}
+                            height={160}
+                            initialSpacing={initialSp}
+                            endSpacing={endSp}
+                            scrollToEnd
+                            scrollAnimation={false}
+                            noOfSections={numSections}
+                            maxValue={niceMax - niceMin}
+                            yAxisOffset={niceMin}
+                            yAxisTextStyle={styles.axisText}
+                            xAxisLabelTextStyle={styles.axisText}
+                            xAxisColor="transparent"
+                            yAxisColor={colors.border}
+                            yAxisThickness={StyleSheet.hairlineWidth}
+                            hideRules
+                            yAxisTextNumberOfLines={1}
+                            formatYLabel={(label: string) => parseFloat(label).toFixed(0)}
+                            showReferenceLine1={!!referenceLine}
+                            referenceLine1Position={referenceLine ? referenceLine.value - niceMin : undefined}
+                            referenceLine1Config={{
+                                color: colors.textHint,
+                                dashWidth: 4,
+                                dashGap: 4,
+                                thickness: 1,
+                                labelText: referenceLine?.label,
+                                labelTextStyle: styles.referenceLineLabel,
+                            }}
+                        />
+                        {/* Transparent touch overlay — expands tap targets to full slot width.
+                            Only for non-scrollable views; in scrollable mode it would block
+                            scroll gestures and can't track the scroll offset. */}
+                        {!scrollable && (
+                            <Pressable
+                                style={StyleSheet.absoluteFill}
+                                onPress={handleOverlayPress}
+                            />
+                        )}
+                    </>
                 ) : (
                     <View style={styles.emptyChart}>
                         <Text style={styles.emptyChartText}>{t('lineChart.noData')}</Text>
                     </View>
                 )}
             </View>
+
+            {/* Last Measurement */}
+            {showLastMeasurement && latestEntry && (() => {
+                const lastIdx = validEntries.length - 1;
+                const isLastSelected = selectedIndex === lastIdx;
+                return (
+                    <Pressable
+                        style={[
+                            styles.lastMeasurementRow,
+                            isLastSelected && { backgroundColor: colors.primary },
+                        ]}
+                        onPress={() => setSelectedIndex(prev => prev === lastIdx ? null : lastIdx)}
+                    >
+                        <Text style={[styles.lastMeasurementLabel, isLastSelected && { color: '#fff' }]}>
+                            {t('common.lastRecorded')}: {fmtTime(latestEntry.date)}
+                        </Text>
+                        <Text style={[styles.lastMeasurementValue, isLastSelected && { color: '#fff' }]}>
+                            {extractValue(latestEntry, primaryFieldKey) != null
+                                ? `${formatValue(extractValue(latestEntry, primaryFieldKey)!)}${unit ? unit : ''}`
+                                : '–'}
+                        </Text>
+                    </Pressable>
+                );
+            })()}
         </View>
     );
 }
@@ -343,24 +427,6 @@ const createStyles = (colors: AppColors) =>
             marginTop: -4,
             marginBottom: 8,
         },
-        averageSection: {
-            marginBottom: 8,
-        },
-        averageRow: {
-            flexDirection: 'row',
-            alignItems: 'baseline',
-            gap: 4,
-            marginTop: 2,
-        },
-        averageValue: {
-            fontSize: 20,
-            fontWeight: '600',
-            color: colors.textSecondary,
-        },
-        averageUnit: {
-            fontSize: 14,
-            color: colors.textHint,
-        },
         chartWrapper: {
             marginLeft: -10,
         },
@@ -380,5 +446,24 @@ const createStyles = (colors: AppColors) =>
         emptyChartText: {
             fontSize: 14,
             color: colors.textHint,
+        },
+        lastMeasurementRow: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            backgroundColor: colors.background,
+            borderRadius: 10,
+            paddingHorizontal: 14,
+            paddingVertical: 12,
+            marginTop: 12,
+        },
+        lastMeasurementLabel: {
+            fontSize: 15,
+            color: colors.text,
+        },
+        lastMeasurementValue: {
+            fontSize: 15,
+            fontWeight: '600',
+            color: colors.text,
         },
     });

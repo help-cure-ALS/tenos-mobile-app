@@ -128,3 +128,33 @@ export function fmtDateTimeSec(date: Date, isDE: boolean): string {
 export function fmtTime(date: Date): string {
     return `${pad2(date.getHours())}:${pad2(date.getMinutes())}`;
 }
+
+/** "9. Juni – 9. Juli 2026" / "Jun 9 – Jul 9, 2026" */
+export function fmtDateRangeLong(from: Date, to: Date, isDE: boolean): string {
+    const months = isDE ? MONTHS_LONG_DE : MONTHS_LONG_EN;
+    const fromMonth = months[from.getMonth()];
+    const toMonth = months[to.getMonth()];
+    const toYear = to.getFullYear();
+
+    if (isDE) {
+        // Same month & year → "9. – 15. Juni 2026"
+        if (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) {
+            return `${from.getDate()}. – ${to.getDate()}. ${toMonth} ${toYear}`;
+        }
+        // Same year → "9. Juni – 9. Juli 2026"
+        if (from.getFullYear() === toYear) {
+            return `${from.getDate()}. ${fromMonth} – ${to.getDate()}. ${toMonth} ${toYear}`;
+        }
+        // Different year → "9. Dezember 2025 – 9. Januar 2026"
+        return `${from.getDate()}. ${fromMonth} ${from.getFullYear()} – ${to.getDate()}. ${toMonth} ${toYear}`;
+    }
+
+    // English
+    if (from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear()) {
+        return `${fromMonth} ${from.getDate()} – ${to.getDate()}, ${toYear}`;
+    }
+    if (from.getFullYear() === toYear) {
+        return `${fromMonth} ${from.getDate()} – ${toMonth} ${to.getDate()}, ${toYear}`;
+    }
+    return `${fromMonth} ${from.getDate()}, ${from.getFullYear()} – ${toMonth} ${to.getDate()}, ${toYear}`;
+}

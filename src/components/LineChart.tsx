@@ -152,8 +152,6 @@ export function LineChart({
 
     // Combine for min/max calculation
     const allValues = [...primaryValues, ...secondaryValues];
-    const average = primaryValues.length > 0 ? primaryValues.reduce((a, b) => a + b, 0) / primaryValues.length : 0;
-    const secondaryAverage = secondaryValues.length > 0 ? secondaryValues.reduce((a, b) => a + b, 0) / secondaryValues.length : 0;
     const dataMinValue = allValues.length > 0 ? Math.min(...allValues) : 0;
     const dataMaxValue = allValues.length > 0 ? Math.max(...allValues) : 100;
 
@@ -240,9 +238,6 @@ export function LineChart({
     const latestValue = latestEntry ? extractValue(latestEntry, primaryFieldKey) : null;
     const latestSecondaryValue = latestEntry && secondaryFieldKey ? extractValue(latestEntry, secondaryFieldKey) : null;
 
-    // Whether to show average
-    const showAverage = definition?.chart?.showAverage !== false && primaryValues.length > 1;
-
     // Format value for display
     const formatValue = (value: number, field = primaryField): string => {
         if (field?.inputType === 'decimal' && field.decimalPlaces !== undefined) {
@@ -301,21 +296,6 @@ export function LineChart({
                 <Text style={styles.dateText}>{formatDateDisplay(latestEntry.date)}</Text>
             )}
 
-            {/* Average Value */}
-            {showAverage && (
-                <View style={styles.averageSection}>
-                    <Text style={styles.label}>{t('metric.average').toUpperCase()}</Text>
-                    <View style={styles.averageRow}>
-                        <Text style={styles.averageValue}>
-                            {formatCombinedValue(
-                                average,
-                                secondaryValues.length > 0 ? secondaryAverage : null
-                            )}
-                        </Text>
-                        {unit && <Text style={styles.averageUnit}>{unit}</Text>}
-                    </View>
-                </View>
-            )}
 
             {/* Legend for multi-value metrics */}
             {secondaryField && (
@@ -470,24 +450,6 @@ const createStyles = (colors: AppColors) =>
             color: colors.textHint,
             marginTop: -4,
             marginBottom: 8,
-        },
-        averageSection: {
-            marginBottom: 8,
-        },
-        averageRow: {
-            flexDirection: 'row',
-            alignItems: 'baseline',
-            gap: 4,
-            marginTop: 2,
-        },
-        averageValue: {
-            fontSize: 20,
-            fontWeight: '600',
-            color: colors.textSecondary,
-        },
-        averageUnit: {
-            fontSize: 14,
-            color: colors.textHint,
         },
         legend: {
             flexDirection: 'row',

@@ -229,6 +229,23 @@ export type MetricChartConfig = {
      * Default: true
      */
     showAverage?: boolean;
+
+    /**
+     * Whether to show "BEREICH" (range) header above the chart instead of "AKTUELL".
+     * When enabled and no bar is selected: shows min–max range + date period.
+     * When a bar is selected: shows the selected value + date.
+     * Useful for metrics with multiple measurements per day (SpO2, heart rate).
+     * Default: false
+     */
+    showRange?: boolean;
+
+    /**
+     * Whether to show a "Letzte Messung" (last measurement) row below the chart.
+     * Tapping it selects (highlights) the last bar in the chart.
+     * Useful for metrics with frequent measurements (vital signs).
+     * Default: false
+     */
+    showLastMeasurement?: boolean;
 };
 
 /** FHIR observation category */
