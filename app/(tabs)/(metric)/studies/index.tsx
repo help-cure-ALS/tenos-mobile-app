@@ -224,11 +224,15 @@ export default function StudiesScreen() {
         );
     }, [filterClinicIds, allClinicStudies]);
 
-    // Filtered studies. While favorites is active, the other filters
-    // are paused (not applied) — only search still narrows the result.
+    // Filtered studies.
+    // While search is active, ALL other filters (including favorites)
+    // are paused — the search covers the entire list.
+    // While favorites is active (and no search), the other filters
+    // are paused — only favorites is applied.
     const filteredStudies = useMemo(() => {
         const query = searchQuery.toLowerCase().trim();
         return studies.filter(study => {
+            // Search active → ignore all filters, search everything
             if (query) {
                 const searchable = [
                     study.title,
@@ -238,11 +242,10 @@ export default function StudiesScreen() {
                     study.sponsor?.name,
                     ...(study.tags ?? [])
                 ].filter(Boolean).join(' ').toLowerCase();
-                if (!searchable.includes(query)) {
-                    return false;
-                }
+                return searchable.includes(query);
             }
 
+            // Favorites active → ignore other filters
             if (filterFavorites) {
                 return isFavorite(study.id);
             }
@@ -430,7 +433,7 @@ export default function StudiesScreen() {
                 </>
             ) }
 
-            {/* Filter Chips */ }
+            {/* Filter Chips — disabled while search or favorites override filters */ }
             <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={ false }
@@ -444,7 +447,7 @@ export default function StudiesScreen() {
                         label={ clinicFilterLabel }
                         onPress={ handleClinicFilter }
                         active={ filterClinicIds !== null }
-                        disabled={ filterFavorites }
+                        disabled={ filterFavorites || searchQuery.trim() !== '' }
                         showChevron={ true }
                         variant="filled"
                         maxWidth={ 140 }
@@ -454,7 +457,7 @@ export default function StudiesScreen() {
                     label={ countryLabel }
                     onPress={ handleCountryFilter }
                     active={ filterCountry !== null }
-                    disabled={ filterFavorites }
+                    disabled={ filterFavorites || searchQuery.trim() !== '' }
                     showChevron={ true }
                     variant="filled"
                     maxWidth={ 140 }
@@ -463,7 +466,7 @@ export default function StudiesScreen() {
                     label={ statusLabel }
                     onPress={ handleStatusFilter }
                     active={ filterStatus !== null }
-                    disabled={ filterFavorites }
+                    disabled={ filterFavorites || searchQuery.trim() !== '' }
                     showChevron={ true }
                     variant="filled"
                     maxWidth={ 140 }
@@ -472,6 +475,7 @@ export default function StudiesScreen() {
                     label={ t('studies.filterFavorites', 'Favoriten') }
                     onPress={ handleFavoritesToggle }
                     active={ filterFavorites }
+                    disabled={ searchQuery.trim() !== '' }
                     icon="bookmark.fill"
                     variant="filled"
                 />
