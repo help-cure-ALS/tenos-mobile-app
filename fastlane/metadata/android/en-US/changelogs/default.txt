@@ -1,1 +1,1 @@
-New respiratory care questionnaire. Studies now available in multiple languages. PDF export improvements.
+Improved vital signs charts. Optimized study search. Bug fixes and improvements.

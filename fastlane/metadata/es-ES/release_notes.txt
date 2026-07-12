@@ -1,1 +1,1 @@
-Nuevo cuestionario de atención respiratoria. Estudios disponibles en varios idiomas. Mejoras en la exportación PDF.
+Diagramas de signos vitales mejorados. Búsqueda de estudios optimizada. Correcciones de errores y mejoras.

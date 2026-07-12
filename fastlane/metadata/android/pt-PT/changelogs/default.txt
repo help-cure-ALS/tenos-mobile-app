@@ -1,1 +1,1 @@
-Novo questionário de cuidados respiratórios. Estudos disponíveis em vários idiomas. Melhorias na exportação PDF.
+Gráficos de sinais vitais melhorados. Pesquisa de estudos otimizada. Correções de erros e melhorias.

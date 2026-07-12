@@ -1,1 +1,1 @@
-Nouveau questionnaire sur les soins respiratoires. Études désormais disponibles en plusieurs langues. Améliorations de l'export PDF.
+Graphiques des signes vitaux améliorés. Recherche d'études optimisée. Corrections de bugs et améliorations.

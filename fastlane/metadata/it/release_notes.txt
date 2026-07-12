@@ -1,1 +1,1 @@
-Nuovo questionario sull'assistenza respiratoria. Studi ora disponibili in più lingue. Miglioramenti dell'esportazione PDF.
+Grafici dei segni vitali migliorati. Ricerca degli studi ottimizzata. Correzioni di bug e miglioramenti.

@@ -1,1 +1,1 @@
-Nieuwe vragenlijst voor ademhalingszorg. Onderzoeken nu beschikbaar in meerdere talen. Verbeteringen aan de PDF-export.
+Verbeterde grafieken voor vitale functies. Geoptimaliseerde zoekfunctie bij onderzoeken. Bugfixes en verbeteringen.
