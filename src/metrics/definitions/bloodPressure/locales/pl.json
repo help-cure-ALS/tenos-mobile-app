@@ -1,6 +1,6 @@
 {
   "name": "Ciśnienie krwi",
-  "shortName": "RR",
+  "shortName": "Ciśnienie krwi",
   "descriptionTitle": "O ciśnieniu krwi",
   "description": "Ciśnienie krwi mierzy nacisk krwi na ściany tętnic. Podawane jest jako dwie wartości: skurczowe (górna wartość) i rozkurczowe (dolna wartość). Regularne monitorowanie pomaga wcześnie wykrywać choroby sercowo-naczyniowe.",
   "fields": {
