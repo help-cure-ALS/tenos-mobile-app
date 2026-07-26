@@ -10,8 +10,10 @@ import { useTranslation } from 'react-i18next';
 
 import { emit, on } from '@/src/lib/bus';
 import { usePatientStores } from '@/src/context/AppSyncProvider';
+import { getActiveParticipations, getResearchContexts } from '@/src/lib/researchProjectTodos';
 import type {
     MetricPreferences,
+    ResearchProjectParticipation,
     ShareTarget,
     VerificationState,
 } from '@/src/stores/patientPreferencesStore';
@@ -293,4 +295,46 @@ export function useVerification() {
         t('verification.statusRejected');
 
     return { status: effectiveStatus, label, variant: VERIFICATION_VARIANT[effectiveStatus], refresh: load };
+}
+
+/**
+ * Localized capture-context line for an instrument: "Gehört zu: <titles>"
+ * when the instrument is part of at least one active project participation,
+ * otherwise null.
+ */
+export function useResearchCaptureContext(type: 'metric' | 'questionnaire', id: string): string | null {
+    const { participations } = useResearchProjectParticipations();
+    const { t } = useTranslation();
+
+    const active = getActiveParticipations(participations);
+    const contexts = getResearchContexts(active, type, id);
+    if (contexts.length === 0) return null;
+
+    return t('share.research.captureContext', {
+        titles: contexts.map((context) => context.title).join(', '),
+    });
+}
+
+/**
+ * Reactive hook for research project participations (closed projects).
+ * Returns the participation map from patient preferences.
+ */
+export function useResearchProjectParticipations() {
+    const { patientPreferencesStore: store } = usePatientStores();
+    const [participations, setParticipations] = useState<Record<string, ResearchProjectParticipation>>({});
+
+    const load = useCallback(async () => {
+        if (!store) { setParticipations({}); return; }
+        const prefs = await store.getAll();
+        setParticipations(prefs.researchProjects ?? {});
+    }, [store]);
+
+    useEffect(() => {
+        load();
+        const offFhir = on('fhir:changed', load);
+        const offProjects = on('researchProjects:changed', load);
+        return () => { offFhir(); offProjects(); };
+    }, [load]);
+
+    return { participations, refresh: load };
 }

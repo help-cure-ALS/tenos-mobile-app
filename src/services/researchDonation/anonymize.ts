@@ -27,14 +27,17 @@ const DOMAIN_TAG = { system: DOMAIN_SYSTEM, code: APP_DOMAIN };
  */
 export async function anonymizeObservation(
     observation: any,
-    anonymousResearchId: string
+    anonymousResearchId: string,
+    idScope = ''
 ): Promise<any> {
-    // Derive deterministic ID from anonymous_id + LOINC code + effectiveDateTime
+    // Derive deterministic ID from anonymous_id + LOINC code + effectiveDateTime.
+    // idScope separates project-batch resources from default-project resources
+    // so each batch carries its own project tag in Medplum.
     const loincCode = observation.code?.coding?.[0]?.code ?? 'unknown';
     const effectiveDateTime = observation.effectiveDateTime ?? '';
     const deterministicId = await deriveResourceId(
         anonymousResearchId,
-        `${loincCode}:${effectiveDateTime}`
+        `${idScope}${loincCode}:${effectiveDateTime}`
     );
 
     const anonymized: any = {
@@ -83,14 +86,15 @@ export async function anonymizeObservation(
  */
 export async function anonymizeQuestionnaireResponse(
     qr: any,
-    anonymousResearchId: string
+    anonymousResearchId: string,
+    idScope = ''
 ): Promise<any> {
     // Derive deterministic ID from anonymous_id + questionnaire URL + authored
     const questionnaireUrl = qr.questionnaire ?? 'unknown';
     const authored = qr.authored ?? '';
     const deterministicId = await deriveResourceId(
         anonymousResearchId,
-        `${questionnaireUrl}:${authored}`
+        `${idScope}${questionnaireUrl}:${authored}`
     );
 
     const anonymized: any = {

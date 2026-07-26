@@ -32,6 +32,7 @@ import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { ScrollViewContent } from '@/src/components/ui/ScrollViewContent';
 import { HeaderButton } from "@/src/components/ui/navigation/HeaderButton";
 import { useSharingFilter } from '@/src/hooks/useSharingFilter';
+import { useResearchCaptureContext } from '@/src/hooks/usePatientPreferences';
 
 /**
  * Check if a field should use scale input (has valueLabels)
@@ -178,6 +179,7 @@ export default function MetricAdd() {
     const { t, i18n } = useTranslation();
     const { colors, isDark } = useTheme();
     const { metricId, effectiveDate } = useLocalSearchParams<{ metricId: string; effectiveDate?: string }>();
+    const researchContext = useResearchCaptureContext('metric', metricId);
     const router = useSafeRouter();
     const { isFiltering, isLoaded: sharingLoaded, canSeeMetric } = useSharingFilter();
 
@@ -348,6 +350,7 @@ export default function MetricAdd() {
                         icon={ displayDefinition.icon }
                         iconTintColor={ displayDefinition.iconColor }
                         title={ displayDefinition.name }
+                        subtitle={ researchContext ?? undefined }
                     />
 
                     <List.Section rounded>

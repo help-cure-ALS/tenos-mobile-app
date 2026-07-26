@@ -27,6 +27,13 @@ import {
     type TodoRuleContext,
 } from '@/src/hooks/todoRuleEngine';
 import { useSharingFilter } from '@/src/hooks/useSharingFilter';
+import {
+    getActiveParticipations,
+    getProjectIntervalDays,
+    getProjectTodoDemands,
+    getResearchContexts,
+    type ResearchTodoContext,
+} from '@/src/lib/researchProjectTodos';
 
 export type TodoItem = {
     key: string;              // "metric:weight" / "questionnaire:alsfrs-r"
@@ -39,6 +46,8 @@ export type TodoItem = {
     isDue: boolean;
     isYesterdayMissed: boolean; // Was due yesterday and not completed
     daysSinceLastEntry: number | null;
+    /** Research projects/studies this item belongs to (compact todo label) */
+    researchContexts?: ResearchTodoContext[];
 };
 
 export type UseTodoItemsReturn = {
@@ -323,6 +332,97 @@ export function useTodoItems(): UseTodoItemsReturn {
             });
         }));
 
+        // 4) Research project participations: annotate existing items with
+        //    project context, tighten intervals (shortest frequency wins),
+        //    and add missing individually-selected instruments.
+        const participations = getActiveParticipations(
+            prefsStore ? (await prefsStore.getAll()).researchProjects : undefined,
+        );
+
+        if (participations.length > 0) {
+            for (const item of result) {
+                const contexts = getResearchContexts(participations, item.type, item.id);
+                if (contexts.length === 0) continue;
+                item.researchContexts = contexts;
+
+                const projectInterval = getProjectIntervalDays(participations, item.type, item.id);
+                if (projectInterval !== null && projectInterval < item.intervalDays) {
+                    item.intervalDays = projectInterval;
+                    // Re-evaluate due state for metrics with the tighter interval
+                    // (questionnaire availability follows its own schedule logic)
+                    if (item.type === 'metric' && !item.isDue) {
+                        item.isDue = item.daysSinceLastEntry === null
+                            || item.daysSinceLastEntry >= projectInterval;
+                    }
+                }
+            }
+
+            // Project-demanded instruments without an existing todo item.
+            // These bypass user opt-outs: the patient consented to the
+            // collection plan when joining the project.
+            const existingKeys = new Set(result.map((item) => item.key));
+            const demands = Array.from(getProjectTodoDemands(participations).values())
+                .filter((demand) => !existingKeys.has(`${demand.type}:${demand.id}`));
+
+            await Promise.all(demands.map(async (demand) => {
+                if (demand.notBefore !== null && Date.now() < demand.notBefore) return;
+
+                if (demand.type === 'metric') {
+                    const def = getMetricDefinition(demand.id, language);
+                    if (!def || def.computed) return;
+                    const intervalDays = demand.intervalDays ?? def.schedule?.frequencyDays;
+                    if (!intervalDays) return; // no frequency anywhere → capture on demand only
+
+                    let lastEntryDate: Date | null = null;
+                    if (activePatientId) {
+                        const entries = await getEntriesFromCache(demand.id, activePatientId, list, count);
+                        if (entries.length > 0) lastEntryDate = entries[0].date;
+                    }
+
+                    result.push({
+                        key: `metric:${demand.id}`,
+                        type: 'metric',
+                        id: demand.id,
+                        name: def.shortName || def.name,
+                        icon: def.icon,
+                        iconColor: def.iconColor,
+                        intervalDays,
+                        isDue: isDue(lastEntryDate, intervalDays),
+                        isYesterdayMissed: wasYesterdayMissed(lastEntryDate, intervalDays),
+                        daysSinceLastEntry: computeDaysSince(lastEntryDate),
+                        researchContexts: demand.contexts,
+                    });
+                } else {
+                    const def = getQuestionnaireDefinition(demand.id, language);
+                    if (!def) return;
+                    const intervalDays = demand.intervalDays ?? def.schedule?.frequencyDays;
+                    if (!intervalDays) return;
+
+                    let lastCompletedAt: Date | null = null;
+                    const entries = await loadQuestionnaireEntries(def, listFn);
+                    if (entries.length > 0) lastCompletedAt = entries[0].completedAt;
+
+                    const completedToday = lastCompletedAt != null && isSameDay(lastCompletedAt, new Date());
+                    const due = isDue(lastCompletedAt, intervalDays) && !completedToday;
+                    if (!due && !completedToday) return;
+
+                    result.push({
+                        key: `questionnaire:${demand.id}`,
+                        type: 'questionnaire',
+                        id: demand.id,
+                        name: def.displayName || def.shortName || def.name,
+                        icon: def.icon,
+                        iconColor: def.iconColor,
+                        intervalDays,
+                        isDue: due,
+                        isYesterdayMissed: false,
+                        daysSinceLastEntry: computeDaysSince(lastCompletedAt),
+                        researchContexts: demand.contexts,
+                    });
+                }
+            }));
+        }
+
         // Filter by sharing preferences (doctor/caregiver only see allowed items)
         const filtered = result.filter(item => {
             if (item.type === 'metric') return canSeeMetric(item.id);
@@ -344,7 +444,8 @@ export function useTodoItems(): UseTodoItemsReturn {
     useEffect(() => {
         buildItems();
         const offFhir = on('fhir:changed', buildItems);
-        return () => { offFhir(); };
+        const offProjects = on('researchProjects:changed', buildItems);
+        return () => { offFhir(); offProjects(); };
     }, [buildItems]);
 
     const hasConfiguredItems = items.length > 0 || Object.values(configs).some(c => c.enabled);

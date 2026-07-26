@@ -7,6 +7,7 @@
 
 import type { QuestionnaireDefinition } from '../types';
 import { getCurrentLanguage } from '../../i18n';
+import { isDefinitionVisible } from '../../definitions/projectVisibility';
 
 // Import getDefinition functions from each questionnaire
 import { getDefinition as getAlsfrsrDef, alsfrsr } from './alsfrs-r';
@@ -88,7 +89,10 @@ export function getQuestionnaireDefinition(
 ): QuestionnaireDefinition | undefined {
     const lang = language ?? getCurrentLanguage();
     const remote = remoteDefinitions.get(id);
-    if (remote) return isRemoteEnabled(id, remote, lang) ? remote : undefined;
+    if (remote) {
+        if (!isDefinitionVisible(remote.researchProjectIds)) return undefined;
+        return isRemoteEnabled(id, remote, lang) ? remote : undefined;
+    }
 
     const getter = definitionGetters[id];
     if (!getter) return undefined;
@@ -120,6 +124,7 @@ export function getAllQuestionnaireDefinitions(
 
     return Array.from(byId.values())
         .filter(isEnabled)
+        .filter((def) => isDefinitionVisible(def.researchProjectIds))
         .sort((a, b) => (a.sortOrder ?? Infinity) - (b.sortOrder ?? Infinity));
 }
 

@@ -148,6 +148,28 @@ export default function ShareStackLayout() {
                 }}
             />
             <Stack.Screen
+                name="researchProjects"
+                options={{
+                    presentation: 'modal',
+                    animation: 'slide_from_bottom',
+                    headerShown: true,
+                    headerTransparent: Platform.OS === 'ios',
+                    headerTitle: t('share.research.projectsTitle'),
+                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
+                }}
+            />
+            <Stack.Screen
+                name="researchProject"
+                options={{
+                    presentation: 'modal',
+                    animation: 'slide_from_bottom',
+                    headerShown: true,
+                    headerTransparent: Platform.OS === 'ios',
+                    headerTitle: '',
+                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
+                }}
+            />
+            <Stack.Screen
                 name="supplierInbox"
                 options={{
                     presentation: 'modal',

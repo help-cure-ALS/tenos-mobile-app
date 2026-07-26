@@ -231,6 +231,7 @@ const chipStyles = StyleSheet.create({
 
 import { useQuestionnaireForm, useQuestionnaire } from '../hooks/useQuestionnaire';
 import { HeaderButton } from "@/src/components/ui/navigation/HeaderButton";
+import { useResearchCaptureContext } from '@/src/hooks/usePatientPreferences';
 
 // =============================================================================
 // Types
@@ -296,6 +297,7 @@ export function QuestionnaireScreen({
     const { colors, isDark } = useTheme();
     const insets = useSafeAreaInsets();
     const router = useSafeRouter();
+    const researchContext = useResearchCaptureContext('questionnaire', definition.id);
 
     const readonly = !!entry;
 
@@ -522,6 +524,7 @@ export function QuestionnaireScreen({
                                 availability={ availability }
                                 hasSchedule={ !!definition.schedule }
                                 completedAt={ entry?.completedAt }
+                                researchContext={ researchContext }
                             />
                         ) : phase === 'result' ? (
                             /* Result View */
@@ -840,9 +843,10 @@ type IntroViewProps = {
     availability: QuestionnaireAvailability;
     hasSchedule: boolean;
     completedAt?: Date;
+    researchContext?: string | null;
 };
 
-function IntroView({ intro, fallbackIconColor, availability, hasSchedule, completedAt }: IntroViewProps) {
+function IntroView({ intro, fallbackIconColor, availability, hasSchedule, completedAt, researchContext }: IntroViewProps) {
     const { t, i18n } = useTranslation();
     const { colors } = useTheme();
 
@@ -872,6 +876,7 @@ function IntroView({ intro, fallbackIconColor, availability, hasSchedule, comple
                     icon={ intro.icon }
                     iconTintColor={ intro.iconColor ?? fallbackIconColor }
                     title={ intro.title }
+                    subtitle={ researchContext ?? undefined }
                 />
             ) }
             { completedAt ? (

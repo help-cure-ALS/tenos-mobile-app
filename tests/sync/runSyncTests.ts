@@ -6,6 +6,7 @@ import { runGrantWrapUnitTests } from "./grantWrap.unit";
 import { runMetricUnitsUnitTests } from "./metricUnits.unit";
 import { runExternalHealthUnitTests } from "./externalHealth.unit";
 import { runMedicationRemindersUnitTests } from "./medicationReminders.unit";
+import { runResearchProjectTodosUnitTests } from "./researchProjectTodos.unit";
 
 async function runNamedSuite(name: string, run: () => void | Promise<void>) {
     await run();
@@ -23,6 +24,7 @@ export async function runSyncUnitTests() {
     await runNamedSuite("metricUnits", runMetricUnitsUnitTests);
     await runNamedSuite("externalHealth", runExternalHealthUnitTests);
     await runNamedSuite("medicationReminders", runMedicationRemindersUnitTests);
+    await runNamedSuite("researchProjectTodos", runResearchProjectTodosUnitTests);
 }
 
 runSyncUnitTests().catch((error) => {

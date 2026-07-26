@@ -279,6 +279,12 @@ export type QuestionnaireDefinition = {
      */
     enabled?: boolean;
 
+    /**
+     * Project binding: definition is only visible to active participants of
+     * these research projects. Absent/empty = standard data set (everyone).
+     */
+    researchProjectIds?: string[];
+
     /** Official/technical name (e.g., 'ALSFRS-R', 'PHQ-9', 'MOS Pain Effects Scale') */
     name: string;
 

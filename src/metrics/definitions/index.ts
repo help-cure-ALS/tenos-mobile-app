@@ -10,6 +10,7 @@ import { Platform } from 'react-native';
 import type { MetricDefinition, MetricCategory } from '../types';
 import { getCurrentLanguage } from '../../i18n';
 import { isMetricAvailableOnPlatform } from '../platformAvailability';
+import { isDefinitionVisible } from '../../definitions/projectVisibility';
 
 // Import getDefinition functions from each metric
 import { getDefinition as getAlsGeneticBackgroundDef, alsGeneticBackgroundMetric } from './alsGeneticBackground';
@@ -173,7 +174,10 @@ export function getMetricDefinition(
 ): MetricDefinition | undefined {
     const lang = language ?? getCurrentLanguage();
     const remote = remoteDefinitions.get(id);
-    if (remote) return isRemoteEnabled(id, remote, lang) ? remote : undefined;
+    if (remote) {
+        if (!isDefinitionVisible(remote.researchProjectIds)) return undefined;
+        return isRemoteEnabled(id, remote, lang) ? remote : undefined;
+    }
 
     const getter = definitionGetters[id];
     if (!getter) return undefined;
@@ -204,6 +208,7 @@ export function getAllMetricDefinitions(
 
     return Array.from(byId.values())
         .filter(isEnabled)
+        .filter((def) => isDefinitionVisible(def.researchProjectIds))
         .filter((def) => isMetricAvailableOnPlatform(def, Platform.OS as 'ios' | 'android'));
 }
 

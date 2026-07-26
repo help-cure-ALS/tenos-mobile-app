@@ -19,6 +19,22 @@ import { useTodoItems, type TodoItem } from '@/src/hooks/useTodoItems';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { useAppRole } from '@/src/context/AppRoleProvider';
 
+function researchLabel(
+    item: TodoItem,
+    t: (key: string, options?: Record<string, unknown>) => string,
+): string | null {
+    const contexts = item.researchContexts ?? [];
+    if (contexts.length === 0) return null;
+    if (contexts.length > 1) {
+        return t('share.research.todoLabelMultiple', { count: contexts.length });
+    }
+    const context = contexts[0];
+    const base = context.linkedStudy
+        ? t('share.research.todoLabelStudy')
+        : t('share.research.todoLabelProject');
+    return context.required ? `${base} · ${t('share.research.required')}` : base;
+}
+
 function TodoRow({
     item,
     onPress,
@@ -26,6 +42,7 @@ function TodoRow({
     item: TodoItem;
     onPress: () => void;
 }) {
+    const { t } = useTranslation();
     const { colors, isDark } = useAppTheme();
     const done = !item.isDue;
 
@@ -35,6 +52,8 @@ function TodoRow({
     const textColor = done
         ? colors.textHint
         : '#ffffff';
+
+    const label = researchLabel(item, t);
 
     return (
         <Pressable
@@ -46,9 +65,19 @@ function TodoRow({
                 !done && pressed && { opacity: 0.7 },
             ]}
         >
-            <Text style={[styles.rowText, { color: textColor }]} numberOfLines={1}>
-                {item.name}
-            </Text>
+            <View style={styles.rowContent}>
+                <Text style={[styles.rowText, { color: textColor }]} numberOfLines={1}>
+                    {item.name}
+                </Text>
+                {label && (
+                    <Text
+                        style={[styles.rowLabel, { color: textColor, opacity: done ? 0.7 : 0.8 }]}
+                        numberOfLines={1}
+                    >
+                        {label}
+                    </Text>
+                )}
+            </View>
             {done && (
                 <AppIcon name="checkmark" tintColor={textColor} size={16} />
             )}
@@ -186,7 +215,14 @@ const styles = StyleSheet.create({
     rowText: {
         fontSize: 16,
         fontWeight: '500',
+    },
+    rowContent: {
         flex: 1,
+        gap: 1,
+    },
+    rowLabel: {
+        fontSize: 11,
+        fontWeight: '500',
     },
     hintText: {
         fontSize: 16,

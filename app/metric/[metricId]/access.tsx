@@ -7,7 +7,8 @@ import { AppIcon } from '@/src/components/ui/AppIcon';
 
 import { ScreenHeader } from '@/src/components/ui/ScreenHeader';
 import { getMetricDefinition } from '@/src/metrics';
-import { useMetricPreferences } from '@/src/hooks/usePatientPreferences';
+import { useMetricPreferences, useResearchProjectParticipations } from '@/src/hooks/usePatientPreferences';
+import { Badge } from 'react-native-nice-ui';
 import type { ShareTarget, SupplierIntegrationMeta } from '@/src/stores/patientPreferencesStore';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAppRole } from '@/src/context/AppRoleProvider';
@@ -29,6 +30,24 @@ export default function MetricAccess() {
     );
     const { shareWith, setShareWith, isLoading } = useMetricPreferences(metricId);
     const { supplierIntegrations } = useSupplierProposalCounts();
+    const { participations } = useResearchProjectParticipations();
+
+    // Active research projects that collect this metric (enabled in the
+    // participation, or the project collects all data)
+    const projectsWithAccess = useMemo(() => {
+        return Object.values(participations)
+            .filter((participation) => participation.status === 'active')
+            .map((participation) => {
+                if (participation.collectAll) {
+                    return { participation, required: false };
+                }
+                const instrument = participation.instruments?.[`metric:${metricId}`];
+                return instrument && instrument.enabled
+                    ? { participation, required: instrument.required }
+                    : null;
+            })
+            .filter((entry): entry is NonNullable<typeof entry> => entry !== null);
+    }, [participations, metricId]);
     const { patientPreferencesStore } = usePatientStores();
     const assistiveAidsEnabled = isAssistiveAidsEnabledForRole(role);
 
@@ -175,6 +194,29 @@ export default function MetricAccess() {
                         }
                     />
                 </List.Section>
+
+                { projectsWithAccess.length > 0 && (
+                    <List.Section title={t('share.research.accessSectionTitle')} rounded>
+                        {projectsWithAccess.map(({ participation, required }, index) => (
+                            <List.Item
+                                key={participation.projectId}
+                                title={participation.title}
+                                subtitle={participation.clinicName ?? ''}
+                                lastItem={index === projectsWithAccess.length - 1}
+                                rightCmp={
+                                    <Badge
+                                        label={required ? t('share.research.required') : t('share.research.optional')}
+                                        variant={required ? 'warning' : 'default'}
+                                    />
+                                }
+                                onPress={() => router.push({
+                                    pathname: '/(tabs)/share/researchProject',
+                                    params: { projectId: participation.projectId },
+                                })}
+                            />
+                        ))}
+                    </List.Section>
+                ) }
 
                 { assistiveAidsEnabled && (
                     <List.Section title={t('metric.suppliersWithAccess')} rounded>

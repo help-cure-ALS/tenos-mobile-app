@@ -428,6 +428,12 @@ export type MetricDefinition = {
      * AND-logic: all conditions must match for the item to appear.
      */
     todoRules?: TodoCondition[];
+
+    /**
+     * Project binding: definition is only visible to active participants of
+     * these research projects. Absent/empty = standard data set (everyone).
+     */
+    researchProjectIds?: string[];
 };
 
 /** A captured metric entry (parsed from FHIR) */
@@ -553,6 +559,12 @@ export type MetricBaseDefinition = {
      * AND-logic: all conditions must match for the item to appear.
      */
     todoRules?: TodoCondition[];
+
+    /**
+     * Project binding: definition is only visible to active participants of
+     * these research projects. Absent/empty = standard data set (everyone).
+     */
+    researchProjectIds?: string[];
 };
 
 // =============================================================================

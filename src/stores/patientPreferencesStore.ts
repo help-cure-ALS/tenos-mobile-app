@@ -66,6 +66,68 @@ export type VerificationState = {
     resolvedAt?: string;
 };
 
+/** Instrument selection within a research project participation */
+export type ParticipationInstrument = {
+    type: 'metric' | 'questionnaire';
+    instrumentId: string;
+    displayName: string;
+    required: boolean;
+    enabled: boolean;
+    /** Requested capture frequency in days (from the collection plan) */
+    frequencyDays?: number | null;
+    /** Delay before the instrument becomes due (days after consent) */
+    startsAfterDays?: number | null;
+};
+
+/** Global collection settings snapshot for collect-all participations */
+export type ParticipationCollectAllSettings = {
+    required?: boolean;
+    frequencyDays?: number | null;
+    startsAfterDays?: number | null;
+    includeHistory?: boolean;
+    historyWindowDays?: number | null;
+};
+
+/** Participation in a research data collection project (closed projects) */
+export type ResearchProjectParticipation = {
+    /** Research project id (research proxy) */
+    projectId: string;
+    /** Project title snapshot for display */
+    title: string;
+    /** Participation status */
+    status: 'pending' | 'active' | 'rejected' | 'revoked' | 'completed';
+    /** Clinic chosen for the application/confirmation */
+    clinicId: string;
+    /** Display name of the chosen clinic */
+    clinicName?: string;
+    /** Application id (for status polling while pending) */
+    applicationId?: string;
+    /** 6-digit application code (shown while pending) */
+    code?: string;
+    /** ISO timestamp when the application code expires */
+    codeExpiresAt?: string;
+    /** Grant id (set after clinic confirmation) */
+    grantId?: string;
+    /** Whether the patient consented to sharing historical data */
+    shareHistory?: boolean;
+    /** ISO timestamp of consent/confirmation */
+    consentedAt?: string;
+    /** Privacy policy version accepted at application time */
+    acceptedPolicyVersion?: number;
+    /** Language the privacy policy was displayed in */
+    acceptedLocale?: string;
+    /** Project collects all data — no individual instrument selection */
+    collectAll?: boolean;
+    /** Global collection settings when collectAll is set */
+    collectAllSettings?: ParticipationCollectAllSettings;
+    /** Project is linked to a clinical study (display label "Studie") */
+    linkedStudy?: boolean;
+    /** Instrument selection, keyed by "<type>:<instrumentId>" */
+    instruments?: Record<string, ParticipationInstrument>;
+    /** Last updated timestamp */
+    updatedAt: string;
+};
+
 /** Supplier integration metadata (NO token - that lives in SecureStore) */
 export type SupplierIntegrationMeta = {
     id: string;
@@ -98,6 +160,8 @@ export type PatientPreferences = {
     metrics: Record<string, MetricPreferences>;
     /** ALS diagnosis verification (optional, patient-only) */
     verification?: VerificationState;
+    /** Research project participations, keyed by projectId */
+    researchProjects?: Record<string, ResearchProjectParticipation>;
     /** Favorited study IDs */
     studyFavorites?: string[];
     /** Patient nickname for greeting display */
@@ -227,6 +291,12 @@ export type PatientPreferencesStore = {
 
     /** Set or clear verification state */
     setVerification(state: VerificationState | undefined): Promise<void>;
+
+    /** Set or update a research project participation */
+    setResearchProjectParticipation(participation: ResearchProjectParticipation): Promise<void>;
+
+    /** Remove a research project participation */
+    removeResearchProjectParticipation(projectId: string): Promise<void>;
 
     /** Get all supplier integrations */
     getSupplierIntegrations(): Promise<SupplierIntegrationMeta[]>;
@@ -519,6 +589,24 @@ export function createPatientPreferencesStore(patientId: string): PatientPrefere
         await savePreferences(prefs);
     }
 
+    async function setResearchProjectParticipation(participation: ResearchProjectParticipation): Promise<void> {
+        const prefs = await loadPreferences();
+        prefs.researchProjects = {
+            ...(prefs.researchProjects ?? {}),
+            [participation.projectId]: { ...participation, updatedAt: new Date().toISOString() },
+        };
+        await savePreferences(prefs);
+    }
+
+    async function removeResearchProjectParticipation(projectId: string): Promise<void> {
+        const prefs = await loadPreferences();
+        if (!prefs.researchProjects?.[projectId]) return;
+        const next = { ...prefs.researchProjects };
+        delete next[projectId];
+        prefs.researchProjects = next;
+        await savePreferences(prefs);
+    }
+
     async function getSupplierIntegrations(): Promise<SupplierIntegrationMeta[]> {
         const prefs = await loadPreferences();
         return (prefs.supplierIntegrations ?? []).filter(i => !i.removedAt);
@@ -665,6 +753,8 @@ export function createPatientPreferencesStore(patientId: string): PatientPrefere
         isFirstLaunchDone,
         setFirstLaunchDone,
         setVerification,
+        setResearchProjectParticipation,
+        removeResearchProjectParticipation,
         getSupplierIntegrations,
         setSupplierIntegration,
         removeSupplierIntegration,
@@ -732,6 +822,17 @@ function mergePreferences(local: PatientPreferences, incoming: PatientPreference
     }
     const mergedIntegrations = [...integrationMap.values()];
 
+    // Merge research project participations: newer updatedAt wins per project
+    const localProjects = local.researchProjects ?? {};
+    const incomingProjects = incoming.researchProjects ?? {};
+    const mergedProjects: Record<string, ResearchProjectParticipation> = { ...localProjects };
+    for (const [projectId, inc] of Object.entries(incomingProjects)) {
+        const loc = mergedProjects[projectId];
+        if (!loc || inc.updatedAt >= loc.updatedAt) {
+            mergedProjects[projectId] = inc;
+        }
+    }
+
     // Merge supplier policies: incoming wins conflicts (by integrationId)
     // Drop policies for tombstoned integrations
     const tombstonedIds = new Set(mergedIntegrations.filter(i => i.removedAt).map(i => i.id));
@@ -747,6 +848,7 @@ function mergePreferences(local: PatientPreferences, incoming: PatientPreference
         measurementSystem: incoming.measurementSystem ?? local.measurementSystem,
         metrics: { ...local.metrics },
         verification: incoming.verification ?? local.verification,
+        researchProjects: Object.keys(mergedProjects).length > 0 ? mergedProjects : undefined,
         sharing: Object.keys(mergedSharing).length > 0 ? mergedSharing : undefined,
         studyFavorites: mergedFavorites.length > 0 ? mergedFavorites : undefined,
         nickname: incoming.nickname ?? local.nickname,

@@ -62,6 +62,7 @@ import { registerDonationService } from "@/src/services/researchDonation/donatio
 import { registerSupplierExchangeService } from "@/src/services/supplierExchange";
 import { createSupplierExchangeStore, type SupplierExchangeStore } from "@/src/stores/supplierExchangeStore";
 import { emit, on } from "@/src/lib/bus";
+import { setActiveResearchProjectIds } from "@/src/definitions/projectVisibility";
 import { DEMO_PATIENT_ID, seedDemoData } from "@/src/demo/demoData";
 import { checkIdentityInvariant, decodeJwtIdentity } from "@/src/sync/identityGuard";
 import {
@@ -1335,6 +1336,36 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
 
         return unsubscribe;
     }, [patientFhirStore, donationTrackingStore, patientPreferencesStore, store, K]);
+
+    // Feed active research project participations into the definition
+    // visibility filter: project-bound definitions are only visible to
+    // active participants of those projects.
+    useEffect(() => {
+        if (!patientPreferencesStore) {
+            setActiveResearchProjectIds([]);
+            return;
+        }
+
+        const syncVisibility = async () => {
+            try {
+                const prefs = await patientPreferencesStore.getAll();
+                const activeIds = Object.values(prefs.researchProjects ?? {})
+                    .filter((participation) => participation.status === 'active')
+                    .map((participation) => participation.projectId);
+                setActiveResearchProjectIds(activeIds);
+            } catch {
+                setActiveResearchProjectIds([]);
+            }
+        };
+
+        void syncVisibility();
+        const offProjects = on('researchProjects:changed', syncVisibility);
+        const offFhir = on('fhir:changed', syncVisibility);
+        return () => {
+            offProjects();
+            offFhir();
+        };
+    }, [patientPreferencesStore]);
 
     // Register supplier exchange service (listens for sync:completed)
     useEffect(() => {

@@ -25,6 +25,7 @@ import { useScrollToTop, useFocusEffect } from "expo-router/react-navigation";
 import type { DeviceAccessEntry } from '@/src/stores/deviceAccessStore';
 import { useSupplierProposalCounts } from '@/src/hooks/useSupplierProposalCounts';
 import { useActivePatientOwnerAccess } from '@/src/hooks/useActivePatientOwnerAccess';
+import { useResearchProjectParticipations, useVerification } from '@/src/hooks/usePatientPreferences';
 import { on } from '@/src/lib/bus';
 import { useAppSync } from '@/src/context/AppSyncProvider';
 import { isAssistiveAidsEnabledForRole } from '@/src/features/assistiveAidsFeature';
@@ -80,6 +81,9 @@ export default function Share() {
     const { hasOwnerAccess, isLoaded: ownerAccessLoaded } = useActivePatientOwnerAccess();
     const canManageSharing = role === 'patient' || role === 'demo' || (role === 'caregiver' && ownerAccessLoaded && hasOwnerAccess);
     const assistiveAidsEnabled = isAssistiveAidsEnabledForRole(role);
+    const { status: verificationStatus } = useVerification();
+    const { participations: researchParticipations } = useResearchProjectParticipations();
+    const participationList = Object.values(researchParticipations);
 
     useScrollToTop(scrollRef);
 
@@ -356,6 +360,22 @@ export default function Share() {
                         <List.Section
                             title={ t('share.researchSection') }
                             rounded
+                            rightCmp={ canManageSharing && verificationStatus === 'verified' ? (
+                                <Pressable
+                                    onPress={ () => {
+                                        if (isDemo) {
+                                            showDemoAlert();
+                                            return;
+                                        }
+                                        router.push('/(tabs)/share/researchProjects');
+                                    } }
+                                    hitSlop={ 8 }
+                                >
+                                    <Text style={ [styles.permissionsLink, { color: colors.tint }] }>
+                                        { t('share.research.more') }
+                                    </Text>
+                                </Pressable>
+                            ) : undefined }
                         >
                             <List.Item
                                 title={ t('share.researchTitle') }
@@ -370,6 +390,30 @@ export default function Share() {
                                     })
                                     : undefined }
                             />
+                            { participationList.map((participation) => (
+                                <List.Item
+                                    key={ participation.projectId }
+                                    title={ participation.title }
+                                    subtitle={ participation.clinicName ?? '' }
+                                    leftCmpSize={40}
+                                    leftCmp={<ListItemIcon name="atom" color={colors.textPrimary} backgroundColor={colors.listItemBackgroundMuted} size="md" />}
+                                    rightCmp={
+                                        <Badge
+                                            label={ t(`share.research.status.${participation.status}`) }
+                                            variant={ participation.status === 'active' ? 'success'
+                                                : participation.status === 'pending' ? 'warning'
+                                                : participation.status === 'completed' ? 'default'
+                                                : 'error' }
+                                        />
+                                    }
+                                    onPress={ canManageSharing
+                                        ? () => router.push({
+                                            pathname: '/(tabs)/share/researchProject',
+                                            params: { projectId: participation.projectId }
+                                        })
+                                        : undefined }
+                                />
+                            )) }
                         </List.Section>
 
                         { assistiveAidsEnabled && (

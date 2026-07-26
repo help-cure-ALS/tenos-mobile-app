@@ -22,6 +22,81 @@ export type DonationResult = {
     accepted: number;
 };
 
+export type ResearchProjectSummary = {
+    id: string;
+    domain: string;
+    title: string;
+    short_description: string | null;
+    patient_description: string | null;
+    privacy_policy: string | null;
+    privacy_policy_version: number;
+    sponsor_name: string | null;
+    sponsor_type: string | null;
+    project_type: 'local_project' | 'linked_clinical_study';
+    participation_mode: 'open' | 'closed';
+    collect_all: boolean;
+    collect_all_settings: {
+        required?: boolean;
+        frequency_days?: number | null;
+        starts_after_days?: number | null;
+        include_history?: boolean;
+        history_window_days?: number | null;
+    } | null;
+    starts_at: string | null;
+    ends_at: string | null;
+    research_study_id: string | null;
+    registry_system: string | null;
+    registry_id: string | null;
+    study_title_snapshot: string | null;
+    instrument_count: number;
+};
+
+export type ResearchProjectClinic = {
+    id: string;
+    clinic_id: string;
+    clinic_name_snapshot: string | null;
+    status: 'requested' | 'accepted' | 'rejected' | 'revoked';
+};
+
+export type ResearchProjectInstrument = {
+    id: string;
+    instrument_type: 'metric' | 'questionnaire';
+    instrument_id: string;
+    display_name_snapshot: string;
+    required: boolean;
+    default_enabled: boolean;
+    frequency_days: number | null;
+    starts_after_days: number | null;
+    include_history: boolean;
+    history_window_days: number | null;
+    sort_order: number;
+};
+
+export type ResearchProjectDetail = ResearchProjectSummary & {
+    study_link: {
+        research_study_id: string;
+        registry_system: string | null;
+        registry_id: string | null;
+        title_snapshot: string;
+        sponsor_snapshot: string | null;
+        external_url: string | null;
+    } | null;
+    clinic_bindings: ResearchProjectClinic[];
+    instruments: ResearchProjectInstrument[];
+};
+
+export type ProjectApplicationResult = {
+    application_id: string;
+    code: string;
+    expires_at: string;
+};
+
+export type ProjectApplicationStatus = {
+    status: 'pending' | 'confirmed' | 'rejected' | 'expired';
+    research_project_id: string;
+    grant_id?: string;
+};
+
 type DeviceIdentity = {
     deviceId: string;
     publicKeyB64: string;
@@ -206,17 +281,160 @@ export async function createAttestation(
 }
 
 /**
+ * Fetch active research projects from the research proxy.
+ * Open (default) projects are always included; closed projects only when
+ * the given clinic offers them.
+ */
+export async function fetchResearchProjects(clinicId?: string, locale?: string): Promise<ResearchProjectSummary[]> {
+    const params = new URLSearchParams({ domain: APP_DOMAIN });
+    if (clinicId) {
+        params.set('clinic_id', clinicId);
+    }
+    if (locale) {
+        params.set('locale', locale);
+    }
+    const url = getAuthUrl(`/app/projects?${params.toString()}`);
+
+    let token = await ensureAppAccessToken(false);
+    let response = await fetch(url, {
+        headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (response.status === 401) {
+        await clearAppAccessToken();
+        token = await ensureAppAccessToken(true);
+        response = await fetch(url, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+    }
+
+    if (!response.ok) {
+        const body = await safeText(response);
+        throw new Error(`Research projects fetch failed (${response.status}): ${body}`);
+    }
+
+    const data = (await response.json()) as { projects?: ResearchProjectSummary[] };
+    return Array.isArray(data.projects) ? data.projects : [];
+}
+
+async function authedRequest(url: string, init: RequestInit = {}): Promise<Response> {
+    let token = await ensureAppAccessToken(false);
+    let response = await fetch(url, {
+        ...init,
+        headers: {
+            ...(init.headers ?? {}),
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if (response.status === 401) {
+        await clearAppAccessToken();
+        token = await ensureAppAccessToken(true);
+        response = await fetch(url, {
+            ...init,
+            headers: {
+                ...(init.headers ?? {}),
+                Authorization: `Bearer ${token}`,
+            },
+        });
+    }
+
+    return response;
+}
+
+/**
+ * Fetch a single active research project including clinic bindings and
+ * the collection plan (instruments).
+ */
+export async function fetchResearchProjectDetail(projectId: string, locale?: string): Promise<ResearchProjectDetail> {
+    const params = new URLSearchParams();
+    if (locale) {
+        params.set('locale', locale);
+    }
+    const query = params.toString();
+    const response = await authedRequest(getAuthUrl(`/app/projects/${projectId}${query ? `?${query}` : ''}`));
+    if (!response.ok) {
+        const body = await safeText(response);
+        throw new Error(`Research project fetch failed (${response.status}): ${body}`);
+    }
+    const data = (await response.json()) as { project?: ResearchProjectDetail };
+    if (!data.project) {
+        throw new Error('Research project fetch returned no project');
+    }
+    return data.project;
+}
+
+/**
+ * Apply for a closed research project. Returns the 6-digit code the patient
+ * shows at the chosen clinic (same UX as the diagnosis verification).
+ */
+export async function applyForResearchProject(
+    projectId: string,
+    params: {
+        clinicId: string;
+        verificationTokenId: string;
+        anonymousResearchId: string;
+        shareHistory: boolean;
+        acceptedPolicyVersion?: number;
+        acceptedLocale?: string;
+    },
+): Promise<ProjectApplicationResult> {
+    const response = await authedRequest(getAuthUrl(`/app/projects/${projectId}/apply`), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            clinic_id: params.clinicId,
+            verification_token_id: params.verificationTokenId,
+            anonymous_research_id: params.anonymousResearchId,
+            share_history: params.shareHistory,
+            ...(params.acceptedPolicyVersion !== undefined
+                ? { accepted_policy_version: params.acceptedPolicyVersion }
+                : {}),
+            ...(params.acceptedLocale ? { accepted_locale: params.acceptedLocale } : {}),
+        }),
+    });
+
+    if (!response.ok) {
+        const body = await safeText(response);
+        throw new Error(`Research project apply failed (${response.status}): ${body}`);
+    }
+    return (await response.json()) as ProjectApplicationResult;
+}
+
+/**
+ * Poll the status of a project application.
+ */
+export async function fetchProjectApplicationStatus(applicationId: string): Promise<ProjectApplicationStatus> {
+    const response = await authedRequest(getAuthUrl(`/app/project-applications/${applicationId}/status`));
+    if (!response.ok) {
+        const body = await safeText(response);
+        throw new Error(`Application status fetch failed (${response.status}): ${body}`);
+    }
+    return (await response.json()) as ProjectApplicationStatus;
+}
+
+/**
  * Send an anonymized FHIR bundle to the research proxy.
+ *
+ * researchProjectId is optional: without it, the proxy assigns the donation
+ * to the open default project of the domain server-side.
  */
 export async function sendToProxy(
     anonymousResearchId: string,
     bundle: any,
     verificationTokenId?: string,
+    researchProjectId?: string,
 ): Promise<DonationResult> {
     const { donateUrl } = getConfig();
     let token = await ensureAppAccessToken(false);
 
     const attestation = await createAttestation(anonymousResearchId, verificationTokenId);
+    const payload = JSON.stringify({
+        domain: APP_DOMAIN,
+        ...(researchProjectId ? { research_project_id: researchProjectId } : {}),
+        attestation,
+        bundle,
+    });
 
     let response = await fetch(donateUrl, {
         method: 'POST',
@@ -224,11 +442,7 @@ export async function sendToProxy(
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({
-            domain: APP_DOMAIN,
-            attestation,
-            bundle,
-        }),
+        body: payload,
     });
 
     if (response.status === 401) {
@@ -240,11 +454,7 @@ export async function sendToProxy(
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify({
-                domain: APP_DOMAIN,
-                attestation,
-                bundle,
-            }),
+            body: payload,
         });
     }
 

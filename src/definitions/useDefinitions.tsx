@@ -7,7 +7,7 @@ import { setRemoteMetricDefinitions, clearRemoteMetricDefinitions } from '@/src/
 import { setRemoteQuestionnaireDefinitions, clearRemoteQuestionnaireDefinitions } from '@/src/questionnaires/definitions';
 import { getDefinitionsClient, resetDefinitionsClient } from './definitionsClient';
 import { mapMetricDefinition, mapQuestionnaireDefinition } from './fhirMapping';
-import { DOMAIN_SYSTEM, APP_DOMAIN } from './domainConfig';
+import { DOMAIN_SYSTEM, APP_DOMAIN, RESEARCH_PROJECT_TAG_SYSTEM } from './domainConfig';
 
 const CHECK_INTERVAL_MS = 12 * 60 * 60 * 1000;
 const METRIC_CODE = 'urn:hca:definition-type|metric-definition';
@@ -137,16 +137,35 @@ async function fetchDefinitions(language: string): Promise<{
     ]);
 
     const metrics = filterByDomain(metricResources)
-        .map((r) => mapMetricDefinition(r, language))
-        .filter((v): v is NonNullable<typeof v> => v !== null)
-        .map((v) => mergeMetricDefinition(v.base, v.locale));
+        .map((r) => {
+            const mapped = mapMetricDefinition(r, language);
+            if (!mapped) return null;
+            const def = mergeMetricDefinition(mapped.base, mapped.locale);
+            const projectIds = extractResearchProjectIds(r);
+            return projectIds.length > 0 ? { ...def, researchProjectIds: projectIds } : def;
+        })
+        .filter((v): v is NonNullable<typeof v> => v !== null);
 
     const questionnaires = filterByDomain(questionnaireResources)
-        .map((r) => mapQuestionnaireDefinition(r, language))
-        .filter((v): v is NonNullable<typeof v> => v !== null)
-        .map((v) => mergeDefinition(v.base, v.locale));
+        .map((r) => {
+            const mapped = mapQuestionnaireDefinition(r, language);
+            if (!mapped) return null;
+            const def = mergeDefinition(mapped.base, mapped.locale);
+            const projectIds = extractResearchProjectIds(r);
+            return projectIds.length > 0 ? { ...def, researchProjectIds: projectIds } : def;
+        })
+        .filter((v): v is NonNullable<typeof v> => v !== null);
 
     return { metrics, questionnaires };
+}
+
+/** Project binding tags on a synced definition resource */
+function extractResearchProjectIds(resource: {
+    meta?: { tag?: Array<{ system?: string; code?: string }> };
+}): string[] {
+    return (resource.meta?.tag ?? [])
+        .filter((t) => t.system === RESEARCH_PROJECT_TAG_SYSTEM && t.code)
+        .map((t) => t.code!);
 }
 
 function shouldCheckRemote(lastCheckedAt: string | null, force: boolean): boolean {
