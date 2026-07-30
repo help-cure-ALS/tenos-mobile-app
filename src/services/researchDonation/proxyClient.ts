@@ -402,6 +402,30 @@ export async function applyForResearchProject(
 }
 
 /**
+ * Withdraw from a research project (consent withdrawal). The anonymous
+ * research id legitimizes the request — only the patient's device can
+ * produce it.
+ */
+export async function withdrawFromResearchProject(
+    grantId: string,
+    anonymousResearchId: string,
+): Promise<void> {
+    const response = await authedRequest(getAuthUrl(`/app/project-grants/${grantId}/withdraw`), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ anonymous_research_id: anonymousResearchId }),
+    });
+
+    if (!response.ok) {
+        const body = await safeText(response);
+        // Already gone on the clinic side — treat as success, the goal
+        // (no further collection) is reached either way.
+        if (response.status === 404) return;
+        throw new Error(`Research project withdrawal failed (${response.status}): ${body}`);
+    }
+}
+
+/**
  * Poll the status of a project application.
  */
 export async function fetchProjectApplicationStatus(applicationId: string): Promise<ProjectApplicationStatus> {

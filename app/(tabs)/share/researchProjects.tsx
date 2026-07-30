@@ -73,11 +73,9 @@ export default function ResearchProjectsScreen() {
         );
     }
 
+    // short_description is internal-only (portal), not shown to patients
     function projectSubtitle(project: ResearchProjectSummary): string {
-        const parts: string[] = [];
-        if (project.sponsor_name) parts.push(project.sponsor_name);
-        if (project.short_description) parts.push(project.short_description);
-        return parts.join(' · ');
+        return project.sponsor_name ?? '';
     }
 
     return (
@@ -140,7 +138,7 @@ export default function ResearchProjectsScreen() {
                                     }
                                     rightCmp={participationBadge(project.id)}
                                     onPress={() => router.push({
-                                        pathname: '/(tabs)/share/researchProject',
+                                        pathname: '/researchProject',
                                         params: { projectId: project.id },
                                     })}
                                 />

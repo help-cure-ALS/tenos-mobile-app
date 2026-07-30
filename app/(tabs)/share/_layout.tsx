@@ -159,17 +159,6 @@ export default function ShareStackLayout() {
                 }}
             />
             <Stack.Screen
-                name="researchProject"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
                 name="supplierInbox"
                 options={{
                     presentation: 'modal',

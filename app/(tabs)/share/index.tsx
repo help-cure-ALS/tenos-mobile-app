@@ -367,7 +367,7 @@ export default function Share() {
                                             showDemoAlert();
                                             return;
                                         }
-                                        router.push('/(tabs)/share/researchProjects');
+                                        router.push('/researchProjects');
                                     } }
                                     hitSlop={ 8 }
                                 >
@@ -408,7 +408,7 @@ export default function Share() {
                                     }
                                     onPress={ canManageSharing
                                         ? () => router.push({
-                                            pathname: '/(tabs)/share/researchProject',
+                                            pathname: '/researchProject',
                                             params: { projectId: participation.projectId }
                                         })
                                         : undefined }

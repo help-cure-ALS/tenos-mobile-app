@@ -210,7 +210,7 @@ export default function MetricAccess() {
                                     />
                                 }
                                 onPress={() => router.push({
-                                    pathname: '/(tabs)/share/researchProject',
+                                    pathname: '/researchProject',
                                     params: { projectId: participation.projectId },
                                 })}
                             />
