@@ -116,6 +116,13 @@ Danach Container neu erstellen (ein `restart` übernimmt Env-Änderungen nicht):
 docker compose up -d api
 ```
 
+Hinweis: Das reicht nur für `.env`-Änderungen. Wurde Code aktualisiert
+(z. B. nach `git pull`), muss das Image neu gebaut werden:
+
+```bash
+docker compose up -d --build api
+```
+
 Regeln:
 
 - Mindestversion **erst anheben, wenn die neue Version in beiden Stores
