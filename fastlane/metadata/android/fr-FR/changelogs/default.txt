@@ -1,1 +1,1 @@
-Graphiques des signes vitaux améliorés. Recherche d'études optimisée. Corrections de bugs et améliorations.
+Espace projets de recherche repensé. Mode démo amélioré. Corrections de bugs et améliorations.

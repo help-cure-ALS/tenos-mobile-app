@@ -1,1 +1,1 @@
-Geliştirilmiş yaşamsal bulgu grafikleri. Optimize edilmiş araştırma arama. Hata düzeltmeleri ve iyileştirmeler.
+Araştırma projeleri bölümü yenilendi. Demo modu iyileştirildi. Hata düzeltmeleri ve iyileştirmeler.

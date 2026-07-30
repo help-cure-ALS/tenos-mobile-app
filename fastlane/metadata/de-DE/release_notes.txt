@@ -1,1 +1,1 @@
-Verbesserte Diagramme für Vitalzeichen. Optimierte Suchfunktion bei Studien. Fehlerbehebungen und Verbesserungen.
+Überarbeiteter Bereich für Forschungsprojekte. Verbesserter Demo-Modus. Fehlerbehebungen und Verbesserungen.

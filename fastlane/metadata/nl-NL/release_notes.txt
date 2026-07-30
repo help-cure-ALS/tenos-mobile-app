@@ -1,1 +1,1 @@
-Verbeterde grafieken voor vitale functies. Geoptimaliseerde zoekfunctie bij onderzoeken. Bugfixes en verbeteringen.
+Vernieuwd gedeelte voor onderzoeksprojecten. Verbeterde demomodus. Bugfixes en verbeteringen.
