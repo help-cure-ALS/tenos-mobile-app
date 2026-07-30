@@ -42,6 +42,11 @@
         "retry": "Erneut versuchen",
         "demoDataRefreshed": "Demodaten wurden aktualisiert"
     },
+    "forceUpdate": {
+        "title": "Aktualisierung erforderlich",
+        "message": "Deine App-Version wird nicht mehr unterstützt. Bitte installiere die neueste Version, um TENOS weiter zu nutzen.",
+        "button": "Jetzt aktualisieren"
+    },
     "tabs": {
         "overview": "Übersicht",
         "condition": "Befinden",

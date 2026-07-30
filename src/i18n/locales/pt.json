@@ -42,6 +42,11 @@
         "retry": "Tentar novamente",
         "demoDataRefreshed": "Os dados de demonstração foram atualizados"
     },
+    "forceUpdate": {
+        "title": "Atualização necessária",
+        "message": "Esta versão do aplicativo não é mais compatível. Instale a versão mais recente para continuar usando o TENOS.",
+        "button": "Atualizar agora"
+    },
     "tabs": {
         "overview": "Visão geral",
         "condition": "Estado",

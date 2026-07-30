@@ -92,3 +92,46 @@ git add app.json
 git commit -m "bump version to 1.0.3"
 git push
 ```
+
+## 10 — Update erzwingen (Versions-Gate, optional)
+
+Für Releases mit Breaking Changes (inkompatible Server-API, kaputtes
+Datenformat, Sicherheitsfix) kann eine Mindestversion erzwungen werden.
+Installationen unterhalb der Mindestversion zeigen einen blockierenden
+Update-Screen mit Store-Link — die App ist bis zum Update nicht nutzbar.
+
+Konfiguriert wird das im **Sync Vault** (`.env` neben der
+`docker-compose.yml`, siehe dort `docs/api.md` → App Config):
+
+```bash
+MIN_APP_VERSION_IOS=1.1.0
+MIN_APP_VERSION_ANDROID=1.1.0
+APP_STORE_URL_IOS=https://apps.apple.com/app/id<apple-id>
+APP_STORE_URL_ANDROID=https://play.google.com/store/apps/details?id=<package>
+```
+
+Danach Container neu erstellen (ein `restart` übernimmt Env-Änderungen nicht):
+
+```bash
+docker compose up -d api
+```
+
+Regeln:
+
+- Mindestversion **erst anheben, wenn die neue Version in beiden Stores
+  live ist** — Review (iOS) und Rollout (Android) enden nie gleichzeitig,
+  deshalb sind die Werte pro Plattform getrennt.
+- Leerer Wert = Gate für die Plattform deaktiviert.
+- Die App prüft beim Kaltstart und bei jedem Foreground-Wechsel
+  (`src/services/appVersionGate.ts`). Verglichen wird die native
+  Binary-Version; EAS-/OTA-Updates sind davon unabhängig und erreichen
+  ohnehin nur Installationen derselben Store-Version.
+- Fail-open: Ist der Vault nicht erreichbar, gilt die zuletzt gecachte
+  Konfiguration; ohne Cache startet die App normal. Nutzer werden nie
+  durch ein Serverproblem ausgesperrt.
+
+Prüfen:
+
+```bash
+curl https://<vault-domain>/app-config
+```

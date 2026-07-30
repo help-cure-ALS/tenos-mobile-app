@@ -23,6 +23,8 @@ import { LoadingOverlayProvider } from '@/src/context/LoadingOverlayProvider';
 import { SupplierProposalProvider } from '@/src/context/SupplierProposalProvider';
 import { ExternalHealthAutoImportProvider } from '@/src/services/externalHealth/ExternalHealthAutoImportProvider';
 import { ToastHost } from '@/src/components/ui/ToastHost';
+import { ForceUpdateScreen } from '@/src/components/ForceUpdateScreen';
+import { checkVersionGate, type VersionGateResult } from '@/src/services/appVersionGate';
 
 LogBox.ignoreLogs(['Sending `onAnimatedValueUpdate`']);
 
@@ -113,6 +115,23 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
     const [language, setLanguage] = useState<string>(i18n.language || 'en');
+    // Native version gate: when the binary is too old, render the blocking
+    // update screen instead of the navigator (checked on start + foreground)
+    const [versionGate, setVersionGate] = useState<VersionGateResult>({
+        updateRequired: false,
+        storeUrl: null
+    });
+
+    const runVersionGateCheck = useCallback(() => {
+        checkVersionGate()
+            .then(setVersionGate)
+            .catch(() => {
+            });
+    }, []);
+
+    useEffect(() => {
+        runVersionGateCheck();
+    }, [runVersionGateCheck]);
 
     useEffect(() => {
         initI18n();
@@ -152,6 +171,8 @@ function RootLayoutNav() {
                 const elapsed = Date.now() - backgroundTimestamp;
                 backgroundTimestamp = null;
 
+                runVersionGateCheck();
+
                 if (elapsed >= FULL_RELOAD_THRESHOLD_MS && !__DEV__) {
                     Updates.reloadAsync().catch(() => {
                     });
@@ -162,7 +183,7 @@ function RootLayoutNav() {
         });
 
         return () => subscription.remove();
-    }, []);
+    }, [runVersionGateCheck]);
 
     return (
         <GestureHandlerRootView style={ { flex: 1 } }>
@@ -174,6 +195,9 @@ function RootLayoutNav() {
                             <LoadingOverlayProvider>
                                 <AuthLockProvider>
                                     <SafeAreaProvider style={ { flex: 1 } }>
+                                        { versionGate.updateRequired ? (
+                                            <ForceUpdateScreen storeUrl={ versionGate.storeUrl } />
+                                        ) : (
                                         <AuthGate>
                                             <PatientBoundary>
                                                 <DefinitionsProvider language={ language }>
@@ -217,6 +241,7 @@ function RootLayoutNav() {
                                                 </DefinitionsProvider>
                                             </PatientBoundary>
                                         </AuthGate>
+                                        ) }
                                     </SafeAreaProvider>
                                 </AuthLockProvider>
                             </LoadingOverlayProvider>

@@ -42,6 +42,11 @@
         "retry": "Spróbuj ponownie",
         "demoDataRefreshed": "Dane demonstracyjne zostały odświeżone"
     },
+    "forceUpdate": {
+        "title": "Wymagana aktualizacja",
+        "message": "Ta wersja aplikacji nie jest już obsługiwana. Zainstaluj najnowszą wersję, aby dalej korzystać z TENOS.",
+        "button": "Zaktualizuj teraz"
+    },
     "tabs": {
         "overview": "Przegląd",
         "condition": "Stan",

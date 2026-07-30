@@ -42,6 +42,11 @@
         "retry": "再試行",
         "demoDataRefreshed": "デモデータを更新しました"
     },
+    "forceUpdate": {
+        "title": "アップデートが必要です",
+        "message": "このバージョンのアプリはサポートが終了しました。TENOSを引き続きご利用いただくには、最新バージョンをインストールしてください。",
+        "button": "今すぐアップデート"
+    },
     "tabs": {
         "overview": "概要",
         "condition": "状態",

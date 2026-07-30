@@ -42,6 +42,11 @@
         "retry": "Încearcă din nou",
         "demoDataRefreshed": "Datele demonstrative au fost actualizate"
     },
+    "forceUpdate": {
+        "title": "Actualizare necesară",
+        "message": "Această versiune a aplicației nu mai este acceptată. Instalează cea mai recentă versiune pentru a continua să folosești TENOS.",
+        "button": "Actualizează acum"
+    },
     "tabs": {
         "overview": "Sumar",
         "condition": "Stare",

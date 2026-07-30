@@ -42,6 +42,11 @@
         "retry": "重试",
         "demoDataRefreshed": "演示数据已更新"
     },
+    "forceUpdate": {
+        "title": "需要更新",
+        "message": "当前应用版本已不再受支持。请安装最新版本以继续使用 TENOS。",
+        "button": "立即更新"
+    },
     "tabs": {
         "overview": "概览",
         "condition": "状态",

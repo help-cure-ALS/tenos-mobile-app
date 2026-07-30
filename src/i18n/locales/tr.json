@@ -42,6 +42,11 @@
         "retry": "Tekrar dene",
         "demoDataRefreshed": "Demo verileri güncellendi"
     },
+    "forceUpdate": {
+        "title": "Güncelleme gerekli",
+        "message": "Uygulamanın bu sürümü artık desteklenmiyor. TENOS'u kullanmaya devam etmek için lütfen en son sürümü yükleyin.",
+        "button": "Şimdi güncelle"
+    },
     "tabs": {
         "overview": "Özet",
         "condition": "Durum",
