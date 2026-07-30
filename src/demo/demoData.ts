@@ -17,6 +17,34 @@ import {
     ALS_KINGS_STAGE_QUESTIONNAIRE_URL,
 } from '@/src/questionnaires/structured/alsKingsStage/types';
 
+/**
+ * Demo data ages: all dates are generated relative to "now" at seed
+ * time, so after a while the newest entries drift into the past. The
+ * seed timestamp lets the app re-seed silently (same resource ids →
+ * plain upsert, user-created entries stay untouched).
+ */
+const DEMO_SEEDED_AT_KEY = 'demo_seeded_at_v1';
+export const DEMO_SEED_MAX_AGE_DAYS = 10;
+
+export async function markDemoSeeded(): Promise<void> {
+    try {
+        await SecureStore.setItemAsync(DEMO_SEEDED_AT_KEY, new Date().toISOString());
+    } catch (e) {
+        console.warn('Failed to store demo seed timestamp:', e);
+    }
+}
+
+export async function isDemoSeedStale(): Promise<boolean> {
+    try {
+        const seededAt = await SecureStore.getItemAsync(DEMO_SEEDED_AT_KEY);
+        if (!seededAt) return true;
+        const ageMs = Date.now() - new Date(seededAt).getTime();
+        return ageMs > DEMO_SEED_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+    } catch {
+        return false;
+    }
+}
+
 /** Minimal FHIR Observation type for demo data */
 type Observation = {
     resourceType: 'Observation';
@@ -1284,6 +1312,8 @@ export async function seedDemoData(
 
     // Set display mode to comfort
     await SecureStore.setItemAsync('display_mode_v1', JSON.stringify('comfort'));
+
+    await markDemoSeeded();
 }
 
 // ============================================================

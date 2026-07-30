@@ -39,7 +39,8 @@
         "allCountries": "所有国家",
         "demoModeTitle": "演示模式",
         "demoModeMessage": "此功能在演示模式下不可用。请创建账户后使用。",
-        "retry": "重试"
+        "retry": "重试",
+        "demoDataRefreshed": "演示数据已更新"
     },
     "tabs": {
         "overview": "概览",
@@ -1263,7 +1264,12 @@
                 "rejected": "已拒绝",
                 "revoked": "已撤销",
                 "completed": "已结束"
-            }
+            },
+            "endParticipation": "结束参与",
+            "endParticipationTitle": "要结束参与吗？",
+            "endParticipationMessage": "将不再为该项目收集数据。已捐赠的匿名数据将保留在研究数据集中。你可以随时重新申请。",
+            "endParticipationConfirm": "结束",
+            "endParticipationError": "无法结束参与，请稍后重试。"
         },
         "doctorSince": "{{specialty}} · 自 {{since}} 起",
         "sharedSince": "自 {{date}} 起访问",

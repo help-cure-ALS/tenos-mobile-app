@@ -39,7 +39,8 @@
         "allCountries": "Alle landen",
         "demoModeTitle": "Demomodus",
         "demoModeMessage": "Deze functie is niet beschikbaar in de demomodus. Maak een account aan om dit te gebruiken.",
-        "retry": "Opnieuw proberen"
+        "retry": "Opnieuw proberen",
+        "demoDataRefreshed": "Demogegevens zijn vernieuwd"
     },
     "tabs": {
         "overview": "Overzicht",
@@ -1263,7 +1264,12 @@
                 "rejected": "Afgewezen",
                 "revoked": "Ingetrokken",
                 "completed": "Afgerond"
-            }
+            },
+            "endParticipation": "Deelname beëindigen",
+            "endParticipationTitle": "Deelname beëindigen?",
+            "endParticipationMessage": "Er worden geen verdere gegevens voor dit project verzameld. Reeds gedoneerde anonieme gegevens blijven in de onderzoeksdataset. Je kunt je op elk moment opnieuw aanmelden.",
+            "endParticipationConfirm": "Beëindigen",
+            "endParticipationError": "De deelname kon niet worden beëindigd. Probeer het later opnieuw."
         },
         "doctorSince": "{{specialty}} · Sinds {{since}}",
         "sharedSince": "Toegang sinds {{date}}",

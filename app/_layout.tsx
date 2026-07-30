@@ -22,6 +22,7 @@ import { PatientProvider } from '@/src/context/PatientProvider';
 import { LoadingOverlayProvider } from '@/src/context/LoadingOverlayProvider';
 import { SupplierProposalProvider } from '@/src/context/SupplierProposalProvider';
 import { ExternalHealthAutoImportProvider } from '@/src/services/externalHealth/ExternalHealthAutoImportProvider';
+import { ToastHost } from '@/src/components/ui/ToastHost';
 
 LogBox.ignoreLogs(['Sending `onAnimatedValueUpdate`']);
 
@@ -195,6 +196,13 @@ function RootLayoutNav() {
                                                                     } }
                                                                 />
                                                                 <Stack.Screen
+                                                                    name="researchProject"
+                                                                    options={ {
+                                                                        presentation: 'modal',
+                                                                        animation: 'slide_from_bottom'
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
                                                                     name="onboarding"
                                                                     options={ {
                                                                         animation: 'fade',
@@ -203,6 +211,7 @@ function RootLayoutNav() {
                                                                     } }
                                                                 />
                                                             </Stack>
+                                                            <ToastHost />
                                                         </StudiesProvider>
                                                     </MedicationsProvider>
                                                 </DefinitionsProvider>

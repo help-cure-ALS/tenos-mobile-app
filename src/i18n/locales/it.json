@@ -39,7 +39,8 @@
         "allCountries": "Tutti i paesi",
         "demoModeTitle": "Modalità demo",
         "demoModeMessage": "Questa funzione non è disponibile in modalità demo. Crea un account per usarla.",
-        "retry": "Riprova"
+        "retry": "Riprova",
+        "demoDataRefreshed": "I dati demo sono stati aggiornati"
     },
     "tabs": {
         "overview": "Panoramica",
@@ -1263,7 +1264,12 @@
                 "rejected": "Rifiutato",
                 "revoked": "Revocato",
                 "completed": "Concluso"
-            }
+            },
+            "endParticipation": "Termina partecipazione",
+            "endParticipationTitle": "Terminare la partecipazione?",
+            "endParticipationMessage": "Non verranno più raccolti dati per questo progetto. I dati anonimi già donati rimangono nel set di dati di ricerca. Puoi candidarti di nuovo in qualsiasi momento.",
+            "endParticipationConfirm": "Termina",
+            "endParticipationError": "Non è stato possibile terminare la partecipazione. Riprova più tardi."
         },
         "doctorSince": "{{specialty}} · Dal {{since}}",
         "sharedSince": "Accesso dal {{date}}",

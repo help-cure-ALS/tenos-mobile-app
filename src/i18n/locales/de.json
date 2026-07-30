@@ -39,7 +39,8 @@
         "allCountries": "Alle Länder",
         "demoModeTitle": "Demo-Modus",
         "demoModeMessage": "Diese Funktion ist im Demo-Modus nicht verfügbar. Erstelle ein Konto, um sie zu nutzen.",
-        "retry": "Erneut versuchen"
+        "retry": "Erneut versuchen",
+        "demoDataRefreshed": "Demodaten wurden aktualisiert"
     },
     "tabs": {
         "overview": "Übersicht",
@@ -1263,7 +1264,12 @@
                 "rejected": "Abgelehnt",
                 "revoked": "Widerrufen",
                 "completed": "Abgeschlossen"
-            }
+            },
+            "endParticipation": "Teilnahme beenden",
+            "endParticipationTitle": "Teilnahme beenden?",
+            "endParticipationMessage": "Es werden keine weiteren Daten für dieses Projekt erhoben. Bereits gespendete anonyme Daten verbleiben im Forschungsdatensatz. Du kannst dich jederzeit erneut bewerben.",
+            "endParticipationConfirm": "Beenden",
+            "endParticipationError": "Die Teilnahme konnte nicht beendet werden. Bitte versuche es später erneut."
         },
         "doctorSince": "{{specialty}} · Seit {{since}}",
         "sharedSince": "Zugriff seit {{date}}",

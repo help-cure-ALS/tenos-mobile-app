@@ -39,7 +39,8 @@
         "allCountries": "All countries",
         "demoModeTitle": "Demo Mode",
         "demoModeMessage": "This feature is not available in demo mode. Create an account to use it.",
-        "retry": "Try again"
+        "retry": "Try again",
+        "demoDataRefreshed": "Demo data has been refreshed"
     },
     "tabs": {
         "overview": "Overview",
@@ -1263,7 +1264,12 @@
                 "rejected": "Declined",
                 "revoked": "Revoked",
                 "completed": "Completed"
-            }
+            },
+            "endParticipation": "End participation",
+            "endParticipationTitle": "End participation?",
+            "endParticipationMessage": "No further data will be collected for this project. Anonymous data you have already donated remains in the research dataset. You can apply again at any time.",
+            "endParticipationConfirm": "End",
+            "endParticipationError": "Your participation could not be ended. Please try again later."
         },
         "doctorSince": "{{specialty}} · Since {{since}}",
         "sharedSince": "Access since {{date}}",

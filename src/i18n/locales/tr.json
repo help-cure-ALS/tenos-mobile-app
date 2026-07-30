@@ -39,7 +39,8 @@
         "allCountries": "Tüm ülkeler",
         "demoModeTitle": "Demo modu",
         "demoModeMessage": "Bu özellik demo modunda kullanılamaz. Kullanmak için bir hesap oluştur.",
-        "retry": "Tekrar dene"
+        "retry": "Tekrar dene",
+        "demoDataRefreshed": "Demo verileri güncellendi"
     },
     "tabs": {
         "overview": "Özet",
@@ -1263,7 +1264,12 @@
                 "rejected": "Reddedildi",
                 "revoked": "İptal edildi",
                 "completed": "Tamamlandı"
-            }
+            },
+            "endParticipation": "Katılımı sonlandır",
+            "endParticipationTitle": "Katılım sonlandırılsın mı?",
+            "endParticipationMessage": "Bu proje için başka veri toplanmayacak. Daha önce bağışlanan anonim veriler araştırma veri setinde kalır. İstediğin zaman yeniden başvurabilirsin.",
+            "endParticipationConfirm": "Sonlandır",
+            "endParticipationError": "Katılım sonlandırılamadı. Lütfen daha sonra tekrar dene."
         },
         "doctorSince": "{{specialty}} · {{since}} tarihinden beri",
         "sharedSince": "{{date}} tarihinden beri erişim",

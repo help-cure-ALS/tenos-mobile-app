@@ -39,7 +39,8 @@
         "allCountries": "Toate țările",
         "demoModeTitle": "Mod demo",
         "demoModeMessage": "Această funcție nu este disponibilă în modul demo. Creează un cont pentru a o folosi.",
-        "retry": "Încearcă din nou"
+        "retry": "Încearcă din nou",
+        "demoDataRefreshed": "Datele demonstrative au fost actualizate"
     },
     "tabs": {
         "overview": "Sumar",
@@ -1263,7 +1264,12 @@
                 "rejected": "Refuzat",
                 "revoked": "Revocat",
                 "completed": "Încheiat"
-            }
+            },
+            "endParticipation": "Încheie participarea",
+            "endParticipationTitle": "Închei participarea?",
+            "endParticipationMessage": "Nu vor mai fi colectate date pentru acest proiect. Datele anonime deja donate rămân în setul de date de cercetare. Poți aplica din nou oricând.",
+            "endParticipationConfirm": "Încheie",
+            "endParticipationError": "Participarea nu a putut fi încheiată. Încearcă din nou mai târziu."
         },
         "doctorSince": "{{specialty}} · Din {{since}}",
         "sharedSince": "Acces din {{date}}",

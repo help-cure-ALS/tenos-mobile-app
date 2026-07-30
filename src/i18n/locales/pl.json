@@ -39,7 +39,8 @@
         "allCountries": "Wszystkie kraje",
         "demoModeTitle": "Tryb demo",
         "demoModeMessage": "Ta funkcja nie jest dostępna w trybie demo. Utwórz konto, aby jej użyć.",
-        "retry": "Spróbuj ponownie"
+        "retry": "Spróbuj ponownie",
+        "demoDataRefreshed": "Dane demonstracyjne zostały odświeżone"
     },
     "tabs": {
         "overview": "Przegląd",
@@ -1263,7 +1264,12 @@
                 "rejected": "Odrzucony",
                 "revoked": "Cofnięty",
                 "completed": "Zakończony"
-            }
+            },
+            "endParticipation": "Zakończ udział",
+            "endParticipationTitle": "Zakończyć udział?",
+            "endParticipationMessage": "Dla tego projektu nie będą już zbierane żadne dane. Przekazane wcześniej anonimowe dane pozostaną w zbiorze danych badawczych. Możesz w każdej chwili zgłosić się ponownie.",
+            "endParticipationConfirm": "Zakończ",
+            "endParticipationError": "Nie udało się zakończyć udziału. Spróbuj ponownie później."
         },
         "doctorSince": "{{specialty}} · Od {{since}}",
         "sharedSince": "Dostęp od {{date}}",

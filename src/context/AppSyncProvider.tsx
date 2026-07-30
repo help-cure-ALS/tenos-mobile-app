@@ -63,7 +63,8 @@ import { registerSupplierExchangeService } from "@/src/services/supplierExchange
 import { createSupplierExchangeStore, type SupplierExchangeStore } from "@/src/stores/supplierExchangeStore";
 import { emit, on } from "@/src/lib/bus";
 import { setActiveResearchProjectIds } from "@/src/definitions/projectVisibility";
-import { DEMO_PATIENT_ID, seedDemoData } from "@/src/demo/demoData";
+import { DEMO_PATIENT_ID, isDemoSeedStale, seedDemoData } from "@/src/demo/demoData";
+import i18n from "@/src/i18n";
 import { checkIdentityInvariant, decodeJwtIdentity } from "@/src/sync/identityGuard";
 import {
     checkRecoveryEligibility,
@@ -316,6 +317,10 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
     // Pre-warm SQLite database so init() is done before first data access.
     // In demo mode, re-seed if the DB was reset (e.g. after device restore
     // where the SecureStore encryption key no longer matches the DB file).
+    // Also refresh stale demo data: all demo dates are generated relative
+    // to "now" with stable resource ids, so re-seeding after 10 days is a
+    // plain upsert that shifts the whole history forward. User-created
+    // entries are untouched.
     useEffect(() => {
         patientFhirStore.init()
             .then(async () => {
@@ -325,6 +330,11 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                     console.warn('patientFhirStore: demo DB empty — re-seeding demo data');
                     await seedDemoData(patientFhirStore);
                     emit('fhir:changed');
+                } else if (await isDemoSeedStale()) {
+                    console.log('patientFhirStore: demo data stale — refreshing');
+                    await seedDemoData(patientFhirStore);
+                    emit('fhir:changed');
+                    emit('toast:show', { message: i18n.t('common.demoDataRefreshed') });
                 }
             })
             .catch(console.warn);

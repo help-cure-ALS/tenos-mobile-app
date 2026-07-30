@@ -39,7 +39,8 @@
         "allCountries": "すべての国",
         "demoModeTitle": "デモモード",
         "demoModeMessage": "この機能はデモモードでは利用できません。使用するにはアカウントを作成してください。",
-        "retry": "再試行"
+        "retry": "再試行",
+        "demoDataRefreshed": "デモデータを更新しました"
     },
     "tabs": {
         "overview": "概要",
@@ -1263,7 +1264,12 @@
                 "rejected": "不承認",
                 "revoked": "取り消し",
                 "completed": "終了"
-            }
+            },
+            "endParticipation": "参加を終了",
+            "endParticipationTitle": "参加を終了しますか？",
+            "endParticipationMessage": "このプロジェクトのためのデータ収集は今後行われません。すでに提供された匿名データは研究データセットに残ります。いつでも再度応募できます。",
+            "endParticipationConfirm": "終了",
+            "endParticipationError": "参加を終了できませんでした。後でもう一度お試しください。"
         },
         "doctorSince": "{{specialty}} · {{since}}から",
         "sharedSince": "{{date}}からアクセス",
