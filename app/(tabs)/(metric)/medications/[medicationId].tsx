@@ -111,7 +111,7 @@ export default function MedicationDetailScreen() {
 
     const navigateEdit = (screen: string) => {
         router.push({
-            pathname: `/(tabs)/(metric)/medications/${screen}` as any,
+            pathname: `/metric/medications/${screen}` as any,
             params: { medicationId: medication.id },
         });
     };
@@ -199,7 +199,7 @@ export default function MedicationDetailScreen() {
                                 const now = new Date();
                                 const time = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
                                 router.push({
-                                    pathname: '/(tabs)/(metric)/medications/log',
+                                    pathname: '/metric/medications/log' as any,
                                     params: {
                                         time,
                                         date: now.toISOString(),

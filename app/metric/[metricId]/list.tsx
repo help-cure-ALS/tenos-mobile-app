@@ -9,7 +9,6 @@ import { useAppTheme } from '@/src/theme';
 
 import { useMetric, getValueLabel, type MetricInputType } from '@/src/metrics';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
-import { useMetricBasePath } from '@/src/hooks/useMetricBasePath';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { fmtDateTime } from '@/src/lib/formatDate';
 import { useSharingFilter } from '@/src/hooks/useSharingFilter';
@@ -20,7 +19,6 @@ export default function MetricList() {
     const router = useSafeRouter();
     const insets = useSafeAreaInsets();
     const { metricId } = useLocalSearchParams<{ metricId: string }>();
-    const basePath = useMetricBasePath(metricId);
     const [isEditing, setIsEditing] = useState(false);
     const { isFiltering, isLoaded: sharingLoaded, canSeeMetric } = useSharingFilter();
 
@@ -166,7 +164,7 @@ export default function MetricList() {
                                         <List.Item
                                             title={ entry.title }
                                             subtitle={ entry.subtitle }
-                                            onPress={ () => !isEditing && router.push(`${basePath}/detail/${ entry.id }` as any) }
+                                            onPress={ () => !isEditing && router.push(`/metric/${metricId}/detail/${ entry.id }` as any) }
                                             lastItem={ index === listEntries.length - 1 }
                                         />
                                     </View>

@@ -58,7 +58,7 @@ export default function ALSKingsStageDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsKingsStage/add')}
+                                onPress={() => router.push('/metric/alsKingsStage/add')}
                             />
                         ) : null,
                     }} />
@@ -67,7 +67,7 @@ export default function ALSKingsStageDetailScreen() {
                         <Stack.Screen.Title>{definition?.name ?? "King's Stage"}</Stack.Screen.Title>
                         {canEdit && (
                             <Stack.Toolbar placement="right">
-                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsKingsStage/add')} />
+                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsKingsStage/add')} />
                             </Stack.Toolbar>
                         )}
                     </>
@@ -92,7 +92,7 @@ export default function ALSKingsStageDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsKingsStage/add')}
+                                onPress={() => router.push('/metric/alsKingsStage/add')}
                             />
                         ) : null,
                     }}
@@ -102,7 +102,7 @@ export default function ALSKingsStageDetailScreen() {
                     <Stack.Screen.Title>{definition?.name ?? "King's Stage"}</Stack.Screen.Title>
                     {canEdit && (
                         <Stack.Toolbar placement="right">
-                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsKingsStage/add')} />
+                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsKingsStage/add')} />
                         </Stack.Toolbar>
                     )}
                 </>

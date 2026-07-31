@@ -73,7 +73,7 @@ Patient                          Proxy                         Supplier
   |  [Integration active]          |                              |
 ```
 
-**UI Screen:** `app/(tabs)/share/supplierLink.tsx`
+**UI Screen:** `app/share/supplierLink.tsx`
 **Steps:** Select organization -> Consent (DataSelector) -> Confirm
 
 Prerequisite:
@@ -103,7 +103,7 @@ Supplier                         Proxy                         Patient
   |                                |   [Metadata -> Preferences]  |
 ```
 
-**UI Screen:** `app/(tabs)/share/supplierAccept.tsx`
+**UI Screen:** `app/share/supplierAccept.tsx`
 **Entry point:** QR code scan or deep link (`https://{domain}/link?token=...`)
 
 Auch dieser Flow ist an einen verifizierten ALS-Status gekoppelt. Ohne
@@ -320,10 +320,10 @@ by the `WorkflowPolicy`.
 | Screen                 | Path                                     | Purpose                        |
 | ---------------------- | ---------------------------------------- | ------------------------------ |
 | Share Tab Section      | `app/(tabs)/share/index.tsx`             | Integration list + "New" link  |
-| Supplier Link          | `app/(tabs)/share/supplierLink.tsx`      | Care-backend linking flow      |
-| Supplier Accept        | `app/(tabs)/share/supplierAccept.tsx`    | Partner-app token acceptance   |
-| Supplier Manage        | `app/(tabs)/share/supplierManage.tsx`    | Integration management         |
-| Supplier Inbox         | `app/(tabs)/share/supplierInbox.tsx`     | Proposal inbox                 |
+| Supplier Link          | `app/share/supplierLink.tsx`      | Care-backend linking flow      |
+| Supplier Accept        | `app/share/supplierAccept.tsx`    | Partner-app token acceptance   |
+| Supplier Manage        | `app/share/supplierManage.tsx`    | Integration management         |
+| Supplier Inbox         | `app/share/supplierInbox.tsx`     | Proposal inbox                 |
 | Aid Detail (extended)  | `app/(tabs)/(metric)/aids/[aidId].tsx`   | Supplier info + history        |
 
 ---

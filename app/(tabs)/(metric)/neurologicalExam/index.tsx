@@ -75,7 +75,7 @@ export default function NeurologicalExamDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/neurologicalExam/add')}
+                                onPress={() => router.push('/metric/neurologicalExam/add')}
                             />
                         ) : null,
                     }} />
@@ -84,7 +84,7 @@ export default function NeurologicalExamDetailScreen() {
                         <Stack.Screen.Title>{definition?.name ?? (isDE ? 'Neurologische Untersuchung' : 'Neurological exam')}</Stack.Screen.Title>
                         {canEdit && (
                             <Stack.Toolbar placement="right">
-                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/neurologicalExam/add')} />
+                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/neurologicalExam/add')} />
                             </Stack.Toolbar>
                         )}
                     </>
@@ -109,7 +109,7 @@ export default function NeurologicalExamDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/neurologicalExam/add')}
+                                onPress={() => router.push('/metric/neurologicalExam/add')}
                             />
                         ) : null,
                     }}
@@ -119,7 +119,7 @@ export default function NeurologicalExamDetailScreen() {
                     <Stack.Screen.Title>{definition?.name ?? (isDE ? 'Neurologische Untersuchung' : 'Neurological exam')}</Stack.Screen.Title>
                     {canEdit && (
                         <Stack.Toolbar placement="right">
-                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/neurologicalExam/add')} />
+                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/neurologicalExam/add')} />
                         </Stack.Toolbar>
                     )}
                 </>

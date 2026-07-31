@@ -114,7 +114,7 @@ export default function ALSKingsStageListScreen() {
                                             subtitle={`${fmtDateTime(new Date(entry.assessedAt), isDE)} · ${summarizeALSKingsStage(entry, i18n.language)}`}
                                             subtitleNumberOfLines={3}
                                             hideChevron={isEditing}
-                                            onPress={() => !isEditing && router.push(`/(tabs)/(metric)/alsKingsStage/add?entryId=${entry.id}`)}
+                                            onPress={() => !isEditing && router.push(`/metric/alsKingsStage/add?entryId=${entry.id}`)}
                                             lastItem={index === entries.length - 1}
                                         />
                                     </View>

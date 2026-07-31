@@ -12,6 +12,9 @@ function isIOS26OrLater(): boolean {
     return getIOSVersion() >= 26;
 }
 
+// Modal screens (addDoctor, sharingSettings, supplier*, exports, ...) live in
+// the root-level app/share/ group so they cover the tab bar on Android too.
+// Only card screens remain in this tab stack.
 export default function ShareStackLayout() {
     const { t } = useTranslation();
 
@@ -29,140 +32,8 @@ export default function ShareStackLayout() {
                 }}
             />
             <Stack.Screen
-                name="addDoctor"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: t('share.addDoctor.title'),
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="addCaregiver"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: t('share.addCaregiver.title'),
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="sharingSettings"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
                 name="export"
                 options={{
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="exportFhir"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="exportPdf"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="accessLog"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="supplierLink"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="supplierAccept"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="supplierManage"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="supplierDataPolicy"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: '',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="researchProjects"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerTitle: t('share.research.projectsTitle'),
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="supplierInbox"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
                     headerShown: true,
                     headerTransparent: Platform.OS === 'ios',
                     headerTitle: '',

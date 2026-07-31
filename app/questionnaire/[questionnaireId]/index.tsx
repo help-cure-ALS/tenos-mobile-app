@@ -2,7 +2,7 @@
  * Generic Questionnaire Screen Route
  *
  * Renders any questionnaire based on the questionnaireId parameter.
- * Route: /(tabs)/(metric)/questionnaire/[questionnaireId]
+ * Route: /questionnaire/[questionnaireId]
  */
 
 import React, { useEffect, useMemo } from 'react';

@@ -70,7 +70,7 @@ export default function ALSFRSRList() {
                                 key={entry.id}
                                 title={`${entry.totalScore}/48`}
                                 subtitle={formatDateTime(entry.completedAt)}
-                                onPress={() => router.push(`/(tabs)/(metric)/questionnaire/alsfrs-r?entryId=${entry.id}`)}
+                                onPress={() => router.push(`/questionnaire/alsfrs-r?entryId=${entry.id}`)}
                                 lastItem={index === entries.length - 1}
                             />
                         ))}

@@ -94,7 +94,7 @@ export default function MedicationsScreen() {
                         headerTitle: t('medications.title'),
                         headerLargeTitle: false,
                         headerRight: () => (
-                            <HeaderButton icon="plus" variant="done" onPress={() => router.push('/(tabs)/(metric)/medications/add')} />
+                            <HeaderButton icon="plus" variant="done" onPress={() => router.push('/metric/medications/add' as any)} />
                         )
                     } }
                 />
@@ -103,7 +103,7 @@ export default function MedicationsScreen() {
                     <Stack.Screen options={ { headerLargeTitle: false } } />
                     <Stack.Screen.Title>{t('medications.title')}</Stack.Screen.Title>
                     <Stack.Toolbar placement="right">
-                        <Stack.Toolbar.Button icon="plus" variant="done" onPress={() => router.push('/(tabs)/(metric)/medications/add')} />
+                        <Stack.Toolbar.Button icon="plus" variant="done" onPress={() => router.push('/metric/medications/add' as any)} />
                     </Stack.Toolbar>
                 </>
             )}
@@ -184,7 +184,7 @@ export default function MedicationsScreen() {
                                         style={ [styles.slotCard, { backgroundColor: colors.listItemBackgroundMuted }] }
                                         onPress={ () =>
                                             router.push({
-                                                pathname: '/(tabs)/(metric)/medications/log',
+                                                pathname: '/metric/medications/log' as any,
                                                 params: { time: slot.time, date: selectedDate.toISOString() }
                                             })
                                         }
@@ -259,7 +259,7 @@ export default function MedicationsScreen() {
                                                     const now = new Date();
                                                     const time = `${ String(now.getHours()).padStart(2, '0') }:${ String(now.getMinutes()).padStart(2, '0') }`;
                                                     router.push({
-                                                        pathname: '/(tabs)/(metric)/medications/log',
+                                                        pathname: '/metric/medications/log' as any,
                                                         params: {
                                                             time,
                                                             date: now.toISOString(),
@@ -324,7 +324,7 @@ export default function MedicationsScreen() {
                         <View style={ styles.footerGap }>
                             <Button
                                 title={ t('medications.newMedication') }
-                                onPress={ () => router.push('/(tabs)/(metric)/medications/add') }
+                                onPress={ () => router.push('/metric/medications/add' as any) }
                                 rounded
                             />
                         </View>

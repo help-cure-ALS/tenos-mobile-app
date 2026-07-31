@@ -77,7 +77,7 @@ export default function ALSGeneticBackgroundDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsGeneticBackground/add')}
+                                onPress={() => router.push('/metric/alsGeneticBackground/add')}
                             />
                         ) : null,
                     }} />
@@ -86,7 +86,7 @@ export default function ALSGeneticBackgroundDetailScreen() {
                         <Stack.Screen.Title>{definition?.name ?? (isDE ? 'ALS-Form & Genetik' : 'ALS form & genetics')}</Stack.Screen.Title>
                         {canEdit && (
                             <Stack.Toolbar placement="right">
-                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsGeneticBackground/add')} />
+                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsGeneticBackground/add')} />
                             </Stack.Toolbar>
                         )}
                     </>
@@ -111,7 +111,7 @@ export default function ALSGeneticBackgroundDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsGeneticBackground/add')}
+                                onPress={() => router.push('/metric/alsGeneticBackground/add')}
                             />
                         ) : null,
                     }}
@@ -121,7 +121,7 @@ export default function ALSGeneticBackgroundDetailScreen() {
                     <Stack.Screen.Title>{definition?.name ?? (isDE ? 'ALS-Form & Genetik' : 'ALS form & genetics')}</Stack.Screen.Title>
                     {canEdit && (
                         <Stack.Toolbar placement="right">
-                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsGeneticBackground/add')} />
+                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsGeneticBackground/add')} />
                         </Stack.Toolbar>
                     )}
                 </>

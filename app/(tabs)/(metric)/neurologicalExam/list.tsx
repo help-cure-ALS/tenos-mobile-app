@@ -114,7 +114,7 @@ export default function NeurologicalExamListScreen() {
                                             subtitle={`${fmtDateTime(new Date(entry.assessedAt), isDE)} · ${summarizeNeurologicalExam(entry, i18n.language)}`}
                                             subtitleNumberOfLines={3}
                                             hideChevron={isEditing}
-                                            onPress={() => !isEditing && router.push(`/(tabs)/(metric)/neurologicalExam/add?entryId=${entry.id}`)}
+                                            onPress={() => !isEditing && router.push(`/metric/neurologicalExam/add?entryId=${entry.id}`)}
                                             lastItem={index === entries.length - 1}
                                         />
                                     </View>

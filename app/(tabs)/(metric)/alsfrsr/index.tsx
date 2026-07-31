@@ -236,7 +236,7 @@ export default function ALSFRSRDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/questionnaire/alsfrs-r')}
+                                onPress={() => router.push('/questionnaire/alsfrs-r')}
                             />
                         )
                     } }
@@ -245,7 +245,7 @@ export default function ALSFRSRDetailScreen() {
                 <>
                     <Stack.Screen.Title>{definition.name}</Stack.Screen.Title>
                     <Stack.Toolbar placement="right">
-                        <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/questionnaire/alsfrs-r')} />
+                        <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/questionnaire/alsfrs-r')} />
                     </Stack.Toolbar>
                 </>
             )}
@@ -402,7 +402,7 @@ export default function ALSFRSRDetailScreen() {
                                 <View style={ styles.progressHeader }>
                                     <Text
                                         style={ [styles.progressTitle, { color: colors.text }] }>{ t('progressRate.title') }</Text>
-                                    <Pressable onPress={ () => router.push('/(tabs)/(metric)/progressRateInfo') }
+                                    <Pressable onPress={ () => router.push('/metric/progressRateInfo') }
                                                hitSlop={ 12 }>
                                         <AppIcon
                                             name="questionmark.circle.fill"
@@ -558,7 +558,7 @@ export default function ALSFRSRDetailScreen() {
                                         size={ 24 }
                                     />
                                 }
-                                onPress={ () => router.push('/(tabs)/(metric)/questionnaire/alsfrs-r') }
+                                onPress={ () => router.push('/questionnaire/alsfrs-r') }
                                 lastItem
                             />
                         </List.Section>

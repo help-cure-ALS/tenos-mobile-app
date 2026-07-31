@@ -121,7 +121,7 @@ function AidsListContent() {
             Alert.alert(t('common.demoModeTitle'), t('common.demoModeMessage'), [{ text: t('common.ok') }]);
             return;
         }
-        router.push('/(tabs)/(metric)/aids/supplierLink');
+        router.push('/share/supplierLink' as any);
     }, [isDemo, router, t]);
 
     const filterChips: { key: StatusFilter; label: string }[] = [
@@ -156,7 +156,7 @@ function AidsListContent() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/aids/add')}
+                                onPress={() => router.push('/metric/aids/add')}
                             />
                         )
                     } }
@@ -166,7 +166,7 @@ function AidsListContent() {
                     <Stack.Screen options={ { headerLargeTitle: false } } />
                     <Stack.Screen.Title>{t('navigation.aids')}</Stack.Screen.Title>
                     <Stack.Toolbar placement="right">
-                        <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/aids/add')} />
+                        <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/aids/add')} />
                     </Stack.Toolbar>
                 </>
             )}
@@ -248,8 +248,8 @@ function AidsListContent() {
                                             <Badge label={ String(proposalCounts[integration.id]) } variant="error" />
                                         ) : undefined }
                                         onPress={ () => router.push({
-                                            pathname: '/(tabs)/(metric)/aids/supplierManage',
-                                            params: { integrationId: integration.id, origin: 'aids' }
+                                            pathname: '/share/supplierManage' as any,
+                                            params: { integrationId: integration.id }
                                         }) }
                                         lastItem={ idx === supplierIntegrations.length - 1 }
                                     />

@@ -114,7 +114,7 @@ export default function ALSSubtypeListScreen() {
                                             subtitle={`${fmtDateTime(new Date(entry.assessedAt), isDE)} · ${summarizeALSSubtype(entry, i18n.language)}`}
                                             subtitleNumberOfLines={3}
                                             hideChevron={isEditing}
-                                            onPress={() => !isEditing && router.push(`/(tabs)/(metric)/alsSubtype/add?entryId=${entry.id}`)}
+                                            onPress={() => !isEditing && router.push(`/metric/alsSubtype/add?entryId=${entry.id}`)}
                                             lastItem={index === entries.length - 1}
                                         />
                                     </View>

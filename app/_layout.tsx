@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { AppState, LogBox } from 'react-native';
+import { AppState, LogBox, Platform } from 'react-native';
 import { Stack, useRouter, router as expoRouter } from 'expo-router';
 import * as Notifications from 'expo-notifications';
 import * as Updates from 'expo-updates';
@@ -57,6 +57,51 @@ Notifications.setNotificationHandler({
         };
     },
 });
+
+function getIOSVersion(): number {
+    if (Platform.OS !== 'ios') return 0;
+
+    return parseInt(Platform.Version as string, 10);
+}
+
+function isIOS26OrLater(): boolean {
+    return getIOSVersion() >= 26;
+}
+
+// Shared options for root-level modal screens. They live at the root (not
+// inside the tab stacks) so they cover the native tab bar on Android too.
+function rootModalOptions(headerTitle = '') {
+    return {
+        presentation: 'modal' as const,
+        animation: 'slide_from_bottom' as const,
+        headerShown: true,
+        headerTransparent: Platform.OS === 'ios',
+        headerTitle,
+        headerBackButtonDisplayMode: 'minimal' as const,
+        headerBlurEffect: isIOS26OrLater() ? undefined : ('regular' as const),
+    };
+}
+
+// formSheet on iOS, plain modal on Android (used for detail/settings sheets)
+function rootSheetOrModalOptions(headerTitle = '') {
+    return {
+        ...rootModalOptions(headerTitle),
+        presentation: (Platform.OS === 'ios' ? 'formSheet' : 'modal') as 'formSheet' | 'modal',
+        sheetCornerRadius: 24,
+    };
+}
+
+// Root-level formSheet screens (wizard steps like schedule type / duration)
+function rootFormSheetOptions(detent: number) {
+    return {
+        presentation: 'formSheet' as const,
+        sheetAllowedDetents: [detent],
+        sheetGrabberVisible: true,
+        headerShown: true,
+        headerTransparent: Platform.OS === 'ios',
+        headerBlurEffect: isIOS26OrLater() ? undefined : ('regular' as const),
+    };
+}
 
 // After this duration in background, reset navigation to the home tab
 const NAV_RESET_THRESHOLD_MS = 60 * 60_000; // 1 hour
@@ -227,6 +272,156 @@ function RootLayoutNav() {
                                                                     } }
                                                                 />
                                                                 <Stack.Screen
+                                                                    name="share/addDoctor"
+                                                                    options={ rootModalOptions(i18n.t('share.addDoctor.title')) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/addCaregiver"
+                                                                    options={ rootModalOptions(i18n.t('share.addCaregiver.title')) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/sharingSettings"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/exportFhir"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/exportPdf"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/accessLog"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/supplierLink"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/supplierAccept"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/supplierManage"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/supplierDataPolicy"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/supplierInbox"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="share/researchProjects"
+                                                                    options={ rootModalOptions(i18n.t('share.research.projectsTitle')) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(i18n.t('navigation.newMedication')),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/log"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/editSchedule"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/editDetails"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/scheduleType"
+                                                                    options={ rootFormSheetOptions(0.6) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/medications/duration"
+                                                                    options={ rootFormSheetOptions(0.4) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/[metricId]/add"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/[metricId]/detail/[entryId]"
+                                                                    options={ rootSheetOrModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/alsSubtype/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/neurologicalExam/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/alsKingsStage/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/alsGeneticBackground/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/progressRateInfo"
+                                                                    options={ rootModalOptions() }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/todoSettings"
+                                                                    options={ rootSheetOrModalOptions(i18n.t('todo.settingsTitle')) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/pinOrder"
+                                                                    options={ rootSheetOrModalOptions(i18n.t('navigation.pinOrder')) }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/studies/clinicPicker"
+                                                                    options={ {
+                                                                        ...rootModalOptions(i18n.t('studies.clinicPickerTitle', 'Ambulanzen auswählen')),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="metric/aids/add"
+                                                                    options={ {
+                                                                        ...rootModalOptions(i18n.t('navigation.newAid')),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="questionnaire/[questionnaireId]/index"
+                                                                    options={ {
+                                                                        ...rootModalOptions(),
+                                                                        gestureEnabled: false
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
                                                                     name="onboarding"
                                                                     options={ {
                                                                         animation: 'fade',
@@ -318,7 +513,7 @@ function NotificationResponseRouter() {
 
                 if (time) {
                     openMedicationRoute({
-                        pathname: '/(tabs)/(metric)/medications/log',
+                        pathname: '/metric/medications/log' as any,
                         params: {
                             time,
                             date: scheduledFor,

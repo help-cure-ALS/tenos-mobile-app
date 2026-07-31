@@ -46,7 +46,7 @@ function SupplierManageContent() {
     const { patientPreferencesStore: store, supplierExchangeStore } = usePatientStores();
     const { isDemo } = useAppRole();
     const fhirRepo = useFhirRepo();
-    const { integrationId, origin } = useLocalSearchParams<{ integrationId: string; origin?: string }>();
+    const { integrationId } = useLocalSearchParams<{ integrationId: string }>();
     const { proposalCounts } = useSupplierProposalCounts();
     const locale = i18n.language === 'de' ? 'de-DE' : 'en-US';
 
@@ -178,9 +178,7 @@ function SupplierManageContent() {
                     <List.Item
                         title={t('supplier.dataPolicy')}
                         onPress={() => router.push({
-                            pathname: origin === 'aids'
-                                ? '/(tabs)/(metric)/aids/supplierDataPolicy'
-                                : '/(tabs)/share/supplierDataPolicy',
+                            pathname: '/share/supplierDataPolicy' as any,
                             params: { integrationId: integrationId! },
                         })}
                     />
@@ -226,9 +224,7 @@ function SupplierManageContent() {
                             <Badge label={String(proposalCount)} variant="error" />
                         ) : undefined}
                         onPress={() => router.push({
-                            pathname: origin === 'aids'
-                                ? '/(tabs)/(metric)/aids/supplierInbox'
-                                : '/(tabs)/share/supplierInbox',
+                            pathname: '/share/supplierInbox' as any,
                             params: { integrationId: integrationId! },
                         })}
                         lastItem

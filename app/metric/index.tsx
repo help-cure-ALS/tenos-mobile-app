@@ -272,7 +272,7 @@ export default function Metric() {
                                     <SectionTitle
                                         title={ t('metric.pinned') }
                                         rightCmp={
-                                            <Pressable onPress={ () => router.push('/(tabs)/(metric)/pinOrder') }>
+                                            <Pressable onPress={ () => router.push('/metric/pinOrder') }>
                                                 <Text variant="bodyMedium" color="hint">{ t('metric.reorderLink') }</Text>
                                             </Pressable>
                                         }
@@ -288,7 +288,7 @@ export default function Metric() {
                                                             key={ definition.id }
                                                             onPress={ () => router.push('/(tabs)/(metric)/alsfrsr') }
                                                             onLongPress={ () => handleUnpinMetric(definition.id, definition.name) }
-                                                            onProgressInfoPress={ () => router.push('/(tabs)/(metric)/progressRateInfo') }
+                                                            onProgressInfoPress={ () => router.push('/metric/progressRateInfo') }
                                                         />
                                                     );
                                                 }
@@ -299,7 +299,7 @@ export default function Metric() {
                                                             onPress={ () => router.push('/(tabs)/(metric)/tdee') }
                                                             onLongPress={ () => handleUnpinMetric(definition.id, definition.name) }
                                                             onMissingDataPress={ () => router.push('/settings/profile') }
-                                                            onMissingALSFRSPress={ () => router.push('/(tabs)/(metric)/questionnaire/alsfrs-r') }
+                                                            onMissingALSFRSPress={ () => router.push('/questionnaire/alsfrs-r') }
                                                         />
                                                     );
                                                 }

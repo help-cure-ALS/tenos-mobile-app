@@ -51,7 +51,7 @@ export default function CategoryScreen() {
                                 <ALSFRSCardWrapper
                                     key={definition.id}
                                     onPress={() => router.push('/(tabs)/(metric)/alsfrsr')}
-                                    onProgressInfoPress={() => router.push('/(tabs)/(metric)/progressRateInfo')}
+                                    onProgressInfoPress={() => router.push('/metric/progressRateInfo')}
                                 />
                             );
                         }
@@ -61,7 +61,7 @@ export default function CategoryScreen() {
                                     key={definition.id}
                                     onPress={() => router.push('/(tabs)/(metric)/tdee')}
                                     onMissingDataPress={() => router.push('/settings/profile')}
-                                    onMissingALSFRSPress={() => router.push('/(tabs)/(metric)/questionnaire/alsfrs-r')}
+                                    onMissingALSFRSPress={() => router.push('/questionnaire/alsfrs-r')}
                                 />
                             );
                         }

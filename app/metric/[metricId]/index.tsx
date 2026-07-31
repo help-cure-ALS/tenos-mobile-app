@@ -116,7 +116,7 @@ export default function MetricDetail() {
                             headerRight: () => (
                                 <HeaderButton
                                     title={t('shared.save')}
-                                    onPress={() => router.push(`${basePath}/add` as any)}
+                                    onPress={() => router.push(`/metric/${metricId}/add` as any)}
                                     icon="plus"
                                     variant="done"
                                 />
@@ -127,7 +127,7 @@ export default function MetricDetail() {
                     <>
                         <Stack.Screen.Title>{ displayDefinition.name }</Stack.Screen.Title>
                         <Stack.Toolbar placement="right">
-                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push(`${basePath}/add` as any)} />
+                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push(`/metric/${metricId}/add` as any)} />
                         </Stack.Toolbar>
                     </>
                 )

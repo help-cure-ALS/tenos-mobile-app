@@ -216,13 +216,13 @@ export default function QuestionnairesScreen() {
         latestEntryId?: string,
     ) => {
         if (available) {
-            router.push(`/(tabs)/(metric)/questionnaire/${definition.id}`);
+            router.push(`/questionnaire/${definition.id}`);
             return;
         }
 
         // If not available but has a completed entry, open in readonly mode
         if (latestEntryId) {
-            router.push(`/(tabs)/(metric)/questionnaire/${definition.id}?entryId=${latestEntryId}`);
+            router.push(`/questionnaire/${definition.id}?entryId=${latestEntryId}`);
             return;
         }
 
@@ -246,7 +246,7 @@ export default function QuestionnairesScreen() {
         definition: QuestionnaireDefinition,
         entryId: string,
     ) => {
-        router.push(`/(tabs)/(metric)/questionnaire/${definition.id}?entryId=${entryId}`);
+        router.push(`/questionnaire/${definition.id}?entryId=${entryId}`);
     }, [router]);
 
     const renderFilterChips = useCallback(() => (

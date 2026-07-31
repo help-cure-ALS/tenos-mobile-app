@@ -46,17 +46,6 @@ export default function SearchStackLayout() {
                 }}
             />
             <Stack.Screen
-                name="[metricId]/add"
-                options={{
-                    presentation: 'modal',
-                    animation: 'slide_from_bottom',
-                    headerTitle: '',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
                 name="[metricId]/unit"
                 options={{
                     headerShown: true,
@@ -77,17 +66,6 @@ export default function SearchStackLayout() {
                 options={{
                     headerShown: true,
                     headerTransparent: Platform.OS === 'ios',
-                    headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
-                }}
-            />
-            <Stack.Screen
-                name="[metricId]/detail/[entryId]"
-                options={{
-                    presentation: Platform.OS === 'ios' ? 'formSheet' : 'modal',
-                    animation: 'slide_from_bottom',
-                    headerShown: true,
-                    headerTransparent: Platform.OS === 'ios',
-                    sheetCornerRadius: 24,
                     headerBlurEffect: isIOS26OrLater() ? undefined : 'regular',
                 }}
             />

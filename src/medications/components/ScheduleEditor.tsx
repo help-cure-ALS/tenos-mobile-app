@@ -152,7 +152,7 @@ export function ScheduleEditor({
                     <Pressable
                         onPress={() =>
                             router.push({
-                                pathname: '/(tabs)/(metric)/medications/scheduleType',
+                                pathname: '/metric/medications/scheduleType' as any,
                                 params: { current: scheduleType },
                             })
                         }
@@ -380,7 +380,7 @@ export function ScheduleEditor({
                     <Pressable
                         onPress={() =>
                             router.push({
-                                pathname: '/(tabs)/(metric)/medications/duration',
+                                pathname: '/metric/medications/duration' as any,
                                 params: {
                                     startDate: startDate.toISOString(),
                                     endDate: endDate ? endDate.toISOString() : 'null',

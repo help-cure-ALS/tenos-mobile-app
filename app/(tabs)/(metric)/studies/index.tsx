@@ -284,7 +284,7 @@ export default function StudiesScreen() {
 
     const handleClinicFilter = useCallback(() => {
         router.push({
-            pathname: '/(tabs)/(metric)/studies/clinicPicker',
+            pathname: '/metric/studies/clinicPicker',
             params: { selected: filterClinicIds?.join(',') ?? '' },
         });
     }, [filterClinicIds, router]);

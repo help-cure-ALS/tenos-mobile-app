@@ -51,7 +51,7 @@ export default function ExportScreen() {
                             leftCmp={ <ListItemIcon name="doc.text.fill" color={ colors.textPrimary }
                                                     backgroundColor={ colors.listItemBackgroundMuted } /> }
                             subtitle={ t('share.exportPdfSubtitle') }
-                            onPress={ () => router.push('/(tabs)/share/exportPdf') }
+                            onPress={ () => router.push('/share/exportPdf' as any) }
                         />
                         <List.Item
                             title={ t('share.exportFhir') }
@@ -59,7 +59,7 @@ export default function ExportScreen() {
                             leftCmpSize={ 32 }
                             leftCmp={ <ListItemIcon name="cross.case.fill" color={ colors.textPrimary }
                                                     backgroundColor={ colors.listItemBackgroundMuted } /> }
-                            onPress={ () => router.push('/(tabs)/share/exportFhir') }
+                            onPress={ () => router.push('/share/exportFhir' as any) }
                             lastItem
                         />
                     </List.Section>

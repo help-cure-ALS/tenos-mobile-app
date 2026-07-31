@@ -121,7 +121,7 @@ export default function Share() {
             showDemoAlert();
             return;
         }
-        router.push('/(tabs)/share/addDoctor');
+        router.push('/share/addDoctor' as any);
     };
 
     const handleShareWithCaregiver = () => {
@@ -130,7 +130,7 @@ export default function Share() {
             showDemoAlert();
             return;
         }
-        router.push('/(tabs)/share/addCaregiver');
+        router.push('/share/addCaregiver' as any);
     };
 
     const handleLinkSupplier = () => {
@@ -140,7 +140,7 @@ export default function Share() {
             showDemoAlert();
             return;
         }
-        router.push('/(tabs)/share/supplierLink');
+        router.push('/share/supplierLink' as any);
     };
 
     const handleSettings = useCallback(() => {
@@ -261,7 +261,7 @@ export default function Share() {
                             rightCmp={ canManageSharing ? (
                                 <Pressable
                                     onPress={ () => router.push({
-                                        pathname: '/(tabs)/share/sharingSettings',
+                                        pathname: '/share/sharingSettings' as any,
                                         params: {
                                             role: 'doctor',
                                             name: sharedWithDoctors[0]?.name ?? '',
@@ -287,7 +287,7 @@ export default function Share() {
                                         }) }
                                         onPress={ canManageSharing
                                             ? () => router.push({
-                                                pathname: '/(tabs)/share/accessLog',
+                                                pathname: '/share/accessLog' as any,
                                                 params: { role: 'doctor', name: entry.name, deviceId: entry.device_id }
                                             })
                                             : undefined }
@@ -310,7 +310,7 @@ export default function Share() {
                             rightCmp={ canManageSharing ? (
                                 <Pressable
                                     onPress={ () => router.push({
-                                        pathname: '/(tabs)/share/sharingSettings',
+                                        pathname: '/share/sharingSettings' as any,
                                         params: {
                                             role: 'caregiver',
                                             name: sharedWithCaregivers[0]?.name ?? '',
@@ -336,7 +336,7 @@ export default function Share() {
                                         }) }
                                         onPress={ canManageSharing
                                             ? () => router.push({
-                                                pathname: '/(tabs)/share/accessLog',
+                                                pathname: '/share/accessLog' as any,
                                                 params: {
                                                     role: 'caregiver',
                                                     name: entry.name,
@@ -367,7 +367,7 @@ export default function Share() {
                                             showDemoAlert();
                                             return;
                                         }
-                                        router.push('/researchProjects');
+                                        router.push('/share/researchProjects' as any);
                                     } }
                                     hitSlop={ 8 }
                                 >
@@ -385,7 +385,7 @@ export default function Share() {
                                 leftCmp={<ListItemIcon name="waveform.path.ecg.rectangle" color={colors.textPrimary} backgroundColor={colors.listItemBackgroundMuted} size="md" />}
                                 onPress={ canManageSharing
                                     ? () => router.push({
-                                        pathname: '/(tabs)/share/sharingSettings',
+                                        pathname: '/share/sharingSettings' as any,
                                         params: { role: 'research' }
                                     })
                                     : undefined }
@@ -440,7 +440,7 @@ export default function Share() {
                                                 <Badge label={String(proposalCounts[integration.id])} variant="error" />
                                             ) : undefined}
                                             onPress={ () => router.push({
-                                                pathname: '/(tabs)/share/supplierManage',
+                                                pathname: '/share/supplierManage' as any,
                                                 params: { integrationId: integration.id }
                                             }) }
                                         />

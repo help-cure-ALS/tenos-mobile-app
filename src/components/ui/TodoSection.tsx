@@ -102,9 +102,9 @@ export function TodoSection({ style }: { style?: import('react-native').ViewStyl
 
     const handleItemPress = (item: TodoItem) => {
         if (item.type === 'metric') {
-            router.push(`/(tabs)/(metric)/${item.id}/add` as any);
+            router.push(`/metric/${item.id}/add` as any);
         } else {
-            router.push(`/(tabs)/(metric)/questionnaire/${item.id}` as any);
+            router.push(`/questionnaire/${item.id}` as any);
         }
     };
 
@@ -120,19 +120,19 @@ export function TodoSection({ style }: { style?: import('react-native').ViewStyl
 
         if (item.type === 'metric') {
             router.push({
-                pathname: `/(tabs)/(metric)/${item.id}/add` as any,
+                pathname: `/metric/${item.id}/add` as any,
                 params: { effectiveDate: dateParam },
             });
         } else {
             router.push({
-                pathname: `/(tabs)/(metric)/questionnaire/${item.id}` as any,
+                pathname: `/questionnaire/${item.id}` as any,
                 params: { effectiveDate: dateParam },
             });
         }
     };
 
     const handleSettings = () => {
-        router.push('/(tabs)/(metric)/todoSettings' as any);
+        router.push('/metric/todoSettings' as any);
     };
 
     return (

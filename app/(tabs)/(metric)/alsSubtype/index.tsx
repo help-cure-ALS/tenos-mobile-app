@@ -51,7 +51,7 @@ export default function ALSSubtypeDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsSubtype/add')}
+                                onPress={() => router.push('/metric/alsSubtype/add')}
                             />
                         ) : null,
                     }} />
@@ -60,7 +60,7 @@ export default function ALSSubtypeDetailScreen() {
                         <Stack.Screen.Title>{definition?.name ?? 'ALS-Subtyp'}</Stack.Screen.Title>
                         {canEdit && (
                             <Stack.Toolbar placement="right">
-                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsSubtype/add')} />
+                                <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsSubtype/add')} />
                             </Stack.Toolbar>
                         )}
                     </>
@@ -85,7 +85,7 @@ export default function ALSSubtypeDetailScreen() {
                             <HeaderButton
                                 icon="plus"
                                 variant="done"
-                                onPress={() => router.push('/(tabs)/(metric)/alsSubtype/add')}
+                                onPress={() => router.push('/metric/alsSubtype/add')}
                             />
                         ) : null,
                     }}
@@ -95,7 +95,7 @@ export default function ALSSubtypeDetailScreen() {
                     <Stack.Screen.Title>{definition?.name ?? 'ALS-Subtyp'}</Stack.Screen.Title>
                     {canEdit && (
                         <Stack.Toolbar placement="right">
-                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/(tabs)/(metric)/alsSubtype/add')} />
+                            <Stack.Toolbar.Button icon="plus" variant="done" tintColor={colors.textPrimary} onPress={() => router.push('/metric/alsSubtype/add')} />
                         </Stack.Toolbar>
                     )}
                 </>
