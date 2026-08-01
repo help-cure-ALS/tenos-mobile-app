@@ -1,1 +1,1 @@
-Przebudowana sekcja projektów badawczych. Ulepszony tryb demo. Poprawki błędów i ulepszenia.
+Bardziej niezawodna i szybsza synchronizacja przy łączeniu nowych urządzeń. Przebudowana sekcja projektów badawczych. Poprawki błędów i ulepszenia.

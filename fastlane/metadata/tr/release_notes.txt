@@ -1,1 +1,1 @@
-Araştırma projeleri bölümü yenilendi. Demo modu iyileştirildi. Hata düzeltmeleri ve iyileştirmeler.
+Yeni cihazlar bağlanırken daha güvenilir ve hızlı eşitleme. Araştırma projeleri bölümü yenilendi. Hata düzeltmeleri ve iyileştirmeler.

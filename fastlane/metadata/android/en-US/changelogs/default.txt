@@ -1,1 +1,1 @@
-Reworked research projects area. Improved demo mode. Bug fixes and improvements.
+More reliable and faster syncing when connecting new devices. Reworked research projects area. Bug fixes and improvements.

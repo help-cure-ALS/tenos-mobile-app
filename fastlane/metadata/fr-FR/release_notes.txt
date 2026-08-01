@@ -1,1 +1,1 @@
-Espace projets de recherche repensé. Mode démo amélioré. Corrections de bugs et améliorations.
+Synchronisation plus fiable et plus rapide lors de la connexion de nouveaux appareils. Espace projets de recherche repensé. Corrections de bugs et améliorations.

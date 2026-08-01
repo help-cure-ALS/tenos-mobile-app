@@ -1,1 +1,1 @@
-Secțiunea proiectelor de cercetare reproiectată. Mod demo îmbunătățit. Corecturi de erori și îmbunătățiri.
+Sincronizare mai fiabilă și mai rapidă la conectarea dispozitivelor noi. Secțiunea proiectelor de cercetare reproiectată. Corecturi de erori și îmbunătățiri.

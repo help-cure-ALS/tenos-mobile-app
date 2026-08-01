@@ -1,1 +1,1 @@
-Vernieuwd gedeelte voor onderzoeksprojecten. Verbeterde demomodus. Bugfixes en verbeteringen.
+Betrouwbaardere en snellere synchronisatie bij het koppelen van nieuwe apparaten. Vernieuwd gedeelte voor onderzoeksprojecten. Bugfixes en verbeteringen.

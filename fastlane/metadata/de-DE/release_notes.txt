@@ -1,1 +1,1 @@
-Überarbeiteter Bereich für Forschungsprojekte. Verbesserter Demo-Modus. Fehlerbehebungen und Verbesserungen.
+Zuverlässigere und schnellere Synchronisierung beim Verbinden neuer Geräte. Überarbeiteter Bereich für Forschungsprojekte. Fehlerbehebungen und Verbesserungen.
