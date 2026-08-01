@@ -354,7 +354,10 @@
             "clipboardEmptyMessage": "Copiez d'abord le bundle d'association depuis l'autre appareil.",
             "invalidData": "Données invalides",
             "invalidDataMessage": "Le presse-papiers ne contient pas de JSON valide.",
-            "bundleKeyUnavailable": "Le bundle d'association ne peut pas être déchiffré pour le moment. Vérifiez la connexion ou créez un nouveau code QR."
+            "bundleKeyUnavailable": "Le bundle d'association ne peut pas être déchiffré pour le moment. Vérifiez la connexion ou créez un nouveau code QR.",
+            "syncingTitle": "Synchronisation des données",
+            "syncingMessage": "Vos données de santé sont en cours de transfert vers cet appareil. Cela peut prendre un moment.",
+            "syncingProgress": "{{total}} entrées transférées"
         },
         "mnemonic": {
             "title": "Mots de récupération",
@@ -481,7 +484,9 @@
             "pasteFromClipboard": "Coller depuis le presse-papiers",
             "clipboardEmpty": "Presse-papiers vide",
             "clipboardEmptyMessage": "Aucune donnée dans le presse-papiers. Copiez d'abord le code d'accès.",
-            "bundleKeyUnavailable": "Le code d'accès ne peut pas être vérifié pour le moment. Vérifiez la connexion ou demandez un nouveau code QR."
+            "bundleKeyUnavailable": "Le code d'accès ne peut pas être vérifié pour le moment. Vérifiez la connexion ou demandez un nouveau code QR.",
+            "syncingTitle": "Synchronisation des données",
+            "syncingMessage": "Les données de santé sont en cours de transfert vers cet appareil. Cela peut prendre un moment."
         },
         "createPatient": {
             "title": "Créer une nouvelle personne",

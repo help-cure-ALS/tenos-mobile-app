@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Kopieer eerst de koppelbundel van het andere apparaat.",
             "invalidData": "Ongeldige gegevens",
             "invalidDataMessage": "Het klembord bevat geen geldige JSON.",
-            "bundleKeyUnavailable": "De koppelbundel kan nu niet worden ontsleuteld. Controleer je verbinding of maak een nieuwe QR-code."
+            "bundleKeyUnavailable": "De koppelbundel kan nu niet worden ontsleuteld. Controleer je verbinding of maak een nieuwe QR-code.",
+            "syncingTitle": "Gegevens synchroniseren",
+            "syncingMessage": "Je gezondheidsgegevens worden naar dit apparaat overgezet. Dit kan even duren.",
+            "syncingProgress": "{{total}} items overgezet"
         },
         "mnemonic": {
             "title": "Herstelwoorden",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Plakken vanaf klembord",
             "clipboardEmpty": "Klembord leeg",
             "clipboardEmptyMessage": "Er staan geen gegevens op het klembord. Kopieer eerst de toegangscode.",
-            "bundleKeyUnavailable": "De toegangscode kan nu niet worden gecontroleerd. Controleer de verbinding of vraag een nieuwe QR-code aan."
+            "bundleKeyUnavailable": "De toegangscode kan nu niet worden gecontroleerd. Controleer de verbinding of vraag een nieuwe QR-code aan.",
+            "syncingTitle": "Gegevens synchroniseren",
+            "syncingMessage": "De gezondheidsgegevens worden naar dit apparaat overgezet. Dit kan even duren."
         },
         "createPatient": {
             "title": "Nieuwe persoon aanmaken",

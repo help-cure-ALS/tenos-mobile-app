@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
+    ActivityIndicator,
     Alert,
     ImageBackground,
     Platform,
@@ -13,7 +14,7 @@ import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import * as Clipboard from 'expo-clipboard';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useAppTheme } from '@/src/theme';
-import { useAppRole } from '@/src/context/AppRoleProvider';
+import { useActivePatientId, useAppRole } from '@/src/context/AppRoleProvider';
 import { useAppSync } from '@/src/context/AppSyncProvider';
 import { createDeviceAccessStore } from '@/src/stores/deviceAccessStore';
 import { getOwnedPatientStore } from '@/src/stores/ownedPatientStore';
@@ -27,6 +28,14 @@ import { getKeyProvider } from '@/src/services/keyProvider';
 import { useTranslation } from 'react-i18next';
 import { ScreenHeader } from "@/src/components/ui/ScreenHeader";
 import { BundleCipherError, decryptBundle } from '@/src/lib/medical-sync-vault/crypto/bundleCipher';
+import { on } from '@/src/lib/bus';
+import {
+    beginInitialSyncWait,
+    claimInitialSyncNavigation,
+    clearInitialSyncWait,
+    isInitialSyncWaitPending,
+    waitForInitialSync,
+} from '@/src/sync/initialSyncWait';
 import { validateBundleFreshness } from '@/src/lib/medical-sync-vault/crypto/bundleFreshness';
 import { storeMnemonic } from '@/src/lib/medical-sync-vault/crypto/mnemonicStore';
 import { deriveKeysFromMnemonic } from '@/src/lib/medical-sync-vault/crypto/mnemonic';
@@ -109,11 +118,18 @@ export default function PatientScanScreen() {
     const { t } = useTranslation();
     const insets = useSafeAreaInsets();
     const { setPatient } = useAppRole();
+    const activePatientId = useActivePatientId();
     const { activateIdentity } = useAppSync();
     const { setAuthLockEnabled } = useAuthLock();
     const router = useSafeRouter();
 
     const [isLoading, setIsLoading] = useState(false);
+    const [isSyncing, setIsSyncing] = useState(false);
+    // True when this instance was mounted by the mid-pairing remount and
+    // must keep showing the sync-wait state (see initialSyncWait)
+    const [resumedSyncWait] = useState(() => isInitialSyncWaitPending());
+    // Cumulative event count from 'sync:progress' shown on the wait screen
+    const [syncedCount, setSyncedCount] = useState(0);
     const [error, setError] = useState<string | null>(null);
     const [enableFaceId] = useState(false);
 
@@ -130,6 +146,42 @@ export default function PatientScanScreen() {
             requestPermission();
         }
     }, []);
+
+    // Live progress on the wait screen (updates per applied page)
+    useEffect(() => {
+        return on<{ pulled: number }>('sync:progress', (payload) => {
+            if (typeof payload?.pulled === 'number') {
+                setSyncedCount(payload.pulled);
+            }
+        });
+    }, []);
+
+    // Remount continuation: the original importBundle closure keeps running
+    // and navigates after the sync — but if it died (real process restart),
+    // this instance must finish the wait itself. Both waiters race on
+    // claimInitialSyncNavigation, only one navigates.
+    useEffect(() => {
+        if (!resumedSyncWait) return;
+        let cancelled = false;
+        waitForInitialSync().then(() => {
+            if (cancelled) return;
+            if (claimInitialSyncNavigation()) {
+                router.replace('/(tabs)/(metric)');
+            }
+        });
+        return () => { cancelled = true; };
+    }, [resumedSyncWait, router]);
+
+    // Orphaned-screen guard: if the app restarts mid-pairing (process kill,
+    // dev reload), the route is restored but the import state is gone while
+    // the patient identity is already persisted. There is nothing left to
+    // scan then — leave for the app. Never fires during an active import
+    // (lockRef), a resumed sync wait, or after an error the user should see.
+    useEffect(() => {
+        if (activePatientId && !lockRef.current && !isLoading && !isSyncing && !resumedSyncWait && !error) {
+            router.replace('/(tabs)/(metric)');
+        }
+    }, [activePatientId, isLoading, isSyncing, resumedSyncWait, error, router]);
 
     const importBundle = useCallback(async (parsed: PairingBundle) => {
         setIsLoading(true);
@@ -149,7 +201,16 @@ export default function PatientScanScreen() {
                 seckeyB64: keys.seckeyB64,
             }, 'switch');
 
+            // From here on the PatientBoundary remount can strike at any
+            // moment — the shared flag keeps the new screen instance in the
+            // sync-wait state (see src/sync/initialSyncWait)
+            beginInitialSyncWait();
+
             await setPatient(parsed.subject_id);
+
+            // Subscribe now: the patient-change effect in AppSyncProvider will
+            // kick off the initial full sync during the awaits below
+            const initialSync = waitForInitialSync();
 
             const keyProvider = getKeyProvider();
             keyProvider.setContext({
@@ -186,9 +247,20 @@ export default function PatientScanScreen() {
                 await setAuthLockEnabled(true);
             }
 
-            router.replace('/(tabs)/(metric)');
+            // Hold the user here until the initial data sync finished — an
+            // immediate navigation would show empty screens that fill up
+            // while the pull is still running (visible jumps)
+            setIsSyncing(true);
+            await initialSync;
+
+            // The remounted instance may have navigated already — only one
+            // of the two waiters performs the navigation
+            if (claimInitialSyncNavigation()) {
+                router.replace('/(tabs)/(metric)');
+            }
         }
         catch (e: any) {
+            clearInitialSyncWait();
             setError(e?.message ?? t('onboarding.errorOccurred'));
             lockRef.current = false;
             setScanLocked(false);
@@ -335,7 +407,29 @@ export default function PatientScanScreen() {
                     contentInsetAdjustmentBehavior="automatic"
                 >
                     <View style={ styles.bodyWrapper }>
-                        { !canUseCamera ? (
+                        { (isSyncing || isLoading || resumedSyncWait) ? (
+                            // isLoading covers identity setup, isSyncing and
+                            // resumedSyncWait the initial data sync (the
+                            // latter after the mid-pairing remount)
+                            <View style={ styles.syncingContainer }>
+                                <ActivityIndicator color={ colors.primary } size="large" />
+                                { (isSyncing || resumedSyncWait) && (
+                                    <>
+                                        <Text style={ [styles.title, { color: colors.text, marginTop: 24 }] }>
+                                            { t('onboarding.scan.syncingTitle') }
+                                        </Text>
+                                        <Text style={ [styles.description, { color: colors.textSecondary }] }>
+                                            { t('onboarding.scan.syncingMessage') }
+                                        </Text>
+                                        { syncedCount > 0 && (
+                                            <Text style={ [styles.description, { color: colors.textSecondary }] }>
+                                                { t('onboarding.scan.syncingProgress', { total: syncedCount }) }
+                                            </Text>
+                                        ) }
+                                    </>
+                                ) }
+                            </View>
+                        ) : !canUseCamera ? (
                             <View style={ styles.permissionContainer }>
                                 <View style={ [styles.iconContainer, { backgroundColor: colors.listItemBackground }] }>
                                     <AppIcon
@@ -451,6 +545,13 @@ const styles = StyleSheet.create({
         marginBottom: 32
     },
     permissionContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 32,
+        gap: 12
+    },
+    syncingContainer: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',

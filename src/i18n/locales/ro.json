@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Copiază mai întâi pachetul de asociere de pe celălalt dispozitiv.",
             "invalidData": "Date invalide",
             "invalidDataMessage": "Clipboardul nu conține JSON valid.",
-            "bundleKeyUnavailable": "Pachetul de asociere nu poate fi decriptat acum. Verifică conexiunea sau creează un cod QR nou."
+            "bundleKeyUnavailable": "Pachetul de asociere nu poate fi decriptat acum. Verifică conexiunea sau creează un cod QR nou.",
+            "syncingTitle": "Se sincronizează datele",
+            "syncingMessage": "Datele tale de sănătate sunt transferate pe acest dispozitiv. Poate dura un moment.",
+            "syncingProgress": "{{total}} intrări transferate"
         },
         "mnemonic": {
             "title": "Cuvinte de recuperare",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Lipește din clipboard",
             "clipboardEmpty": "Clipboard gol",
             "clipboardEmptyMessage": "Nu există date în clipboard. Copiază mai întâi codul de acces.",
-            "bundleKeyUnavailable": "Codul de acces nu poate fi verificat acum. Verifică conexiunea sau solicită un cod QR nou."
+            "bundleKeyUnavailable": "Codul de acces nu poate fi verificat acum. Verifică conexiunea sau solicită un cod QR nou.",
+            "syncingTitle": "Se sincronizează datele",
+            "syncingMessage": "Datele de sănătate sunt transferate pe acest dispozitiv. Poate dura un moment."
         },
         "createPatient": {
             "title": "Creează persoană nouă",

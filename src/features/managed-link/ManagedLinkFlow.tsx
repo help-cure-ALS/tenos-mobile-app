@@ -41,6 +41,14 @@ import {
     validateManagedAccessBundleV3,
 } from './managedLinkUtils';
 import { recipientPair } from './pairing';
+import { on } from '@/src/lib/bus';
+import {
+    beginInitialSyncWait,
+    claimInitialSyncNavigation,
+    clearInitialSyncWait,
+    isInitialSyncWaitPending,
+    waitForInitialSync,
+} from '@/src/sync/initialSyncWait';
 
 type LinkStep = 'scan' | 'name';
 type ManagedLinkContext = 'onboarding' | 'settings';
@@ -84,6 +92,11 @@ export default function ManagedLinkFlow({
     const [displayName, setDisplayName] = useState('');
     const [caregiverName, setCaregiverName] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    // Initial-sync wait state — survives the PatientBoundary remount via the
+    // shared module flag (see src/sync/initialSyncWait)
+    const [isSyncing, setIsSyncing] = useState(false);
+    const [resumedSyncWait] = useState(() => isInitialSyncWaitPending());
+    const [syncedCount, setSyncedCount] = useState(0);
     const [error, setError] = useState<string | null>(null);
     const [hasStoredName, setHasStoredName] = useState(false);
     const [autoImport, setAutoImport] = useState(false);
@@ -106,6 +119,35 @@ export default function ManagedLinkFlow({
             requestPermission();
         }
     }, [permission, requestPermission]);
+
+    // Live progress on the wait screen (updates per applied page)
+    useEffect(() => {
+        return on<{ pulled: number }>('sync:progress', (payload) => {
+            if (typeof payload?.pulled === 'number') {
+                setSyncedCount(payload.pulled);
+            }
+        });
+    }, []);
+
+    // Remount continuation: the original completeLink closure keeps running
+    // and navigates after the sync — but if it died (process restart), this
+    // instance must finish the wait itself. Both waiters race on
+    // claimInitialSyncNavigation, only one navigates.
+    useEffect(() => {
+        if (!resumedSyncWait) return;
+        let cancelled = false;
+        waitForInitialSync().then(() => {
+            if (cancelled) return;
+            if (claimInitialSyncNavigation()) {
+                if (context === 'onboarding') {
+                    router.replace('/(tabs)/(metric)');
+                } else {
+                    router.dismissAll();
+                }
+            }
+        });
+        return () => { cancelled = true; };
+    }, [resumedSyncWait, context, router]);
 
     const prepareBundle = useCallback(async (bundle: ManagedAccessBundleV3) => {
         setScannedBundle(bundle);
@@ -305,19 +347,38 @@ export default function ManagedLinkFlow({
                     ...existingPatientIds.filter((id) => id !== subjectId),
                     subjectId,
                 ];
+
+                // Hold the flow until the patient's initial sync finished —
+                // the flag survives the PatientBoundary remount that
+                // setCaregiver/setDoctor triggers. Subscribe BEFORE the sync
+                // starts so a fast sync cannot slip through.
+                beginInitialSyncWait();
+                const initialSync = waitForInitialSync();
+
                 if (scannedBundle.role === 'caregiver') {
                     await setCaregiver(subjectId, allPatientIds, subjectId);
                 } else {
                     await setDoctor(subjectId, allPatientIds, subjectId);
                 }
                 getKeyProvider().setContext({ role: scannedBundle.role, activePatientId: subjectId });
-                router.replace('/(tabs)/(metric)');
+
+                setIsSyncing(true);
+                await initialSync;
+                if (claimInitialSyncNavigation()) {
+                    router.replace('/(tabs)/(metric)');
+                }
                 return;
             }
 
             if (!scope || (scope.role !== 'caregiver' && scope.role !== 'doctor')) {
                 throw new Error(t('patients.notAvailable'));
             }
+
+            // Same wait for the settings context (adding another patient):
+            // the newly linked patient has no local data yet
+            beginInitialSyncWait();
+            const initialSync = waitForInitialSync();
+
             if (scope.role === 'caregiver') {
                 const nextPatientIds = Array.from(new Set([...scope.patientIds, subjectId]));
                 await setCaregiver(scope.caregiverId, nextPatientIds, subjectId);
@@ -326,8 +387,15 @@ export default function ManagedLinkFlow({
                 await setDoctor(scope.doctorId, nextPatientIds, subjectId);
             }
             getKeyProvider().setContext({ role: scope.role, activePatientId: subjectId });
-            router.dismissAll();
+
+            setIsSyncing(true);
+            await initialSync;
+            if (claimInitialSyncNavigation()) {
+                router.dismissAll();
+            }
         } catch (e: any) {
+            clearInitialSyncWait();
+            setIsSyncing(false);
             setError(e?.message ?? t('onboarding.errorOccurred'));
             if (autoImport) {
                 setAutoImport(false);
@@ -364,6 +432,27 @@ export default function ManagedLinkFlow({
             completeLink().catch(console.error);
         }
     }, [autoImport, caregiverName, completeLink, displayName, scannedBundle]);
+
+    if (isSyncing || resumedSyncWait) {
+        return (
+            <View style={[styles.container, { backgroundColor }]}>
+                <View style={styles.permissionContainer}>
+                    <ActivityIndicator color={colors.primary} size="large" />
+                    <Text style={[styles.title, { color: colors.text, marginTop: 24 }]}>
+                        {t('onboarding.managedLink.syncingTitle')}
+                    </Text>
+                    <Text style={[styles.description, { color: colors.textSecondary }]}>
+                        {t('onboarding.managedLink.syncingMessage')}
+                    </Text>
+                    {syncedCount > 0 && (
+                        <Text style={[styles.description, { color: colors.textSecondary }]}>
+                            {t('onboarding.scan.syncingProgress', { total: syncedCount })}
+                        </Text>
+                    )}
+                </View>
+            </View>
+        );
+    }
 
     if (!permission?.granted) {
         return (

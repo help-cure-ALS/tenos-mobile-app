@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "まずもう一方のデバイスからペアリングバンドルをコピーしてください。",
             "invalidData": "無効なデータ",
             "invalidDataMessage": "クリップボードに有効なJSONが含まれていません。",
-            "bundleKeyUnavailable": "現在ペアリングバンドルを復号できません。接続を確認するか、新しいQRコードを作成してください。"
+            "bundleKeyUnavailable": "現在ペアリングバンドルを復号できません。接続を確認するか、新しいQRコードを作成してください。",
+            "syncingTitle": "データを同期しています",
+            "syncingMessage": "健康データをこのデバイスに転送しています。しばらくお待ちください。",
+            "syncingProgress": "{{total}}件を転送しました"
         },
         "mnemonic": {
             "title": "リカバリーワード",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "クリップボードから貼り付け",
             "clipboardEmpty": "クリップボードが空です",
             "clipboardEmptyMessage": "クリップボードにデータがありません。まずアクセスコードをコピーしてください。",
-            "bundleKeyUnavailable": "現在アクセスコードを確認できません。接続を確認するか、新しいQRコードを依頼してください。"
+            "bundleKeyUnavailable": "現在アクセスコードを確認できません。接続を確認するか、新しいQRコードを依頼してください。",
+            "syncingTitle": "データを同期しています",
+            "syncingMessage": "健康データをこのデバイスに転送しています。しばらくお待ちください。"
         },
         "createPatient": {
             "title": "新しい人を作成",

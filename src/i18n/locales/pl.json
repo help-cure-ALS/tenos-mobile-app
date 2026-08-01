@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Najpierw skopiuj pakiet parowania z drugiego urządzenia.",
             "invalidData": "Nieprawidłowe dane",
             "invalidDataMessage": "Schowek nie zawiera prawidłowego JSON.",
-            "bundleKeyUnavailable": "Pakiet parowania nie może teraz zostać odszyfrowany. Sprawdź połączenie lub utwórz nowy kod QR."
+            "bundleKeyUnavailable": "Pakiet parowania nie może teraz zostać odszyfrowany. Sprawdź połączenie lub utwórz nowy kod QR.",
+            "syncingTitle": "Synchronizowanie danych",
+            "syncingMessage": "Twoje dane zdrowotne są przenoszone na to urządzenie. To może chwilę potrwać.",
+            "syncingProgress": "Przeniesiono wpisów: {{total}}"
         },
         "mnemonic": {
             "title": "Słowa odzyskiwania",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Wklej ze schowka",
             "clipboardEmpty": "Schowek pusty",
             "clipboardEmptyMessage": "W schowku nie ma danych. Najpierw skopiuj kod dostępu.",
-            "bundleKeyUnavailable": "Nie można teraz zweryfikować kodu dostępu. Sprawdź połączenie lub poproś o nowy kod QR."
+            "bundleKeyUnavailable": "Nie można teraz zweryfikować kodu dostępu. Sprawdź połączenie lub poproś o nowy kod QR.",
+            "syncingTitle": "Synchronizowanie danych",
+            "syncingMessage": "Dane zdrowotne są przenoszone na to urządzenie. To może chwilę potrwać."
         },
         "createPatient": {
             "title": "Utwórz nową osobę",

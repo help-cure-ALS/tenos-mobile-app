@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Kopiere zuerst das Pairing-Bundle vom anderen Gerät.",
             "invalidData": "Ungültige Daten",
             "invalidDataMessage": "Die Zwischenablage enthält kein gültiges JSON.",
-            "bundleKeyUnavailable": "Das Pairing-Bundle kann gerade nicht entschlüsselt werden. Prüfe die Verbindung oder erstelle einen neuen QR-Code."
+            "bundleKeyUnavailable": "Das Pairing-Bundle kann gerade nicht entschlüsselt werden. Prüfe die Verbindung oder erstelle einen neuen QR-Code.",
+            "syncingTitle": "Daten werden synchronisiert",
+            "syncingMessage": "Deine Gesundheitsdaten werden auf dieses Gerät übertragen. Das kann einen Moment dauern.",
+            "syncingProgress": "{{total}} Einträge übertragen"
         },
         "mnemonic": {
             "title": "Wiederherstellungswörter",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Aus Zwischenablage einsetzen",
             "clipboardEmpty": "Zwischenablage leer",
             "clipboardEmptyMessage": "Es befinden sich keine Daten in der Zwischenablage. Kopiere zuerst den Zugangscode.",
-            "bundleKeyUnavailable": "Der Zugangscode kann gerade nicht geprüft werden. Prüfe die Verbindung oder lass einen neuen QR-Code erstellen."
+            "bundleKeyUnavailable": "Der Zugangscode kann gerade nicht geprüft werden. Prüfe die Verbindung oder lass einen neuen QR-Code erstellen.",
+            "syncingTitle": "Daten werden synchronisiert",
+            "syncingMessage": "Die Gesundheitsdaten werden auf dieses Gerät übertragen. Das kann einen Moment dauern."
         },
         "createPatient": {
             "title": "Neue Person anlegen",

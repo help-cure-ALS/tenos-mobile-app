@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "请先从另一台设备复制配对数据包。",
             "invalidData": "数据无效",
             "invalidDataMessage": "剪贴板不包含有效 JSON。",
-            "bundleKeyUnavailable": "当前无法解密配对数据包。请检查连接或创建新的二维码。"
+            "bundleKeyUnavailable": "当前无法解密配对数据包。请检查连接或创建新的二维码。",
+            "syncingTitle": "正在同步数据",
+            "syncingMessage": "您的健康数据正在传输到此设备，请稍候。",
+            "syncingProgress": "已传输 {{total}} 条记录"
         },
         "mnemonic": {
             "title": "恢复词",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "从剪贴板粘贴",
             "clipboardEmpty": "剪贴板为空",
             "clipboardEmptyMessage": "剪贴板中没有数据。请先复制访问代码。",
-            "bundleKeyUnavailable": "当前无法验证访问代码。请检查连接或请求新的二维码。"
+            "bundleKeyUnavailable": "当前无法验证访问代码。请检查连接或请求新的二维码。",
+            "syncingTitle": "正在同步数据",
+            "syncingMessage": "健康数据正在传输到此设备，请稍候。"
         },
         "createPatient": {
             "title": "创建新人",

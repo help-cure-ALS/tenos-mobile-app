@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Copia prima il bundle di collegamento dall’altro dispositivo.",
             "invalidData": "Dati non validi",
             "invalidDataMessage": "Gli appunti non contengono JSON valido.",
-            "bundleKeyUnavailable": "Il bundle di collegamento non può essere decifrato ora. Controlla la connessione o crea un nuovo QR code."
+            "bundleKeyUnavailable": "Il bundle di collegamento non può essere decifrato ora. Controlla la connessione o crea un nuovo QR code.",
+            "syncingTitle": "Sincronizzazione dei dati",
+            "syncingMessage": "I tuoi dati sanitari vengono trasferiti su questo dispositivo. Potrebbe volerci un momento.",
+            "syncingProgress": "{{total}} voci trasferite"
         },
         "mnemonic": {
             "title": "Parole di recupero",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Incolla dagli appunti",
             "clipboardEmpty": "Appunti vuoti",
             "clipboardEmptyMessage": "Non ci sono dati negli appunti. Copia prima il codice di accesso.",
-            "bundleKeyUnavailable": "Il codice di accesso non può essere verificato ora. Controlla la connessione o richiedi un nuovo QR code."
+            "bundleKeyUnavailable": "Il codice di accesso non può essere verificato ora. Controlla la connessione o richiedi un nuovo QR code.",
+            "syncingTitle": "Sincronizzazione dei dati",
+            "syncingMessage": "I dati sanitari vengono trasferiti su questo dispositivo. Potrebbe volerci un momento."
         },
         "createPatient": {
             "title": "Crea nuova persona",

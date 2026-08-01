@@ -74,6 +74,29 @@ import {
 import { isAssistiveAidsEnabledForRole } from "@/src/features/assistiveAidsFeature";
 import type { AppRole } from "@/src/types/appRole";
 
+// Result of a completed (non-skipped) syncNow run.
+// Streaming mode (onEvents passed): pages were applied and their cursors
+// persisted inside the run — `events` is empty, `cursor` null, `changed`
+// reports whether any page changed local data.
+// Legacy mode (no onEvents): `events` holds everything pulled and `cursor`
+// must be persisted by the caller AFTER applying them.
+export type SyncNowResult = {
+    events: VaultEvent[];
+    cursor: CursorV2 | null;
+    changed: boolean;
+};
+
+export type SyncNowOptions = {
+    /**
+     * Per-page apply callback. When set, each pulled page is handed over
+     * immediately and its cursor is persisted right AFTER the callback
+     * succeeded. This keeps peak memory at one page (~500 events) instead
+     * of the whole history — large initial syncs OOM-killed the app on
+     * low-memory Android devices otherwise. Returns whether data changed.
+     */
+    onEvents?: (events: VaultEvent[]) => Promise<boolean>;
+};
+
 type SyncStatus = "idle" | "syncing" | "error";
 type SyncHealth = "healthy" | "degraded_network" | "blocked_identity";
 type SyncBlockReason = "identity_inconsistent" | "missing_patient_identity" | "key_mismatch" | null;
@@ -126,7 +149,7 @@ type AppSyncContextValue = {
     lastError: VaultError | null;
     lastSyncAt: string | null;
     getOrCreateSubjectId: () => Promise<string>;
-    syncNow: (reason?: string) => Promise<VaultEvent[]>;
+    syncNow: (reason?: string, opts?: SyncNowOptions) => Promise<SyncNowResult | null>;
     fullSync: (reason: string) => Promise<void>;
     push: (events: VaultEvent[]) => Promise<void>;
     reset: () => Promise<void>;
@@ -717,15 +740,33 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                 });
             }
 
+            // Phase 1: decrypt (CPU-bound). Yield periodically so UI, GC and
+            // system watchdogs get a slice — large imports otherwise freeze
+            // the JS thread and get the app killed on low-memory devices.
+            const payloads: any[] = [];
+            let processed = 0;
             for (const ev of evs) {
+                processed += 1;
+                if (processed % 100 === 0) {
+                    await new Promise<void>((resolve) => setTimeout(resolve, 0));
+                }
+
                 const decrypted = await decryptPayloadFromVault(ev);
                 if (!decrypted.ok) {
                     decryptSkipped += 1;
                     decryptReasons[decrypted.reason] = (decryptReasons[decrypted.reason] ?? 0) + 1;
                     continue;
                 }
-                const payload = decrypted.payload;
+                payloads.push(decrypted.payload);
+            }
 
+            // Phase 2a: singleton resources with their own store logic run
+            // exactly as before, OUTSIDE the transaction (they have side
+            // effects beyond this SQLite file: SecureStore writes, outbox
+            // enqueues). At most a handful per sync. Everything generic is
+            // collected for the bulk transaction below.
+            const bulk: any[] = [];
+            for (const payload of payloads) {
                 if (payload.kind === "FHIR_RESOURCE" && payload.op === "upsert") {
                     if (
                         das &&
@@ -735,8 +776,9 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                     ) {
                         // Store merges pulled + local entries and manages its own
                         // patientFhirStore writes via sync callback. Skip generic
-                        // upsert below to prevent overwriting the merged result.
+                        // upsert to prevent overwriting the merged result.
                         await das.fromFhirResource(payload.resource);
+                        changed = true;
                     } else {
                         if (
                             pps &&
@@ -757,13 +799,28 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                             await dts.fromFhirResource(payload.resource);
                         }
 
-                        await patientFhirStore.upsert(subjectId, payload.resourceType, payload.id, payload.resource, payload.at);
+                        bulk.push(payload);
                     }
-                    changed = true;
                 } else if (payload.kind === "FHIR_PTR" && payload.op === "delete") {
-                    await patientFhirStore.markDeleted(subjectId, payload.resourceType, payload.id, payload.at);
-                    changed = true;
+                    bulk.push(payload);
                 }
+            }
+
+            // Phase 2b: one SQLite transaction per page instead of one
+            // autocommit (fsync) per event — the dominant cost of the initial
+            // sync. Fails as a whole: the page cursor is only persisted after
+            // this function returned, so a rolled-back page is re-pulled.
+            if (bulk.length) {
+                await patientFhirStore.withTransaction(async () => {
+                    for (const payload of bulk) {
+                        if (payload.kind === "FHIR_RESOURCE") {
+                            await patientFhirStore.upsert(subjectId, payload.resourceType, payload.id, payload.resource, payload.at);
+                        } else {
+                            await patientFhirStore.markDeleted(subjectId, payload.resourceType, payload.id, payload.at);
+                        }
+                    }
+                });
+                changed = true;
             }
 
             if (evs.length > 0) {
@@ -788,21 +845,27 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
     );
 
     const syncNow = useCallback(
-        async (reason = "manual"): Promise<VaultEvent[]> => {
-            if (deviceRevokedRef.current) return [];
+        // Returns the sync result, or null when the sync was SKIPPED
+        // (revoked, disabled, patient switch, already running). Callers must
+        // not treat a skipped run as a completed sync cycle. See
+        // SyncNowResult/SyncNowOptions for the streaming vs legacy contract.
+        async (reason = "manual", opts?: SyncNowOptions): Promise<SyncNowResult | null> => {
+            const onEvents = opts?.onEvents;
+            if (deviceRevokedRef.current) return null;
             if (!syncEnabled || isDemoMode() || !hasActivePatient) {
                 if (!hasActivePatient && !missingActivePatientLogRef.current) {
                     debugSyncLog(`syncNow(${reason}): skipped, no active patient`);
                     missingActivePatientLogRef.current = true;
                 }
-                return [];
+                return null;
             }
             missingActivePatientLogRef.current = false;
-            if (isSwitchingRef.current) return []; // Skip during patient switch
+            if (isSwitchingRef.current) return null; // Skip during patient switch
 
             if (syncingRef.current) {
+                // The running sync picks this up via its queued-pass loop
                 queuedRef.current = true;
-                return [];
+                return null;
             }
 
             syncingRef.current = true;
@@ -812,80 +875,119 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
             try {
                 await ensureIdentity();
 
-                let cursor: CursorV2 | null = await getCursorV2(store, K);
-
-                // HEAD-First: Check if there are new events before doing full pull
-                // This saves bandwidth when there are no changes (common case)
-                // If HEAD fails (e.g., endpoint not available), fall through to normal pull
-                try {
-                    const { head } = await headEvents(libCfg, store, K);
-
-                    if (head && cursor) {
-                        // Compare server head with local cursor
-                        // If they match, no new events - skip the full pull
-                        if (head.since_id === cursor.since_id && head.since_ts === cursor.since_ts) {
-                            markSyncCompleted();
-                            setStatus("idle");
-                            return [];
-                        }
-                    }
-                } catch (headError) {
-                    const ve = coerceVaultError(headError);
-                    if (isSubjectAccessLostError(ve.code)) {
-                        throw ve;
-                    }
-                    // HEAD endpoint might not be available - continue with normal pull
-                    debugSyncLog("HEAD check failed, falling back to full pull:", headError);
-                }
-
-                // There are new events (or first sync), do full pull
                 const allEvents: VaultEvent[] = [];
+                let pulledCount = 0;
+                let changed = false;
 
-                while (true) {
-                    const pulled = await pullEvents(libCfg, store, K, { cursor, limit: 500 });
-                    const evs = (pulled.events ?? []) as VaultEvent[];
-                    if (evs.length) allEvents.push(...evs);
+                // Invariant: the persisted cursor NEVER advances past events
+                // that are not yet in the local store. Streaming mode applies
+                // each page first and persists its cursor right after; legacy
+                // mode persists nothing and leaves it to the caller. An
+                // interruption at any point simply re-pulls from the last
+                // persisted position (idempotent).
+                let cursor: CursorV2 | null = await getCursorV2(store, K);
+                let advancedCursor: CursorV2 | null = null;
 
-                    const next = pulled.next as CursorV2 | null;
+                // Pull passes: repeat while another sync was requested during a
+                // running pass. The queued request MUST run inside this call so
+                // its events reach the caller (applyPulledEvents) — a detached
+                // re-run would advance the cursor while its events are
+                // silently dropped, leaving the local store incomplete.
+                do {
+                    queuedRef.current = false;
 
-                    if (!next) {
-                        if (evs.length) {
+                    // HEAD-First: Check if there are new events before doing full pull
+                    // This saves bandwidth when there are no changes (common case)
+                    // If HEAD fails (e.g., endpoint not available), fall through to normal pull
+                    let upToDate = false;
+                    try {
+                        const { head } = await headEvents(libCfg, store, K);
+
+                        if (head && cursor) {
+                            // Compare server head with local cursor
+                            // If they match, no new events - skip the full pull
+                            if (head.since_id === cursor.since_id && head.since_ts === cursor.since_ts) {
+                                upToDate = true;
+                            }
+                        }
+                    } catch (headError) {
+                        const ve = coerceVaultError(headError);
+                        if (isSubjectAccessLostError(ve.code)) {
+                            throw ve;
+                        }
+                        // HEAD endpoint might not be available - continue with normal pull
+                        debugSyncLog("HEAD check failed, falling back to full pull:", headError);
+                    }
+
+                    if (upToDate) continue;
+
+                    // There are new events (or first sync), do full pull
+                    while (true) {
+                        const pulled = await pullEvents(libCfg, store, K, { cursor, limit: 500 });
+                        const evs = (pulled.events ?? []) as VaultEvent[];
+                        pulledCount += evs.length;
+
+                        const next = pulled.next as CursorV2 | null;
+                        const sameCursor = !!next && !!cursor
+                            && next.since_id === cursor.since_id
+                            && next.since_ts === cursor.since_ts;
+
+                        // Cursor position reached once THIS page is applied
+                        let pageCursor: CursorV2 | null = null;
+                        if (next && !sameCursor) {
+                            pageCursor = next;
+                        } else if (!next && evs.length) {
                             const lastEv = evs[evs.length - 1] as Record<string, unknown>;
                             const ts = lastEv.server_received_at as string;
                             if (ts) {
-                                await setCursorV2(store, K, { since_ts: ts, since_id: lastEv.event_id as string });
+                                pageCursor = { since_ts: ts, since_id: lastEv.event_id as string };
                             }
                         }
-                        break;
+
+                        if (evs.length && onEvents) {
+                            // Apply FIRST, persist the cursor after — an
+                            // interruption in between re-pulls only this page
+                            const pageChanged = await onEvents(evs);
+                            changed = changed || pageChanged;
+                            if (pageCursor) {
+                                await setCursorV2(store, K, pageCursor);
+                            }
+                            // Keep-alive for waiters (pairing screen): large
+                            // initial pulls outlive any fixed total timeout
+                            emit("sync:progress", { pulled: pulledCount });
+                        } else if (evs.length) {
+                            allEvents.push(...evs);
+                            if (pageCursor) {
+                                advancedCursor = pageCursor;
+                            }
+                        }
+
+                        if (pageCursor) {
+                            cursor = pageCursor;
+                        }
+
+                        if (!next || sameCursor) {
+                            break;
+                        }
                     }
+                } while (queuedRef.current);
 
-                    const sameCursor = !!cursor && next.since_id === cursor.since_id && next.since_ts === cursor.since_ts;
-
-                    if (sameCursor) {
-                        // Cursor unchanged — no new events. Existing cursor is already correct.
-                        break;
-                    }
-
-                    await setCursorV2(store, K, next);
-                    cursor = next;
-                }
-
-                debugSyncLog(`syncNow(${reason}): pulled_events=${allEvents.length}`);
+                debugSyncLog(`syncNow(${reason}): pulled_events=${pulledCount}`);
 
                 markSyncCompleted();
                 setStatus("idle");
                 setSyncHealth("healthy");
                 setSyncBlockReason(null);
-                return allEvents;
+                return { events: allEvents, cursor: advancedCursor, changed };
             } catch (e) {
                 const ve = coerceVaultError(e);
                 if (isSubjectAccessLostError(ve.code)) {
                     await handleActiveDeviceRevoked();
-                    return [];
+                    return null;
                 }
                 if (await shouldExitForLostActiveIdentity(ve)) {
                     await handleActiveDeviceRevoked();
-                    return [];
+                    return null;
                 }
                 setLastError(ve);
                 setStatus("error");
@@ -903,11 +1005,11 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                 }
                 throw ve;
             } finally {
+                // Queued requests are handled by the pass loop above — no
+                // detached re-run here (it would drop its events, see loop
+                // comment). No await between the loop condition and this
+                // block, so no request can slip through unhandled.
                 syncingRef.current = false;
-                if (queuedRef.current) {
-                    queuedRef.current = false;
-                    await syncNow("queued");
-                }
             }
         },
         [libCfg, syncEnabled, store, K, ensureIdentity, hasActivePatient, handleActiveDeviceRevoked, shouldExitForLostActiveIdentity, markSyncCompleted]
@@ -1137,10 +1239,9 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
 
         await switchPatientIdentity(identity);
         await flushOutbox({ cfg: libCfg, store, K, outbox, patientFhirStore });
-        const evs = await syncNow("identity-recovery");
-        if (evs?.length) {
-            const changed = await applyPulledEvents(evs);
-            if (changed) emit("fhir:changed");
+        const result = await syncNow("identity-recovery", { onEvents: applyPulledEvents });
+        if (result?.changed) {
+            emit("fhir:changed");
         }
         emit("sync:completed");
         setSyncHealth("healthy");
@@ -1166,10 +1267,19 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
 
             try {
                 await flushOutbox({ cfg: libCfg, store, K, outbox, patientFhirStore });
-                const evs = await syncNow(reason);
-                if (evs?.length) {
-                    const changed = await applyPulledEvents(evs);
-                    if (changed) emit("fhir:changed");
+                // Streaming mode: every page is applied and its cursor
+                // persisted inside syncNow — memory stays at one page and an
+                // interruption can never open a gap
+                const result = await syncNow(reason, { onEvents: applyPulledEvents });
+                if (result === null) {
+                    // Sync was skipped (patient switch, disabled, already
+                    // running) — this is NOT a completed cycle, so neither
+                    // report health nor emit sync:completed.
+                    debugSyncLog(`fullSync(${reason}): syncNow skipped, no cycle completed`);
+                    return;
+                }
+                if (result.changed) {
+                    emit("fhir:changed");
                 }
                 setSyncHealth("healthy");
                 setSyncBlockReason(null);

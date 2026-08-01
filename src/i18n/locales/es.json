@@ -354,7 +354,10 @@
             "clipboardEmptyMessage": "Primero copia el bundle de emparejamiento desde el otro dispositivo.",
             "invalidData": "Datos no válidos",
             "invalidDataMessage": "El portapapeles no contiene JSON válido.",
-            "bundleKeyUnavailable": "Ahora mismo no se puede descifrar el bundle de emparejamiento. Comprueba la conexión o crea un nuevo código QR."
+            "bundleKeyUnavailable": "Ahora mismo no se puede descifrar el bundle de emparejamiento. Comprueba la conexión o crea un nuevo código QR.",
+            "syncingTitle": "Sincronizando tus datos",
+            "syncingMessage": "Tus datos de salud se están transfiriendo a este dispositivo. Esto puede tardar un momento.",
+            "syncingProgress": "{{total}} registros transferidos"
         },
         "mnemonic": {
             "title": "Palabras de recuperación",
@@ -481,7 +484,9 @@
             "pasteFromClipboard": "Pegar desde el portapapeles",
             "clipboardEmpty": "Portapapeles vacío",
             "clipboardEmptyMessage": "No hay datos en el portapapeles. Copia primero el código de acceso.",
-            "bundleKeyUnavailable": "Ahora mismo no se puede verificar el código de acceso. Comprueba la conexión o solicita un nuevo código QR."
+            "bundleKeyUnavailable": "Ahora mismo no se puede verificar el código de acceso. Comprueba la conexión o solicita un nuevo código QR.",
+            "syncingTitle": "Sincronizando datos",
+            "syncingMessage": "Los datos de salud se están transfiriendo a este dispositivo. Esto puede tardar un momento."
         },
         "createPatient": {
             "title": "Crear nueva persona",

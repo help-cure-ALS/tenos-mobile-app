@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Önce diğer cihazdaki eşleştirme paketini kopyala.",
             "invalidData": "Geçersiz veri",
             "invalidDataMessage": "Pano geçerli JSON içermiyor.",
-            "bundleKeyUnavailable": "Eşleştirme paketi şu anda çözülemiyor. Bağlantını kontrol et veya yeni bir QR kodu oluştur."
+            "bundleKeyUnavailable": "Eşleştirme paketi şu anda çözülemiyor. Bağlantını kontrol et veya yeni bir QR kodu oluştur.",
+            "syncingTitle": "Verileriniz eşitleniyor",
+            "syncingMessage": "Sağlık verileriniz bu cihaza aktarılıyor. Bu biraz zaman alabilir.",
+            "syncingProgress": "{{total}} kayıt aktarıldı"
         },
         "mnemonic": {
             "title": "Kurtarma kelimeleri",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Panodan yapıştır",
             "clipboardEmpty": "Pano boş",
             "clipboardEmptyMessage": "Panoda veri yok. Önce erişim kodunu kopyala.",
-            "bundleKeyUnavailable": "Erişim kodu şu anda doğrulanamıyor. Bağlantıyı kontrol et veya yeni QR kodu iste."
+            "bundleKeyUnavailable": "Erişim kodu şu anda doğrulanamıyor. Bağlantıyı kontrol et veya yeni QR kodu iste.",
+            "syncingTitle": "Veriler eşitleniyor",
+            "syncingMessage": "Sağlık verileri bu cihaza aktarılıyor. Bu biraz zaman alabilir."
         },
         "createPatient": {
             "title": "Yeni kişi oluştur",

@@ -521,7 +521,10 @@
             "clipboardEmptyMessage": "Copia primeiro o pacote de ligação do outro dispositivo.",
             "invalidData": "Dados inválidos",
             "invalidDataMessage": "A área de transferência não contém JSON válido.",
-            "bundleKeyUnavailable": "O pacote de ligação não pode ser decifrado agora. Verifica a ligação ou cria um novo código QR."
+            "bundleKeyUnavailable": "O pacote de ligação não pode ser decifrado agora. Verifica a ligação ou cria um novo código QR.",
+            "syncingTitle": "A sincronizar os seus dados",
+            "syncingMessage": "Os seus dados de saúde estão a ser transferidos para este dispositivo. Isto pode demorar um momento.",
+            "syncingProgress": "{{total}} registos transferidos"
         },
         "mnemonic": {
             "title": "Palavras de recuperação",
@@ -648,7 +651,9 @@
             "pasteFromClipboard": "Colar da área de transferência",
             "clipboardEmpty": "Área de transferência vazia",
             "clipboardEmptyMessage": "Não há dados na área de transferência. Copia primeiro o código de acesso.",
-            "bundleKeyUnavailable": "O código de acesso não pode ser verificado agora. Verifica a ligação ou pede um novo código QR."
+            "bundleKeyUnavailable": "O código de acesso não pode ser verificado agora. Verifica a ligação ou pede um novo código QR.",
+            "syncingTitle": "A sincronizar dados",
+            "syncingMessage": "Os dados de saúde estão a ser transferidos para este dispositivo. Isto pode demorar um momento."
         },
         "createPatient": {
             "title": "Criar nova pessoa",

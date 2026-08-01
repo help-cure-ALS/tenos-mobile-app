@@ -24,6 +24,15 @@ export type PatientFhirStore = {
     init(): Promise<void>;
 
     /**
+     * Run `fn` inside a single SQLite transaction on this store's
+     * connection. All store writes within the callback commit or roll back
+     * atomically. Used by the sync apply path: one transaction per pulled
+     * page instead of one autocommit (fsync) per event. Keep the callback
+     * tight — no yields or unrelated async work inside.
+     */
+    withTransaction<T>(fn: () => Promise<T>): Promise<T>;
+
+    /**
      * Upsert a resource for a specific patient.
      * @param tag - Optional tag for SQL-level filtering (e.g. 'q:alsfrs-r')
      */
@@ -273,6 +282,20 @@ export function createPatientFhirStore(opts?: { dbName?: string }): PatientFhirS
         await execAsync(d, `CREATE INDEX IF NOT EXISTS ${TABLE}_effective_idx ON ${TABLE}(subject_id, resource_type, effective_date);`);
         await execAsync(d, `CREATE INDEX IF NOT EXISTS ${TABLE}_source_idx ON ${TABLE}(subject_id, resource_type, source);`);
         await execAsync(d, `CREATE INDEX IF NOT EXISTS ${TABLE}_metric_tag_idx ON ${TABLE}(subject_id, resource_type, metric_tag);`);
+    }
+
+    async function withTransaction<T>(fn: () => Promise<T>): Promise<T> {
+        await init();
+        const d = await getDb(dbName);
+        await execAsync(d, 'BEGIN TRANSACTION');
+        try {
+            const result = await fn();
+            await execAsync(d, 'COMMIT');
+            return result;
+        } catch (e) {
+            await execAsync(d, 'ROLLBACK');
+            throw e;
+        }
     }
 
     async function upsert(
@@ -824,6 +847,7 @@ export function createPatientFhirStore(opts?: { dbName?: string }): PatientFhirS
 
     return {
         init,
+        withTransaction,
         upsert,
         markDeleted,
         get,
