@@ -6,7 +6,7 @@
  */
 
 import type { FhirCoding, ObservationCategory } from '../metrics/types';
-import type { TodoCondition } from '../types/todoRules';
+import type { TodoRuleSet } from '../types/todoRules';
 
 /**
  * FHIR storage strategy for questionnaire answers.
@@ -411,7 +411,7 @@ export type QuestionnaireDefinition = {
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
      */
-    todoRules?: TodoCondition[];
+    todoRules?: TodoRuleSet[];
 };
 
 /**
@@ -767,7 +767,7 @@ export type QuestionnaireBaseDefinition = {
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
      */
-    todoRules?: TodoCondition[];
+    todoRules?: TodoRuleSet[];
 };
 
 // =============================================================================

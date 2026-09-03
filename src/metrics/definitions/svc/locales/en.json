@@ -1,0 +1,11 @@
+{
+    "name": "Slow Vital Capacity (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "About SVC",
+    "description": "Slow vital capacity (SVC) is a key measure in pulmonary function testing. It describes the lung volume between maximum inhalation (inspiration) and maximum exhalation (expiration) without forced or rapid effort. The value is recorded as a percentage of the predicted value for age, sex and height; values above 80% are considered normal.",
+    "fields": {
+        "value": {
+            "label": "SVC % predicted"
+        }
+    }
+}

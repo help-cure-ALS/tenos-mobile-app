@@ -5,7 +5,7 @@
  * Each metric definition describes how to capture, display, and store data in FHIR format.
  */
 
-import type { TodoCondition } from '../types/todoRules';
+import type { TodoRuleSet } from '../types/todoRules';
 
 /** FHIR Coding structure */
 export type FhirCoding = {
@@ -427,7 +427,7 @@ export type MetricDefinition = {
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
      */
-    todoRules?: TodoCondition[];
+    todoRules?: TodoRuleSet[];
 
     /**
      * Project binding: definition is only visible to active participants of
@@ -558,7 +558,7 @@ export type MetricBaseDefinition = {
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
      */
-    todoRules?: TodoCondition[];
+    todoRules?: TodoRuleSet[];
 
     /**
      * Project binding: definition is only visible to active participants of

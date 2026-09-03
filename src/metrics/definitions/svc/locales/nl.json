@@ -1,0 +1,11 @@
+{
+    "name": "Langzame vitale capaciteit (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "Over SVC",
+    "description": "De langzame vitale capaciteit (SVC) is een belangrijke maat bij longfunctieonderzoek. Ze beschrijft het longvolume tussen maximale inademing (inspiratie) en maximale uitademing (expiratie) zonder geforceerde of snelle inspanning. De waarde wordt vastgelegd als percentage van de voorspelde waarde voor leeftijd, geslacht en lengte; waarden boven 80% gelden als normaal.",
+    "fields": {
+        "value": {
+            "label": "SVC % voorspeld"
+        }
+    }
+}

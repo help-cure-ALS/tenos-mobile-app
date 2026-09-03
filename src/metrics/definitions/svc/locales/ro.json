@@ -1,0 +1,11 @@
+{
+    "name": "Capacitatea vitală lentă (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "Despre SVC",
+    "description": "Capacitatea vitală lentă (SVC) este un parametru esențial în testarea funcției pulmonare. Descrie volumul pulmonar între inspirația maximă și expirația maximă, fără efort forțat sau rapid. Valoarea este înregistrată ca procent din valoarea prezisă pentru vârstă, sex și înălțime; valorile peste 80% sunt considerate normale.",
+    "fields": {
+        "value": {
+            "label": "SVC % din prezis"
+        }
+    }
+}

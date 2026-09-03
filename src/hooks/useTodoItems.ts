@@ -121,7 +121,7 @@ function wasYesterdayMissed(lastEntryDate: Date | null, intervalDays: number): b
 export function useTodoItems(): UseTodoItemsReturn {
     const { i18n } = useTranslation();
     const { list, count } = useFhirRepo();
-    const { activePatientId } = useAppRole();
+    const { activePatientId, role } = useAppRole();
     const { patientPreferencesStore: prefsStore } = usePatientStores();
     const { canSeeMetric, canSeeCategory } = useSharingFilter();
     const [configs, setConfigs] = useState<Record<string, TodoItemConfig>>({});
@@ -167,6 +167,7 @@ export function useTodoItems(): UseTodoItemsReturn {
         const ruleCtx: TodoRuleContext = {
             questionnaireEntries: new Map(),
             metricEntries: new Map(),
+            role,
         };
 
         if (activePatientId && (questionnaireIds.size > 0 || metricIds.size > 0)) {
@@ -439,7 +440,7 @@ export function useTodoItems(): UseTodoItemsReturn {
 
         setItems(filtered);
         setIsLoading(false);
-    }, [configs, i18n.language, list, count, activePatientId, prefsStore, canSeeMetric, canSeeCategory]);
+    }, [configs, i18n.language, list, count, activePatientId, role, prefsStore, canSeeMetric, canSeeCategory]);
 
     useEffect(() => {
         buildItems();

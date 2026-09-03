@@ -84,11 +84,15 @@ export const base: QuestionnaireBaseDefinition = {
     todoByDefault: false,
     todoRules: [
         {
-            type: 'questionnaireDomainScore',
-            questionnaireId: 'alsfrs-r',
-            domainId: 'respiratory',
-            operator: 'lte',
-            value: 8,
+            conditions: [
+                {
+                    type: 'questionnaireDomainScore',
+                    questionnaireId: 'alsfrs-r',
+                    domainId: 'respiratory',
+                    operator: 'lte',
+                    value: 8,
+                },
+            ],
         },
     ],
     highlighted: true,

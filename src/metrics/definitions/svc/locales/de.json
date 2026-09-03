@@ -1,0 +1,11 @@
+{
+    "name": "Vitalkapazität der Lunge (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "Über SVC",
+    "description": "Die Vital- oder Atemkapazität (Slow Vital Capacity, SVC) ist eine Kenngröße der Lungenfunktionsdiagnostik. Sie bezeichnet das Lungenvolumen zwischen maximaler Einatmung (Inspiration) und maximaler Ausatmung (Exspiration) ohne erzwungene oder schnelle Anstrengung. Erfasst wird der Wert in Prozent vom Sollwert für Alter, Geschlecht und Körpergröße; Werte über 80% gelten als normal.",
+    "fields": {
+        "value": {
+            "label": "SVC % Sollwert"
+        }
+    }
+}

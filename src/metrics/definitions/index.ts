@@ -52,6 +52,7 @@ import { getDefinition as getWalkingDistanceDef, walkingDistanceMetric } from '.
 import { getDefinition as getStepCountDef, stepCountMetric } from './stepCount';
 import { getDefinition as getWalkingSteadinessDef, walkingSteadinessMetric } from './walkingSteadiness';
 import { getDefinition as getRespiratoryRateDef, respiratoryRateMetric } from './respiratoryRate';
+import { getDefinition as getSvcDef, svcMetric } from './svc';
 import { getDefinition as getFlightsClimbedDef, flightsClimbedMetric } from './flightsClimbed';
 import { getDefinition as getWalkingSpeedDef, walkingSpeedMetric } from './walkingSpeed';
 import { getDefinition as getWalkingStepLengthDef, walkingStepLengthMetric } from './walkingStepLength';
@@ -104,6 +105,7 @@ const definitionGetters: Record<string, (language: string) => MetricDefinition> 
     'step_count': getStepCountDef,
     'walking_steadiness': getWalkingSteadinessDef,
     'respiratory_rate': getRespiratoryRateDef,
+    'svc': getSvcDef,
     'flights_climbed': getFlightsClimbedDef,
     'walking_speed': getWalkingSpeedDef,
     'walking_step_length': getWalkingStepLengthDef,
@@ -142,7 +144,7 @@ const metricIds = [
     // Vitalzeichen
     'heart_rate', 'hrv_sdnn', 'hrv_rmssd', 'blood_oxygen', 'nocturnal_spo2', 'blood_pressure', 'body_temperature',
     // Atemfunktion
-    'fvc', 'fvc_percent', 'peak_cough_flow', 'respiratory_rate',
+    'fvc', 'fvc_percent', 'svc', 'peak_cough_flow', 'respiratory_rate',
     // Motorik & Kraft
     'grip_strength', 'walking_distance', 'walking_speed', 'step_count', 'flights_climbed',
     'walking_steadiness', 'walking_step_length', 'walking_asymmetry', 'walking_double_support',
@@ -283,6 +285,7 @@ export const metricDefinitions: MetricDefinition[] = [
     bodyTemperatureMetric,
     fvcMetric,
     fvcPercentMetric,
+    svcMetric,
     peakCoughFlowMetric,
     gripStrengthMetric,
     walkingDistanceMetric,
@@ -349,6 +352,7 @@ export { fatigueMetric } from './fatigue';
 export { fluidIntakeMetric } from './fluidIntake';
 export { fvcMetric } from './fvc';
 export { fvcPercentMetric } from './fvcPercent';
+export { svcMetric } from './svc';
 export { gripStrengthMetric } from './gripStrength';
 export { heartRateMetric } from './heartRate';
 export { nflMetric } from './nfl';

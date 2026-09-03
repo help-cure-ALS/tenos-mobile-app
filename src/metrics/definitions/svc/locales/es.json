@@ -1,0 +1,11 @@
+{
+    "name": "Capacidad vital lenta (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "Acerca de la SVC",
+    "description": "La capacidad vital lenta (SVC) es una medida clave en las pruebas de función pulmonar. Describe el volumen pulmonar entre la inhalación máxima (inspiración) y la exhalación máxima (espiración) sin esfuerzo forzado ni rápido. El valor se registra como porcentaje del valor previsto según edad, sexo y estatura; los valores por encima del 80% se consideran normales.",
+    "fields": {
+        "value": {
+            "label": "SVC % del previsto"
+        }
+    }
+}

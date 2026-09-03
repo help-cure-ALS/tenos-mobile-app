@@ -1,0 +1,11 @@
+{
+    "name": "Yavaş vital kapasite (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "SVC hakkında",
+    "description": "Yavaş vital kapasite (SVC), akciğer fonksiyon testlerinin önemli bir ölçütüdür. Zorlu veya hızlı bir çaba olmadan, maksimum nefes alma (inspirasyon) ile maksimum nefes verme (ekspirasyon) arasındaki akciğer hacmini tanımlar. Değer; yaş, cinsiyet ve boya göre beklenen değerin yüzdesi olarak kaydedilir; %80 üzerindeki değerler normal kabul edilir.",
+    "fields": {
+        "value": {
+            "label": "SVC % beklenen"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "慢肺活量（SVC）",
+    "shortName": "SVC",
+    "descriptionTitle": "关于 SVC",
+    "description": "慢肺活量（Slow Vital Capacity，SVC）是肺功能检查中的一项重要指标。它指在不用力、不快速呼吸的情况下，从最大吸气到最大呼气之间的肺容量。数值以占年龄、性别和身高预计值的百分比记录，高于 80% 视为正常。",
+    "fields": {
+        "value": {
+            "label": "SVC 预计值百分比"
+        }
+    }
+}

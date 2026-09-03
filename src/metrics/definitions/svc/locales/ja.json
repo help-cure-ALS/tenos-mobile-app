@@ -1,0 +1,11 @@
+{
+    "name": "肺活量（SVC）",
+    "shortName": "SVC",
+    "descriptionTitle": "SVCについて",
+    "description": "肺活量（Slow Vital Capacity、SVC）は肺機能検査の重要な指標です。強制的または急速な努力を伴わずに、最大吸気から最大呼気までの肺気量を表します。値は年齢・性別・身長に基づく予測値に対する割合（％）で記録され、80％を超えていれば正常とみなされます。",
+    "fields": {
+        "value": {
+            "label": "SVC 予測値比（%）"
+        }
+    }
+}

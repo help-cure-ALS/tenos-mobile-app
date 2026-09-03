@@ -166,11 +166,15 @@ export const base: QuestionnaireBaseDefinition = {
     todoByDefault: false,
     todoRules: [
         {
-            type: 'questionnaireDomainScore',
-            questionnaireId: 'alsfrs-r',
-            domainId: 'gross_motor',
-            operator: 'lte',
-            value: 8,
+            conditions: [
+                {
+                    type: 'questionnaireDomainScore',
+                    questionnaireId: 'alsfrs-r',
+                    domainId: 'gross_motor',
+                    operator: 'lte',
+                    value: 8,
+                },
+            ],
         },
     ],
     highlighted: true,

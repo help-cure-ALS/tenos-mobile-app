@@ -1,55 +1,51 @@
 import type { MetricBaseDefinition } from '../../types';
 
 export const base: MetricBaseDefinition = {
-    id: 'fvc',
+    id: 'svc',
     icon: 'wind',
     iconColor: '#5AC8FA',
     fhir: {
         code: {
             system: 'http://loinc.org',
-            code: '19868-9',
-            display: 'Forced vital capacity [Volume] Respiratory system by Spirometry',
+            code: '98088-8',
+            display: 'Vital capacity/predicted VC Respiratory system by Spirometry',
         },
         category: 'vital-signs',
     },
     fields: [
         {
             key: 'value',
-            inputType: 'decimal',
-            decimalPlaces: 2,
-            placeholder: '0,00',
+            inputType: 'integer',
+            placeholder: '0',
             validation: {
-                min: 0.5,
-                max: 8.0,
+                min: 10,
+                max: 150,
                 required: true,
             },
         },
     ],
-    defaultUnit: 'L',
-    externalHealth: {
-        aggregation: 'sample',
-        importPolicy: { mode: 'daily-latest' },
-        appleHealthKit: {
-            read: [
-                { quantityType: 'HKQuantityTypeIdentifierForcedVitalCapacity', unit: 'L', field: 'value' },
-            ],
-        },
-        // No Health Connect equivalent: FVC import is iOS-only. The metric stays
-        // manually enterable on both platforms.
-    },
+    defaultUnit: '%',
+    // No externalHealth block: neither HealthKit nor Health Connect offer a
+    // (slow) vital capacity type. The metric is manually enterable on both
+    // platforms.
     chart: {
         type: 'line',
         yAxis: {
-            padding: 0.15,
+            max: 120,
+            padding: 0.1,
+        },
+        referenceLine: {
+            value: 80,
+            label: 'Normal',
         },
     },
     canPin: true,
-    sortOrder: 30,
+    sortOrder: 31,
     category: 'respiratory',
     schedule: { frequencyDays: 7, showForDays: 3 },
     todoByDefault: false,
     todoRules: [
-        // Doctor-only: FVC is measured with spirometry equipment that
+        // Doctor-only: SVC is measured with spirometry equipment that
         // patients do not have at home — never suggest it as a patient todo
         {
             roles: ['doctor'],

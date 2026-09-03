@@ -1,0 +1,11 @@
+{
+    "name": "Powolna pojemność życiowa (SVC)",
+    "shortName": "SVC",
+    "descriptionTitle": "O SVC",
+    "description": "Powolna pojemność życiowa (SVC) to kluczowy parametr diagnostyki czynności płuc. Określa objętość płuc między maksymalnym wdechem (inspiracją) a maksymalnym wydechem (ekspiracją) bez wymuszonego ani szybkiego wysiłku. Wartość zapisywana jest jako procent wartości należnej dla wieku, płci i wzrostu; wartości powyżej 80% uznaje się za prawidłowe.",
+    "fields": {
+        "value": {
+            "label": "SVC % normy"
+        }
+    }
+}
