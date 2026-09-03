@@ -407,6 +407,13 @@ export type QuestionnaireDefinition = {
     todoByDefault?: boolean;
 
     /**
+     * Whether the intro screen shows the capture date rows (backfilling
+     * older entries). Default: true. Disable for questionnaires that only
+     * make sense "right now", e.g. the daily symptom check.
+     */
+    showCaptureDate?: boolean;
+
+    /**
      * Conditional rules for showing this questionnaire in the todo list.
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
@@ -763,6 +770,13 @@ export type QuestionnaireBaseDefinition = {
     todoByDefault?: boolean;
 
     /**
+     * Whether the intro screen shows the capture date rows (backfilling
+     * older entries). Default: true. Disable for questionnaires that only
+     * make sense "right now", e.g. the daily symptom check.
+     */
+    showCaptureDate?: boolean;
+
+    /**
      * Conditional rules for showing this questionnaire in the todo list.
      * Only evaluated when todoByDefault is false and user hasn't explicitly configured.
      * AND-logic: all conditions must match for the item to appear.
@@ -967,6 +981,7 @@ export function mergeDefinition(
         sortOrder: base.sortOrder,
         displayMode: base.displayMode,
         todoByDefault: base.todoByDefault,
+        showCaptureDate: base.showCaptureDate,
         todoRules: base.todoRules,
     };
 }

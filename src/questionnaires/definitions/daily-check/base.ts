@@ -100,5 +100,7 @@ export const base: QuestionnaireBaseDefinition = {
     ],
     estimatedMinutes: 1,
     schedule: { frequencyDays: 1, enforced: false },
+    // Daily snapshot of the current state — backdating makes no sense here
+    showCaptureDate: false,
     highlighted: true,
 };

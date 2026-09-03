@@ -16,6 +16,7 @@ import Slider from '@react-native-community/slider';
 import { useTranslation } from 'react-i18next';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { ScreenHeader } from '@/src/components/ui/ScreenHeader';
+import { AppDateTimePicker } from '@/src/components/ui/AppDateTimePicker';
 import { CloseButton } from '@/src/components/ui/navigation/CloseButton';
 import { fmtDate } from '@/src/lib/formatDate';
 import type {
@@ -306,6 +307,12 @@ export function QuestionnaireScreen({
     );
     const [isSaving, setIsSaving] = useState(false);
 
+    // Capture date: editable on the intro screen so older questionnaires can
+    // be backfilled — same behavior as the metric add screen. Saving uses
+    // "now" unless the user picked a date or a backfill link provided one.
+    const [captureDate, setCaptureDate] = useState<Date>(() => effectiveDate ?? new Date());
+    const [captureDateTouched, setCaptureDateTouched] = useState(false);
+
     const { save, latestEntry } = useQuestionnaire({ questionnaireId: definition.id });
     const form = useQuestionnaireForm({ definition, initialAnswers: entry?.answers });
 
@@ -388,7 +395,10 @@ export function QuestionnaireScreen({
         }
 
         setIsSaving(true);
-        const result = await save(form.answers, effectiveDate);
+        // Preserve "now at save time" semantics unless the user picked a
+        // date or a backfill link provided one
+        const useCustomDate = captureDateTouched || !!effectiveDate;
+        const result = await save(form.answers, useCustomDate ? captureDate : undefined);
         setIsSaving(false);
 
         if (result.success) {
@@ -396,7 +406,7 @@ export function QuestionnaireScreen({
         } else {
             Alert.alert(t('common.error'), result.error ?? t('questionnaire.saveFailed'));
         }
-    }, [form.isComplete, form.answers, save, effectiveDate, t]);
+    }, [form.isComplete, form.answers, save, effectiveDate, captureDate, captureDateTouched, t]);
 
     const handleClose = useCallback(() => {
         if (!readonly && form.answeredCount > 0 && phase === 'questions') {
@@ -525,6 +535,11 @@ export function QuestionnaireScreen({
                                 hasSchedule={ !!definition.schedule }
                                 completedAt={ entry?.completedAt }
                                 researchContext={ researchContext }
+                                captureDate={ (readonly || definition.showCaptureDate === false) ? undefined : captureDate }
+                                onChangeCaptureDate={ (readonly || definition.showCaptureDate === false) ? undefined : (date) => {
+                                    setCaptureDate(date);
+                                    setCaptureDateTouched(true);
+                                } }
                             />
                         ) : phase === 'result' ? (
                             /* Result View */
@@ -540,6 +555,20 @@ export function QuestionnaireScreen({
                         ) : displayMode === 'paged' ? (
                             /* Paged Questions View */
                             <View pointerEvents={ readonly ? 'none' : 'auto' }>
+                                { /* Intro-less questionnaires get the capture
+                                     date above the first question instead */ }
+                                { !readonly && !definition.intro
+                                    && definition.showCaptureDate !== false
+                                    && currentQuestionIndex === 0 && (
+                                    <CaptureDateSection
+                                        date={ captureDate }
+                                        onChange={ (date) => {
+                                            setCaptureDate(date);
+                                            setCaptureDateTouched(true);
+                                        } }
+                                        style={ styles.questionsDateSection }
+                                    />
+                                ) }
 
                                 { (() => {
                                     const question = allQuestions[currentQuestionIndex];
@@ -609,6 +638,20 @@ export function QuestionnaireScreen({
                                     <Text style={ [styles.questionsIntroText, { color: colors.textPrimary }] }>
                                         { definition.introText }
                                     </Text>
+                                ) }
+
+                                { /* Intro-less questionnaires get the capture
+                                     date above the questions instead */ }
+                                { !readonly && !definition.intro
+                                    && definition.showCaptureDate !== false && (
+                                    <CaptureDateSection
+                                        date={ captureDate }
+                                        onChange={ (date) => {
+                                            setCaptureDate(date);
+                                            setCaptureDateTouched(true);
+                                        } }
+                                        style={ styles.questionsDateSection }
+                                    />
                                 ) }
 
                                 { definition.domains.map((domain) => (
@@ -844,9 +887,12 @@ type IntroViewProps = {
     hasSchedule: boolean;
     completedAt?: Date;
     researchContext?: string | null;
+    /** Capture date shown above the start button (backfilling, like the metric add screen) */
+    captureDate?: Date;
+    onChangeCaptureDate?: (date: Date) => void;
 };
 
-function IntroView({ intro, fallbackIconColor, availability, hasSchedule, completedAt, researchContext }: IntroViewProps) {
+function IntroView({ intro, fallbackIconColor, availability, hasSchedule, completedAt, researchContext, captureDate, onChangeCaptureDate }: IntroViewProps) {
     const { t, i18n } = useTranslation();
     const { colors } = useTheme();
 
@@ -900,6 +946,63 @@ function IntroView({ intro, fallbackIconColor, availability, hasSchedule, comple
                     { intro.researchNote }
                 </Text>
             ) }
+            { captureDate && onChangeCaptureDate && (
+                <CaptureDateSection
+                    date={ captureDate }
+                    onChange={ onChangeCaptureDate }
+                    style={ styles.introDateSection }
+                />
+            ) }
+        </View>
+    );
+}
+
+// =============================================================================
+// Capture Date Section
+// =============================================================================
+
+type CaptureDateSectionProps = {
+    date: Date;
+    onChange: (date: Date) => void;
+    style?: object;
+};
+
+/**
+ * Capture date + time rows — allows backfilling older questionnaires,
+ * mirroring the date/time rows of the metric add screen. Shown on the
+ * intro screen, or above the questions for intro-less questionnaires.
+ */
+function CaptureDateSection({ date, onChange, style }: CaptureDateSectionProps) {
+    const { t } = useTranslation();
+
+    return (
+        <View style={ style }>
+            <List.Section rounded>
+                <List.Item
+                    title={ t('metric.date') }
+                    hideChevron
+                    rightCmp={
+                        <AppDateTimePicker
+                            value={ date }
+                            mode="date"
+                            maximumDate={ new Date() }
+                            onChange={ onChange }
+                        />
+                    }
+                />
+                <List.Item
+                    title={ t('metric.time') }
+                    hideChevron
+                    lastItem
+                    rightCmp={
+                        <AppDateTimePicker
+                            value={ date }
+                            mode="time"
+                            onChange={ onChange }
+                        />
+                    }
+                />
+            </List.Section>
         </View>
     );
 }
@@ -1032,6 +1135,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 40
     },
+    introDateSection: {
+        alignSelf: 'stretch',
+        marginTop: 32,
+        // Cancel introInner's horizontal padding — List.Section brings its
+        // own token-based margin (same full-width look as the metric screen)
+        marginHorizontal: -20
+    },
     introDescription: {
         fontSize: 17,
         lineHeight: 24,
@@ -1062,6 +1172,9 @@ const styles = StyleSheet.create({
     },
     questionsContent: {
         paddingBottom: 20
+    },
+    questionsDateSection: {
+        marginBottom: 4
     },
     domainTitle: {
         fontSize: 14,
