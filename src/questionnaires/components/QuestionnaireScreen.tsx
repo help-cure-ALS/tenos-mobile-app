@@ -436,7 +436,11 @@ export function QuestionnaireScreen({
         router.back();
     }, [onComplete, router]);
 
-    const BOTTOM_BAR_HEIGHT = (displayMode === 'paged' ? 74 : 64) + insets.bottom;
+    // Android can report a zero bottom inset (modal presentation,
+    // 3-button navigation), which pushes the back/next buttons under the
+    // system bar — enforce a minimum, like the other bottom bars do
+    const bottomInset = Platform.OS === 'android' ? Math.max(insets.bottom, 24) : insets.bottom;
+    const BOTTOM_BAR_HEIGHT = (displayMode === 'paged' ? 74 : 64) + bottomInset;
 
     const handleStartQuestionnaire = useCallback(() => {
         if (displayMode === 'paged') {
@@ -514,7 +518,7 @@ export function QuestionnaireScreen({
                             : phase === 'result'
                                 ? styles.resultContent
                                 : styles.questionsContent,
-                        { paddingBottom: BOTTOM_BAR_HEIGHT + insets.bottom, alignItems: 'center' }
+                        { paddingBottom: BOTTOM_BAR_HEIGHT + bottomInset, alignItems: 'center' }
                     ] }
                     contentInsetAdjustmentBehavior="automatic"
                 >
@@ -732,7 +736,7 @@ export function QuestionnaireScreen({
                     styles.bottomBar,
                     {
                         height: BOTTOM_BAR_HEIGHT,
-                        paddingBottom: insets.bottom
+                        paddingBottom: bottomInset
                     }
                 ] }
                 pointerEvents="box-none"
