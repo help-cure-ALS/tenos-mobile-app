@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { AppIcon } from '@/src/components/ui/AppIcon';
 import { AppDateTimePicker } from '@/src/components/ui/AppDateTimePicker';
@@ -68,12 +68,15 @@ export default function LogDoseModal() {
     const scheduledFor = getScheduledSlotIso(selectedDate, slotTime);
 
     const [isBusy, setIsBusy] = useState(false);
+    // Separate flag so the "log all" link can show its own spinner
+    const [isLoggingAll, setIsLoggingAll] = useState(false);
 
     const allLogged = medications.every((med) => getDoseStatus(med.id, scheduledFor) !== 'pending');
 
     const handleLogAll = async () => {
         if (isBusy) return;
         setIsBusy(true);
+        setIsLoggingAll(true);
         try {
             const takenAt = editedTime ? getScheduledSlotIso(selectedDate, editedTime) : undefined;
             const pending = medications.filter(med => getDoseStatus(med.id, scheduledFor) === 'pending');
@@ -85,6 +88,7 @@ export default function LogDoseModal() {
             })));
         } finally {
             setIsBusy(false);
+            setIsLoggingAll(false);
         }
     };
 
@@ -160,11 +164,15 @@ export default function LogDoseModal() {
                     <Pressable
                         onPress={() => handleLogAll().catch(console.error)}
                         disabled={isBusy}
-                        style={[styles.logAllLink, isBusy && { opacity: 0.4 }]}
+                        style={[styles.logAllLink, isBusy && !isLoggingAll && { opacity: 0.4 }]}
                     >
-                        <Text style={[styles.logAllText, { color: colors.tint }]}>
-                            {t('medications.logAllAsTaken')}
-                        </Text>
+                        {isLoggingAll ? (
+                            <ActivityIndicator size="small" color={colors.tint} />
+                        ) : (
+                            <Text style={[styles.logAllText, { color: colors.tint }]}>
+                                {t('medications.logAllAsTaken')}
+                            </Text>
+                        )}
                     </Pressable>
                 )}
 

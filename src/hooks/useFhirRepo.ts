@@ -72,6 +72,18 @@ export type FhirRepoResult = {
     upsert(resourceType: string, id: string, resource: any, updatedAt?: string, tag?: string | null): Promise<void>;
 
     /**
+     * Upsert several resources for the active patient in one transaction
+     * with a single fhir:changed emit (batch actions like "log all doses").
+     */
+    upsertMany(items: Array<{
+        resourceType: string;
+        id: string;
+        resource: any;
+        updatedAt?: string;
+        tag?: string | null;
+    }>): Promise<void>;
+
+    /**
      * Mark a resource as deleted for the active patient.
      */
     markDeleted(resourceType: string, id: string, updatedAt?: string): Promise<void>;
@@ -170,6 +182,25 @@ export function useFhirRepo(): FhirRepoResult {
             }
             const resourceWithRole = addRecordedByRole(resource, role);
             await repo.upsert(activePatientId, resourceType, id, resourceWithRole, updatedAt, tag);
+        },
+        [repo, activePatientId, role]
+    );
+
+    const upsertMany = useCallback(
+        async (items: Array<{
+            resourceType: string;
+            id: string;
+            resource: any;
+            updatedAt?: string;
+            tag?: string | null;
+        }>) => {
+            if (!activePatientId) {
+                throw new Error('No active patient selected');
+            }
+            await repo.upsertMany(
+                activePatientId,
+                items.map((item) => ({ ...item, resource: addRecordedByRole(item.resource, role) })),
+            );
         },
         [repo, activePatientId, role]
     );
@@ -299,6 +330,7 @@ export function useFhirRepo(): FhirRepoResult {
         patientIds,
         canWrite: canWriteForActive,
         upsert,
+        upsertMany,
         markDeleted,
         list,
         count,

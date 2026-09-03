@@ -31,6 +31,23 @@ export type PatientFhirRepo = {
     ): Promise<void>;
 
     /**
+     * Upsert several resources at once: one SQLite transaction, one outbox
+     * enqueue and a SINGLE fhir:changed emit. Use for batch actions ("log
+     * all doses") — per-item upserts fire one emit each, and every emit
+     * fans out to dozens of listeners.
+     */
+    upsertMany(
+        subjectId: string,
+        items: Array<{
+            resourceType: string;
+            id: string;
+            resource: any;
+            updatedAt?: string;
+            tag?: string | null;
+        }>
+    ): Promise<void>;
+
+    /**
      * Mark a resource as deleted for a specific patient.
      */
     markDeleted(
@@ -132,6 +149,47 @@ export function createPatientFhirRepo(services: { outbox: OutboxStore }): Patien
         emit('fhir:changed');
     }
 
+    async function upsertMany(
+        subjectId: string,
+        items: Array<{
+            resourceType: string;
+            id: string;
+            resource: any;
+            updatedAt?: string;
+            tag?: string | null;
+        }>
+    ) {
+        if (!items.length) return;
+        await init();
+        const now = new Date().toISOString();
+        const stamped = items.map((item) => ({ ...item, ts: item.updatedAt ?? now }));
+
+        // All writes in one transaction — one commit instead of one per item
+        await fhirStore.withTransaction(async () => {
+            for (const item of stamped) {
+                await fhirStore.upsert(subjectId, item.resourceType, item.id, item.resource, item.ts, item.tag);
+            }
+        });
+
+        // Skip outbox for demo patient — demo data must never sync
+        if (subjectId !== DEMO_PATIENT_ID) {
+            const pointers = stamped.map((item) => {
+                const fhirPtr: FhirOutboxPointer = {
+                    event_id: Crypto.randomUUID(),
+                    op: 'upsert',
+                    subject_id: subjectId,
+                    resource_type: item.resourceType,
+                    resource_id: item.id,
+                    updated_at: item.ts,
+                };
+                return createFhirOutboxPointer(fhirPtr);
+            });
+            await outbox.enqueue(pointers);
+        }
+
+        emit('fhir:changed');
+    }
+
     async function markDeleted(
         subjectId: string,
         resourceType: string,
@@ -208,7 +266,7 @@ export function createPatientFhirRepo(services: { outbox: OutboxStore }): Patien
         return fhirStore.listMultiple(subjectIds, resourceType, opts);
     }
 
-    return { init, upsert, markDeleted, list, count, get, listMultiple };
+    return { init, upsert, upsertMany, markDeleted, list, count, get, listMultiple };
 }
 
 // Singleton (requires outbox to be set)

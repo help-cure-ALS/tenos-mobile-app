@@ -126,7 +126,7 @@ function suppressSlotIfFullyLogged(
 const MedicationsContext = createContext<UseMedicationsResult | null>(null);
 
 export function MedicationsProvider({ children }: { children: React.ReactNode }) {
-    const { list, upsert, markDeleted, activePatientId } = useFhirRepo();
+    const { list, upsert, upsertMany, markDeleted, activePatientId } = useFhirRepo();
 
     const [medications, setMedications] = useState<MedicationItem[]>([]);
     const [logs, setLogs] = useState<MedicationDoseLog[]>([]);
@@ -374,11 +374,15 @@ export function MedicationsProvider({ children }: { children: React.ReactNode })
                 return log;
             });
 
-            await Promise.all(
-                results.map(log =>
-                    upsert('MedicationAdministration', log.id, medicationDoseLogToFhir(log), log.takenAt),
-                ),
-            );
+            // One transaction + one fhir:changed emit for the whole batch —
+            // per-item upserts fired one emit each (dozens of listener
+            // reloads), which froze the UI on "log all as taken"
+            await upsertMany(results.map(log => ({
+                resourceType: 'MedicationAdministration',
+                id: log.id,
+                resource: medicationDoseLogToFhir(log),
+                updatedAt: log.takenAt,
+            })));
 
             // Optimistic update: merge new logs into state without full reload
             const newIds = new Set(results.map(r => r.id));
@@ -402,7 +406,7 @@ export function MedicationsProvider({ children }: { children: React.ReactNode })
 
             return results;
         },
-        [logs, upsert, getDaySlots, syncRemindersSafe, medications]
+        [logs, upsertMany, getDaySlots, syncRemindersSafe, medications]
     );
 
     const removeDoseLog = useCallback(
