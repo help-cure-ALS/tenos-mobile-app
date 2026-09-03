@@ -80,7 +80,7 @@ export const base: QuestionnaireBaseDefinition = {
         },
     ],
     estimatedMinutes: 2,
-    schedule: { frequencyDays: 3, enforced: false },
+    schedule: { frequencyDays: 7, enforced: false },
     todoByDefault: false,
     todoRules: [
         {
