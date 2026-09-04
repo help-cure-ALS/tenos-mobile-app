@@ -108,6 +108,8 @@ export type ResearchProjectParticipation = {
     codeExpiresAt?: string;
     /** Grant id (set after clinic confirmation) */
     grantId?: string;
+    /** Partner account ref (partner_account forwarding projects, resolved during linking) */
+    partnerAccountRef?: string;
     /** Whether the patient consented to sharing historical data */
     shareHistory?: boolean;
     /** ISO timestamp of consent/confirmation */

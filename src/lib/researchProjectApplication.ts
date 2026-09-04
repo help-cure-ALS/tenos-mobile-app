@@ -137,9 +137,11 @@ export async function submitProjectApplication(args: {
     shareHistory: boolean;
     selection: Record<string, boolean>;
     locale: string;
+    /** Partner account ref (partner_account forwarding projects, resolved during linking) */
+    partnerAccountRef?: string;
 }): Promise<ResearchProjectParticipation> {
     const { project, projectId, clinicId, clinicName, verificationTokenId,
-        anonymousResearchId, shareHistory, selection, locale } = args;
+        anonymousResearchId, shareHistory, selection, locale, partnerAccountRef } = args;
 
     const hasPolicy = Boolean(project.privacy_policy);
     const effectiveShareHistory = projectRequestsHistory(project) ? shareHistory : false;
@@ -173,6 +175,45 @@ export async function submitProjectApplication(args: {
         collectAllSettings: buildCollectAllSettings(project),
         linkedStudy: Boolean(project.study_link) || undefined,
         instruments: buildInstrumentsRecord(project, selection),
+        ...(partnerAccountRef ? { partnerAccountRef } : {}),
+        updatedAt: new Date().toISOString(),
+    };
+}
+
+/**
+ * Direct participation without a clinic application — for projects with
+ * verification_requirement 'general': the general verification token is
+ * sufficient, so consent in the app completes the participation locally.
+ * The server enforces the token on every donation regardless.
+ */
+export function buildDirectParticipation(args: {
+    project: ResearchProjectDetail;
+    projectId: string;
+    shareHistory: boolean;
+    selection: Record<string, boolean>;
+    locale: string;
+    partnerAccountRef?: string;
+}): ResearchProjectParticipation {
+    const { project, projectId, shareHistory, selection, locale, partnerAccountRef } = args;
+    const hasPolicy = Boolean(project.privacy_policy);
+    const effectiveShareHistory = projectRequestsHistory(project) ? shareHistory : false;
+
+    return {
+        projectId,
+        title: project.title,
+        status: 'active',
+        clinicId: '',
+        shareHistory: effectiveShareHistory,
+        consentedAt: new Date().toISOString(),
+        ...(hasPolicy ? {
+            acceptedPolicyVersion: project.privacy_policy_version,
+            acceptedLocale: locale,
+        } : {}),
+        collectAll: project.collect_all || undefined,
+        collectAllSettings: buildCollectAllSettings(project),
+        linkedStudy: Boolean(project.study_link) || undefined,
+        instruments: buildInstrumentsRecord(project, selection),
+        ...(partnerAccountRef ? { partnerAccountRef } : {}),
         updatedAt: new Date().toISOString(),
     };
 }

@@ -44,6 +44,13 @@ export type ResearchProjectSummary = {
     } | null;
     starts_at: string | null;
     ends_at: string | null;
+    /** 'general' = verification token alone suffices, 'project' = clinic grant required (closed projects) */
+    verification_requirement: 'general' | 'project';
+    /** Linking instructions for partner forwarding projects (localized server-side) */
+    partner_link_instructions: string | null;
+    /** Pass-through project: donations are forwarded to a partner, never stored */
+    is_forwarding: boolean;
+    forwarding_identity_mode: 'anonymous' | 'partner_account' | null;
     research_study_id: string | null;
     registry_system: string | null;
     registry_id: string | null;
@@ -293,6 +300,9 @@ export async function fetchResearchProjects(clinicId?: string, locale?: string):
     if (locale) {
         params.set('locale', locale);
     }
+    // Declared client capabilities: the server hides projects whose
+    // requirements this app version does not support.
+    params.set('capabilities', 'partner_account');
     const url = getAuthUrl(`/app/projects?${params.toString()}`);
 
     let token = await ensureAppAccessToken(false);
@@ -351,6 +361,7 @@ export async function fetchResearchProjectDetail(projectId: string, locale?: str
     if (locale) {
         params.set('locale', locale);
     }
+    params.set('capabilities', 'partner_account');
     const query = params.toString();
     const response = await authedRequest(getAuthUrl(`/app/projects/${projectId}${query ? `?${query}` : ''}`));
     if (!response.ok) {
@@ -409,11 +420,20 @@ export async function applyForResearchProject(
 export async function withdrawFromResearchProject(
     grantId: string,
     anonymousResearchId: string,
+    options?: {
+        /** Lets the server purge pending forwarding deliveries of this participant */
+        projectId?: string;
+        partnerAccountRef?: string;
+    },
 ): Promise<void> {
     const response = await authedRequest(getAuthUrl(`/app/project-grants/${grantId}/withdraw`), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ anonymous_research_id: anonymousResearchId }),
+        body: JSON.stringify({
+            anonymous_research_id: anonymousResearchId,
+            ...(options?.projectId ? { research_project_id: options.projectId } : {}),
+            ...(options?.partnerAccountRef ? { partner_account_ref: options.partnerAccountRef } : {}),
+        }),
     });
 
     if (!response.ok) {
@@ -423,6 +443,28 @@ export async function withdrawFromResearchProject(
         if (response.status === 404) return;
         throw new Error(`Research project withdrawal failed (${response.status}): ${body}`);
     }
+}
+
+/**
+ * Resolve a partner pairing code during the linking step of a
+ * partner_account forwarding project. Returns the stable account ref the
+ * partner resolved for this patient (stored locally, attached to donations).
+ */
+export async function resolvePartnerLinkCode(projectId: string, code: string): Promise<string> {
+    const response = await authedRequest(getAuthUrl(`/app/projects/${projectId}/partner-link`), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code }),
+    });
+    if (!response.ok) {
+        const body = await safeText(response);
+        throw new Error(`Partner link failed (${response.status}): ${body}`);
+    }
+    const data = (await response.json()) as { account_ref?: string };
+    if (!data.account_ref) {
+        throw new Error('Partner link returned no account_ref');
+    }
+    return data.account_ref;
 }
 
 /**
@@ -448,6 +490,7 @@ export async function sendToProxy(
     bundle: any,
     verificationTokenId?: string,
     researchProjectId?: string,
+    partnerAccountRef?: string,
 ): Promise<DonationResult> {
     const { donateUrl } = getConfig();
     let token = await ensureAppAccessToken(false);
@@ -456,6 +499,9 @@ export async function sendToProxy(
     const payload = JSON.stringify({
         domain: APP_DOMAIN,
         ...(researchProjectId ? { research_project_id: researchProjectId } : {}),
+        // Travels OUTSIDE the bundle (the server-side PII scan would rightly
+        // flag it inside) — required for partner_account forwarding projects.
+        ...(partnerAccountRef ? { partner_account_ref: partnerAccountRef } : {}),
         attestation,
         bundle,
     });

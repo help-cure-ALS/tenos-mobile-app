@@ -193,8 +193,10 @@ export async function executeDonationCycle(deps: DonationDeps): Promise<void> {
             idScope: string;
             minDate: Date | null;
             allowedQuestionnaireIds: Set<string> | null;
+            /** Partner account ref (partner_account forwarding projects) */
+            partnerAccountRef?: string;
         }): Promise<number> => {
-            const { selection, researchProjectId, hwmPrefix, idScope, minDate, allowedQuestionnaireIds } = options;
+            const { selection, researchProjectId, hwmPrefix, idScope, minDate, allowedQuestionnaireIds, partnerAccountRef } = options;
 
             const selectedBundle = await buildExportBundle(
                 patientFhirStore,
@@ -258,7 +260,7 @@ export async function executeDonationCycle(deps: DonationDeps): Promise<void> {
             if (toDonate.length === 0) return 0;
 
             const bundle = buildTransactionBundle(toDonate);
-            const result = await sendToProxy(anonymousResearchId, bundle, verificationTokenId, researchProjectId);
+            const result = await sendToProxy(anonymousResearchId, bundle, verificationTokenId, researchProjectId, partnerAccountRef);
 
             if (result.ok) {
                 await donationTrackingStore.setHighWaterMarks(newHighWaterMarks);
@@ -301,6 +303,7 @@ export async function executeDonationCycle(deps: DonationDeps): Promise<void> {
                     idScope: `p:${participation.projectId}:`,
                     minDate,
                     allowedQuestionnaireIds: participationSelection.allowedQuestionnaireIds,
+                    partnerAccountRef: participation.partnerAccountRef,
                 });
                 if (accepted > 0) {
                     console.log(`Research donation (${participation.title}): ${accepted} resources donated`);

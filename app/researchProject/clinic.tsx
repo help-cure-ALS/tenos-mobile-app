@@ -34,11 +34,13 @@ export default function ResearchProjectClinicScreen() {
     const { colors } = useAppTheme();
     const router = useSafeRouter();
     const insets = useSafeAreaInsets();
-    const { projectId, title, shareHistory, selection } = useLocalSearchParams<{
+    const { projectId, title, shareHistory, selection, partnerAccountRef } = useLocalSearchParams<{
         projectId: string;
         title?: string;
         shareHistory?: string;
         selection?: string;
+        /** Set when the partner linking step preceded this screen */
+        partnerAccountRef?: string;
     }>();
     const { patientPreferencesStore: prefsStore, donationTrackingStore } = usePatientStores();
     const { getOrCreateSubjectId } = useAppSync();
@@ -101,6 +103,7 @@ export default function ResearchProjectClinicScreen() {
                 shareHistory: shareHistory === '1',
                 selection: parseSelectionParam(selection) ?? buildDefaultSelection(project, null),
                 locale: i18n.language,
+                ...(partnerAccountRef ? { partnerAccountRef } : {}),
             });
 
             if (prefsStore) {

@@ -26,6 +26,7 @@ export default function ResearchProjectStackLayout() {
     return (
         <Stack screenOptions={ { headerBackButtonDisplayMode: 'minimal' } }>
             <Stack.Screen name="index" options={screenOptions} />
+            <Stack.Screen name="partnerLink" options={screenOptions} />
             <Stack.Screen name="clinic" options={screenOptions} />
             <Stack.Screen name="code" options={screenOptions} />
             <Stack.Screen name="data" options={screenOptions} />

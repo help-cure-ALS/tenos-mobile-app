@@ -32,6 +32,7 @@ import {
     type DraftSelectionPayload,
     buildCollectAllSettings,
     buildDefaultSelection,
+    buildDirectParticipation,
     buildInstrumentsRecord,
     instrumentKey,
     projectRequestsHistory,
@@ -73,6 +74,13 @@ export default function ResearchProjectScreen() {
         () => (project ? projectRequestsHistory(project) : false),
         [project],
     );
+
+    // Partner forwarding: linking step required before participation
+    const needsPartnerLink = project?.forwarding_identity_mode === 'partner_account';
+    // 'general' verification: the general token suffices — participation
+    // completes in the app, no clinic application/confirmation.
+    const isDirectJoin = project?.participation_mode === 'closed'
+        && project?.verification_requirement === 'general';
 
     // Load project detail + existing participation
     useEffect(() => {
@@ -194,6 +202,52 @@ export default function ResearchProjectScreen() {
         });
     }, [router, projectId, project, shareHistory, instrumentSelection]);
 
+    // Direct participation without partner linking ('general' + anonymous)
+    const [isJoining, setIsJoining] = useState(false);
+    const handleDirectJoin = useCallback(async () => {
+        if (!project || !projectId || isJoining) return;
+        setIsJoining(true);
+        try {
+            const joined = buildDirectParticipation({
+                project,
+                projectId,
+                shareHistory,
+                selection: instrumentSelection,
+                locale: i18n.language,
+            });
+            setParticipation(joined);
+            if (prefsStore) await prefsStore.setResearchProjectParticipation(joined);
+            emit('researchProjects:changed');
+        } catch (e) {
+            console.warn('Failed to join research project:', e);
+            Alert.alert(t('common.error'), t('share.research.joinFailed'));
+        } finally {
+            setIsJoining(false);
+        }
+    }, [project, projectId, isJoining, shareHistory, instrumentSelection, i18n.language, prefsStore, t]);
+
+    const handleParticipate = useCallback(() => {
+        if (!projectId) return;
+        if (needsPartnerLink) {
+            router.push({
+                pathname: '/researchProject/partnerLink' as any,
+                params: {
+                    projectId,
+                    title: project?.title ?? '',
+                    shareHistory: shareHistory ? '1' : '0',
+                    selection: serializeSelection(instrumentSelection),
+                    next: isDirectJoin ? 'join' : 'clinic',
+                },
+            });
+            return;
+        }
+        if (isDirectJoin) {
+            void handleDirectJoin();
+            return;
+        }
+        pushClinicScreen();
+    }, [projectId, needsPartnerLink, isDirectJoin, router, project, shareHistory, instrumentSelection, handleDirectJoin, pushClinicScreen]);
+
     // Consent withdrawal: revokes the grant on the clinic side, stops
     // project todos and donation batches immediately. Re-application via
     // the normal code flow stays possible.
@@ -202,7 +256,9 @@ export default function ResearchProjectScreen() {
 
         Alert.alert(
             t('share.research.endParticipationTitle'),
-            t('share.research.endParticipationMessage'),
+            project?.is_forwarding
+                ? `${t('share.research.endParticipationMessage')}\n\n${t('share.research.endParticipationForwardingNote')}`
+                : t('share.research.endParticipationMessage'),
             [
                 { text: t('common.cancel'), style: 'cancel' },
                 {
@@ -215,7 +271,10 @@ export default function ResearchProjectScreen() {
                                 const anonymousResearchId = await resolveAnonymousResearchId(
                                     donationTrackingStore, getOrCreateSubjectId,
                                 );
-                                await withdrawFromResearchProject(participation.grantId, anonymousResearchId);
+                                await withdrawFromResearchProject(participation.grantId, anonymousResearchId, {
+                                    projectId: participation.projectId,
+                                    partnerAccountRef: participation.partnerAccountRef,
+                                });
                             }
                             const updated: ResearchProjectParticipation = {
                                 ...participation,
@@ -235,7 +294,7 @@ export default function ResearchProjectScreen() {
                 },
             ],
         );
-    }, [participation, isWithdrawing, donationTrackingStore, getOrCreateSubjectId, prefsStore, t]);
+    }, [participation, isWithdrawing, project, donationTrackingStore, getOrCreateSubjectId, prefsStore, t]);
 
     function renderContent() {
         if (!project) return null;
@@ -314,6 +373,22 @@ export default function ResearchProjectScreen() {
                             onPress={pushDataScreen}
                         />
                     )}
+                    {project.is_forwarding && (
+                        <List.Item
+                            title={t('share.research.forwardingLabel')}
+                            subtitle={t('share.research.forwardingNotice', {
+                                partner: project.sponsor_name ?? project.title,
+                            })}
+                            subtitleNumberOfLines={4}
+                            hideChevron
+                        />
+                    )}
+                    {participation?.status === 'active' && participation.partnerAccountRef && (
+                        <List.Item
+                            title={t('share.research.partnerLinkedTitle')}
+                            hideChevron
+                        />
+                    )}
                     {project.privacy_policy && (
                         <List.Item
                             title={t('share.research.privacyLabel')}
@@ -356,10 +431,15 @@ export default function ResearchProjectScreen() {
 
                         <List.Wrapper>
                             <Button
-                                title={t('share.research.verifyNow')}
-                                onPress={pushClinicScreen}
+                                title={isDirectJoin ? t('share.research.joinNow') : t('share.research.verifyNow')}
+                                onPress={handleParticipate}
                                 rounded
-                                disabled={!verificationTokenId || acceptedClinics.length === 0}
+                                loading={isJoining}
+                                disabled={
+                                    isJoining
+                                    || !verificationTokenId
+                                    || (!isDirectJoin && acceptedClinics.length === 0)
+                                }
                             />
                         </List.Wrapper>
                     </>
