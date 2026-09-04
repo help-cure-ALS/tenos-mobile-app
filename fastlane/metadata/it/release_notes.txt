@@ -1,1 +1,1 @@
-Area progetti di ricerca rinnovata. Modalità demo migliorata. Correzioni di bug e miglioramenti.
+I questionari ora possono essere registrati retroattivamente. Nuova metrica della funzionalità polmonare (SVC). Registrazione dei farmaci più veloce. Correzioni di bug e miglioramenti.

@@ -1,1 +1,1 @@
-Espace projets de recherche repensé. Mode démo amélioré. Corrections de bugs et améliorations.
+Les questionnaires peuvent désormais être saisis rétroactivement. Nouvelle métrique de fonction pulmonaire (SVC). Enregistrement des médicaments plus rapide. Corrections de bugs et améliorations.

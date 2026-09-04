@@ -1,1 +1,1 @@
-Überarbeiteter Bereich für Forschungsprojekte. Verbesserter Demo-Modus. Fehlerbehebungen und Verbesserungen.
+Fragebögen lassen sich jetzt rückwirkend erfassen. Neue Metrik für die Lungenfunktion (SVC). Schnelleres Protokollieren von Medikamenten. Fehlerbehebungen und Verbesserungen.

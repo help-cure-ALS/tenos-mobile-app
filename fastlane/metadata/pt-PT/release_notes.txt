@@ -1,1 +1,1 @@
-Área de projetos de investigação renovada. Modo de demonstração melhorado. Correções de erros e melhorias.
+Os questionários agora podem ser registados retroativamente. Nova métrica de função pulmonar (SVC). Registo de medicamentos mais rápido. Correções de erros e melhorias.

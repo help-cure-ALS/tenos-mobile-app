@@ -1,1 +1,1 @@
-Przebudowana sekcja projektów badawczych. Ulepszony tryb demo. Poprawki błędów i ulepszenia.
+Kwestionariusze można teraz uzupełniać z datą wsteczną. Nowy parametr czynności płuc (SVC). Szybsze rejestrowanie leków. Poprawki błędów i ulepszenia.

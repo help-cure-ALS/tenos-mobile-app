@@ -1,1 +1,1 @@
-Vernieuwd gedeelte voor onderzoeksprojecten. Verbeterde demomodus. Bugfixes en verbeteringen.
+Vragenlijsten kunnen nu met terugwerkende kracht worden ingevuld. Nieuwe longfunctie-meting (SVC). Sneller registreren van medicatie. Bugfixes en verbeteringen.

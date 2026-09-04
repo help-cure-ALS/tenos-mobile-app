@@ -1,1 +1,1 @@
-Secțiunea proiectelor de cercetare reproiectată. Mod demo îmbunătățit. Corecturi de erori și îmbunătățiri.
+Chestionarele pot fi acum completate retroactiv. Un nou parametru al funcției pulmonare (SVC). Înregistrare mai rapidă a medicamentelor. Corecturi de erori și îmbunătățiri.

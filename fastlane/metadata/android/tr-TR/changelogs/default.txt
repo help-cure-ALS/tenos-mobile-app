@@ -1,1 +1,1 @@
-Araştırma projeleri bölümü yenilendi. Demo modu iyileştirildi. Hata düzeltmeleri ve iyileştirmeler.
+Anketler artık geçmiş tarihler için de kaydedilebilir. Yeni akciğer fonksiyonu ölçütü (SVC). Daha hızlı ilaç kaydı. Hata düzeltmeleri ve iyileştirmeler.

@@ -1,1 +1,1 @@
-Reworked research projects area. Improved demo mode. Bug fixes and improvements.
+Questionnaires can now be backfilled for earlier dates. New lung function metric (SVC). Faster medication logging. Bug fixes and improvements.
