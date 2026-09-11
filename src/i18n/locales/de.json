@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} Kliniken",
         "allClinics": "Alle Studienzentren",
         "clinicPickerTitle": "Studienzentren auswählen",
-        "noClinicsFound": "Keine Studienzentren gefunden"
+        "noClinicsFound": "Keine Studienzentren gefunden",
+        "matchCouldFit": "Könnte passen",
+        "matchUnlikely": "Passt evtl. nicht",
+        "matchCounts": "{{met}} Kriterien erfüllt · {{notMet}} nicht erfüllt · {{unknown}} unbekannt",
+        "matchDisclaimer": "Diese Einschätzung basiert auf deinen in der App erfassten Daten und ist keine Eignungszusage. Ob du teilnehmen kannst, entscheidet immer das Studienzentrum.",
+        "filterMatch": "Passend für mich"
     },
     "pinOrder": {
         "title": "Liste bearbeiten",

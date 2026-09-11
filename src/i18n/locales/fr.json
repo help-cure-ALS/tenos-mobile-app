@@ -1521,7 +1521,12 @@
         "filterClinicsCount": "{{count}} cliniques",
         "allClinics": "Tous les centres d'étude",
         "clinicPickerTitle": "Sélectionner les centres d'étude",
-        "noClinicsFound": "Aucun centre d'étude trouvé"
+        "noClinicsFound": "Aucun centre d'étude trouvé",
+        "matchCouldFit": "Pourrait convenir",
+        "matchUnlikely": "Peut ne pas convenir",
+        "matchCounts": "{{met}} critères remplis · {{notMet}} non remplis · {{unknown}} inconnus",
+        "matchDisclaimer": "Cette évaluation repose sur les données que vous saisissez dans l'application et ne garantit pas votre éligibilité. La participation est toujours décidée par le centre d'étude.",
+        "filterMatch": "Pour moi"
     },
     "pinOrder": {
         "title": "Modifier la liste",

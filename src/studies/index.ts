@@ -33,5 +33,18 @@ export { mapFhirStudy } from './fhirMapping';
 export { getCareClient, resetCareClient } from './careClient';
 
 // Components
+export {
+    collectStructuredCriteria,
+    evaluateCriterion,
+    evaluateStudyMatch,
+} from './matching';
+export type {
+    CriterionMatchState,
+    PatientMatchSnapshot,
+    StructuredCriterion,
+    StudyMatchLabel,
+    StudyMatchResult,
+} from './matching';
+export { useStudyMatchSnapshot } from './useStudyMatchSnapshot';
 export { StudyCard } from './components/StudyCard';
 export { StudyStatusBadge } from './components/StudyStatusBadge';

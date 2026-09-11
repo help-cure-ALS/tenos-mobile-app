@@ -17,8 +17,13 @@ import {
     useStudies,
     getPhaseLabel,
     getStudyTypeLabel,
-    StudyStatusBadge
+    StudyStatusBadge,
+    collectStructuredCriteria,
+    evaluateCriterion,
+    evaluateStudyMatch,
+    useStudyMatchSnapshot
 } from '@/src/studies';
+import type { CriterionMatchState, EligibilityCriterion } from '@/src/studies';
 import { useStudyFavorites } from '@/src/hooks/useStudyFavorites';
 import { getCountryByCode } from '@/src/components/ui/CountryPicker';
 import { useAppTheme } from "@/src/theme";
@@ -35,6 +40,7 @@ export default function StudyDetailScreen() {
     const { getStudyById, loading, refreshing, refetch, openClinicStudyIds, allClinicStudies } = useStudies();
     const study = getStudyById(studyId);
     const { isFavorite, toggleFavorite } = useStudyFavorites();
+    const { snapshot: matchSnapshot } = useStudyMatchSnapshot();
 
     const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
         about: true,
@@ -100,6 +106,31 @@ export default function StudyDetailScreen() {
 
     const inclusionCriteria = study.eligibility.filter(c => c.type === 'inclusion');
     const exclusionCriteria = study.eligibility.filter(c => c.type === 'exclusion');
+
+    // On-device match: per-criterion state + study summary. Purely a
+    // hint — the disclaimer below makes clear the site decides. Studies
+    // that cannot be joined anymore (completed, paused, withdrawn,
+    // closed to accrual) never get a match verdict or criterion states.
+    const isJoinable = study.status === 'recruiting' || study.status === 'enrolling';
+    const studyMatch = isJoinable
+        ? evaluateStudyMatch(collectStructuredCriteria(study), matchSnapshot)
+        : { label: 'neutral' as const, met: 0, notMet: 0, unknown: 0 };
+    const criterionState = (criterion: EligibilityCriterion): CriterionMatchState | undefined =>
+        isJoinable && criterion.structured
+            ? evaluateCriterion(criterion.structured, matchSnapshot)
+            : undefined;
+    const stateIcon = (state: CriterionMatchState | undefined, fallback: { name: string; tint: string }) => {
+        switch (state) {
+            case 'met':
+                return { name: 'checkmark.circle.fill', tint: '#34C759' };
+            case 'not_met':
+                return { name: 'xmark.circle.fill', tint: '#FF3B30' };
+            case 'unknown':
+                return { name: 'questionmark.circle.fill', tint: colors.textHint };
+            default:
+                return fallback;
+        }
+    };
 
     return (
         <>
@@ -174,6 +205,20 @@ export default function StudyDetailScreen() {
                             ) }
 
                             <Badge label={ getStudyTypeLabel(study.type) } />
+
+                            { studyMatch.label === 'could_fit' && (
+                                <Badge
+                                    label={ t('studies.matchCouldFit') }
+                                    variant="success"
+                                />
+                            ) }
+                            { studyMatch.label === 'unlikely_fit' && (
+                                <Badge
+                                    label={ t('studies.matchUnlikely') }
+                                    color={ colors.listItemBackgroundMuted }
+                                    textColor={ colors.textSecondary }
+                                />
+                            ) }
                         </View>
 
                         <Space />
@@ -235,6 +280,18 @@ export default function StudyDetailScreen() {
                                     (ext/eligibility-{lang}); the structured
                                     inclusion/exclusion lists exist only for
                                     the English base text. */ }
+                                { studyMatch.label !== 'neutral' && (
+                                    <View style={ styles.matchSummary }>
+                                        <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
+                                            { t('studies.matchCounts', {
+                                                met: studyMatch.met,
+                                                notMet: studyMatch.notMet,
+                                                unknown: studyMatch.unknown,
+                                            }) }
+                                        </Text>
+                                    </View>
+                                ) }
+
                                 { study.eligibilityText && (
                                     <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
                                         { study.eligibilityText }
@@ -246,15 +303,17 @@ export default function StudyDetailScreen() {
                                         <Text style={ [styles.criteriaTitle, { color: '#34C759' }] }>
                                             { t('studies.inclusionCriteria') }
                                         </Text>
-                                        { inclusionCriteria.map((criterion, index) => (
-                                            <View key={ index } style={ styles.criterionRow }>
-                                                <AppIcon name="checkmark.circle.fill" tintColor="#34C759"
-                                                            size={ 16 } />
-                                                <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
-                                                    { criterion.description }
-                                                </Text>
-                                            </View>
-                                        )) }
+                                        { inclusionCriteria.map((criterion, index) => {
+                                            const icon = stateIcon(criterionState(criterion), { name: 'checkmark.circle.fill', tint: '#34C759' });
+                                            return (
+                                                <View key={ index } style={ styles.criterionRow }>
+                                                    <AppIcon name={ icon.name } tintColor={ icon.tint } size={ 16 } />
+                                                    <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
+                                                        { criterion.description }
+                                                    </Text>
+                                                </View>
+                                            );
+                                        }) }
                                     </View>
                                 ) }
 
@@ -263,15 +322,23 @@ export default function StudyDetailScreen() {
                                         <Text style={ [styles.criteriaTitle, { color: '#FF3B30' }] }>
                                             { t('studies.exclusionCriteria') }
                                         </Text>
-                                        { exclusionCriteria.map((criterion, index) => (
-                                            <View key={ index } style={ styles.criterionRow }>
-                                                <AppIcon name="xmark.circle.fill" tintColor="#FF3B30" size={ 16 } />
-                                                <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
-                                                    { criterion.description }
-                                                </Text>
-                                            </View>
-                                        )) }
+                                        { exclusionCriteria.map((criterion, index) => {
+                                            const icon = stateIcon(criterionState(criterion), { name: 'xmark.circle.fill', tint: '#FF3B30' });
+                                            return (
+                                                <View key={ index } style={ styles.criterionRow }>
+                                                    <AppIcon name={ icon.name } tintColor={ icon.tint } size={ 16 } />
+                                                    <Text style={ [styles.criterionText, { color: colors.textSecondary }] }>
+                                                        { criterion.description }
+                                                    </Text>
+                                                </View>
+                                            );
+                                        }) }
                                     </View>
+                                ) }
+                                { studyMatch.label !== 'neutral' && (
+                                    <Text style={ [styles.matchDisclaimer, { color: colors.textHint }] }>
+                                        { t('studies.matchDisclaimer') }
+                                    </Text>
                                 ) }
                             </CollapsibleSection>
 
@@ -454,6 +521,7 @@ const styles = StyleSheet.create({
     metaRow: {
         flexDirection: 'row',
         alignItems: 'center',
+        flexWrap: 'wrap',
         gap: 8,
         marginTop: 8
     },
@@ -505,6 +573,15 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: '600',
         marginBottom: 4
+    },
+    matchSummary: {
+        marginBottom: 12,
+        gap: 2,
+    },
+    matchDisclaimer: {
+        fontSize: 12,
+        marginTop: 12,
+        lineHeight: 16,
     },
     criterionRow: {
         flexDirection: 'row',

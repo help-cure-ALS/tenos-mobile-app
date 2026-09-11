@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}}件のクリニック",
         "allClinics": "すべての研究センター",
         "clinicPickerTitle": "研究センターを選択",
-        "noClinicsFound": "研究センターが見つかりません"
+        "noClinicsFound": "研究センターが見つかりません",
+        "matchCouldFit": "適合の可能性あり",
+        "matchUnlikely": "適合しない可能性",
+        "matchCounts": "基準 {{met}}件該当 · {{notMet}}件非該当 · {{unknown}}件不明",
+        "matchDisclaimer": "この評価はアプリに記録されたデータに基づくもので、参加資格を保証するものではありません。参加の可否は必ず治験実施施設が判断します。",
+        "filterMatch": "自分に合う"
     },
     "pinOrder": {
         "title": "リストを編集",

@@ -7,6 +7,7 @@
 
 import type { ResearchStudy } from '@medplum/fhirtypes';
 import type { Study, StudyStatus, StudyPhase, StudyType, StudyCenter, EligibilityCriterion } from './types';
+import type { StructuredCriterion } from './matching';
 
 /** Map FHIR R4 ResearchStudy status to app StudyStatus */
 function mapStatus(fhirStatus: string): StudyStatus {
@@ -163,6 +164,20 @@ function getLocalizedEligibilityText(study: ResearchStudy, lang: string): string
     return getExtension(study, `${EXT_BASE}/eligibility-${lang}`)?.valueString;
 }
 
+/** Parse a `structured` sub-extension (JSON string) defensively. */
+function parseStructured(raw: string | undefined): StructuredCriterion | undefined {
+    if (!raw) return undefined;
+    try {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object' && typeof parsed.id === 'string') {
+            return parsed as StructuredCriterion;
+        }
+    } catch {
+        // Malformed server data — treat as "no structured form"
+    }
+    return undefined;
+}
+
 /** Extract eligibility criteria from nested extension */
 function extractEligibility(study: ResearchStudy): EligibilityCriterion[] {
     const ext = getExtension(study, 'http://help-cure-als.org/ext/eligibility');
@@ -174,12 +189,33 @@ function extractEligibility(study: ResearchStudy): EligibilityCriterion[] {
             const subs = c.extension || [];
             const typeExt = subs.find((s: any) => s.url === 'type');
             const descExt = subs.find((s: any) => s.url === 'description');
+            const structured = parseStructured(
+                subs.find((s: any) => s.url === 'structured')?.valueString,
+            );
             return {
                 type: typeExt?.valueCode === 'exclusion' ? 'exclusion' : 'inclusion',
                 description: descExt?.valueString || '',
+                ...(structured ? { structured } : {}),
             } as EligibilityCriterion;
         })
         .filter((c: EligibilityCriterion) => c.description);
+}
+
+/** Structured base criteria (age range, sex) from the registry module. */
+function extractStructuredBase(study: ResearchStudy): StructuredCriterion[] | undefined {
+    const raw = getExtension(study, `${EXT_BASE}/eligibility-structured-base`)?.valueString;
+    if (!raw) return undefined;
+    try {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+            return parsed.filter(
+                (c): c is StructuredCriterion => !!c && typeof c === 'object' && typeof c.id === 'string',
+            );
+        }
+    } catch {
+        // Malformed server data — no base criteria
+    }
+    return undefined;
 }
 
 /**
@@ -241,6 +277,7 @@ export function mapFhirStudy(resource: ResearchStudy, lang = 'en'): Study {
         icon,
         iconColor,
         eligibility: extractEligibility(resource),
+        structuredBase: extractStructuredBase(resource),
         eligibilityText: getLocalizedEligibilityText(resource, lang),
         isTranslated,
         centers: extractCenters(resource),

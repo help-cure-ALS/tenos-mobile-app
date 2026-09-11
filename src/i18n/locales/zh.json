@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}}家诊所",
         "allClinics": "所有研究中心",
         "clinicPickerTitle": "选择研究中心",
-        "noClinicsFound": "未找到研究中心"
+        "noClinicsFound": "未找到研究中心",
+        "matchCouldFit": "可能符合",
+        "matchUnlikely": "可能不符合",
+        "matchCounts": "{{met}}项符合 · {{notMet}}项不符合 · {{unknown}}项未知",
+        "matchDisclaimer": "该评估基于你在应用中记录的数据，并不代表你一定符合条件。能否参加始终由研究中心决定。",
+        "filterMatch": "适合我"
     },
     "pinOrder": {
         "title": "编辑列表",

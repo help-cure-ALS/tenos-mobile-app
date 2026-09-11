@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} clinici",
         "allClinics": "Toate centrele de studiu",
         "clinicPickerTitle": "Selectează centrele de studiu",
-        "noClinicsFound": "Nu au fost găsite centre de studiu"
+        "noClinicsFound": "Nu au fost găsite centre de studiu",
+        "matchCouldFit": "Ar putea fi potrivit",
+        "matchUnlikely": "Poate nu este potrivit",
+        "matchCounts": "{{met}} criterii îndeplinite · {{notMet}} neîndeplinite · {{unknown}} necunoscute",
+        "matchDisclaimer": "Această evaluare se bazează pe datele înregistrate în aplicație și nu este o garanție de eligibilitate. Participarea este decisă întotdeauna de centrul studiului.",
+        "filterMatch": "Potrivite mie"
     },
     "pinOrder": {
         "title": "Editează lista",

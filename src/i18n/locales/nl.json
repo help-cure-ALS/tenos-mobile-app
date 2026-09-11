@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} klinieken",
         "allClinics": "Alle studiecentra",
         "clinicPickerTitle": "Studiecentra selecteren",
-        "noClinicsFound": "Geen studiecentra gevonden"
+        "noClinicsFound": "Geen studiecentra gevonden",
+        "matchCouldFit": "Zou kunnen passen",
+        "matchUnlikely": "Past mogelijk niet",
+        "matchCounts": "{{met}} criteria voldaan · {{notMet}} niet voldaan · {{unknown}} onbekend",
+        "matchDisclaimer": "Deze inschatting is gebaseerd op de gegevens die je in de app bijhoudt en is geen toezegging van geschiktheid. Of je kunt deelnemen, beslist altijd het studiecentrum.",
+        "filterMatch": "Passend voor mij"
     },
     "pinOrder": {
         "title": "Lijst bewerken",

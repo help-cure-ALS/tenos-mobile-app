@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} cliniche",
         "allClinics": "Tutti i centri dello studio",
         "clinicPickerTitle": "Seleziona centri dello studio",
-        "noClinicsFound": "Nessun centro studio trovato"
+        "noClinicsFound": "Nessun centro studio trovato",
+        "matchCouldFit": "Potrebbe essere adatto",
+        "matchUnlikely": "Forse non adatto",
+        "matchCounts": "{{met}} criteri soddisfatti · {{notMet}} non soddisfatti · {{unknown}} sconosciuti",
+        "matchDisclaimer": "Questa valutazione si basa sui dati registrati nell'app e non è una garanzia di idoneità. La partecipazione viene sempre decisa dal centro dello studio.",
+        "filterMatch": "Adatti a me"
     },
     "pinOrder": {
         "title": "Modifica elenco",

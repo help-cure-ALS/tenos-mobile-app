@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} klinik",
         "allClinics": "Wszystkie ośrodki badania",
         "clinicPickerTitle": "Wybierz ośrodki badania",
-        "noClinicsFound": "Nie znaleziono ośrodków badania"
+        "noClinicsFound": "Nie znaleziono ośrodków badania",
+        "matchCouldFit": "Może pasować",
+        "matchUnlikely": "Może nie pasować",
+        "matchCounts": "{{met}} kryteriów spełnionych · {{notMet}} niespełnionych · {{unknown}} nieznanych",
+        "matchDisclaimer": "Ta ocena opiera się na danych zapisanych w aplikacji i nie gwarantuje kwalifikacji. O udziale zawsze decyduje ośrodek badawczy.",
+        "filterMatch": "Pasujące do mnie"
     },
     "pinOrder": {
         "title": "Edytuj listę",

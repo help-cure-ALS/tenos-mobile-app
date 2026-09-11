@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} Clinics",
         "allClinics": "All study centers",
         "clinicPickerTitle": "Select study centers",
-        "noClinicsFound": "No study centers found"
+        "noClinicsFound": "No study centers found",
+        "matchCouldFit": "Could fit",
+        "matchUnlikely": "May not fit",
+        "matchCounts": "{{met}} criteria met · {{notMet}} not met · {{unknown}} unknown",
+        "matchDisclaimer": "This assessment is based on the data you track in the app and is not a promise of eligibility. Whether you can participate is always decided by the study site.",
+        "filterMatch": "Fits me"
     },
     "pinOrder": {
         "title": "Edit List",

@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "test:sync": "rm -rf .tmp/hca-mobile-sync-tests && npx tsc --ignoreConfig tests/sync/runSyncTests.ts --module commonjs --target ES2020 --moduleResolution node --ignoreDeprecations 6.0 --esModuleInterop --skipLibCheck --outDir .tmp/hca-mobile-sync-tests && node .tmp/hca-mobile-sync-tests/tests/sync/runSyncTests.js && rm -rf .tmp/hca-mobile-sync-tests",
     "i18n:audit": "node scripts/i18n-audit.mjs",
-    "postinstall": "npx patch-package"
+    "postinstall": "npx patch-package",
+    "test:matching": "npx tsx --test src/studies/__tests__/matching.test.ts"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

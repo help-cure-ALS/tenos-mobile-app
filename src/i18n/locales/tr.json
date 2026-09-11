@@ -1411,7 +1411,12 @@
         "filterClinicsCount": "{{count}} klinik",
         "allClinics": "Tüm çalışma merkezleri",
         "clinicPickerTitle": "Çalışma merkezlerini seç",
-        "noClinicsFound": "Çalışma merkezi bulunamadı"
+        "noClinicsFound": "Çalışma merkezi bulunamadı",
+        "matchCouldFit": "Uygun olabilir",
+        "matchUnlikely": "Uygun olmayabilir",
+        "matchCounts": "{{met}} kriter karşılandı · {{notMet}} karşılanmadı · {{unknown}} bilinmiyor",
+        "matchDisclaimer": "Bu değerlendirme uygulamada kaydettiğin verilere dayanır ve uygunluk garantisi değildir. Katılıma her zaman çalışma merkezi karar verir.",
+        "filterMatch": "Bana uygun"
     },
     "pinOrder": {
         "title": "Listeyi düzenle",

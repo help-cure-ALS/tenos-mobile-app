@@ -40,10 +40,14 @@ export type StudyType =
     | 'survey'           // Questionnaire-based
     | 'device';          // Medical device trial
 
+import type { StructuredCriterion } from './matching';
+
 /** Eligibility criterion */
 export type EligibilityCriterion = {
     type: 'inclusion' | 'exclusion';
     description: string;
+    /** Machine-readable form (criterion catalog v1), if extracted/overridden */
+    structured?: StructuredCriterion;
 };
 
 /** Study center/location */
@@ -119,6 +123,9 @@ export type Study = {
 
     /** Eligibility criteria (structured, English base) */
     eligibility: EligibilityCriterion[];
+
+    /** Structured base criteria from the registry (age range, sex) */
+    structuredBase?: StructuredCriterion[];
 
     /**
      * Translated eligibility criteria as flat text (from

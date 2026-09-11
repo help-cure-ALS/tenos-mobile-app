@@ -18,8 +18,8 @@ import { useTranslation } from 'react-i18next';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { usePatientSwitcherToolbar } from "@/src/components/PatientSwitcher";
 import { HeaderButton } from '@/src/components/ui/navigation/HeaderButton';
-import { StudyCard, useStudies } from '@/src/studies';
-import type { StudyStatus } from '@/src/studies';
+import { StudyCard, useStudies, collectStructuredCriteria, evaluateStudyMatch, useStudyMatchSnapshot } from '@/src/studies';
+import type { StudyStatus, StudyMatchLabel } from '@/src/studies';
 import { useStudyFavorites } from '@/src/hooks/useStudyFavorites';
 import { getCountryByCode } from '@/src/components/ui/CountryPicker';
 import { getCurrentLanguage } from '@/src/i18n';
@@ -42,6 +42,8 @@ type PersistedFilters = {
     status: StudyStatus | null;
     favorites: boolean;
     clinicIds: string[] | null;
+    /** Show only studies labeled "could fit" (opt-in, off by default) */
+    match?: boolean;
 };
 
 export default function StudiesScreen() {
@@ -64,6 +66,7 @@ export default function StudiesScreen() {
         allClinicStudies
     } = useStudies();
     const { isFavorite, toggleFavorite } = useStudyFavorites();
+    const { snapshot: matchSnapshot } = useStudyMatchSnapshot();
     const [showInfoPage, setShowInfoPage] = useState(false);
     const [infoPageLoading, setInfoPageLoading] = useState(true);
 
@@ -82,6 +85,7 @@ export default function StudiesScreen() {
     const [filterStatus, setFilterStatusRaw] = useState<StudyStatus | null>('recruiting');
     const [filterFavorites, setFilterFavorites] = useState(false);
     const [filterClinicIds, setFilterClinicIdsRaw] = useState<string[] | null>(null);
+    const [filterMatch, setFilterMatch] = useState(false);
     const pickerOpenedFromHere = useRef(false);
     // Guards persistence until the stored filters have been hydrated —
     // otherwise the defaults would overwrite the stored state on mount.
@@ -123,6 +127,7 @@ export default function StudiesScreen() {
                     setFilterClinicIdsRaw(
                         Array.isArray(f.clinicIds) && f.clinicIds.length > 0 ? f.clinicIds : null
                     );
+                    setFilterMatch(Boolean(f.match));
                 } else {
                     const legacy = await AsyncStorage.getItem(STUDIES_FILTER_STATUS_KEY);
                     if (legacy !== null) {
@@ -150,9 +155,10 @@ export default function StudiesScreen() {
             status: filterStatus,
             favorites: filterFavorites,
             clinicIds: filterClinicIds,
+            match: filterMatch,
         };
         AsyncStorage.setItem(STUDIES_FILTERS_KEY, JSON.stringify(f)).catch(() => {});
-    }, [filterCountry, filterStatus, filterFavorites, filterClinicIds]);
+    }, [filterCountry, filterStatus, filterFavorites, filterClinicIds, filterMatch]);
 
     // Listen for country selection from CountryPicker
     useEffect(() => {
@@ -229,6 +235,24 @@ export default function StudiesScreen() {
     // are paused — the search covers the entire list.
     // While favorites is active (and no search), the other filters
     // are paused — only favorites is applied.
+    // On-device eligibility label per study. "Could fit" only for
+    // studies one can still join — completed/paused/withdrawn/closed
+    // studies are always neutral, whatever the criteria say. Labels are
+    // display + opt-in filter; by default nothing is hidden.
+    const matchLabels = useMemo(() => {
+        const map = new Map<string, StudyMatchLabel>();
+        for (const study of studies) {
+            const joinable = study.status === 'recruiting' || study.status === 'enrolling';
+            map.set(
+                study.id,
+                joinable
+                    ? evaluateStudyMatch(collectStructuredCriteria(study), matchSnapshot).label
+                    : 'neutral',
+            );
+        }
+        return map;
+    }, [studies, matchSnapshot]);
+
     const filteredStudies = useMemo(() => {
         const query = searchQuery.toLowerCase().trim();
         return studies.filter(study => {
@@ -268,11 +292,26 @@ export default function StudiesScreen() {
                 }
             }
 
+            if (filterMatch && matchLabels.get(study.id) !== 'could_fit') {
+                return false;
+            }
+
             return true;
         });
-    }, [studies, searchQuery, clinicStudyIdSet, filterCountry, filterStatus, filterFavorites, isFavorite]);
+    }, [studies, searchQuery, clinicStudyIdSet, filterCountry, filterStatus, filterFavorites, isFavorite, filterMatch, matchLabels]);
 
-    const hasActiveFilter = searchQuery.trim() !== '' || filterClinicIds !== null || filterCountry !== null || filterStatus !== null || filterFavorites;
+    const MATCH_ORDER: Record<StudyMatchLabel, number> = { could_fit: 0, neutral: 1, unlikely_fit: 2 };
+    const sortedStudies = useMemo(
+        () => [...filteredStudies].sort(
+            (a, b) =>
+                MATCH_ORDER[matchLabels.get(a.id) ?? 'neutral']
+                - MATCH_ORDER[matchLabels.get(b.id) ?? 'neutral'],
+        ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [filteredStudies, matchLabels],
+    );
+
+    const hasActiveFilter = searchQuery.trim() !== '' || filterClinicIds !== null || filterCountry !== null || filterStatus !== null || filterFavorites || filterMatch;
 
     const handleStudyPress = useCallback((studyId: string) => {
         router.push(`/(tabs)/(metric)/studies/${ studyId }`);
@@ -364,9 +403,10 @@ export default function StudiesScreen() {
             isFavorite={ isFavorite(study.id) }
             onFavoriteToggle={ () => toggleFavorite(study.id) }
             isOpenForApplications={ openClinicStudyIds.has(study.id) || allClinicStudies.some(c => c.openStudyIds.has(study.id)) }
+            matchLabel={ matchLabels.get(study.id) }
             style={ { width: cardWidth } }
         />
-    ), [cardWidth, isFavorite, toggleFavorite, handleStudyPress, openClinicStudyIds, allClinicStudies]);
+    ), [cardWidth, isFavorite, toggleFavorite, handleStudyPress, openClinicStudyIds, allClinicStudies, matchLabels]);
 
     const { width } = useWindowDimensions();
     const contentWidth = Math.min(width, 900);
@@ -425,6 +465,7 @@ export default function StudiesScreen() {
                                 isFavorite={ isFavorite(study.id) }
                                 onFavoriteToggle={ () => toggleFavorite(study.id) }
                                 isOpenForApplications={ openClinicStudyIds.has(study.id) }
+                                matchLabel={ matchLabels.get(study.id) }
                                 style={ { width: cardWidth - 10 } }
                             />
                         )) }
@@ -470,6 +511,13 @@ export default function StudiesScreen() {
                     showChevron={ true }
                     variant="filled"
                     maxWidth={ 140 }
+                />
+                <FilterChip
+                    label={ t('studies.filterMatch') }
+                    onPress={ () => setFilterMatch(prev => !prev) }
+                    active={ filterMatch }
+                    disabled={ filterFavorites || searchQuery.trim() !== '' }
+                    variant="filled"
                 />
                 <FilterChip
                     label={ t('studies.filterFavorites', 'Favoriten') }
@@ -689,7 +737,7 @@ export default function StudiesScreen() {
                             { children }
                         </View>
                     ) }
-                    data={ filteredStudies }
+                    data={ sortedStudies }
                     keyExtractor={ item => item.id }
                     renderItem={ renderStudyCard }
                     ListHeaderComponent={ listHeader }

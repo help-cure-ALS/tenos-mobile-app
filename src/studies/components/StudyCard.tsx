@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 import { AppIcon } from '@/src/components/ui/AppIcon';
-import { useTheme } from 'react-native-nice-ui';
+import { Badge, useTheme } from 'react-native-nice-ui';
 import { useTranslation } from 'react-i18next';
 import type { Study, StudyEnrollment } from '../types';
 import { StudyStatusBadge } from './StudyStatusBadge';
@@ -24,6 +24,8 @@ type Props = {
     isOpenForApplications?: boolean;
     /** Optional container style override (e.g. for width in grid layouts) */
     style?: StyleProp<ViewStyle>;
+    /** On-device eligibility match label ('neutral' renders nothing) */
+    matchLabel?: 'could_fit' | 'unlikely_fit' | 'neutral';
 };
 
 function formatDaysUntil(date: Date): string {
@@ -39,7 +41,7 @@ function formatDaysUntil(date: Date): string {
     return `In ${Math.floor(diffDays / 7)} Wochen`;
 }
 
-export function StudyCard({ study, enrollment, onPress, isEnrolled, isFavorite, onFavoriteToggle, isOpenForApplications, style }: Props) {
+export function StudyCard({ study, enrollment, onPress, isEnrolled, isFavorite, onFavoriteToggle, isOpenForApplications, style, matchLabel }: Props) {
     const { colors, tokens } = useAppTheme();
     const { t } = useTranslation();
 
@@ -108,6 +110,19 @@ export function StudyCard({ study, enrollment, onPress, isEnrolled, isFavorite, 
                             {t('studies.openForApplications')}
                         </Text>
                     </View>
+                )}
+
+                {/* Label, never a filter: unlikely studies stay visible */}
+                {matchLabel === 'could_fit' && (
+                    <Badge label={t('studies.matchCouldFit')} variant="success" size="small" />
+                )}
+                {matchLabel === 'unlikely_fit' && (
+                    <Badge
+                        label={t('studies.matchUnlikely')}
+                        size="small"
+                        color={colors.listItemBackgroundMuted}
+                        textColor={colors.textSecondary}
+                    />
                 )}
             </View>
 
