@@ -1,1 +1,1 @@
-Kwestionariusze można teraz uzupełniać z datą wsteczną. Nowy parametr czynności płuc (SVC). Szybsze rejestrowanie leków. Poprawki błędów i ulepszenia.
+Lista badań pokazuje teraz, które badania mogą do Ciebie pasować, z nowym filtrem „Pasujące do mnie”. Dołączaj do projektów badawczych partnerów bezpośrednio w aplikacji. Poprawki błędów i ulepszenia.

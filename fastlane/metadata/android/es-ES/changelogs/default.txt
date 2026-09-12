@@ -1,1 +1,1 @@
-Los cuestionarios ahora pueden registrarse con fecha anterior. Nueva métrica de función pulmonar (SVC). Registro de medicamentos más rápido. Corrección de errores y mejoras.
+La lista de estudios ahora muestra qué estudios podrían encajar contigo, con el nuevo filtro “Para mí”. Participa en proyectos de investigación de socios directamente en la app. Correcciones de errores y mejoras.

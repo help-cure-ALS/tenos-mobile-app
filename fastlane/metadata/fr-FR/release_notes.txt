@@ -1,1 +1,1 @@
-Les questionnaires peuvent désormais être saisis rétroactivement. Nouvelle métrique de fonction pulmonaire (SVC). Enregistrement des médicaments plus rapide. Corrections de bugs et améliorations.
+La liste des études montre désormais celles qui pourraient vous correspondre, avec le nouveau filtre “Pour moi”. Participez aux projets de recherche partenaires directement dans l'app. Corrections de bugs et améliorations.

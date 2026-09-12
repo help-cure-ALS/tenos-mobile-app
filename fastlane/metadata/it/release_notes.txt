@@ -1,1 +1,1 @@
-I questionari ora possono essere registrati retroattivamente. Nuova metrica della funzionalità polmonare (SVC). Registrazione dei farmaci più veloce. Correzioni di bug e miglioramenti.
+L'elenco degli studi ora mostra quali potrebbero essere adatti a te, con il nuovo filtro “Adatti a me”. Partecipa ai progetti di ricerca dei partner direttamente nell'app. Correzioni di bug e miglioramenti.

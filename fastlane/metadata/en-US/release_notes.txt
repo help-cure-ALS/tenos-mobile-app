@@ -1,1 +1,1 @@
-Questionnaires can now be backfilled for earlier dates. New lung function metric (SVC). Faster medication logging. Bug fixes and improvements.
+The study list now shows which studies could fit you, with a new “Fits me” filter. Join partner research projects directly in the app. Bug fixes and improvements.

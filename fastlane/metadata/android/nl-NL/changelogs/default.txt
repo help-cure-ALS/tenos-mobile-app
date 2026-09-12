@@ -1,1 +1,1 @@
-Vragenlijsten kunnen nu met terugwerkende kracht worden ingevuld. Nieuwe longfunctie-meting (SVC). Sneller registreren van medicatie. Bugfixes en verbeteringen.
+De studielijst laat nu zien welke studies bij je zouden kunnen passen, met het nieuwe filter “Passend voor mij”. Neem direct in de app deel aan onderzoeksprojecten van partners. Foutoplossingen en verbeteringen.

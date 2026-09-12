@@ -1,1 +1,1 @@
-Os questionários agora podem ser registados retroativamente. Nova métrica de função pulmonar (SVC). Registo de medicamentos mais rápido. Correções de erros e melhorias.
+A lista de estudos agora mostra quais podem ser adequados para si, com o novo filtro “Para mim”. Participe em projetos de investigação de parceiros diretamente na app. Correções de erros e melhorias.

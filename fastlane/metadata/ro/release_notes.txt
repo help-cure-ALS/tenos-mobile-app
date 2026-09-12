@@ -1,1 +1,1 @@
-Chestionarele pot fi acum completate retroactiv. Un nou parametru al funcției pulmonare (SVC). Înregistrare mai rapidă a medicamentelor. Corecturi de erori și îmbunătățiri.
+Lista de studii arată acum care studii ți s-ar putea potrivi, cu noul filtru „Potrivite mie”. Participă la proiectele de cercetare ale partenerilor direct din aplicație. Corecturi de erori și îmbunătățiri.

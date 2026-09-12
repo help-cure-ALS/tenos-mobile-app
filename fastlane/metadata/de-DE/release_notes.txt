@@ -1,1 +1,1 @@
-Fragebögen lassen sich jetzt rückwirkend erfassen. Neue Metrik für die Lungenfunktion (SVC). Schnelleres Protokollieren von Medikamenten. Fehlerbehebungen und Verbesserungen.
+Die Studienliste zeigt jetzt, welche Studien passen könnten, mit neuem Filter „Passend für mich“. Teilnahme an Partner-Forschungsprojekten direkt in der App. Fehlerbehebungen und Verbesserungen.
