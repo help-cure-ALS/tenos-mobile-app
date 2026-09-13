@@ -13,6 +13,7 @@ import { DisplayModeProvider } from '@/src/context/DisplayModeProvider';
 import { AuthGate } from '@/src/components/AuthGate';
 import { AppThemeProvider } from '@/src/theme';
 import { StudiesProvider } from '@/src/studies';
+import { ContentProvider } from '@/src/content';
 import i18n, { initI18n } from '@/src/i18n';
 import { safeRouter } from '@/src/hooks/useSafeRouter';
 import { isSlotFullyLogged } from '@/src/services/medicationNotificationFilter';
@@ -249,6 +250,7 @@ function RootLayoutNav() {
                                                     <MedicationsProvider>
                                                         <NotificationResponseRouter />
                                                         <StudiesProvider>
+                                                        <ContentProvider>
                                                             <Stack screenOptions={ { headerShown: false } }>
                                                                 <Stack.Screen name="index" />
                                                                 <Stack.Screen
@@ -269,6 +271,16 @@ function RootLayoutNav() {
                                                                     options={ {
                                                                         presentation: 'modal',
                                                                         animation: 'slide_from_bottom'
+                                                                    } }
+                                                                />
+                                                                <Stack.Screen
+                                                                    name="newsArticle"
+                                                                    options={ {
+                                                                        presentation: 'modal',
+                                                                        animation: 'slide_from_bottom',
+                                                                        headerShown: true,
+                                                                        headerTransparent: Platform.OS === 'ios',
+                                                                        headerTitle: ''
                                                                     } }
                                                                 />
                                                                 <Stack.Screen
@@ -431,6 +443,7 @@ function RootLayoutNav() {
                                                                 />
                                                             </Stack>
                                                             <ToastHost />
+                                                        </ContentProvider>
                                                         </StudiesProvider>
                                                     </MedicationsProvider>
                                                 </DefinitionsProvider>

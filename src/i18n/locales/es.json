@@ -52,7 +52,8 @@
         "condition": "Estado",
         "studies": "Estudios",
         "share": "Compartir",
-        "search": "Buscar"
+        "search": "Buscar",
+        "news": "Para ti"
     },
     "syncStatus": {
         "identityBlocked": "La sincronización está bloqueada porque los datos de identidad de la cuenta son inconsistentes.",
@@ -1591,5 +1592,13 @@
         "phone": "Teléfono",
         "email": "Correo electrónico",
         "contactDetails": "Ver datos de contacto"
+    },
+    "news": {
+        "title": "Para ti",
+        "filterAll": "Todas",
+        "loadFailed": "No se pudieron cargar las noticias.",
+        "openLink": "Más información",
+        "fromClinic": "De tu clínica: {{clinic}}",
+        "notFound": "El artículo ya no está disponible."
     }
 }

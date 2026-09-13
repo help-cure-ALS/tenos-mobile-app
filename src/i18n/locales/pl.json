@@ -52,7 +52,8 @@
         "condition": "Stan",
         "studies": "Badania",
         "share": "Udostępnij",
-        "search": "Szukaj"
+        "search": "Szukaj",
+        "news": "Dla Ciebie"
     },
     "syncStatus": {
         "identityBlocked": "Synchronizacja jest zablokowana, ponieważ dane tożsamości konta są niespójne.",
@@ -1589,5 +1590,13 @@
         "phone": "Telefon",
         "email": "E-mail",
         "contactDetails": "Pokaż dane kontaktowe"
+    },
+    "news": {
+        "title": "Dla Ciebie",
+        "filterAll": "Wszystkie",
+        "loadFailed": "Nie udało się wczytać aktualności.",
+        "openLink": "Dowiedz się więcej",
+        "fromClinic": "Od Twojej kliniki: {{clinic}}",
+        "notFound": "Artykuł nie jest już dostępny."
     }
 }

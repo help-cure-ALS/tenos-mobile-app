@@ -52,7 +52,8 @@
         "condition": "Stare",
         "studies": "Studii",
         "share": "Partajare",
-        "search": "Căutare"
+        "search": "Căutare",
+        "news": "Pentru tine"
     },
     "syncStatus": {
         "identityBlocked": "Sincronizarea este blocată deoarece datele de identitate ale contului sunt inconsistente.",
@@ -1589,5 +1590,13 @@
         "phone": "Telefon",
         "email": "E-mail",
         "contactDetails": "Vezi detaliile de contact"
+    },
+    "news": {
+        "title": "Pentru tine",
+        "filterAll": "Toate",
+        "loadFailed": "Noutățile nu au putut fi încărcate.",
+        "openLink": "Află mai multe",
+        "fromClinic": "De la clinica ta: {{clinic}}",
+        "notFound": "Articolul nu mai este disponibil."
     }
 }

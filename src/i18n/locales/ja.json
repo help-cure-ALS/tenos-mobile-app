@@ -52,7 +52,8 @@
         "condition": "状態",
         "studies": "研究",
         "share": "共有",
-        "search": "検索"
+        "search": "検索",
+        "news": "あなたへ"
     },
     "syncStatus": {
         "identityBlocked": "アカウントIDデータに不整合があるため、同期がブロックされています。",
@@ -1589,5 +1590,13 @@
         "phone": "電話",
         "email": "メール",
         "contactDetails": "連絡先詳細を表示"
+    },
+    "news": {
+        "title": "あなたへ",
+        "filterAll": "すべて",
+        "loadFailed": "ニュースを読み込めませんでした。",
+        "openLink": "詳しく見る",
+        "fromClinic": "あなたのクリニックから: {{clinic}}",
+        "notFound": "この記事は利用できなくなりました。"
     }
 }

@@ -52,7 +52,8 @@
         "condition": "Durum",
         "studies": "Çalışmalar",
         "share": "Paylaş",
-        "search": "Ara"
+        "search": "Ara",
+        "news": "Sizin için"
     },
     "syncStatus": {
         "identityBlocked": "Hesap kimliği verileri tutarsız olduğu için senkronizasyon engellendi.",
@@ -1589,5 +1590,13 @@
         "phone": "Telefon",
         "email": "E-posta",
         "contactDetails": "İletişim ayrıntılarını göster"
+    },
+    "news": {
+        "title": "Sizin için",
+        "filterAll": "Tümü",
+        "loadFailed": "Haberler yüklenemedi.",
+        "openLink": "Daha fazla bilgi",
+        "fromClinic": "Kliniğinizden: {{clinic}}",
+        "notFound": "Makale artık mevcut değil."
     }
 }

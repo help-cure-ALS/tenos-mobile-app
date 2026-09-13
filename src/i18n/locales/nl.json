@@ -52,7 +52,8 @@
         "condition": "Status",
         "studies": "Onderzoeken",
         "share": "Delen",
-        "search": "Zoeken"
+        "search": "Zoeken",
+        "news": "Voor jou"
     },
     "syncStatus": {
         "identityBlocked": "Synchronisatie is geblokkeerd omdat de accountidentiteit inconsistent is.",
@@ -1589,5 +1590,13 @@
         "phone": "Telefoon",
         "email": "E-mail",
         "contactDetails": "Contactgegevens bekijken"
+    },
+    "news": {
+        "title": "Voor jou",
+        "filterAll": "Alle",
+        "loadFailed": "Nieuws kon niet worden geladen.",
+        "openLink": "Meer informatie",
+        "fromClinic": "Van je kliniek: {{clinic}}",
+        "notFound": "Artikel is niet meer beschikbaar."
     }
 }

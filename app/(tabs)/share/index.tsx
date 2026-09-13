@@ -29,7 +29,7 @@ import { useResearchProjectParticipations, useVerification } from '@/src/hooks/u
 import { on } from '@/src/lib/bus';
 import { useAppSync } from '@/src/context/AppSyncProvider';
 import { isAssistiveAidsEnabledForRole } from '@/src/features/assistiveAidsFeature';
-import { HeaderButton } from '@/src/components/ui/navigation/HeaderButton';
+import { useSettingsButton } from '@/src/components/ui/navigation/SettingsButton';
 
 // =============================================================================
 // Shared With Item Component
@@ -72,6 +72,7 @@ export default function Share() {
     const { fullSync } = useAppSync();
     const { deviceAccessStore } = usePatientStores();
     const patientToolbarMenu = usePatientSwitcherToolbar({ showName: true });
+    const settingsButton = useSettingsButton();
     const insets = useSafeAreaInsets();
 
     const scrollRef = useRef<ScrollView>(null);
@@ -143,10 +144,6 @@ export default function Share() {
         router.push('/share/supplierLink' as any);
     };
 
-    const handleSettings = useCallback(() => {
-        router.push('/settings');
-    }, [router]);
-
     return (
         <>
             {
@@ -155,14 +152,7 @@ export default function Share() {
                         options={ {
                             headerTitle: t('share.title'),
                             headerLargeTitle: false,
-                            headerRight: () => (
-                                <HeaderButton
-                                    icon="figure.boxing"
-                                    variant="prominent"
-                                    tintColor={ colors.textPrimary }
-                                    onPress={ handleSettings }
-                                />
-                            )
+                            headerRight: () => settingsButton
                         } }
                     />
                 ) : (
@@ -175,12 +165,7 @@ export default function Share() {
                         />
                         <Stack.Toolbar placement="right">
                             { patientToolbarMenu }
-                            <Stack.Toolbar.Button
-                                icon="figure.boxing"
-                                variant="prominent"
-                                tintColor={ colors.textPrimary }
-                                onPress={ handleSettings }
-                            />
+                            { settingsButton }
                         </Stack.Toolbar>
                     </>
                 )

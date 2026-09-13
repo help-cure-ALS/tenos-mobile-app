@@ -52,7 +52,8 @@
         "condition": "状态",
         "studies": "研究",
         "share": "共享",
-        "search": "搜索"
+        "search": "搜索",
+        "news": "为你"
     },
     "syncStatus": {
         "identityBlocked": "同步已被阻止，因为账户身份数据不一致。",
@@ -1589,5 +1590,13 @@
         "phone": "电话",
         "email": "电子邮件",
         "contactDetails": "查看联系方式"
+    },
+    "news": {
+        "title": "为你",
+        "filterAll": "全部",
+        "loadFailed": "无法加载资讯。",
+        "openLink": "了解更多",
+        "fromClinic": "来自您的诊所：{{clinic}}",
+        "notFound": "文章已不可用。"
     }
 }

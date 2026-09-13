@@ -7,6 +7,7 @@ import { useAppRole } from "@/src/context/AppRoleProvider";
 import { useAppSync } from '@/src/context/AppSyncProvider';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { useSupplierProposalCounts } from '@/src/hooks/useSupplierProposalCounts';
+import { useContentContext } from '@/src/content';
 
 export default function TabLayout() {
     const { colors } = useAppTheme();
@@ -15,6 +16,7 @@ export default function TabLayout() {
     const { syncHealth, syncBlockReason, recoverActivePatientIdentity } = useAppSync();
     const router = useSafeRouter();
     const { totalProposalCount } = useSupplierProposalCounts();
+    const { articles: newsArticles, unreadCount: newsUnreadCount } = useContentContext();
 
     const handleBlockedSyncAction = async () => {
         try {
@@ -73,6 +75,29 @@ export default function TabLayout() {
                         renderingMode="template"
                     />
                 </NativeTabs.Trigger>
+                {/* Role targeting runs in useContent (doctors only see
+                    articles explicitly listing role 'doctor'), so the
+                    trigger just follows the visible articles. */}
+                { newsArticles.length > 0 && (
+                    <NativeTabs.Trigger name="news">
+                        <NativeTabs.Trigger.Label>{t('tabs.news')}</NativeTabs.Trigger.Label>
+                        <NativeTabs.Trigger.Icon
+                            src={{
+                                default: require('@/assets/tab-icons/newspaper.png'),
+                                selected: require('@/assets/tab-icons/newspaper-fill.png'),
+                            }}
+                            renderingMode="template"
+                        />
+                        {
+                            newsUnreadCount > 0 && (
+                                <NativeTabs.Trigger.Badge>
+                                    {String(newsUnreadCount)}
+                                </NativeTabs.Trigger.Badge>
+                            )
+                        }
+                    </NativeTabs.Trigger>
+                ) }
+
                 { role !== 'doctor' && (
                     <NativeTabs.Trigger name="share">
                         <NativeTabs.Trigger.Label>{t('tabs.share')}</NativeTabs.Trigger.Label>

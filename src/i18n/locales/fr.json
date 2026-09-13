@@ -52,7 +52,8 @@
         "condition": "État",
         "studies": "Études",
         "share": "Partager",
-        "search": "Rechercher"
+        "search": "Rechercher",
+        "news": "Pour vous"
     },
     "syncStatus": {
         "identityBlocked": "La synchronisation est bloquée car les données d'identité du compte sont incohérentes.",
@@ -1591,5 +1592,13 @@
         "phone": "Téléphone",
         "email": "E-mail",
         "contactDetails": "Voir les coordonnées"
+    },
+    "news": {
+        "title": "Pour vous",
+        "filterAll": "Toutes",
+        "loadFailed": "Impossible de charger les actualités.",
+        "openLink": "En savoir plus",
+        "fromClinic": "De votre clinique : {{clinic}}",
+        "notFound": "L'article n'est plus disponible."
     }
 }

@@ -52,7 +52,8 @@
         "condition": "Befinden",
         "studies": "Studien",
         "share": "Teilen",
-        "search": "Suchen"
+        "search": "Suchen",
+        "news": "Für dich"
     },
     "syncStatus": {
         "identityBlocked": "Die Synchronisierung ist blockiert, weil die Konten-Identität inkonsistent ist.",
@@ -1589,5 +1590,13 @@
         "phone": "Telefon",
         "email": "E-Mail",
         "contactDetails": "Kontaktdaten anzeigen"
+    },
+    "news": {
+        "title": "Für dich",
+        "filterAll": "Alle",
+        "loadFailed": "News konnten nicht geladen werden.",
+        "openLink": "Mehr erfahren",
+        "fromClinic": "Von deiner Ambulanz: {{clinic}}",
+        "notFound": "Artikel nicht mehr verfügbar."
     }
 }

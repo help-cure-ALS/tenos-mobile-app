@@ -52,7 +52,8 @@
         "condition": "Condition",
         "studies": "Studies",
         "share": "Share",
-        "search": "Search"
+        "search": "Search",
+        "news": "For you"
     },
     "syncStatus": {
         "identityBlocked": "Sync is blocked because account identity data is inconsistent.",
@@ -1589,5 +1590,13 @@
         "phone": "Phone",
         "email": "Email",
         "contactDetails": "View Contact Details"
+    },
+    "news": {
+        "title": "For you",
+        "filterAll": "All",
+        "loadFailed": "Could not load news.",
+        "openLink": "Learn more",
+        "fromClinic": "From your clinic: {{clinic}}",
+        "notFound": "Article no longer available."
     }
 }

@@ -17,7 +17,7 @@ import { List, Text, Space, Button } from 'react-native-nice-ui';
 import { useTranslation } from 'react-i18next';
 import { useSafeRouter } from '@/src/hooks/useSafeRouter';
 import { usePatientSwitcherToolbar } from "@/src/components/PatientSwitcher";
-import { HeaderButton } from '@/src/components/ui/navigation/HeaderButton';
+import { useSettingsButton } from '@/src/components/ui/navigation/SettingsButton';
 import { StudyCard, useStudies, collectStructuredCriteria, evaluateStudyMatch, useStudyMatchSnapshot } from '@/src/studies';
 import type { StudyStatus, StudyMatchLabel } from '@/src/studies';
 import { useStudyFavorites } from '@/src/hooks/useStudyFavorites';
@@ -50,6 +50,7 @@ export default function StudiesScreen() {
     const { colors, isDark, tokens } = useAppTheme();
     const router = useSafeRouter();
     const patientToolbarMenu = usePatientSwitcherToolbar();
+    const settingsButton = useSettingsButton();
     const { t } = useTranslation();
     const insets = useSafeAreaInsets();
 
@@ -315,10 +316,6 @@ export default function StudiesScreen() {
 
     const handleStudyPress = useCallback((studyId: string) => {
         router.push(`/(tabs)/(metric)/studies/${ studyId }`);
-    }, [router]);
-
-    const handleSettings = useCallback(() => {
-        router.push('/settings');
     }, [router]);
 
     const handleClinicFilter = useCallback(() => {
@@ -645,14 +642,7 @@ export default function StudiesScreen() {
                                 autoCapitalize: 'none'
                             }
                         }),
-                        headerRight: () => (
-                            <HeaderButton
-                                icon="figure.boxing"
-                                variant="prominent"
-                                tintColor={colors.textPrimary}
-                                onPress={handleSettings}
-                            />
-                        )
+                        headerRight: () => settingsButton
                     } }
                 />
             ) : (
@@ -672,7 +662,7 @@ export default function StudiesScreen() {
                     <Stack.Screen.Title>{t('studies.title')}</Stack.Screen.Title>
                     <Stack.Toolbar placement="right">
                         {patientToolbarMenu}
-                        <Stack.Toolbar.Button icon="figure.boxing" variant="prominent" tintColor={colors.textPrimary} onPress={handleSettings} />
+                        {settingsButton}
                     </Stack.Toolbar>
                 </>
             )}

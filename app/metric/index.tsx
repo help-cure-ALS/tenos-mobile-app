@@ -44,7 +44,7 @@ import { usePatientSwitcherToolbar } from "@/src/components/PatientSwitcher";
 import { tokens } from "@/src/theme/tokens";
 import { useDefinitions } from '@/src/definitions';
 import { CloseButton } from "@/src/components/ui/navigation/CloseButton";
-import { HeaderButton } from "@/src/components/ui/navigation/HeaderButton";
+import { useSettingsButton } from "@/src/components/ui/navigation/SettingsButton";
 import { TodoSection } from "@/src/components/ui/TodoSection";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { fmtDate } from '@/src/lib/formatDate';
@@ -57,12 +57,13 @@ export default function Metric() {
     const router = useSafeRouter();
     const { width } = useWindowDimensions();
     const patientToolbarMenu = usePatientSwitcherToolbar({ showName: true });
+    const settingsButton = useSettingsButton();
     const insets = useSafeAreaInsets();
     const { role } = useAppRole();
     const { hideLoading } = useLoadingOverlay();
     const isManaged = role === 'caregiver' || role === 'doctor';
     const { getPinnedMetricIds } = usePatientPreferences();
-    const { nickname, profileIcon } = useNickname();
+    const { nickname } = useNickname();
     const { patientPreferencesStore: prefsStore } = usePatientStores();
     const { refresh: refreshDefinitions, refreshing: definitionsRefreshing } = useDefinitions();
     const { isFiltering, isLoaded: sharingLoaded, canSeeMetric, canSeeCategory, filterMetrics } = useSharingFilter();
@@ -164,10 +165,6 @@ export default function Metric() {
         };
     }, [loadPinnedMetrics]);
 
-    const handleSettings = useCallback(() => {
-        router.push('/settings');
-    }, [router]);
-
     const handleUnpinMetric = useCallback((metricId: string, metricName: string) => {
         Alert.alert(
             t('metric.removeFromOverview'),
@@ -193,24 +190,14 @@ export default function Metric() {
                 Platform.OS === 'android' ? (
                     <Stack.Screen
                         options={ {
-                            headerRight: () => (
-                                <HeaderButton
-                                    title={ t('shared.save') }
-                                    onPress={ handleSettings }
-                                    icon={ profileIcon ?? 'figure.boxing' }
-                                    tintColor={ colors.textPrimary }
-                                    variant="prominent"
-                                />
-                            )
+                            headerRight: () => settingsButton
                         } }
                     />
                 ) : (
                     <Stack.Screen>
                         <Stack.Toolbar placement="right">
                             { patientToolbarMenu }
-                            <Stack.Toolbar.Button variant="prominent" tintColor={ colors.textPrimary }
-                                                  icon={ (profileIcon ?? 'figure.boxing') as any }
-                                                  onPress={ handleSettings } />
+                            { settingsButton }
                         </Stack.Toolbar>
                     </Stack.Screen>
                 )
