@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Hesap kimliği verileri tutarsız olduğu için senkronizasyon engellendi.",
         "missingPatientIdentity": "Bu hasta kimliği eksik olduğu için senkronizasyon engellendi. Lütfen hastayı yeniden bağlayın.",
-        "recoverAction": "Şimdi düzelt"
+        "recoverAction": "Şimdi düzelt",
+        "deviceLimit": "Cihaz sınırına ulaşıldı. Bu cihaz senkronize edilmiyor, veri aktarılmıyor."
     },
     "categories": {
         "respiratory": "Solunum fonksiyonu",
@@ -321,7 +322,8 @@
         "profileColor": "Renk",
         "profileSymbol": "Sembol",
         "deleteAccount": "Hesabı sil",
-        "deleteAccountSubtitle": "Tüm verileri kalıcı olarak sil"
+        "deleteAccountSubtitle": "Tüm verileri kalıcı olarak sil",
+        "syncDeviceLimit": "Cihaz sınırına ulaşıldı"
     },
     "roles": {
         "patient": "Hasta",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Pano boş",
         "clipboardEmptyMessage": "Önce diğer cihazdaki eşleştirme paketini kopyala.",
         "invalidData": "Geçersiz veri",
-        "invalidDataMessage": "Pano geçerli JSON içermiyor."
+        "invalidDataMessage": "Pano geçerli JSON içermiyor.",
+        "deviceLimitReached": "Cihaz sınırına ulaşıldı. Bu hesap zaten en fazla cihaz sayısına sahip. Bu cihazı bağlamak için önce ayarlardan eski bir cihazı kaldır."
     },
     "careProvider": {
         "headerSubtitle": "Tedavini yürüten doktorları, klinikleri ve tedarikçileri buraya ekle.",

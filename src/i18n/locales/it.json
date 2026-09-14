@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "La sincronizzazione è bloccata perché i dati di identità dell’account sono incoerenti.",
         "missingPatientIdentity": "La sincronizzazione è bloccata perché questa identità paziente è incompleta. Collega di nuovo il paziente.",
-        "recoverAction": "Correggi ora"
+        "recoverAction": "Correggi ora",
+        "deviceLimit": "Limite di dispositivi raggiunto. Questo dispositivo non si sincronizza, nessun dato viene trasferito."
     },
     "categories": {
         "respiratory": "Funzione respiratoria",
@@ -321,7 +322,8 @@
         "profileColor": "Colore",
         "profileSymbol": "Simbolo",
         "deleteAccount": "Elimina account",
-        "deleteAccountSubtitle": "Elimina definitivamente tutti i dati"
+        "deleteAccountSubtitle": "Elimina definitivamente tutti i dati",
+        "syncDeviceLimit": "Limite di dispositivi raggiunto"
     },
     "roles": {
         "patient": "Paziente",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Appunti vuoti",
         "clipboardEmptyMessage": "Copia prima il bundle di collegamento dall’altro dispositivo.",
         "invalidData": "Dati non validi",
-        "invalidDataMessage": "Gli appunti non contengono JSON valido."
+        "invalidDataMessage": "Gli appunti non contengono JSON valido.",
+        "deviceLimitReached": "Limite di dispositivi raggiunto. Questo account ha già il numero massimo di dispositivi. Rimuovi prima un vecchio dispositivo nelle impostazioni per collegare questo dispositivo."
     },
     "careProvider": {
         "headerSubtitle": "Aggiungi qui i tuoi medici curanti, cliniche e fornitori.",

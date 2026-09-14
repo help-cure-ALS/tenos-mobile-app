@@ -37,7 +37,7 @@ export default function PatientsScreen() {
     const { colors } = useAppTheme();
     const { t } = useTranslation();
     const { role, patientIds, activePatientId, selectActivePatient, removePatient, getPatientAlias, reset: resetRole } = useAppRole();
-    const { switchToPatient, deleteAccountOnServer, clearVaultIdentity, ensureDataSynced, probePatientAccess } = useAppSync();
+    const { switchToPatient, deleteAccountOnServer, clearVaultIdentity, ensureDataSynced, probePatientAccess, getLastFlushErrorCode } = useAppSync();
     const router = useSafeRouter();
     const [managedPatients, setManagedPatients] = useState<ManagedPatient[]>([]);
     const [relinkNotice, setRelinkNotice] = useState<string | null>(null);
@@ -204,11 +204,16 @@ export default function PatientsScreen() {
     const ensureCurrentPatientCanBeChanged = useCallback(async () => {
         const isSafe = await ensureDataSynced();
         if (!isSafe) {
-            Alert.alert(t('patients.dataNotSynced'), t('patients.dataNotSyncedMessage'));
+            Alert.alert(
+                t('patients.dataNotSynced'),
+                getLastFlushErrorCode() === 'device_limit_reached'
+                    ? t('devices.deviceLimitReached')
+                    : t('patients.dataNotSyncedMessage'),
+            );
             return false;
         }
         return true;
-    }, [ensureDataSynced, t]);
+    }, [ensureDataSynced, getLastFlushErrorCode, t]);
 
     const handleRemovePatient = useCallback(async (patientId: string, displayName: string) => {
         const remainingPatientIds = patientIds.filter((id) => id !== patientId);

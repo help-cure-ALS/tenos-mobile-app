@@ -261,7 +261,9 @@ export default function PatientScanScreen() {
         }
         catch (e: any) {
             clearInitialSyncWait();
-            setError(e?.message ?? t('onboarding.errorOccurred'));
+            setError(e?.code === 'device_limit_reached'
+                ? t('devices.deviceLimitReached')
+                : e?.message ?? t('onboarding.errorOccurred'));
             lockRef.current = false;
             setScanLocked(false);
         }

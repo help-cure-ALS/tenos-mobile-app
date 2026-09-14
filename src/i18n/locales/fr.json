@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "La synchronisation est bloquée car les données d'identité du compte sont incohérentes.",
         "missingPatientIdentity": "La synchronisation est bloquée car l'identité de ce patient est incomplète. Veuillez reconnecter le patient.",
-        "recoverAction": "Corriger maintenant"
+        "recoverAction": "Corriger maintenant",
+        "deviceLimit": "Limite d'appareils atteinte. Cet appareil ne se synchronise pas, aucune donnée n'est transférée."
     },
     "categories": {
         "respiratory": "Fonction respiratoire",
@@ -152,7 +153,8 @@
         "profileColor": "Couleur",
         "profileSymbol": "Symbole",
         "deleteAccount": "Supprimer le compte",
-        "deleteAccountSubtitle": "Supprimer définitivement toutes les données"
+        "deleteAccountSubtitle": "Supprimer définitivement toutes les données",
+        "syncDeviceLimit": "Limite d'appareils atteinte"
     },
     "roles": {
         "patient": "Patient",
@@ -684,7 +686,8 @@
         "clipboardEmpty": "Presse-papiers vide",
         "clipboardEmptyMessage": "Copiez d'abord le bundle d'association depuis l'autre appareil.",
         "invalidData": "Données invalides",
-        "invalidDataMessage": "Le presse-papiers ne contient pas de JSON valide."
+        "invalidDataMessage": "Le presse-papiers ne contient pas de JSON valide.",
+        "deviceLimitReached": "Limite d'appareils atteinte. Ce compte a déjà le nombre maximal d'appareils. Supprime d'abord un ancien appareil dans les réglages pour associer cet appareil."
     },
     "careProvider": {
         "headerSubtitle": "Ajoutez ici vos médecins, cliniques et fournisseurs.",

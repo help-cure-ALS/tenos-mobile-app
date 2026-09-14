@@ -19,6 +19,10 @@ export default function TabLayout() {
     const { articles: newsArticles, unreadCount: newsUnreadCount } = useContentContext();
 
     const handleBlockedSyncAction = async () => {
+        if (syncHealth === 'blocked_device_limit') {
+            router.push('/settings');
+            return;
+        }
         try {
             const recovered = await recoverActivePatientIdentity();
             if (recovered) {
@@ -35,10 +39,12 @@ export default function TabLayout() {
         }
     };
 
-    const isBlocked = syncHealth === 'blocked_identity';
-    const blockedMessage = syncBlockReason === 'missing_patient_identity'
-        ? t('syncStatus.missingPatientIdentity')
-        : t('syncStatus.identityBlocked');
+    const isBlocked = syncHealth === 'blocked_identity' || syncHealth === 'blocked_device_limit';
+    const blockedMessage = syncHealth === 'blocked_device_limit'
+        ? t('syncStatus.deviceLimit')
+        : syncBlockReason === 'missing_patient_identity'
+            ? t('syncStatus.missingPatientIdentity')
+            : t('syncStatus.identityBlocked');
 
     return (
         <View style={styles.container}>

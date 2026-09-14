@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "アカウントIDデータに不整合があるため、同期がブロックされています。",
         "missingPatientIdentity": "この患者IDが不完全なため、同期がブロックされています。患者を再度リンクしてください。",
-        "recoverAction": "今すぐ修正"
+        "recoverAction": "今すぐ修正",
+        "deviceLimit": "デバイスの上限に達しました。このデバイスは同期されず、データは転送されません。"
     },
     "categories": {
         "respiratory": "呼吸機能",
@@ -321,7 +322,8 @@
         "profileColor": "色",
         "profileSymbol": "シンボル",
         "deleteAccount": "アカウントを削除",
-        "deleteAccountSubtitle": "すべてのデータを完全に削除"
+        "deleteAccountSubtitle": "すべてのデータを完全に削除",
+        "syncDeviceLimit": "デバイスの上限に達しました"
     },
     "roles": {
         "patient": "患者",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "クリップボードが空です",
         "clipboardEmptyMessage": "まずもう一方のデバイスからペアリングバンドルをコピーしてください。",
         "invalidData": "無効なデータ",
-        "invalidDataMessage": "クリップボードに有効なJSONが含まれていません。"
+        "invalidDataMessage": "クリップボードに有効なJSONが含まれていません。",
+        "deviceLimitReached": "デバイスの上限に達しました。このアカウントはすでに最大数のデバイスに達しています。このデバイスを連携するには、まず設定で古いデバイスを削除してください。"
     },
     "careProvider": {
         "headerSubtitle": "担当医、クリニック、サプライヤーをここに追加できます。",

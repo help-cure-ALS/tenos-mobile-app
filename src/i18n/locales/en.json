@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Sync is blocked because account identity data is inconsistent.",
         "missingPatientIdentity": "Sync is blocked because this patient identity is incomplete. Please relink the patient.",
-        "recoverAction": "Fix now"
+        "recoverAction": "Fix now",
+        "deviceLimit": "Device limit reached. This device does not sync, no data is being transferred."
     },
     "categories": {
         "respiratory": "Respiratory Function",
@@ -321,7 +322,8 @@
         "profileColor": "Color",
         "profileSymbol": "Symbol",
         "deleteAccount": "Delete account",
-        "deleteAccountSubtitle": "Permanently delete all data"
+        "deleteAccountSubtitle": "Permanently delete all data",
+        "syncDeviceLimit": "Device limit reached"
     },
     "roles": {
         "patient": "Patient",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Clipboard empty",
         "clipboardEmptyMessage": "First copy the pairing bundle from the other device.",
         "invalidData": "Invalid data",
-        "invalidDataMessage": "The clipboard does not contain valid JSON."
+        "invalidDataMessage": "The clipboard does not contain valid JSON.",
+        "deviceLimitReached": "Device limit reached. This account already has the maximum number of devices. Remove an old device in the settings first to link this device."
     },
     "careProvider": {
         "headerSubtitle": "Add your treating doctors, clinics and suppliers here.",

@@ -112,6 +112,7 @@ export default function Index() {
         if (manualSyncFailed) return t('settings.syncFailed');
         if (syncHealth === 'degraded_network') return t('settings.syncNetworkError');
         if (syncHealth === 'blocked_identity') return t('settings.syncBlocked');
+        if (syncHealth === 'blocked_device_limit') return t('settings.syncDeviceLimit');
         if (lastSyncAt) {
             const date = new Date(lastSyncAt);
             if (!Number.isNaN(date.getTime())) {

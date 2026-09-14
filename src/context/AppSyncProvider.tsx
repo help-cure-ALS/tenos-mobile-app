@@ -98,7 +98,7 @@ export type SyncNowOptions = {
 };
 
 type SyncStatus = "idle" | "syncing" | "error";
-type SyncHealth = "healthy" | "degraded_network" | "blocked_identity";
+type SyncHealth = "healthy" | "degraded_network" | "blocked_identity" | "blocked_device_limit";
 type SyncBlockReason = "identity_inconsistent" | "missing_patient_identity" | "key_mismatch" | null;
 export type ActivateIdentityStrategy = "switch" | "resume" | "fresh";
 export type VaultPatientIdentity = {
@@ -163,6 +163,8 @@ type AppSyncContextValue = {
      * Throws if sync fails.
      */
     ensureDataSynced: () => Promise<boolean>;
+    /** Cause code of the last failed outbox flush (synchronous read). */
+    getLastFlushErrorCode: () => string | null;
     /**
      * Switch the active patient identity in SecureStore.
      * Call ensureDataSynced() first!
@@ -993,6 +995,12 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                 setStatus("error");
                 if (ve.code === "network_error") {
                     setSyncHealth("degraded_network");
+                } else if (ve.code === "device_limit_reached") {
+                    // The vault refuses this device: nothing will ever
+                    // sync. Without a visible state the user believes
+                    // sync works while the account stays empty.
+                    setSyncHealth("blocked_device_limit");
+                    setSyncBlockReason(null);
                 } else if (ve.code === "identity_inconsistent" || ve.code === "missing_patient_identity" || ve.code === "key_mismatch" || ve.code === "bad_signature") {
                     setSyncHealth("blocked_identity");
                     setSyncBlockReason(
@@ -1039,6 +1047,12 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                 setStatus("error");
                 if (ve.code === "network_error") {
                     setSyncHealth("degraded_network");
+                } else if (ve.code === "device_limit_reached") {
+                    // The vault refuses this device: nothing will ever
+                    // sync. Without a visible state the user believes
+                    // sync works while the account stays empty.
+                    setSyncHealth("blocked_device_limit");
+                    setSyncBlockReason(null);
                 } else if (ve.code === "identity_inconsistent" || ve.code === "missing_patient_identity" || ve.code === "key_mismatch" || ve.code === "bad_signature") {
                     setSyncHealth("blocked_identity");
                     setSyncBlockReason(
@@ -1086,7 +1100,13 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
         }
     }, [libCfg, store, K]);
 
+    // Cause of the last failed outbox flush — lets activateIdentity
+    // raise a coded error instead of the generic "could not sync"
+    // message (the scan screen maps the code to a readable text).
+    const lastFlushErrorCodeRef = useRef<string | null>(null);
+
     const ensureDataSynced = useCallback(async (): Promise<boolean> => {
+        lastFlushErrorCodeRef.current = null;
         // Check if there's pending data in the outbox
         const stats = await outbox.stats();
         if (stats.pending === 0) {
@@ -1100,13 +1120,24 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
             // Check again after flush
             const statsAfter = await outbox.stats();
             return statsAfter.pending === 0;
-        } catch (e) {
+        } catch (e: any) {
             console.error("ensureDataSynced: flush failed:", e);
+            lastFlushErrorCodeRef.current = typeof e?.code === "string" ? e.code : null;
+            if (e?.code === "device_limit_reached") {
+                // The vault refuses this device — surface the blocked
+                // state (banner + settings status) from here too.
+                setLastError(coerceVaultError(e));
+                setStatus("error");
+                setSyncHealth("blocked_device_limit");
+                setSyncBlockReason(null);
+            }
             // Re-check stats - some items might have been sent
             const statsAfter = await outbox.stats();
             return statsAfter.pending === 0;
         }
     }, [libCfg, store, K, outbox, patientFhirStore]);
+
+    const getLastFlushErrorCode = useCallback(() => lastFlushErrorCodeRef.current, []);
 
     const switchPatientIdentity = useCallback(async (identity: VaultPatientIdentity) => {
         // Update K.SUBJECT_ID
@@ -1197,7 +1228,13 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
             } else {
                 const isSafe = await ensureDataSynced();
                 if (!isSafe) {
-                    throw new Error("Could not sync current patient data before switching");
+                    const code = lastFlushErrorCodeRef.current ?? "sync_pending_before_switch";
+                    throw Object.assign(
+                        new Error(code === "device_limit_reached"
+                            ? "device_limit_reached"
+                            : "Could not sync current patient data before switching"),
+                        { code },
+                    );
                 }
             }
 
@@ -1349,6 +1386,16 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
                         await SecureStore.deleteItemAsync(TRANSPORT_KEY_SS).catch(() => {});
                         console.warn("fullSync: hard reset of local vault identity executed (EXPO_PUBLIC_SYNC_ALLOW_HARD_RESET=1)");
                     }
+                    return;
+                }
+
+                if (e?.code === "device_limit_reached") {
+                    const ve = e instanceof VaultError ? e : coerceVaultError(e);
+                    console.error(`fullSync(${reason}) device_limit_reached: this device is rejected by the vault, nothing will sync`);
+                    setLastError(ve);
+                    setStatus("error");
+                    setSyncHealth("blocked_device_limit");
+                    setSyncBlockReason(null);
                     return;
                 }
 
@@ -1625,6 +1672,7 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
             deactivateCurrentDevice,
             deleteAccountOnServer,
             ensureDataSynced,
+            getLastFlushErrorCode,
             switchPatientIdentity,
             activateIdentity,
             switchToPatient,
@@ -1650,6 +1698,7 @@ export function AppSyncProvider({ cfg, activePatientId: propActivePatientId, onD
             deactivateCurrentDevice,
             deleteAccountOnServer,
             ensureDataSynced,
+            getLastFlushErrorCode,
             switchPatientIdentity,
             activateIdentity,
             switchToPatient,

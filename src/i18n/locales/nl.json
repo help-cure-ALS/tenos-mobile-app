@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Synchronisatie is geblokkeerd omdat de accountidentiteit inconsistent is.",
         "missingPatientIdentity": "Synchronisatie is geblokkeerd omdat deze patiëntidentiteit onvolledig is. Koppel de patiënt opnieuw.",
-        "recoverAction": "Nu herstellen"
+        "recoverAction": "Nu herstellen",
+        "deviceLimit": "Apparaatlimiet bereikt. Dit apparaat synchroniseert niet, er worden geen gegevens overgedragen."
     },
     "categories": {
         "respiratory": "Ademhalingsfunctie",
@@ -321,7 +322,8 @@
         "profileColor": "Kleur",
         "profileSymbol": "Symbool",
         "deleteAccount": "Account verwijderen",
-        "deleteAccountSubtitle": "Alle gegevens permanent verwijderen"
+        "deleteAccountSubtitle": "Alle gegevens permanent verwijderen",
+        "syncDeviceLimit": "Apparaatlimiet bereikt"
     },
     "roles": {
         "patient": "Patiënt",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Klembord leeg",
         "clipboardEmptyMessage": "Kopieer eerst de koppelbundel van het andere apparaat.",
         "invalidData": "Ongeldige gegevens",
-        "invalidDataMessage": "Het klembord bevat geen geldige JSON."
+        "invalidDataMessage": "Het klembord bevat geen geldige JSON.",
+        "deviceLimitReached": "Apparaatlimiet bereikt. Dit account heeft al het maximale aantal apparaten. Verwijder eerst een oud apparaat in de instellingen om dit apparaat te koppelen."
     },
     "careProvider": {
         "headerSubtitle": "Voeg hier je behandelende artsen, klinieken en leveranciers toe.",

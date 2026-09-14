@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Sincronizarea este blocată deoarece datele de identitate ale contului sunt inconsistente.",
         "missingPatientIdentity": "Sincronizarea este blocată deoarece identitatea acestui pacient este incompletă. Te rugăm să reconectezi pacientul.",
-        "recoverAction": "Remediază acum"
+        "recoverAction": "Remediază acum",
+        "deviceLimit": "Limita de dispozitive a fost atinsă. Acest dispozitiv nu se sincronizează, nu se transferă date."
     },
     "categories": {
         "respiratory": "Funcție respiratorie",
@@ -321,7 +322,8 @@
         "profileColor": "Culoare",
         "profileSymbol": "Simbol",
         "deleteAccount": "Șterge contul",
-        "deleteAccountSubtitle": "Șterge definitiv toate datele"
+        "deleteAccountSubtitle": "Șterge definitiv toate datele",
+        "syncDeviceLimit": "Limita de dispozitive atinsă"
     },
     "roles": {
         "patient": "Pacient",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Clipboard gol",
         "clipboardEmptyMessage": "Copiază mai întâi pachetul de asociere de pe celălalt dispozitiv.",
         "invalidData": "Date invalide",
-        "invalidDataMessage": "Clipboardul nu conține JSON valid."
+        "invalidDataMessage": "Clipboardul nu conține JSON valid.",
+        "deviceLimitReached": "Limita de dispozitive a fost atinsă. Acest cont are deja numărul maxim de dispozitive. Șterge mai întâi un dispozitiv vechi din setări pentru a conecta acest dispozitiv."
     },
     "careProvider": {
         "headerSubtitle": "Adaugă aici medicii, clinicile și furnizorii care te tratează.",

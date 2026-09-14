@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Die Synchronisierung ist blockiert, weil die Konten-Identität inkonsistent ist.",
         "missingPatientIdentity": "Die Synchronisierung ist blockiert, weil diese Patienten-Identität unvollständig ist. Bitte den Patienten neu verknüpfen.",
-        "recoverAction": "Jetzt beheben"
+        "recoverAction": "Jetzt beheben",
+        "deviceLimit": "Gerätelimit erreicht. Dieses Gerät wird nicht synchronisiert, es werden keine Daten übertragen."
     },
     "categories": {
         "respiratory": "Atemfunktion",
@@ -321,7 +322,8 @@
         "profileColor": "Farbe",
         "profileSymbol": "Symbol",
         "deleteAccount": "Konto löschen",
-        "deleteAccountSubtitle": "Alle Daten unwiderruflich löschen"
+        "deleteAccountSubtitle": "Alle Daten unwiderruflich löschen",
+        "syncDeviceLimit": "Gerätelimit erreicht"
     },
     "roles": {
         "patient": "Patient",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Zwischenablage leer",
         "clipboardEmptyMessage": "Kopiere zuerst das Pairing-Bundle vom anderen Gerät.",
         "invalidData": "Ungültige Daten",
-        "invalidDataMessage": "Die Zwischenablage enthält kein gültiges JSON."
+        "invalidDataMessage": "Die Zwischenablage enthält kein gültiges JSON.",
+        "deviceLimitReached": "Gerätelimit erreicht. Dieses Konto hat bereits die maximale Anzahl an Geräten. Entferne zuerst ein altes Gerät in den Einstellungen, um dieses Gerät zu verknüpfen."
     },
     "careProvider": {
         "headerSubtitle": "Hinterlege hier deine behandelnden Ärzte, Ambulanzen und Versorger.",

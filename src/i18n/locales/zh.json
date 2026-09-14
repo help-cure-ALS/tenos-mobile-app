@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "同步已被阻止，因为账户身份数据不一致。",
         "missingPatientIdentity": "同步已被阻止，因为此患者身份不完整。请重新关联患者。",
-        "recoverAction": "立即修复"
+        "recoverAction": "立即修复",
+        "deviceLimit": "已达到设备上限。此设备不会同步，不会传输任何数据。"
     },
     "categories": {
         "respiratory": "呼吸功能",
@@ -321,7 +322,8 @@
         "profileColor": "颜色",
         "profileSymbol": "符号",
         "deleteAccount": "删除账户",
-        "deleteAccountSubtitle": "永久删除所有数据"
+        "deleteAccountSubtitle": "永久删除所有数据",
+        "syncDeviceLimit": "已达到设备上限"
     },
     "roles": {
         "patient": "患者",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "剪贴板为空",
         "clipboardEmptyMessage": "请先从另一台设备复制配对数据包。",
         "invalidData": "数据无效",
-        "invalidDataMessage": "剪贴板不包含有效 JSON。"
+        "invalidDataMessage": "剪贴板不包含有效 JSON。",
+        "deviceLimitReached": "已达到设备上限。此账户已达到最大设备数量。请先在设置中移除旧设备，然后再关联此设备。"
     },
     "careProvider": {
         "headerSubtitle": "在这里添加你的治疗医生、诊所和供应商。",

@@ -58,7 +58,8 @@
     "syncStatus": {
         "identityBlocked": "Synchronizacja jest zablokowana, ponieważ dane tożsamości konta są niespójne.",
         "missingPatientIdentity": "Synchronizacja jest zablokowana, ponieważ tożsamość pacjenta jest niekompletna. Połącz pacjenta ponownie.",
-        "recoverAction": "Napraw teraz"
+        "recoverAction": "Napraw teraz",
+        "deviceLimit": "Osiągnięto limit urządzeń. To urządzenie nie jest synchronizowane, żadne dane nie są przesyłane."
     },
     "categories": {
         "respiratory": "Funkcja oddechowa",
@@ -321,7 +322,8 @@
         "profileColor": "Kolor",
         "profileSymbol": "Symbol",
         "deleteAccount": "Usuń konto",
-        "deleteAccountSubtitle": "Trwale usuń wszystkie dane"
+        "deleteAccountSubtitle": "Trwale usuń wszystkie dane",
+        "syncDeviceLimit": "Osiągnięto limit urządzeń"
     },
     "roles": {
         "patient": "Pacjent",
@@ -851,7 +853,8 @@
         "clipboardEmpty": "Schowek pusty",
         "clipboardEmptyMessage": "Najpierw skopiuj pakiet parowania z drugiego urządzenia.",
         "invalidData": "Nieprawidłowe dane",
-        "invalidDataMessage": "Schowek nie zawiera prawidłowego JSON."
+        "invalidDataMessage": "Schowek nie zawiera prawidłowego JSON.",
+        "deviceLimitReached": "Osiągnięto limit urządzeń. To konto ma już maksymalną liczbę urządzeń. Najpierw usuń stare urządzenie w ustawieniach, aby połączyć to urządzenie."
     },
     "careProvider": {
         "headerSubtitle": "Dodaj tutaj swoich lekarzy prowadzących, kliniki i dostawców.",
