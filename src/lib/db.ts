@@ -11,14 +11,44 @@ import * as Crypto from 'expo-crypto';
 
 const DB_KEY_STORE = 'hca_db_encryption_key_v1';
 
+/**
+ * Keychain reads can fail or come back empty transiently (cold start
+ * before the first unlock, protected data briefly unavailable). A
+ * failed read must NEVER mint a fresh key — that would permanently
+ * lock us out of the existing database (SQLCipher then fails with
+ * "hmac check failed", which surfaces as an out-of-memory error and
+ * used to trigger the destructive OOM reset). So: retry on errors,
+ * and rethrow instead of falling through to key creation.
+ */
+async function readKeyWithRetry(): Promise<string | null> {
+    let lastErr: unknown;
+    for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+            return await SecureStore.getItemAsync(DB_KEY_STORE);
+        } catch (e) {
+            lastErr = e;
+            await new Promise((resolve) => setTimeout(resolve, 150 * (attempt + 1)));
+        }
+    }
+    throw lastErr;
+}
+
 async function getOrCreateDbKey(): Promise<string> {
-    let key = await SecureStore.getItemAsync(DB_KEY_STORE);
+    let key = await readKeyWithRetry();
+    if (!key) {
+        // Double-read before minting: a single flaky null must not
+        // rotate the key under an existing database.
+        key = await readKeyWithRetry();
+    }
     if (!key) {
         const bytes = Crypto.getRandomBytes(32);
-        key = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
-        await SecureStore.setItemAsync(DB_KEY_STORE, key, {
+        const fresh = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+        await SecureStore.setItemAsync(DB_KEY_STORE, fresh, {
             keychainAccessible: SecureStore.WHEN_UNLOCKED_THIS_DEVICE_ONLY,
         });
+        // Read back: if a concurrent caller won the race, use the
+        // persisted key so all opens share one key.
+        key = (await readKeyWithRetry()) ?? fresh;
     }
     return key;
 }
@@ -31,7 +61,14 @@ export async function getDb(name = 'medical-data.db'): Promise<DB> {
     const existing = _dbs.get(name);
     if (existing) return existing;
 
-    if (!_keyPromise) _keyPromise = getOrCreateDbKey();
+    if (!_keyPromise) {
+        // Reset on failure so the next call retries instead of
+        // rejecting forever on a cached failed promise.
+        _keyPromise = getOrCreateDbKey().catch((e) => {
+            _keyPromise = null;
+            throw e;
+        });
+    }
     const key = await _keyPromise;
 
     const db = open({ name, encryptionKey: key });

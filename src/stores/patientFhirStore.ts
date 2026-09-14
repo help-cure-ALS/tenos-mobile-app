@@ -214,17 +214,56 @@ export function createPatientFhirStore(opts?: { dbName?: string }): PatientFhirS
         return initPromise;
     }
 
+    /**
+     * True when the freshly reopened database cannot even answer a
+     * tiny sqlite_master probe — that is a SQLCipher key/codec
+     * mismatch ("hmac check failed", surfaced by SQLite as "out of
+     * memory" or "file is not a database"), not a real OOM. A real
+     * OOM survives this probe after reopening with the 2 MB cache
+     * limits from getDb.
+     */
+    async function isUndecryptable(): Promise<boolean> {
+        try {
+            const d = await getDb(dbName);
+            await getAllAsync(d, 'SELECT name FROM sqlite_master LIMIT 1;');
+            return false;
+        } catch {
+            return true;
+        }
+    }
+
     async function doInit(): Promise<void> {
         try {
             await doInitSchema();
         } catch (e: any) {
             const msg = String(e?.message ?? '');
-            if (!msg.includes('out of memory')) throw e;
+            // SQLCipher codec failures surface as "out of memory" or
+            // "file is not a database" — both land here.
+            const recoverable = msg.includes('out of memory')
+                || msg.includes('not a database')
+                || msg.includes('hmac');
+            if (!recoverable) throw e;
 
-            // OOM recovery: close DB, reopen (memory limits from getDb apply),
+            // Recovery: close DB, reopen (memory limits from getDb apply),
             // try WAL checkpoint, then retry schema creation.
-            console.warn('patientFhirStore: OOM during init — attempting recovery');
+            console.warn('patientFhirStore: init failed — attempting recovery', msg);
             closeDb(dbName);
+
+            if (await isUndecryptable()) {
+                // Key/codec mismatch: the file cannot be decrypted with
+                // the current key (e.g. key lost after reinstall). The
+                // local DB is a sync replica — reset and let fullSync
+                // rebuild it. Logged distinctly from OOM so key
+                // problems stay visible in the field.
+                console.error('patientFhirStore: database cannot be decrypted with the current key — resetting (data re-syncs from server)');
+                try {
+                    const d3 = await getDb(dbName);
+                    d3.delete();
+                } catch {}
+                closeDb(dbName);
+                await doInitSchema();
+                return;
+            }
 
             const d2 = await getDb(dbName);
             try { await execAsync(d2, 'PRAGMA wal_checkpoint(TRUNCATE);'); } catch {}
