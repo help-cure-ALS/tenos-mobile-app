@@ -178,6 +178,12 @@ export function useContent(): UseContentResult {
     }, [load]);
 
     const articles = useMemo(() => {
+        // Launch gate: the news tab is only visible to users verified
+        // with a clinic for now. Without verification the list stays
+        // empty, which also hides the tab (it follows articles.length).
+        // Remove this guard for the general rollout. The fetch keeps
+        // running so the cache is warm the moment verification lands.
+        if (!audience.verifiedClinicId) return [];
         const mapped = raw
             .map((r) => mapFhirArticle(r, i18n.language))
             .filter((a): a is ContentArticle => a !== null);
