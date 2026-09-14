@@ -1,1 +1,1 @@
-Çalışma listesi artık size uygun olabilecek çalışmaları gösteriyor, yeni “Bana uygun” filtresiyle. Ortakların araştırma projelerine doğrudan uygulamadan katılın. Hata düzeltmeleri ve iyileştirmeler.
+Sorun durumunda daha anlaşılır bildirimlerle daha güvenilir senkronizasyon. Hata düzeltmeleri ve kararlılık iyileştirmeleri.

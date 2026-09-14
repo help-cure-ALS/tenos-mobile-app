@@ -1,1 +1,1 @@
-Die Studienliste zeigt jetzt, welche Studien passen könnten, mit neuem Filter „Passend für mich“. Teilnahme an Partner-Forschungsprojekten direkt in der App. Fehlerbehebungen und Verbesserungen.
+Zuverlässigere Synchronisierung mit klareren Hinweisen bei Problemen. Fehlerbehebungen und Stabilitätsverbesserungen.

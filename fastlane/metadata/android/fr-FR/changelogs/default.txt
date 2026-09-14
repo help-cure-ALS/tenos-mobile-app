@@ -1,1 +1,1 @@
-La liste des études montre désormais celles qui pourraient vous correspondre, avec le nouveau filtre “Pour moi”. Participez aux projets de recherche partenaires directement dans l'app. Corrections de bugs et améliorations.
+Synchronisation plus fiable avec des messages plus clairs en cas de problème. Corrections de bugs et améliorations de stabilité.

@@ -1,1 +1,1 @@
-The study list now shows which studies could fit you, with a new “Fits me” filter. Join partner research projects directly in the app. Bug fixes and improvements.
+More reliable syncing with clearer notices when something goes wrong. Bug fixes and stability improvements.

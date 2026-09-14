@@ -1,1 +1,1 @@
-De studielijst laat nu zien welke studies bij je zouden kunnen passen, met het nieuwe filter “Passend voor mij”. Neem direct in de app deel aan onderzoeksprojecten van partners. Foutoplossingen en verbeteringen.
+Betrouwbaardere synchronisatie met duidelijkere meldingen bij problemen. Foutcorrecties en stabiliteitsverbeteringen.

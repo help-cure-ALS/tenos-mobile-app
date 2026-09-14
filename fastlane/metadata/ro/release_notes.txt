@@ -1,1 +1,1 @@
-Lista de studii arată acum care studii ți s-ar putea potrivi, cu noul filtru „Potrivite mie”. Participă la proiectele de cercetare ale partenerilor direct din aplicație. Corecturi de erori și îmbunătățiri.
+Sincronizare mai fiabilă cu mesaje mai clare în caz de probleme. Corecturi de erori și îmbunătățiri de stabilitate.

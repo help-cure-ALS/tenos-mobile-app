@@ -1,1 +1,1 @@
-La lista de estudios ahora muestra qué estudios podrían encajar contigo, con el nuevo filtro “Para mí”. Participa en proyectos de investigación de socios directamente en la app. Correcciones de errores y mejoras.
+Sincronización más fiable con avisos más claros en caso de problemas. Correcciones de errores y mejoras de estabilidad.
