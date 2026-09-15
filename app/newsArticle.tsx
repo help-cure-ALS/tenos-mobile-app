@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         lineHeight: 24,
         paddingBottom: 12,
+        fontWeight: '600',
     },
     bodyFallback: {
         fontSize: 17,
