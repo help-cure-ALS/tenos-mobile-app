@@ -35,6 +35,8 @@ export interface ContentArticle {
     clinicName?: string;
     category: string;
     categoryLabel: string;
+    /** Editorial chip order of the category (portal sort). */
+    categorySort?: number;
     title: string;
     teaser: string;
     /** Markdown body (may be empty when the article is link-only). */

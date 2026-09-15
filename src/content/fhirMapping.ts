@@ -96,6 +96,9 @@ export function mapFhirArticle(resource: Basic, rawLang: string): ContentArticle
         clinicName: extValue(ext, 'content-clinic-name'),
         category,
         categoryLabel: localized(ext, 'category-label', lang) || category,
+        ...(extInt(ext, 'category-sort') !== undefined
+            ? { categorySort: extInt(ext, 'category-sort') }
+            : {}),
         title,
         teaser: localized(ext, 'teaser', lang),
         body: localized(ext, 'body', lang),
