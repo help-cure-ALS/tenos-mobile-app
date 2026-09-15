@@ -5,6 +5,57 @@ import type { ExternalHealthAdapter, ExternalHealthAvailability, ExternalHealthF
 const SOURCE_LABEL = 'Apple Health';
 const MAX_SAMPLES_PER_TYPE = 5000;
 
+// HealthKit queries can hang forever (native promise never settles,
+// e.g. on very large stores or after permission changes). Without a
+// guard the whole import freezes on one metric and the cancel button
+// has no effect, because the loop only checks cancellation BETWEEN
+// metrics. The guard races every query against a timeout and a
+// cancellation poll, so a stuck query skips the metric instead of
+// freezing the import.
+const QUERY_TIMEOUT_MS = 30_000;
+
+class HealthKitQueryTimeoutError extends Error {
+    constructor(label: string) {
+        super(`HealthKit query timed out after ${QUERY_TIMEOUT_MS / 1000}s: ${label}`);
+    }
+}
+
+class HealthKitQueryCancelledError extends Error {
+    constructor() {
+        super('cancelled');
+    }
+}
+
+async function guardQuery<T>(
+    promise: Promise<T>,
+    label: string,
+    cancellation?: { cancelled: boolean },
+): Promise<T> {
+    return await new Promise<T>((resolve, reject) => {
+        let settled = false;
+        const finish = (fn: () => void) => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timer);
+            clearInterval(poll);
+            fn();
+        };
+        const timer = setTimeout(
+            () => finish(() => reject(new HealthKitQueryTimeoutError(label))),
+            QUERY_TIMEOUT_MS,
+        );
+        const poll = setInterval(() => {
+            if (cancellation?.cancelled) {
+                finish(() => reject(new HealthKitQueryCancelledError()));
+            }
+        }, 250);
+        promise.then(
+            (value) => finish(() => resolve(value)),
+            (error) => finish(() => reject(error)),
+        );
+    });
+}
+
 export const appleHealthKitAdapter: ExternalHealthAdapter = {
     platform: 'apple_health',
     async getAvailability(): Promise<ExternalHealthAvailability> {
@@ -91,7 +142,7 @@ export const appleHealthKitAdapter: ExternalHealthAdapter = {
                         readType,
                         reason: getErrorText(error),
                     });
-                });
+                }, options?.cancellation);
 
                 for (const sample of result as any[]) {
                     const observedAt = toDate(sample.startDate ?? sample.endDate);
@@ -149,7 +200,7 @@ export const appleHealthKitAdapter: ExternalHealthAdapter = {
                         readType,
                         reason: getErrorText(error),
                     });
-                });
+                }, options?.cancellation);
 
                 for (const sample of result as any[]) {
                     const normalized = normalizeCorrelationSample(entry, correlationType, correlationFields, sample);
@@ -197,7 +248,7 @@ export const appleHealthKitAdapter: ExternalHealthAdapter = {
                         readType,
                         reason: getErrorText(error),
                     });
-                });
+                }, options?.cancellation);
 
                 for (const sample of result as any[]) {
                     const observedAt = toDate(sample.startDate ?? sample.endDate);
@@ -267,11 +318,23 @@ async function queryQuantitySamplesSafely(
     >,
     quantityType: string,
     options: Parameters<typeof import('@kingstinct/react-native-healthkit')['queryQuantitySamples']>[1],
-    onAuthorizationError?: (readType: string, error: unknown) => void
+    onAuthorizationError?: (readType: string, error: unknown) => void,
+    cancellation?: { cancelled: boolean }
 ): Promise<readonly unknown[]> {
     try {
-        return await healthkit.queryQuantitySamples(quantityType as any, options as any);
+        return await guardQuery(
+            healthkit.queryQuantitySamples(quantityType as any, options as any),
+            quantityType,
+            cancellation,
+        );
     } catch (error) {
+        if (error instanceof HealthKitQueryCancelledError) {
+            return [];
+        }
+        if (error instanceof HealthKitQueryTimeoutError) {
+            onAuthorizationError?.(quantityType, error);
+            return [];
+        }
         if (isRecoverableHealthKitReadAuthorizationError(error)) {
             onAuthorizationError?.(quantityType, error);
             return [];
@@ -287,11 +350,23 @@ async function queryCategorySamplesSafely(
     >,
     categoryType: string,
     options: Parameters<typeof import('@kingstinct/react-native-healthkit')['queryCategorySamples']>[1],
-    onAuthorizationError?: (readType: string, error: unknown) => void
+    onAuthorizationError?: (readType: string, error: unknown) => void,
+    cancellation?: { cancelled: boolean }
 ): Promise<readonly unknown[]> {
     try {
-        return await healthkit.queryCategorySamples(categoryType as any, options as any);
+        return await guardQuery(
+            healthkit.queryCategorySamples(categoryType as any, options as any),
+            categoryType,
+            cancellation,
+        );
     } catch (error) {
+        if (error instanceof HealthKitQueryCancelledError) {
+            return [];
+        }
+        if (error instanceof HealthKitQueryTimeoutError) {
+            onAuthorizationError?.(categoryType, error);
+            return [];
+        }
         if (isRecoverableHealthKitReadAuthorizationError(error)) {
             onAuthorizationError?.(categoryType, error);
             return [];
@@ -307,11 +382,23 @@ async function queryCorrelationSamplesSafely(
     >,
     correlationType: string,
     options: Parameters<typeof import('@kingstinct/react-native-healthkit')['queryCorrelationSamples']>[1],
-    onAuthorizationError?: (readType: string, error: unknown) => void
+    onAuthorizationError?: (readType: string, error: unknown) => void,
+    cancellation?: { cancelled: boolean }
 ): Promise<readonly unknown[]> {
     try {
-        return await healthkit.queryCorrelationSamples(correlationType as any, options as any);
+        return await guardQuery(
+            healthkit.queryCorrelationSamples(correlationType as any, options as any),
+            correlationType,
+            cancellation,
+        );
     } catch (error) {
+        if (error instanceof HealthKitQueryCancelledError) {
+            return [];
+        }
+        if (error instanceof HealthKitQueryTimeoutError) {
+            onAuthorizationError?.(correlationType, error);
+            return [];
+        }
         if (isRecoverableHealthKitReadAuthorizationError(error)) {
             onAuthorizationError?.(correlationType, error);
             return [];
